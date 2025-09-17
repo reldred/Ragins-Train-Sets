@@ -1,0 +1,300 @@
+disable_item(FEAT_TRAINS);
+
+grf{
+    grfid: "ZM\05\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 2;
+    min_compatible_version: 1;
+param {
+        param_purchase_cost {
+            type: int;
+            name: string(STR_PARAM_PURCHASE_COST);
+            desc: string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param {
+        param_running_cost {
+            type: int;
+            name: string(STR_PARAM_RUNNING_COST);
+            desc: string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param {
+                param_capacities {
+                        type: int;
+                        name: string(STR_PARAM_NAME_CAPACITY);
+                        desc: string(STR_PARAM_DESC_CAPACITY);
+                        min_value: 0;
+                        max_value: 1;
+                        def_value: 0;
+                        names: {
+                                                0: string(STR_PARAM_REAL_CAPACITY);
+                                                1: string(STR_PARAM_NORMAL_REDUCED);
+                        };
+                }
+        }
+}
+
+if (param_capacities == 0) {
+    param_capacity_mod = 0;
+}
+
+if (param_capacities == 1) {
+    param_capacity_mod = -50;
+}
+
+railtypetable {
+    RAIL, SAA3
+}
+
+cargotable {
+    PASS,
+// Misc
+    TOUR,
+}
+
+basecost {
+ PR_BUILD_VEHICLE_TRAIN: 1 + param_purchase_cost - 4;
+ PR_BUILD_VEHICLE_WAGON: 3 + param_purchase_cost - 4;
+ PR_RUNNING_TRAIN_ELECTRIC: 3 + param_running_cost - 4;
+}
+/* Fix depot view */
+traininfo_y_offset = 2;
+train_width_32_px = 1;
+
+template template_purchase(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -60, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_8_MU(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -14]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -17,        -12]
+    [ x+66,     y,        22,        20,        -5,            -10]
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -17,        -12]
+    [ x+155,    y,        22,        20,        -5,            -10]
+}
+
+//CQ10 Old Livery
+spriteset(spriteset_CQ10_old_purchase,   "gfx/CQ310-CQ311 Old Livery.png") {template_purchase(7, 21)}
+spriteset(spriteset_CQ10_old_lead,   "gfx/CQ310-CQ311 Old Livery.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_CQ10_old_rear,   "gfx/CQ310-CQ311 Old Livery.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+
+//CQ10 New Livery
+spriteset(spriteset_CQ10_new_purchase,   "gfx/CQ310-CQ311 New Livery.png") {template_purchase(7, 21)}
+spriteset(spriteset_CQ10_new_lead,   "gfx/CQ310-CQ311 New Livery.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_CQ10_new_rear,   "gfx/CQ310-CQ311 New Livery.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+
+//CQ10 Stripless Livery
+spriteset(spriteset_CQ10_stripeless_purchase,   "gfx/CQ310-CQ311 Stripeless Livery.png") {template_purchase(7, 21)}
+spriteset(spriteset_CQ10_stripeless_lead,   "gfx/CQ310-CQ311 Stripeless Livery.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_CQ10_stripeless_rear,   "gfx/CQ310-CQ311 Stripeless Livery.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+
+switch(FEAT_TRAINS, SELF, sw_CQ10_old, (position_in_vehid_chain % 2)) {
+ 1: spriteset_CQ10_old_rear;
+    spriteset_CQ10_old_lead;
+}
+
+switch(FEAT_TRAINS, SELF, sw_CQ10_new, (position_in_vehid_chain % 2)) {
+ 1: spriteset_CQ10_new_rear;
+    spriteset_CQ10_new_lead;
+}
+
+switch(FEAT_TRAINS, SELF, sw_CQ10_stripeless, (position_in_vehid_chain % 2)) {
+ 1: spriteset_CQ10_stripeless_rear;
+    spriteset_CQ10_stripeless_lead;
+}
+
+switch(FEAT_TRAINS, SELF, sw_CQ10_attach, vehicle_type_id){
+    ITEM_CQ10       : return CB_RESULT_ATTACH_ALLOW  ;
+    ITEM_CQ12       : return CB_RESULT_ATTACH_ALLOW  ;
+    return string(STR_NO_COUPLE_MU) ;
+}
+
+
+
+//purchase
+switch(FEAT_TRAINS, PARENT, sw_CQ10_purchase, current_year) {
+    0..1999: spriteset_CQ10_old_purchase;
+ 2000..2010: spriteset_CQ10_new_purchase;
+  return spriteset_CQ10_stripeless_purchase;
+}
+//livery
+switch(FEAT_TRAINS, PARENT, sw_CQ10_autolivery, current_year) {
+    0..1999: sw_CQ10_old;
+ 2000..2010: sw_CQ10_new;
+  return sw_CQ10_stripeless;
+}
+
+//fairy's stuff
+random_switch(FEAT_TRAINS, PARENT, sw_CQ10_random_livery){
+    1: sw_CQ10_autolivery;
+    2: sw_CQ10_old;
+    3: sw_CQ10_new;
+    4: sw_CQ10_stripeless;
+}
+
+switch(FEAT_TRAINS, SELF, sw_CQ10_liverycheck, cargo_subtype){
+    0: sw_CQ10_autolivery;
+    1: sw_CQ10_old;
+    2: sw_CQ10_new;
+    3: sw_CQ10_stripeless;
+    return sw_CQ10_random_livery;
+}
+
+switch(FEAT_TRAINS, SELF, sw_CQ10_refit_text, cargo_subtype){
+    0:string(STR_cargo_subtype_auto);
+    1:string(STR_CARGO_CQ10_OLD);
+    2:string(STR_CARGO_CQ10_NEW);
+    3:string(STR_CARGO_CQ10_STRIPELESS);
+    return CB_RESULT_NO_TEXT;
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_CQ10) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        dual_headed:                    1; // <- Double Headed, so cab on each end
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_ELECTRIC;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_CQ10);
+        introduction_date:                date(1979,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                         28 ton;
+        speed:                            80 mph;
+        power:                            1200 hp;
+        tractive_effort_coefficient:     0.7;
+        cost_factor:                     9;
+        running_cost_factor:             12;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        default_cargo_type:                PASS;
+        cargo_capacity:                    (100+param_capacity_mod);
+         loading_speed: 30;
+
+    }
+    graphics {
+        default:                  sw_CQ10_liverycheck;
+         can_attach_wagon:    sw_CQ10_attach;
+        purchase:                        sw_CQ10_purchase;
+        additional_text: string(STR_SUBWAY);
+        cargo_subtype_text: sw_CQ10_refit_text;
+
+
+}
+}
+
+//CQ10 Old Livery
+spriteset(spriteset_CQ12_purchase,   "gfx/CQ312.png") {template_purchase(7, 21)}
+spriteset(spriteset_CQ12_lead,   "gfx/CQ312.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_CQ12_rear,   "gfx/CQ312.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+
+switch(FEAT_TRAINS, SELF, sw_CQ12, (position_in_vehid_chain % 2)) {
+ 1: spriteset_CQ12_rear;
+    spriteset_CQ12_lead;
+}
+
+switch(FEAT_TRAINS, SELF, sw_CQ12_attach, vehicle_type_id){
+    ITEM_CQ10       : return CB_RESULT_ATTACH_ALLOW  ;
+    ITEM_CQ12       : return CB_RESULT_ATTACH_ALLOW  ;
+    return string(STR_NO_COUPLE_MU) ;
+}
+//livery
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_CQ12) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        dual_headed:                    1; // <- Double Headed, so cab on each end
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_ELECTRIC;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_CQ12);
+        introduction_date:                date(2001,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                         28 ton;
+        speed:                            80 mph;
+        power:                            1200 hp;
+        tractive_effort_coefficient:     0.7;
+        cost_factor:                     9;
+        running_cost_factor:             12;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    (100+param_capacity_mod);
+         loading_speed: 30;
+
+    }
+    graphics {
+        default:                  sw_CQ12;
+         can_attach_wagon:    sw_CQ12_attach;
+        purchase:                        spriteset_CQ12_purchase;
+        additional_text: string(STR_SUBWAY);
+//        cargo_subtype_text: sw_CQ10_livery_decider;
+
+
+}
+}

@@ -1,0 +1,38 @@
+##grflangid 0x0
+
+STR_GRF_NAME:MARTA Set
+STR_GRF_DESCRIPTION:A set containing trains of the Metro Atlanta Rapid Transit Authority. Requires the use of a trackset containing a 3rd rail. Coded in NML, by Ragin1_; Coded by Ragin1_ based on code by 2TallTyler and Fairyfloss
+
+STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
+STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
+STR_PARAM_RUNNING_COST              :Running cost multiplier
+STR_PARAM_RUNNING_COST_DESC         :You can use this setting to increase or decrease the running costs of the vehicles in this set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (default)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+STR_PARAM_NAME_CAPACITY:Train Capacity
+STR_PARAM_DESC_CAPACITY:You can use this setting to adjust the capacity of trains. Useful for balancing it against sets like NARS or UKRS.
+STR_PARAM_REAL_CAPACITY:Realistic Capacity
+STR_PARAM_NORMAL_REDUCED:Reduced Capacity
+
+STR_SUBWAY:Role: {GOLD}Subway {}{BLACK}Formation: {GOLD}Married Pair {}{BLACK}Power: {CREAM}3rd Rail
+STR_INFO_B:INFO: {GOLD}Place this on either an A or C series train for more cars
+STR_INFO_E:INFO: {GOLD}Place this on a D series train for more cars
+STR_NO_COUPLE_MU:MARTA trains can only connect to other MARTA trains!
+
+STR_CQ10:MARTA CQ310-11
+STR_CQ12:MARTA CQ312
+
+STR_cargo_subtype_auto                  : > Year-dependent livery
+STR_cargo_subtype_purchase              : > Construction year livery
+STR_CARGO_CQ10_OLD: > Original Livery
+STR_CARGO_CQ10_NEW: > Small Stripe Livery
+STR_CARGO_CQ10_STRIPELESS: > Stripeless Livery

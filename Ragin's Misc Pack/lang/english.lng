@@ -1,0 +1,99 @@
+##grflangid 0x0
+
+STR_GRF_NAME:Ragin's Misc Pack v1
+STR_GRF_NAME_TEST:GOPS Pass Car Test
+STR_GRF_DESCRIPTION:Do you like trains? Well I hope you like Australian/Kiwi DMUs, because this pack has far, far too many of them.
+
+STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
+STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
+STR_PARAM_RUNNING_COST              :Running cost multiplier
+STR_PARAM_RUNNING_COST_DESC         :You can use this setting to increase or decrease the running costs of the vehicles in this set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (default)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+STR_PARAM_NAME_CAPACITY:Passenger Car Capacity
+STR_PARAM_NAME_FREIGHT_CAPACITY:Freight Car Capacity
+STR_PARAM_DESC_CAPACITY:You can use this setting to adjust the capacity of trains. Useful for balancing it against sets like NARS or UKRS
+STR_PARAM_REAL_CAPACITY:Realistic Capacity
+STR_PARAM_NORMAL_REDUCED:Reduced Capacity
+
+STR_NO_COUPLE_MU: Only attach Multiple Unit trains or trains of the same type!
+
+STR_MU_TRAILER:Multiple Unit Trailer
+STR_MU_TRAILER_INFO:{GOLD}Attach this to a another multiple unit to make it longer
+
+STR_NAME_ACE3000: ACE 3000
+STR_INFO_ACE3000:{BLACK}Role: {GOLD}Heavy Freight{}{BLACK}Power: {WHITE}Steam
+
+STR_NAME_ALWEGMONORAIL: Seattle Monorail
+STR_INFO_ALWEGMONORAIL:{BLACK}Role: {GOLD}Urban Monorail{}{BLACK}Power: {CREAM}3rd Rail
+
+STR_NAME_LMS_RAILCAR: LMS Articulated Railcar
+STR_INFO_LMS_RAILCAR:{BLACK}Role: {GOLD}Express{}{BLACK}Formation: {GOLD}Multiple-Unit{}{BLACK}Power: {BROWN}Diesel
+
+STR_NAME_COMERT1965: COMERT
+STR_INFO_COMERT1965:{BLACK}Role: {GOLD}Goofy Goober{}{BLACK}Power: {CREAM}3rd Rail
+
+STR_NAME_SSD_EMU_DMD: DMD
+STR_INFO_SSD_EMU_DMD:AAAAAAAAAAA
+
+STR_NAME_SSD_EMU_NGR:Bombardier New Generation Rolling Stock
+STR_INFO_SSD_EMU_NGR:{BLACK}Role: {GOLD}Single-Deck Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line
+
+STR_NAME_EMD_FT: EMD FT
+STR_INFO_EMD_FT:{BLACK}Role: {GOLD}Mixed Traffic{}{BLACK}Power: {BROWN}Diesel
+
+STR_NAME_ENDPLATFORMSUBURBANCAR: Test_7
+STR_INFO_ENDPLATFORMSUBURBANCAR: Test
+
+STR_NAME_XPTINTERURBAN: XPT Interurban
+STR_INFO_XPTINTERURBAN: Test
+
+STR_NAME_VFT: VFT
+STR_INFO_VFT: Test
+
+STR_NAME_4TRAIN: 4 Train
+STR_INFO_4TRAIN: Test
+
+STR_NAME_5TRAIN: 5 Train
+STR_INFO_5TRAIN: Test
+
+STR_NAME_6TRAIN: 6 Train
+STR_INFO_6TRAIN: Test
+
+STR_NAME_7TRAIN: 7 Train
+STR_INFO_7TRAIN: Test
+
+STR_NAME_8TRAIN: 8 Train
+STR_INFO_8TRAIN: Test
+
+STR_NAME_4WHEELCOACH: 4-Wheel Coach
+STR_INFO_4WHEELCOACH:{BLACK}Role: {GOLD}Passenger coach
+STR_NAME_MAIL_4WHEELCOACH: 4-Wheel Mail Coach
+STR_INFO_MAIL_4WHEELCOACH:{BLACK}Role: {GOLD}Mail Van
+
+STR_NAME_TULLOCHDDINTERURBAN:Tulloch Double-Deck Interurban
+STR_INFO_TULLOCHDDINTERURBAN:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Early V-Set Design (NSWGR Specification 2384)
+
+STR_NAME_SXEMU:Comeng SX EMU
+STR_INFO_SXEMU:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}If only the Banana Benders put up the wires...
+
+STR_NAME_EMD_SDP40F: EMD SDP40F
+STR_INFO_EMD_SDP40F:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Diesel
+
+STR_NAME_EMD_GF6CH:EMD GF6CH
+STR_INFO_EMD_GF6CH:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {LTBLUE}Overhead Line
+
+STR_NAME_GE_E60CH:GE E60CH
+STR_INFO_GE_E60CH:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {LTBLUE}Overhead Line
+
+STR_NAME_GE_QUADCAB:ALCO-GE Boxcab
+STR_INFO_GE_QUADCAB:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line

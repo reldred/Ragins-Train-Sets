@@ -1,0 +1,20 @@
+##grflangid 0x01
+
+STR_GRF_NAME :Oceanian Rail Pack - Signals v1
+STR_GRF_DESC :Signals from Australia and New Zealand, based on JP+ Signals. Drawn and coded by Zachary Moore (Ragin1_).
+
+STR_TWOASPECT:Two Aspect
+
+STR_ROUTE_BRITISH:Route - British
+STR_ROUTE_SINGLELIGHT:Route - Single Light
+STR_ROUTE_DOUBLELIGHT:Route - Double Light
+
+STR_SPEED_SEARCHLIGHT:Speed - Searchlight
+STR_SPEED_SEARCHLIGHT_WHITE:Speed - Searchlight (White)
+STR_SPEED_TWIN_SEARCHLIGHT:Speed - Twin Searchlight
+STR_SPEED_TWIN_SEARCHLIGHT_WHITE:Speed - Twin Searchlight (White)
+STR_SPEED_DOUBLELIGHT:Speed - Double Light
+
+STR_UNDERGROUND:Underground
+
+STR_UNSUPPORTED_VERSION	:You must use a recent version of JGR Patch Pack!

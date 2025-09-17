@@ -1,0 +1,218 @@
+##grflangid 0x0
+
+STR_GRF_NAME:North American Rail Pack - Passenger Set v2
+STR_GRF_DESCRIPTION:Multiple units and passenger coaches from the US, Canada, and Mexico, all in 2cc. Drawn and Coded by Zachary Moore (Ragin1_)
+
+STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
+STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
+STR_PARAM_RUNNING_COST              :Running cost multiplier
+STR_PARAM_RUNNING_COST_DESC         :You can use this setting to increase or decrease the running costs of the vehicles in this set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (default)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+STR_PARAM_NAME_CAPACITY:Passenger Car Capacity
+STR_PARAM_NAME_FREIGHT_CAPACITY:Freight Car Capacity
+STR_PARAM_DESC_CAPACITY:You can use this setting to adjust the capacity of trains. Useful for balancing it against sets like NARS or UKRS
+STR_PARAM_REAL_CAPACITY:Realistic Capacity
+STR_PARAM_NORMAL_REDUCED:Reduced Capacity
+
+STR_PARAM_NAME_REALDISABLE:Disable Real Trains
+STR_PARAM_DESC_REALDISABLE:Enable/disable Real trains (Trains that were physically built, and put in service).
+
+STR_PARAM_NAME_PROTOTYPEDISABLE:Disable Prototype Trains
+STR_PARAM_DESC_PROTOTYPEDISABLE:Enable/disable Prototype trains (trains that were built, but were mostly used for testing, and potentially put limited service).
+
+STR_PARAM_NAME_PROPOSALDISABLE:Disable Proposed Trains
+STR_PARAM_DESC_PROPOSALDISABLE:Enable/disable Proposed trains (trains that were designed, or seriously proposed, but not actually built).
+
+STR_PARAM_NAME_FICTIONALDISABLE:Disable Fictional Trains
+STR_PARAM_DESC_FICTIONALDISABLE:Enable/disable Fictional trains (trains that are entirely fictional, and are only included for gameplay balance).
+
+STR_NO_COUPLE_MU:Only attach Multiple Unit trains or trains of the same type!
+
+STR_MU_TRAILER:Multiple Unit Trailer
+STR_MU_TRAILER_INFO:{GOLD}Attach this to a another multiple unit to make it longer
+
+STR_NAME_RDC:Budd RDC
+STR_INFO_RDC:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{BROWN}Diesel {}{GOLD}The ultimate in friend shaped trains
+
+STR_NAME_NEAPOLITAN:Budd Neapolitan
+STR_INFO_NEAPOLITAN:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{BROWN}Diesel {}{GOLD}Ice cream :3
+
+STR_NAME_BUDD_SPRINTER:Budd Sprinter
+STR_INFO_BUDD_SPRINTER:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}Fictional, mix of BR Sprinter, SPV2000 & Pullman Comet
+
+
+
+STR_NAME_EMDFLYLINER:EMD-Pullman Flyliner
+STR_INFO_EMDFLYLINER:{BLACK}Role:{GOLD}Express {}{BLACK}Formation:{GOLD}Push-Pull Train{}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_BUDDELSARGENTO:Budd El Sargento
+STR_INFO_BUDDELSARGENTO:{BLACK}Role:{GOLD}Express {}{BLACK}Formation:{GOLD}Multiple Unit{}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_BUDDCOMENG_XPT:Budd-Comeng XPT
+STR_INFO_BUDDCOMENG_XPT:{BLACK}Role:{GOLD}Express {}{BLACK}Formation:{GOLD}Push-Pull Train{}{BLACK}Power:{BROWN}Diesel
+
+
+
+STR_NAME_PRR_MP54_OH:PRR MP54
+STR_INFO_PRR_MP54_OH:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_LACKAWANNAEMU:Pullman Lackawanna EMU
+STR_INFO_LACKAWANNAEMU:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_BLUEBIRDEMU:Bethlehem Steel Blueliner EMU
+STR_INFO_BLUEBIRDEMU:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_CCANDFEMU:CC&F EMU
+STR_INFO_CCANDFEMU:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_WASHBOARDEMU:Pullman Washboard EMU
+STR_INFO_WASHBOARDEMU:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_PIONEERIII:Budd Silverliner
+STR_INFO_PIONEERIII:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_PANAMALINER:Budd PanamaLiner
+STR_INFO_PANAMALINER:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_JERSEYARROW:SLCC Arrow
+STR_INFO_JERSEYARROW:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_BUDD_COSMOPOLITAN:Budd Cosmopolitan
+STR_INFO_BUDD_COSMOPOLITAN:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SILVERLINERIV_RM:GE Silverliner IV (Single Car)
+STR_NAME_SILVERLINERIV_MU:GE Silverliner IV (Multiple Unit)
+STR_INFO_SILVERLINERIV_RM:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+STR_INFO_SILVERLINERIV_MU:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_JERSEYARROWII_RM:GE Arrow II (Single Car)
+STR_NAME_JERSEYARROWII_MU:GE Arrow II (Multiple Unit)
+STR_INFO_JERSEYARROWII_RM:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+STR_INFO_JERSEYARROWII_MU:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_MR90:Bombardier MR-90
+STR_INFO_MR90:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+
+STR_NAME_GALLERY2000:Budd-Comeng Highliner 2000
+STR_INFO_GALLERY2000:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_PORTLINERI:Comeng-Tokyu PortLiner I
+STR_INFO_PORTLINERI:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+
+STR_NAME_BOMBARDIERRAILSTAR:Bombardier Railstar
+STR_INFO_BOMBARDIERRAILSTAR:{BLACK}Role:{GOLD}Intercity{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+
+
+STR_NAME_SUPERLINEREMU:Pullman Superliner EMU
+STR_INFO_SUPERLINEREMU:{BLACK}Role:{GOLD}Intercity{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+
+
+STR_NAME_BUDD_METROLINERI:Budd Metroliner I
+STR_INFO_BUDD_METROLINERI:{BLACK}Role:{GOLD}Express{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_ADTRANZ_X2000:Adtranz X2000
+STR_INFO_ADTRANZ_X2000:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{LTBLUE}Overhead Line{}{BLACK}Special:{GOLD}Tilt train (20% faster through curves)
+
+
+STR_NAME_PRR_MP54_3R:PRR MP54
+STR_INFO_PRR_MP54_3R:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Single-Unit{}{BLACK}Power:{CREAM}3rd Rail
+
+STR_NAME_BUDD_METROPOLITAN:Budd Metropolitan
+STR_INFO_BUDD_METROPOLITAN:{BLACK}Role:{GOLD}Commuter{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Power:{CREAM}3rd Rail
+
+STR_NAME_1840GENERICCAR:Passenger Car
+STR_INFO_1840GENERICCAR:{GOLD}It's a passenger car, you gotta wait for the cooler stuff ;)
+STR_NAME_MAIL_1840GENERICCAR:Mail Car
+STR_INFO_MAIL_1840GENERICCAR:{GOLD}It's a mail car, you gotta wait for the cooler stuff ;)
+
+STR_NAME_ARCHROOFCAR:Arch Roof Suburban Car
+STR_INFO_ARCHROOFCAR:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_DUCKBILLCAR:Duckbill Suburban Car
+STR_INFO_DUCKBILLCAR:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_ENDPLATFORMSUBURBANCAR:End Platform Suburban Car
+STR_INFO_ENDPLATFORMSUBURBANCAR:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_SIDELOADINGSUBURBANCAR:Side Loading Suburban Car
+STR_INFO_SIDELOADINGSUBURBANCAR:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_PRR_P54:PRR P54
+STR_INFO_PRR_P54:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_RAILROADROOFSUBURBANCAR:Railroad Roof Suburban Car
+STR_INFO_RAILROADROOFSUBURBANCAR:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_PIONEERIIICOMMUTERCAR:Budd Pioneer III Commuter Car
+STR_INFO_PIONEERIIICOMMUTERCAR:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_BUDD_GALLERYCAR:Budd Gallery Car
+STR_INFO_BUDD_GALLERYCAR:{BLACK}Role:{GOLD}Commuter
+STR_NAME_BUDD_GALLERYCAR_CAB:Budd Gallery Cab Car
+STR_INFO_BUDD_GALLERYCAR_CAB:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_PULLMAN_GALLERYCAR:Pullmam Gallery Car
+STR_INFO_PULLMAN_GALLERYCAR:{BLACK}Role:{GOLD}Commuter
+STR_NAME_PULLMAN_GALLERYCAR_CAB:Pullman Gallery Cab Car
+STR_INFO_PULLMAN_GALLERYCAR_CAB:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_PULLMAN_COMET:Pullman Comet I
+STR_INFO_PULLMAN_COMET:{BLACK}Role:{GOLD}Commuter
+STR_NAME_PULLMAN_COMET_CAB:Pullman Comet I Cab Car
+STR_INFO_PULLMAN_COMET_CAB:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_BUDDCOMENG_DOUBLEDECKER:Budd-Comeng Double-Decker
+STR_INFO_BUDDCOMENG_DOUBLEDECKER:{BLACK}Role:{GOLD}Commuter
+STR_NAME_BUDDCOMENG_DOUBLEDECKER_CAB:Budd-Comeng Double-Decker Cab Car
+STR_INFO_BUDDCOMENG_DOUBLEDECKER_CAB:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_BOMBARDIER_MULTILEVEL:Bombardier Multi-Level
+STR_INFO_BOMBARDIER_MULTILEVEL:{BLACK}Role:{GOLD}Commuter
+STR_NAME_BOMBARDIER_MULTILEVEL_CAB:Bombardier Multi-Level Cab Car
+STR_INFO_BOMBARDIER_MULTILEVEL_CAB:{BLACK}Role:{GOLD}Commuter
+
+STR_NAME_12WHEEL:12 Wheel Car
+STR_INFO_12WHEEL:{BLACK}Role:{GOLD}Intercity
+STR_NAME_MAIL_12WHEEL:12 Wheel Mail Car
+STR_INFO_MAIL_12WHEEL:{BLACK}Role:{GOLD}Mail Car
+
+STR_NAME_PRR_P70:PRR P70 Coach
+STR_NAME_OBSERVATION_PRR_P70:PRR P70 Observation Coach
+STR_INFO_PRR_P70:{BLACK}Role:{GOLD}Intercity
+
+STR_NAME_PIONEERIIIINTERCITYCAR:Budd Pioneer III Intercity Car
+STR_INFO_PIONEERIIIINTERCITYCAR:{BLACK}Role:{GOLD}Intercity
+STR_NAME_MAIL_PIONEERIIIINTERCITYCAR:Budd Pioneer III Mail Car
+STR_INFO_MAIL_PIONEERIIIINTERCITYCAR:{BLACK}Role:{GOLD}Mail Car
+
+STR_NAME_BUDD_KEYSTONE:Budd Keystone
+STR_INFO_BUDD_KEYSTONE:{BLACK}Role:{GOLD}Intercity
+
+STR_NAME_BUDD_AMFLEET:Budd Amfleet
+STR_INFO_BUDD_AMFLEET:{BLACK}Role:{GOLD}Intercity
+STR_NAME_BUDD_CAB_AMFLEET:Budd Metroliner Cab Car
+STR_INFO_BUDD_CAB_AMFLEET:{BLACK}Role:{GOLD}Intercity Cab Car
+STR_NAME_MAIL_BUDD_AMFLEET:Budd Amfleet Mail Car
+STR_INFO_MAIL_BUDD_AMFLEET:{BLACK}Role:{GOLD}Mail Car
+STR_NAME_MAIL_BUDD_CAB_AMFLEET:Budd Metroliner Mail Cab Car
+STR_INFO_MAIL_BUDD_CAB_AMFLEET:{BLACK}Role:{GOLD}Mail Cab Car
+
+STR_NAME_BUDD_HILEVEL:Budd Hi-Level
+STR_INFO_BUDD_HILEVEL:{BLACK}Role:{GOLD}Intercity
+
+STR_NAME_BUDD_SKYVIEW:Budd Skyview
+STR_INFO_BUDD_SKYVIEW:{BLACK}Role:{GOLD}Intercity

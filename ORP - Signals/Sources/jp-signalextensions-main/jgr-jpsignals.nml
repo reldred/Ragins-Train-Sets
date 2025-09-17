@@ -1,0 +1,526 @@
+grf {
+    grfid: "JPPS";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    version: 0-9-1;
+    min_compatible_version: 0;
+}
+
+if (!extended_feature_test("action3_signals_custom_signal_sprites")) {
+	error(FATAL, string(STR_UNSUPPORTED_VERSION));
+}
+//templates use the following format :
+// template [template name](x,y){
+//	[ x, y, sx, sy, ox, oy]
+// where the first x and y are the starting coordinates of a sprite
+// sx and sy are size in x and y respectively
+// ox and oy are offset in x and y respectively
+//}
+template template_signal_invisible(x,y){
+
+		[ x, y, 1, 1, -1, -21]
+		[ x, y, 1, 1, -1, -21]
+		[ x, y, 1, 1, -1, -21]
+		[ x, y, 1, 1, -1, -21]
+		[ x, y, 1, 1, -1, -21]
+		[ x, y, 1, 1, -1, -21]
+		[ x, y, 1, 1, -1, -21]
+		[ x, y, 1, 1, -1, -21]
+
+}
+template template_signal_2tall(x,y){
+
+	[ x, y, 5, 19, -1, -21, ANIM]
+	[ x+66, y, 6, 19, -1, -21, ANIM]
+	[ x+132, y, 6, 19, -1, -21, ANIM]
+	[ x+198, y, 5, 19, -6, -21, ANIM]
+	[ x+264, y, 5, 19, -2, -21, ANIM]
+	[ x+330, y, 5, 19, -3, -19, ANIM]
+	[ x+396, y, 6, 19, -2, -21, ANIM]
+	[ x+462, y, 6, 19, -1, -21, ANIM]
+}
+
+template template_signal_3tall(x,y){
+
+	[ x, y, 5, 20, -1, -19, ANIM]
+	[ x+66, y, 6, 20, -1, -19, ANIM]
+	[ x+132, y, 6, 20, -1, -19, ANIM]
+	[ x+198, y, 5, 20, -6, -19, ANIM]
+	[ x+264, y, 5, 20, -2, -19, ANIM]
+	[ x+330, y, 5, 20, -3, -17, ANIM]
+	[ x+396, y, 6, 20, -2, -19, ANIM]
+	[ x+462, y, 6, 20, -1, -19, ANIM]
+}
+
+template template_signal_4tall(x,y){
+
+	[ x, y, 5, 22, -1, -21, ANIM]
+	[ x+66, y, 6, 22, -1, -21, ANIM]
+	[ x+132, y, 6, 22, -1, -21, ANIM]
+	[ x+198, y, 5, 22, -6, -21, ANIM]
+	[ x+264, y, 5, 22, -2, -21, ANIM]
+	[ x+330, y, 5, 22, -3, -19, ANIM]
+	[ x+396, y, 6, 22, -2, -21, ANIM]
+	[ x+462, y, 6, 22, -1, -21, ANIM]
+}
+
+template template_signal_5tall(x,y){
+
+	[ x, y, 5, 24, -1, -23,ANIM]
+	[ x+66, y, 6, 24, -1, -23,ANIM]
+	[ x+132, y, 6, 24, -1, -23,ANIM]
+	[ x+198, y, 5, 24, -6, -23,ANIM]
+	[ x+264, y, 5, 24, -2, -23,ANIM]
+	[ x+330, y, 5, 24, -3, -21,ANIM]
+	[ x+396, y, 6, 24, -2, -23,ANIM]
+	[ x+462, y, 6, 24, -1, -23,ANIM]
+}
+
+template template_signal_6tall(x,y){
+
+	[ x, y, 5, 26, -1, -25,ANIM]
+	[ x+66, y, 6, 26, -1, -25,ANIM]
+	[ x+132, y, 6, 26, -1, -25,ANIM]
+	[ x+198, y, 5, 26, -6, -25,ANIM]
+	[ x+264, y, 5, 26, -2, -25,ANIM]
+	[ x+330, y, 5, 26, -3, -23,ANIM]
+	[ x+396, y, 6, 26, -2, -25,ANIM]
+	[ x+462, y, 6, 26, -1, -25,ANIM]
+}
+
+template template_signal_4talldistant(x,y){
+
+	[ x, y, 5, 22, -1, -25]
+	[ x+66, y, 6, 22, -1, -22]
+	[ x+132, y, 6, 22, -1, -25]
+	[ x+198, y, 5, 22, -6, -20]
+	[ x+264, y, 5, 22, -2, -20]
+	[ x+330, y, 5, 22, -3, -23]
+	[ x+396, y, 6, 22, -2, -25]
+	[ x+462, y, 6, 22, -1, -25]
+}
+
+template template_signal_2talldistant(x,y){
+
+	[ x, y, 5, 20, -1, -25]
+	[ x+66, y, 6, 20, -1, -20]
+	[ x+132, y, 6, 20, -1, -25]
+	[ x+198, y, 5, 20, -6, -18]
+	[ x+264, y, 5, 20, -2, -20]
+	[ x+330, y, 5, 20, -3, -23]
+	[ x+396, y, 6, 20, -2, -25]
+	[ x+462, y, 6, 20, -1, -25]
+}
+
+template template_signal_repeater(x,y){
+
+	[ x, y, 5, 21, -1, -25]
+	[ x+66, y, 6, 21, -1, -22]
+	[ x+132, y, 6, 21, -1, -25]
+	[ x+198, y, 5, 21, -10, -20]
+	[ x+264, y, 5, 21, -2, -20]
+	[ x+330, y, 5, 21, -3, -23]
+	[ x+396, y, 6, 21, -2, -25]
+	[ x+462, y, 6, 21, -1, -25]
+}
+
+template template_signal_small(x,y){
+
+	[ x, y, 5, 8, -1, -11]
+	[ x+66, y, 6, 8, -1, -11]
+	[ x+132, y, 6, 8, -1, -11]
+	[ x+198, y, 5, 8, -2, -6]
+	[ x+264, y, 5, 8, -2, -8]
+	[ x+330, y, 5, 8, -3, -9]
+	[ x+396, y, 6, 8, -2, -11]
+	[ x+462, y, 6, 8, -1, -11]
+}
+
+
+// template for spriteset :
+// spriteset([name], "file location"){[template_specific](x,y)}
+// where file location is the location of the image containing the sprites
+// template_specific is the template relevant to the sprites
+// x and y are the starting coordinates of the first sprite in the set
+
+// osswix's japanese signal 'shortcuts':
+// hs: double green - high speed clear
+// cl: single green - clear
+// lr: flashing yellow over green - less speed reduced
+// sr: yellow over green - speed reduced
+// ct: single yellow - caution
+// rs: double yellow - restricted speed
+// st: single red - stop
+
+// hidden signal
+
+spriteset(signal_hidden, "japanmultiaspect.png"){template_signal_invisible(35,28)}
+
+// 2 tall signals
+
+spriteset(signal_2a_cl, "japanmultiaspect.png"){template_signal_2tall(35,31)}
+spriteset(signal_2a_st, "japanmultiaspect.png"){template_signal_2tall(70,31)}
+spriteset(signal_2b_ct, "japanmultiaspect.png"){template_signal_2tall(56,56)}
+
+// 3 tall signals
+
+spriteset(signal_3_cl, "japanmultiaspect.png"){template_signal_3tall(35,78)}
+spriteset(signal_3_ct, "japanmultiaspect.png"){template_signal_3tall(56,78)}
+spriteset(signal_3_st, "japanmultiaspect.png"){template_signal_3tall(70,78)}
+
+// 4 tall signals
+
+spriteset(signal_4a_cl, "japanmultiaspect.png"){template_signal_4tall(35,101)}
+spriteset(signal_4a_lr, "japanmultiaspect.png"){template_signal_4tall(42,101)}
+spriteset(signal_4a_sr, "japanmultiaspect.png"){template_signal_4tall(49,101)}
+spriteset(signal_4a_ct, "japanmultiaspect.png"){template_signal_4tall(56,101)}
+spriteset(signal_4a_st, "japanmultiaspect.png"){template_signal_4tall(70,101)}
+spriteset(signal_4b_cl, "japanmultiaspect.png"){template_signal_4tall(35,126)}
+spriteset(signal_4b_ct, "japanmultiaspect.png"){template_signal_4tall(56,126)}
+spriteset(signal_4b_st, "japanmultiaspect.png"){template_signal_4tall(70,126)}
+
+// 5 tall signals
+
+spriteset(signal_5a_cl, "japanmultiaspect.png"){template_signal_5tall(35,151)}
+spriteset(signal_5a_lr, "japanmultiaspect.png"){template_signal_5tall(42,151)}
+spriteset(signal_5a_sr, "japanmultiaspect.png"){template_signal_5tall(49,151)}
+spriteset(signal_5a_ct, "japanmultiaspect.png"){template_signal_5tall(56,151)}
+spriteset(signal_5a_st, "japanmultiaspect.png"){template_signal_5tall(70,151)}
+spriteset(signal_5b_hs, "japanmultiaspect.png"){template_signal_5tall(28,178)}
+spriteset(signal_5b_cl, "japanmultiaspect.png"){template_signal_5tall(35,178)}
+spriteset(signal_5b_lr, "japanmultiaspect.png"){template_signal_5tall(42,178)}
+spriteset(signal_5b_sr, "japanmultiaspect.png"){template_signal_5tall(49,178)}
+spriteset(signal_5b_ct, "japanmultiaspect.png"){template_signal_5tall(56,178)}
+spriteset(signal_5b_st, "japanmultiaspect.png"){template_signal_5tall(70,178)}
+
+// 6 tall signals
+
+spriteset(signal_6_hs, "japanmultiaspect.png"){template_signal_6tall(28,205)}
+spriteset(signal_6_cl, "japanmultiaspect.png"){template_signal_6tall(35,205)}
+spriteset(signal_6_lr, "japanmultiaspect.png"){template_signal_6tall(42,205)}
+spriteset(signal_6_sr, "japanmultiaspect.png"){template_signal_6tall(49,205)}
+spriteset(signal_6_ct, "japanmultiaspect.png"){template_signal_6tall(56,205)}
+spriteset(signal_6_st, "japanmultiaspect.png"){template_signal_6tall(70,205)}
+
+// reduced speed signals
+
+spriteset(signal_4b_rs, "japanmultiaspect.png"){template_signal_4tall(63,126)}
+spriteset(signal_5a_rs, "japanmultiaspect.png"){template_signal_5tall(63,151)}
+spriteset(signal_6_rs, "japanmultiaspect.png"){template_signal_6tall(63,205)}
+
+// distant signals
+
+spriteset(signal_d4_cl, "japanmultiaspect.png"){template_signal_4talldistant(35,258)}
+spriteset(signal_d4_sr, "japanmultiaspect.png"){template_signal_4talldistant(49,258)}
+spriteset(signal_d4_ct, "japanmultiaspect.png"){template_signal_4talldistant(56,258)}
+spriteset(signal_d4_of, "japanmultiaspect.png"){template_signal_4talldistant(28,258)}
+spriteset(signal_d2_cl, "japanmultiaspect.png"){template_signal_2talldistant(35,283)}
+spriteset(signal_d2_ct, "japanmultiaspect.png"){template_signal_2talldistant(56,283)}
+spriteset(signal_d2_of, "japanmultiaspect.png"){template_signal_2talldistant(28,283)}
+
+// repeaters
+
+spriteset(signal_repeater_cl, "japanmultiaspect.png"){template_signal_repeater(35,234)}
+spriteset(signal_repeater_ct, "japanmultiaspect.png"){template_signal_repeater(56,234)}
+spriteset(signal_repeater_st, "japanmultiaspect.png"){template_signal_repeater(70,234)}
+
+// dwaf signals
+spriteset(signal_dwarf_normal_cl, "japanmultiaspect.png"){template_signal_small(35,306)}
+spriteset(signal_dwarf_normal_st, "japanmultiaspect.png"){template_signal_small(70,306)}
+spriteset(signal_dwarf_of, "japanmultiaspect.png"){template_signal_small(28,306)}
+spriteset(signal_dwarf_colour_cl, "japanmultiaspect.png"){template_signal_small(35,317)}
+spriteset(signal_dwarf_colour_st, "japanmultiaspect.png"){template_signal_small(70,317)}
+
+// shinkansen markers
+spriteset(signal_shinkansen_marker, "japanmultiaspect.png"){template_signal_small(28,328)}
+
+//Switches use the following format:
+//switch(FEAT_SIGNALS, SELF, [name], [variable]{
+//	value: result;
+//	value: result;
+//	return result; //Giving a "return result" at the end will give a default value when none of the other values have been met by the variable
+//}
+//The name can be any text string you like.
+//The variables are pre-selected here to give the correct results
+//The result can be a spriteset or another switch
+
+// for the japanese signal the following statusses are used :
+// 00 for st
+// 05 for cl
+// 04 for lr
+// 03 for sr
+// 02 for ct
+// 01 for hs
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, twonormal, getbits(extra_callback_info2, 0, 8)){
+	00: signal_2a_st;
+		signal_2a_cl;
+}
+
+switch(FEAT_SIGNALS, SELF, tworestricted, getbits(extra_callback_info2, 0, 8)){
+	00: signal_2a_st;
+		signal_2b_ct;
+}
+
+switch(FEAT_SIGNALS, SELF, threenormal, getbits(extra_callback_info2, 0, 8)){
+	00: signal_3_st;
+	01: signal_3_cl;
+	05: signal_3_cl;
+	04: signal_3_cl;
+	03: signal_3_cl;
+	02: signal_3_ct;
+}
+
+switch(FEAT_SIGNALS, SELF, fournormal, getbits(extra_callback_info2, 0, 8)){
+	00: signal_4a_st;
+	01: signal_4a_cl;
+	05: signal_4a_cl;
+	04: signal_4a_lr;
+	03: signal_4a_sr;
+	02: signal_4a_ct;
+}
+
+switch(FEAT_SIGNALS, SELF, fourrestricted, getbits(extra_callback_info2, 0, 8)){
+	00: signal_4b_st;
+	01: signal_4b_cl;
+	05: signal_4b_cl;
+	04: signal_4b_cl;
+	03: signal_4b_ct;
+	02: signal_4b_rs;
+}
+
+switch(FEAT_SIGNALS, SELF, fivenormal, getbits(extra_callback_info2, 0, 8)){
+	00: signal_5a_st;
+	01: signal_5a_cl;
+	05: signal_5a_cl;
+	04: signal_5a_lr;
+	03: signal_5a_sr;
+	02: signal_5a_ct;
+}
+
+switch(FEAT_SIGNALS, SELF, fiverestricted, getbits(extra_callback_info2, 0, 8)){
+	00: signal_5a_st;
+	01: signal_5a_cl;
+	05: signal_5a_lr;
+	04: signal_5a_sr;
+	03: signal_5a_ct;
+	02: signal_5a_rs;
+}
+
+switch(FEAT_SIGNALS, SELF, highspeedfive, getbits(extra_callback_info2, 0, 8)){
+	00: signal_5b_st;
+	01: signal_5b_hs;
+	05: signal_5b_cl;
+	04: signal_5b_lr;
+	03: signal_5b_sr;
+	02: signal_5b_ct;
+}
+
+switch(FEAT_SIGNALS, SELF, highspeedsix, getbits(extra_callback_info2, 0, 8)){
+	00: signal_6_st;
+	01: signal_6_hs;
+	05: signal_6_cl;
+	04: signal_6_lr;
+	03: signal_6_sr;
+	02: signal_6_ct;
+}
+
+switch(FEAT_SIGNALS, SELF, sixrestriction, getbits(extra_callback_info2, 0, 8)){
+	00: signal_6_st;
+	01: signal_6_cl;
+	05: signal_6_lr;
+	04: signal_6_sr;
+	03: signal_6_ct;
+	02: signal_6_rs;
+}
+
+switch(FEAT_SIGNALS, SELF, fourdistant, getbits(extra_callback_info2, 0, 8)){
+	00: signal_d4_of;
+	01: signal_d4_cl;
+	05: signal_d4_cl;
+	04: signal_d4_cl;
+	03: signal_d4_sr;
+	02: signal_d4_ct;
+}
+
+switch(FEAT_SIGNALS, SELF, twodistant, getbits(extra_callback_info2, 0, 8)){
+	00: signal_d2_of;
+	01: signal_d2_cl;
+	05: signal_d2_cl;
+	04: signal_d2_cl;
+	03: signal_d2_cl;
+	02: signal_d2_ct;
+}
+
+switch(FEAT_SIGNALS, SELF, repeatersignals, getbits(extra_callback_info2, 0, 8)){
+	00: signal_repeater_st;
+	01: signal_repeater_cl;
+	05: signal_repeater_cl;
+	04: signal_repeater_cl;
+	03: signal_repeater_ct;
+	02: signal_repeater_st;
+}
+
+switch(FEAT_SIGNALS, SELF, colourdwarf, getbits(extra_callback_info2, 0, 8)){
+	00: signal_dwarf_colour_st;
+		signal_dwarf_colour_cl;
+}
+
+switch(FEAT_SIGNALS, SELF, normaldwarf, getbits(extra_callback_info2, 0, 8)){
+	00: signal_dwarf_normal_st;
+		signal_dwarf_colour_cl;
+}
+
+switch(FEAT_SIGNALS, SELF, shinkansenmarker, getbits(extra_callback_info2, 0, 8)){
+	signal_shinkansen_marker;
+}
+
+switch(FEAT_SIGNALS, SELF, distantsignals, getbits(extra_callback_info2, 8, 8)){
+	00: fourdistant;
+	01: twodistant;
+}
+
+switch(FEAT_SIGNALS, SELF, dwarfsignals, getbits(extra_callback_info2, 8, 8)){
+	00: colourdwarf;
+	01: normaldwarf;
+}
+
+switch(FEAT_SIGNALS, SELF, tw_lamp_signal, getbits(extra_callback_info2, 16, 8)){
+	    twonormal;
+}
+
+switch(FEAT_SIGNALS, SELF, th_lamp_signal, getbits(extra_callback_info2, 16, 8)){
+	    threenormal;
+}
+
+switch(FEAT_SIGNALS, SELF, fo_lamp_signal, getbits(extra_callback_info2, 16, 8)){
+	    fournormal;
+}
+
+switch(FEAT_SIGNALS, SELF, fi_lamp_signal, getbits(extra_callback_info2, 16, 8)){
+	    fivenormal;
+}
+
+switch(FEAT_SIGNALS, SELF, highspeed_signal, getbits(extra_callback_info2, 16, 8)){
+	    highspeedfive;
+}
+
+switch(FEAT_SIGNALS, SELF, tw_res_signal, getbits(extra_callback_info2, 16, 8)){
+	    tworestricted;
+}
+
+switch(FEAT_SIGNALS, SELF, fo_res_signal, getbits(extra_callback_info2, 16, 8)){
+	    fourrestricted;
+}
+
+switch(FEAT_SIGNALS, SELF, fi_res_signal, getbits(extra_callback_info2, 16, 8)){
+	    fiverestricted;
+}
+
+switch(FEAT_SIGNALS, SELF, hs_res_signal, getbits(extra_callback_info2, 16, 8)){
+	    sixrestriction;
+}
+
+switch(FEAT_SIGNALS, SELF, distant_signal, getbits(extra_callback_info2, 16, 8)){
+		distantsignals;
+}
+
+switch(FEAT_SIGNALS, SELF, repeater_signal, getbits(extra_callback_info2, 16, 8)){
+		repeatersignals;
+}
+
+switch(FEAT_SIGNALS, SELF, dwarf_signal, getbits(extra_callback_info2, 16, 8)){
+		dwarfsignals;
+}
+switch(FEAT_SIGNALS, SELF, shinkansen_marker, getbits(extra_callback_info2, 16, 8)){
+		shinkansenmarker;
+}
+
+
+switch(FEAT_SIGNALS, SELF, japanmultiaspect, signal_style){
+	01: tw_lamp_signal;
+	02: th_lamp_signal;
+	03: fo_lamp_signal;
+	04: fi_lamp_signal;
+	05: highspeed_signal;
+	06: tw_res_signal;
+	07: fo_res_signal;
+	08: fi_res_signal;
+	09: hs_res_signal;
+	10: distant_signal;
+	11: repeater_signal;
+	12: dwarf_signal;
+	13: shinkansen_marker;
+}
+
+item (FEAT_SIGNALS, custom_signals, 0) { 
+	property{
+		extra_aspects:		4;	//Number of extra aspects to be used across all signal types (0=only red/green, 1=red/yellow/green etc). Set it to the max of all your signal types
+		
+		define_style:		1;
+		style_name:			string(STR_SIG_2);
+//		style_lookahead_extra_aspects:	4;
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+
+
+		define_style:		2;
+		style_name:			string(STR_SIG_3);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+		define_style:		3;
+		style_name:			string(STR_SIG_4);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+
+		define_style:		4;
+		style_name:			string(STR_SIG_5);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+
+		define_style:		5;
+		style_name:			string(STR_SIG_HS);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+
+		define_style:		6;
+		style_name:			string(STR_RS_2);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+
+		define_style:		7;
+		style_name:			string(STR_RS_4);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+
+		define_style:		8;
+		style_name:			string(STR_RS_5);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+
+		define_style:		9;
+		style_name:			string(STR_RS_6);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+
+		define_style:		10;
+		style_name:			string(STR_DS);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+		style_semaphore_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+		style_always_reserve_through:	01;
+
+		define_style:		11;
+		style_name:			string(STR_RP);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_PBS);
+		style_no_aspect_increase:	01;
+		style_always_reserve_through:	01;
+
+		define_style:		12;
+		style_name:			string(STR_DW);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_PBS);
+		style_semaphore_enabled: bitmask(SIGNAL_TYPE_PBS);
+		style_lookahead_single_signal_only: 01;
+
+		define_style:		13;
+		style_name:			string(STR_SM);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL);
+		style_opposite_side:	01;
+
+	}
+
+    graphics {
+        japanmultiaspect;
+    }
+}

@@ -1,0 +1,32 @@
+##grflangid 0x3A
+
+# GRF name and description
+STR_GRF_NAME_WITH_VER                            :한국 신호기 세트 {VERSION}
+STR_GRF_DESC                                     :한국식 신호기를 추가해주는 신호기 세트입니다.{}(업데이트: {RECENT_UPDATED}){}{SILVER}+ 제작: TELK, EightonEight{}{BLACK}  - {AUTHOR_EMAIL}{}  - {AUTHOR_WEBSITE}
+STR_GRF_URL                                      :https://github.com/KoreanGRF/KoreanSignalSet
+
+
+# Parameters
+STR_PARAM_IS_REALISTIC_NAME                      :현실적 그래픽
+STR_PARAM_IS_REALISTIC_DESC                      :이 설정을 켜면, 신호기를 게임에 적합한 모습 대신 현실 세계의 모습으로 표현합니다. (기본값: 켬)
+STR_PARAM_USE_TVM_NAME                           :구식 폐색 신호기를 TVM 폐색 표지로 변경
+STR_PARAM_USE_TVM_DESC                           :구식 폐색 신호기를 고속철도에서 사용하는 TVM 폐색 표지로 변경합니다. TVM 폐색 표지는 진행/정지 신호가 구분되지 않습니다. (기본값: 켬)
+STR_PARAM_USE_CAUTION_SIGNALS_NAME               :주의 신호 사용
+STR_PARAM_USE_CAUTION_SIGNALS_DESC               :전자식 복합, 출구 신호기의 진행 신호를 각각 감속(YG), 주의(Y) 신호로 변경합니다. (기본값: 켬)
+STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_NAME            :폐색 신호기에 청색 신호 사용
+STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_DESC            :이 설정을 켜면, 폐색 신호기에 녹색 신호 대신 청색 신호를 사용합니다. (기본값: 끔)
+STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_NAME            :입구 신호기에 청색 신호 사용
+STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_DESC            :이 설정을 켜면, 입구 신호기에 녹색 신호 대신 청색 신호를 사용합니다. (기본값: 끔)
+STR_PARAM_USE_BLUE_AS_OPEN_EXIT_NAME             :출구 신호기에 청색 신호 사용
+STR_PARAM_USE_BLUE_AS_OPEN_EXIT_DESC             :이 설정을 켜면, 출구 신호기에 녹색 신호 대신 청색 신호를 사용합니다. (기본값: 끔)
+STR_PARAM_USE_BLUE_AS_OPEN_COMBO_NAME            :복합 신호기에 청색 신호 사용
+STR_PARAM_USE_BLUE_AS_OPEN_COMBO_DESC            :이 설정을 켜면, 복합 신호기에 녹색 신호 대신 청색 신호를 사용합니다. (기본값: 끔)
+STR_PARAM_USE_BLUE_AS_OPEN_PATH_NAME             :경로 신호기에 청색 신호 사용
+STR_PARAM_USE_BLUE_AS_OPEN_PATH_DESC             :이 설정을 켜면, 경로 신호기에 녹색 신호 대신 청색 신호를 사용합니다. (기본값: 끔)
+STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_NAME      :단방향 경로 신호기에 청색 신호 사용
+STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_DESC      :이 설정을 켜면, 단방향 경로 신호기에 녹색 신호 대신 청색 신호를 사용합니다. (기본값: 끔)
+STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_NAME     :프로그램 신호기에 청색 신호 사용
+STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_DESC     :이 설정을 켜면, 단방향 경로 신호기에 녹색 신호 대신 청색 신호를 사용합니다.{}{ORANGE}JGRPP에서만 적용됩니다{BLACK} (기본값: 끔)
+
+# Errors
+STR_UNSUPPORTED_VERSION                          :이 NewGRF의 모든 기능(eg. 다현시 신호)을 사용하려면 OpenTTD JGRPP 0.43.0 또는 그 이상의 버전이 필요합니다.

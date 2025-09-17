@@ -1,0 +1,12 @@
+##grflangid 0x01
+# 0x01 -> English
+
+# General GRF strings
+STR_GRF_NAME	:North Korean Signal Set 1.0
+STR_GRF_DESC	:Adds the rail signal sprites of the North Korean Track Set as additional signals. Requires the use of (a recent version of) JGR's patch pack. {}{BLACK} {}{COPYRIGHT}2022 Erato Nysiad{}License:CC BY 4.0{}
+
+STR_UNSUPPORTED_VERSION	:You must use a recent version of JGR Patch Pack!
+# Signal String
+STR_SIG_1		:North Korean Signals
+
+#EOF

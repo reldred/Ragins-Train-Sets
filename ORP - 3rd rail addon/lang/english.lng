@@ -1,0 +1,58 @@
+##grflangid 0x0
+
+STR_GRF_NAME:Oceanian Rail Pack - 3rd Rail Add-on v2
+STR_GRF_DESCRIPTION:In the early days, both Melbourne and Sydney considered 3rd rail electrification. This is an alt-history set asking, what if they did?. Also it includes COMERT, a proposed lightweight metro system by Comeng. Drawn and Coded by Zachary Moore (Ragin1_)
+
+STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
+STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
+STR_PARAM_RUNNING_COST              :Running cost multiplier
+STR_PARAM_RUNNING_COST_DESC         :You can use this setting to increase or decrease the running costs of the vehicles in this set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (default)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+STR_PARAM_NAME_CAPACITY:Passenger Car Capacity
+STR_PARAM_NAME_FREIGHT_CAPACITY:Freight Car Capacity
+STR_PARAM_DESC_CAPACITY:You can use this setting to adjust the capacity of trains. Useful for balancing it against sets like NARS or UKRS
+STR_PARAM_REAL_CAPACITY:Realistic Capacity
+STR_PARAM_NORMAL_REDUCED:Reduced Capacity
+
+STR_NO_COUPLE_MU: Only attach Multiple Unit trains or trains of the same type!
+
+STR_MU_TRAILER:MU Car (ORP-3rd Rail Addon)
+STR_MU_TRAILER_INFO:{GOLD}Attach this to a another multiple unit to make it longer
+
+STR_NAME_COMERT1965:COMERT Mk1
+STR_INFO_COMERT1965:{BLACK}Role: {GOLD}Goofy Goober{}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Context: {GOLD}Proposed lightweight metro by Comeng
+
+STR_NAME_TAIT:Tait Set
+STR_INFO_TAIT:{BLACK}Role: {GOLD}Suburban Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Melbourne Swing Door & Tait Trains {}{GOLD}Subscribe to Taitset on Youtube!
+
+STR_NAME_HARRIS_2DOOR:M&K Harris Set (2 Doors)
+STR_NAME_HARRIS_3DOOR:M&K Harris Set (3 Doors)
+STR_INFO_HARRIS:{BLACK}Role: {GOLD}Suburban Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Melbourne Harris Trains
+
+STR_NAME_HITACHI:Comeng-M&K Hitachi EMU
+STR_INFO_HITACHI:{BLACK}Role: {GOLD}Suburban Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Melbourne Hitachi Trains {}{GOLD}Surprisingly, not built by Hitachi
+
+STR_NAME_COMENG_SMU:Comeng EMU
+STR_INFO_COMENG_SMU:{BLACK}Role: {GOLD}Suburban Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Melbourne Comeng Trains
+
+STR_NAME_ALSTOM_XTRAPOLIS:Alstom X-Trapolis
+STR_INFO_ALSTOM_XTRAPOLIS:{BLACK}Role: {GOLD}Suburban Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Melbourne X'Trapolis 100 Trains {}{GOLD}Who needs suspension?
+
+STR_NAME_SIEMENS_NEXUS:Siemens Nexus
+STR_INFO_SIEMENS_NEXUS:{BLACK}Role: {GOLD}Suburban Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Melbourne Siemens Nexus Trains {}{GOLD}Who needs working brakes?
+
+STR_NAME_CRRC_HCMT:CRRC High Capacity Metro Train
+STR_INFO_CRRC_HCMT:{BLACK}Role: {GOLD}Suburban Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Melbourne HCMT Munnel trains
+
+STR_NAME_ALSTOM_XTRAPOLIS2:Alstom X-Trapolis 2.0
+STR_INFO_ALSTOM_XTRAPOLIS2:{BLACK}Role: {GOLD}Suburban Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Melbourne X'Trapolis 2.0 Trains {}{GOLD}We fixed the suspension this time

@@ -1,0 +1,537 @@
+grf{
+    grfid: "ZM\03\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 0;
+    min_compatible_version: 0;
+}
+
+railtypetable {
+    RAIL
+}
+
+cargotable {
+    PASS, MAIL,
+// Misc
+    TOUR,
+}
+
+/* Fix depot view */
+traininfo_y_offset = 2;
+train_width_32_px = 1;
+
+// 6 Template
+template template_6(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        19,        -3,            -13]
+    [ x+13,      y,        18,        20,        -11,        -11]
+    [ x+40,     y,        25,        16,        -9,        -12]
+    [ x+70,     y,        18,        20,        -1,            -11]
+    [ x+89,     y+5,        8,        19,         -3,            -9]
+    [ x+98,     y,        18,        20,        -15,        -11]
+    [ x+121,    y,        25,        16,        -17,        -12]
+    [ x+155,    y,        20,        18,         -5,            -11]
+}
+
+//7 Template
+template template_7(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,         21,        -3,         -13]
+    [ x+11,      y,       20,        20,        -13,        -11]
+    [ x+36,     y,        29,        16,        -17,        -12]
+    [ x+68,     y,        20,        20,        -5,         -12]
+    [ x+89,     y+3,       8,        21,        -3,         -13]
+    [ x+98,     y,        20,        20,        -13,        -12]
+    [ x+121,    y,        29,        16,        -17,        -12]
+    [ x+155,    y,        20,        20,        -5,         -11]
+}
+
+// 8 Template
+template template_8(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -14]
+    [ x+9,      y,        22,        20,        -14,        -11]
+    [ x+32,     y,        33,        16,        -17,        -12]
+    [ x+66,     y,        22,        20,        -6,            -11]
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -14,        -11]
+    [ x+121,    y,        33,        16,        -17,        -12]
+    [ x+155,    y,        22,        20,        -6,            -11]
+}
+
+////////////////////////////
+//6 Long Passenger Coaches//
+////////////////////////////
+
+spriteset(spriteset_Redfern_Coach, "gfx/Redfern Suburban Coach.png") {template_6(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_Redfern_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_REDFERN_COACH);
+        introduction_date:                date(1860,1,1);
+        model_life:                        50;
+        length:                            6;
+
+        weight:                         16 ton;
+        speed:                          80 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    70;
+
+    }
+    graphics {
+        default:                        spriteset_Redfern_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+
+spriteset(spriteset_Cantilever_Coach, "gfx/Cantilever Suburban Coach.png") {template_6(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_Cantilever_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_CANTILEVER_COACH);
+        introduction_date:                date(1921,1,1);
+        model_life:                        50;
+        length:                            6;
+
+        weight:                         22 ton;
+        speed:                          80 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    56;
+
+    }
+    graphics {
+        default:                        spriteset_Cantilever_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+////////////////////////////
+//8 Long Passenger Coaches//
+////////////////////////////
+
+spriteset(spriteset_American_Suburban_Coach, "gfx/American Suburban Coach.png") {template_8(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_American_Suburban_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_AMERICAN_SUBURBAN_COACH);
+        introduction_date:                date(1877,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         24 ton;
+        speed:                            80 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    70;
+
+    }
+    graphics {
+        default:                        spriteset_American_Suburban_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+spriteset(spriteset_Heavyweight_Intercity_Coach, "gfx/Heavyweight Intercity Coach.png") {template_8(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_Heavyweight_Intercity_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_HEAVYWEIGHT_INTERCITY_COACH);
+        introduction_date:                date(1900,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         35 ton;
+        speed:                            120 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    80;
+
+    }
+    graphics {
+        default:                        spriteset_Heavyweight_Intercity_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+spriteset(spriteset_RUB_Interurban_Coach, "gfx/RUB Interurban Coach.png") {template_8(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_RUB_Interurban_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_RUB_INTERURBAN_COACH);
+        introduction_date:                date(1945,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         40 ton;
+        speed:                            120 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    60;
+
+    }
+    graphics {
+        default:                        spriteset_RUB_Interurban_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+spriteset(spriteset_Aurora_Intercity_Coach, "gfx/Aurora Intercity Coach.png") {template_8(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_Aurora_Intercity_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_AURORA_INTERCITY_COACH);
+        introduction_date:                date(1955,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         33 ton;
+        speed:                            130 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    55;
+
+    }
+    graphics {
+        default:                        spriteset_Aurora_Intercity_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+spriteset(spriteset_TF_Interurban_Coach, "gfx/Silver Interurban Coach.png") {template_8(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_TF_Interurban_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_TF_INTERURBAN_COACH);
+        introduction_date:                date(1958,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         30 ton;
+        speed:                            115 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    64;
+
+    }
+    graphics {
+        default:                        spriteset_TF_Interurban_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+spriteset(spriteset_Tulloch_Suburban_Double_Deck_Coach, "gfx/Tulloch Suburban Double Decker.png") {template_8(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_Tulloch_Suburban_Double_Deck_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_TULLOCH_DD_COACH);
+        introduction_date:                date(1964,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         30 ton;
+        speed:                            115 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    140;
+
+    }
+    graphics {
+        default:                        spriteset_Tulloch_Suburban_Double_Deck_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+spriteset(spriteset_Commonwealth_Intercity_Coach, "gfx/Commonwealth Intercity Coach.png") {template_8(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_Commonwealth_Intercity_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_COMMONWEALTH_INTERCITY_COACH);
+        introduction_date:                date(1966,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         45 ton;
+        speed:                            160 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    60;
+
+    }
+    graphics {
+        default:                        spriteset_Commonwealth_Intercity_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+spriteset(spriteset_Amtrak_Horizon, "gfx/Amtrak_Horizon.png") {template_8(7,39)}
+
+item (FEAT_TRAINS, item_Amtrak_Horizon) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_AMTRAK_HORIZON);
+        introduction_date:                date(1988,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         45 ton;
+        speed:                            160 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    80;
+
+    }
+    graphics {
+        default:                        spriteset_Amtrak_Horizon;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+spriteset(spriteset_Venture_Intercity_Coach, "gfx/Venture Intercity Coach.png") {template_8(7,39)}
+
+item (FEAT_TRAINS, item_Amtrak_Horizon) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_VENTURE_COACH);
+        introduction_date:                date(2018,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         30 ton;
+        speed:                            180 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    74;
+
+    }
+    graphics {
+        default:                        spriteset_Venture_Intercity_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+
+///////////////////////
+//6 Long Mail Coaches//
+///////////////////////
+
+spriteset(spriteset_KB_Baggage_Coach, "gfx/KB Express Baggage & Mail Van.png") {template_6(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, item_KB_Baggage_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_KB_BAGGAGE_COACH);
+        introduction_date:                date(1860,1,1);
+        model_life:                        50;
+        length:                            6;
+
+        weight:                         16 ton;
+        speed:                          80 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_MAIL,CC_EXPRESS,CC_ARMOURED);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                MAIL;
+        cargo_capacity:                    70;
+
+    }
+    graphics {
+        default:                        spriteset_KB_Baggage_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}
+
+
+///////////////////////
+//8 Long Mail Coaches//
+///////////////////////
+
+spriteset(spriteset_Commonwealth_Mail_Coach, "gfx/Commonwealth Mail Coach.png") {template_8(7,39)}
+
+item (FEAT_TRAINS, item_Commonwealth_Mail_Coach) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC);
+
+        track_type:                        RAIL;
+
+        name: string(STR_COMMONWEALTH_MAIL_COACH);
+        introduction_date:                date(1966,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         21 ton;
+        speed:                            80 km/h;
+        cost_factor:                     28;
+        running_cost_factor:             100;
+
+        refittable_cargo_classes:        bitmask(CC_MAIL,CC_EXPRESS,CC_ARMOURED);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                MAIL;
+        cargo_capacity:                    40;
+
+    }
+    graphics {
+        default:                        spriteset_Commonwealth_Mail_Coach;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}

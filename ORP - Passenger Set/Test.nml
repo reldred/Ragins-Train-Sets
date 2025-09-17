@@ -1,0 +1,79 @@
+spriteset(spriteset_GE_AGE8_PantoUp,   "gfx/GE_AGE8_PantoUp.png") {template_7(7, 39)}
+spriteset(spriteset_GE_AGE8_PantoUp_r,   "gfx/GE_AGE8_PantoUp.png") {template_7(7, 69)}
+spriteset(spriteset_GE_AGE8_PantoDown,   "gfx/GE_AGE8_PantoDown.png") {template_7(7, 39)}
+
+//GE_AGE8_Liv0
+spriteset(spriteset_GE_AGE8_Liv0_Purchase,   "gfx/GE_AGE8_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_AGE8_Liv0,   "gfx/GE_AGE8_Liv0.png") {template_7(7, 39)}
+
+switch(FEAT_TRAINS, SELF, switch_GE_AGE8_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
+ 0: spriteset_GE_AGE8_PantoDown;
+ 1: spriteset_GE_AGE8_PantoUp;
+}
+
+switch (FEAT_TRAINS, SELF, switch_GE_AGE8_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GE_AGE8_Liv0;
+    1: switch_GE_AGE8_Liv0_Fw_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_GE_AGE8_Liv0_r_railtype, tile_powers_railtype("ELRL")) {
+ 0: spriteset_GE_AGE8_PantoDown;
+ 1: spriteset_GE_AGE8_PantoUp_r;
+}
+
+switch (FEAT_TRAINS, SELF, switch_GE_AGE8_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GE_AGE8_Liv0;
+    1: switch_GE_AGE8_Liv0_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_GE_AGE8_Liv0_position, vehicle_is_flipped) {
+ 0: switch_GE_AGE8_Liv0_Fw;
+ 1: switch_GE_AGE8_Liv0_r;
+}
+
+item(FEAT_TRAINS, Item_GE_AGE8_Liv0, 29650) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+
+        track_type:                        ELRL;
+        running_cost_base:                RUNNING_COST_DIESEL;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_CARGO;
+        dual_headed:                    0; // <- Double Headed, so cab on each end
+
+        visual_effect_and_powered: VISUAL_EFFECT_ELECTRIC;
+
+        name:                            string(STR_NAME_GE_AGE8);
+        introduction_date:                date(1983,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                        128 ton;
+        speed:                            125 mph;
+        power:                            7900 hp;
+        tractive_effort_coefficient:     0.7;
+        cost_factor:                     22;
+        running_cost_factor:             160;
+        cargo_capacity:                  0;
+
+//        variant_group: Item_GE_AGE8_Liv0;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: switch_GE_AGE8_Liv0_position;
+        purchase: spriteset_GE_AGE8_Liv0_Purchase;
+        additional_text: string(STR_INFO_GE_AGE8);
+		reverse_build_probability: return 50;
+}
+}

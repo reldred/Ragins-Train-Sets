@@ -1,0 +1,11 @@
+##grflangid 0x01
+STR_GRF_NAME:Auz Trees v1
+STR_GRF_DESCRIPTION:A graphics replacement set for trees. Based on Ufiby's Tree set, with the tree sprites provided by mdhowe, and jacaranda's by GarryG. Bashed together by Ragin1_
+
+STR_OPENTTD_VERSION						:1.10.0
+
+STR_PARAM_TREES_NAME					:Adjusting the rendering of trees
+STR_PARAM_TREES_DESC					:
+
+STR_PARAM_TREES_0						:with noise
+STR_PARAM_TREES_1						:no noise

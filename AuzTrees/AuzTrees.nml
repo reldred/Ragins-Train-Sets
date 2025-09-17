@@ -1,0 +1,142 @@
+grf {
+	grfid: "ZM\20\01";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESCRIPTION);
+	version: 1;
+	min_compatible_version: 1;
+	}
+if (ttd_platform != PLATFORM_OPENTTD || (openttd_version < version_openttd(1, 10, 0, 0))) {
+		error(FATAL, REQUIRES_OPENTTD, string(STR_OPENTTD_VERSION));
+	}
+//==================================================================================================================================
+//								TEMPLATE
+//==================================================================================================================================
+template ground_trees(x, y) { [x, y, 40, 64, -20, -56]}
+template tmpl_trees(x,y) {
+    ground_trees(  0+x,  0+y)
+    ground_trees( 48+x,  0+y)
+    ground_trees( 96+x,  0+y)
+    ground_trees(144+x,  0+y)
+    ground_trees(192+x,  0+y)
+    ground_trees(240+x,  0+y)
+    ground_trees(288+x,  0+y)
+}
+template ground_tile_forest(x, y) { [x, y, 64, 84, -31, -56]}
+template tmpl_trees_forest(y) {
+    ground_tile_forest(  0,  0+y)
+    ground_tile_forest( 65,  0+y)
+    ground_tile_forest(130,  0+y)
+    ground_tile_forest(195,  0+y)
+    ground_tile_forest(260,  0+y)
+}
+//==================================================================================================================================
+//								SPRITES TREES NOISE
+//==================================================================================================================================
+//******************************* TEMPERATE ********************************************************
+	replace (1576, "gfx/trees.png") {
+		tmpl_trees(0,0)
+	}
+	replace (1583, "gfx/trees.png") {
+		tmpl_trees(336,0)
+	}
+	replace (1590, "gfx/trees.png") {
+		tmpl_trees(0,70)
+	}
+	replace (1597, "gfx/trees.png") {
+		tmpl_trees(336,70)
+	}
+	replace (1604, "gfx/trees.png") {
+		tmpl_trees(0,140)
+	}
+	replace (1611, "gfx/trees.png") {
+		tmpl_trees(336,140)
+	}
+	replace (1618, "gfx/trees.png") {
+		tmpl_trees(0,210)
+	}
+	replace (1625, "gfx/trees.png") {
+		tmpl_trees(336,210)
+	}
+	replace (1632, "gfx/trees.png") {
+		tmpl_trees(0,280)
+	}
+	replace (1639, "gfx/trees.png") {
+		tmpl_trees(336,280)
+	}
+	replace (1646, "gfx/trees.png") {
+		tmpl_trees(0,350)
+	}
+	replace (1653, "gfx/trees.png") {
+		tmpl_trees(336,350)
+	}
+	replace (1660, "gfx/trees.png") {
+		tmpl_trees(0,420)
+	}
+	replace (1667, "gfx/trees.png") {
+		tmpl_trees(336,420)
+	}
+	replace (1674, "gfx/trees.png") {
+		tmpl_trees(0,490)
+	}
+	replace (1681, "gfx/trees.png") {
+		tmpl_trees(336,490)
+	}
+	replace (1688, "gfx/trees.png") {
+		tmpl_trees(0,560)
+	}
+	replace (1695, "gfx/trees.png") {
+		tmpl_trees(336,560)
+	}
+	replace (1702, "gfx/trees.png") {
+		tmpl_trees(0,630)
+	}
+//******************************* SUBARCTIC NO SNOW ********************************************************
+	replace (1709, "gfx/trees.png") {
+		tmpl_trees(336,630)
+	}
+	replace (1716, "gfx/trees.png") {
+		tmpl_trees(0,700)
+	}
+	replace (1723, "gfx/trees.png") {
+		tmpl_trees(336,700)
+	}
+	replace (1730, "gfx/trees.png") {
+		tmpl_trees(0,770)
+	}
+	replace (1737, "gfx/trees.png") {
+		tmpl_trees(336,770)
+	}
+	replace (1744, "gfx/trees.png") {
+		tmpl_trees(0,840)
+	}
+	replace (1751, "gfx/trees.png") {
+		tmpl_trees(336,840)
+	}
+	replace (1758, "gfx/trees.png") {
+		tmpl_trees(0,910)
+	}
+//******************************* SUBARCTIC SNOW ********************************************************
+	replace (1765, "gfx/trees.png") {
+		tmpl_trees(336,910)
+	}
+	replace (1772, "gfx/trees.png") {
+		tmpl_trees(0,980)
+	}
+	replace (1779, "gfx/trees.png") {
+		tmpl_trees(336,980)
+	}
+	replace (1786, "gfx/trees.png") {
+		tmpl_trees(0,1050)
+	}
+	replace (1793, "gfx/trees.png") {
+		tmpl_trees(336,1050)
+	}
+	replace (1800, "gfx/trees.png") {
+		tmpl_trees(0,1120)
+	}
+	replace (1807, "gfx/trees.png") {
+		tmpl_trees(336,1120)
+	}
+	replace (1814, "gfx/trees.png") {
+		tmpl_trees(0,1190)
+	}

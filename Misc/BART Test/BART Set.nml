@@ -1,0 +1,295 @@
+disable_item(FEAT_TRAINS);
+
+grf{
+    grfid: "ZM\00\00";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 0;
+    min_compatible_version: 0;
+}
+
+railtypetable {
+    RAIL, SAA3
+}
+
+cargotable {
+    PASS,
+// Misc
+    TOUR,
+}
+
+/* Fix depot view */
+traininfo_y_offset = 2;
+train_width_32_px = 1;
+
+template template_8_MU(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -11]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -17,        -12]
+    [ x+66,     y,        22,        20,        -5,            -10]
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -17,        -12]
+    [ x+155,    y,        22,        20,        -5,            -10]
+}
+
+spriteset(spriteset_A_BART_lead,   "gfx/BART A&B.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_A_BART_rear,   "gfx/BART A&B.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+spriteset(spriteset_B_BART,   "gfx/BART A&B.png") {template_8_MU(7, 89)}  // <- Define the wagon in-between
+
+switch(FEAT_TRAINS, SELF, sw_A_BART_attach, vehicle_type_id){
+    ITEM_BART_A        : return CB_RESULT_ATTACH_ALLOW  ;
+    ITEM_BART_C_CAR    : return CB_RESULT_ATTACH_ALLOW  ;
+    ITEM_BART_B_CAR    : return CB_RESULT_ATTACH_ALLOW  ;
+    return string(STR_NO_COUPLE_MU) ;
+}
+
+switch(FEAT_TRAINS, SELF, sw_A_BART_last, position_in_consist_from_end){ // <- This code tells the game whether to use the cab or flipped cab, based on if they're right at the end or not
+    0:    spriteset_A_BART_rear;
+    spriteset_A_BART_lead;
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_BART_A) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        air_drag_coefficient:            0x20 nfo;
+        misc_flags:                        bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        dual_headed:                    1; // <- Double Headed, so cab on each end
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_ELECTRIC;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_BART_A_CAR);
+        introduction_date:                date(1972,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                         28 ton;
+        speed:                            80 mph;
+        power:                            500 hp;
+        tractive_effort_coefficient:     1;
+        cost_factor:                     1;
+        running_cost_factor:             0.1;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    100;
+
+    }
+    graphics {
+        default:                        sw_A_BART_last;
+        can_attach_wagon    :    sw_A_BART_attach;
+        purchase:                        spriteset_A_BART_lead;
+        additional_text: string(STR_SUBWAY);
+
+}
+    livery_override (ITEM_BART_B_CAR) { // <- Override the appearance and stats of ITEM_FAI_WAGON_MU_COACH when attached, to make it fit the MU's appearance and stats
+        default:                        spriteset_B_BART; // <- This tells the game that when attached, the livery_override wagon needs to use this sprite
+        length:                            8;
+        cargo_capacity:                    40;
+        speed:                             40;
+    }
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_BART_B_CAR) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+
+        track_type:                        SAA3;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_BART_B_CAR);
+        introduction_date:                date(1972,1,1);
+        vehicle_life:                     30;
+        model_life:                        36;
+        length:                            8;
+
+        weight:                         28 ton;
+        speed:                            80 mph;
+        cost_factor:                     1 nfo;
+        running_cost_factor:             1 nfo;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    100;
+
+    }
+    graphics {
+        default:                        spriteset_B_BART;
+        purchase:                        spriteset_B_BART;
+        additional_text: string(STR_INFO_B);
+
+}
+}
+
+spriteset(spriteset_C_BART_lead,   "gfx/BART C1&C2.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_C_BART_rear,   "gfx/BART C1&C2.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+
+switch(FEAT_TRAINS, SELF, sw_C_BART_last, position_in_consist_from_end){ // <- This code tells the game whether to use the cab or flipped cab, based on if they're right at the end or not
+    0:    spriteset_C_BART_rear;
+    spriteset_C_BART_lead;
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_BART_C_CAR) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        air_drag_coefficient:            0x20 nfo;
+        misc_flags:                        bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        dual_headed:                    1; // <- Double Headed, so cab on each end
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_ELECTRIC;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_BART_C_CAR);
+        introduction_date:                date(1987,1,1);
+        vehicle_life:                     30;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                         28 ton;
+        speed:                            80 mph;
+        power:                            500 hp;
+        tractive_effort_coefficient:     1;
+        cost_factor:                     1;
+        running_cost_factor:             0.1;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    100;
+
+    }
+    graphics {
+        default:                        sw_C_BART_last;
+       can_attach_wagon    :    sw_A_BART_attach;
+         purchase:                        spriteset_C_BART_lead;
+        additional_text: string(STR_SUBWAY);
+
+    }
+    livery_override (ITEM_BART_B_CAR) { // <- Override the appearance and stats of ITEM_FAI_WAGON_MU_COACH when attached, to make it fit the MU's appearance and stats
+        default:                        spriteset_B_BART; // <- This tells the game that when attached, the livery_override wagon needs to use this sprite
+        length:                            8;
+        cargo_capacity:                    40;
+        speed:                             40;
+    }
+}
+
+spriteset(spriteset_D_BART_lead,   "gfx/BART D&E.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_D_BART_rear,   "gfx/BART D&E.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+spriteset(spriteset_E_BART,   "gfx/BART D&E.png") {template_8_MU(7, 89)}  // <- Define the wagon in-between
+
+switch(FEAT_TRAINS, SELF, sw_D_BART_attach, vehicle_type_id){
+    ITEM_BART_D        : return CB_RESULT_ATTACH_ALLOW  ;
+    ITEM_BART_E_CAR    : return CB_RESULT_ATTACH_ALLOW  ;
+    return string(STR_NO_COUPLE_MU) ;
+}
+
+switch(FEAT_TRAINS, SELF, sw_D_BART_last, position_in_consist_from_end){ // <- This code tells the game whether to use the cab or flipped cab, based on if they're right at the end or not
+    0:    spriteset_D_BART_rear;
+    spriteset_D_BART_lead;
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_BART_D) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        air_drag_coefficient:            0x20 nfo;
+        misc_flags:                        bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        dual_headed:                    1; // <- Double Headed, so cab on each end
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_ELECTRIC;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_BART_D_CAR);
+        introduction_date:                date(2018,1,1);
+        vehicle_life:                     30;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                         28 ton;
+        speed:                            80 mph;
+        power:                            500 hp;
+        tractive_effort_coefficient:     1;
+        cost_factor:                     1;
+        running_cost_factor:             0.1;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    110;
+
+    }
+    graphics {
+        default:                        sw_D_BART_last;
+        can_attach_wagon    :    sw_D_BART_attach;
+        purchase:                        spriteset_D_BART_lead;
+        additional_text: string(STR_SUBWAY);
+
+    }
+    livery_override (ITEM_BART_E_CAR) { // <- Override the appearance and stats of ITEM_FAI_WAGON_MU_COACH when attached, to make it fit the MU's appearance and stats
+        default:                        spriteset_E_BART; // <- This tells the game that when attached, the livery_override wagon needs to use this sprite
+        length:                            8;
+        cargo_capacity:                    40;
+        speed:                             40;
+    }
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_BART_E_CAR) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+
+        track_type:                        SAA3;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_BART_E_CAR);
+        introduction_date:                date(2018,1,1);
+        vehicle_life:                     30;
+        model_life:                        36;
+        length:                            8;
+
+        weight:                         28 ton;
+        speed:                            80 mph;
+        cost_factor:                     1 nfo;
+        running_cost_factor:             1 nfo;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    100;
+
+    }
+    graphics {
+        default:                        spriteset_E_BART;
+        purchase:                        spriteset_E_BART;
+        additional_text: string(STR_INFO_E);
+
+}
+}

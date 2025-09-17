@@ -1,0 +1,107 @@
+Queensland:
+
+EMU
+        introduction_date: 17/11/1979
+        speed: 100 km/h;
+        power: 1448 hpM;
+        cargo_capacity: 230;
+        weight: 117 ton; (total)
+        tractive_effort_coefficient:
+        Liveries: Early (1979-1990), Mid (1990-2005), Late (2005-Present) (These are just Guesses, I genuinely have no idea)
+        Formation: 3 Car sets with Pantograph trailer in the centre
+
+SMU200
+        introduction_date: 16/8/1994
+        speed: 100 km/h;
+        power: 1450 hpM;
+        cargo_capacity: 240;
+        weight: 126 ton; (total)
+        tractive_effort_coefficient:
+        Liveries: Early (1994-2005), Present (2005-Present) (These are just Guesses, I genuinely have no idea)
+        Formation: 3 Car sets with Pantograph trailer in the centre
+
+SMU220
+        introduction_date: 8/1999
+        speed: 100 km/h;
+        power: 1930 hpM;
+        cargo_capacity: 236;
+        weight: 122 ton; (total)
+        tractive_effort_coefficient:
+        Liveries: Early (1999-2005), Present (2005-Present) (These are just Guesses, I genuinely have no idea)
+        Formation: 3 Car sets with Pantograph trailer in the centre
+
+SMU260
+        introduction_date: 8/2008
+        speed: 130 km/h;
+        power: 1930 hpM;
+        cargo_capacity: 236;
+        weight: 126 ton; (total)
+        tractive_effort_coefficient:
+        Liveries: Early (2008-2015), Present (2015-Present) (These are just Guesses, I genuinely have no idea)
+        Formation: 3 Car sets with Pantograph trailer in the centre
+
+Victoria:
+
+VR Harris
+        introduction_date: 1957
+        speed: 110 km/h;
+        power: (4 Car) 1200 hpM; (7 Car) 1600 hpM;
+        cargo_capacity: (4 Car) 280; (7 Car) 490;
+        weight: (4 Car) 154 ton; (7 Car) 262 ton; (total)
+        tractive_effort_coefficient:
+        Liveries: Blue and Yellow only
+        Formation: Harris's are formed of 2 main types, M and T cars, with M cars having a drivers cab and a pantograph, while T cars having neither. 4 Car units are formed M-T-T-M. 7 Car units are formed by the addition of 2 additional trailer and a single motor car, resulting in a M-T-T-M-T-T-M formation.
+
+VR Harris Refurb
+        introduction_date: 1982
+        speed: 110 km/h;
+        power: 1200 hpM;
+        cargo_capacity: 280;
+        weight: 154 ton; (total)
+        tractive_effort_coefficient:
+        Liveries: Teacup (1982-1983), Met (1983-End)
+        Formation: Refurbished Harris trains are in a M-T-T-M formation, same as pre refurb 4 car Harris's
+
+Western Australia:
+
+A-Series
+        introduction_date: 28/9/1991
+        speed: 110 km/h;
+        power: 1566 hpM;
+        cargo_capacity: 140;
+        weight: 94 ton; (total)
+        tractive_effort_coefficient:
+        Liveries:
+        Formation: 2 car sets with 1 pantograph car per set.
+
+B-Series
+        introduction_date: 2004
+        speed: 130 km/h;
+        power: 1920 hpM;
+        cargo_capacity: 260;
+        weight: 120 ton; (total)
+        tractive_effort_coefficient:
+        Liveries:
+        Formation: 3 Car sets with Pantograph trailer in the centre
+
+New Zealand:
+
+DM/D Class
+        introduction_date: 1938
+        speed: 100 km/h;
+        power: 600 hpM; (both 2 & 3 car units)
+        cargo_capacity: (2 Car) 124; (3 Car) 194;
+        weight: 94 ton; (total)
+        tractive_effort_coefficient:
+        Liveries: Royal Blue (1938-1949), Midland Red (1949-2006), Two Tone Blue (2006-2012)
+        Formation: 2 and 3 car sets. With 2 cars having a formation of DM-D with the DM car having a pantograph. 3 car sets have a formation of D-DM-D with the centre car having a pantograph. D cars do not have a pantograph.
+
+EM/ET Class
+        introduction_date: 14/6/1982
+        speed: 95 km/h;
+        power: 540 hpM;
+        cargo_capacity: 148;
+        weight: 80 ton; (total)
+        tractive_effort_coefficient:
+        Liveries: Olive & Cream (1982-1995), TranzMetro (1995-2005), TransMetro Full Yellow (2005-2008), Metlink (2008-End)
+        Formation: 2 car sets with a single Pantograph car in each.

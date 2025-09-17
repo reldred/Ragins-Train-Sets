@@ -1,0 +1,144 @@
+##grflangid 0x01
+
+STR_NAME	:Oceanian Extra Station Names
+STR_DESC	:A pack containting extra Australian/Kiwi style station names. Created by Ragin1_ (Zachary Moore), Based on the work of Gwyd and JGR
+
+STR_ERROR_JGR:You must use a recent version of JGR Patch Pack, or extra station names may not function
+
+STR_1 :{STRING} Hassal St
+STR_2 :{STRING} Market St
+STR_3 :{STRING} Darcy St
+STR_4 :{STRING} Church St
+STR_5 :{STRING} Maquarie St
+STR_6 :{STRING} Torrens St
+STR_7 :{STRING} Phillip St
+STR_8 :{STRING} Smith St
+STR_9 :{STRING} River Rd
+STR_10 :{STRING} Noller Parade
+STR_11 :{STRING} Batman Ave
+STR_12 :{STRING} Batman St
+STR_13 :{STRING} La Trobe St
+STR_14 :{STRING} Turner St
+STR_15 :{STRING} Salmon St
+STR_16 :{STRING} Pike St
+STR_17 :{STRING} Central Blvd
+STR_18 :{STRING} Lorimer St
+STR_19 :{STRING} Yarra St
+STR_20 :{STRING} North Terrace
+STR_21 :{STRING} South Terrace
+STR_22 :{STRING} East Terrace
+STR_23 :{STRING} West Terrace
+STR_24 :{STRING} Alfred St
+STR_25 :{STRING} Grote St
+STR_26 :{STRING} Rundle St
+STR_27 :{STRING} William St
+STR_28 :{STRING} Hay St
+STR_29 :{STRING} St Georges Terrace
+STR_30 :{STRING} Welling St
+STR_31 :{STRING} Adelaide Terrace
+STR_32 :{STRING} Swanson St
+STR_33 :{STRING} Swanston St
+STR_34 :{STRING} Nelson St
+STR_35 :{STRING} Hobson St
+STR_36 :{STRING} Wolfe St
+STR_37 :{STRING} Queen St
+STR_38 :{STRING} Gladstone Rd
+STR_39 :{STRING} Manchester St
+STR_40:{STRING} Cathedral Square
+STR_41 :{STRING} Oxford Terrace
+STR_42 :{STRING} Cambridge Terrace
+STR_43 :{STRING} Princes St
+STR_44 :{STRING} Bond St
+STR_45 :{STRING} Water St
+STR_46 :{STRING} Manor Place
+STR_47 :{STRING} Silver Wattle Dr
+STR_48 :{STRING} Brush Box Ave
+STR_49 :{STRING} Elm Ave
+STR_50 :{STRING} Tea Tree Dr
+STR_51 :{STRING} Ferrode Rd
+STR_52 :{STRING} Kindlebark Dr
+STR_53 :{STRING} Birch Cl
+STR_54 :{STRING} Coachwood Dr
+STR_55 :{STRING} Tobruk St
+STR_56 :{STRING} Victory Blvd
+STR_57 :{STRING} Moore St
+STR_58 :{STRING} Albio St
+STR_59 :{STRING} The Esplanade
+STR_60 :{STRING} Flat Rd
+STR_61 :{STRING} Swan St
+STR_62 :{STRING} Glenelg St
+STR_63 :{STRING} Sturgeon St
+STR_64 :{STRING} Jacaranda Ave
+STR_65 :{STRING} Newline Rd
+STR_66 :{STRING} Richardson Rd
+STR_67 :{STRING} Murray St
+STR_68 :{STRING} Anzac St
+STR_69 :{STRING} Anzac Parade
+STR_70 :{STRING} Anzac Ave
+
+STR_U1 :{STRING} Road
+STR_U2 :{STRING} Bridge
+STR_U3 :{STRING} Hill
+STR_U4 :{STRING} Park
+STR_U5 :{STRING} House
+STR_U6 :{STRING} Manor
+STR_U7 :{STRING} Cross
+STR_U8 :{STRING} St. Johns
+STR_U9 :{STRING} St. Mary's
+STR_U10 :{STRING} Gulley
+STR_U11 :Styx Creek ({STRING})
+STR_U12 :{STRING} Creek
+STR_U13 :{STRING} River
+STR_U14 :{STRING} Rocks
+STR_U15 :{STRING} Beach
+STR_U16 :{STRING} Docklands
+
+STR_RC1 :Central Station ({STRING})
+STR_RC2 :Museum ({STRING})
+STR_RC3 :Town Hall ({STRING})
+STR_RC4 :Liverpool St ({STRING})
+STR_RC5 :Kings Cross ({STRING})
+STR_RC6 :Roma St ({STRING})
+STR_RC7 :{STRING} Square
+STR_RC8 :Hunter St ({STRING})
+STR_RC9 :Pitt St ({STRING})
+STR_RC10 :King St ({STRING})
+STR_RC11 :York St ({STRING})
+STR_RC12 :George St ({STRING})
+STR_RC13 :Spencer St ({STRING})
+STR_RC14 :Flinders St ({STRING})
+STR_RC15 :Britomart ({STRING})
+STR_RC16 :ANZAC ({STRING})
+STR_RC17 :City ({STRING})
+
+STR_R1 :{STRING} Junction
+STR_R2 :{STRING} Town
+STR_R3 :Civic ({STRING})
+STR_R4 :Victoria Street ({STRING})
+STR_R5 :Zarra Street ({STRING})
+STR_R6 :High Street ({STRING})
+STR_R7 :Waterloo ({STRING})
+STR_R8 :{STRING} Strand
+STR_R9 :Warabrook ({STRING})
+STR_R10 :Waratah ({STRING})
+STR_R11 :Sydenham ({STRING})
+STR_R12 :Lysaghts ({STRING})
+STR_R13 :Belmont ({STRING})
+
+STR_D1 :{STRING} Quay
+STR_D2 :{STRING} Point
+STR_D3 :{STRING} Pier
+STR_D4 :{STRING} Wharf
+STR_D5 :{STRING} Bay
+
+STR_A1 :{STRING} Domestic Airport
+STR_A2 :{STRING} International Airport
+STR_A3 :{STRING} Airfield
+STR_A4 :{STRING} Fields Airport
+STR_A5 :{STRING} Gateway Airport
+STR_A6 :{STRING} City Airport
+STR_A7 :Kingsford-Smith Airport ({STRING})
+STR_A8 :Avalon Airport ({STRING})
+STR_A9 :New ({STRING}) Airport
+STR_A10 :{STRING} Airpark
+STR_A11 :{STRING} Jetport

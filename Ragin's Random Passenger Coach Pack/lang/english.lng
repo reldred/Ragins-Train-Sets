@@ -1,0 +1,19 @@
+##grflangid 0x0
+
+STR_GRF_NAME:Ragin's Coach Pack
+STR_GRF_DESCRIPTION:A pack of generic-ish passenger coaches from the beginning of steam to the modern day
+
+STR_REDFERN_COACH:Redfern Suburban Coach
+STR_CANTILEVER_COACH:Cantiver Suburban Coach
+STR_AMERICAN_SUBURBAN_COACH:American Suburban Coach
+STR_HEAVYWEIGHT_INTERCITY_COACH:Heavyweight Intercity Coach
+STR_RUB_INTERURBAN_COACH:RUB Interurban Coach
+STR_AURORA_INTERCITY_COACH:Aurora Intercity Coach
+STR_TF_INTERURBAN_COACH:TF Interurban Coach
+STR_TULLOCH_DD_COACH:Tulloch Suburban Double Deck Coach
+STR_COMMONWEALTH_INTERCITY_COACH:Commonwealth Intercity Coach
+STR_AMTRAK_HORIZON:Horizon Intercity Coach
+STR_VENTURE_COACH:Venture Intercity Coach
+
+STR_KB_BAGGAGE_COACH:KB Baggage & Mail Coach
+STR_COMMONWEALTH_MAIL_COACH:Commonwealth Mail Coach

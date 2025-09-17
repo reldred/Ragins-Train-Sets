@@ -1,0 +1,93 @@
+// Purchase Sprite
+template template_purchase(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -60, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+
+// 8 Template
+template template_8(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -14]
+    [ x+9,      y,        22,        20,        -14,        -11]
+    [ x+32,     y,        33,        16,        -17,        -12]
+    [ x+66,     y,        22,        20,        -6,            -11]
+
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -14,        -11]
+    [ x+121,    y,        33,        16,        -17,        -12]
+    [ x+155,    y,        22,        20,        -6,            -11]
+}
+
+// 8 Template Reversed
+template template_8_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -14,        -11]
+    [ x+121,    y,        33,        16,        -17,        -12]
+    [ x+155,    y,        22,        20,        -6,            -11]
+
+    [ x,        y,        8,        24,        -3,            -14]
+    [ x+9,      y,        22,        20,        -14,        -11]
+    [ x+32,     y,        33,        16,        -17,        -12]
+    [ x+66,     y,        22,        20,        -6,            -11]
+}
+
+//7 Template
+template template_7(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x    , y, 8 , 24,  -3, -15]
+    [ x+9  , y, 22, 20, -12, -12]
+    [ x+32 , y, 33, 16, -13, -12]
+    [ x+66 , y, 22, 20,  -6, -11]
+
+    [ x+89 , y, 8 , 24,  -3, -15]
+    [ x+98 , y, 22, 20, -14, -11]
+    [ x+121, y, 33, 16, -17, -12]
+    [ x+155, y, 22, 20,  -8, -12]
+}
+
+//7 Template Reversed
+template template_7_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89 , y, 8 , 24,  -3, -15]
+    [ x+98 , y, 22, 20, -13, -11]
+    [ x+121, y, 33, 16, -16, -12]
+    [ x+155, y, 22, 20,  -7, -11]
+
+    [ x    , y, 8 , 24,  -3, -15]
+    [ x+9  , y, 22, 20, -13, -11]
+    [ x+32 , y, 33, 16, -12, -12]
+    [ x+66 , y, 22, 20,  -7, -11]
+}
+
+// 6 Template
+template template_6(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        19,        -3,            -13]
+    [ x+13,      y,        18,        20,        -11,        -11]
+    [ x+40,     y,        25,        16,        -9,        -12]
+    [ x+70,     y,        18,        20,        -1,            -11]
+    [ x+89,     y+5,        8,        19,         -3,            -9]
+    [ x+98,     y,        18,        20,        -15,        -11]
+    [ x+121,    y,        25,        16,        -17,        -12]
+    [ x+155,    y,        20,        18,         -5,            -11]
+}

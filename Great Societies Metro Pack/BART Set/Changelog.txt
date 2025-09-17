@@ -1,0 +1,13 @@
+Bay Area Rapid Transit Set
+==========================
+3
+- fixed purchase sprite
+2
+- added parameter to change train capacity
+- adding purchase menu sprite
+
+1.1
+- fixed GRF description
+
+1
+- initial release

@@ -1,0 +1,329 @@
+template tmpl_signals(y) {
+	[0,  y, 9,23, 	-5,   -21]
+	[10,  y, 9,23, 	-1,   -22]
+	[20,  y, 9,23, 	0,   -20]
+	[30,  y, 9,23, 	0,   -20]
+	[40,  y, 9,23, 	-3,   -21]
+	[50,  y, 9,23, 	-3,   -21]
+	[60,  y, 9,23, 	-3,   -20]
+	[70,  y, 9,23, 	-3,   -20]
+}
+template tmpl_semaphore(y) {
+	[0,  y, 9,23, 	-7,   -21]
+	[10,  y, 9,23, 	1,   -22]
+	[20,  y, 9,23, 	2,   -20]
+	[30,  y, 9,23, 	-2,   -20]
+	[40,  y, 9,23, 	-3,   -21]
+	[50,  y, 9,23, 	-3,   -21]
+	[60,  y, 10,23, -5,   -20]
+	[71,  y, 10,23, -1,   -20]
+}
+//Light signals
+spriteset (signal_block_red, "grf/Signals.png") {
+	tmpl_signals(0+48)
+}
+spriteset (signal_block_green, "grf/Signals.png") {
+	tmpl_signals(24+48)
+}
+spriteset (signal_entry_red, "grf/Signals.png") {
+	tmpl_signals(0+48*2)
+}
+spriteset (signal_entry_green, "grf/Signals.png") {
+	tmpl_signals(24+48*2)
+}
+spriteset (signal_exit_red, "grf/Signals.png") {
+	tmpl_signals(0+48*3)
+}
+spriteset (signal_exit_green, "grf/Signals.png") {
+	tmpl_signals(24+48*3)
+}
+spriteset (signal_combo_red, "grf/Signals.png") {
+	tmpl_signals(0+48*4)
+}
+spriteset (signal_combo_green, "grf/Signals.png") {
+	tmpl_signals(24+48*4)
+}
+spriteset (signal_path_red, "grf/Signals.png") {
+	tmpl_signals(0+48*5)
+}
+spriteset (signal_path_green, "grf/Signals.png") {
+	tmpl_signals(24+48*5)
+}
+spriteset (signal_oneway_red, "grf/Signals.png") {
+	tmpl_signals(0+48*6)
+}
+spriteset (signal_oneway_green, "grf/Signals.png") {
+	tmpl_signals(24+48*6)
+}
+//Semaphores
+spriteset (semaphore_block_red, "grf/Semaphores.png") {
+	tmpl_semaphore(0+48)
+}
+spriteset (semaphore_block_green, "grf/Semaphores.png") {
+	tmpl_semaphore(24+48)
+}
+spriteset (semaphore_entry_red, "grf/Semaphores.png") {
+	tmpl_semaphore(0+48*2)
+}
+spriteset (semaphore_entry_green, "grf/Semaphores.png") {
+	tmpl_semaphore(24+48*2)
+}
+spriteset (semaphore_exit_red, "grf/Semaphores.png") {
+	tmpl_semaphore(0+48*3)
+}
+spriteset (semaphore_exit_green, "grf/Semaphores.png") {
+	tmpl_semaphore(24+48*3)
+}
+spriteset (semaphore_combo_red, "grf/Semaphores.png") {
+	tmpl_semaphore(0+48*4)
+}
+spriteset (semaphore_combo_green, "grf/Semaphores.png") {
+	tmpl_semaphore(24+48*4)
+}
+spriteset (semaphore_path_red, "grf/Semaphores.png") {
+	tmpl_semaphore(0+48*5)
+}
+spriteset (semaphore_path_green, "grf/Semaphores.png") {
+	tmpl_semaphore(24+48*5)
+}
+spriteset (semaphore_oneway_red, "grf/Semaphores.png") {
+	tmpl_semaphore(0+48*6)
+}
+spriteset (semaphore_oneway_green, "grf/Semaphores.png") {
+	tmpl_semaphore(24+48*6)
+}
+//Light signals
+switch(FEAT_SIGNALS, SELF, sw_new_signals_block_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_block_red; //red light
+	01: signal_block_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_entry_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_entry_red; //red light
+	01: signal_entry_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_exit_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_exit_red; //red light
+	01: signal_exit_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_combo_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_combo_red; //red light
+	01: signal_combo_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_path_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_path_red; //red light
+	01: signal_path_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_oneway_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_oneway_red; //red light
+	01: signal_oneway_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_light, getbits(extra_callback_info2, 16, 8)) { //checks signal type
+	00: sw_new_signals_block_light; //block signal
+	01: sw_new_signals_entry_light; //entry signal
+	02: sw_new_signals_exit_light; //exit signal
+	03: sw_new_signals_combo_light; //combo signal
+	04: sw_new_signals_path_light; //path signal
+	05: sw_new_signals_oneway_light; //oneway signal
+}
+//Semaphores
+switch(FEAT_SIGNALS, SELF, sw_new_signals_block_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_block_red; //red light
+	01: semaphore_block_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_entry_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_entry_red; //red light
+	01: semaphore_entry_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_exit_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_exit_red; //red light
+	01: semaphore_exit_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_combo_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_combo_red; //red light
+	01: semaphore_combo_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_path_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_path_red; //red light
+	01: semaphore_path_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_oneway_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_oneway_red; //red light
+	01: semaphore_oneway_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_semaph, getbits(extra_callback_info2, 16, 8)) { //checks signal type
+	00: sw_new_signals_block_semaph; //block signal
+	01: sw_new_signals_entry_semaph; //entry signal
+	02: sw_new_signals_exit_semaph; //exit signal
+	03: sw_new_signals_combo_semaph; //combo signal
+	04: sw_new_signals_path_semaph; //path signal
+	05: sw_new_signals_oneway_semaph; //oneway signal
+}
+
+//snow
+//Light signals
+spriteset (signal_snow_block_red, "grf/Signals_SNOW.png") {
+	tmpl_signals(0+48)
+}
+spriteset (signal_snow_block_green, "grf/Signals_SNOW.png") {
+	tmpl_signals(24+48)
+}
+spriteset (signal_snow_entry_red, "grf/Signals_SNOW.png") {
+	tmpl_signals(0+48*2)
+}
+spriteset (signal_snow_entry_green, "grf/Signals_SNOW.png") {
+	tmpl_signals(24+48*2)
+}
+spriteset (signal_snow_exit_red, "grf/Signals_SNOW.png") {
+	tmpl_signals(0+48*3)
+}
+spriteset (signal_snow_exit_green, "grf/Signals_SNOW.png") {
+	tmpl_signals(24+48*3)
+}
+spriteset (signal_snow_combo_red, "grf/Signals_SNOW.png") {
+	tmpl_signals(0+48*4)
+}
+spriteset (signal_snow_combo_green, "grf/Signals_SNOW.png") {
+	tmpl_signals(24+48*4)
+}
+spriteset (signal_snow_path_red, "grf/Signals_SNOW.png") {
+	tmpl_signals(0+48*5)
+}
+spriteset (signal_snow_path_green, "grf/Signals_SNOW.png") {
+	tmpl_signals(24+48*5)
+}
+spriteset (signal_snow_oneway_red, "grf/Signals_SNOW.png") {
+	tmpl_signals(0+48*6)
+}
+spriteset (signal_snow_oneway_green, "grf/Signals_SNOW.png") {
+	tmpl_signals(24+48*6)
+}
+//Semaphores
+spriteset (semaphore_snow_block_red, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(0+48)
+}
+spriteset (semaphore_snow_block_green, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(24+48)
+}
+spriteset (semaphore_snow_entry_red, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(0+48*2)
+}
+spriteset (semaphore_snow_entry_green, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(24+48*2)
+}
+spriteset (semaphore_snow_exit_red, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(0+48*3)
+}
+spriteset (semaphore_snow_exit_green, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(24+48*3)
+}
+spriteset (semaphore_snow_combo_red, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(0+48*4)
+}
+spriteset (semaphore_snow_combo_green, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(24+48*4)
+}
+spriteset (semaphore_snow_path_red, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(0+48*5)
+}
+spriteset (semaphore_snow_path_green, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(24+48*5)
+}
+spriteset (semaphore_snow_oneway_red, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(0+48*6)
+}
+spriteset (semaphore_snow_oneway_green, "grf/Semaphores_SNOW.png") {
+	tmpl_semaphore(24+48*6)
+}
+//Light signals
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_block_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_snow_block_red; //red light
+	01: signal_snow_block_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_entry_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_snow_entry_red; //red light
+	01: signal_snow_entry_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_exit_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_snow_exit_red; //red light
+	01: signal_snow_exit_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_combo_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_snow_combo_red; //red light
+	01: signal_snow_combo_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_path_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_snow_path_red; //red light
+	01: signal_snow_path_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_oneway_light, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: signal_snow_oneway_red; //red light
+	01: signal_snow_oneway_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_light, getbits(extra_callback_info2, 16, 8)) { //checks signal type
+	00: sw_new_signals_snow_block_light; //block signal
+	01: sw_new_signals_snow_entry_light; //entry signal
+	02: sw_new_signals_snow_exit_light; //exit signal
+	03: sw_new_signals_snow_combo_light; //combo signal
+	04: sw_new_signals_snow_path_light; //path signal
+	05: sw_new_signals_snow_oneway_light; //oneway signal
+}
+//Semaphores
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_block_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_snow_block_red; //red light
+	01: semaphore_snow_block_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_entry_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_snow_entry_red; //red light
+	01: semaphore_snow_entry_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_exit_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_snow_exit_red; //red light
+	01: semaphore_snow_exit_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_combo_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_snow_combo_red; //red light
+	01: semaphore_snow_combo_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_path_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_snow_path_red; //red light
+	01: semaphore_snow_path_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_oneway_semaph, getbits(extra_callback_info2, 0, 8)) { //checks light
+	00: semaphore_snow_oneway_red; //red light
+	01: semaphore_snow_oneway_green;
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_semaph, getbits(extra_callback_info2, 16, 8)) { //checks signal type
+	00: sw_new_signals_snow_block_semaph; //block signal
+	01: sw_new_signals_snow_entry_semaph; //entry signal
+	02: sw_new_signals_snow_exit_semaph; //exit signal
+	03: sw_new_signals_snow_combo_semaph; //combo signal
+	04: sw_new_signals_snow_path_semaph; //path signal
+	05: sw_new_signals_snow_oneway_semaph; //oneway signal
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_a, getbits(extra_callback_info2, 8, 8)) { //checks signal variant
+	00: sw_new_signals_light; //light
+	01: sw_new_signals_semaph; //semaphore
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow_a, getbits(extra_callback_info2, 8, 8)) { //checks signal variant
+	00: sw_new_signals_snow_light; //light
+	01: sw_new_signals_snow_semaph; //semaphore
+}
+switch(FEAT_SIGNALS, SELF, sw_new_signals_snow, terrain_type) {
+	TILETYPE_SNOW: sw_new_signals_snow_a;
+	sw_new_signals_a;
+}
+
+item (FEAT_SIGNALS, custom_signals, 0) { 
+	property{
+		extra_aspects:		0;	
+		
+		define_style:		1;
+		no_default_style:	1;
+		style_name:			string(STR_SIG_1);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_ENTRY, SIGNAL_TYPE_EXIT, SIGNAL_TYPE_COMBO, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+		style_semaphore_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_ENTRY, SIGNAL_TYPE_EXIT, SIGNAL_TYPE_COMBO, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY);
+	}
+    graphics {
+        sw_new_signals_snow;
+    }
+}

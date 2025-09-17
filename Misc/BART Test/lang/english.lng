@@ -1,0 +1,13 @@
+##grflangid 0x0
+
+STR_GRF_NAME:BART Set MU Test
+STR_GRF_DESCRIPTION:Currently a test of coding EMUs, so don't expect it to be perfect or balanced. Coded & drawn by Ragin1_, based on code by 2TallTyler and Fairyfloss
+STR_BART_A_CAR:A Car
+STR_BART_B_CAR:B Car
+STR_BART_C_CAR:C Car
+STR_BART_D_CAR:D Car
+STR_BART_E_CAR:E Car
+STR_SUBWAY:Role: {GOLD}Subway
+STR_INFO_B:INFO: {GOLD}Place this on either an A or C series train for more cars
+STR_INFO_E:INFO: {GOLD}Place this on a D series train for more cars
+STR_NO_COUPLE_MU: Use a A, B or C type car only!

@@ -1,0 +1,37 @@
+##grflangid 0x0
+
+STR_GRF_NAME:WMATA Set
+STR_GRF_DESCRIPTION: Enter description here
+
+STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
+STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
+STR_PARAM_RUNNING_COST              :Running cost multiplier
+STR_PARAM_RUNNING_COST_DESC         :You can use this setting to increase or decrease the running costs of the vehicles in this set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (default)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+STR_PARAM_NAME_CAPACITY:Train Capacity
+STR_PARAM_DESC_CAPACITY:You can use this setting to adjust the capacity of trains. Useful for balancing it against sets like NARS or UKRS.
+STR_PARAM_REAL_CAPACITY:Realistic Capacity
+STR_PARAM_NORMAL_REDUCED:Reduced Capacity
+
+STR_SUBWAY_1K6K:Role: {GOLD}Subway {}{BLACK}Formation: {GOLD}Married Pair {}{BLACK}Power: {CREAM}3rd Rail{}{BLACK}Additional Info: {GOLD}This represents the 1000 to 6000 series trains, which IRL are all very similar, so they've been grouped into a single train for this set.
+STR_SUBWAY:Role: {GOLD}Subway {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail
+STR_NO_COUPLE_MU:WMATA trains can only couple to trains of the same type!
+
+STR_1K6K:WMATA 1000-6000 Series
+STR_7K:WMATA 7000 Series
+STR_BART_7K_MU:WMATA 7000 series MU car
+STR_INFO_7K:Attach this to a 7000 series train for more cars.
+
+STR_8K:WMATA 8000 Series
+STR_BART_8K_MU:WMATA 8000 series MU car
+STR_INFO_8K:Attach this to a 8000 series train for more cars.

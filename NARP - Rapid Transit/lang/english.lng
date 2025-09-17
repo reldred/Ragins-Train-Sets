@@ -1,0 +1,177 @@
+##grflangid 0x0
+
+STR_GRF_NAME:North American Rail Pack - Rapid Transit v4
+STR_GRF_DESCRIPTION:Subway and light rail vehicles from the US, Canada, and Mexico, all in 2cc. Drawn and Coded by Zachary Moore (Ragin1_)
+
+STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
+STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
+STR_PARAM_RUNNING_COST              :Running cost multiplier
+STR_PARAM_RUNNING_COST_DESC         :You can use this setting to increase or decrease the running costs of the vehicles in this set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (default)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+STR_PARAM_NAME_CAPACITY:Train Capacity
+STR_PARAM_DESC_CAPACITY:You can use this setting to adjust the capacity of trains. Useful for balancing it against sets like NARS or UKRS.
+STR_PARAM_REAL_CAPACITY:Realistic Capacity
+STR_PARAM_NORMAL_REDUCED:Reduced Capacity
+
+STR_NO_COUPLE_MU: Only attach Multiple Unit cars or trains of the same type!
+
+STR_MU_TRAILER:MU Car (NARP-Rapid Transit)
+STR_MU_TRAILER_INFO:{GOLD}Attach this to a another multiple unit to make it longer
+
+
+
+STR_NAME_BROOKLYNGATECAR:Gate Elevated Car
+STR_INFO_BROOKLYNGATECAR:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Early NYC and Chicago Elevated Gate Cars
+
+STR_NAME_PRESSEDSTEELELCAR:Pressed Steel El Car
+STR_INFO_PRESSEDSTEELELCAR:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Early Boston Elevated Cars
+
+STR_NAME_4000SERIES:Cincinatti Car Co Elevated Car
+STR_INFO_4000SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {CREAM}3rd Rail  {}{BLACK}Based on: {GOLD}Chicago's 4000 Series Cars
+
+STR_NAME_MUDC:C-Type
+STR_INFO_MUDC:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail  {}{BLACK}Based on: {GOLD}New York's MUDC and C Type cars
+
+STR_NAME_QUEENSCAR:Queens Elevated Car
+STR_INFO_QUEENSCAR:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}BRT Q-Type Cars
+
+STR_NAME_SLCC_5000SERIES:SLCC 5000 Series
+STR_INFO_SLCC_5000SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Chicago's 5000 Series Cars.
+
+STR_NAME_SLCC_6000SERIES:SLCC 6000 Series
+STR_INFO_SLCC_6000SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Chicago's 6000 Series Cars
+
+STR_NAME_PULLMAN_MBTA_ORANGE:Pullman 1100 Series
+STR_INFO_PULLMAN_MBTA_ORANGE:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}MBTA Orange Line Pullman Cars
+
+STR_NAME_SLCC_150SERIES:SLCC 1-50 Series
+STR_INFO_SLCC_150SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Chicago's 1-50 Series Cars
+
+STR_NAME_PULLMAN_2000SERIES:Pullman 2000 Series
+STR_INFO_PULLMAN_2000SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Chicago's 2000 Series Cars
+
+STR_NAME_BUDD_2200SERIES:Budd 2200 Series
+STR_INFO_BUDD_2200SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Chicago's 2200 Series Cars
+
+STR_NAME_BUDD_2600SERIES:Budd 2600 Series
+STR_INFO_BUDD_2600SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Chicago's 2600 Series Cars
+
+STR_NAME_MK_3200SERIES:MK 3200 Series
+STR_INFO_MK_3200SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Chicago's 3200 & 5000 Series Cars
+
+STR_NAME_ADTRANZ_M4:Adtranz M-4
+STR_INFO_ADTRANZ_M4:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}SEPTA Market-Frankford M-4 Cars {}{}{GOLD}These weren't Comeng Dandenong's finest moment...
+
+STR_NAME_CRRC_7000SERIES:CRRC 7000 Series
+STR_INFO_CRRC_7000SERIES:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Chiacgo's 7000 Series
+
+STR_NAME_HITACHI_M5:Hitachi M-5
+STR_INFO_HITACHI_M5:{BLACK}Type: {GOLD}Elevated Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail
+
+
+
+STR_NAME_COMPOSITE:Composite Car
+STR_INFO_COMPOSITE:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC Composite & Gibbs car
+
+STR_NAME_LOV:Lo-V Car
+STR_INFO_LOV:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC Lo-V Cars
+
+STR_NAME_ABSTANDARD:AB Standard
+STR_INFO_ABSTANDARD:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC AB Standard {}{}{GOLD}Formed the Basis of Sydney's Suburban Cars
+
+STR_NAME_TRIPLEX:Triplex Car
+STR_INFO_TRIPLEX:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC D-Type Triplex
+
+STR_NAME_SLCC_ME1:SLCC Low-Density Transit Car
+STR_INFO_SLCC_ME1:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Staten Island Railway ME-1 Cars
+
+STR_NAME_ACF_ARNINE:AC&F Arnine
+STR_INFO_ACF_ARNINE:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R1-R9 cars
+
+STR_NAME_BUDD_R11:Budd R11
+STR_INFO_BUDD_R11:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R11/34 cars
+
+STR_NAME_GRCW_GSERIES:G&RCW G-Series
+STR_INFO_GRCW_GSERIES:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Toronto's G-Series cars {}{}{GOLD}The Canadian counsin of Melbourne's Harris trains
+
+STR_NAME_ACF_R16:AC&F R16
+STR_INFO_ACF_R16:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R16
+
+STR_NAME_SLCC_REDBIRD:SLCC Redbird
+STR_INFO_SLCC_REDBIRD:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R27 & R30
+
+STR_NAME_TORONTO_MSERIES:MLW M-Series
+STR_INFO_TORONTO_MSERIES:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Toronto M-Series Cars
+
+STR_NAME_PULLMAN_MBTA_RED:Pullman 1400 Series
+STR_INFO_PULLMAN_MBTA_RED:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}MBTA Red Line Pullman Cars
+
+STR_NAME_BUDD_R32:Budd Brightliner
+STR_INFO_BUDD_R32:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R32/38
+
+STR_NAME_TORONTO_HSERIES:Hawker-Siddely RTC-75
+STR_INFO_TORONTO_HSERIES:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Toronto H-Series Cars
+
+STR_NAME_SLCC_R40:SLCC R40
+STR_INFO_SLCC_R40:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R40
+
+STR_NAME_PULLMAN_SILVERBIRD_SINGLE:Pullman Silverbird (Single Unit)
+STR_INFO_PULLMAN_SILVERBIRD_SINGLE:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Single Car  {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}MBTA Red Line 1500 Series
+
+STR_NAME_PULLMAN_SILVERBIRD_PAIR:Pullman Silverbird
+STR_INFO_PULLMAN_SILVERBIRD_PAIR:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}MBTA Red Line 1500 Series
+
+STR_NAME_SLCC_R44:SLCC R44
+STR_INFO_SLCC_R44:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R40A, R42, R44, R46 {}{}{GOLD}Last large order that the St. Louis Car Company built.
+
+STR_NAME_HSC_1200SERIES:Hawker-Siddely 1200 Series
+STR_INFO_HSC_1200SERIES:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}MBTA Orange line Hawker-Siddely Cars
+
+STR_NAME_KAWASAKI_BIV_SINGLE:Kawasaki B-IV (Single Unit)
+STR_INFO_KAWASAKI_BIV_SINGLE:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Single Car  {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}SEPTA Broad Street Line B-IV cars
+
+STR_NAME_KAWASAKI_BIV_PAIR:Kawasaki B-IV
+STR_INFO_KAWASAKI_BIV_PAIR:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}SEPTA Broad Street Line B-IV cars
+
+STR_NAME_BUDD_UTV:Budd Universal Transit Vehicle
+STR_INFO_BUDD_UTV:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Budd UTV {}{}{GOLD}The last cars built by Budd
+
+STR_NAME_AMARAIL_R68:Amarail R68
+STR_INFO_AMARAIL_R68:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R68 & R68A
+
+STR_NAME_BOMBARDIER_1800SERIES:Bombardier 1800 Series
+STR_INFO_BOMBARDIER_1800SERIES:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}MBTA Red line Bombardier Cars
+
+STR_NAME_BREDA_A650:Breda A650
+STR_INFO_BREDA_A650:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}LA Metro Breda A650 Cars
+
+STR_NAME_TORONTO_TSERIES:Bombardier RTC-75
+STR_INFO_TORONTO_TSERIES:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Toronto T-Series Cars
+
+STR_NAME_KAWASAKI_R143:Kawasaki R143
+STR_INFO_KAWASAKI_R143:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R143/R160/R179
+
+STR_NAME_BOMBARDIER_ROCKET:Bombardier Movia Rocket
+STR_INFO_BOMBARDIER_ROCKET:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Toronto Rocket
+
+STR_NAME_HITACHI_MIAMIMETRO:Hitachi Urban Transit Vehicle Mk2
+STR_INFO_HITACHI_MIAMIMETRO:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}Miami and Baltimore's new Hitachi Cars
+
+STR_NAME_CRRC_MBTA_ORANGE:CRRC 1400 Series
+STR_INFO_CRRC_MBTA_ORANGE:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}MBTA Orange line CRRC Cars
+
+STR_NAME_CRRC_MBTA_RED:CRRC 1900 Series
+STR_INFO_CRRC_MBTA_RED:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}MBTA Red line CRRC Cars
+
+STR_NAME_KAWASAKI_R211:Kawasaki R211
+STR_INFO_KAWASAKI_R211:{BLACK}Type: {GOLD}Subway Car {}{BLACK}Formation: {GOLD}Married Pair/Multiple Unit {}{BLACK}Power: {CREAM}3rd Rail {}{BLACK}Based on: {GOLD}NYC R211

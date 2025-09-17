@@ -1,0 +1,814 @@
+grf {
+    grfid: "ZM\08\03";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    version: 1;
+    min_compatible_version: 0;
+}
+
+if (!extended_feature_test("action3_signals_custom_signal_sprites")) {
+	error(FATAL, string(STR_UNSUPPORTED_VERSION));
+}
+//templates use the following format :
+// template [template name](x,y){
+//	[ x, y, sx, sy, ox, oy]
+// where the first x and y are the starting coordinates of a sprite
+// sx and sy are size in x and y respectively
+// ox and oy are offset in x and y respectively
+//}
+
+template template_signal_6tall(x,y){
+
+	[ x, y, 5, 26, -1, -25,ANIM]
+	[ x+6, y, 6, 26, -1, -25,ANIM]
+	[ x+13, y, 6, 26, -1, -25,ANIM]
+	[ x+20, y, 5, 26, -6, -25,ANIM]
+	[ x+26, y, 5, 26, -2, -25,ANIM]
+	[ x+32, y, 5, 26, -3, -23,ANIM]
+	[ x+38, y, 6, 26, -2, -25,ANIM]
+	[ x+45, y, 6, 26, -1, -25,ANIM]
+}
+
+//TwoAspect_Block
+spriteset(TwoAspect_Block_stop, "gfx/TwoAspect_Block.png"){template_signal_6tall(7,7)}
+spriteset(TwoAspect_Block_clear, "gfx/TwoAspect_Block.png"){template_signal_6tall(7,36)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, TwoAspect_Block, getbits(extra_callback_info2, 0, 8)){
+	00: TwoAspect_Block_stop;
+	01:	TwoAspect_Block_clear;
+	02:	TwoAspect_Block_clear;
+	03:	TwoAspect_Block_clear;
+	04:	TwoAspect_Block_clear;
+	05:	TwoAspect_Block_clear;
+}
+
+//TwoAspect_PBS
+spriteset(TwoAspect_PBS_stop, "gfx/TwoAspect_PBS.png"){template_signal_6tall(7,7)}
+spriteset(TwoAspect_PBS_clear, "gfx/TwoAspect_PBS.png"){template_signal_6tall(7,36)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, TwoAspect_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: TwoAspect_PBS_stop;
+	01:	TwoAspect_PBS_clear;
+	02:	TwoAspect_PBS_clear;
+	03:	TwoAspect_PBS_clear;
+	04:	TwoAspect_PBS_clear;
+	05:	TwoAspect_PBS_clear;
+}
+
+//TwoAspect_PBSOneWay
+spriteset(TwoAspect_PBSOneWay_stop, "gfx/TwoAspect_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(TwoAspect_PBSOneWay_clear, "gfx/TwoAspect_PBSOneWay.png"){template_signal_6tall(7,36)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, TwoAspect_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: TwoAspect_PBSOneWay_stop;
+	01:	TwoAspect_PBSOneWay_clear;
+	02:	TwoAspect_PBSOneWay_clear;
+	03:	TwoAspect_PBSOneWay_clear;
+	04:	TwoAspect_PBSOneWay_clear;
+	05:	TwoAspect_PBSOneWay_clear;
+}
+
+//TwoAspect_NoEntry
+spriteset(TwoAspect_NoEntry_stop, "gfx/TwoAspect_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(TwoAspect_NoEntry_clear, "gfx/TwoAspect_NoEntry.png"){template_signal_6tall(7,36)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, TwoAspect_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: TwoAspect_NoEntry_stop;
+	01:	TwoAspect_NoEntry_clear;
+	02:	TwoAspect_NoEntry_clear;
+	03:	TwoAspect_NoEntry_clear;
+	04:	TwoAspect_NoEntry_clear;
+	05:	TwoAspect_NoEntry_clear;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, TwoAspect, getbits(extra_callback_info2, 16, 8)){
+	00: TwoAspect_Block; //block signal
+	04: TwoAspect_PBS; //Path
+	05: TwoAspect_PBSOneWay; //Path one way
+	07: TwoAspect_NoEntry; //No Entry
+}
+
+//Route_SingleLight_Block
+spriteset(Route_SingleLight_Block_stop, "gfx/Route_SingleLight_Block.png"){template_signal_6tall(7,7)}
+spriteset(Route_SingleLight_Block_clear, "gfx/Route_SingleLight_Block.png"){template_signal_6tall(7,36)}
+spriteset(Route_SingleLight_Block_caution, "gfx/Route_SingleLight_Block.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_SingleLight_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Route_SingleLight_Block_stop;
+	01:	Route_SingleLight_Block_clear;
+	02:	Route_SingleLight_Block_caution;
+	03:	Route_SingleLight_Block_clear;
+	04:	Route_SingleLight_Block_clear;
+	05:	Route_SingleLight_Block_clear;
+}
+
+//Route_SingleLight_PBS
+spriteset(Route_SingleLight_PBS_stop, "gfx/Route_SingleLight_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Route_SingleLight_PBS_clear, "gfx/Route_SingleLight_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Route_SingleLight_PBS_caution, "gfx/Route_SingleLight_PBS.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_SingleLight_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Route_SingleLight_PBS_stop;
+	01:	Route_SingleLight_PBS_clear;
+	02:	Route_SingleLight_PBS_caution;
+	03:	Route_SingleLight_PBS_clear;
+	04:	Route_SingleLight_PBS_clear;
+	05:	Route_SingleLight_PBS_clear;
+}
+
+//Route_SingleLight_PBSOneWay
+spriteset(Route_SingleLight_PBSOneWay_stop, "gfx/Route_SingleLight_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Route_SingleLight_PBSOneWay_clear, "gfx/Route_SingleLight_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Route_SingleLight_PBSOneWay_caution, "gfx/Route_SingleLight_PBSOneWay.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_SingleLight_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Route_SingleLight_PBSOneWay_stop;
+	01:	Route_SingleLight_PBSOneWay_clear;
+	02:	Route_SingleLight_PBSOneWay_caution;
+	03:	Route_SingleLight_PBSOneWay_clear;
+	04:	Route_SingleLight_PBSOneWay_clear;
+	05:	Route_SingleLight_PBSOneWay_clear;
+}
+
+//Route_SingleLight_NoEntry
+spriteset(Route_SingleLight_NoEntry_stop, "gfx/Route_SingleLight_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Route_SingleLight_NoEntry_clear, "gfx/Route_SingleLight_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Route_SingleLight_NoEntry_caution, "gfx/Route_SingleLight_NoEntry.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_SingleLight_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Route_SingleLight_NoEntry_stop;
+	01:	Route_SingleLight_NoEntry_clear;
+	02:	Route_SingleLight_NoEntry_caution;
+	03:	Route_SingleLight_NoEntry_clear;
+	04:	Route_SingleLight_NoEntry_clear;
+	05:	Route_SingleLight_NoEntry_clear;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Route_SingleLight, getbits(extra_callback_info2, 16, 8)){
+	00: Route_SingleLight_Block; //block signal
+	04: Route_SingleLight_PBS; //Path
+	05: Route_SingleLight_PBSOneWay; //Path one way
+	07: Route_SingleLight_NoEntry; //No Entry
+}
+
+//Route_British_Block
+spriteset(Route_British_Block_stop, "gfx/Route_British_Block.png"){template_signal_6tall(7,7)}
+spriteset(Route_British_Block_clear, "gfx/Route_British_Block.png"){template_signal_6tall(7,36)}
+spriteset(Route_British_Block_caution, "gfx/Route_British_Block.png"){template_signal_6tall(7,65)}
+spriteset(Route_British_Block_precaution, "gfx/Route_British_Block.png"){template_signal_6tall(7,94)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_British_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Route_British_Block_stop;
+	01:	Route_British_Block_clear;
+	02:	Route_British_Block_caution;
+	03:	Route_British_Block_precaution;
+	04:	Route_British_Block_clear;
+	05:	Route_British_Block_clear;
+}
+
+//Route_British_PBS
+spriteset(Route_British_PBS_stop, "gfx/Route_British_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Route_British_PBS_clear, "gfx/Route_British_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Route_British_PBS_caution, "gfx/Route_British_PBS.png"){template_signal_6tall(7,65)}
+spriteset(Route_British_PBS_precaution, "gfx/Route_British_PBS.png"){template_signal_6tall(7,94)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_British_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Route_British_PBS_stop;
+	01:	Route_British_PBS_clear;
+	02:	Route_British_PBS_caution;
+	03:	Route_British_PBS_precaution;
+	04:	Route_British_PBS_clear;
+	05:	Route_British_PBS_clear;
+}
+
+//Route_British_PBSOneWay
+spriteset(Route_British_PBSOneWay_stop, "gfx/Route_British_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Route_British_PBSOneWay_clear, "gfx/Route_British_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Route_British_PBSOneWay_caution, "gfx/Route_British_PBSOneWay.png"){template_signal_6tall(7,65)}
+spriteset(Route_British_PBSOneWay_precaution, "gfx/Route_British_PBSOneWay.png"){template_signal_6tall(7,94)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_British_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Route_British_PBSOneWay_stop;
+	01:	Route_British_PBSOneWay_clear;
+	02:	Route_British_PBSOneWay_caution;
+	03:	Route_British_PBSOneWay_precaution;
+	04:	Route_British_PBSOneWay_clear;
+	05:	Route_British_PBSOneWay_clear;
+}
+
+//Route_British_NoEntry
+spriteset(Route_British_NoEntry_stop, "gfx/Route_British_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Route_British_NoEntry_clear, "gfx/Route_British_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Route_British_NoEntry_caution, "gfx/Route_British_NoEntry.png"){template_signal_6tall(7,65)}
+spriteset(Route_British_NoEntry_precaution, "gfx/Route_British_NoEntry.png"){template_signal_6tall(7,94)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_British_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Route_British_NoEntry_stop;
+	01:	Route_British_NoEntry_clear;
+	02:	Route_British_NoEntry_caution;
+	03:	Route_British_NoEntry_precaution;
+	04:	Route_British_NoEntry_clear;
+	05:	Route_British_NoEntry_clear;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Route_British, getbits(extra_callback_info2, 16, 8)){
+	00: Route_British_Block; //block signal
+	04: Route_British_PBS; //Path
+	05: Route_British_PBSOneWay; //Path one way
+	07: Route_British_NoEntry; //No Entry
+}
+
+//Route_DoubleLight_Block
+spriteset(Route_DoubleLight_Block_stop, "gfx/Route_DoubleLight_Block.png"){template_signal_6tall(7,7)}
+spriteset(Route_DoubleLight_Block_clear, "gfx/Route_DoubleLight_Block.png"){template_signal_6tall(7,36)}
+spriteset(Route_DoubleLight_Block_caution, "gfx/Route_DoubleLight_Block.png"){template_signal_6tall(7,65)}
+spriteset(Route_DoubleLight_Block_precaution, "gfx/Route_DoubleLight_Block.png"){template_signal_6tall(7,94)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_DoubleLight_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Route_DoubleLight_Block_stop;
+	01:	Route_DoubleLight_Block_clear;
+	02:	Route_DoubleLight_Block_caution;
+	03:	Route_DoubleLight_Block_precaution;
+	04:	Route_DoubleLight_Block_clear;
+	05:	Route_DoubleLight_Block_clear;
+}
+
+//Route_DoubleLight_PBS
+spriteset(Route_DoubleLight_PBS_stop, "gfx/Route_DoubleLight_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Route_DoubleLight_PBS_clear, "gfx/Route_DoubleLight_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Route_DoubleLight_PBS_caution, "gfx/Route_DoubleLight_PBS.png"){template_signal_6tall(7,65)}
+spriteset(Route_DoubleLight_PBS_precaution, "gfx/Route_DoubleLight_PBS.png"){template_signal_6tall(7,94)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_DoubleLight_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Route_DoubleLight_PBS_stop;
+	01:	Route_DoubleLight_PBS_clear;
+	02:	Route_DoubleLight_PBS_caution;
+	03:	Route_DoubleLight_PBS_precaution;
+	04:	Route_DoubleLight_PBS_clear;
+	05:	Route_DoubleLight_PBS_clear;
+}
+
+//Route_DoubleLight_PBSOneWay
+spriteset(Route_DoubleLight_PBSOneWay_stop, "gfx/Route_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Route_DoubleLight_PBSOneWay_clear, "gfx/Route_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Route_DoubleLight_PBSOneWay_caution, "gfx/Route_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,65)}
+spriteset(Route_DoubleLight_PBSOneWay_precaution, "gfx/Route_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,94)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_DoubleLight_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Route_DoubleLight_PBSOneWay_stop;
+	01:	Route_DoubleLight_PBSOneWay_clear;
+	02:	Route_DoubleLight_PBSOneWay_caution;
+	03:	Route_DoubleLight_PBSOneWay_precaution;
+	04:	Route_DoubleLight_PBSOneWay_clear;
+	05:	Route_DoubleLight_PBSOneWay_clear;
+}
+
+//Route_DoubleLight_NoEntry
+spriteset(Route_DoubleLight_NoEntry_stop, "gfx/Route_DoubleLight_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Route_DoubleLight_NoEntry_clear, "gfx/Route_DoubleLight_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Route_DoubleLight_NoEntry_caution, "gfx/Route_DoubleLight_NoEntry.png"){template_signal_6tall(7,65)}
+spriteset(Route_DoubleLight_NoEntry_precaution, "gfx/Route_DoubleLight_NoEntry.png"){template_signal_6tall(7,94)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Route_DoubleLight_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Route_DoubleLight_NoEntry_stop;
+	01:	Route_DoubleLight_NoEntry_clear;
+	02:	Route_DoubleLight_NoEntry_caution;
+	03:	Route_DoubleLight_NoEntry_precaution;
+	04:	Route_DoubleLight_NoEntry_clear;
+	05:	Route_DoubleLight_NoEntry_clear;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Route_DoubleLight, getbits(extra_callback_info2, 16, 8)){
+	00: Route_DoubleLight_Block; //block signal
+	04: Route_DoubleLight_PBS; //Path
+	05: Route_DoubleLight_PBSOneWay; //Path one way
+	07: Route_DoubleLight_NoEntry; //No Entry
+}
+
+//Speed_Searchlight_Block
+spriteset(Speed_Searchlight_Block_stop, "gfx/Speed_Searchlight_Block.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Searchlight_Block_clear, "gfx/Speed_Searchlight_Block.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Searchlight_Block_caution, "gfx/Speed_Searchlight_Block.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Searchlight_Block_stop;
+	01:	Speed_Searchlight_Block_clear;
+	02:	Speed_Searchlight_Block_caution;
+	03:	Speed_Searchlight_Block_clear;
+	04:	Speed_Searchlight_Block_clear;
+	05:	Speed_Searchlight_Block_clear;
+}
+
+//Speed_Searchlight_PBS
+spriteset(Speed_Searchlight_PBS_stop, "gfx/Speed_Searchlight_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Searchlight_PBS_clear, "gfx/Speed_Searchlight_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Searchlight_PBS_caution, "gfx/Speed_Searchlight_PBS.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Searchlight_PBS_stop;
+	01:	Speed_Searchlight_PBS_clear;
+	02:	Speed_Searchlight_PBS_caution;
+	03:	Speed_Searchlight_PBS_clear;
+	04:	Speed_Searchlight_PBS_clear;
+	05:	Speed_Searchlight_PBS_clear;
+}
+
+//Speed_Searchlight_PBSOneWay
+spriteset(Speed_Searchlight_PBSOneWay_stop, "gfx/Speed_Searchlight_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Searchlight_PBSOneWay_clear, "gfx/Speed_Searchlight_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Searchlight_PBSOneWay_caution, "gfx/Speed_Searchlight_PBSOneWay.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Searchlight_PBSOneWay_stop;
+	01:	Speed_Searchlight_PBSOneWay_clear;
+	02:	Speed_Searchlight_PBSOneWay_caution;
+	03:	Speed_Searchlight_PBSOneWay_clear;
+	04:	Speed_Searchlight_PBSOneWay_clear;
+	05:	Speed_Searchlight_PBSOneWay_clear;
+}
+
+//Speed_Searchlight_NoEntry
+spriteset(Speed_Searchlight_NoEntry_stop, "gfx/Speed_Searchlight_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Searchlight_NoEntry_clear, "gfx/Speed_Searchlight_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Searchlight_NoEntry_caution, "gfx/Speed_Searchlight_NoEntry.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Searchlight_NoEntry_stop;
+	01:	Speed_Searchlight_NoEntry_clear;
+	02:	Speed_Searchlight_NoEntry_caution;
+	03:	Speed_Searchlight_NoEntry_clear;
+	04:	Speed_Searchlight_NoEntry_clear;
+	05:	Speed_Searchlight_NoEntry_clear;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight, getbits(extra_callback_info2, 16, 8)){
+	00: Speed_Searchlight_Block; //block signal
+	04: Speed_Searchlight_PBS; //Path
+	05: Speed_Searchlight_PBSOneWay; //Path one way
+	07: Speed_Searchlight_NoEntry; //No Entry
+}
+
+//Speed_Searchlight_White_Block
+spriteset(Speed_Searchlight_White_Block_stop, "gfx/Speed_Searchlight_White_Block.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Searchlight_White_Block_clear, "gfx/Speed_Searchlight_White_Block.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Searchlight_White_Block_caution, "gfx/Speed_Searchlight_White_Block.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_White_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Searchlight_White_Block_stop;
+	01:	Speed_Searchlight_White_Block_clear;
+	02:	Speed_Searchlight_White_Block_caution;
+	03:	Speed_Searchlight_White_Block_clear;
+	04:	Speed_Searchlight_White_Block_clear;
+	05:	Speed_Searchlight_White_Block_clear;
+}
+
+//Speed_Searchlight_White_PBS
+spriteset(Speed_Searchlight_White_PBS_stop, "gfx/Speed_Searchlight_White_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Searchlight_White_PBS_clear, "gfx/Speed_Searchlight_White_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Searchlight_White_PBS_caution, "gfx/Speed_Searchlight_White_PBS.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_White_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Searchlight_White_PBS_stop;
+	01:	Speed_Searchlight_White_PBS_clear;
+	02:	Speed_Searchlight_White_PBS_caution;
+	03:	Speed_Searchlight_White_PBS_clear;
+	04:	Speed_Searchlight_White_PBS_clear;
+	05:	Speed_Searchlight_White_PBS_clear;
+}
+
+//Speed_Searchlight_White_PBSOneWay
+spriteset(Speed_Searchlight_White_PBSOneWay_stop, "gfx/Speed_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Searchlight_White_PBSOneWay_clear, "gfx/Speed_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Searchlight_White_PBSOneWay_caution, "gfx/Speed_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_White_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Searchlight_White_PBSOneWay_stop;
+	01:	Speed_Searchlight_White_PBSOneWay_clear;
+	02:	Speed_Searchlight_White_PBSOneWay_caution;
+	03:	Speed_Searchlight_White_PBSOneWay_clear;
+	04:	Speed_Searchlight_White_PBSOneWay_clear;
+	05:	Speed_Searchlight_White_PBSOneWay_clear;
+}
+
+//Speed_Searchlight_White_NoEntry
+spriteset(Speed_Searchlight_White_NoEntry_stop, "gfx/Speed_Searchlight_White_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Searchlight_White_NoEntry_clear, "gfx/Speed_Searchlight_White_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Searchlight_White_NoEntry_caution, "gfx/Speed_Searchlight_White_NoEntry.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_White_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Searchlight_White_NoEntry_stop;
+	01:	Speed_Searchlight_White_NoEntry_clear;
+	02:	Speed_Searchlight_White_NoEntry_caution;
+	03:	Speed_Searchlight_White_NoEntry_clear;
+	04:	Speed_Searchlight_White_NoEntry_clear;
+	05:	Speed_Searchlight_White_NoEntry_clear;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Speed_Searchlight_White, getbits(extra_callback_info2, 16, 8)){
+	00: Speed_Searchlight_White_Block; //block signal
+	04: Speed_Searchlight_White_PBS; //Path
+	05: Speed_Searchlight_White_PBSOneWay; //Path one way
+	07: Speed_Searchlight_White_NoEntry; //No Entry
+}
+
+//Speed_Twin_Searchlight_Block
+spriteset(Speed_Twin_Searchlight_Block_stop, "gfx/Speed_Twin_Searchlight_Block.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Twin_Searchlight_Block_clear, "gfx/Speed_Twin_Searchlight_Block.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Twin_Searchlight_Block_caution, "gfx/Speed_Twin_Searchlight_Block.png"){template_signal_6tall(7,65)}
+spriteset(Speed_Twin_Searchlight_Block_precaution, "gfx/Speed_Twin_Searchlight_Block.png"){template_signal_6tall(7,94)}
+spriteset(Speed_Twin_Searchlight_Block_precaution1, "gfx/Speed_Twin_Searchlight_Block.png"){template_signal_6tall(7,123)}
+spriteset(Speed_Twin_Searchlight_Block_precaution2, "gfx/Speed_Twin_Searchlight_Block.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Twin_Searchlight_Block_stop;
+	01:	Speed_Twin_Searchlight_Block_clear;
+	02:	Speed_Twin_Searchlight_Block_caution;
+	03:	Speed_Twin_Searchlight_Block_precaution;
+	04:	Speed_Twin_Searchlight_Block_precaution1;
+	05:	Speed_Twin_Searchlight_Block_precaution2;
+}
+
+//Speed_Twin_Searchlight_PBS
+spriteset(Speed_Twin_Searchlight_PBS_stop, "gfx/Speed_Twin_Searchlight_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Twin_Searchlight_PBS_clear, "gfx/Speed_Twin_Searchlight_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Twin_Searchlight_PBS_caution, "gfx/Speed_Twin_Searchlight_PBS.png"){template_signal_6tall(7,65)}
+spriteset(Speed_Twin_Searchlight_PBS_precaution, "gfx/Speed_Twin_Searchlight_PBS.png"){template_signal_6tall(7,94)}
+spriteset(Speed_Twin_Searchlight_PBS_precaution1, "gfx/Speed_Twin_Searchlight_PBS.png"){template_signal_6tall(7,123)}
+spriteset(Speed_Twin_Searchlight_PBS_precaution2, "gfx/Speed_Twin_Searchlight_PBS.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Twin_Searchlight_PBS_stop;
+	01:	Speed_Twin_Searchlight_PBS_clear;
+	02:	Speed_Twin_Searchlight_PBS_caution;
+	03:	Speed_Twin_Searchlight_PBS_precaution;
+	04:	Speed_Twin_Searchlight_PBS_precaution1;
+	05:	Speed_Twin_Searchlight_PBS_precaution2;
+}
+
+//Speed_Twin_Searchlight_PBSOneWay
+spriteset(Speed_Twin_Searchlight_PBSOneWay_stop, "gfx/Speed_Twin_Searchlight_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Twin_Searchlight_PBSOneWay_clear, "gfx/Speed_Twin_Searchlight_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Twin_Searchlight_PBSOneWay_caution, "gfx/Speed_Twin_Searchlight_PBSOneWay.png"){template_signal_6tall(7,65)}
+spriteset(Speed_Twin_Searchlight_PBSOneWay_precaution, "gfx/Speed_Twin_Searchlight_PBSOneWay.png"){template_signal_6tall(7,94)}
+spriteset(Speed_Twin_Searchlight_PBSOneWay_precaution1, "gfx/Speed_Twin_Searchlight_PBSOneWay.png"){template_signal_6tall(7,123)}
+spriteset(Speed_Twin_Searchlight_PBSOneWay_precaution2, "gfx/Speed_Twin_Searchlight_PBSOneWay.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Twin_Searchlight_PBSOneWay_stop;
+	01:	Speed_Twin_Searchlight_PBSOneWay_clear;
+	02:	Speed_Twin_Searchlight_PBSOneWay_caution;
+	03:	Speed_Twin_Searchlight_PBSOneWay_precaution;
+	04:	Speed_Twin_Searchlight_PBSOneWay_precaution1;
+	05:	Speed_Twin_Searchlight_PBSOneWay_precaution2;
+}
+
+//Speed_Twin_Searchlight_NoEntry
+spriteset(Speed_Twin_Searchlight_NoEntry_stop, "gfx/Speed_Twin_Searchlight_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Twin_Searchlight_NoEntry_clear, "gfx/Speed_Twin_Searchlight_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Twin_Searchlight_NoEntry_caution, "gfx/Speed_Twin_Searchlight_NoEntry.png"){template_signal_6tall(7,65)}
+spriteset(Speed_Twin_Searchlight_NoEntry_precaution, "gfx/Speed_Twin_Searchlight_NoEntry.png"){template_signal_6tall(7,94)}
+spriteset(Speed_Twin_Searchlight_NoEntry_precaution1, "gfx/Speed_Twin_Searchlight_NoEntry.png"){template_signal_6tall(7,123)}
+spriteset(Speed_Twin_Searchlight_NoEntry_precaution2, "gfx/Speed_Twin_Searchlight_NoEntry.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Twin_Searchlight_NoEntry_stop;
+	01:	Speed_Twin_Searchlight_NoEntry_clear;
+	02:	Speed_Twin_Searchlight_NoEntry_caution;
+	03:	Speed_Twin_Searchlight_NoEntry_precaution;
+	04:	Speed_Twin_Searchlight_NoEntry_precaution1;
+	05:	Speed_Twin_Searchlight_NoEntry_precaution2;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight, getbits(extra_callback_info2, 16, 8)){
+	00: Speed_Twin_Searchlight_Block; //block signal
+	04: Speed_Twin_Searchlight_PBS; //Path
+	05: Speed_Twin_Searchlight_PBSOneWay; //Path one way
+	07: Speed_Twin_Searchlight_NoEntry; //No Entry
+}
+
+//Speed_Twin_Searchlight_White_Block
+spriteset(Speed_Twin_Searchlight_White_Block_stop, "gfx/Speed_Twin_Searchlight_White_Block.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Twin_Searchlight_White_Block_clear, "gfx/Speed_Twin_Searchlight_White_Block.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Twin_Searchlight_White_Block_caution, "gfx/Speed_Twin_Searchlight_White_Block.png"){template_signal_6tall(7,65)}
+spriteset(Speed_Twin_Searchlight_White_Block_precaution, "gfx/Speed_Twin_Searchlight_White_Block.png"){template_signal_6tall(7,94)}
+spriteset(Speed_Twin_Searchlight_White_Block_precaution1, "gfx/Speed_Twin_Searchlight_White_Block.png"){template_signal_6tall(7,123)}
+spriteset(Speed_Twin_Searchlight_White_Block_precaution2, "gfx/Speed_Twin_Searchlight_White_Block.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_White_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Twin_Searchlight_White_Block_stop;
+	01:	Speed_Twin_Searchlight_White_Block_clear;
+	02:	Speed_Twin_Searchlight_White_Block_caution;
+	03:	Speed_Twin_Searchlight_White_Block_precaution;
+	04:	Speed_Twin_Searchlight_White_Block_precaution1;
+	05:	Speed_Twin_Searchlight_White_Block_precaution2;
+}
+
+//Speed_Twin_Searchlight_White_PBS
+spriteset(Speed_Twin_Searchlight_White_PBS_stop, "gfx/Speed_Twin_Searchlight_White_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Twin_Searchlight_White_PBS_clear, "gfx/Speed_Twin_Searchlight_White_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Twin_Searchlight_White_PBS_caution, "gfx/Speed_Twin_Searchlight_White_PBS.png"){template_signal_6tall(7,65)}
+spriteset(Speed_Twin_Searchlight_White_PBS_precaution, "gfx/Speed_Twin_Searchlight_White_PBS.png"){template_signal_6tall(7,94)}
+spriteset(Speed_Twin_Searchlight_White_PBS_precaution1, "gfx/Speed_Twin_Searchlight_White_PBS.png"){template_signal_6tall(7,123)}
+spriteset(Speed_Twin_Searchlight_White_PBS_precaution2, "gfx/Speed_Twin_Searchlight_White_PBS.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_White_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Twin_Searchlight_White_PBS_stop;
+	01:	Speed_Twin_Searchlight_White_PBS_clear;
+	02:	Speed_Twin_Searchlight_White_PBS_caution;
+	03:	Speed_Twin_Searchlight_White_PBS_precaution;
+	04:	Speed_Twin_Searchlight_White_PBS_precaution1;
+	05:	Speed_Twin_Searchlight_White_PBS_precaution2;
+}
+
+//Speed_Twin_Searchlight_White_PBSOneWay
+spriteset(Speed_Twin_Searchlight_White_PBSOneWay_stop, "gfx/Speed_Twin_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Twin_Searchlight_White_PBSOneWay_clear, "gfx/Speed_Twin_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Twin_Searchlight_White_PBSOneWay_caution, "gfx/Speed_Twin_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,65)}
+spriteset(Speed_Twin_Searchlight_White_PBSOneWay_precaution, "gfx/Speed_Twin_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,94)}
+spriteset(Speed_Twin_Searchlight_White_PBSOneWay_precaution1, "gfx/Speed_Twin_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,123)}
+spriteset(Speed_Twin_Searchlight_White_PBSOneWay_precaution2, "gfx/Speed_Twin_Searchlight_White_PBSOneWay.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_White_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Twin_Searchlight_White_PBSOneWay_stop;
+	01:	Speed_Twin_Searchlight_White_PBSOneWay_clear;
+	02:	Speed_Twin_Searchlight_White_PBSOneWay_caution;
+	03:	Speed_Twin_Searchlight_White_PBSOneWay_precaution;
+	04:	Speed_Twin_Searchlight_White_PBSOneWay_precaution1;
+	05:	Speed_Twin_Searchlight_White_PBSOneWay_precaution2;
+}
+
+//Speed_Twin_Searchlight_White_NoEntry
+spriteset(Speed_Twin_Searchlight_White_NoEntry_stop, "gfx/Speed_Twin_Searchlight_White_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Speed_Twin_Searchlight_White_NoEntry_clear, "gfx/Speed_Twin_Searchlight_White_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Speed_Twin_Searchlight_White_NoEntry_caution, "gfx/Speed_Twin_Searchlight_White_NoEntry.png"){template_signal_6tall(7,65)}
+spriteset(Speed_Twin_Searchlight_White_NoEntry_precaution, "gfx/Speed_Twin_Searchlight_White_NoEntry.png"){template_signal_6tall(7,94)}
+spriteset(Speed_Twin_Searchlight_White_NoEntry_precaution1, "gfx/Speed_Twin_Searchlight_White_NoEntry.png"){template_signal_6tall(7,123)}
+spriteset(Speed_Twin_Searchlight_White_NoEntry_precaution2, "gfx/Speed_Twin_Searchlight_White_NoEntry.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_White_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_Twin_Searchlight_White_NoEntry_stop;
+	01:	Speed_Twin_Searchlight_White_NoEntry_clear;
+	02:	Speed_Twin_Searchlight_White_NoEntry_caution;
+	03:	Speed_Twin_Searchlight_White_NoEntry_precaution;
+	04:	Speed_Twin_Searchlight_White_NoEntry_precaution1;
+	05:	Speed_Twin_Searchlight_White_NoEntry_precaution2;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Speed_Twin_Searchlight_White, getbits(extra_callback_info2, 16, 8)){
+	00: Speed_Twin_Searchlight_White_Block; //block signal
+	04: Speed_Twin_Searchlight_White_PBS; //Path
+	05: Speed_Twin_Searchlight_White_PBSOneWay; //Path one way
+	07: Speed_Twin_Searchlight_White_NoEntry; //No Entry
+}
+
+//Speed_DoubleLight_Block
+spriteset(Speed_DoubleLight_Block_stop, "gfx/Speed_DoubleLight_Block.png"){template_signal_6tall(7,7)}
+spriteset(Speed_DoubleLight_Block_clear, "gfx/Speed_DoubleLight_Block.png"){template_signal_6tall(7,36)}
+spriteset(Speed_DoubleLight_Block_caution, "gfx/Speed_DoubleLight_Block.png"){template_signal_6tall(7,65)}
+spriteset(Speed_DoubleLight_Block_precaution, "gfx/Speed_DoubleLight_Block.png"){template_signal_6tall(7,94)}
+spriteset(Speed_DoubleLight_Block_precaution1, "gfx/Speed_DoubleLight_Block.png"){template_signal_6tall(7,123)}
+spriteset(Speed_DoubleLight_Block_precaution2, "gfx/Speed_DoubleLight_Block.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_DoubleLight_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_DoubleLight_Block_stop;
+	01:	Speed_DoubleLight_Block_clear;
+	02:	Speed_DoubleLight_Block_caution;
+	03:	Speed_DoubleLight_Block_precaution;
+	04:	Speed_DoubleLight_Block_precaution1;
+	05:	Speed_DoubleLight_Block_precaution2;
+}
+
+//Speed_DoubleLight_PBS
+spriteset(Speed_DoubleLight_PBS_stop, "gfx/Speed_DoubleLight_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Speed_DoubleLight_PBS_clear, "gfx/Speed_DoubleLight_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Speed_DoubleLight_PBS_caution, "gfx/Speed_DoubleLight_PBS.png"){template_signal_6tall(7,65)}
+spriteset(Speed_DoubleLight_PBS_precaution, "gfx/Speed_DoubleLight_PBS.png"){template_signal_6tall(7,94)}
+spriteset(Speed_DoubleLight_PBS_precaution1, "gfx/Speed_DoubleLight_PBS.png"){template_signal_6tall(7,123)}
+spriteset(Speed_DoubleLight_PBS_precaution2, "gfx/Speed_DoubleLight_PBS.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_DoubleLight_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_DoubleLight_PBS_stop;
+	01:	Speed_DoubleLight_PBS_clear;
+	02:	Speed_DoubleLight_PBS_caution;
+	03:	Speed_DoubleLight_PBS_precaution;
+	04:	Speed_DoubleLight_PBS_precaution1;
+	05:	Speed_DoubleLight_PBS_precaution2;
+}
+
+//Speed_DoubleLight_PBSOneWay
+spriteset(Speed_DoubleLight_PBSOneWay_stop, "gfx/Speed_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Speed_DoubleLight_PBSOneWay_clear, "gfx/Speed_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Speed_DoubleLight_PBSOneWay_caution, "gfx/Speed_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,65)}
+spriteset(Speed_DoubleLight_PBSOneWay_precaution, "gfx/Speed_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,94)}
+spriteset(Speed_DoubleLight_PBSOneWay_precaution1, "gfx/Speed_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,123)}
+spriteset(Speed_DoubleLight_PBSOneWay_precaution2, "gfx/Speed_DoubleLight_PBSOneWay.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_DoubleLight_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_DoubleLight_PBSOneWay_stop;
+	01:	Speed_DoubleLight_PBSOneWay_clear;
+	02:	Speed_DoubleLight_PBSOneWay_caution;
+	03:	Speed_DoubleLight_PBSOneWay_precaution;
+	04:	Speed_DoubleLight_PBSOneWay_precaution1;
+	05:	Speed_DoubleLight_PBSOneWay_precaution2;
+}
+
+//Speed_DoubleLight_NoEntry
+spriteset(Speed_DoubleLight_NoEntry_stop, "gfx/Speed_DoubleLight_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Speed_DoubleLight_NoEntry_clear, "gfx/Speed_DoubleLight_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Speed_DoubleLight_NoEntry_caution, "gfx/Speed_DoubleLight_NoEntry.png"){template_signal_6tall(7,65)}
+spriteset(Speed_DoubleLight_NoEntry_precaution, "gfx/Speed_DoubleLight_NoEntry.png"){template_signal_6tall(7,94)}
+spriteset(Speed_DoubleLight_NoEntry_precaution1, "gfx/Speed_DoubleLight_NoEntry.png"){template_signal_6tall(7,123)}
+spriteset(Speed_DoubleLight_NoEntry_precaution2, "gfx/Speed_DoubleLight_NoEntry.png"){template_signal_6tall(7,152)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Speed_DoubleLight_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Speed_DoubleLight_NoEntry_stop;
+	01:	Speed_DoubleLight_NoEntry_clear;
+	02:	Speed_DoubleLight_NoEntry_caution;
+	03:	Speed_DoubleLight_NoEntry_precaution;
+	04:	Speed_DoubleLight_NoEntry_precaution1;
+	05:	Speed_DoubleLight_NoEntry_precaution2;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Speed_DoubleLight, getbits(extra_callback_info2, 16, 8)){
+	00: Speed_DoubleLight_Block; //block signal
+	04: Speed_DoubleLight_PBS; //Path
+	05: Speed_DoubleLight_PBSOneWay; //Path one way
+	07: Speed_DoubleLight_NoEntry; //No Entry
+}
+
+//Underground_Block
+spriteset(Underground_Block_stop, "gfx/Underground_Block.png"){template_signal_6tall(7,7)}
+spriteset(Underground_Block_clear, "gfx/Underground_Block.png"){template_signal_6tall(7,36)}
+spriteset(Underground_Block_caution, "gfx/Underground_Block.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Underground_Block, getbits(extra_callback_info2, 0, 8)){
+	00: Underground_Block_stop;
+	01:	Underground_Block_clear;
+	02:	Underground_Block_caution;
+	03:	Underground_Block_clear;
+	04:	Underground_Block_clear;
+	05:	Underground_Block_clear;
+}
+
+//Underground_PBS
+spriteset(Underground_PBS_stop, "gfx/Underground_PBS.png"){template_signal_6tall(7,7)}
+spriteset(Underground_PBS_clear, "gfx/Underground_PBS.png"){template_signal_6tall(7,36)}
+spriteset(Underground_PBS_caution, "gfx/Underground_PBS.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Underground_PBS, getbits(extra_callback_info2, 0, 8)){
+	00: Underground_PBS_stop;
+	01:	Underground_PBS_clear;
+	02:	Underground_PBS_caution;
+	03:	Underground_PBS_clear;
+	04:	Underground_PBS_clear;
+	05:	Underground_PBS_clear;
+}
+
+//Underground_PBSOneWay
+spriteset(Underground_PBSOneWay_stop, "gfx/Underground_PBSOneWay.png"){template_signal_6tall(7,7)}
+spriteset(Underground_PBSOneWay_clear, "gfx/Underground_PBSOneWay.png"){template_signal_6tall(7,36)}
+spriteset(Underground_PBSOneWay_caution, "gfx/Underground_PBSOneWay.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Underground_PBSOneWay, getbits(extra_callback_info2, 0, 8)){
+	00: Underground_PBSOneWay_stop;
+	01:	Underground_PBSOneWay_clear;
+	02:	Underground_PBSOneWay_caution;
+	03:	Underground_PBSOneWay_clear;
+	04:	Underground_PBSOneWay_clear;
+	05:	Underground_PBSOneWay_clear;
+}
+
+//Underground_NoEntry
+spriteset(Underground_NoEntry_stop, "gfx/Underground_NoEntry.png"){template_signal_6tall(7,7)}
+spriteset(Underground_NoEntry_clear, "gfx/Underground_NoEntry.png"){template_signal_6tall(7,36)}
+spriteset(Underground_NoEntry_caution, "gfx/Underground_NoEntry.png"){template_signal_6tall(7,65)}
+
+//This switch decides which spriteset to use for each signal aspect for one signal type (this will be used for block electric, style one)
+switch(FEAT_SIGNALS, SELF, Underground_NoEntry, getbits(extra_callback_info2, 0, 8)){
+	00: Underground_NoEntry_stop;
+	01:	Underground_NoEntry_clear;
+	02:	Underground_NoEntry_caution;
+	03:	Underground_NoEntry_clear;
+	04:	Underground_NoEntry_clear;
+	05:	Underground_NoEntry_clear;
+}
+
+//signals
+switch(FEAT_SIGNALS, SELF, Underground, getbits(extra_callback_info2, 16, 8)){
+	00: Underground_Block; //block signal
+	04: Underground_PBS; //Path
+	05: Underground_PBSOneWay; //Path one way
+	07: Underground_NoEntry; //No Entry
+}
+
+switch(FEAT_SIGNALS, SELF, sw_ORPSignals, signal_style){
+	01: TwoAspect;
+	02: Route_SingleLight;
+	03: Route_British;
+	04: Route_DoubleLight;
+	05: Speed_Searchlight;
+	06: Speed_Searchlight_White;
+	07: Speed_Twin_Searchlight;
+	08: Speed_Twin_Searchlight_White;
+	09: Speed_DoubleLight;
+	12: Underground;
+}
+
+item (FEAT_SIGNALS, custom_signals, 0) { 
+	property{
+		extra_aspects:		4;	//Number of extra aspects to be used across all signal types (0=only red/green, 1=red/yellow/green etc). Set it to the max of all your signal types
+		
+		define_style:		1;
+		style_name:			string(STR_TWOASPECT);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		2;
+		style_name:			string(STR_ROUTE_SINGLELIGHT);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		3;
+		style_name:			string(STR_ROUTE_BRITISH);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		4;
+		style_name:			string(STR_ROUTE_DOUBLELIGHT);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		5;
+		style_name:			string(STR_SPEED_SEARCHLIGHT);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		6;
+		style_name:			string(STR_SPEED_SEARCHLIGHT_WHITE);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		7;
+		style_name:			string(STR_SPEED_TWIN_SEARCHLIGHT);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		8;
+		style_name:			string(STR_SPEED_TWIN_SEARCHLIGHT_WHITE);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		9;
+		style_name:			string(STR_SPEED_DOUBLELIGHT);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+		
+		define_style:		12;
+		style_name:			string(STR_UNDERGROUND);
+		style_electric_enabled: bitmask(SIGNAL_TYPE_NORMAL, SIGNAL_TYPE_PBS, SIGNAL_TYPE_PBS_ONEWAY, SIGNAL_TYPE_NO_ENTRY);
+
+	}
+
+    graphics {
+        sw_ORPSignals;
+    }
+}

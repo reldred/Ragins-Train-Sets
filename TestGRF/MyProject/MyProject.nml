@@ -1,0 +1,151 @@
+grf{
+    grfid: "ZM\01\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 0;
+    min_compatible_version: 0;
+}
+
+railtypetable {
+    RAIL, ELRL, SAA3
+}
+
+cargotable {
+    PASS
+}
+
+/* Fix depot view */
+traininfo_y_offset = 2;
+train_width_32_px = 1;
+
+template template_8_standard(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -11]
+    [ x+9,      y,        22,        20,        -15,        -10]
+    [ x+32,     y,        33,        16,        -17,        -12]
+    [ x+66,     y,        22,        20,        -5,            -10]
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -15,        -10]
+    [ x+121,    y,        33,        16,        -17,        -12]
+    [ x+155,    y,        22,        20,        -5,            -10]
+}
+
+spriteset(spriteset_81_Class, "gfx\Loco_Test.png") {template_8_standard(7,39)}
+
+item(FEAT_TRAINS, item_81_Class, 1) {
+    property {
+        /* Common properties */
+        name: string(STR_81_CLASS);
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1982,01,01);
+        model_life:    VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 40;
+        reliability_decay: 20;
+        cargo_capacity: 0;
+        /* Train-specific properties */
+        sprite_id: SPRITE_ID_NEW_TRAIN; // enable new graphics
+        speed: 115 km/h;
+        misc_flags: bitmask(TRAIN_FLAG_2CC);
+        track_type:    RAIL;
+        running_cost_base: RUNNING_COST_DIESEL;
+        engine_class: ENGINE_CLASS_DIESEL; // sets the sound effect
+        power: 3000 hp;
+        weight: 129 tons;
+        tractive_effort_coefficient: 0.3;
+        length: 8;
+    }
+    graphics {
+        default: spriteset_81_Class;
+//        purchase: spriteset_purchase_electric_kettle;
+//        cost_factor: 28;
+//        running_cost_factor: 1100;
+        additional_text: string(STR_ROLE_FREIGHT);
+    }
+}
+
+spriteset(spriteset_BART_Train, "gfx\BART A&B.png") {template_8_standard(7,39)}
+spriteset(spriteset_BART_Train_Rear, "gfx\BART A&B.png") {template_8_standard(7,64)}
+spriteset(spriteset_BART_Train_Wagon, "gfx\BART A&B.png") {template_8_standard(7,89)}
+
+switch(FEAT_TRAINS, SELF, sw_articulated_BART_Train, extra_callback_info1) {
+    /* Add two articulated parts, for a total of three */
+    1: return item_BART_Train;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, item_BART_Train, 2) {
+    property {
+        /* Common properties */
+        name: string(STR_BART_TRAIN);
+        climates_available: ALL_CLIMATES;
+        introduction_date: date(1968,01,01);
+        model_life:    VEHICLE_NEVER_EXPIRES;
+        vehicle_life: 40;
+        reliability_decay: 20;
+        cargo_capacity: 0;
+        /* Train-specific properties */
+        sprite_id: SPRITE_ID_NEW_TRAIN; // enable new graphics
+        speed: 115 km/h;
+        misc_flags: bitmask(TRAIN_FLAG_2CC);
+        track_type:    SAA3;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        engine_class: ENGINE_CLASS_ELECTRIC; // sets the sound effect
+        power: 3000 hp;
+        weight: 129 tons;
+        tractive_effort_coefficient: 0.3;
+        length: 8;
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    80;
+    }
+    graphics {
+        default: spriteset_BART_Train;
+        articulated_part:        sw_articulated_BART_Train;
+//        purchase: spriteset_purchase_electric_kettle;
+//        cost_factor: 28;
+//        running_cost_factor: 1100;
+        additional_text: string(STR_ROLE_SUBWAY);
+    }
+}
+
+
+
+
+
+spriteset(spriteset_Amtrak_Horizon, "gfx/Amtrak_Horizon.png") {template_8_standard(7,39)}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_Amtrak_Horizon) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+
+        track_type:                        RAIL;
+
+        name: string(STR_AMTRAK_HORIZON);
+        introduction_date:                date(1988,1,1);
+        model_life:                        50;
+        length:                            8;
+
+        weight:                         33 ton;
+        speed:                            100 mph;
+        cost_factor:                     0x91 nfo;
+        running_cost_factor:             0x4E nfo;
+
+        refittable_cargo_classes:        bitmask(CC_PASSENGERS);
+        non_refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    80;
+
+    }
+    graphics {
+        default:                        spriteset_Amtrak_Horizon;
+//        purchase:                        spriteset_MK1_CARRIAGE_purchase;
+    }
+}

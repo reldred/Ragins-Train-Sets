@@ -1,0 +1,7 @@
+//North Korean Track Set
+//Defines the GRF
+#include "src/header.pnml"
+
+#include "src/signals.pnml"
+
+//cd /mnt/c/Temp/MTS2

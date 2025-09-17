@@ -1,0 +1,197 @@
+##grflangid 0x0
+
+STR_GRF_NAME:Oceanian Rail Pack - Modern Locomotives v2
+STR_GRF_DESCRIPTION:Diesel and electric locomotives from Australia and New Zealand, all in 2cc. Drawn and Coded by Zachary Moore (Ragin1_)
+
+STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
+STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
+STR_PARAM_RUNNING_COST              :Running cost multiplier
+STR_PARAM_RUNNING_COST_DESC         :You can use this setting to increase or decrease the running costs of the vehicles in this set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (default)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+STR_BUY_MENU_ADDITIONAL_TEXT_WRAPPER_TWO_SUBSTR:{STRING}{}{STRING}
+STR_POWER_BY_POWER_SOURCE_TWO_SOURCES:{BLACK}Power on {STRING}: {GOLD}{POWER} {}{BLACK}Power on {STRING}: {GOLD}{POWER}
+STR_POWER_SOURCE_DIESEL:Diesel
+STR_POWER_SOURCE_OHLE:Overhead Line
+STR_POWER_SOURCE_3RAIL:3rd Rail
+
+
+
+STR_NAME_CLYDE_ML1:Clyde-EMD ML1
+STR_INFO_CLYDE_ML1:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}CR GM Class
+
+STR_NAME_EE_1200CLASS:English-Electric M129C
+STR_INFO_EE_1200CLASS:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR 1200 Class
+
+STR_NAME_CLYDE_A16C:Clyde-EMD A16C
+STR_INFO_CLYDE_A16C:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 42 Class, VR S Class
+
+STR_NAME_CLYDE_AJ16C:Clyde-EMD AJ16C
+STR_INFO_CLYDE_AJ16C:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 421 Class
+
+STR_NAME_CLYDE_AAT22C2R:Clyde-EMD AAT22C-2R
+STR_INFO_CLYDE_AAT22C2R:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}V/Line A Class
+
+STR_NAME_CLYDE_JT22HC2:Clyde-EMD JT22HC-2
+STR_INFO_CLYDE_JT22HC2:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}V/Line N Class {}{}{GOLD}Thump Thump Thump
+
+STR_NAME_CLYDE_AJT32HB2:Clyde-EMD AJT32HB2
+STR_INFO_CLYDE_AJT32HB2:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Fictional, but inspired by proposed Bo-Bo HPT Locomotive
+
+
+
+STR_NAME_ALCODL531:Goodwin-ALCO DL531
+STR_INFO_ALCODL531:{BLACK}Role: {GOLD}Branch-Line Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 48 Class, SAR 830 Class, Silverton 48s Class {}{}{GOLD}Also known as the ALCO RSD-8
+
+STR_NAME_CLYDE_G8C:Clyde-EMD G8C
+STR_INFO_CLYDE_G8C:{BLACK}Role: {GOLD}Branch-Line Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 49 Class
+
+
+
+STR_NAME_ALCO_RSC3:ALCO-MLW RSC-3
+STR_INFO_ALCO_RSC3:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 40 Class
+
+STR_NAME_EE_1250CLASS:English-Electric MCH139C 
+STR_INFO_EE_1250CLASS:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR 1250 Class
+
+STR_NAME_ALCODL541:Goodwin-ALCO DL541
+STR_INFO_ALCODL541:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 45 Class, SAR 600 Class {}{}{GOLD}Union's didn't like these
+
+STR_NAME_ALCODL541_CROCODILE:Goodwin-ALCO DL541 (Chop-Nose)
+STR_INFO_ALCODL541_CROCODILE:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Junee Workshops 103 (formerly NSW 4537) {}{}{GOLD}Aussie Crocodile
+
+STR_NAME_ALCODL541_PILBARA:Goodwin-ALCO DL541 (Pilbara Cab)
+STR_INFO_ALCODL541_PILBARA:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Junee Workshops attempted rebuild of NSW 3505 (formerly 4505)
+
+STR_NAME_CLYDE_JT42CX:Clyde-EMD JT42C-X
+STR_INFO_CLYDE_JT42CX:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Clyde GML10 Prototype {}{}{GOLD}it's not so bad being alone
+
+STR_NAME_CLYDE_JT26C2M:Clyde-EMD JT26C-2M
+STR_INFO_CLYDE_JT26C2M:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}AN ALF Class
+
+STR_NAME_CLYDE_JT42C:Clyde-EMD JT42C
+STR_INFO_CLYDE_JT42C:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 82 Class
+
+STR_NAME_CLYDE_GT46C:Clyde-EMD GT46C
+STR_INFO_CLYDE_GT46C:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Westrail Q Class, Freight Australia V Class, FreightLink FQ Class
+
+STR_NAME_DOWNER_GT46CACE:Downer-EMD GT46C-ACe
+STR_INFO_DOWNER_GT46CACE:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel
+
+STR_NAME_GONINAN_C44ACI:GE-UGL C44aci
+STR_INFO_GONINAN_C44ACI:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel
+
+STR_NAME_STADLERSALI:Stadler SaLi
+STR_INFO_STADLERSALI:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Kiwirail DM Class
+
+
+
+STR_NAME_CLYDE_GT26C:Clyde-EMD GT26C
+STR_INFO_CLYDE_GT26C:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR L Class
+
+STR_NAME_NOHAB_JT30C2:EMD-Nohab JT30C-2
+STR_INFO_NOHAB_JT30C2:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}DSB Class MZIII imported by Independant Rail Australia in 2006
+
+STR_NAME_CLYDE_GT26CW:Clyde-EMD GT26CW
+STR_INFO_CLYDE_GT26CW:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR C Class
+
+STR_NAME_CLYDE_GT46CWM:Clyde-EMD GT46CWM
+STR_INFO_CLYDE_GT46CWM:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 90 Class
+
+STR_NAME_GONINAN_C40ACI:GE-UGL C40aci
+STR_INFO_GONINAN_C40ACI:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR National 5000 Class {}{}{GOLD}Basically an NR Class with AC motors, after it ate too many kebabs.
+
+STR_NAME_GONINAN_C44ACHI:GE-UGL C44acHi
+STR_INFO_GONINAN_C44ACHI:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{}{GOLD}The C44's got into the kebabs again.
+
+
+
+STR_NAME_EE_DGCLASS:English-Electric DG Class
+STR_INFO_EE_DGCLASS:{BLACK}Role: {GOLD}Branch Line Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR DG Class
+
+STR_NAME_CLYDE_JL22C:Clyde-EMD JL22C
+STR_INFO_CLYDE_JL22C:{BLACK}Role: {GOLD}Branch Line Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}CR NJ Class
+
+
+
+STR_NAME_CLYDE_ML2:Clyde-EMD ML2
+STR_INFO_CLYDE_ML2:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR B Class
+
+STR_NAME_EE_DFCLASS:English-Electric DF Class
+STR_INFO_EE_DFCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR DF Class
+
+STR_NAME_ALCODL500B:Goodwin-ALCO DL500B
+STR_INFO_ALCODL500B:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 44 Class, SAR 930 Class
+
+STR_NAME_CLYDE_J26C:Clyde-EMD J26C
+STR_INFO_CLYDE_J26C:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 422 Class
+
+STR_NAME_GOODWIN_DL500G:Goodwin-ALCO DL500G
+STR_INFO_GOODWIN_DL500G:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 442 Class, SAR 700 Class {}{}{GOLD}They also proposed one of these to Victorian Railways
+
+STR_NAME_CLYDE_JT26C2:Clyde-EMD JT26C-2
+STR_INFO_CLYDE_JT26C2:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}AN AL Class
+
+STR_NAME_COMENG_CE615A:Comeng CE615A
+STR_INFO_COMENG_CE615A:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 80 Class
+
+STR_NAME_NSW_CLYDE_JT26C2SS:Clyde-EMD JT26C-2SS
+STR_INFO_NSW_CLYDE_JT26C2SS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 81 Class
+
+STR_NAME_CLYDE_JT26C2SS:Clyde-EMD JT26C-2SS
+STR_INFO_CLYDE_JT26C2SS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}V/Line G Class, AN BL Class
+
+STR_NAME_CLYDE_AT42C:Clyde-EMD AT42C
+STR_INFO_CLYDE_AT42C:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}AN DL Class
+
+STR_NAME_CLYDE_GT46CW:Clyde-EMD GT46CW
+STR_INFO_CLYDE_GT46CW:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed NR Class Design, basically a 90 class after a diet
+
+STR_NAME_GONINAN_CV409I:GE-UGL Cv40-9i
+STR_INFO_GONINAN_CV409I:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}National Rail NR Class
+
+
+STR_NAME_EE_EWCLASS:English-Electric EW Class
+STR_INFO_EE_EWCLASS:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}NZR EW Class
+
+STR_NAME_COMENG_CL628:Comeng CL628
+STR_INFO_COMENG_CL628:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}Fictional
+
+
+
+STR_NAME_COMENG_85CLASS:Comeng CL627
+STR_INFO_COMENG_85CLASS:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}NSW 85 Class
+
+STR_NAME_CLYDE_JAE_342C:Clyde JAE 34-2C
+STR_INFO_CLYDE_JAE_342C:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}Fictional
+
+
+
+STR_NAME_EE_LCLASS:English-Electric L Class
+STR_INFO_EE_LCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}VR L Class
+
+STR_NAME_METROVICK_46CLASS:Metro-Vick 46 Class
+STR_INFO_METROVICK_46CLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}NSW 46 Class {}{}{GOLD}King of the Mountain
+
+STR_NAME_CLYDE_JE28C:Clyde JE28C
+STR_INFO_CLYDE_JE28C:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}Proposed Clyde locomotive for NSW PTC
+
+STR_NAME_COMENG_86CLASS:Comeng CL627A
+STR_INFO_COMENG_86CLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}NSW 86 Class
+STR_NAME_COMENG_86CLASS_TRIBO:Comeng CL627B Tri-Bo
+STR_INFO_COMENG_86CLASS_TRIBO:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}NSW 8650 Tri-Bo Experiment & Proposed Maldon-Dombarton Locomotives
+
+STR_NAME_EFCLASS:Brush EF Class
+STR_INFO_EFCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}NZ EF Class
+
+STR_NAME_WALKERS_JA393B:ASEA-Clyde-Walkers JA39-3B
+STR_INFO_WALKERS_JA393B:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}QR 3900 Class

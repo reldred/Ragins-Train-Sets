@@ -1,0 +1,32 @@
+##grflangid 0x00
+
+# GRF name and description
+STR_GRF_NAME_WITH_VER                            :Korean Signal Set {VERSION}
+STR_GRF_DESC                                     :A signals set for Korean signals.{}(Updated: {RECENT_UPDATED}){}{SILVER}+ Author: TELK, EightonEight{}{BLACK}  - {AUTHOR_EMAIL}{}  - {AUTHOR_WEBSITE}
+STR_GRF_URL                                      :https://github.com/KoreanGRF/KoreanSignalSet
+
+
+# Parameters
+STR_PARAM_IS_REALISTIC_NAME                      :Realistic graphic
+STR_PARAM_IS_REALISTIC_DESC                      :If enabled, use real life graphic instead of game optimized one. (default: enabled)
+STR_PARAM_USE_TVM_NAME                           :Change semaphore block signal to TVM block sign
+STR_PARAM_USE_TVM_DESC                           :Change semaphore block signal to TVM block sign which is used for high speed rails, which is the same graphics for red and green state. (default: enabled)
+STR_PARAM_USE_CAUTION_SIGNALS_NAME               :Use caution signals
+STR_PARAM_USE_CAUTION_SIGNALS_DESC               :Use deceleration(YG) and caution(Y) signals for electric combo, exit signals respectively. (default: enabled)
+STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_NAME            :Use blue signal for block signal
+STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_DESC            :If enabled, use blue signal for block signal instead of green. (default: disabled)
+STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_NAME            :Use blue signal for entry signal
+STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_DESC            :If enabled, use blue signal for entry signal instead of green. (default: disabled)
+STR_PARAM_USE_BLUE_AS_OPEN_EXIT_NAME             :Use blue signal for exit signal
+STR_PARAM_USE_BLUE_AS_OPEN_EXIT_DESC             :If enabled, use blue signal for exit signal instead of green. (default: disabled)
+STR_PARAM_USE_BLUE_AS_OPEN_COMBO_NAME            :Use blue signal for combo signal
+STR_PARAM_USE_BLUE_AS_OPEN_COMBO_DESC            :If enabled, use blue signal for combo signal instead of green. (default: disabled)
+STR_PARAM_USE_BLUE_AS_OPEN_PATH_NAME             :Use blue signal for path signal
+STR_PARAM_USE_BLUE_AS_OPEN_PATH_DESC             :If enabled, use blue signal for path signal instead of green. (default: disabled)
+STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_NAME      :Use blue signal for oneway path signal
+STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_DESC      :If enabled, use blue signal for oneway path signal instead of green. (default: disabled)
+STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_NAME     :Use blue signal for programmable signal
+STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_DESC     :If enabled, use blue signal for programmable signal instead of green.{}{ORANGE}It only affects in JGRPP{BLACK} (default: disabled)
+
+# Errors
+STR_UNSUPPORTED_VERSION                          :This NewGRF requires OpenTTD JGRPP 0.43.0 or higher to experience full features like multi-aspect signals.

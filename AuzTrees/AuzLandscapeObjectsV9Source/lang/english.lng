@@ -1,0 +1,507 @@
+﻿##grflangid 0x01
+##plural 0
+# This is the English language file
+
+#Main grf title and description
+STR_GRF_NAME            :Auz Landscape Objects V9
+STR_GRF_DESCRIPTION     :{ORANGE}31 Mar 2024.{}{WHITE}ogfx terrain, Terrain and Overlays, Landscape, Trees, Shore Overlaps, Clouds and Smoke.{}{YELLOW} Project of: GarryG with help from Romazoon, McZapkie, Fridaemon, Temporal8 and many others. {WHITE} Use with Auz Water Objects. {SILVER}See document files for Credits and updates. {WHITE}License: GPLv2 or higher.
+STR_GRF_URL             :https://www.tt-forums.net/viewtopic.php?f=26&t=75657
+
+#error messages
+STR_ERROR_TILE_LEVEL            :Must be built level.
+STR_ERROR_TILE_SPACE            :Must be built one tile apart.
+STR_ERROR_TILE_SLOPE_SHOULDER   :Adjacent road tile cannot have foundations on side of shoulder.
+
+
+#Object classes
+
+STR_OZLS		:{YELLOW}Auz Landscape Objects
+STR_ALND		:      Natural Landscape
+STR_ROCK		:      Rocky Landscape
+STR_CLLE		:      Coastal Landscape
+STR_FMCP		:      Farm Fields
+STR_FRST            	:      Trees
+STR_AUZT		:      Australian Trees
+STR_BHTK		:      Forest Tracks
+STR_CLFF		:      Cliffs
+STR_ASKY		:      Clouds, Fog and Smoke
+STR_AZTO		:      Terrain and Overlays
+STR_AZOT		:      ogfx terrain
+STR_AZOC		:      Overlap Coast
+
+
+#Object names
+
+STR_ObjectMenuLS	:Object Menu Landscape
+
+STR_clouds01		:Clouds
+STR_clouds01_purchase_view1	:Lowest
+STR_clouds01_purchase_view2	:Low
+STR_clouds01_purchase_view3	:High
+STR_clouds01_purchase_view4	:Highest
+
+STR_clouds02		:Clouds
+STR_clouds02_purchase_view1	:Haunted Mansion
+STR_clouds02_purchase_view2	:Haunted Mansion
+STR_clouds02_purchase_view3	:Haunted Mansion
+STR_clouds02_purchase_view4	:Haunted Mansion
+
+STR_clouds03Anim	:Haunted Mansions (Animated)
+
+STR_clouds04		:More Clouds
+STR_clouds04_purchase_view1	:1
+STR_clouds04_purchase_view2	:2
+STR_clouds04_purchase_view3	:3
+STR_clouds04_purchase_view4	:4
+
+STR_clouds05		:Random 5 Cloud Types
+
+STR_clouds06		:Random Cloud Heights
+
+STR_smoke_1		:Smoke
+
+STR_goattracks_001		:Goat Tracks Slope Aware
+STR_goattrackscurves		:Goat Tracks
+STR_goattracksjct1		:Goat Tracks
+STR_goattracksjct2		:Goat Tracks
+
+STR_burnlogs	:Burning Logs
+
+STR_prissi_pinetrees_1		:prissi's pine trees
+STR_prissi_pinetrees_purchase_view1    :{BLACK}Pine Forest SW-NE
+STR_prissi_pinetrees_purchase_view2    :{BLACK}Pine Forest Track and stumps
+STR_prissi_pinetrees_purchase_view3    :{BLACK}Pine Forest NW-SE
+STR_prissi_pinetrees_purchase_view4    :{BLACK}Pine Forest Track and stumps
+
+STR_cliffs01_1	:Cliffs 4 high (8 items)
+STR_cliffs01_purchase_view1    :{BLACK}Face SW
+STR_cliffs01_purchase_view2    :{BLACK}Face NW
+STR_cliffs01_purchase_view3    :{BLACK}Face NE
+STR_cliffs01_purchase_view4    :{BLACK}Face SE
+
+
+STR_slope_aware_grass_001	:Rock + Grass Slope Aware
+STR_slope_aware_grass_001_purchase_view1	:Grey Rocks + Grass
+STR_slope_aware_grass_001_purchase_view2	:Grey Rocks + Grass
+STR_slope_aware_grass_001_purchase_view3	:Red Rocks + Grass
+STR_slope_aware_grass_001_purchase_view4	:Red Rocks + Grass
+
+STR_slope_greyrock_001	:Rocks Slope Aware
+STR_slope_greyrock_001_purchase_view1	:Grey Rocks
+STR_slope_greyrock_001_purchase_view2	:Grey Rocks
+STR_slope_greyrock_001_purchase_view3	:Grey Rocks
+STR_slope_greyrock_001_purchase_view4	:Grey Rocks
+
+STR_slope_grassyrock_001	:Rocks Slope Aware
+STR_slope_grassyrock_001_purchase_view1	:Rocks with Grass
+STR_slope_grassyrock_001_purchase_view2	:Rocks with Grass
+STR_slope_grassyrock_001_purchase_view3	:Rocks with Grass
+STR_slope_grassyrock_001_purchase_view4	:Rocks with Grass
+
+STR_slope_redrock_001	:Red Rocks Slope Aware
+STR_slope_redrock_001_purchase_view1	:Red Rocks
+STR_slope_redrock_001_purchase_view2	:Red Rocks
+STR_slope_redrock_001_purchase_view3	:Red Rocks
+STR_slope_redrock_001_purchase_view4	:Red Rocks
+
+STR_slope_snow_001		:Sub-Artic Slope Aware
+STR_slope_snow_001_purchase_view1	:Snow
+STR_slope_snow_001_purchase_view2	:Snow 3/4 Coverage
+STR_slope_snow_001_purchase_view3	:Snow 2/3 Coverage
+STR_slope_snow_001_purchase_view4	:Snow and Ice
+
+
+STR_slope_desert_001		:Sub-Tropic Slope Aware
+STR_slope_desert_001_purchase_view1	:Desert
+STR_slope_desert_001_purchase_view2	:Grass
+STR_slope_desert_001_purchase_view3	:Rough
+STR_slope_desert_001_purchase_view4	:Rocks
+
+STR_slope_subarctic_001		:Sub-Artic Slope Aware
+STR_slope_subarctic_001_purchase_view1	:Grass
+STR_slope_subarctic_001_purchase_view2	:Coastal Ice
+STR_slope_subarctic_001_purchase_view3	:Grass and Rocks
+STR_slope_subarctic_001_purchase_view4	:Rough
+
+STR_slope_transition_001	:Rocks Transitions Slope Aware
+STR_slope_transition_001_purchase_view1	:Transition NW Side
+STR_slope_transition_001_purchase_view2	:Transition NE Side
+STR_slope_transition_001_purchase_view3	:Transition SE Side
+STR_slope_transition_001_purchase_view4	:Transition SW Side
+
+STR_slope_transitiongrass_001	:Rocks Transitions Slope Aware
+STR_slope_transitiongrass_001_purchase_view1	:Transition NW Side
+STR_slope_transitiongrass_001_purchase_view2	:Transition NE Side
+STR_slope_transitiongrass_001_purchase_view3	:Transition SE Side
+STR_slope_transitiongrass_001_purchase_view4	:Transition SW Side
+
+STR_grass_temperate_001		:Temperate Slope Aware
+STR_grass_temperate_001_purchase_view1	:Grass
+STR_grass_temperate_001_purchase_view2	:Rough Grass
+STR_grass_temperate_001_purchase_view3	:grass and dirt
+STR_grass_temperate_001_purchase_view4	:with Rocks
+
+STR_shoretiles_001		:Shore Line Slope Aware
+STR_shoretiles_001_purchase_view1	:Temperate
+STR_shoretiles_001_purchase_view2	:Sub-Artic
+STR_shoretiles_001_purchase_view3	:Sub-tropic
+STR_shoretiles_001_purchase_view4	:Unknown
+
+STR_terrain1_slopes_001		:Terrain Slope Aware
+STR_terrain1_slopes_001_purchase_view1	:Sand
+STR_terrain1_slopes_001_purchase_view2	:Dirt
+STR_terrain1_slopes_001_purchase_view3	:Mud
+STR_terrain1_slopes_001_purchase_view4	:Gravel
+
+STR_terrain2_slopes_001		:Terrain Slope Aware
+STR_terrain2_slopes_001_purchase_view1	:Sandstone Blocks
+STR_terrain2_slopes_001_purchase_view2	:Sandstone Blocks + Water Edge
+STR_terrain2_slopes_001_purchase_view3	:Ashalt
+STR_terrain2_slopes_001_purchase_view4	:Paving
+
+STR_terrain3_slopes_001		:Terrain Slope Aware
+STR_terrain3_slopes_001_purchase_view1	:Mowed Grass
+STR_terrain3_slopes_001_purchase_view2	:Mowed Grass
+STR_terrain3_slopes_001_purchase_view3	:Rough Grass
+STR_terrain3_slopes_001_purchase_view4	:Rough Grass
+
+STR_slope_wateredge_001	:Coastal Edge Slope Aware
+STR_slope_wateredge_001_purchase_view1	:Rocks Coastal Edge
+STR_slope_wateredge_001_purchase_view2	:Rocks Coastal Edge
+STR_slope_wateredge_001_purchase_view3	:Rocks Coastal Edge
+STR_slope_wateredge_001_purchase_view4	:Rocks Coastal Edge
+
+
+STR_slope_wateredgegrass_001	:Coastal Edge Slope Aware
+STR_slope_wateredgegrass_001_purchase_view1	:Rocks + Grass 1
+STR_slope_wateredgegrass_001_purchase_view2	:Rocks + Grass 2
+STR_slope_wateredgegrass_001_purchase_view3	:Rocks + Grass 3
+STR_slope_wateredgegrass_001_purchase_view4	:Rocks + Grass 4
+
+STR_redrock_wateredge_001	:Coastal Edge Slope Aware
+STR_redrock_wateredge_001_purchase_view1	:Rocks on Slope
+STR_redrock_wateredge_001_purchase_view2	:Coastal Edges
+STR_redrock_wateredge_001_purchase_view3	:Coastal Edges
+STR_redrock_wateredge_001_purchase_view4	:Coastal Edges
+
+STR_canyonwallsgrey_001	:Canyon Walls Slope Aware
+STR_canyonwallsgrey_001_purchase_view1	:Canyon Walls
+STR_canyonwallsgrey_001_purchase_view2	:Canyon Walls + Trees
+STR_canyonwallsgrey_001_purchase_view3	:Canyon Walls
+STR_canyonwallsgrey_001_purchase_view4	:Canyon Walls + Trees
+
+STR_canyonwallsred_001	:Canyon Walls Slope Aware
+STR_canyonwallsred_001_purchase_view1	:Canyon Walls
+STR_canyonwallsred_001_purchase_view2	:Canyon Walls + Trees
+STR_canyonwallsred_001_purchase_view3	:Canyon Walls
+STR_canyonwallsred_001_purchase_view4	:Canyon Walls + Trees
+
+STR_concrete_slopes_001	:Concrete + Gravel Slope Aware
+STR_concrete_slopes_001_purchase_view1	:Concrete Slope
+STR_concrete_slopes_001_purchase_view2	:Concrete Coastal Edges
+STR_concrete_slopes_001_purchase_view3	:Gravel Slope
+STR_concrete_slopes_001_purchase_view4	:Gravel Coastal Edges
+
+STR_rangerstower	:Rangers Towers
+
+STR_PFOREST_1            	:Forest tiles.
+STR_PFOREST_1_PURCHASE   	:{BLACK} Use as eye candy.
+STR_PFOREST_2            	:Forest tiles.
+STR_PFOREST_2_PURCHASE   	:{BLACK} Use as eye candy.
+
+STR_MFOREST_1            	:Forest tiles.
+STR_MFOREST_1_PURCHASE   	:{BLACK} Use as eye candy.
+
+STR_RFOREST_1            	:Forest tiles.
+STR_RFOREST_1_PURCHASE   	:{BLACK} Use as eye candy.
+STR_RFOREST_2            	:Forest tiles.
+STR_RFOREST_2_PURCHASE   	:{BLACK} Use as eye candy.
+
+STR_ALLEY_1			:Palm trees.
+STR_ALLEY_1_PURCHASE		:{BLACK} Use as eye candy.
+
+STR_TFARM_1 			:Tree farm tiles.
+STR_TFARM_1_PURCHASE 		:{BLACK} Climate and snow aware.
+
+STR_AuzTrees_01	:Gum Trees
+STR_AuzTrees_02	:Gum Trees
+STR_AuzTrees_03	:Gum Trees
+STR_AuzTrees_04	:Gum Trees
+
+
+STR_fallentrees01	:Fallen Trees
+STR_fallentrees02	:Fallen Trees
+STR_fallentrees03	:Fallen Trees
+STR_fallentrees04	:Fallen Trees
+STR_fallentrees05	:Fallen Trees
+STR_fallentrees06	:Fallen Trees
+
+STR_AussieTrees01_1	:Aussie Trees (9 tiles)
+STR_AussieTrees01_purchase_view1    :{BLACK}Flame Trees
+STR_AussieTrees01_purchase_view2    :{BLACK}Ghost Gum
+STR_AussieTrees01_purchase_view3    :{BLACK}Red Flowing Gum
+STR_AussieTrees01_purchase_view4    :{BLACK}Bottle Tree
+
+STR_AussieTrees02_1	:Aussie Trees (9 tiles)
+STR_AussieTrees02_purchase_view1    :{BLACK}Pencil Pine
+STR_AussieTrees02_purchase_view2    :{BLACK}Grey Gum
+STR_AussieTrees02_purchase_view3    :{BLACK}Gum Trees
+STR_AussieTrees02_purchase_view4    :{BLACK}Gum Trees
+
+STR_AussieTrees03_1	:ogfx-landscape Trees (9 tiles)
+STR_AussieTrees03_purchase_view1    :{BLACK}temperate Trees
+STR_AussieTrees03_purchase_view2    :{BLACK}temperate Trees
+STR_AussieTrees03_purchase_view3    :{BLACK}temperate Trees
+STR_AussieTrees03_purchase_view4    :{BLACK}temperate Trees
+
+STR_AussieTrees04_1	:ogfx-landscape Trees (9 tiles)
+STR_AussieTrees04_purchase_view1    :{BLACK}temperate Trees
+STR_AussieTrees04_purchase_view2    :{BLACK}temperate Trees
+STR_AussieTrees04_purchase_view3    :{BLACK}temperate Trees
+STR_AussieTrees04_purchase_view4    :{BLACK}temperate Trees
+
+STR_AussieTrees05_1	:ogfx-landscape Trees (9 tiles)
+STR_AussieTrees05_purchase_view1    :{BLACK}temperate Trees
+STR_AussieTrees05_purchase_view2    :{BLACK}temperate Trees
+STR_AussieTrees05_purchase_view3    :{BLACK}temperate Trees
+STR_AussieTrees05_purchase_view4    :{BLACK}temperate Trees
+
+STR_logs01	:Logs Sloped Over River
+STR_logs02	:Logs Sloped Over River
+STR_logs03	:Logs over creek
+STR_logs04	:Logs over creek
+
+
+STR_slope_embankments_overlaps_001	:Slope Aware Embankments
+STR_slope_embankments_overlaps_001_purchase_view1	:ONE
+STR_slope_embankments_overlaps_001_purchase_view2	:TWO
+STR_slope_embankments_overlaps_001_purchase_view3	:tHREE
+STR_slope_embankments_overlaps_001_purchase_view4	:FOUR
+
+
+STR_ballast_slopes	:Embankments Slopes
+STR_ballast_slopes_purchase_view1	:SW Slope
+STR_ballast_slopes_purchase_view2	:NW Slope
+STR_ballast_slopes_purchase_view3	:NE Slope
+STR_ballast_slopes_purchase_view4	:SE Slope
+
+STR_ballast_slopes1	:Embankments Slopes
+STR_ballast_slopes1_purchase_view1	:North Slope
+STR_ballast_slopes1_purchase_view2	:East Slope
+STR_ballast_slopes1_purchase_view3	:South Slope
+STR_ballast_slopes1_purchase_view4	:West Slope
+
+STR_ballast_slopes2	:Embankments Overlaps
+STR_ballast_slopes2_purchase_view1	:North Slope
+STR_ballast_slopes2_purchase_view2	:East Slope
+STR_ballast_slopes2_purchase_view3	:South Slope
+STR_ballast_slopes2_purchase_view4	:West Slope
+
+STR_ballast_slopes3	:Embankments Coastal Edge
+STR_ballast_slopes3_purchase_view1	:North Slope
+STR_ballast_slopes3_purchase_view2	:East Slope
+STR_ballast_slopes3_purchase_view3	:South Slope
+STR_ballast_slopes3_purchase_view4	:West Slope
+
+STR_ballast_slopes4	:Embankments Coastal Overlaps
+STR_ballast_slopes4_purchase_view1	:North Slope
+STR_ballast_slopes4_purchase_view2	:East Slope
+STR_ballast_slopes4_purchase_view3	:South Slope
+STR_ballast_slopes4_purchase_view4	:West Slope
+
+
+STR_ballast_slopes6	:Embankments Coastal
+STR_ballast_slopes6_purchase_view1	:SW Slope
+STR_ballast_slopes6_purchase_view2	:NW Slope
+STR_ballast_slopes6_purchase_view3	:NE Slope
+STR_ballast_slopes6_purchase_view4	:SE Slope
+
+STR_slope_embankments_001	:Embankments Slope Aware
+STR_slope_embankments_001_purchase_view1	:Rock + Ballast
+STR_slope_embankments_001_purchase_view2	:Rock + Ballast
+STR_slope_embankments_001_purchase_view3	:Rock + Ballast
+STR_slope_embankments_001_purchase_view4	:Sandstone Blocks
+
+STR_embankmentssanstoneblocks_slopes1	:Sandstone Embankments
+STR_embankmentssanstoneblocks_slopes1_purchase_view1	:North Slope
+STR_embankmentssanstoneblocks_slopes1_purchase_view2	:East Slope
+STR_embankmentssanstoneblocks_slopes1_purchase_view3	:South Slope
+STR_embankmentssanstoneblocks_slopes1_purchase_view4	:West Slope
+
+STR_embankmentssanstoneblocks_slopes2	:Sandstone Embankments
+STR_embankmentssanstoneblocks_slopes2_purchase_view1	:North Slope
+STR_embankmentssanstoneblocks_slopes2_purchase_view2	:East Slope
+STR_embankmentssanstoneblocks_slopes2_purchase_view3	:South Slope
+STR_embankmentssanstoneblocks_slopes2_purchase_view4	:West Slope
+
+STR_coastalscrub_001	:Coastal Shrub
+STR_scrub_001	:Shrubs sloped
+STR_skrub_002	:Shrubs sloped
+STR_skrub_003	:Shrubs & Grass sloped
+STR_skrub_004	:Shrubs & Grass sloped
+STR_skrub01	:Shrubs sloped
+STR_skrub02	:Shrubs sloped
+STR_skrub03	:Shrubs sloped
+
+STR_gardentrees01	:Trees
+STR_gardentrees02	:Flowering Trees
+
+STR_VASTTrees01		:Slope Aware with Paths
+STR_VASTTrees01_purchase_view1    :{YELLOW}Conical Shrubs
+STR_VASTTrees01_purchase_view2    :{YELLOW}Cypress Shrubs
+STR_VASTTrees01_purchase_view3    :{YELLOW}Spherical Shrubs
+STR_VASTTrees01_purchase_view4    :{YELLOW}Italian Cypress
+
+STR_VASTTrees01a		:Slope Aware No Paths
+STR_VASTTrees01a_purchase_view1    :{YELLOW}Conical Shrubs
+STR_VASTTrees01a_purchase_view2    :{YELLOW}Cypress Shrubs
+STR_VASTTrees01a_purchase_view3    :{YELLOW}Spherical Shrubs
+STR_VASTTrees01a_purchase_view4    :{YELLOW}Italian Cypress
+
+STR_VASTTrees02		:VAST Slope Aware
+STR_VASTTrees02_purchase_view1    :{YELLOW}Conical Shrubs
+STR_VASTTrees02_purchase_view2    :{YELLOW}Cypress Shrubs
+STR_VASTTrees02_purchase_view3    :{YELLOW}Spherical Shrubs
+STR_VASTTrees02_purchase_view4    :{YELLOW}Italian Cypress
+
+STR_VASTTrees04		:Flowers with Paths
+STR_VASTTrees04_purchase_view1    :{YELLOW}All Colours
+STR_VASTTrees04_purchase_view2    :{YELLOW}Purples Colours
+STR_VASTTrees04_purchase_view3    :{YELLOW}Blue Colours
+STR_VASTTrees04_purchase_view4    :{YELLOW}Mixed Colours
+
+STR_palmtrees_1		:Palm, Coconut, Shrubs
+
+STR_farm_temperate_001		:Temperate Slope Aware
+STR_farm_temperate_001_purchase_view1	:Plowed
+STR_farm_temperate_001_purchase_view2	:Crops Growing
+STR_farm_temperate_001_purchase_view3	:Crops Growing
+STR_farm_temperate_001_purchase_view4	:Crops Growing
+
+STR_farm_temperate_002		:Temperate Slope Aware
+STR_farm_temperate_002_purchase_view1	:Crops Growing
+STR_farm_temperate_002_purchase_view2	:Crops Growing
+STR_farm_temperate_002_purchase_view3	:Crops Growing
+STR_farm_temperate_002_purchase_view4	:Plowed
+
+STR_farm_temperate_003		:Temperate Slope Aware
+STR_farm_temperate_003_purchase_view1	:Plowed
+STR_farm_temperate_003_purchase_view2	:Tractors
+STR_farm_temperate_003_purchase_view3	:Weeds
+STR_farm_temperate_003_purchase_view4	:Hay Bales
+
+STR_TerrainAndOverlays01		:Arctic + Snow
+STR_TerrainAndOverlays01_purchase_view1	:Arctic Clean
+STR_TerrainAndOverlays01_purchase_view2	:Arctic Rough
+STR_TerrainAndOverlays01_purchase_view3	:Snow Clean
+STR_TerrainAndOverlays01_purchase_view4	:Snow Rough
+
+STR_TerrainAndOverlays02		:Bare Ground + Temperate
+STR_TerrainAndOverlays02_purchase_view1	:Bare Ground Clean
+STR_TerrainAndOverlays02_purchase_view2	:Bare Ground Rough
+STR_TerrainAndOverlays02_purchase_view3	:Temperate Clean
+STR_TerrainAndOverlays02_purchase_view4	:Temperate Rough
+
+STR_TerrainAndOverlays03		:Desert + Tropical
+STR_TerrainAndOverlays03_purchase_view1	:Desert Clean
+STR_TerrainAndOverlays03_purchase_view2	:Desert Rough
+STR_TerrainAndOverlays03_purchase_view3	:Tropical Clean
+STR_TerrainAndOverlays03_purchase_view4	:Tropical Rough
+
+STR_TerrainAndOverlays04		:Transition + Rocks
+STR_TerrainAndOverlays04_purchase_view1	:Bare Ground 1
+STR_TerrainAndOverlays04_purchase_view2	:Bare Ground 2
+STR_TerrainAndOverlays04_purchase_view3	:Desert
+STR_TerrainAndOverlays04_purchase_view4	:Rocks
+
+STR_TerrainAndOverlays05		:Snow
+STR_TerrainAndOverlays05_purchase_view1	:Snow Transition 1
+STR_TerrainAndOverlays05_purchase_view2	:Snow Transition 2
+STR_TerrainAndOverlays05_purchase_view3	:Snow Transition 3
+STR_TerrainAndOverlays05_purchase_view4	:All Snow
+
+STR_ogfxterrain01		:Coastal
+STR_ogfxterrain01_purchase_view1	:Temperate
+STR_ogfxterrain01_purchase_view2	:Arctic
+STR_ogfxterrain01_purchase_view3	:Tropical
+STR_ogfxterrain01_purchase_view4	:No Beach
+
+STR_ogfxterrain02		:Arctic
+STR_ogfxterrain02_purchase_view1	:Snow
+STR_ogfxterrain02_purchase_view2	:Snow Transition
+STR_ogfxterrain02_purchase_view3	:Snow Transition
+STR_ogfxterrain02_purchase_view4	:Snow Transition
+
+STR_ogfxterrain03		:Ogfx Terrains
+STR_ogfxterrain03_purchase_view1	:1
+STR_ogfxterrain03_purchase_view2	:2
+STR_ogfxterrain03_purchase_view3	:3
+STR_ogfxterrain03_purchase_view4	:4
+
+STR_ogfxterrain04		:Ogfx Terrains
+STR_ogfxterrain04_purchase_view1	:1
+STR_ogfxterrain04_purchase_view2	:2
+STR_ogfxterrain04_purchase_view3	:3
+STR_ogfxterrain04_purchase_view4	:4
+
+STR_ogfxterrain05		:Ogfx Terrains
+STR_ogfxterrain05_purchase_view1	:1
+STR_ogfxterrain05_purchase_view2	:2
+STR_ogfxterrain05_purchase_view3	:3
+STR_ogfxterrain05_purchase_view4	:4
+
+STR_ogfxterrain06		:Ogfx Terrains
+STR_ogfxterrain06_purchase_view1	:1
+STR_ogfxterrain06_purchase_view2	:2
+STR_ogfxterrain06_purchase_view3	:3
+STR_ogfxterrain06_purchase_view4	:4
+
+STR_ogfxterrain07		:Ogfx Terrains
+STR_ogfxterrain07_purchase_view1	:1
+STR_ogfxterrain07_purchase_view2	:2
+STR_ogfxterrain07_purchase_view3	:3
+STR_ogfxterrain07_purchase_view4	:4
+
+STR_ogfxterrain08		:Ogfx Terrains
+STR_ogfxterrain08_purchase_view1	:1
+STR_ogfxterrain08_purchase_view2	:2
+STR_ogfxterrain08_purchase_view3	:3
+STR_ogfxterrain08_purchase_view4	:4
+
+STR_CoastalOverlaps01    :Coastal Overlaps
+STR_CoastalOverlaps02    :Coastal Overlaps
+STR_CoastalOverlaps03    :Coastal Overlaps
+STR_CoastalOverlaps04    :Coastal Overlaps
+STR_CoastalOverlaps05    :Coastal Overlaps
+STR_CoastalOverlaps06    :Coastal Overlaps
+STR_CoastalOverlaps07    :Coastal Overlaps
+STR_CoastalOverlaps08    :Coastal Overlaps
+
+STR_RiverOverlaps01    :Lake Overlaps
+STR_RiverOverlaps02    :Lake Overlaps
+STR_RiverOverlaps03    :Lake Overlaps
+STR_RiverOverlaps04    :Lake Overlaps
+STR_RiverOverlaps05    :Lake Overlaps
+STR_RiverOverlaps06    :Lake Overlaps
+STR_RiverOverlaps07    :Lake Overlaps
+STR_RiverOverlaps08    :Lake Overlaps
+
+STR_OceanAndLake	:Oceans and Lakes
+
+STR_CoastalCalm01    :Coast Calm Overlaps
+STR_CoastalCalm02    :Coast Calm Overlaps
+STR_CoastalCalm03    :Coast Calm Overlaps
+STR_CoastalCalm04    :Coast Calm Overlaps
+STR_CoastalCalm05    :Coast Calm Overlaps
+STR_CoastalCalm06    :Coast Calm Overlaps
+STR_CoastalCalm07    :Coast Calm Overlaps
+STR_CoastalCalm08    :Coast Calm Overlaps
+
+STR_RiverRough01    :Lake Rough Overlaps
+STR_RiverRough02    :Lake Rough Overlaps
+STR_RiverRough03    :Lake Rough Overlaps
+STR_RiverRough04    :Lake Rough Overlaps
+STR_RiverRough05    :Lake Rough Overlaps
+STR_RiverRough06    :Lake Rough Overlaps
+STR_RiverRough07    :Lake Rough Overlaps
+STR_RiverRough08    :Lake Rough Overlaps

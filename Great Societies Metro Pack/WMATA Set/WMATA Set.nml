@@ -1,0 +1,378 @@
+disable_item(FEAT_TRAINS);
+
+grf{
+    grfid: "ZM\06\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 2;
+    min_compatible_version: 1;
+param {
+        param_purchase_cost {
+            type: int;
+            name: string(STR_PARAM_PURCHASE_COST);
+            desc: string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param {
+        param_running_cost {
+            type: int;
+            name: string(STR_PARAM_RUNNING_COST);
+            desc: string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+    param {
+                param_capacities {
+                        type: int;
+                        name: string(STR_PARAM_NAME_CAPACITY);
+                        desc: string(STR_PARAM_DESC_CAPACITY);
+                        min_value: 0;
+                        max_value: 1;
+                        def_value: 0;
+                        names: {
+                                                0: string(STR_PARAM_REAL_CAPACITY);
+                                                1: string(STR_PARAM_NORMAL_REDUCED);
+                        };
+                }
+        }
+}
+
+if (param_capacities == 0) {
+    param_capacity_mod = 0;
+}
+
+if (param_capacities == 1) {
+    param_capacity_mod = -50;
+}
+
+railtypetable {
+    RAIL, SAA3
+}
+
+cargotable {
+    PASS,
+// Misc
+    TOUR,
+}
+
+basecost {
+ PR_BUILD_VEHICLE_TRAIN: 1 + param_purchase_cost - 4;
+ PR_BUILD_VEHICLE_WAGON: 3 + param_purchase_cost - 4;
+ PR_RUNNING_TRAIN_ELECTRIC: 3 + param_running_cost - 4;
+}
+/* Fix depot view */
+traininfo_y_offset = 2;
+train_width_32_px = 1;
+
+template template_purchase(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -60, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_8_MU(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -14]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -17,        -12]
+    [ x+66,     y,        22,        20,        -5,            -10]
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -17,        -12]
+    [ x+155,    y,        22,        20,        -5,            -10]
+}
+
+//1k6k
+spriteset(spriteset_1k6k_purchase,   "gfx/WMATA_1k-6k.png") {template_purchase(7, 21)}
+spriteset(spriteset_1k6k_lead,   "gfx/WMATA_1k-6k.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_1k6k_rear,   "gfx/WMATA_1k-6k.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+
+switch(FEAT_TRAINS, SELF, sw_1k6k, (position_in_vehid_chain % 2)) {
+ 1: spriteset_1k6k_rear;
+    spriteset_1k6k_lead;
+}
+
+switch(FEAT_TRAINS, SELF, sw_1k6k_attach, vehicle_type_id){
+    ITEM_1k6k       : return CB_RESULT_ATTACH_ALLOW  ;
+    return string(STR_NO_COUPLE_MU) ;
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_1k6k) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        dual_headed:                    1; // <- Double Headed, so cab on each end
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_ELECTRIC;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_1K6K);
+        introduction_date:                date(1976,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                         35 ton;
+        speed:                            75 mph;
+        power:                            1000 hp;
+        tractive_effort_coefficient:     0.7;
+        cost_factor:                     9;
+        running_cost_factor:             12;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    (120+param_capacity_mod);
+         loading_speed: 30;
+
+    }
+    graphics {
+        default:                  sw_1k6k;
+         can_attach_wagon:    sw_1k6k_attach;
+        purchase:                        spriteset_1k6k_purchase;
+        additional_text: string(STR_SUBWAY_1K6K);
+//        cargo_subtype_text: sw_CQ10_livery_decider;
+
+
+}
+}
+
+//7k
+spriteset(spriteset_7k_purchase,   "gfx/WMATA_7k.png") {template_purchase(7, 21)}
+spriteset(spriteset_7k_lead,   "gfx/WMATA_7k.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_7k_rear,   "gfx/WMATA_7k.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+spriteset(spriteset_7k_mu,   "gfx/WMATA_7k.png") {template_8_MU(7, 89)}
+
+switch(FEAT_TRAINS, SELF, sw_7k_last, position_in_consist_from_end){ // <- This code tells the game whether to use the cab or flipped cab, based on if they're right at the end or not
+    0:    spriteset_7k_rear;
+    spriteset_7k_lead;
+}
+    switch(FEAT_TRAINS, SELF, sw_7k_attach, vehicle_type_id){
+    ITEM_7k       : return CB_RESULT_ATTACH_ALLOW  ;
+    ITEM_7k_mu    : return CB_RESULT_ATTACH_ALLOW  ;
+    return string(STR_NO_COUPLE_MU) ;
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_7k) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        dual_headed:                    1; // <- Double Headed, so cab on each end
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_ELECTRIC;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_7K);
+        introduction_date:                date(2015,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                         38 ton;
+        speed:                            75 mph;
+        power:                            750 hp;
+        tractive_effort_coefficient:     0.7;
+        cost_factor:                     9;
+        running_cost_factor:             12;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    (120+param_capacity_mod);
+         loading_speed: 30;
+
+    }
+    graphics {
+        default:                  sw_7k_last;
+         can_attach_wagon:    sw_7k_attach;
+        purchase:                        spriteset_7k_purchase;
+        additional_text: string(STR_SUBWAY);
+}
+    livery_override (ITEM_7k_mu) { // <- Override the appearance and stats of ITEM_FAI_WAGON_MU_COACH when attached, to make it fit the MU's appearance and stats
+        default:                        spriteset_7k_mu; // <- This tells the game that when attached, the livery_override wagon needs to use this sprite
+        length:                            8;
+        cargo_capacity:                    (120+param_capacity_mod);
+        power:                             375;
+        speed:                             40;
+    }
+}
+
+item (FEAT_TRAINS, ITEM_7k_mu) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+
+        track_type:                        SAA3;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_BART_7K_MU);
+        introduction_date:                date(2015,1,1);
+        vehicle_life:                     30;
+        model_life:                        36;
+        length:                            8;
+
+        weight:                         38 ton;
+        speed:                            75 mph;
+        cost_factor:                     8;
+        running_cost_factor:             8;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    (110+param_capacity_mod);
+        loading_speed: 30;
+
+    }
+    graphics {
+        default:                        spriteset_7k_mu;
+        purchase:                        spriteset_7k_mu;
+        additional_text: string(STR_INFO_7K);
+}
+}
+
+//7k
+spriteset(spriteset_8k_purchase,   "gfx/WMATA_8k.png") {template_purchase(7, 21)}
+spriteset(spriteset_8k_lead,   "gfx/WMATA_8k.png") {template_8_MU(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_8k_rear,   "gfx/WMATA_8k.png") {template_8_MU(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+spriteset(spriteset_8k_mu,   "gfx/WMATA_8k.png") {template_8_MU(7, 89)}
+
+switch(FEAT_TRAINS, SELF, sw_8k_last, position_in_consist_from_end){ // <- This code tells the game whether to use the cab or flipped cab, based on if they're right at the end or not
+    0:    spriteset_8k_rear;
+    spriteset_8k_lead;
+}
+    switch(FEAT_TRAINS, SELF, sw_8k_attach, vehicle_type_id){
+    ITEM_8k       : return CB_RESULT_ATTACH_ALLOW  ;
+    ITEM_8k_mu    : return CB_RESULT_ATTACH_ALLOW  ;
+    return string(STR_NO_COUPLE_MU) ;
+}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_8k) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        dual_headed:                    1; // <- Double Headed, so cab on each end
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_ELECTRIC;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_8K);
+        introduction_date:                date(2025,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                         38 ton;
+        speed:                            75 mph;
+        power:                            750 hp;
+        tractive_effort_coefficient:     0.7;
+        cost_factor:                     9;
+        running_cost_factor:             12;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    (120+param_capacity_mod);
+         loading_speed: 30;
+
+    }
+    graphics {
+        default:                  sw_8k_last;
+         can_attach_wagon:    sw_8k_attach;
+        purchase:                        spriteset_8k_purchase;
+        additional_text: string(STR_SUBWAY);
+}
+    livery_override (ITEM_8k_mu) { // <- Override the appearance and stats of ITEM_FAI_WAGON_MU_COACH when attached, to make it fit the MU's appearance and stats
+        default:                        spriteset_8k_mu; // <- This tells the game that when attached, the livery_override wagon needs to use this sprite
+        length:                            8;
+        cargo_capacity:                    (120+param_capacity_mod);
+        power:                             375;
+        speed:                             40;
+    }
+}
+
+item (FEAT_TRAINS, ITEM_8k_mu) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+
+        track_type:                        SAA3;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_BART_8K_MU);
+        introduction_date:                date(2025,1,1);
+        vehicle_life:                     30;
+        model_life:                        36;
+        length:                            8;
+
+        weight:                         38 ton;
+        speed:                            75 mph;
+        cost_factor:                     8;
+        running_cost_factor:             8;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    (110+param_capacity_mod);
+        loading_speed: 30;
+
+    }
+    graphics {
+        default:                        spriteset_8k_mu;
+        purchase:                        spriteset_8k_mu;
+        additional_text: string(STR_INFO_8K);
+}
+}

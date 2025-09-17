@@ -1,0 +1,486 @@
+##grflangid 0x0
+
+STR_GRF_NAME:Oceanian Rail Pack - Passenger Set v10
+STR_GRF_DESCRIPTION:Multiple units and passenger coaches from Australia and New Zealand, all in 2cc. Drawn and Coded by Zachary Moore (Ragin1_)
+
+STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
+STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
+STR_PARAM_RUNNING_COST              :Running cost multiplier
+STR_PARAM_RUNNING_COST_DESC         :You can use this setting to increase or decrease the running costs of the vehicles in this set.
+
+STR_PARAM_DIVIDE_16                 :1/16
+STR_PARAM_DIVIDE_8                  :1/8
+STR_PARAM_DIVIDE_4                  :1/4
+STR_PARAM_DIVIDE_2                  :1/2
+STR_PARAM_NORMAL                    :1 (default)
+STR_PARAM_TIMES_2                   :2
+STR_PARAM_TIMES_4                   :4
+STR_PARAM_TIMES_8                   :8
+STR_PARAM_TIMES_16                  :16
+
+STR_PARAM_NAME_CAPACITY:Passenger Car Capacity
+STR_PARAM_NAME_FREIGHT_CAPACITY:Freight Car Capacity
+STR_PARAM_DESC_CAPACITY:You can use this setting to adjust the capacity of trains. Useful for balancing it against sets like NARS or UKRS
+STR_PARAM_REAL_CAPACITY:Realistic Capacity
+STR_PARAM_NORMAL_REDUCED:Reduced Capacity
+
+STR_PARAM_NAME_REALDISABLE:Disable Real Trains
+STR_PARAM_DESC_REALDISABLE:Enable/disable Real trains (Trains that were physically built, and put in service).
+
+STR_PARAM_NAME_PROTOTYPEDISABLE:Disable Prototype Trains
+STR_PARAM_DESC_PROTOTYPEDISABLE:Enable/disable Prototype trains (trains that were built, but were mostly used for testing, and potentially put in limited service).
+
+STR_PARAM_NAME_PROPOSALDISABLE:Disable Proposed Trains
+STR_PARAM_DESC_PROPOSALDISABLE:Enable/disable Proposed trains (trains that were designed, or seriously proposed, but not actually built).
+
+STR_PARAM_NAME_FICTIONALDISABLE:Disable Fictional Trains
+STR_PARAM_DESC_FICTIONALDISABLE:Enable/disable Fictional trains (trains that are entirely fictional, and are only included for gameplay balance).
+
+STR_PARAM_NAME_SUBURBANDMUDISABLE:Disable Suburban {BROWN}Diesel Multiple Units
+STR_PARAM_DESC_SUBURBANDMUDISABLE:Enable/disable Suburban Diesel Multiple Units
+
+STR_PARAM_NAME_INTERCITYDMUDISABLE:Disable Intercity {BROWN}Diesel Multiple Units
+STR_PARAM_DESC_INTERCITYDMUDISABLE:Enable/disable Intercity Diesel Multiple Units
+
+STR_PARAM_NAME_EXPRESSDMUDISABLE:Disable Express {BROWN}Diesel Multiple Units
+STR_PARAM_DESC_EXPRESSDMUDISABLE:Enable/disable Express Diesel Multiple Units
+
+STR_PARAM_NAME_SUBURBANEMUDISABLE:Disable Suburban Single-Deck {WHITE}Electric Multiple Units
+STR_PARAM_DESC_SUBURBANEMUDISABLE:Enable/disable Suburban Single-Deck Electric Multiple Units
+
+STR_PARAM_NAME_DDSUBURBANEMUDISABLE:Disable Suburban Double-Deck {WHITE}Electric Multiple Units
+STR_PARAM_DESC_DDSUBURBANEMUDISABLE:Enable/disable Suburban Double-Deck Electric Multiple Units
+
+STR_PARAM_NAME_INTERCITYEMUDISABLE:Disable Intercity Single-Deck {WHITE}Electric Multiple Units
+STR_PARAM_DESC_INTERCITYEMUDISABLE:Enable/disable Intercity Single-Deck Electric Multiple Units
+
+STR_PARAM_NAME_DDINTERCITYEMUDISABLE:Disable Intercity Double-Deck {WHITE}Electric Multiple Units
+STR_PARAM_DESC_DDINTERCITYEMUDISABLE:Enable/disable Intercity Double-Deck Electric Multiple Units
+
+STR_PARAM_NAME_EXPRESSEMUDISABLE:Disable Express {WHITE}Electric Multiple Units
+STR_PARAM_DESC_EXPRESSEMUDISABLE:Enable/disable Express Electric Multiple Units
+
+STR_PARAM_NAME_HIGHSPEEDEMUDISABLE:Disable High Speed {WHITE}Electric Multiple Units
+STR_PARAM_DESC_HIGHSPEEDEMUDISABLE:Enable/disable High Speed Double-Deck Electric Multiple Units
+
+STR_PARAM_NAME_DRIVINGTRAILERDISABLE:Disable Driving Trailers
+STR_PARAM_DESC_DRIVINGTRAILERDISABLE:Enable/disable Driving Trailers
+
+STR_PARAM_NAME_GENERICPASSDISABLE:Disable Generic Passenger Cars
+STR_PARAM_DESC_GENERICPASSDISABLE:Enable/disable Generic Passenger Cars
+
+STR_PARAM_NAME_SUBURBANPASSDISABLE:Disable Suburban Single-Deck Passenger Cars
+STR_PARAM_DESC_SUBURBANPASSDISABLE:Enable/disable Suburban Single-Deck Passenger Cars
+
+STR_PARAM_NAME_DDSUBURBANPASSDISABLE:Disable Suburban Double-Deck Passenger Cars
+STR_PARAM_DESC_DDSUBURBANPASSDISABLE:Enable/disable Suburban Double-Deck Passenger Cars
+
+STR_PARAM_NAME_INTERCITYPASSDISABLE:Disable Intercity Single-Deck Passenger Cars
+STR_PARAM_DESC_INTERCITYPASSDISABLE:Enable/disable Intercity Single-Deck Passenger Cars
+
+STR_PARAM_NAME_DDINTERCITYPASSDISABLE:Disable Intercity Double-Deck Passenger Cars
+STR_PARAM_DESC_DDINTERCITYPASSDISABLE:Enable/disable Intercity Double-Deck Passenger Cars
+
+STR_PARAM_NAME_PARCELVANDISABLE:Disable Parcel Vans
+STR_PARAM_DESC_PARCELVANDISABLE:Enable/disable Parcel Vans
+
+
+
+STR_NO_COUPLE_MU:Only attach Multiple Unit trains or trains of the same type!
+
+STR_MU_TRAILER:MU Car (ORP-Passenger Set)
+STR_MU_TRAILER_INFO:{GOLD}Attach this to a another multiple unit to make it longer
+
+STR_NAME_KATHLEEN:Kathleen Railmotor
+STR_INFO_KATHLEEN:{BLACK}Role:{GOLD}Suburban & Country Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Petrol {}{GOLD}"It may be for years and it may be forever"
+
+STR_NAME_SSD_DMU_CPH:CPH Railmotor
+STR_INFO_SSD_DMU_CPH:{BLACK}Role:{GOLD}Suburban & Country Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Petrol
+
+STR_NAME_EDISON:Edison Railmotor
+STR_INFO_EDISON:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{GREEN}Battery {}{GOLD}When it's done, just chuck it in the ocean
+
+STR_NAME_SSD_DMU_PERM:Petrol-Electric Railmotor
+STR_INFO_SSD_DMU_PERM:{BLACK}Role:{GOLD}Suburban & Country Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Petrol
+
+STR_NAME_STANDARDDMU:Standard Railmotor
+STR_INFO_STANDARDDMU:{BLACK}Role:{GOLD}Country Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_SSD_DMU_VULCAN:Vulcan Railmotor
+STR_INFO_SSD_DMU_VULCAN:{BLACK}Role:{GOLD}Country Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel {}{GOLD}One of these may or may not be at the bottom of the ocean
+
+STR_NAME_SSD_DMU_610CLASS:610/710 Class Railmotor
+STR_INFO_SSD_DMU_610CLASS:{BLACK}Role:{GOLD}Suburban & Country Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{GOLD}Ol' mate at Toronto tried fighting one of these... He lost.
+
+STR_NAME_SSD_DMU_ADA:Cravens Railmotor (1 Door)
+STR_NAME_SSD_DMU_ADG:Cravens Railmotor (2 Doors)
+STR_INFO_SSD_DMU_ADAX:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_TULLOCHRAILMOTOR:Tulloch Railmotor
+STR_INFO_TULLOCHRAILMOTOR:{BLACK}Role:{GOLD}Suburban & Country Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel {}{GOLD}A better life, underground!
+
+STR_NAME_SSD_DMU_ADK:Comeng ADK Class
+STR_INFO_SSD_DMU_ADK:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{GOLD}These guys somehow ended up in Mozambique!
+
+STR_NAME_SSD_DMU_1300CLASS:Comeng Suburban Railcar
+STR_INFO_SSD_DMU_1300CLASS:{BLACK}Role:{GOLD}Suburban & Country Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_SSD_DMU_2000CLASS:Comeng 2000 Class
+STR_INFO_SSD_DMU_2000CLASS:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{GOLD}Those guys at Boeing stole our cab design!
+
+STR_NAME_EVELEIGH_NWCRAILMOTOR:Eveleigh NWC Railmotor
+STR_INFO_EVELEIGH_NWCRAILMOTOR:{BLACK}Role:{GOLD}Country Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_COMENGRAILCAR:Comeng Country Railcar (Single Unit)
+STR_NAME_COMENGRAILCAR_MU:Comeng Country Railcar (Multiple Unit)
+STR_INFO_COMENGRAILCAR:{BLACK}Role:{GOLD}Country Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel {}{GOLD}I got punched for trying to import a Pacer, so we're building these instead
+STR_INFO_COMENGRAILCAR_MU:{BLACK}Role:{GOLD}Country Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{GOLD}I got punched for trying to import a Pacer, so we're building these instead
+
+STR_NAME_SSD_DMU_3000CLASS:Comeng 3000 Class (Railcar)
+STR_NAME_SSD_DMU_3000CLASS_MU:Comeng 3000 Class (Multiple Unit)
+STR_INFO_SSD_DMU_3000CLASS:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel
+STR_INFO_SSD_DMU_3000CLASS_MU:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_SSD_DMU_SPRINTER:Goninan Sprinter Railcar
+STR_INFO_SSD_DMU_SPRINTER:{BLACK}Role:{GOLD}Suburban & Country Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_SSD_DMU_HUNTER:UGL Hunter Railcar
+STR_INFO_SSD_DMU_HUNTER:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{GOLD}Fine trains these are
+
+STR_NAME_SSD_DMU_HUNTERMK2:UGL Mk2 Hunter Railcar
+STR_INFO_SSD_DMU_HUNTERMK2:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_SSD_DMU_NRFSI:CAF Suburban Service R Set
+STR_INFO_SSD_DMU_NRFSI:{BLACK}Role:{GOLD}Suburban & Country Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel
+
+
+
+STR_NAME_ICSD_DMU_COMETPOWERVAN:Comet Power Van
+STR_INFO_ICSD_DMU_COMETPOWERVAN:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Power Van and Wagons {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Note:{GOLD}Combine this with the Comet Passenger cars
+STR_NAME_ICSD_DMU_COMETPASSCAR:Comet Passenger Car
+
+STR_NAME_ICSD_DMU_METEORPOWERVAN:Meteor Power Van
+STR_INFO_ICSD_DMU_METEORPOWERVAN:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Power Van and Wagons {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Note:{GOLD}Combine this with the Meteor Passenger cars
+STR_NAME_ICSD_DMU_METEORPASSCAR:Meteor Passenger Car
+
+STR_NAME_ICSD_DMU_SPEEDLINER:Budd-Waddingtons SpeedLiner
+STR_INFO_ICSD_DMU_SPEEDLINER:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{GOLD}I don't care about the war, I just want fast trains!
+
+STR_NAME_ICSD_DMU_DEBSET:DEB Set
+STR_INFO_ICSD_DMU_DEBSET:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_ICSD_DMU_TWINSET:Fiat Twin Set
+STR_INFO_ICSD_DMU_TWINSET:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{GOLD}Warranty void if used
+
+STR_NAME_ICSD_DMU_1100CLASS:Budd-Comeng Railcar
+STR_INFO_ICSD_DMU_1100CLASS:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel {}{GOLD}If these work for the Yanks, they'll work for us
+
+STR_NAME_TULLOCHDRC:Tulloch Diesel Railcar
+STR_INFO_TULLOCHDRC:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}NSW 1200 & VR DRC DMUs
+
+STR_NAME_ICSD_DMU_PROSPECTOR:Comeng Prospector Railcar
+STR_INFO_ICSD_DMU_PROSPECTOR:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Single Car {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}Original TransWA Prospector DMus
+
+STR_NAME_ICSD_DMU_SILVERFERN:Kawasaki Silver Fern
+STR_INFO_ICSD_DMU_SILVERFERN:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}NZR Silver Fern Railcars
+
+STR_NAME_ICSD_DMU_KORU:Comeng Koru Railcar
+STR_INFO_ICSD_DMU_KORU:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}Proposed Comeng Railcar for NZR
+
+STR_NAME_ICSD_DMU_ADPADQ:Comeng ADP/ADQ Railcar
+STR_INFO_ICSD_DMU_ADPADQ:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}TransWA Prospector DMUs
+
+STR_NAME_ICSD_DMU_XPLORER:ABB Xplorer Railcar
+STR_INFO_ICSD_DMU_XPLORER:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}NSW Xplorer and Endeavour DMUs {}{GOLD}Those DEB Sets weren't gonna last forever, so here you go
+
+STR_NAME_ICSD_DMU_WDCLASS:United Goninan DMU
+STR_INFO_ICSD_DMU_WDCLASS:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Based on:{GOLD}TransWA Prospector DMUs {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_VLOCITY:Bombardier Vlocity
+STR_INFO_VLOCITY:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}V/Line Vlocity DMUs {}{GOLD}Too many...
+
+STR_NAME_ICSD_DMU_BHRC:UGL Broken Hill Railcar
+STR_INFO_ICSD_DMU_BHRC:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel {}{BLACK}Based on:{GOLD}Proposed Long-Distance version of the Hunter Railcar {}{GOLD}Need more Hunters? Just pop the window out!
+
+STR_NAME_ICSD_DMU_AUSTRALIND:Alstom Australind Railcar
+STR_INFO_ICSD_DMU_AUSTRALIND:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_ICSD_DMU_NRFLR:CAF Intercity R Set
+STR_INFO_ICSD_DMU_NRFLR:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{BROWN}Diesel
+
+
+
+STR_NAME_XPTINTERURBAN:Comeng Interurban HST
+STR_INFO_XPTINTERURBAN:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_COMENGXPT:Comeng XPT
+STR_INFO_COMENGXPT:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{BROWN}Diesel {}{GOLD}Specification 2542 Appendix D
+
+STR_NAME_HPTINTRASTATE:Comeng HPT Intrastate
+STR_INFO_HPTINTRASTATE:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_HPTINTERSTATE:Comeng HPT Interstate
+STR_INFO_HPTINTERSTATE:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{BROWN}Diesel
+
+STR_NAME_EXP_DMU_DTT:EDi Diesel Tilt Train
+STR_INFO_EXP_DMU_DTT:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{BROWN}Diesel{}{BLACK}Special:{GOLD}Tilt train (20% faster through curves)
+
+
+
+STR_NAME_TAIT:Tait Set
+STR_INFO_TAIT:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}Subscribe to Taitset on Youtube!
+
+STR_NAME_SSD_EMU_BRADFIELD:Bradfield Set
+STR_INFO_SSD_EMU_BRADFIELD:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_STANDARD:Standard Set
+STR_INFO_SSD_EMU_STANDARD:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_DMD:English Electric DM/D Class
+STR_INFO_SSD_EMU_DMD:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}Good ol' Cyclops
+
+STR_NAME_SSD_EMU_TULLOCH:Tulloch Set
+STR_INFO_SSD_EMU_TULLOCH:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_HARRIS_2DOOR:M&K Harris Set (2 Doors)
+STR_NAME_HARRIS_3DOOR:M&K Harris Set (3 Doors)
+STR_INFO_HARRIS:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Melbourne Harris Trains
+
+STR_NAME_SSD_EMU_SPUTNIK:Comeng Sputnik Set
+STR_INFO_SSD_EMU_SPUTNIK:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SXEMU:Comeng SX EMU
+STR_INFO_SXEMU:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}If only the Banana Benders put up the wires...
+
+STR_NAME_HITACHI:Comeng-M&K Hitachi EMU
+STR_INFO_HITACHI:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Melbourne Hitachi Trains {}{GOLD}Surprisingly, not built by Hitachi
+
+STR_NAME_SSD_EMU_AUPTMKI:Comeng AUPT Mk I
+STR_INFO_SSD_EMU_AUPTMKI:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}The guy that designed these was a former spy!
+
+STR_NAME_SSD_EMU_AUPTMKII:Comeng-Walkers AUPT Mk II
+STR_INFO_SSD_EMU_AUPTMKII:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_QREMU:Walkers-ASEA EMU
+STR_INFO_SSD_EMU_QREMU:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}QR EMUs
+
+STR_NAME_COMENG_SMU:Comeng EMU
+STR_INFO_COMENG_SMU:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Melbourne Comeng Trains
+
+STR_NAME_SSD_EMU_GANZMAVAG:Ganz-Mavag EMU
+STR_INFO_SSD_EMU_GANZMAVAG:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Wellington Ganz-Mavag Suburban Trains
+
+STR_NAME_HARRISREFURB:Comeng-M&K Refurbished Harris
+STR_INFO_HARRISREFURB:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Refurbished Harris Trains
+
+STR_NAME_SSD_EMU_ASERIESSMU:Walkers A-Series SMU
+STR_INFO_SSD_EMU_ASERIESSMU:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_XTRAPOLIS:Alstom X-Trapolis
+STR_INFO_SSD_EMU_XTRAPOLIS:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}Who needs suspension?
+
+STR_NAME_SSD_EMU_NEXUS:Siemens Nexus
+STR_INFO_SSD_EMU_NEXUS:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}Who needs working brakes?
+
+STR_NAME_SSD_EMU_BSERIESSMU:Downer EDi-Bombardier B-Series SMU
+STR_INFO_SSD_EMU_BSERIESSMU:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_MATANGI:Hyundai Rotem Matangi EMU
+STR_INFO_SSD_EMU_MATANGI:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_AMCLASS:CAF AM Class EMU
+STR_INFO_SSD_EMU_AMCLASS:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_ACITY:Bombardier A-City
+STR_INFO_SSD_EMU_ACITY:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_NGR:Bombardier New Generation Rolling Stock
+STR_INFO_SSD_EMU_NGR:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_HCMT:CRRC High Capacity Metro Train
+STR_INFO_SSD_EMU_HCMT:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_CSERIES:Alstom C-Series
+STR_INFO_SSD_EMU_CSERIES:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SSD_EMU_XTRAPOLIS2:Alstom X-Trapolis 2.0
+STR_INFO_SSD_EMU_XTRAPOLIS2:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}We fixed the suspension this time
+
+
+
+STR_NAME_SDD_EMU_TULLOCHDD:Tulloch Double-Decker
+STR_INFO_SDD_EMU_TULLOCHDD:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}First Double-Deck EMUs in the world
+
+STR_NAME_SDD_EMU_COMENGSSET:Comeng S-Set
+STR_INFO_SDD_EMU_COMENGSSET:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SDD_EMU_AUPTDD:Comeng AUPT Double-Decker
+STR_INFO_SDD_EMU_AUPTDD:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SDD_EMU_VSSET:Comeng VS-Set
+STR_INFO_SDD_EMU_VSSET:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}We put bigger doors in your interurban
+
+STR_NAME_SDD_EMU_GONINANKSET:Goninan K-Set
+STR_INFO_SDD_EMU_GONINANKSET:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}We finally managed to put AC in some of these...
+
+STR_NAME_SDD_EMU_COMENGKSET:Comeng K-Set
+STR_INFO_SDD_EMU_COMENGKSET:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}Raised cabs are pretty cool
+
+STR_NAME_SDD_EMU_GONINANCHOPPER:Goninan Chopper Set
+STR_INFO_SDD_EMU_GONINANCHOPPER:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}Chopper Chopper Chopper
+
+STR_NAME_SDD_EMU_GONINANTANGARA:Goninan Tangara
+STR_INFO_SDD_EMU_GONINANTANGARA:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SDD_EMU_COMENGTANGARA:Comeng Tangara
+STR_INFO_SDD_EMU_COMENGTANGARA:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{GOLD}The worst part about this train is deciding who's Tangara you like the most
+
+STR_NAME_SDD_EMU_COMENGABBVRDD:ABB-Comeng VR Double-Decker
+STR_INFO_SDD_EMU_COMENGABBVRDD:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_SDD_EMU_ABBVRDD:ABB VR Double-Decker
+STR_INFO_SDD_EMU_ABBVRDD:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line{}{GOLD}More Doors, More Better
+
+STR_NAME_SDD_EMU_MILLENIUM:Downer EDi Millenium
+STR_INFO_SDD_EMU_MILLENIUM:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line{}{GOLD}Crew *hate* these
+
+STR_NAME_SDD_EMU_WARATAH:Downer EDi Waratah
+STR_INFO_SDD_EMU_WARATAH:{BLACK}Role:{GOLD}Suburban Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line
+
+
+
+STR_NAME_TAITINTERURBAN:Tait Interurban
+STR_INFO_TAITINTERURBAN:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Fictional long distance version of the Tait Suburban EMU
+
+STR_NAME_TULLOCHINTERURBAN:Tulloch Interurban
+STR_INFO_TULLOCHINTERURBAN:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Early Carbon Steel U-Set design mixed with a Tulloch Suburban EMU
+
+STR_NAME_COMENGINTERURBANMK1:Comeng Interurban Mk1
+STR_INFO_COMENGINTERURBANMK1:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}NSW U-Set EMUs {}{GOLD}The Fish & the Chips
+
+STR_NAME_COMENGINTERURBANMK2:Comeng Interurban Mk2
+STR_INFO_COMENGINTERURBANMK2:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Proposed Gippsland line EMU
+
+
+
+STR_NAME_TULLOCHDDINTERURBAN:Tulloch Double-Deck Interurban
+STR_INFO_TULLOCHDDINTERURBAN:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Early V-Set Design (NSWGR Specification 2384)
+
+STR_NAME_COMENGVSET:Comeng V-Set
+STR_INFO_COMENGVSET:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}NSW V-Sets
+
+STR_NAME_COMENGDKVSET:Comeng DK V-Set
+STR_INFO_COMENGDKVSET:{BLACK}Role:{GOLD}Intercity Service{}{BLACK}Formation:{GOLD}Multiple Unit {}{BLACK}Power:{LTBLUE}Overhead Line {}{BLACK}Based on:{GOLD}Proposed Tangara V-Set Hybrid
+
+
+STR_NAME_EXP_EMU_XPTE:Comeng XPT-E
+STR_INFO_EXP_EMU_XPTE:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{LTBLUE}Overhead Line
+
+STR_NAME_X2000:Adtranz X2000
+STR_INFO_X2000:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{LTBLUE}Overhead Line{}{BLACK}Special:{GOLD}Tilt train (20% faster through curves)
+
+STR_NAME_VFT:Alstom-Comeng VFT
+STR_INFO_VFT:{BLACK}Role:{GOLD}High Speed Services{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{LTBLUE}Overhead Line{}{BLACK}
+
+STR_NAME_4WHEELCOACH:4-Wheel Coach
+STR_INFO_4WHEELCOACH:{BLACK}Role:{GOLD}Passenger coach
+STR_NAME_MAIL_4WHEELCOACH:4-Wheel Mail Coach
+STR_INFO_MAIL_4WHEELCOACH:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_6WHEELCOACH:6-Wheel Coach
+STR_INFO_6WHEELCOACH:{BLACK}Role:{GOLD}Passenger coach
+STR_NAME_MAIL_6WHEELCOACH:6-Wheel Mail Coach
+STR_INFO_MAIL_6WHEELCOACH:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_8WHEELCOACH:8-Wheel Coach
+STR_INFO_8WHEELCOACH:{BLACK}Role:{GOLD}Passenger coach
+STR_NAME_MAIL_8WHEELCOACH:8-Wheel Mail Coach
+STR_INFO_MAIL_8WHEELCOACH:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_AMERICANCOACH:American Coach
+STR_INFO_AMERICANCOACH:{BLACK}Role:{GOLD}Passenger coach
+STR_NAME_MAIL_AMERICANCOACH:American Mail Coach
+STR_INFO_MAIL_AMERICANCOACH:{BLACK}Role:{GOLD}Mail Van
+
+
+
+STR_NAME_AMERICANSUBURBANCOACH:American Suburban Coach
+STR_INFO_AMERICANSUBURBANCOACH:{BLACK}Role:{GOLD}Suburban Service
+
+STR_NAME_TAITCOACH:Tait Suburban Coach
+STR_INFO_TAITCOACH:{BLACK}Role:{GOLD}Suburban Service
+
+STR_NAME_SXCOACH:Comeng SX Suburban Coach
+STR_INFO_SXCOACH:{BLACK}Role:{GOLD}Suburban Coach
+STR_NAME_SXCOACH_CAB:Comeng SX Suburban Driving Trailer
+STR_INFO_SXCOACH_CAB:{BLACK}Role:{GOLD}Suburban Coach Driving Trailer
+
+STR_NAME_HTYPE:Comeng-M&K H-Type Suburban Coach
+STR_INFO_HTYPE:{BLACK}Role:{GOLD}Suburban/Country Coach {}{BLACK}Attach To:{GOLD}PERM & Tulloch DRCs {}{BLACK}Based on:{GOLD}VLine H-Type Coaches
+STR_NAME_HTYPE_CAB:Comeng-M&K H-Type Suburban Driving Trailer
+STR_INFO_HTYPE_CAB:{BLACK}Role:{GOLD}Suburban/Country Coach Driving Trailer {}{BLACK}Based on:{GOLD}VLine H-Type Coaches
+
+
+
+STR_NAME_TULLOCHDOUBLEDECKERS:Tulloch Double-Deck Coach
+STR_INFO_TULLOCHDOUBLEDECKERS:{BLACK}Role:{GOLD}Suburban Service {}{GOLD}You can put me in a Standard, Tulloch, Sputnik or S-Set set too!
+
+
+
+
+STR_NAME_ASHBURYCOACH:Ashbury Coach
+STR_INFO_ASHBURYCOACH:{BLACK}Role:{GOLD}Intercity Service
+STR_NAME_MAIL_ASHBURYCOACH:Ashbury Mail Coach
+STR_INFO_MAIL_ASHBURYCOACH:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_VICTORIANINTERSTATECOACH:Victorian Interstate Coach
+STR_INFO_VICTORIANINTERSTATECOACH:{BLACK}Role:{GOLD}Intercity Service
+STR_NAME_MAIL_VICTORIANINTERSTATECOACH:Victorian Interstate Mail Coach
+STR_INFO_MAIL_VICTORIANINTERSTATECOACH:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_NSWRTYPE:R-Type Interurban Coach
+STR_INFO_NSWRTYPE:{BLACK}Role:{GOLD}Intercity Service
+STR_NAME_MAIL_NSWRTYPE:R-Type Mail Coach
+STR_INFO_MAIL_NSWRTYPE:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_WADDINGTONSINTERURBAN:Waddingtons Interurban Coach
+STR_INFO_WADDINGTONSINTERURBAN:{BLACK}Role:{GOLD}Intercity Service {}{GOLD}We'll see where these Waddingtons guys go.
+STR_NAME_MAIL_WADDINGTONSINTERURBAN:Waddingtons Interurban Mail Coach
+STR_INFO_MAIL_WADDINGTONSINTERURBAN:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_TULLOCHINTERURBANCOACH:Tulloch Interurban Coach
+STR_INFO_TULLOCHINTERURBANCOACH:{BLACK}Role:{GOLD}Intercity Service
+STR_NAME_MAIL_TULLOCHINTERURBANCOACH:Tulloch Interurban Mail Coach
+STR_INFO_MAIL_TULLOCHINTERURBANCOACH:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_VLINE_ZTYPE:Z-Type Passenger Coach
+STR_INFO_VLINE_ZTYPE:{BLACK}Role:{GOLD}Intercity Service
+STR_NAME_MAIL_VLINE_ZTYPE:Z-Type Mail Van
+STR_INFO_MAIL_VLINE_ZTYPE:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_COMENGAURORACOACH:Comeng Aurora Coach
+STR_INFO_COMENGAURORACOACH:{BLACK}Role:{GOLD}Intercity Service
+STR_NAME_MAIL_COMENGAURORACOACH:Comeng Aurora Mail Van
+STR_INFO_MAIL_COMENGAURORACOACH:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_COMENG_INTERSTATECOACH:Comeng Interstate Coach
+STR_INFO_COMENG_INTERSTATECOACH:{BLACK}Role:{GOLD}Intercity Service
+STR_NAME_MAIL_COMENG_INTERSTATECOACH:Comeng Interstate Mail Van
+STR_INFO_MAIL_COMENG_INTERSTATECOACH:{BLACK}Role:{GOLD}Mail Van
+
+STR_NAME_COMENG_HIGHSPEEDCOACH:Comeng High-Speed Coach
+STR_INFO_COMENG_HIGHSPEEDCOACH:{BLACK}Role:{GOLD}Intercity Service
+STR_NAME_MAIL_COMENG_HIGHSPEEDCOACH:Comeng High-Speed Mail Van
+STR_INFO_MAIL_COMENG_HIGHSPEEDCOACH:{BLACK}Role:{GOLD}Mail Van
+
+
+
+STR_NAME_DDINTERURBANCOACH:Comeng Double-Deck Interurban Coach
+STR_INFO_DDINTERURBANCOACH:{BLACK}Role:{GOLD}Interurban Coach
+STR_NAME_DDINTERURBANCOACH_CAB:Comeng Double-Deck Interurban Coach Driving Trailer
+STR_INFO_DDINTERURBANCOACH_CAB:{BLACK}Role:{GOLD}Interurban Coach Driving Trailer
+
+
+
+STR_NAME_VICTORIANINTERSTATEPARCELVAN:Victorian Interstate Parcel Van
+STR_INFO_VICTORIANINTERSTATEPARCELVAN:{BLACK}Role:{GOLD}Parcel Van

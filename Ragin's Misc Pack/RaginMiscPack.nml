@@ -1,0 +1,630 @@
+grf{
+    grfid: "ZM\09\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 0;
+    min_compatible_version: 0;
+
+//Purchase Cost Parameter
+    param {
+        param_purchase_cost {
+            type: int;
+            name: string(STR_PARAM_PURCHASE_COST);
+            desc: string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+//Running Cost Parameter
+     param {
+        param_running_cost {
+            type: int;
+            name: string(STR_PARAM_RUNNING_COST);
+            desc: string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+//Carry Capacity Parameter
+//Get this working for the next update!
+    param {
+                param_capacities {
+                        type: int;
+                        name: string(STR_PARAM_NAME_CAPACITY);
+                        desc: string(STR_PARAM_DESC_CAPACITY);
+                        min_value: 0;
+                        max_value: 1;
+                        def_value: 0;
+                        names: {
+                                                0: string(STR_PARAM_REAL_CAPACITY);
+                                                1: string(STR_PARAM_NORMAL_REDUCED);
+                        };
+                }
+        }
+}
+
+
+//Carry Capacity Variables
+if (param_capacities == 0) {
+    param_capacity_mod = 0;
+}
+
+if (param_capacities == 1) {
+    param_capacity_mod = 2;
+}
+
+railtypetable {
+    RAIL, SAA3: [ MTRO, SBA3, SCA3, SDA3, "3RDR", "3RDC", MTRO, ELRL], ELRL, MONO
+}
+
+cargotable {
+PASS, COAL, MAIL, OIL_, LVST, EOIL, COKE, VBOD, SULP, SASH, MNO2, BOOM, IRON, QLME, PHOS, VPTS, SLAG, PIPE, CASS, NUTS, METL, GOOD, GRAI, WOOD, IORE, STEL, VALU, PAPR, WHEA, FOOD, GOLD, RUBR, FRUT, MAIZ, CORE, WATR, DIAM, SUGR, TOYS, BATT, SWET, TOFF, COLA, CTCD, BUBL, PLST, FZDR, AORE, BEER, BDMT, BRCK, CERA, CERE, CLAY, CMNT, COPR, DYES, ENSP, FERT, FICR, FISH, FMSP, FRVG, GLAS, GRVL, JAVA, LIME, MILK, MNSP, OLSD, PETR, PLAS, POTA, RCYC, RFPR, SAND, SCMT, SGBT, SGCN, TOUR, VEHI, WDPR, WOOL, URAN, YETI, YETY, BEAN, NITR
+}
+
+
+//Basecost Paramater Variables
+basecost {
+ PR_BUILD_VEHICLE_TRAIN: param_purchase_cost - 4;
+ PR_BUILD_VEHICLE_WAGON: param_purchase_cost - 4;
+ PR_RUNNING_TRAIN_ELECTRIC: param_running_cost - 4;
+ PR_RUNNING_TRAIN_DIESEL: param_running_cost - 4;
+}
+
+// Fix depot view
+traininfo_y_offset = 2;
+train_width_32_px = 1;
+
+
+// Purchase Sprite
+template template_purchase(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -60, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+// Purchase Sprite
+template template_purchase_Long(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 120, 15, -60, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+// 4 Template
+template template_4(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -24]
+    [ x+9,      y,        22,        20,        -8,        -15]
+    [ x+32,     y,        33,        16,        0,        -12]
+    [ x+66,     y,        22,        20,        -4,            -11]
+
+    [ x+89,     y,        8,        24,        -3,            -16]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -16,        -12]
+    [ x+155,    y,        22,        20,        -12,        -15]
+}
+
+template template_4_r(x, y) { //WIP
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89,     y,        8,        24,        -3,            -23]
+    [ x+98,     y,        22,        20,        -8,        -15]
+    [ x+121,    y,        33,        16,        0,        -12]
+    [ x+155,    y,        22,        20,        -4,            -11]
+
+    [ x,        y,        8,        24,        -3,            -16]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -12,        -15]
+}
+
+// 5 Template
+template template_5(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -22]
+    [ x+9,      y,        22,        20,        -10,        -14]
+    [ x+32,     y,        33,        16,        -4,        -12]
+    [ x+66,     y,        22,        20,        -4,            -11]
+
+    [ x+89,     y,        8,        24,        -3,            -16]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -16,        -12]
+    [ x+155,    y,        22,        20,        -10,        -14]
+}
+
+// 6 Template
+template template_6(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -20]
+    [ x+9,      y,        22,        20,        -12,        -13]
+    [ x+32,     y,        33,        16,        -8,        -12]
+    [ x+66,     y,        22,        20,        -4,            -11]
+
+    [ x+89,     y,        8,        24,        -3,            -16]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -16,        -12]
+    [ x+155,    y,        22,        20,        -8,        -13]
+}
+
+template template_6_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89,     y,        8,        24,        -3,            -20]
+    [ x+98,     y,        22,        20,        -12,        -13]
+    [ x+121,    y,        33,        16,        -8,        -12]
+    [ x+155,    y,        22,        20,        -4,        -11]
+
+    [ x,        y,        8,        24,        -3,            -16]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -8,            -13]
+}
+
+//7 Template
+template template_7(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -18]
+    [ x+9,      y,        22,        20,        -14,        -12]
+    [ x+32,     y,        33,        16,        -12,        -12]
+    [ x+66,     y,        22,        20,        -4,            -11]
+
+    [ x+89,     y,        8,        29,        -3,            -15]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -16,        -12]
+    [ x+155,    y,        22,        20,        -6,        -12]
+}
+
+//7 Template Reversed
+template template_7_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89 , y, 8 , 29,  -3, -18]
+    [ x+98 , y, 22, 20, -14, -12]
+    [ x+121, y, 33, 16, -12, -12]
+    [ x+155, y, 22, 20,  -4, -11]
+
+    [ x    , y, 8 , 29,  -3, -15]
+    [ x+9  , y, 22, 20, -16, -11]
+    [ x+32 , y, 33, 16, -16, -12]
+    [ x+66 , y, 22, 20,  -6, -12]
+}
+
+//7 Template Reversed Alt
+template template_7_alt_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -15]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -6,            -12]
+
+    [ x+89,     y,        8,        29,        -3,            -16]
+    [ x+98,     y,        22,        20,        -14,        -12]
+    [ x+121,    y,        33,        16,        -12,        -12]
+    [ x+155,    y,        22,        20,        -4,        -11]
+}
+
+// 8 Template
+template template_8(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -16]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -4,            -11]
+
+    [ x+89,     y,        8,        29,        -3,            -16]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -16,        -12]
+    [ x+155,    y,        22,        20,        -4,        -11]
+}
+
+template template_8_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+
+    [ x+89,     y,        8,        29,        -3,            -16]
+    [ x+98,     y,        22,        20,        -16,        -11]
+    [ x+121,    y,        33,        16,        -16,        -12]
+    [ x+155,    y,        22,        20,        -4,        -11]
+
+    [ x,        y,        8,        29,        -3,            -16]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -4,            -11]
+}
+
+//4Train
+spriteset(spriteset_4Train_Purchase,   "gfx/4Train.png") {template_purchase(7, 21)}
+spriteset(spriteset_4Train,   "gfx/4Train.png") {template_4(7, 39)}
+
+item (FEAT_TRAINS, Item_4Train) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:        CC_PASSENGERS;
+        cargo_allow_refit:                [PASS, TOUR];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        power:                            0 hp;
+        dual_headed:                    0;
+        default_cargo_type:                PASS;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            4;
+        cost_factor:                    100;
+        running_cost_factor:            3;
+        loading_speed:                    10;
+
+        name:                             string(STR_NAME_4TRAIN);
+        introduction_date:                date(1948, 1, 1);
+
+        speed:                            115 km/h;
+        weight:                            42 ton;
+        cargo_capacity:                    72/param_capacity_mod;
+    }
+    graphics {
+    default:                             spriteset_4Train;
+    purchase:                            spriteset_4Train_Purchase;
+    additional_text: string(STR_INFO_4TRAIN);
+}
+}
+
+//5Train
+spriteset(spriteset_5Train_Purchase,   "gfx/5Train.png") {template_purchase(7, 21)}
+spriteset(spriteset_5Train,   "gfx/5Train.png") {template_5(7, 39)}
+
+item (FEAT_TRAINS, Item_5Train) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:        CC_PASSENGERS;
+        cargo_allow_refit:                [PASS, TOUR];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        power:                            0 hp;
+        dual_headed:                    0;
+        default_cargo_type:                PASS;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            5;
+        cost_factor:                    100;
+        running_cost_factor:            3;
+        loading_speed:                    10;
+
+        name:                             string(STR_NAME_5TRAIN);
+        introduction_date:                date(1948, 1, 1);
+
+        speed:                            115 km/h;
+        weight:                            42 ton;
+        cargo_capacity:                    72/param_capacity_mod;
+    }
+    graphics {
+    default:                             spriteset_5Train;
+    purchase:                            spriteset_5Train_Purchase;
+    additional_text: string(STR_INFO_5TRAIN);
+}
+}
+
+//6Train
+spriteset(spriteset_6Train_Purchase,   "gfx/6Train.png") {template_purchase(7, 21)}
+spriteset(spriteset_6Train,   "gfx/6Train.png") {template_6(7, 39)}
+
+item (FEAT_TRAINS, Item_6Train) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:        CC_PASSENGERS;
+        cargo_allow_refit:                [PASS, TOUR];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        power:                            0 hp;
+        dual_headed:                    0;
+        default_cargo_type:                PASS;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            6;
+        cost_factor:                    100;
+        running_cost_factor:            3;
+        loading_speed:                    10;
+
+        name:                             string(STR_NAME_6TRAIN);
+        introduction_date:                date(1948, 1, 1);
+
+        speed:                            115 km/h;
+        weight:                            42 ton;
+        cargo_capacity:                    72/param_capacity_mod;
+    }
+    graphics {
+    default:                             spriteset_6Train;
+    purchase:                            spriteset_6Train_Purchase;
+    additional_text: string(STR_INFO_6TRAIN);
+}
+}
+
+//7Train
+spriteset(spriteset_7Train_Purchase,   "gfx/7Train.png") {template_purchase(7, 21)}
+spriteset(spriteset_7Train,   "gfx/7Train.png") {template_7(7, 39)}
+
+item (FEAT_TRAINS, Item_7Train) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:        CC_PASSENGERS;
+        cargo_allow_refit:                [PASS, TOUR];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        power:                            0 hp;
+        dual_headed:                    0;
+        default_cargo_type:                PASS;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            7;
+        cost_factor:                    100;
+        running_cost_factor:            3;
+        loading_speed:                    10;
+
+        name:                             string(STR_NAME_7TRAIN);
+        introduction_date:                date(1948, 1, 1);
+
+        speed:                            115 km/h;
+        weight:                            42 ton;
+        cargo_capacity:                    72/param_capacity_mod;
+    }
+    graphics {
+    default:                             spriteset_7Train;
+    purchase:                            spriteset_7Train_Purchase;
+    additional_text: string(STR_INFO_7TRAIN);
+}
+}
+
+//8Train
+spriteset(spriteset_8Train_Purchase,   "gfx/8Train.png") {template_purchase(7, 21)}
+spriteset(spriteset_8Train,   "gfx/8Train.png") {template_8(7, 39)}
+
+item (FEAT_TRAINS, Item_8Train) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:        CC_PASSENGERS;
+        cargo_allow_refit:                [PASS, TOUR];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        power:                            0 hp;
+        dual_headed:                    0;
+        default_cargo_type:                PASS;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            8;
+        cost_factor:                    100;
+        running_cost_factor:            3;
+        loading_speed:                    10;
+
+        name:                             string(STR_NAME_8TRAIN);
+        introduction_date:                date(1948, 1, 1);
+
+        speed:                            115 km/h;
+        weight:                            42 ton;
+        cargo_capacity:                    72/param_capacity_mod;
+    }
+    graphics {
+    default:                             spriteset_8Train;
+    purchase:                            spriteset_8Train_Purchase;
+    additional_text: string(STR_INFO_8TRAIN);
+}
+}
+
+
+
+spriteset(spriteset_EMD_GF6CH_PantoUp,   "gfx/EMD_GF6CH_PantoUp.png") {template_8(7, 39)}
+spriteset(spriteset_EMD_GF6CH_PantoUp_Fwr,   "gfx/EMD_GF6CH_PantoUp.png") {template_8_r(7, 39)}
+spriteset(spriteset_EMD_GF6CH_PantoUp_r,   "gfx/EMD_GF6CH_PantoUp.png") {template_8(7, 69)}
+
+spriteset(spriteset_EMD_GF6CH_PantoDown,   "gfx/EMD_GF6CH_PantoDown.png") {template_8(7, 39)}
+spriteset(spriteset_EMD_GF6CH_PantoDown_r,   "gfx/EMD_GF6CH_PantoDown.png") {template_8_r(7, 39)}
+
+//EMD_GF6CH_Liv0
+spriteset(spriteset_EMD_GF6CH_Liv0_Purchase,   "gfx/EMD_GF6CH_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv0,   "gfx/EMD_GF6CH_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_EMD_GF6CH_Liv0_r,   "gfx/EMD_GF6CH_Liv0.png") {template_8_r(7, 39)}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
+ 0: spriteset_EMD_GF6CH_PantoDown;
+ 1: spriteset_EMD_GF6CH_PantoUp;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_GF6CH_Liv0;
+    1: switch_EMD_GF6CH_Liv0_Fw_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_Fwr_railtype, tile_powers_railtype("ELRL")) {
+ 0: spriteset_EMD_GF6CH_PantoDown;
+ 1: spriteset_EMD_GF6CH_PantoUp_Fwr;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_Fwr, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_GF6CH_Liv0;
+    1: switch_EMD_GF6CH_Liv0_Fwr_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_Fwflipcheck, vehicle_is_flipped) {
+ 0: switch_EMD_GF6CH_Liv0_Fw;
+ 1: switch_EMD_GF6CH_Liv0_Fwr;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_r_railtype, tile_powers_railtype("ELRL")) {
+ 0: spriteset_EMD_GF6CH_PantoDown_r;
+ 1: spriteset_EMD_GF6CH_PantoUp_r;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_GF6CH_Liv0_r;
+    1: switch_EMD_GF6CH_Liv0_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_altr_railtype, tile_powers_railtype("ELRL")) {
+ 0: spriteset_EMD_GF6CH_PantoDown_r;
+ 1: spriteset_EMD_GF6CH_PantoUp_Fwr;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_altr, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_GF6CH_Liv0_r;
+    1: switch_EMD_GF6CH_Liv0_altr_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_rflipcheck, vehicle_is_flipped) {
+ 0: switch_EMD_GF6CH_Liv0_r;
+ 1: switch_EMD_GF6CH_Liv0_altr;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_pair, position_in_vehid_chain % 2) {
+ 1: switch_EMD_GF6CH_Liv0_rflipcheck;
+  switch_EMD_GF6CH_Liv0_Fwflipcheck;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_rear, position_in_vehid_chain_from_end) {
+ 0: switch_EMD_GF6CH_Liv0_rflipcheck;
+  switch_EMD_GF6CH_Liv0_pair;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_GF6CH_Liv0_position, position_in_consist) {
+ 0: switch_EMD_GF6CH_Liv0_Fwflipcheck;
+  switch_EMD_GF6CH_Liv0_rear;
+}
+
+item(FEAT_TRAINS, Item_EMD_GF6CH_Liv0, 29700) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES; //remember to update!
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+
+        track_type:                        ELRL;
+        running_cost_base:                RUNNING_COST_DIESEL;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_CARGO;
+        dual_headed:                    0; // <- Double Headed, so cab on each end
+
+        visual_effect_and_powered: VISUAL_EFFECT_ELECTRIC;
+
+        name:                            string(STR_NAME_EMD_GF6CH);
+        introduction_date:                date(1985,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            8;
+
+        weight:                        175 ton;
+        speed:                            100 mph;
+        power:                            6000 hp;
+        tractive_effort_coefficient:     0.7;
+        cost_factor:                     21;
+        running_cost_factor:             150;
+        cargo_capacity:                  0;
+
+//        variant_group: Item_EMD_GF6CH_Liv0;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: switch_EMD_GF6CH_Liv0_position;
+        purchase: spriteset_EMD_GF6CH_Liv0_Purchase;
+        additional_text: string(STR_INFO_EMD_GF6CH);
+}
+}

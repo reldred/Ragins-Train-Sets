@@ -1,0 +1,180 @@
+*Changes*
+Diesel Freight Locomotives
+- Change: Junee renamed Graneng MLF10, sprite overhauled
+- Change: Crisis renamed Graneng MLF17, sprite overhauled
+Diesel Heavy Freight Locomotives
+- Change: Shea renamed Graneng HPF2000, sprite overhauled
+- Change: Globe renamed Graneng HPF2500, sprite overhauled
+- Change: Big Lad renamed Graneng HPF3300, sprite overhauled
+Electric Express Passenger Locomotives:
+- Deletion: Big Thinker removed
+Electric Freight Locomotives:
+- Change: Lyttleton renamed Pom Electric Type EC, sprite overhauled
+- Change: Baltic renamed Pom Electric Type EY, sprite overhauled
+- Change: Gippslander renamed Pom Electric Type LF, sprite overhauled
+- Change: Sheffielder renamed Pom Electric Type 46F, sprite overhauled
+- Change: Sherpa renamed Tokyu EF140, sprite overhauled
+- Change: Collomatta renamed Graneng MLEF4500, sprite overhauled
+- Change: Nikkin renamed Graneng MLEF5000, sprite overhauled
+Suburban Diesel Multiple Unit:
+- Change: Willie renamed Phoenix 600, sprite overhauled
+- Change: Buddy renamed Graneng Model 2000, sprite overhauled
+- Change: Warrigal renamed Graneng Model 3000, sprite overhauled
+Intercity Diesel Multiple Units:
+- Change: Frosty renamed Phoenix Coment, sprite overhauled
+- Change: Bunyip renamed Phoenix 800, sprite overhauled
+- Change: Yowie renamed Phoenix 1100, sprite overhauled
+- Change: Discoverer renamed Eurotranz Discoverer, sprite overhauled
+- Change: Haste renamed Eurotranz Velocity, sprite overhauled
+Metro Electric Multiple Units:
+- Change: Han’ei renamed Tokyu 1000 Series, sprite overhauled
+- Change: Senso renamed Tokyu 1500 Series, sprite overhauled
+- Change: Tokyu renamed Tokyu 3000 Series, sprite overhauled
+- Change: Laurel renamed Tokyu 6500 Series, sprite overhauled
+- Change: Ichi renamed Tokyu 07 Series, sprite overhauled
+- Change: Haru renamed Tokyu 233-2000 Series, sprite overhauled
+- Change: Nishi renamed Tokyu 90000 Series, sprite overhauled
+Suburban Single-Deck Electric Multiple Units:
+- Change: Lucy renamed Phoenix Converted Stock, sprite overhauled
+- Change: Rhodes renamed Phoenix Standard Stock, sprite overhauled
+- Change: Bluey renamed Phoenix Blue Stock, sprite overhauled
+- Change: Walker renamed Yuppa Mk1 SMU, sprite overhauled
+- Change: Suburbanite renamed Yuppa Mk3 SMU, sprite overhauled
+- Change: Cosmopolitan renamed Yuppa HCST, sprite overhauled
+Suburban Double-Deck Electric Multiple Units:
+- Change: Silver Sider renamed Graneng DDS, sprite overhauled
+- Change: Togo renamed Turton Togo Suburban, sprite overhauled
+- Change: Olympian renamed Yuppa Olympian, sprite overhauled
+- Change: Bank renamed Yuppa Banko Mk1, sprite overhauled
+- Change: Prism renamed Turton Prism, sprite overhauled
+Intercity Single-Deck Electric Multiple Units:
+- Change: Kooragang renamed Phoenix Kooragang, sprite overhauled
+- Change: Anderson renamed Graneng U-Boat, sprite overhauled
+- Change: Runner renamed Yuppa ICE, sprite overhauled
+- Change: Wallaby renamed Yuppa IMU, sprite overhauled
+- Change: Sonic renamed Tokyu 885 Series, sprite overhauled
+Intercity Double-Deck Electric Multiple Units:
+- Change: Goose renamed Graneng DDIU, sprite overhauled
+- Change: Originator renamed Graneng DDIU MK2, sprite overhauled
+- Change: Awabakal renamed Turton OSCAR, sprite overhauled
+Suburban Single-Deck Passenger Coaches:
+- Change: 1870, 1890, 1910, 1930, 1950, 1970, 1990, 2010 sprites improved
+Box Vans:
+- Change: 1950, 1970, 1990 sprites improved
+Refrigerated Vans:
+- Change: 1950, 1970, 1990 sprites improved
+Coal Hoppers: 
+- Change: 1950, 1970, 1990, 2010 sprites improved
+*Additions*
+Diesel Passenger Locomotives
+- Added: Graneng MLP1500
+- Added: Turton C18-5
+- Added: Graneng MLP2000
+- Added: Graneng MLP2200-R
+- Added: Graneng MLP2500
+- Added: AE U26C
+Diesel Heavy Freight Locomotives
+- Added: Graneng HPF2750
+- Added: Graneng HPF3000
+Electric Light Passenger Locomotives:
+- Added: Phoenix 6DES
+- Added: Tokyu ED108
+- Added: Tokyu ED111
+- Added: NHI ED115
+- Added: Tokyu ED117
+- Added: Tokyu ED120
+- Added: SRRC EP25
+Electric Passenger Locomotives:
+- Added: Pom Electric Type EO
+- Added: Tokyu EF117
+- Added: Pom Electric Type LP
+- Added: Pom Electric Type 46P
+- Added: Tokyu EF132
+- Added: Graneng MLEP3500
+- Added: Graneng MLEP3800
+- Added: Eurotranz 2600
+- Added: Eurotranz 8200
+- Added: Eurotranz 8500
+- Added: SRRC EP70
+Electric Heavy Passenger Locomotives:
+- Added: NHI EF118
+- Added: Tokyo EF120
+- Added: NHI EF130
+- Added: Tokyu EF135
+- Added: SRRC EP55
+- Added: Eurotranz 8000 (Based on the NS1600 sprite by Voyager one)
+- Added: SRRC EP75
+- Added: SRRC EP80
+- Added: Eurotranz 10K
+- Added: SRRC EP10
+Electric Express Passenger Locomotives:
+- Added: Graneng HSEP4000
+Electric Freight Locomotives:
+- Added: Graneng MLEF5500
+- Added: Yuppa BP60
+- Added: Eurotranz 3800
+Electric Heavy Freight Locomotives:
+- Added: Pom Electric Type EW
+- Added: Tokyu EL168
+- Added: Tokyu EL180 (Based on the Japanset EF66)
+- Added: Graneng HPEF9000
+- Added: Graneng HPEF10000
+- Added: Graneng HPEF11500
+- Added: Yuppa BP120
+- Added: Eurotranz 7600
+Suburban Diesel Multiple Units:
+- Added: Phoenix Tin Hare
+- Added: Phoenix Yankee
+- Added: Phoenix Wildflower
+- Added: Graneng ADK
+- Added: Turton Sprinter
+- Added: Turton Hunter
+Intercity Diesel Multiple Units:
+- Added: Phoenix Walker
+- Added: Graneng Goldfielder
+- Added: Graneng Australind
+- Added: Turton Prospector
+Express Diesel Multiple Units:
+- Added: Graneng XPT
+- Added: Graneng HPT
+- Added: Yuppa Diesel Tilt Train
+Metro Electric Multiple Units:
+- Added: Phoenix Austerity Metro
+- Added: Tokyu 5000 Series
+- Added: Tokyu 01 series
+- Added: Tokyu N1000 Series
+- Added: Tokyu 32000 Series
+- Added: Tokyu 65000 Series
+Suburban Single-Deck Electric Multiple Units:
+- Added: Pom Electric Tawa
+- Added: Phoenix Punchy Stock
+- Added: Graneng Sputnik
+- Added: Graneng Nippon
+- Added: Graneng Concorde
+- Added: Yuppa Mk2 SMU
+Suburban Double-Deck Electric Multiple Units:
+- Added: Phoenix Double Deck Stock
+- Added: Turton Chopper
+- Added: Yuppa Banko Mk2
+Intercity Single-Deck Electric Multiple Units:
+- Added: Tokyu 80 Series
+- Added: Tokyu 157 Series
+- Added: Tokyu 185 Series
+- Added: Tokyu 253 Series
+Intercity Double-Deck Electric Multiple Units:
+- Added: Turton Togo Interurban
+- Added: Yuppa City Hopper
+- Added: Turton Mariyung
+Express Electric Multiple Units:
+- Added: Graneng XPT-E
+- Added: Eurotranz X2000
+Single Deck Suburban Coach Cab-Cars:
+- Added: 1970, 1990, 2010 variants
+Single Deck Intercity Coaches:
+- Added: 1910, 1930, 1950, 1970, 1990, 2010 variants
+Mail Vans:
+- Added: 1910, 1930, 1950, 1970, 1990, 2010 variants
+==========
+0.3.0
+==========
+Initial Bananas release

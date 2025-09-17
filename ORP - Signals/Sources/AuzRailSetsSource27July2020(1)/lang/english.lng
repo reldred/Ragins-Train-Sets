@@ -1,0 +1,136 @@
+##grflangid 0x01
+
+#Main grf title and description
+STR_GRF_NAME				:AuzRailSet
+STR_GRF_DESCRIPTION			:{ORANGE}Updated 16th February 2020: Railway Tracks and Railway Objects. {}{BLACK} Project of GarryG and coding provided by Quast65. {}License: {SILVER}GPL v2+{BLACK}{}
+STR_GRF_URL				:http://www.simuscape.net/simutalk/viewtopic.php?f=85&t=898
+
+
+STR_PARAM_LCYEAR			:Introduction year for modern level crossings
+STR_PARAM_LCYEAR_DESC			:Defines the year from which the old version of the level crossings will be replaced successively by the new version throughout the next 15 years.
+STR_PARAM_LC_TYPE			:Level crossings
+STR_PARAM_LC_TYPE_DESC			:Type of level crossings to be used.
+STR_PARAM_LC_NORMAL			:normal
+STR_PARAM_LC_PLAIN			:plain
+
+#Fences Parameter
+STR_PARAM_NAME_FENCES			:Fences
+STR_PARAM_DESC_FENCES			:Use this parameter to turn fences on or off (Custom fences or No fences)
+STR_PARAM_FENCES_CUSTOM			:Custom Fences
+STR_PARAM_FENCES_NONE			:No fences
+
+#Signals Parameter
+STR_PARAM_NAME_ORIGINAL_SIGNALS     	:Disable Custom signals/semaphores
+STR_PARAM_DESC_ORIGINAL_SIGNALS     	:Use this option to use original signals/semaphores
+
+#Pylons Parameter
+STR_PARAM_NAME_ORIGINAL_PYLONS     	:Disable Custom catenary pylons
+STR_PARAM_DESC_ORIGINAL_PYLONS     	:Use this option to use original catenary pylons
+
+#Wires Parameter
+STR_PARAM_NAME_ORIGINAL_WIRES     	:Disable Custom catenary wires
+STR_PARAM_DESC_ORIGINAL_WIRES     	:Use this option to use original catenary wires
+
+
+#Tracktypes (non-electric)
+
+STR_TRACK_TYPE_RAIL		:Unelectrified 1
+STR_CONSTRUCTION_RAIL		:Unelectrified 1 (Rail & Wire Fence)
+STR_BUILD_CAPTION_RAIL		:Unelectrified 1
+STR_AUTOREPLACE_RAIL		:Unelectrified 1
+STR_NEW_ENGINE_RAIL		:Unelectrified 1
+
+STR_TRACK_TYPE_NSWE		:Unelectrified 2
+STR_CONSTRUCTION_NSWE		:Unelectrified 2 (Wire Mesh Fence)
+STR_BUILD_CAPTION_NSWE		:Unelectrified 2
+STR_AUTOREPLACE_NSWE		:Unelectrified 2
+STR_NEW_ENGINE_NSWE		:Unelectrified 2
+
+STR_TRACK_TYPE_NSWR		:Unelectrified 3
+STR_CONSTRUCTION_NSWR		:Unelectrified 3 (High Woodpanel Fence)
+STR_BUILD_CAPTION_NSWR		:Unelectrified 3
+STR_AUTOREPLACE_NSWR		:Unelectrified 3
+STR_NEW_ENGINE_NSWR		:Unelectrified 3
+
+STR_TRACK_TYPE_SAAN		:Unelectrified 4
+STR_CONSTRUCTION_SAAN		:Unelectrified 4 (Sound Proof Fence)
+STR_BUILD_CAPTION_SAAN		:Unelectrified 4
+STR_AUTOREPLACE_SAAN		:Unelectrified 4
+STR_NEW_ENGINE_SAAN		:Unelectrified 4
+
+STR_TRACK_TYPE_SCAN		:Unelectrified 5 (Un-Fences)
+STR_CONSTRUCTION_SCAN		:Unelectrified 5 (Un-Fences)
+STR_BUILD_CAPTION_SCAN		:Unelectrified 5
+STR_AUTOREPLACE_SCAN		:Unelectrified 5
+STR_NEW_ENGINE_SCAN		:Unelectrified 5
+
+STR_TRACK_TYPE_PRIV		:Unelectrified Private 6 (UnFenced)
+STR_CONSTRUCTION_PRIV		:Unelectrified Private 6 (UnFenced)
+STR_BUILD_CAPTION_PRIV		:Unelectrified Private 6
+STR_AUTOREPLACE_PRIV		:Unelectrified Private 6
+STR_NEW_ENGINE_PRIV		:Unelectrified Private 6
+
+STR_TRACK_TYPE_YARD		:Unelectrified Rail 7
+STR_CONSTRUCTION_YARD		:Unelectrified Rail 7 (Yard/Station)
+STR_BUILD_CAPTION_YARD		:Very low speed Unelectrified Rail
+STR_AUTOREPLACE_YARD		:Very Low speed Unelectrified Rail
+STR_NEW_ENGINE_YARD		:Very Low speed Unelectrified Rail
+
+STR_TRACK_TYPE_CUTT		:Cuttings 1
+STR_CONSTRUCTION_CUTT		:Cuttings Rail 1
+STR_BUILD_CAPTION_CUTT		:Cuttings Rail 1
+STR_AUTOREPLACE_CUTT		:Cuttings Rail 1
+STR_NEW_ENGINE_CUTT		:Cuttings Rail 1
+
+STR_TRACK_TYPE_TEST		:TEST 1
+STR_CONSTRUCTION_TEST		:TEST Rail 1
+STR_BUILD_CAPTION_TEST		:TEST Rail 1
+STR_AUTOREPLACE_TEST		:TEST Rail 1
+STR_NEW_ENGINE_TEST		:TEST Rail 1
+
+
+
+#Tracktypes (electrified)
+
+STR_TRACK_TYPE_ELRL		:Electrified 1 Pylons
+STR_CONSTRUCTION_ELRL		:Electrified 1 Single Pylons (Wire Fence)
+STR_BUILD_CAPTION_ELRL		:Electrified 1 Pylons
+STR_AUTOREPLACE_ELRL		:Electrified 1 Pylons
+STR_NEW_ENGINE_ELRL		:Electrified 1 Pylons
+
+
+STR_TRACK_TYPE_ELSA		:Electrified 1 Gantry
+STR_CONSTRUCTION_ELSA		:Electrified 1 Gantry with Wire Fence
+STR_BUILD_CAPTION_ELSA		:Electrified 1 Gantry
+STR_AUTOREPLACE_ELSA		:Electrified 1 Gantry
+STR_NEW_ENGINE_ELSA		:Electrified 1 Gantry
+
+STR_TRACK_TYPE_ELSD		:Electrified 2 Gantry
+STR_CONSTRUCTION_ELSD		:Electrified 2 Gantry (NO pylons or fences)
+STR_BUILD_CAPTION_ELSD		:Electrified 2 Gantry
+STR_AUTOREPLACE_ELSD		:Electrified 2 Gantry
+STR_NEW_ENGINE_ELSD		:Electrified 2 Gantry
+
+STR_TRACK_TYPE_ELSC		:Electrified New Pylons
+STR_CONSTRUCTION_ELSC		:Electrified with Sound Proof Fence
+STR_BUILD_CAPTION_ELSC		:Electrified New Pylons
+STR_AUTOREPLACE_ELSC		:Electrified New Pylons
+STR_NEW_ENGINE_ELSC		:Electrified New Pylons
+
+STR_TRACK_TYPE_ELSE		:Electrified Subway (Invisible Catenary)
+STR_CONSTRUCTION_ELSE		:Electrified Subway (Invisible Catenary)
+STR_BUILD_CAPTION_ELSE		:Electrified Subway (Invisible Catenary)
+STR_AUTOREPLACE_ELSE		:Electrified Subway (Invisible Catenary)
+STR_NEW_ENGINE_ELSE		:Electrified Subway (Invisible Catenary)
+
+STR_TRACK_TYPE_ELYD		:Electrified Rail 4
+STR_CONSTRUCTION_ELYD		:Electrified Rail 4 (Yard/Station)
+STR_BUILD_CAPTION_ELYD		:Very low speed Electrified
+STR_AUTOREPLACE_ELYD		:Very low speed Electrified
+STR_NEW_ENGINE_ELYD		:Very low speed Electrified
+
+STR_TRACK_TYPE_ECUT		:Cuttings Electrified
+STR_CONSTRUCTION_ECUT		:Cuttings Electrified
+STR_BUILD_CAPTION_ECUT		:Cuttings Electrified
+STR_AUTOREPLACE_ECUT		:Cuttings Electrified
+STR_NEW_ENGINE_ECUT		:Cuttings Electrified

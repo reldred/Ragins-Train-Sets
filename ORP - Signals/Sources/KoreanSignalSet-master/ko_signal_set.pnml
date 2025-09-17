@@ -1,0 +1,150 @@
+/*------------------------------------------------------------------------------
+ * 한국 신호기 세트(Korean Signal Set)
+ * https://github.com/KoreanGRF/KoreanSignalSet
+------------------------------------------------------------------------------*/
+
+// Basic information of NewGRF
+grf {
+    grfid :                            "TK\06\03";
+    name :                             string(STR_GRF_NAME_WITH_VER);
+    desc :                             string(STR_GRF_DESC);
+    url :                              string(STR_GRF_URL);
+    version :                          5;
+    min_compatible_version :           1;
+    
+    param 1 {
+        // is Realistic
+        is_realistic {
+            type: bool;
+            name: string(STR_PARAM_IS_REALISTIC_NAME);
+            desc: string(STR_PARAM_IS_REALISTIC_DESC);
+            bit: 0;
+            def_value: 1;
+        }
+        
+        // Use TVM
+        use_tvm {
+            type: bool;
+            name: string(STR_PARAM_USE_TVM_NAME);
+            desc: string(STR_PARAM_USE_TVM_DESC);
+            bit: 2;
+            def_value: 1;
+        }
+        
+        // Use caution signals(Y and YG) together
+        use_caution_signal {
+            type: bool;
+            name: string(STR_PARAM_USE_CAUTION_SIGNALS_NAME);
+            desc: string(STR_PARAM_USE_CAUTION_SIGNALS_DESC);
+            bit: 3;
+            def_value: 1;
+        }
+    }
+
+    // Use blue signal as open state
+    param 2 {
+        // for Block signal
+        use_blue_block {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_BLOCK_DESC);
+            bit: 0;
+            def_value: 0;
+        }
+
+        // for Entrance signal
+        use_blue_entry {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_ENTRY_DESC);
+            bit: 1;
+            def_value: 0;
+        }
+
+        // for Exit signal
+        use_blue_exit {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_EXIT_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_EXIT_DESC);
+            bit: 2;
+            def_value: 0;
+        }
+
+        // for Combo signal
+        use_blue_combo {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_COMBO_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_COMBO_DESC);
+            bit: 3;
+            def_value: 0;
+        }
+        
+        // for path signal
+        use_blue_path {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_PATH_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_PATH_DESC);
+            bit: 4;
+            def_value: 0;
+        }
+        
+        // for Oneway path signal
+        use_blue_oneway_path {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_ONEWAY_PATH_DESC);
+            bit: 5;
+            def_value: 0;
+        }
+        
+        // for programmable signal
+        use_blue_programmable {
+            type: bool;
+            name: string(STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_NAME);
+            desc: string(STR_PARAM_USE_BLUE_AS_OPEN_PROGRAMMABLE_DESC);
+            bit: 6;
+            def_value: 0;
+        }
+    }
+}
+
+// Notice
+if (!extended_feature_test("action3_signals_custom_signal_sprites")) {
+	error(NOTICE, string(STR_UNSUPPORTED_VERSION));
+}
+
+// GUI
+#include "./src/gui/gui.pnml"
+
+// Semaphore signals
+#include "./src/semaphore.pnml"
+
+// Electric signals
+#include "./src/electric.pnml"
+
+// General signal switches
+switch(FEAT_SIGNALS, SELF, sw_signal_types, (extra_callback_info2 & 0x00FFFF00) >> 8) {
+      0x0: sw_signal_block;        // Block
+    0x100: sw_signal_entry;        // Entry
+    0x200: sw_signal_exit;         // Exit
+    0x300: sw_signal_combo;        // Combo
+    0x400: sw_signal_path;         // Path
+    0x500: sw_signal_oneway_path;  // Oneway path
+    0x600: sw_signal_programmable; // Programmable
+    0x700: sw_signal_noentry;      // No-entry
+    CB_FAILED;
+}
+
+// Item
+item(FEAT_SIGNALS, ko_signal_set, 0) {
+    property {
+        enable_restricted_signals: 1;
+        enable_signal_recolour: 1;
+        enable_no_entry_signals: 1;
+        extra_aspects: 3;
+    }
+
+    graphics {
+        sw_signal_types;
+    }
+}

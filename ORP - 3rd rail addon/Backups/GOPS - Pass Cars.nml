@@ -1,0 +1,368 @@
+grf{
+    grfid: "ZM\08\02";
+    name: string(STR_GRF_NAME_TEST);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 1;
+    min_compatible_version: 1;
+//Purchase Cost Parameter
+    param {
+        param_purchase_cost {
+            type: int;
+            name: string(STR_PARAM_PURCHASE_COST);
+            desc: string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+//Running Cost Parameter
+     param {
+        param_running_cost {
+            type: int;
+            name: string(STR_PARAM_RUNNING_COST);
+            desc: string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+//Carry Capacity Parameter
+    param {
+                param_capacities {
+                        type: int;
+                        name: string(STR_PARAM_NAME_CAPACITY);
+                        desc: string(STR_PARAM_DESC_CAPACITY);
+                        min_value: 0;
+                        max_value: 1;
+                        def_value: 0;
+                        names: {
+                                                0: string(STR_PARAM_REAL_CAPACITY);
+                                                1: string(STR_PARAM_NORMAL_REDUCED);
+                        };
+                }
+        }
+//Freight Capacity Parameter
+    param {
+                param_freight_capacities {
+                        type: int;
+                        name: string(STR_PARAM_NAME_FREIGHT_CAPACITY);
+                        desc: string(STR_PARAM_DESC_CAPACITY);
+                        min_value: 0;
+                        max_value: 1;
+                        def_value: 0;
+                        names: {
+                                                0: string(STR_PARAM_REAL_CAPACITY);
+                                                1: string(STR_PARAM_NORMAL_REDUCED);
+                        };
+                }
+        }
+}
+
+
+//Carry Capacity Variables
+if (param_capacities == 0) {
+    param_capacity_mod = 0;
+}
+
+if (param_capacities == 1) {
+    param_capacity_mod = 2;
+}
+
+
+
+
+//Freight Capacity Variables
+if (param_capacities == 0) {
+    param_freight_capacity_mod = 0;
+}
+
+if (param_capacities == 1) {
+    param_freight_capacity_mod = 2;
+}
+
+railtypetable {
+    RAIL, SAA3, ELRL
+}
+
+cargotable {
+    PASS, MAIL,
+// Misc
+    TOUR,
+}
+
+
+//Basecost Paramater Variables
+basecost {
+ PR_BUILD_VEHICLE_TRAIN: 1 + param_purchase_cost - 4;
+ PR_BUILD_VEHICLE_WAGON: 3 + param_purchase_cost - 4;
+ PR_RUNNING_TRAIN_ELECTRIC: 3 + param_running_cost - 4;
+}
+
+// Fix depot view
+traininfo_y_offset = 2;
+train_width_32_px = 1;
+
+
+// Purchase Sprite
+template template_purchase(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -60, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+
+// 8 Template
+template template_8(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        24,        -3,            -14]
+    [ x+9,      y,        22,        20,        -14,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -6,            -11]
+
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -14,        -11]
+    [ x+121,    y,        33,        16,        -16,        -12]
+    [ x+155,    y,        22,        20,        -6,            -11]
+}
+
+// 8 Template Reversed
+template template_8_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+
+    [ x+89,     y,        8,        24,        -3,            -14]
+    [ x+98,     y,        22,        20,        -14,        -11]
+    [ x+121,    y,        33,        16,        -16,        -12]
+    [ x+155,    y,        22,        20,        -6,            -11]
+
+    [ x,        y,        8,        24,        -3,            -14]
+    [ x+9,      y,        22,        20,        -14,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -6,            -11]
+}
+
+//7 Template
+template template_7(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x    , y, 8 , 24,  -3, -15]
+    [ x+9  , y, 22, 20, -13, -11]
+    [ x+32 , y, 33, 16, -12, -12]
+    [ x+66 , y, 22, 20,  -7, -11]
+
+    [ x+89 , y, 8 , 24,  -3, -15]
+    [ x+98 , y, 22, 20, -13, -11]
+    [ x+121, y, 33, 16, -16, -12]
+    [ x+155, y, 22, 20,  -7, -11]
+}
+
+//7 Template Reversed
+template template_7_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89 , y, 8 , 24,  -3, -15]
+    [ x+98 , y, 22, 20, -13, -11]
+    [ x+121, y, 33, 16, -16, -12]
+    [ x+155, y, 22, 20,  -7, -11]
+
+    [ x    , y, 8 , 24,  -3, -15]
+    [ x+9  , y, 22, 20, -13, -11]
+    [ x+32 , y, 33, 16, -12, -12]
+    [ x+66 , y, 22, 20,  -7, -11]
+}
+
+// 6 Template
+template template_6(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        19,        -3,            -13]
+    [ x+13,      y,        18,        20,        -11,        -11]
+    [ x+40,     y,        25,        16,        -9,        -12]
+    [ x+70,     y,        18,        20,        -1,            -11]
+    [ x+89,     y+5,        8,        19,         -3,            -9]
+    [ x+98,     y,        18,        20,        -15,        -11]
+    [ x+121,    y,        25,        16,        -17,        -12]
+    [ x+155,    y,        20,        18,         -5,            -11]
+}
+
+spriteset(spriteset_MU_purchase,   "gfx/El_MUDC.png") {template_purchase(7, 21)}
+spriteset(spriteset_MU_trailer,   "gfx/El_MUDC.png") {template_7(7, 89)}
+
+//Vehicle
+item (FEAT_TRAINS, ITEM_MU_TRAILER) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                ALL_CLIMATES;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+
+        name:                            string(STR_MU_TRAILER);
+        introduction_date:                date(1890,1,1);
+        vehicle_life:                     30;
+        model_life:                        36;
+        length:                            7;
+
+        weight:                         28 ton;
+        speed:                            80 mph;
+        cost_factor:                     7;
+        running_cost_factor:             10;
+
+        refittable_cargo_classes:        bitmask();
+        default_cargo_type:                PASS;
+        cargo_capacity:                    100;
+        loading_speed: 30;
+
+    }
+    graphics {
+        default:                        spriteset_MU_trailer;
+        purchase:                        spriteset_MU_purchase;
+        additional_text: string(STR_MU_TRAILER_INFO);
+
+}
+}
+
+//S Type Passenger Car
+//CC1
+spriteset(spriteset_ICSD_PassCar_SType_Purchase,   "gfx/ICSD_PassCar_SType.png") {template_purchase(7, 21)}
+spriteset(spriteset_ICSD_PassCar_SType,   "gfx/ICSD_PassCar_SType.png") {template_8(7, 39)}
+spriteset(spriteset_ICSD_PassCar_SType_Guard,   "gfx/ICSD_PassCar_SType.png") {template_8(7, 64)}
+
+switch(FEAT_TRAINS, SELF, sw_ICSD_PassCar_SType_guardcheck, position_in_consist_from_end){
+    0 : spriteset_ICSD_PassCar_SType_Guard;
+    return spriteset_ICSD_PassCar_SType;
+}
+
+item (FEAT_TRAINS, item_ICSD_PassCar_SType) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:        CC_PASSENGERS;
+        cargo_allow_refit:                [PASS, TOUR];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        power:                            0 hp;
+        running_cost_base:                RUNNING_COST_NONE;
+        dual_headed:                    0;
+        default_cargo_type:                PASS;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            8;
+        cost_factor:                    1;
+        running_cost_factor:            1;
+        loading_speed:                    10;
+
+//        variant_group: item_ICSD_MeteorPassCar;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_ICSD_PASSCAR_STYPE);
+        introduction_date:                date(1937, 1, 1);
+
+        speed:                            130 km/h;
+        weight:                            45 ton;
+        cargo_capacity:                    64/param_capacity_mod;
+    }
+    graphics {
+    default:                             sw_ICSD_PassCar_SType_guardcheck;
+    purchase:                            spriteset_ICSD_PassCar_SType_Purchase;
+    additional_text: string(STR_INFO_ICSD_PASSCAR_STYPE);
+}
+}
+
+//S Type Mail Car
+//CC1
+spriteset(spriteset_ICSD_MailCar_SType_Purchase,   "gfx/ICSD_PassCar_SType.png") {template_purchase(187, 21)}
+spriteset(spriteset_ICSD_MailCar_SType,   "gfx/ICSD_PassCar_SType.png") {template_8(187, 39)}
+spriteset(spriteset_ICSD_MailCar_SType_Guard,   "gfx/ICSD_PassCar_SType.png") {template_8(187, 64)}
+
+switch(FEAT_TRAINS, SELF, sw_ICSD_MailCar_SType_guardcheck, position_in_consist_from_end){
+    0 : spriteset_ICSD_MailCar_SType_Guard;
+    return spriteset_ICSD_MailCar_SType;
+}
+
+item (FEAT_TRAINS, item_ICSD_MailCar_SType) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:        CC_EXPRESS;
+//        cargo_allow_refit:                [PASS, TOUR];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+        power:                            0 hp;
+        running_cost_base:                RUNNING_COST_NONE;
+        dual_headed:                    0;
+        default_cargo_type:                MAIL;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            8;
+        cost_factor:                    1;
+        running_cost_factor:            1;
+        loading_speed:                    10;
+
+//        variant_group: item_ICSD_MeteorPassCar;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_ICSD_MAILCAR_STYPE);
+        introduction_date:                date(1937, 1, 1);
+
+        speed:                            130 km/h;
+        weight:                            38 ton;
+        cargo_capacity:                    25/param_freight_capacity_mod;
+    }
+    graphics {
+    default:                             sw_ICSD_MailCar_SType_guardcheck;
+    purchase:                            spriteset_ICSD_MailCar_SType_Purchase;
+    additional_text: string(STR_INFO_ICSD_MAILCAR_STYPE);
+}
+}
