@@ -170,15 +170,15 @@ template template_5_r(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x,        y,        8,        29,        -3,            -22]
-    [ x+9,      y,        22,        20,        -10,        -14]
-    [ x+32,     y,        33,        16,        -4,        -12]
-    [ x+66,     y,        22,        20,        -4,            -11]
+    [ x+89,     y,        8,        29,        -3,            -22]
+    [ x+98,     y,        22,        20,        -10,        -14]
+    [ x+121,    y,        33,        16,        -4,        -12]
+    [ x+155,    y,        22,        20,        -4,        -11]
 
-    [ x+89,     y,        8,        29,        -3,            -16]
-    [ x+98,     y,        22,        20,        -16,        -11]
-    [ x+121,    y,        33,        16,        -16,        -12]
-    [ x+155,    y,        22,        20,        -10,        -14]
+    [ x,        y,        8,        29,        -3,            -16]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -10,            -14]
 }
 
 // 6 Template
@@ -10241,7 +10241,7 @@ item(FEAT_TRAINS, Item_PRR_L5_Liv0_Lownose, 35050) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
-        climates_available:                (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+        climates_available:                (param_PrototypeDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
         bitmask_vehicle_info:            0;
         misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
 
@@ -11053,6 +11053,107 @@ item(FEAT_TRAINS, Item_NYC_TMotor_Liv0, 40100) {
 }
 }
 
+sort(FEAT_TRAINS, [Item_NYC_TMotor_Liv0, Item_PRR_DD1_Liv0]);
+
+spriteset(spriteset_PRR_DD1_Jackshaft1,   "gfx/PRR_DD1_Jackshaft1.png") {template_5(7, 39)}
+spriteset(spriteset_PRR_DD1_Jackshaft2,   "gfx/PRR_DD1_Jackshaft2.png") {template_5(7, 39)}
+spriteset(spriteset_PRR_DD1_Jackshaft3,   "gfx/PRR_DD1_Jackshaft3.png") {template_5(7, 39)}
+spriteset(spriteset_PRR_DD1_Jackshaft4,   "gfx/PRR_DD1_Jackshaft4.png") {template_5(7, 39)}
+
+spriteset(spriteset_PRR_DD1_Jackshaft1_r,   "gfx/PRR_DD1_Jackshaft1.png") {template_5_r(7, 39)}
+spriteset(spriteset_PRR_DD1_Jackshaft2_r,   "gfx/PRR_DD1_Jackshaft2.png") {template_5_r(7, 39)}
+spriteset(spriteset_PRR_DD1_Jackshaft3_r,   "gfx/PRR_DD1_Jackshaft3.png") {template_5_r(7, 39)}
+spriteset(spriteset_PRR_DD1_Jackshaft4_r,   "gfx/PRR_DD1_Jackshaft4.png") {template_5_r(7, 39)}
+
+//PRR_DD1_Liv0
+spriteset(spriteset_PRR_DD1_Liv0_Purchase,   "gfx/PRR_DD1_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_DD1_Liv0,   "gfx/PRR_DD1_Liv0.png") {template_5(7, 39)}
+spriteset(spriteset_PRR_DD1_Liv0_r,   "gfx/PRR_DD1_Liv0.png") {template_5_r(7, 39)}
+
+switch(FEAT_TRAINS, SELF, switch_PRR_DD1_Liv0_FWanimation, motion_counter % 4){
+    0: spriteset_PRR_DD1_Jackshaft1;
+    1: spriteset_PRR_DD1_Jackshaft2;
+    2: spriteset_PRR_DD1_Jackshaft3;
+    3: spriteset_PRR_DD1_Jackshaft4;
+    spriteset_PRR_DD1_Jackshaft1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_PRR_DD1_Liv0_FW, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_PRR_DD1_Liv0;
+    1: switch_PRR_DD1_Liv0_FWanimation;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PRR_DD1_Liv0_Ranimation, motion_counter % 4){
+    0: spriteset_PRR_DD1_Jackshaft4_r;
+    1: spriteset_PRR_DD1_Jackshaft3_r;
+    2: spriteset_PRR_DD1_Jackshaft2_r;
+    3: spriteset_PRR_DD1_Jackshaft1_r;
+    spriteset_PRR_DD1_Jackshaft4_r;
+}
+
+switch (FEAT_TRAINS, SELF, switch_PRR_DD1_Liv0_R, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_PRR_DD1_Liv0_r;
+    1: switch_PRR_DD1_Liv0_Ranimation;
+}
+
+switch(FEAT_TRAINS, SELF, switch_PRR_DD1_Liv0_position, position_in_articulated_veh) {
+ 0: switch_PRR_DD1_Liv0_FW;
+ 1: switch_PRR_DD1_Liv0_R;
+}
+
+// Articulated part callback
+switch(FEAT_TRAINS, SELF, switch_PRR_DD1_Liv0_articulated_part, extra_callback_info1) {
+    0..1: return Item_PRR_DD1_Liv0;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, Item_PRR_DD1_Liv0, 2000) {
+    property {
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        refit_cost:                        0;
+        climates_available:                (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+        bitmask_vehicle_info:            0;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+
+        track_type:                        SAA3;
+        running_cost_base:                RUNNING_COST_DIESEL;
+        engine_class:                     ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_CARGO;
+        dual_headed:                    0; // <- Double Headed, so cab on each end
+
+        visual_effect_and_powered: VISUAL_EFFECT_ELECTRIC;
+
+        name:                            string(STR_NAME_PRR_DD1);
+        introduction_date:                date(1914,1,1);
+        vehicle_life:                     50;
+        model_life:                        30;
+        length:                            5;
+
+        weight:                        142 ton;
+        speed:                            85 mph;
+        power:                            3160 hp;
+        tractive_effort_coefficient:     0.7;
+        cost_factor:                     16;
+        running_cost_factor:             105;
+        cargo_capacity:                  0;
+
+//        variant_group: Item_PRR_DD1_Liv0;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: switch_PRR_DD1_Liv0_position;
+        purchase: spriteset_PRR_DD1_Liv0_Purchase;
+        additional_text: string(STR_INFO_PRR_DD1);
+		articulated_part: switch_PRR_DD1_Liv0_articulated_part;
+}
+}
+
 //PRR_L5A_Liv0_Lownose
 spriteset(spriteset_PRR_L5A_Liv0_Lownose_Purchase,   "gfx/PRR_L5A_Liv0.png") {template_purchase(7, 21)}
 spriteset(spriteset_PRR_L5A_Liv0_Lownose,   "gfx/PRR_L5A_Liv0.png") {template_8(7, 39)}
@@ -11098,7 +11199,7 @@ item(FEAT_TRAINS, Item_PRR_L5A_Liv0_Lownose, 40150) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
-        climates_available:                (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+        climates_available:                (param_PrototypeDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
         bitmask_vehicle_info:            0;
         misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
 

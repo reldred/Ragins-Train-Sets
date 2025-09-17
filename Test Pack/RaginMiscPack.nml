@@ -161,15 +161,30 @@ template template_5(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x,        y,        8,        24,        -3,            -22]
+    [ x,        y,        8,        29,        -3,            -22]
     [ x+9,      y,        22,        20,        -10,        -14]
     [ x+32,     y,        33,        16,        -4,        -12]
     [ x+66,     y,        22,        20,        -4,            -11]
 
-    [ x+89,     y,        8,        24,        -3,            -16]
+    [ x+89,     y,        8,        29,        -3,            -16]
     [ x+98,     y,        22,        20,        -16,        -11]
     [ x+121,    y,        33,        16,        -16,        -12]
     [ x+155,    y,        22,        20,        -10,        -14]
+}
+
+template template_5_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89,     y,        8,        29,        -3,            -22]
+    [ x+98,     y,        22,        20,        -10,        -14]
+    [ x+121,    y,        33,        16,        -4,        -12]
+    [ x+155,    y,        22,        20,        -4,        -11]
+
+    [ x,        y,        8,        29,        -3,            -16]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -10,            -14]
 }
 
 // 6 Template
@@ -328,7 +343,7 @@ item (FEAT_TRAINS, Item_4Train) {
 
 //5Train
 spriteset(spriteset_5Train_Purchase,   "gfx/5Train.png") {template_purchase(7, 21)}
-spriteset(spriteset_5Train,   "gfx/5Train.png") {template_5(7, 39)}
+spriteset(spriteset_5Train,   "gfx/5Train.png") {template_5_r(7, 39)}
 
 item (FEAT_TRAINS, Item_5Train) {
     property {
