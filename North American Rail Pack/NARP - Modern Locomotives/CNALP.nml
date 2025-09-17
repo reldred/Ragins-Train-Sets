@@ -10623,6 +10623,7 @@ spriteset(spriteset_GE_Tricab_Liv0_Purchase,   "gfx/GE_Boxcab_Liv0.png") {templa
 
 spriteset(spriteset_GE_Tricab_Liv0_A,   "gfx/GE_Boxcab_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_GE_Tricab_Liv0_B,   "gfx/GE_Boxcab_Liv0.png") {template_6(7, 69)}
+spriteset(spriteset_GE_Tricab_Liv0_B_r,   "gfx/GE_Boxcab_Liv0.png") {template_6_r(7, 69)}
 spriteset(spriteset_GE_Tricab_Liv0_C,   "gfx/GE_Boxcab_Liv0.png") {template_7_r(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_Tricab_Liv0_A_railtype, tile_powers_railtype("ELRL")) {
@@ -10651,10 +10652,15 @@ switch(FEAT_TRAINS, SELF, switch_GE_Tricab_Liv0_length, position_in_vehid_chain 
  1: 6;
  2: 7;
  }
+ 
+ random_switch(FEAT_TRAINS, SELF, switch_GE_Tricab_Liv0_B_Random){
+    1 : spriteset_GE_Tricab_Liv0_B;
+    1 : spriteset_GE_Tricab_Liv0_B_r;
+}
 
 switch(FEAT_TRAINS, SELF, switch_GE_Tricab_Liv0_position, position_in_articulated_veh) {
  0: switch_GE_Tricab_Liv0_A;
- 1: spriteset_GE_Tricab_Liv0_B;
+ 1: switch_GE_Tricab_Liv0_B_Random;
  2: switch_GE_Tricab_Liv0_C;
 }
 
