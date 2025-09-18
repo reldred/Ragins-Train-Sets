@@ -1,7 +1,7 @@
 ##grflangid 0x0
 
 STR_GRF_NAME:North American Rail Pack - Modern Locomotives v3
-STR_GRF_DESCRIPTION:Diesel and electric locomotives from the US, Canada, and Mexico, all in 2cc. Drawn and Coded by Zachary Moore (Ragin1_)
+STR_GRF_DESCRIPTION:Diesel and electric locomotives from the US, Canada, and Mexico, all in 2cc. Drawn and Coded by Zachary Moore (Ragin1_) Sounds effects sourced from UK Renewal Set, Representative UK Train Set & Wikimedia commons.
 
 STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
 STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.

@@ -292,6 +292,147 @@ template template_8_r(x, y) {
     [ x+66,     y,        22,        20,        -4,            -11]
 }
 
+//Generic Diesel
+switch(FEAT_TRAINS, SELF, switch_Generic_Modern_Diesel, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/modern_diesel_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/modern_diesel_idle.wav");
+}
+
+//ALCO Engines
+switch(FEAT_TRAINS, SELF, switch_ALCO_12_244, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_16_567_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_16_567_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_ALCO_16_244, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_16_567_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_16_567_idle.wav");
+}
+
+//EMD Engines
+switch(FEAT_TRAINS, SELF, switch_EMD_12_567, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_16_567_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_16_567_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_16_567, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_16_567_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_16_567_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_12_645, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_16_567_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_16_567_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_16_645, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_16_567_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_16_567_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_20_645, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_16_567_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_16_567_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_12_710, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_12_710_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_12_710_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_16_710, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/EMD_12_710_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/EMD_12_710_idle.wav");
+}
+
+//GE Engines
+switch(FEAT_TRAINS, SELF, switch_GE_7FDL12, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/modern_diesel_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/modern_diesel_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_GE_7FDL16, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : sound("sfx/modern_diesel_run.wav") ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/modern_diesel_idle.wav");
+}
+
+switch(FEAT_TRAINS, PARENT, switch_sfx_gec_run, current_speed){
+	0..16 : sound("sfx/GEC_slow.wav", 70) ;
+	17..26 : sound("sfx/GEC_med.wav", 70) ;
+	sound("sfx/GEC_fast.wav", 70) ;
+}
+
+
+//Electric Locomotives
+switch(FEAT_TRAINS, SELF, switch_Early_Electric_Whistle, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : switch_sfx_gec_run ;	
+	SOUND_EVENT_START         : sound("sfx/gronk_whistle.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/gronk_whistle.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/86_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_Early_Electric_Leslie_A200, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : switch_sfx_gec_run ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/86_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_Early_Electric_Wabco_E2, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : switch_sfx_gec_run ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/86_idle.wav");
+}
+
+switch(FEAT_TRAINS, SELF, switch_Modern_Electric_Horn, getbits(extra_callback_info1, 0, 8)){
+	SOUND_EVENT_RUNNING_16    : switch_sfx_gec_run ;	
+	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_STOPPED       : sound("sfx/86_idle.wav");
+}
+
+
 //EMC_E1_Liv0
 spriteset(spriteset_EMC_E1_Liv0_Purchase,   "gfx/EMC_E1_Liv0.png") {template_purchase(7, 21)}
 
@@ -349,10 +490,11 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv0, 5000) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMC_E1_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMC_E1_Liv0_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv0_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -421,6 +563,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv6, 5006) {
     }
     graphics {
         default: switch_EMC_E1_Liv6_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv6_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -487,6 +630,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv7, 5007) {
     }
     graphics {
         default: switch_EMC_E1_Liv7_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv7_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -553,6 +697,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv8, 5008) {
     }
     graphics {
         default: switch_EMC_E1_Liv8_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv8_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -619,6 +764,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv9, 5009) {
     }
     graphics {
         default: switch_EMC_E1_Liv9_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv9_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -685,6 +831,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv10, 5010) {
     }
     graphics {
         default: switch_EMC_E1_Liv10_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv10_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -751,6 +898,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv11, 5011) {
     }
     graphics {
         default: switch_EMC_E1_Liv11_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv11_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -817,6 +965,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv12, 5012) {
     }
     graphics {
         default: switch_EMC_E1_Liv12_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv12_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -883,6 +1032,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv13, 5013) {
     }
     graphics {
         default: switch_EMC_E1_Liv13_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv13_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -949,6 +1099,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv31, 5031) {
     }
     graphics {
         default: switch_EMC_E1_Liv31_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E1_Liv31_Purchase;
         additional_text: string(STR_INFO_EMC_E1);
 }
@@ -1011,10 +1162,11 @@ item(FEAT_TRAINS, Item_EMC_E3_Liv0, 5100) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMC_E3_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMC_E3_Liv0_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMC_E3_Liv0_Purchase;
         additional_text: string(STR_INFO_EMC_E3);
 }
@@ -1077,10 +1229,11 @@ item(FEAT_TRAINS, Item_EMD_E7_Liv0, 5250) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMD_E7_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMD_E7_Liv0_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMD_E7_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_E7);
 }
@@ -1143,10 +1296,11 @@ item(FEAT_TRAINS, Item_ALCO_PA_Liv0, 5300) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_ALCO_PA_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_ALCO_PA_Liv0_graphics;
+		sound_effect: switch_ALCO_16_244;
         purchase: spriteset_ALCO_PA_Liv0_Purchase;
         additional_text: string(STR_INFO_ALCO_PA);
 }
@@ -1209,10 +1363,11 @@ item(FEAT_TRAINS, Item_EMD_E9_Liv0, 5600) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMD_E9_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMD_E9_Liv0_graphics;
+		sound_effect: switch_EMD_12_567;
         purchase: spriteset_EMD_E9_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_E9);
 }
@@ -1269,10 +1424,11 @@ item(FEAT_TRAINS, Item_EMD_FP45_Liv0, 5800) {
 		cargo_capacity:                  0;
 
 //        variant_group: Item_EMD_FP45_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMD_FP45_Liv0_position;
+		sound_effect: switch_EMD_20_645;
         purchase: spriteset_EMD_FP45_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_FP45);
 }
@@ -1333,6 +1489,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv0, 6000) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv0_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1393,6 +1550,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv6, 6006) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv6_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv6_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1453,6 +1611,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv7, 6007) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv7_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv7_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1513,6 +1672,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv8, 6008) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv8_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv8_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1573,6 +1733,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv9, 6009) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv9_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv9_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1633,6 +1794,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv10, 6010) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv10_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv10_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1753,6 +1915,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv12, 6012) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv12_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv12_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1813,6 +1976,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv13, 6013) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv13_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv13_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1873,6 +2037,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv14, 6014) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv14_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv14_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1933,6 +2098,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv15, 6015) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv15_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv15_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -1993,6 +2159,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv16, 6016) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv16_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv16_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -2052,6 +2219,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv17, 6017) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv17_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv17_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -2112,6 +2280,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv18, 6018) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv18_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv18_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -2172,6 +2341,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv19, 6019) {
     }
     graphics {
         default: switch_EMD_SDP40F_Liv19_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_SDP40F_Liv19_Purchase;
         additional_text: string(STR_INFO_EMD_SDP40F);
 }
@@ -2232,6 +2402,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv0, 6050) {
     }
     graphics {
         default: switch_EMD_F40C_Liv0_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2292,6 +2463,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv1, 6051) {
     }
     graphics {
         default: switch_EMD_F40C_Liv1_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv1_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2352,6 +2524,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv6, 6056) {
     }
     graphics {
         default: switch_EMD_F40C_Liv6_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv6_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2412,6 +2585,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv7, 6057) {
     }
     graphics {
         default: switch_EMD_F40C_Liv7_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv7_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2472,6 +2646,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv8, 6058) {
     }
     graphics {
         default: switch_EMD_F40C_Liv8_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv8_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2532,6 +2707,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv9, 6059) {
     }
     graphics {
         default: switch_EMD_F40C_Liv9_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv9_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2592,6 +2768,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv10, 6060) {
     }
     graphics {
         default: switch_EMD_F40C_Liv10_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv10_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2652,6 +2829,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv11, 6061) {
     }
     graphics {
         default: switch_EMD_F40C_Liv11_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv11_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2712,6 +2890,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv12, 6062) {
     }
     graphics {
         default: switch_EMD_F40C_Liv12_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv12_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2772,6 +2951,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv13, 6063) {
     }
     graphics {
         default: switch_EMD_F40C_Liv13_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv13_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2832,6 +3012,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv14, 6064) {
     }
     graphics {
         default: switch_EMD_F40C_Liv14_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv14_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2892,6 +3073,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv15, 6065) {
     }
     graphics {
         default: switch_EMD_F40C_Liv15_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv15_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -2952,6 +3134,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv16, 6066) {
     }
     graphics {
         default: switch_EMD_F40C_Liv16_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv16_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -3012,6 +3195,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv17, 6067) {
     }
     graphics {
         default: switch_EMD_F40C_Liv17_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv17_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -3072,6 +3256,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv18, 6068) {
     }
     graphics {
         default: switch_EMD_F40C_Liv18_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv18_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -3132,6 +3317,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv19, 6069) {
     }
     graphics {
         default: switch_EMD_F40C_Liv19_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40C_Liv19_Purchase;
         additional_text: string(STR_INFO_EMD_F40C);
 }
@@ -3192,6 +3378,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv0, 6150) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv0_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3252,6 +3439,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv6, 6156) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv6_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv6_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3312,6 +3500,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv7, 6157) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv7_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv7_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3372,6 +3561,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv8, 6158) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv8_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv8_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3432,6 +3622,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv9, 6159) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv9_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv9_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3492,6 +3683,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv10, 6160) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv10_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv10_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3552,6 +3744,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv11, 6161) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv11_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv11_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3612,6 +3805,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv12, 6162) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv12_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv12_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3672,6 +3866,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv13, 6163) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv13_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv13_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3732,6 +3927,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv14, 6164) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv14_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv14_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3792,6 +3988,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv15, 6165) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv15_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv15_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3852,6 +4049,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv16, 6166) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv16_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv16_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3912,6 +4110,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv17, 6167) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv17_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv17_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -3972,6 +4171,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv18, 6168) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv18_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv18_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -4032,6 +4232,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv19, 6168) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv19_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv19_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -4092,6 +4293,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv26, 6176) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv26_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv26_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -4212,6 +4414,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv28, 6178) {
     }
     graphics {
         default: switch_EMD_F40PH_Liv28_position;
+		sound_effect: switch_EMD_16_645;
         purchase: spriteset_EMD_F40PH_Liv28_Purchase;
         additional_text: string(STR_INFO_EMD_F40PH);
 }
@@ -4268,10 +4471,11 @@ item(FEAT_TRAINS, Item_GE_P40DC_Liv0, 6600) {
 		cargo_capacity:                  0;
 
 //        variant_group: Item_GE_P40DC_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_GE_P40DC_Liv0_position;
+		sound_effect: switch_GE_7FDL16;
         purchase: spriteset_GE_P40DC_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_P40DC);
 }
@@ -4332,6 +4536,7 @@ item(FEAT_TRAINS, Item_GE_P42DC_Liv0, 6750) {
     }
     graphics {
         default: switch_GE_P42DC_Liv0_position;
+		sound_effect: switch_GE_7FDL16;
         purchase: spriteset_GE_P42DC_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_P42DC);
 }
@@ -4388,10 +4593,11 @@ item(FEAT_TRAINS, Item_Alstom_PL42AC_Liv0, 6850) {
 		cargo_capacity:                  0;
 
 //        variant_group: Item_Alstom_PL42AC_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_Alstom_PL42AC_Liv0_position;
+		sound_effect: switch_EMD_16_710;
         purchase: spriteset_Alstom_PL42AC_Liv0_Purchase;
         additional_text: string(STR_INFO_ALSTOM_PL42AC);
 }
@@ -4454,10 +4660,11 @@ item(FEAT_TRAINS, Item_EMD_FT_Liv0, 27000) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMD_FT_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMD_FT_Liv0_graphics;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FT_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_FT);
 }
@@ -4520,10 +4727,11 @@ item(FEAT_TRAINS, Item_ALCO_FA_Liv0, 27200) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_ALCO_FA_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_ALCO_FA_Liv0_graphics;
+		sound_effect: switch_ALCO_12_244;
         purchase: spriteset_ALCO_FA_Liv0_Purchase;
         additional_text: string(STR_INFO_ALCO_FA);
 }
@@ -4586,10 +4794,11 @@ item(FEAT_TRAINS, Item_EMD_F3_Liv0, 27100) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMD_F3_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMD_F3_Liv0_graphics;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_F3_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_F3);
 }
@@ -4652,10 +4861,11 @@ item(FEAT_TRAINS, Item_EMD_F7_Liv0, 27300) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMD_F7_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMD_F7_Liv0_graphics;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_F7_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_F7);
 }
@@ -4718,10 +4928,11 @@ item(FEAT_TRAINS, Item_EMD_F9_Liv0, 27350) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMD_F9_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMD_F9_Liv0_graphics;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_F9_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_F9);
 }
@@ -4801,6 +5012,7 @@ item(FEAT_TRAINS, Item_NYC_P1AMotor_Liv0, 29000) {
     }
     graphics {
         default: switch_NYC_P1AMotor_Liv0_position;
+		sound_effect: switch_Early_Electric_Whistle;
         purchase: spriteset_NYC_P1AMotor_Liv0_Purchase;
         additional_text: string(STR_INFO_NYC_P1AMOTOR);
 		reverse_build_probability: return 50;
@@ -4881,6 +5093,7 @@ item(FEAT_TRAINS, Item_PRR_R1_Liv0, 29100) {
     }
     graphics {
         default: switch_PRR_R1_Liv0_position;
+		sound_effect: switch_Early_Electric_Wabco_E2;
         purchase: spriteset_PRR_R1_Liv0_Purchase;
         additional_text: string(STR_INFO_PRR_R1);
 		reverse_build_probability: return 50;
@@ -4961,6 +5174,7 @@ item(FEAT_TRAINS, Item_PRR_GG1_Liv0, 29150) {
     }
     graphics {
         default: switch_PRR_GG1_Liv0_position;
+		sound_effect: switch_Early_Electric_Wabco_E2;
         purchase: spriteset_PRR_GG1_Liv0_Purchase;
         additional_text: string(STR_INFO_PRR_GG1);
 		reverse_build_probability: return 50;
@@ -5041,6 +5255,7 @@ item(FEAT_TRAINS, Item_GE_EP4_Liv0, 29200) {
     }
     graphics {
         default: switch_GE_EP4_Liv0_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_GE_EP4_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_EP4);
 		reverse_build_probability: return 50;
@@ -5117,6 +5332,7 @@ item(FEAT_TRAINS, Item_GE_EP4_Liv35, 29235) {
     }
     graphics {
         default: switch_GE_EP4_Liv35_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_GE_EP4_Liv35_Purchase;
         additional_text: string(STR_INFO_GE_EP4);
 		reverse_build_probability: return 50;
@@ -5197,6 +5413,7 @@ item(FEAT_TRAINS, Item_GE_EP5_Liv0, 29350) {
     }
     graphics {
         default: switch_GE_EP5_Liv0_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_GE_EP5_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_EP5);
 		reverse_build_probability: return 50;
@@ -5277,6 +5494,7 @@ item(FEAT_TRAINS, Item_GE_E60CH_Liv0, 29450) {
     }
     graphics {
         default: switch_GE_E60CH_Liv0_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GE_E60CH_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_E60CH);
 		reverse_build_probability: return 50;
@@ -5357,6 +5575,7 @@ item(FEAT_TRAINS, Item_EMD_AEM7_Liv0, 29600) {
     }
     graphics {
         default: switch_EMD_AEM7_Liv0_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_AEM7_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_AEM7);
 		reverse_build_probability: return 50;
@@ -5437,6 +5656,7 @@ item(FEAT_TRAINS, Item_GE_AGE8_Liv0, 29650) {
     }
     graphics {
         default: switch_GE_AGE8_Liv0_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GE_AGE8_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_AGE8);
 		reverse_build_probability: return 50;
@@ -5567,6 +5787,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv0, 29700) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv0_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv0_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -5689,6 +5910,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv6, 29706) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv6_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv6_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -5811,6 +6033,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv7, 29707) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv7_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv7_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -5933,6 +6156,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv8, 29708) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv8_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv8_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -6055,6 +6279,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv9, 29709) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv9_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv9_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -6177,6 +6402,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv10, 29710) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv10_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv10_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -6299,6 +6525,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv11, 29711) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv11_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv11_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -6421,6 +6648,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv12, 29712) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv12_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv12_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -6543,6 +6771,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv13, 29713) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv13_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv13_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -6665,6 +6894,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv14, 29714) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv14_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv14_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -6787,6 +7017,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv15, 29715) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv15_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv15_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -6909,6 +7140,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv16, 29716) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv16_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv16_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -7031,6 +7263,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv17, 29717) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv17_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv17_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -7153,6 +7386,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv18, 29718) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv18_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv18_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -7275,6 +7509,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv19, 29719) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv19_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv19_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -7397,6 +7632,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv26, 29726) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv26_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv26_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -7519,6 +7755,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv27, 29727) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv27_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv27_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -7641,6 +7878,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv28, 29728) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv28_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv28_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -7763,6 +8001,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv35, 29735) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv35_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv35_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -7885,6 +8124,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv37, 29737) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv37_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv37_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -8007,6 +8247,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv39, 29739) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv39_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv39_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -8129,6 +8370,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv40, 29740) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv40_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv40_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -8251,6 +8493,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv41, 29741) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv41_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv41_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -8373,6 +8616,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv46, 29746) {
     }
     graphics {
         default: switch_EMD_GF6CH_Liv46_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_EMD_GF6CH_Liv46_Purchase;
         additional_text: string(STR_INFO_EMD_GF6CH);
 }
@@ -8448,10 +8692,11 @@ item(FEAT_TRAINS, Item_ABB_ALP44_Liv0, 29750) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_ABB_ALP44_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_ABB_ALP44_Liv0_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_ABB_ALP44_Liv0_Purchase;
         additional_text: string(STR_INFO_ABB_ALP44);
 		reverse_build_probability: return 50;
@@ -8528,10 +8773,11 @@ item(FEAT_TRAINS, Item_Bombardier_HHP8_Liv0, 29850) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_Bombardier_HHP8_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_Bombardier_HHP8_Liv0_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_Bombardier_HHP8_Liv0_Purchase;
         additional_text: string(STR_INFO_BOMBARDIER_HHP8);
 		reverse_build_probability: return 50;
@@ -8608,10 +8854,11 @@ item(FEAT_TRAINS, Item_Bombardier_ALP46_Liv0, 29900) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_Bombardier_ALP46_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_Bombardier_ALP46_Liv0_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_Bombardier_ALP46_Liv0_Purchase;
         additional_text: string(STR_INFO_BOMBARDIER_ALP46);
 		reverse_build_probability: return 50;
@@ -8692,6 +8939,7 @@ item(FEAT_TRAINS, Item_PRR_L6_Liv0, 32100) {
     }
     graphics {
         default: switch_PRR_L6_Liv0_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_PRR_L6_Liv0_Purchase;
         additional_text: string(STR_INFO_PRR_L6);
 		reverse_build_probability: return 50;
@@ -8822,6 +9070,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv0, 32750) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv0_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv0_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -8944,6 +9193,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv6, 32756) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv6_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv6_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9066,6 +9316,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv7, 32757) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv7_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv7_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9188,6 +9439,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv8, 32758) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv8_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv8_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9310,6 +9562,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv9, 32759) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv9_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv9_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9432,6 +9685,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv10, 32760) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv10_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv10_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9554,6 +9808,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv11, 32761) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv11_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv11_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9676,6 +9931,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv12, 32762) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv12_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv12_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9798,6 +10054,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv13, 32763) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv13_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv13_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9920,6 +10177,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv14, 32764) {
     }
     graphics {
         default: switch_GMD_GF6C_Liv14_position;
+		sound_effect: switch_Modern_Electric_Horn;
         purchase: spriteset_GMD_GF6C_Liv14_Purchase;
         additional_text: string(STR_INFO_GMD_GF6C);
 }
@@ -9995,10 +10253,11 @@ item(FEAT_TRAINS, Item_GE_CascadeBoxcab_Liv0, 34950) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_GE_CascadeBoxcab_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_GE_CascadeBoxcab_Liv0_position;
+		sound_effect: switch_Early_Electric_Whistle;
         purchase: spriteset_GE_CascadeBoxcab_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_BOXCAB);
 		reverse_build_probability: return 50;
@@ -10080,10 +10339,11 @@ item(FEAT_TRAINS, Item_GE_Twincab_Liv0, 1550) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_GE_Twincab_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_GE_Twincab_Liv0_position;
+		sound_effect: switch_Early_Electric_Wabco_E2;
         purchase: spriteset_GE_Twincab_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_TWINCAB);
 		articulated_part: switch_GE_Twincab_Liv0_articulated_part;
@@ -10161,10 +10421,11 @@ item(FEAT_TRAINS, Item_GE_Z1A_Liv0, 35000) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_GE_Z1A_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_GE_Z1A_Liv0_position;
+		sound_effect: switch_Early_Electric_Whistle;
         purchase: spriteset_GE_Z1A_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_Z1A);
 		reverse_build_probability: return 50;
@@ -10272,6 +10533,7 @@ item(FEAT_TRAINS, Item_PRR_L5_Liv0_Lownose, 35050) {
     }
     graphics {
         default: switch_PRR_L5_Liv0_Lownose_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_PRR_L5_Liv0_Lownose_Purchase;
         additional_text: string(STR_INFO_PRR_L5_LOWNOSE);
 		reverse_build_probability: return 50;
@@ -10366,6 +10628,7 @@ item(FEAT_TRAINS, Item_PRR_L5_Liv0_Highnose, 35100) {
     }
     graphics {
         default: switch_PRR_L5_Liv0_Highnose_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_PRR_L5_Liv0_Highnose_Purchase;
         additional_text: string(STR_INFO_PRR_L5_HIGHNOSE);
 		reverse_build_probability: return 50;
@@ -10442,10 +10705,11 @@ item(FEAT_TRAINS, Item_Baldwin_Z1_Liv0, 35200) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_Baldwin_Z1_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_Baldwin_Z1_Liv0_position;
+		sound_effect: switch_Early_Electric_Wabco_E2;
         purchase: spriteset_Baldwin_Z1_Liv0_Purchase;
         additional_text: string(STR_INFO_BALDWIN_Z1);
 		reverse_build_probability: return 50;
@@ -10522,10 +10786,11 @@ item(FEAT_TRAINS, Item_GE_Y1_Liv0, 35250) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_GE_Y1_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_GE_Y1_Liv0_position;
+		sound_effect: switch_Early_Electric_Wabco_E2;
         purchase: spriteset_GE_Y1_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_Y1);
 		reverse_build_probability: return 50;
@@ -10606,6 +10871,7 @@ item(FEAT_TRAINS, Item_PRR_O1_Liv0, 35300) {
     }
     graphics {
         default: switch_PRR_O1_Liv0_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_PRR_O1_Liv0_Purchase;
         additional_text: string(STR_INFO_PRR_O1);
 		reverse_build_probability: return 50;
@@ -10701,10 +10967,11 @@ item(FEAT_TRAINS, Item_GE_Tricab_Liv0, 1600) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_GE_Tricab_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_GE_Tricab_Liv0_position;
+		sound_effect: switch_Early_Electric_Wabco_E2;
         purchase: spriteset_GE_Tricab_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_TRICAB);
 		length: switch_GE_Tricab_Liv0_length;
@@ -10797,10 +11064,11 @@ item(FEAT_TRAINS, Item_GE_Quadcab_Liv0, 1650) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_GE_Quadcab_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_GE_Quadcab_Liv0_position;
+		sound_effect: switch_Early_Electric_Wabco_E2;
         purchase: spriteset_GE_Quadcab_Liv0_Purchase;
         additional_text: string(STR_INFO_GE_QUADCAB);
 		length: switch_GE_Quadcab_Liv0_length;
@@ -10883,6 +11151,7 @@ item(FEAT_TRAINS, Item_PRR_P5A_Liv0, 35400) {
     }
     graphics {
         default: switch_PRR_P5A_Liv0_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_PRR_P5A_Liv0_Purchase;
         additional_text: string(STR_INFO_PRR_P5A);
 		reverse_build_probability: return 50;
@@ -10963,6 +11232,7 @@ item(FEAT_TRAINS, Item_PRR_DD2_Liv0, 35500) {
     }
     graphics {
         default: switch_PRR_DD2_Liv0_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_PRR_DD2_Liv0_Purchase;
         additional_text: string(STR_INFO_PRR_DD2);
 		reverse_build_probability: return 50;
@@ -11008,6 +11278,7 @@ item(FEAT_TRAINS, Item_NYC_SMotor_Liv0, 40000) {
     }
     graphics {
         default: spriteset_NYC_SMotor_Liv0;
+		sound_effect: switch_Early_Electric_Whistle;
         purchase: spriteset_NYC_SMotor_Liv0_Purchase;
         additional_text: string(STR_INFO_NYC_SMOTOR);
 		reverse_build_probability: return 50;
@@ -11053,6 +11324,7 @@ item(FEAT_TRAINS, Item_NYC_TMotor_Liv0, 40100) {
     }
     graphics {
         default: spriteset_NYC_TMotor_Liv0;
+		sound_effect: switch_Early_Electric_Whistle;
         purchase: spriteset_NYC_TMotor_Liv0_Purchase;
         additional_text: string(STR_INFO_NYC_TMOTOR);
 		reverse_build_probability: return 50;
@@ -11154,6 +11426,7 @@ item(FEAT_TRAINS, Item_PRR_DD1_Liv0, 2000) {
     }
     graphics {
         default: switch_PRR_DD1_Liv0_position;
+		sound_effect: switch_Early_Electric_Whistle;
         purchase: spriteset_PRR_DD1_Liv0_Purchase;
         additional_text: string(STR_INFO_PRR_DD1);
 		articulated_part: switch_PRR_DD1_Liv0_articulated_part;
@@ -11236,6 +11509,7 @@ item(FEAT_TRAINS, Item_PRR_L5A_Liv0_Lownose, 40150) {
     }
     graphics {
         default: switch_PRR_L5A_Liv0_Lownose_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_PRR_L5A_Liv0_Lownose_Purchase;
         additional_text: string(STR_INFO_PRR_L5A_LOWNOSE);
 		reverse_build_probability: return 50;
@@ -11318,6 +11592,7 @@ item(FEAT_TRAINS, Item_PRR_L5A_Liv0_Highnose, 40200) {
     }
     graphics {
         default: switch_PRR_L5A_Liv0_Highnose_position;
+		sound_effect: switch_Early_Electric_Leslie_A200;
         purchase: spriteset_PRR_L5A_Liv0_Highnose_Purchase;
         additional_text: string(STR_INFO_PRR_L5A_HIGHNOSE);
 		reverse_build_probability: return 50;
@@ -11363,6 +11638,7 @@ item(FEAT_TRAINS, Item_NYC_P2Motor_Liv0, 40450) {
     }
     graphics {
         default: spriteset_NYC_P2Motor_Liv0;
+		sound_effect: switch_Early_Electric_Wabco_E2;
         purchase: spriteset_NYC_P2Motor_Liv0_Purchase;
         additional_text: string(STR_INFO_NYC_P2MOTOR);
 		reverse_build_probability: return 50;
@@ -11458,6 +11734,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv0, 52000) {
     }
     graphics {
         default: switch_EMD_FL9_Liv0_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv0_Purchase;
         power: switch_EMD_FL9_Liv0_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv0_effect_spawn_model_and_powered;
@@ -11552,6 +11829,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv1, 52001) {
     }
     graphics {
         default: switch_EMD_FL9_Liv1_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv1_Purchase;
         power: switch_EMD_FL9_Liv1_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv1_effect_spawn_model_and_powered;
@@ -11646,6 +11924,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv2, 52002) {
     }
     graphics {
         default: switch_EMD_FL9_Liv2_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv2_Purchase;
         power: switch_EMD_FL9_Liv2_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv2_effect_spawn_model_and_powered;
@@ -11740,6 +12019,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv6, 52006) {
     }
     graphics {
         default: switch_EMD_FL9_Liv6_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv6_Purchase;
         power: switch_EMD_FL9_Liv6_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv6_effect_spawn_model_and_powered;
@@ -11834,6 +12114,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv7, 52007) {
     }
     graphics {
         default: switch_EMD_FL9_Liv7_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv7_Purchase;
         power: switch_EMD_FL9_Liv7_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv7_effect_spawn_model_and_powered;
@@ -11928,6 +12209,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv8, 52008) {
     }
     graphics {
         default: switch_EMD_FL9_Liv8_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv8_Purchase;
         power: switch_EMD_FL9_Liv8_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv8_effect_spawn_model_and_powered;
@@ -12022,6 +12304,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv9, 52009) {
     }
     graphics {
         default: switch_EMD_FL9_Liv9_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv9_Purchase;
         power: switch_EMD_FL9_Liv9_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv9_effect_spawn_model_and_powered;
@@ -12116,6 +12399,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv10, 52010) {
     }
     graphics {
         default: switch_EMD_FL9_Liv10_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv10_Purchase;
         power: switch_EMD_FL9_Liv10_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv10_effect_spawn_model_and_powered;
@@ -12210,6 +12494,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv11, 52011) {
     }
     graphics {
         default: switch_EMD_FL9_Liv11_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv11_Purchase;
         power: switch_EMD_FL9_Liv11_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv11_effect_spawn_model_and_powered;
@@ -12304,6 +12589,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv12, 52012) {
     }
     graphics {
         default: switch_EMD_FL9_Liv12_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv12_Purchase;
         power: switch_EMD_FL9_Liv12_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv12_effect_spawn_model_and_powered;
@@ -12398,6 +12684,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv13, 52013) {
     }
     graphics {
         default: switch_EMD_FL9_Liv13_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv13_Purchase;
         power: switch_EMD_FL9_Liv13_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv13_effect_spawn_model_and_powered;
@@ -12492,6 +12779,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv14, 52014) {
     }
     graphics {
         default: switch_EMD_FL9_Liv14_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv14_Purchase;
         power: switch_EMD_FL9_Liv14_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv14_effect_spawn_model_and_powered;
@@ -12586,6 +12874,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv15, 52015) {
     }
     graphics {
         default: switch_EMD_FL9_Liv15_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv15_Purchase;
         power: switch_EMD_FL9_Liv15_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv15_effect_spawn_model_and_powered;
@@ -12680,6 +12969,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv16, 52016) {
     }
     graphics {
         default: switch_EMD_FL9_Liv16_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv16_Purchase;
         power: switch_EMD_FL9_Liv16_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv16_effect_spawn_model_and_powered;
@@ -12774,6 +13064,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv17, 52017) {
     }
     graphics {
         default: switch_EMD_FL9_Liv17_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv17_Purchase;
         power: switch_EMD_FL9_Liv17_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv17_effect_spawn_model_and_powered;
@@ -12868,6 +13159,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv18, 52018) {
     }
     graphics {
         default: switch_EMD_FL9_Liv18_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv18_Purchase;
         power: switch_EMD_FL9_Liv18_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv18_effect_spawn_model_and_powered;
@@ -12962,6 +13254,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv19, 52019) {
     }
     graphics {
         default: switch_EMD_FL9_Liv19_position;
+		sound_effect: switch_EMD_16_567;
         purchase: spriteset_EMD_FL9_Liv19_Purchase;
         power: switch_EMD_FL9_Liv19_power_0;
         visual_effect_and_powered: switch_EMD_FL9_Liv19_effect_spawn_model_and_powered;
@@ -13054,10 +13347,11 @@ item(FEAT_TRAINS, Item_EMD_F39PHDM_Liv0, 52150) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_EMD_F39PHDM_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_EMD_F39PHDM_Liv0_position;
+		sound_effect: switch_EMD_12_645;
         purchase: spriteset_EMD_F39PHDM_Liv0_Purchase;
         power: switch_EMD_F39PHDM_Liv0_power_0;
         visual_effect_and_powered: switch_EMD_F39PHDM_Liv0_effect_spawn_model_and_powered;
@@ -13148,10 +13442,11 @@ item(FEAT_TRAINS, Item_GE_P32AC_Liv0, 52300) {
         cargo_capacity:                  0;
 
 //        variant_group: Item_GE_P32AC_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
         default: switch_GE_P32AC_Liv0_position;
+		sound_effect: switch_GE_7FDL12;
         purchase: spriteset_GE_P32AC_Liv0_Purchase;
         power: switch_GE_P32AC_Liv0_power_0;
         visual_effect_and_powered: switch_GE_P32AC_Liv0_effect_spawn_model_and_powered;
