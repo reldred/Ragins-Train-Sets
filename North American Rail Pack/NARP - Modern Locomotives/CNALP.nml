@@ -410,17 +410,17 @@ switch(FEAT_TRAINS, SELF, switch_Early_Electric_Whistle, getbits(extra_callback_
 
 switch(FEAT_TRAINS, SELF, switch_Early_Electric_Leslie_A200, getbits(extra_callback_info1, 0, 8)){
 	SOUND_EVENT_RUNNING_16    : switch_sfx_gec_run ;	
-	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_START         : sound("sfx/Leslie_A200.wav") ;
 	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
-	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/Leslie_A200.wav") ;
 	SOUND_EVENT_STOPPED       : sound("sfx/86_idle.wav");
 }
 
 switch(FEAT_TRAINS, SELF, switch_Early_Electric_Wabco_E2, getbits(extra_callback_info1, 0, 8)){
 	SOUND_EVENT_RUNNING_16    : switch_sfx_gec_run ;	
-	SOUND_EVENT_START         : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_START         : sound("sfx/WABCO_E2.wav") ;
 	SOUND_EVENT_BREAKDOWN     : SOUND_BREAKDOWN_TRAIN_SHIP ;
-	SOUND_EVENT_TUNNEL        : sound("sfx/US_Horn_1.wav") ;
+	SOUND_EVENT_TUNNEL        : sound("sfx/WABCO_E2.wav") ;
 	SOUND_EVENT_STOPPED       : sound("sfx/86_idle.wav");
 }
 
@@ -8904,7 +8904,7 @@ switch(FEAT_TRAINS, SELF, switch_PRR_L6_Liv0_position, vehicle_is_flipped) {
  1: switch_PRR_L6_Liv0_r;
 }
 
-item(FEAT_TRAINS, Item_PRR_L6_Liv0, 32100) {
+item(FEAT_TRAINS, Item_PRR_L6_Liv0, 32150) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -9035,7 +9035,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv0_position, position_in_consist) {
   switch_GMD_GF6C_Liv0_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv0, 32750) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv0, 32850) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -9158,7 +9158,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv6_position, position_in_consist) {
   switch_GMD_GF6C_Liv6_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv6, 32756) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv6, 32856) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -9281,7 +9281,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv7_position, position_in_consist) {
   switch_GMD_GF6C_Liv7_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv7, 32757) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv7, 32857) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -9404,7 +9404,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv8_position, position_in_consist) {
   switch_GMD_GF6C_Liv8_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv8, 32758) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv8, 32858) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -9527,7 +9527,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv9_position, position_in_consist) {
   switch_GMD_GF6C_Liv9_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv9, 32759) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv9, 32859) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -9650,7 +9650,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv10_position, position_in_consist) {
   switch_GMD_GF6C_Liv10_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv10, 32760) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv10, 32860) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -9773,7 +9773,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv11_position, position_in_consist) {
   switch_GMD_GF6C_Liv11_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv11, 32761) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv11, 32861) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -9896,7 +9896,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv12_position, position_in_consist) {
   switch_GMD_GF6C_Liv12_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv12, 32762) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv12, 32862) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -10019,7 +10019,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv13_position, position_in_consist) {
   switch_GMD_GF6C_Liv13_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv13, 32763) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv13, 32863) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -10142,7 +10142,7 @@ switch(FEAT_TRAINS, SELF, switch_GMD_GF6C_Liv14_position, position_in_consist) {
   switch_GMD_GF6C_Liv14_rear;
 }
 
-item(FEAT_TRAINS, Item_GMD_GF6C_Liv14, 32764) {
+item(FEAT_TRAINS, Item_GMD_GF6C_Liv14, 32864) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -10222,7 +10222,7 @@ switch(FEAT_TRAINS, SELF, switch_GE_CascadeBoxcab_Liv0_position, vehicle_is_flip
  1: switch_GE_CascadeBoxcab_Liv0_r;
 }
 
-item(FEAT_TRAINS, Item_GE_CascadeBoxcab_Liv0, 34950) {
+item(FEAT_TRAINS, Item_GE_CascadeBoxcab_Liv0, 34900) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
