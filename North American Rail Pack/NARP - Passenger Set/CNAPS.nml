@@ -20383,7 +20383,7 @@ item (FEAT_TRAINS, Item_PRR_P70_Liv0, 51000) {
         loading_speed:                    10;
 
 //        variant_group: Item_PRR_P70_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 
         name:                             string(STR_NAME_PRR_P70);
         introduction_date:                date(1907, 1, 1);
@@ -20436,7 +20436,7 @@ item (FEAT_TRAINS, Item_Observation_PRR_P70_Liv0, 51010) {
         loading_speed:                    10;
 
 //        variant_group: Item_Observation_PRR_P70_Liv0;
-        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 
         name:                             string(STR_NAME_OBSERVATION_PRR_P70);
         introduction_date:                date(1907, 1, 1);

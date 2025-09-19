@@ -94,6 +94,10 @@ railtypetable {
     RAIL, SAA3: [ MTRO, SBA3, SCA3, SDA3, "3RDR", "3RDC", MTRO, ELRL], ELRL, IHBA: [SGAA, SGAE, ELRL], TR_UNIVERSAL: [_AAE, RAIL],
 }
 
+cargotable {
+PASS, COAL, MAIL, OIL_, LVST, EOIL, COKE, VBOD, SULP, SASH, MNO2, BOOM, IRON, QLME, PHOS, VPTS, SLAG, PIPE, CASS, NUTS, METL, GOOD, GRAI, WOOD, IORE, STEL, VALU, PAPR, WHEA, FOOD, GOLD, RUBR, FRUT, MAIZ, CORE, WATR, DIAM, SUGR, TOYS, BATT, SWET, TOFF, COLA, CTCD, BUBL, PLST, FZDR, AORE, BEER, BDMT, BRCK, CERA, CERE, CLAY, CMNT, COPR, DYES, ENSP, FERT, FICR, FISH, FMSP, FRVG, GLAS, GRVL, JAVA, LIME, MILK, MNSP, OLSD, PETR, PLAS, POTA, RCYC, RFPR, SAND, SCMT, SGBT, SGCN, TOUR, VEHI, WDPR, WOOL, URAN, YETI, YETY, BEAN, NITR
+}
+
 //Basecost Paramater Variables
 basecost {
  PR_BUILD_VEHICLE_TRAIN: 1 + param_purchase_cost - 4;
@@ -265,15 +269,15 @@ template template_8(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x,        y,        8,        29,        -3,            -16]
-    [ x+9,      y,        22,        20,        -16,        -11]
-    [ x+32,     y,        33,        16,        -16,        -12]
-    [ x+66,     y,        22,        20,        -4,            -11]
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
 
-    [ x+89,     y,        8,        29,        -3,            -16]
-    [ x+98,     y,        22,        20,        -16,        -11]
-    [ x+121,    y,        33,        16,        -16,        -12]
-    [ x+155,    y,        22,        20,        -4,        -11]
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,        -11, ANIM]
 }
 
 template template_8_r(x, y) {
@@ -281,13 +285,150 @@ template template_8_r(x, y) {
     //                            more negative to shift left
     //                                            more negative to shift up
 
-    [ x+89,     y,        8,        29,        -3,            -16]
-    [ x+98,     y,        22,        20,        -16,        -11]
-    [ x+121,    y,        33,        16,        -16,        -12]
-    [ x+155,    y,        22,        20,        -4,        -11]
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,        -11, ANIM]
 
-    [ x,        y,        8,        29,        -3,            -16]
-    [ x+9,      y,        22,        20,        -16,        -11]
-    [ x+32,     y,        33,        16,        -16,        -12]
-    [ x+66,     y,        22,        20,        -4,            -11]
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+}
+
+template template_8_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+}
+
+//Gen5_Boxcar_Base
+spriteset(spriteset_Gen5_Boxcar_Base_Purchase,   "gfx/Gen5_Boxcar_Liv0.png") {template_purchase(7, 21)}
+
+spriteset(spriteset_Gen5_Boxcar_EOTD,   "gfx/Gen5_Boxcar_EOTD.png") {template_8(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_EOTD_r,   "gfx/Gen5_Boxcar_EOTD.png") {template_8_r(7, 39)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv0,   "gfx/Gen5_Boxcar_Liv0.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv0,   "gfx/Gen5_Boxcar_Liv0.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv0,   "gfx/Gen5_Boxcar_Liv0.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv1,   "gfx/Gen5_Boxcar_Liv1.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv1,   "gfx/Gen5_Boxcar_Liv1.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv1,   "gfx/Gen5_Boxcar_Liv1.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv2,   "gfx/Gen5_Boxcar_Liv2.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv2,   "gfx/Gen5_Boxcar_Liv2.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv2,   "gfx/Gen5_Boxcar_Liv2.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv3,   "gfx/Gen5_Boxcar_Liv3.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv3,   "gfx/Gen5_Boxcar_Liv3.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv3,   "gfx/Gen5_Boxcar_Liv3.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv4,   "gfx/Gen5_Boxcar_Liv4.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv4,   "gfx/Gen5_Boxcar_Liv4.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv4,   "gfx/Gen5_Boxcar_Liv4.png") {template_8_repeat(7, 99)}
+
+
+
+ random_switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_Random){
+    1 : spriteset_Gen5_Boxcar_Base_Standard_Liv0;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv0;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv0;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv1;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv1;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv1;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv2;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv2;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv2;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv3;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv3;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv3;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv4;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv4;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv4;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen5_Boxcar_Base_Random;
+    1: spriteset_Gen5_Boxcar_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen5_Boxcar_Base_SpriteStack1;
+    return switch_Gen5_Boxcar_Base_Random;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen5_Boxcar_Base_Random;
+    1: spriteset_Gen5_Boxcar_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen5_Boxcar_Base_SpriteStack2;
+    return switch_Gen5_Boxcar_Base_Random;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_position, vehicle_is_flipped) {
+ 0: switch_Gen5_Boxcar_Base_rearcheck1;
+ 1: switch_Gen5_Boxcar_Base_rearcheck2;
+}
+
+
+item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 8000) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask(CC_EXPRESS,CC_ARMOURED,CC_PIECE_GOODS);
+		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
+		default_cargo_type:				GOOD;
+		cargo_disallow_refit:			[TOUR, LVST];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        power:                            0 hp;
+        dual_headed:                    0;
+        default_cargo_type:                GOOD;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            8;
+        cost_factor:                    80;
+        running_cost_factor:            1;
+        loading_speed:                    5;
+
+//        variant_group: Item_Gen5_Boxcar_Base;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_GEN5_BOXCAR);
+        introduction_date:                date(1955, 1, 1);
+
+        speed:                            80 mph;
+        weight:                            21 ton;
+        cargo_capacity:                    80; // /param_capacity_mod
+    }
+    graphics {
+    default:                             switch_Gen5_Boxcar_Base_position;
+    purchase:                            spriteset_Gen5_Boxcar_Base_Purchase;
+    additional_text: string(STR_INFO_GEN5_BOXCAR);
+}
 }
