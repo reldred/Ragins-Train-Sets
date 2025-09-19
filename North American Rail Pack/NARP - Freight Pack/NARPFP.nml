@@ -337,6 +337,30 @@ spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv4,   "gfx/Gen5_Boxcar_Liv4.png"
 spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv4,   "gfx/Gen5_Boxcar_Liv4.png") {template_8_repeat(7, 69)}
 spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv4,   "gfx/Gen5_Boxcar_Liv4.png") {template_8_repeat(7, 99)}
 
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv5,   "gfx/Gen5_Boxcar_Liv5.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv5,   "gfx/Gen5_Boxcar_Liv5.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv5,   "gfx/Gen5_Boxcar_Liv5.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv6,   "gfx/Gen5_Boxcar_Liv6.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv6,   "gfx/Gen5_Boxcar_Liv6.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv6,   "gfx/Gen5_Boxcar_Liv6.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv7,   "gfx/Gen5_Boxcar_Liv7.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv7,   "gfx/Gen5_Boxcar_Liv7.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv7,   "gfx/Gen5_Boxcar_Liv7.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv8,   "gfx/Gen5_Boxcar_Liv8.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv8,   "gfx/Gen5_Boxcar_Liv8.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv8,   "gfx/Gen5_Boxcar_Liv8.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv9,   "gfx/Gen5_Boxcar_Liv9.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv9,   "gfx/Gen5_Boxcar_Liv9.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv9,   "gfx/Gen5_Boxcar_Liv9.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv10,   "gfx/Gen5_Boxcar_Liv10.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv10,   "gfx/Gen5_Boxcar_Liv10.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv10,   "gfx/Gen5_Boxcar_Liv10.png") {template_8_repeat(7, 99)}
+
 
 
  random_switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_Random){
@@ -355,6 +379,25 @@ spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv4,   "gfx/Gen5_Boxcar_Liv4.png") {
 	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv4;
     1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv4;
 	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv4;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv5;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv5;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv5;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv6;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv6;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv6;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv7;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv7;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv7;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv8;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv8;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv8;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv9;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv9;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv9;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv10;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv10;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv10;
+	
 }
 
 switch (FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_SpriteStack1, [
