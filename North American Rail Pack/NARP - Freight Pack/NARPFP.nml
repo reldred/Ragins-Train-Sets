@@ -361,6 +361,10 @@ spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv10,   "gfx/Gen5_Boxcar_Liv10.pn
 spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv10,   "gfx/Gen5_Boxcar_Liv10.png") {template_8_repeat(7, 69)}
 spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv10,   "gfx/Gen5_Boxcar_Liv10.png") {template_8_repeat(7, 99)}
 
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv11,   "gfx/Gen5_Boxcar_Liv11.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv11,   "gfx/Gen5_Boxcar_Liv11.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv11,   "gfx/Gen5_Boxcar_Liv11.png") {template_8_repeat(7, 99)}
+
 
 
  random_switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_Random){
@@ -397,6 +401,9 @@ spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv10,   "gfx/Gen5_Boxcar_Liv10.png")
 	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv10;
     1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv10;
 	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv10;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv11;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv11;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv11;
 	
 }
 
