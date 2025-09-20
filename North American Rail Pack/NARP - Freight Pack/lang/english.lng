@@ -1,6 +1,6 @@
 ##grflangid 0x0
 
-STR_GRF_NAME:North American Rail Pack - Freight Test Pack v1
+STR_GRF_NAME:North American Rail Pack - Wagons v1
 STR_GRF_DESCRIPTION:Diesel and electric locomotives from the US, Canada, and Mexico, all in 2cc. Drawn and Coded by Zachary Moore (Ragin1_)
 
 STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
@@ -36,6 +36,12 @@ STR_POWER_SOURCE_DIESEL:Diesel
 STR_POWER_SOURCE_ELRL:Overhead Line
 STR_POWER_SOURCE_3RAIL:3rd Rail
 
+STR_NAME_GEN2_BOXCAR:30' Boxcar
+STR_INFO_GEN2_BOXCAR:
+
 STR_NAME_GEN5_BOXCAR:60' Boxcar
 STR_INFO_GEN5_BOXCAR:
+
+STR_NAME_GEN6_HICUBE_BOXCAR:60' Hi-Cube Boxcar
+STR_INFO_GEN6_HICUBE_BOXCAR:
 

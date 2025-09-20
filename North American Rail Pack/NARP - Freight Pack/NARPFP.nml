@@ -185,6 +185,21 @@ template template_5_r(x, y) {
     [ x+155,    y,        22,        20,        -10,        -14]
 }
 
+template template_5_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -22]
+    [ x+9,      y,        22,        20,        -10,        -14]
+    [ x+32,     y,        33,        16,        -4,        -12]
+    [ x+66,     y,        22,        20,        -4,            -11]
+
+    [ x,        y,        8,        29,        -3,            -16]
+    [ x+9,      y,        22,        20,        -16,        -11]
+    [ x+32,     y,        33,        16,        -16,        -12]
+    [ x+66,     y,        22,        20,        -10,        -14]
+}
+
 // 6 Template
 template template_6(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
@@ -311,11 +326,101 @@ template template_8_repeat(x, y) {
     [ x+66,     y,        22,        20,        -4,            -11, ANIM]
 }
 
+spriteset(spriteset_5_Old_EOTD,   "gfx/5_Old_EOTD.png") {template_5(7, 39)}
+spriteset(spriteset_5_Old_EOTD_r,   "gfx/5_Old_EOTD.png") {template_5_r(7, 39)}
+
+spriteset(spriteset_8_Modern_EOTD,   "gfx/Gen5_Boxcar_EOTD.png") {template_8(7, 39)}
+spriteset(spriteset_8_Modern_EOTD_r,   "gfx/Gen5_Boxcar_EOTD.png") {template_8_r(7, 39)}
+
+//Gen2_Boxcar_Base
+spriteset(spriteset_Gen2_Boxcar_Purchase,   "gfx/Gen2_Boxcar_Base0.png") {template_purchase(7, 21)}
+
+spriteset(spriteset_Gen2_Boxcar_Base0,   "gfx/Gen2_Boxcar_Base0.png") {template_5_repeat(7, 39)}
+spriteset(spriteset_Gen2_Boxcar_Base1,   "gfx/Gen2_Boxcar_Base1.png") {template_5_repeat(7, 39)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_Gen2_Boxcar_Random){
+    1 : spriteset_Gen2_Boxcar_Base0;
+	1 : spriteset_Gen2_Boxcar_Base1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2_Boxcar_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen2_Boxcar_Random;
+    1: spriteset_5_Old_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2_Boxcar_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen2_Boxcar_SpriteStack1;
+    return switch_Gen2_Boxcar_Random;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2_Boxcar_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen2_Boxcar_Random;
+    1: spriteset_5_Old_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2_Boxcar_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen2_Boxcar_SpriteStack2;
+    return switch_Gen2_Boxcar_Random;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2_Boxcar_position, vehicle_is_flipped) {
+ 0: switch_Gen2_Boxcar_rearcheck1;
+ 1: switch_Gen2_Boxcar_rearcheck2;
+}
+
+
+item (FEAT_TRAINS, Item_Gen2_Boxcar_Base, 21000) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask(CC_EXPRESS,CC_ARMOURED,CC_PIECE_GOODS);
+		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
+		default_cargo_type:				GOOD;
+		cargo_disallow_refit:			[TOUR, LVST];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        power:                            0 hp;
+        dual_headed:                    0;
+        default_cargo_type:                GOOD;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            5;
+        cost_factor:                    80;
+        running_cost_factor:            1;
+        loading_speed:                    5;
+
+//        variant_group: Item_Gen2_Boxcar_Base;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_GEN2_BOXCAR);
+        introduction_date:                date(1870, 1, 1);
+
+        speed:                            45 mph;
+        weight:                            14 ton;
+        cargo_capacity:                    45; // /param_capacity_mod
+    }
+    graphics {
+    default:                             switch_Gen2_Boxcar_position;
+    purchase:                            spriteset_Gen2_Boxcar_Purchase;
+    additional_text: string(STR_INFO_GEN2_BOXCAR);
+}
+}
+
 //Gen5_Boxcar_Base
 spriteset(spriteset_Gen5_Boxcar_Base_Purchase,   "gfx/Gen5_Boxcar_Liv0.png") {template_purchase(7, 21)}
-
-spriteset(spriteset_Gen5_Boxcar_EOTD,   "gfx/Gen5_Boxcar_EOTD.png") {template_8(7, 39)}
-spriteset(spriteset_Gen5_Boxcar_EOTD_r,   "gfx/Gen5_Boxcar_EOTD.png") {template_8_r(7, 39)}
 
 spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv0,   "gfx/Gen5_Boxcar_Liv0.png") {template_8_repeat(7, 39)}
 spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv0,   "gfx/Gen5_Boxcar_Liv0.png") {template_8_repeat(7, 69)}
@@ -404,7 +509,6 @@ spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv11,   "gfx/Gen5_Boxcar_Liv11.png")
 	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv11;
     1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv11;
 	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv11;
-	
 }
 
 switch (FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_SpriteStack1, [
@@ -412,7 +516,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_SpriteStack1, [
     getbits(extra_callback_info1, 8, 8)
     ]) {
     0: switch_Gen5_Boxcar_Base_Random;
-    1: spriteset_Gen5_Boxcar_EOTD;
+    1: spriteset_8_Modern_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_rearcheck1, position_in_consist_from_end){
@@ -425,7 +529,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_SpriteStack2, [
     getbits(extra_callback_info1, 8, 8)
     ]) {
     0: switch_Gen5_Boxcar_Base_Random;
-    1: spriteset_Gen5_Boxcar_EOTD_r;
+    1: spriteset_8_Modern_EOTD_r;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_rearcheck2, position_in_consist_from_end){
@@ -439,7 +543,7 @@ switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_position, vehicle_is_flipped) 
 }
 
 
-item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 8000) {
+item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 25000) {
     property {
         climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask(CC_EXPRESS,CC_ARMOURED,CC_PIECE_GOODS);
@@ -480,5 +584,104 @@ item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 8000) {
     default:                             switch_Gen5_Boxcar_Base_position;
     purchase:                            spriteset_Gen5_Boxcar_Base_Purchase;
     additional_text: string(STR_INFO_GEN5_BOXCAR);
+}
+}
+
+//Gen6_HiCube_Boxcar_Base
+spriteset(spriteset_Gen6_HiCube_Boxcar_Purchase,   "gfx/Gen6_HiCube_Boxcar_Base0.png") {template_purchase(7, 21)}
+
+spriteset(spriteset_Gen6_HiCube_Boxcar_Base0,   "gfx/Gen6_HiCube_Boxcar_Base0.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen6_HiCube_Boxcar_Base1,   "gfx/Gen6_HiCube_Boxcar_Base1.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen6_HiCube_Boxcar_Base2,   "gfx/Gen6_HiCube_Boxcar_Base2.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen6_HiCube_Boxcar_Base3,   "gfx/Gen6_HiCube_Boxcar_Base3.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen6_HiCube_Boxcar_Base4,   "gfx/Gen6_HiCube_Boxcar_Base4.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen6_HiCube_Boxcar_Base5,   "gfx/Gen6_HiCube_Boxcar_Base5.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen6_HiCube_Boxcar_Base6,   "gfx/Gen6_HiCube_Boxcar_Base6.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen6_HiCube_Boxcar_Base7,   "gfx/Gen6_HiCube_Boxcar_Base7.png") {template_8_repeat(7, 39)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_Gen6_HiCube_Boxcar_Random){
+    1 : spriteset_Gen6_HiCube_Boxcar_Base0;
+	1 : spriteset_Gen6_HiCube_Boxcar_Base1;
+	1 : spriteset_Gen6_HiCube_Boxcar_Base2;
+	1 : spriteset_Gen6_HiCube_Boxcar_Base3;
+	1 : spriteset_Gen6_HiCube_Boxcar_Base4;
+	1 : spriteset_Gen6_HiCube_Boxcar_Base5;
+	1 : spriteset_Gen6_HiCube_Boxcar_Base6;
+	1 : spriteset_Gen6_HiCube_Boxcar_Base7;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6_HiCube_Boxcar_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen6_HiCube_Boxcar_Random;
+    1: spriteset_8_Modern_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6_HiCube_Boxcar_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen6_HiCube_Boxcar_SpriteStack1;
+    return switch_Gen6_HiCube_Boxcar_Random;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6_HiCube_Boxcar_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen6_HiCube_Boxcar_Random;
+    1: spriteset_8_Modern_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6_HiCube_Boxcar_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen6_HiCube_Boxcar_SpriteStack2;
+    return switch_Gen6_HiCube_Boxcar_Random;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6_HiCube_Boxcar_position, vehicle_is_flipped) {
+ 0: switch_Gen6_HiCube_Boxcar_rearcheck1;
+ 1: switch_Gen6_HiCube_Boxcar_rearcheck2;
+}
+
+
+item (FEAT_TRAINS, Item_Gen6_HiCube_Boxcar_Base, 26000) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask(CC_EXPRESS,CC_ARMOURED,CC_PIECE_GOODS);
+		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
+		default_cargo_type:				GOOD;
+		cargo_disallow_refit:			[TOUR, LVST];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        power:                            0 hp;
+        dual_headed:                    0;
+        default_cargo_type:                GOOD;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            8;
+        cost_factor:                    80;
+        running_cost_factor:            1;
+        loading_speed:                    5;
+
+//        variant_group: Item_Gen6_HiCube_Boxcar_Base;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_GEN6_HICUBE_BOXCAR);
+        introduction_date:                date(1990, 1, 1);
+
+        speed:                            80 mph;
+        weight:                            33 ton;
+        cargo_capacity:                    100; // /param_capacity_mod
+    }
+    graphics {
+    default:                             switch_Gen6_HiCube_Boxcar_position;
+    purchase:                            spriteset_Gen6_HiCube_Boxcar_Purchase;
+    additional_text: string(STR_INFO_GEN6_HICUBE_BOXCAR);
 }
 }
