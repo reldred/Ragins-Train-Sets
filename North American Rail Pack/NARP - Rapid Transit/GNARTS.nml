@@ -111,6 +111,174 @@ template template_purchase(x, y) {
 }
 
 
+template template_purchase_4(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -31, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_5(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -33, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_6(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -35, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_7(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -37, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_8(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_44(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_55(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -43, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_66(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -47, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_66mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -33, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_77(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -51, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_77mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -37, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -41, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88xl(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
 // 4 Template
 template template_4(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
@@ -253,7 +421,7 @@ template template_8_r(x, y) {
     [ x+66,     y,        22,        20,        -4,            -11]
 }
 
-spriteset(spriteset_MU_purchase,   "gfx/MU_Carriage.png") {template_purchase(7, 21)}
+spriteset(spriteset_MU_purchase,   "gfx/MU_Carriage.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_MU_trailer,   "gfx/MU_Carriage.png") {template_8(7, 89)}
 
 //Vehicle
@@ -303,7 +471,7 @@ switch(FEAT_TRAINS, SELF, sw_BrooklynGateCar_attach, vehicle_type_id){
 }
 
 //BrooklynGateCar_Liv1
-spriteset(spriteset_BrooklynGateCar_Liv1_Purchase,   "gfx/BrooklynGateCar_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_BrooklynGateCar_Liv1_Purchase,   "gfx/BrooklynGateCar_Liv1.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_BrooklynGateCar_Liv1,   "gfx/BrooklynGateCar_Liv1.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_BrooklynGateCar_Liv1, 1000) {
@@ -353,7 +521,7 @@ item(FEAT_TRAINS, Item_BrooklynGateCar_Liv1, 1000) {
 }
 
 //BrooklynGateCar_Liv2
-spriteset(spriteset_BrooklynGateCar_Liv2_Purchase,   "gfx/BrooklynGateCar_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_BrooklynGateCar_Liv2_Purchase,   "gfx/BrooklynGateCar_Liv2.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_BrooklynGateCar_Liv2,   "gfx/BrooklynGateCar_Liv2.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_BrooklynGateCar_Liv2, 1001) {
@@ -403,7 +571,7 @@ item(FEAT_TRAINS, Item_BrooklynGateCar_Liv2, 1001) {
 }
 
 //BrooklynGateCar_Liv3
-spriteset(spriteset_BrooklynGateCar_Liv3_Purchase,   "gfx/BrooklynGateCar_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_BrooklynGateCar_Liv3_Purchase,   "gfx/BrooklynGateCar_Liv3.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_BrooklynGateCar_Liv3,   "gfx/BrooklynGateCar_Liv3.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_BrooklynGateCar_Liv3, 1002) {
@@ -461,7 +629,7 @@ switch(FEAT_TRAINS, SELF, sw_PressedSteelElCar_attach, vehicle_type_id){
 }
 
 //PressedSteelElCar_Liv1
-spriteset(spriteset_PressedSteelElCar_Liv1_Purchase,   "gfx/PressedSteelElCar_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_PressedSteelElCar_Liv1_Purchase,   "gfx/PressedSteelElCar_Liv1.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_PressedSteelElCar_Liv1,   "gfx/PressedSteelElCar_Liv1.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_PressedSteelElCar_Liv1, 1040) {
@@ -511,7 +679,7 @@ item(FEAT_TRAINS, Item_PressedSteelElCar_Liv1, 1040) {
 }
 
 //PressedSteelElCar_Liv2
-spriteset(spriteset_PressedSteelElCar_Liv2_Purchase,   "gfx/PressedSteelElCar_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_PressedSteelElCar_Liv2_Purchase,   "gfx/PressedSteelElCar_Liv2.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_PressedSteelElCar_Liv2,   "gfx/PressedSteelElCar_Liv2.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_PressedSteelElCar_Liv2, 1041) {
@@ -561,7 +729,7 @@ item(FEAT_TRAINS, Item_PressedSteelElCar_Liv2, 1041) {
 }
 
 //PressedSteelElCar_Liv3
-spriteset(spriteset_PressedSteelElCar_Liv3_Purchase,   "gfx/PressedSteelElCar_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_PressedSteelElCar_Liv3_Purchase,   "gfx/PressedSteelElCar_Liv3.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_PressedSteelElCar_Liv3,   "gfx/PressedSteelElCar_Liv3.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_PressedSteelElCar_Liv3, 1042) {
@@ -611,7 +779,7 @@ item(FEAT_TRAINS, Item_PressedSteelElCar_Liv3, 1042) {
 }
 
 //PressedSteelElCar_Liv4
-spriteset(spriteset_PressedSteelElCar_Liv4_Purchase,   "gfx/PressedSteelElCar_Liv4.png") {template_purchase(7, 21)}
+spriteset(spriteset_PressedSteelElCar_Liv4_Purchase,   "gfx/PressedSteelElCar_Liv4.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_PressedSteelElCar_Liv4,   "gfx/PressedSteelElCar_Liv4.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_PressedSteelElCar_Liv4, 1043) {
@@ -667,7 +835,7 @@ switch(FEAT_TRAINS, SELF, sw_4000Series_attach, vehicle_type_id){
 }
 
 //4000Series_Liv1
-spriteset(spriteset_4000Series_Liv1_Purchase,   "gfx/4000Series_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_4000Series_Liv1_Purchase,   "gfx/4000Series_Liv1.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_4000Series_Liv1,   "gfx/4000Series_Liv1.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_4000Series_Liv1, 1120) {
@@ -717,7 +885,7 @@ item(FEAT_TRAINS, Item_4000Series_Liv1, 1120) {
 }
 
 //4000Series_Liv2
-spriteset(spriteset_4000Series_Liv2_Purchase,   "gfx/4000Series_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_4000Series_Liv2_Purchase,   "gfx/4000Series_Liv2.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_4000Series_Liv2,   "gfx/4000Series_Liv2.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_4000Series_Liv2, 1121) {
@@ -775,7 +943,7 @@ switch(FEAT_TRAINS, SELF, sw_QueensCar_attach, vehicle_type_id){
 }
 
 //QueensCar_BRT
-spriteset(spriteset_QueensCar_BRT_Purchase,   "gfx/QueensCar_BRT.png") {template_purchase(7, 21)}
+spriteset(spriteset_QueensCar_BRT_Purchase,   "gfx/QueensCar_BRT.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_QueensCar_BRT_Lead,   "gfx/QueensCar_BRT.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_QueensCar_BRT_Rear,   "gfx/QueensCar_BRT.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_QueensCar_BRT_Trailer,   "gfx/QueensCar_BRT.png") {template_8(7, 89)}
@@ -840,7 +1008,7 @@ item(FEAT_TRAINS, Item_QueensCar_BRT, 1321) {
 }
 
 //QueensCar_TwoTone
-spriteset(spriteset_QueensCar_TwoTone_Purchase,   "gfx/QueensCar_TwoTone.png") {template_purchase(7, 21)}
+spriteset(spriteset_QueensCar_TwoTone_Purchase,   "gfx/QueensCar_TwoTone.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_QueensCar_TwoTone_Lead,   "gfx/QueensCar_TwoTone.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_QueensCar_TwoTone_Rear,   "gfx/QueensCar_TwoTone.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_QueensCar_TwoTone_Trailer,   "gfx/QueensCar_TwoTone.png") {template_8(7, 89)}
@@ -905,7 +1073,7 @@ item(FEAT_TRAINS, Item_QueensCar_TwoTone, 1322) {
 }
 
 //QueensCar_Stripe
-spriteset(spriteset_QueensCar_Stripe_Purchase,   "gfx/QueensCar_Stripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_QueensCar_Stripe_Purchase,   "gfx/QueensCar_Stripe.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_QueensCar_Stripe_Lead,   "gfx/QueensCar_Stripe.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_QueensCar_Stripe_Rear,   "gfx/QueensCar_Stripe.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_QueensCar_Stripe_Trailer,   "gfx/QueensCar_Stripe.png") {template_8(7, 89)}
@@ -979,7 +1147,7 @@ switch(FEAT_TRAINS, SELF, sw_SLCC_5000Series_attach, vehicle_type_id){
 }
 
 //SLCC_5000Series_CRTC
-spriteset(spriteset_SLCC_5000Series_CRTC_Purchase,   "gfx/SLCC_5000Series_CRTC.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_5000Series_CRTC_Purchase,   "gfx/SLCC_5000Series_CRTC.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_5000Series_CRTC_Lead,   "gfx/SLCC_5000Series_CRTC.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_5000Series_CRTC_Rear,   "gfx/SLCC_5000Series_CRTC.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_5000Series_CRTC_Trailer,   "gfx/SLCC_5000Series_CRTC.png") {template_8(7, 89)}
@@ -1044,7 +1212,7 @@ item(FEAT_TRAINS, Item_SLCC_5000Series_CRTC, 1401) {
 }
 
 //SLCC_5000Series_TwoTone
-spriteset(spriteset_SLCC_5000Series_TwoTone_Purchase,   "gfx/SLCC_5000Series_TwoTone.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_5000Series_TwoTone_Purchase,   "gfx/SLCC_5000Series_TwoTone.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_5000Series_TwoTone_Lead,   "gfx/SLCC_5000Series_TwoTone.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_5000Series_TwoTone_Rear,   "gfx/SLCC_5000Series_TwoTone.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_5000Series_TwoTone_Trailer,   "gfx/SLCC_5000Series_TwoTone.png") {template_8(7, 89)}
@@ -1109,7 +1277,7 @@ item(FEAT_TRAINS, Item_SLCC_5000Series_TwoTone, 1402) {
 }
 
 //SLCC_5000Series_RedandBlue1
-spriteset(spriteset_SLCC_5000Series_RedandBlue1_Purchase,   "gfx/SLCC_5000Series_RedandBlue1.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_5000Series_RedandBlue1_Purchase,   "gfx/SLCC_5000Series_RedandBlue1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_5000Series_RedandBlue1_Lead,   "gfx/SLCC_5000Series_RedandBlue1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_5000Series_RedandBlue1_Rear,   "gfx/SLCC_5000Series_RedandBlue1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_5000Series_RedandBlue1_Trailer,   "gfx/SLCC_5000Series_RedandBlue1.png") {template_8(7, 89)}
@@ -1174,7 +1342,7 @@ item(FEAT_TRAINS, Item_SLCC_5000Series_RedandBlue1, 1403) {
 }
 
 //SLCC_5000Series_RedandBlue2
-spriteset(spriteset_SLCC_5000Series_RedandBlue2_Purchase,   "gfx/SLCC_5000Series_RedandBlue2.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_5000Series_RedandBlue2_Purchase,   "gfx/SLCC_5000Series_RedandBlue2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_5000Series_RedandBlue2_Lead,   "gfx/SLCC_5000Series_RedandBlue2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_5000Series_RedandBlue2_Rear,   "gfx/SLCC_5000Series_RedandBlue2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_5000Series_RedandBlue2_Trailer,   "gfx/SLCC_5000Series_RedandBlue2.png") {template_8(7, 89)}
@@ -1256,7 +1424,7 @@ switch(FEAT_TRAINS, SELF, sw_CTA_Metal_attach, vehicle_type_id){
 }
 
 //SLCC_6000Series_Liv1
-spriteset(spriteset_SLCC_6000Series_Liv1_Purchase,   "gfx/SLCC_6000Series_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_6000Series_Liv1_Purchase,   "gfx/SLCC_6000Series_Liv1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_6000Series_Liv1_Lead,   "gfx/SLCC_6000Series_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_6000Series_Liv1_Rear,   "gfx/SLCC_6000Series_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_6000Series_Liv1_Trailer,   "gfx/SLCC_6000Series_Liv1.png") {template_8(7, 89)}
@@ -1321,7 +1489,7 @@ item(FEAT_TRAINS, Item_SLCC_6000Series_Liv1, 1501) {
 }
 
 //SLCC_6000Series_Liv2
-spriteset(spriteset_SLCC_6000Series_Liv2_Purchase,   "gfx/SLCC_6000Series_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_6000Series_Liv2_Purchase,   "gfx/SLCC_6000Series_Liv2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_6000Series_Liv2_Lead,   "gfx/SLCC_6000Series_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_6000Series_Liv2_Rear,   "gfx/SLCC_6000Series_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_6000Series_Liv2_Trailer,   "gfx/SLCC_6000Series_Liv2.png") {template_8(7, 89)}
@@ -1386,7 +1554,7 @@ item(FEAT_TRAINS, Item_SLCC_6000Series_Liv2, 1502) {
 }
 
 //SLCC_6000Series_Liv3
-spriteset(spriteset_SLCC_6000Series_Liv3_Purchase,   "gfx/SLCC_6000Series_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_6000Series_Liv3_Purchase,   "gfx/SLCC_6000Series_Liv3.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_6000Series_Liv3_Lead,   "gfx/SLCC_6000Series_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_6000Series_Liv3_Rear,   "gfx/SLCC_6000Series_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_6000Series_Liv3_Trailer,   "gfx/SLCC_6000Series_Liv3.png") {template_8(7, 89)}
@@ -1451,7 +1619,7 @@ item(FEAT_TRAINS, Item_SLCC_6000Series_Liv3, 1503) {
 }
 
 //SLCC_6000Series_RedandBlue1
-spriteset(spriteset_SLCC_6000Series_RedandBlue1_Purchase,   "gfx/SLCC_6000Series_RedandBlue1.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_6000Series_RedandBlue1_Purchase,   "gfx/SLCC_6000Series_RedandBlue1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_6000Series_RedandBlue1_Lead,   "gfx/SLCC_6000Series_RedandBlue1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_6000Series_RedandBlue1_Rear,   "gfx/SLCC_6000Series_RedandBlue1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_6000Series_RedandBlue1_Trailer,   "gfx/SLCC_6000Series_RedandBlue1.png") {template_8(7, 89)}
@@ -1516,7 +1684,7 @@ item(FEAT_TRAINS, Item_SLCC_6000Series_RedandBlue1, 1504) {
 }
 
 //SLCC_6000Series_RedandBlue2
-spriteset(spriteset_SLCC_6000Series_RedandBlue2_Purchase,   "gfx/SLCC_6000Series_RedandBlue2.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_6000Series_RedandBlue2_Purchase,   "gfx/SLCC_6000Series_RedandBlue2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_6000Series_RedandBlue2_Lead,   "gfx/SLCC_6000Series_RedandBlue2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_6000Series_RedandBlue2_Rear,   "gfx/SLCC_6000Series_RedandBlue2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_6000Series_RedandBlue2_Trailer,   "gfx/SLCC_6000Series_RedandBlue2.png") {template_8(7, 89)}
@@ -1581,7 +1749,7 @@ item(FEAT_TRAINS, Item_SLCC_6000Series_RedandBlue2, 1505) {
 }
 
 //SLCC_6000Series_SEPTA
-spriteset(spriteset_SLCC_6000Series_SEPTA_Purchase,   "gfx/SLCC_6000Series_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_6000Series_SEPTA_Purchase,   "gfx/SLCC_6000Series_SEPTA.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_SLCC_6000Series_SEPTA_Lead,   "gfx/SLCC_6000Series_SEPTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_6000Series_SEPTA_Rear,   "gfx/SLCC_6000Series_SEPTA.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_6000Series_SEPTA_Trailer,   "gfx/SLCC_6000Series_SEPTA.png") {template_8(7, 89)}
@@ -1653,7 +1821,7 @@ switch(FEAT_TRAINS, SELF, sw_Pullman_MBTACars_Orange_attach, vehicle_type_id){
 }
 
 //Pullman_MBTACars_Liv1_Orange
-spriteset(spriteset_Pullman_MBTACars_Liv1_Orange_Purchase,   "gfx/Pullman_MBTACars_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_MBTACars_Liv1_Orange_Purchase,   "gfx/Pullman_MBTACars_Liv1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Pullman_MBTACars_Liv1_Orange_Lead,   "gfx/Pullman_MBTACars_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_MBTACars_Liv1_Orange_Rear,   "gfx/Pullman_MBTACars_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_MBTACars_Liv1_Orange_Trailer,   "gfx/Pullman_MBTACars_Liv1.png") {template_8(7, 89)}
@@ -1718,7 +1886,7 @@ item(FEAT_TRAINS, Item_Pullman_MBTACars_Liv1_Orange, 1540) {
 }
 
 //Pullman_MBTACars_Liv2_Orange
-spriteset(spriteset_Pullman_MBTACars_Liv2_Orange_Purchase,   "gfx/Pullman_MBTACars_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_MBTACars_Liv2_Orange_Purchase,   "gfx/Pullman_MBTACars_Liv2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Pullman_MBTACars_Liv2_Orange_Lead,   "gfx/Pullman_MBTACars_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_MBTACars_Liv2_Orange_Rear,   "gfx/Pullman_MBTACars_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_MBTACars_Liv2_Orange_Trailer,   "gfx/Pullman_MBTACars_Liv2.png") {template_8(7, 89)}
@@ -1783,7 +1951,7 @@ item(FEAT_TRAINS, Item_Pullman_MBTACars_Liv2_Orange, 1541) {
 }
 
 //150Series_Liv1
-spriteset(spriteset_SLCC_150Series_Liv1_Purchase,   "gfx/SLCC_6000Series_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_150Series_Liv1_Purchase,   "gfx/SLCC_6000Series_Liv1.png") {template_purchase_7(187, 21)}
 spriteset(spriteset_SLCC_150Series_Liv1,   "gfx/SLCC_6000Series_Liv1.png") {template_7(187, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_150Series_Liv1, 1601) {
@@ -1833,7 +2001,7 @@ item(FEAT_TRAINS, Item_SLCC_150Series_Liv1, 1601) {
 }
 
 //150Series_Liv2
-spriteset(spriteset_SLCC_150Series_Liv2_Purchase,   "gfx/SLCC_6000Series_Liv2.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_150Series_Liv2_Purchase,   "gfx/SLCC_6000Series_Liv2.png") {template_purchase_7(187, 21)}
 spriteset(spriteset_SLCC_150Series_Liv2,   "gfx/SLCC_6000Series_Liv2.png") {template_7(187, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_150Series_Liv2, 1602) {
@@ -1883,7 +2051,7 @@ item(FEAT_TRAINS, Item_SLCC_150Series_Liv2, 1602) {
 }
 
 //150Series_Liv3
-spriteset(spriteset_SLCC_150Series_Liv3_Purchase,   "gfx/SLCC_6000Series_Liv3.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_150Series_Liv3_Purchase,   "gfx/SLCC_6000Series_Liv3.png") {template_purchase_7(187, 21)}
 spriteset(spriteset_SLCC_150Series_Liv3,   "gfx/SLCC_6000Series_Liv3.png") {template_7(187, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_150Series_Liv3, 1603) {
@@ -1933,7 +2101,7 @@ item(FEAT_TRAINS, Item_SLCC_150Series_Liv3, 1603) {
 }
 
 //150Series_RedandBlue1
-spriteset(spriteset_SLCC_150Series_RedandBlue1_Purchase,   "gfx/SLCC_6000Series_RedandBlue1.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_150Series_RedandBlue1_Purchase,   "gfx/SLCC_6000Series_RedandBlue1.png") {template_purchase_7(187, 21)}
 spriteset(spriteset_SLCC_150Series_RedandBlue1,   "gfx/SLCC_6000Series_RedandBlue1.png") {template_7(187, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_150Series_RedandBlue1, 1604) {
@@ -1983,7 +2151,7 @@ item(FEAT_TRAINS, Item_SLCC_150Series_RedandBlue1, 1604) {
 }
 
 //150Series_RedandBlue2
-spriteset(spriteset_SLCC_150Series_RedandBlue2_Purchase,   "gfx/SLCC_6000Series_RedandBlue2.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_150Series_RedandBlue2_Purchase,   "gfx/SLCC_6000Series_RedandBlue2.png") {template_purchase_7(187, 21)}
 spriteset(spriteset_SLCC_150Series_RedandBlue2,   "gfx/SLCC_6000Series_RedandBlue2.png") {template_7(187, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_150Series_RedandBlue2, 1605) {
@@ -2033,7 +2201,7 @@ item(FEAT_TRAINS, Item_SLCC_150Series_RedandBlue2, 1605) {
 }
 
 //150Series_SEPTA
-spriteset(spriteset_SLCC_150Series_SEPTA_Purchase,   "gfx/SLCC_6000Series_SEPTA.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_150Series_SEPTA_Purchase,   "gfx/SLCC_6000Series_SEPTA.png") {template_purchase_7(187, 21)}
 spriteset(spriteset_SLCC_150Series_SEPTA,   "gfx/SLCC_6000Series_SEPTA.png") {template_7(187, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_150Series_SEPTA, 1606) {
@@ -2092,7 +2260,7 @@ switch(FEAT_TRAINS, SELF, sw_Pullman_2000Series_attach, vehicle_type_id){
 }
 
 //Pullman_2000Series_TwoTone
-spriteset(spriteset_Pullman_2000Series_TwoTone_Purchase,   "gfx/Pullman_2000Series_TwoTone.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_2000Series_TwoTone_Purchase,   "gfx/Pullman_2000Series_TwoTone.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Pullman_2000Series_TwoTone_Lead,   "gfx/Pullman_2000Series_TwoTone.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_2000Series_TwoTone_Rear,   "gfx/Pullman_2000Series_TwoTone.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_2000Series_TwoTone_Trailer,   "gfx/Pullman_2000Series_TwoTone.png") {template_8(7, 89)}
@@ -2157,7 +2325,7 @@ item(FEAT_TRAINS, Item_Pullman_2000Series_TwoTone, 1641) {
 }
 
 //Pullman_2000Series_RedandBlue1
-spriteset(spriteset_Pullman_2000Series_RedandBlue1_Purchase,   "gfx/Pullman_2000Series_RedandBlue1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_2000Series_RedandBlue1_Purchase,   "gfx/Pullman_2000Series_RedandBlue1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Pullman_2000Series_RedandBlue1_Lead,   "gfx/Pullman_2000Series_RedandBlue1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_2000Series_RedandBlue1_Rear,   "gfx/Pullman_2000Series_RedandBlue1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_2000Series_RedandBlue1_Trailer,   "gfx/Pullman_2000Series_RedandBlue1.png") {template_8(7, 89)}
@@ -2222,7 +2390,7 @@ item(FEAT_TRAINS, Item_Pullman_2000Series_RedandBlue1, 1642) {
 }
 
 //Pullman_2000Series_RedandBlue2
-spriteset(spriteset_Pullman_2000Series_RedandBlue2_Purchase,   "gfx/Pullman_2000Series_RedandBlue2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_2000Series_RedandBlue2_Purchase,   "gfx/Pullman_2000Series_RedandBlue2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Pullman_2000Series_RedandBlue2_Lead,   "gfx/Pullman_2000Series_RedandBlue2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_2000Series_RedandBlue2_Rear,   "gfx/Pullman_2000Series_RedandBlue2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_2000Series_RedandBlue2_Trailer,   "gfx/Pullman_2000Series_RedandBlue2.png") {template_8(7, 89)}
@@ -2287,7 +2455,7 @@ item(FEAT_TRAINS, Item_Pullman_2000Series_RedandBlue2, 1643) {
 }
 
 //Pullman_2000Series_Dark
-spriteset(spriteset_Pullman_2000Series_Dark_Purchase,   "gfx/Pullman_2000Series_Dark.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_2000Series_Dark_Purchase,   "gfx/Pullman_2000Series_Dark.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Pullman_2000Series_Dark_Lead,   "gfx/Pullman_2000Series_Dark.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_2000Series_Dark_Rear,   "gfx/Pullman_2000Series_Dark.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_2000Series_Dark_Trailer,   "gfx/Pullman_2000Series_Dark.png") {template_8(7, 89)}
@@ -2361,7 +2529,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_2200Series_attach, vehicle_type_id){
 }
 
 //Budd_2200Series_Silver
-spriteset(spriteset_Budd_2200Series_Silver_Purchase,   "gfx/Budd_2200Series_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2200Series_Silver_Purchase,   "gfx/Budd_2200Series_Silver.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2200Series_Silver_Lead,   "gfx/Budd_2200Series_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2200Series_Silver_Rear,   "gfx/Budd_2200Series_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2200Series_Silver_Trailer,   "gfx/Budd_2200Series_Silver.png") {template_8(7, 89)}
@@ -2426,7 +2594,7 @@ item(FEAT_TRAINS, Item_Budd_2200Series_Silver, 1681) {
 }
 
 //Budd_2200Series_Liv1
-spriteset(spriteset_Budd_2200Series_Liv1_Purchase,   "gfx/Budd_2200Series_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2200Series_Liv1_Purchase,   "gfx/Budd_2200Series_Liv1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2200Series_Liv1_Lead,   "gfx/Budd_2200Series_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2200Series_Liv1_Rear,   "gfx/Budd_2200Series_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2200Series_Liv1_Trailer,   "gfx/Budd_2200Series_Liv1.png") {template_8(7, 89)}
@@ -2491,7 +2659,7 @@ item(FEAT_TRAINS, Item_Budd_2200Series_Liv1, 1682) {
 }
 
 //Budd_2200Series_Liv2
-spriteset(spriteset_Budd_2200Series_Liv2_Purchase,   "gfx/Budd_2200Series_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2200Series_Liv2_Purchase,   "gfx/Budd_2200Series_Liv2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2200Series_Liv2_Lead,   "gfx/Budd_2200Series_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2200Series_Liv2_Rear,   "gfx/Budd_2200Series_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2200Series_Liv2_Trailer,   "gfx/Budd_2200Series_Liv2.png") {template_8(7, 89)}
@@ -2556,7 +2724,7 @@ item(FEAT_TRAINS, Item_Budd_2200Series_Liv2, 1683) {
 }
 
 //Budd_2200Series_Liv3
-spriteset(spriteset_Budd_2200Series_Liv3_Purchase,   "gfx/Budd_2200Series_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2200Series_Liv3_Purchase,   "gfx/Budd_2200Series_Liv3.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2200Series_Liv3_Lead,   "gfx/Budd_2200Series_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2200Series_Liv3_Rear,   "gfx/Budd_2200Series_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2200Series_Liv3_Trailer,   "gfx/Budd_2200Series_Liv3.png") {template_8(7, 89)}
@@ -2631,7 +2799,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_2600Series_attach, vehicle_type_id){
 }
 
 //Budd_2600Series_Silver
-spriteset(spriteset_Budd_2600Series_Silver_Purchase,   "gfx/Budd_2600Series_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2600Series_Silver_Purchase,   "gfx/Budd_2600Series_Silver.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2600Series_Silver_Lead,   "gfx/Budd_2600Series_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2600Series_Silver_Rear,   "gfx/Budd_2600Series_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2600Series_Silver_Trailer,   "gfx/Budd_2600Series_Silver.png") {template_8(7, 89)}
@@ -2696,7 +2864,7 @@ item(FEAT_TRAINS, Item_Budd_2600Series_Silver, 1801) {
 }
 
 //Budd_2600Series_RedandBlue
-spriteset(spriteset_Budd_2600Series_RedandBlue_Purchase,   "gfx/Budd_2600Series_RedandBlue.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2600Series_RedandBlue_Purchase,   "gfx/Budd_2600Series_RedandBlue.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2600Series_RedandBlue_Lead,   "gfx/Budd_2600Series_RedandBlue.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2600Series_RedandBlue_Rear,   "gfx/Budd_2600Series_RedandBlue.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2600Series_RedandBlue_Trailer,   "gfx/Budd_2600Series_RedandBlue.png") {template_8(7, 89)}
@@ -2761,7 +2929,7 @@ item(FEAT_TRAINS, Item_Budd_2600Series_RedandBlue, 1802) {
 }
 
 //Budd_2600Series_Liv1
-spriteset(spriteset_Budd_2600Series_Liv1_Purchase,   "gfx/Budd_2600Series_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2600Series_Liv1_Purchase,   "gfx/Budd_2600Series_Liv1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2600Series_Liv1_Lead,   "gfx/Budd_2600Series_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2600Series_Liv1_Rear,   "gfx/Budd_2600Series_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2600Series_Liv1_Trailer,   "gfx/Budd_2600Series_Liv1.png") {template_8(7, 89)}
@@ -2826,7 +2994,7 @@ item(FEAT_TRAINS, Item_Budd_2600Series_Liv1, 1803) {
 }
 
 //Budd_2600Series_Liv2
-spriteset(spriteset_Budd_2600Series_Liv2_Purchase,   "gfx/Budd_2600Series_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2600Series_Liv2_Purchase,   "gfx/Budd_2600Series_Liv2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2600Series_Liv2_Lead,   "gfx/Budd_2600Series_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2600Series_Liv2_Rear,   "gfx/Budd_2600Series_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2600Series_Liv2_Trailer,   "gfx/Budd_2600Series_Liv2.png") {template_8(7, 89)}
@@ -2891,7 +3059,7 @@ item(FEAT_TRAINS, Item_Budd_2600Series_Liv2, 1804) {
 }
 
 //Budd_2600Series_Liv3
-spriteset(spriteset_Budd_2600Series_Liv3_Purchase,   "gfx/Budd_2600Series_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_2600Series_Liv3_Purchase,   "gfx/Budd_2600Series_Liv3.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Budd_2600Series_Liv3_Lead,   "gfx/Budd_2600Series_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_2600Series_Liv3_Rear,   "gfx/Budd_2600Series_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_2600Series_Liv3_Trailer,   "gfx/Budd_2600Series_Liv3.png") {template_8(7, 89)}
@@ -2965,7 +3133,7 @@ switch(FEAT_TRAINS, SELF, sw_MK_3200Series_attach, vehicle_type_id){
 }
 
 //MK_3200Series_Silver
-spriteset(spriteset_MK_3200Series_Silver_Purchase,   "gfx/MK_3200Series_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_MK_3200Series_Silver_Purchase,   "gfx/MK_3200Series_Silver.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_MK_3200Series_Silver_Lead,   "gfx/MK_3200Series_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_MK_3200Series_Silver_Rear,   "gfx/MK_3200Series_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_MK_3200Series_Silver_Trailer,   "gfx/MK_3200Series_Silver.png") {template_8(7, 89)}
@@ -3030,7 +3198,7 @@ item(FEAT_TRAINS, Item_MK_3200Series_Silver, 1901) {
 }
 
 //MK_3200Series_Liv1
-spriteset(spriteset_MK_3200Series_Liv1_Purchase,   "gfx/MK_3200Series_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_MK_3200Series_Liv1_Purchase,   "gfx/MK_3200Series_Liv1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_MK_3200Series_Liv1_Lead,   "gfx/MK_3200Series_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_MK_3200Series_Liv1_Rear,   "gfx/MK_3200Series_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_MK_3200Series_Liv1_Trailer,   "gfx/MK_3200Series_Liv1.png") {template_8(7, 89)}
@@ -3095,7 +3263,7 @@ item(FEAT_TRAINS, Item_MK_3200Series_Liv1, 1902) {
 }
 
 //MK_3200Series_Liv2
-spriteset(spriteset_MK_3200Series_Liv2_Purchase,   "gfx/MK_3200Series_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_MK_3200Series_Liv2_Purchase,   "gfx/MK_3200Series_Liv2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_MK_3200Series_Liv2_Lead,   "gfx/MK_3200Series_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_MK_3200Series_Liv2_Rear,   "gfx/MK_3200Series_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_MK_3200Series_Liv2_Trailer,   "gfx/MK_3200Series_Liv2.png") {template_8(7, 89)}
@@ -3160,7 +3328,7 @@ item(FEAT_TRAINS, Item_MK_3200Series_Liv2, 1903) {
 }
 
 //MK_3200Series_Liv3
-spriteset(spriteset_MK_3200Series_Liv3_Purchase,   "gfx/MK_3200Series_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_MK_3200Series_Liv3_Purchase,   "gfx/MK_3200Series_Liv3.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_MK_3200Series_Liv3_Lead,   "gfx/MK_3200Series_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_MK_3200Series_Liv3_Rear,   "gfx/MK_3200Series_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_MK_3200Series_Liv3_Trailer,   "gfx/MK_3200Series_Liv3.png") {template_8(7, 89)}
@@ -3235,7 +3403,7 @@ switch(FEAT_TRAINS, SELF, sw_Adtranz_M4_attach, vehicle_type_id){
 }
 
 //Adtranz_M4_Silver
-spriteset(spriteset_Adtranz_M4_Silver_Purchase,   "gfx/Adtranz_M4_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_M4_Silver_Purchase,   "gfx/Adtranz_M4_Silver.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Adtranz_M4_Silver_Lead,   "gfx/Adtranz_M4_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Adtranz_M4_Silver_Rear,   "gfx/Adtranz_M4_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Adtranz_M4_Silver_Trailer,   "gfx/Adtranz_M4_Silver.png") {template_8(7, 89)}
@@ -3300,7 +3468,7 @@ item(FEAT_TRAINS, Item_Adtranz_M4_Silver, 1941) {
 }
 
 //Adtranz_M4_SEPTA
-spriteset(spriteset_Adtranz_M4_SEPTA_Purchase,   "gfx/Adtranz_M4_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_M4_SEPTA_Purchase,   "gfx/Adtranz_M4_SEPTA.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Adtranz_M4_SEPTA_Lead,   "gfx/Adtranz_M4_SEPTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Adtranz_M4_SEPTA_Rear,   "gfx/Adtranz_M4_SEPTA.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Adtranz_M4_SEPTA_Trailer,   "gfx/Adtranz_M4_SEPTA.png") {template_8(7, 89)}
@@ -3365,7 +3533,7 @@ item(FEAT_TRAINS, Item_Adtranz_M4_SEPTA, 1942) {
 }
 
 //Adtranz_M4_Liv1
-spriteset(spriteset_Adtranz_M4_Liv1_Purchase,   "gfx/Adtranz_M4_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_M4_Liv1_Purchase,   "gfx/Adtranz_M4_Liv1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Adtranz_M4_Liv1_Lead,   "gfx/Adtranz_M4_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Adtranz_M4_Liv1_Rear,   "gfx/Adtranz_M4_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Adtranz_M4_Liv1_Trailer,   "gfx/Adtranz_M4_Liv1.png") {template_8(7, 89)}
@@ -3430,7 +3598,7 @@ item(FEAT_TRAINS, Item_Adtranz_M4_Liv1, 1943) {
 }
 
 //Adtranz_M4_Liv2
-spriteset(spriteset_Adtranz_M4_Liv2_Purchase,   "gfx/Adtranz_M4_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_M4_Liv2_Purchase,   "gfx/Adtranz_M4_Liv2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Adtranz_M4_Liv2_Lead,   "gfx/Adtranz_M4_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Adtranz_M4_Liv2_Rear,   "gfx/Adtranz_M4_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Adtranz_M4_Liv2_Trailer,   "gfx/Adtranz_M4_Liv2.png") {template_8(7, 89)}
@@ -3495,7 +3663,7 @@ item(FEAT_TRAINS, Item_Adtranz_M4_Liv2, 1944) {
 }
 
 //Adtranz_M4_Liv3
-spriteset(spriteset_Adtranz_M4_Liv3_Purchase,   "gfx/Adtranz_M4_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_M4_Liv3_Purchase,   "gfx/Adtranz_M4_Liv3.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Adtranz_M4_Liv3_Lead,   "gfx/Adtranz_M4_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Adtranz_M4_Liv3_Rear,   "gfx/Adtranz_M4_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Adtranz_M4_Liv3_Trailer,   "gfx/Adtranz_M4_Liv3.png") {template_8(7, 89)}
@@ -3569,7 +3737,7 @@ switch(FEAT_TRAINS, SELF, sw_CRRC_7000Series_attach, vehicle_type_id){
 }
 
 //CRRC_7000Series_CTA
-spriteset(spriteset_CRRC_7000Series_CTA_Purchase,   "gfx/CRRC_7000Series_CTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_CRRC_7000Series_CTA_Purchase,   "gfx/CRRC_7000Series_CTA.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_CRRC_7000Series_CTA_Lead,   "gfx/CRRC_7000Series_CTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_CRRC_7000Series_CTA_Rear,   "gfx/CRRC_7000Series_CTA.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_CRRC_7000Series_CTA_Trailer,   "gfx/CRRC_7000Series_CTA.png") {template_8(7, 89)}
@@ -3634,7 +3802,7 @@ item(FEAT_TRAINS, Item_CRRC_7000Series_CTA, 2201) {
 }
 
 //CRRC_7000Series_Liv1
-spriteset(spriteset_CRRC_7000Series_Liv1_Purchase,   "gfx/CRRC_7000Series_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_CRRC_7000Series_Liv1_Purchase,   "gfx/CRRC_7000Series_Liv1.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_CRRC_7000Series_Liv1_Lead,   "gfx/CRRC_7000Series_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_CRRC_7000Series_Liv1_Rear,   "gfx/CRRC_7000Series_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_CRRC_7000Series_Liv1_Trailer,   "gfx/CRRC_7000Series_Liv1.png") {template_8(7, 89)}
@@ -3699,7 +3867,7 @@ item(FEAT_TRAINS, Item_CRRC_7000Series_Liv1, 2202) {
 }
 
 //CRRC_7000Series_Liv2
-spriteset(spriteset_CRRC_7000Series_Liv2_Purchase,   "gfx/CRRC_7000Series_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_CRRC_7000Series_Liv2_Purchase,   "gfx/CRRC_7000Series_Liv2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_CRRC_7000Series_Liv2_Lead,   "gfx/CRRC_7000Series_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_CRRC_7000Series_Liv2_Rear,   "gfx/CRRC_7000Series_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_CRRC_7000Series_Liv2_Trailer,   "gfx/CRRC_7000Series_Liv2.png") {template_8(7, 89)}
@@ -3764,7 +3932,7 @@ item(FEAT_TRAINS, Item_CRRC_7000Series_Liv2, 2203) {
 }
 
 //CRRC_7000Series_Liv3
-spriteset(spriteset_CRRC_7000Series_Liv3_Purchase,   "gfx/CRRC_7000Series_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_CRRC_7000Series_Liv3_Purchase,   "gfx/CRRC_7000Series_Liv3.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_CRRC_7000Series_Liv3_Lead,   "gfx/CRRC_7000Series_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_CRRC_7000Series_Liv3_Rear,   "gfx/CRRC_7000Series_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_CRRC_7000Series_Liv3_Trailer,   "gfx/CRRC_7000Series_Liv3.png") {template_8(7, 89)}
@@ -3836,7 +4004,7 @@ switch(FEAT_TRAINS, SELF, sw_Hitachi_M5_attach, vehicle_type_id){
 }
 
 //Hitachi_M5_SEPTA
-spriteset(spriteset_Hitachi_M5_SEPTA_Purchase,   "gfx/Hitachi_M5_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Hitachi_M5_SEPTA_Purchase,   "gfx/Hitachi_M5_SEPTA.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Hitachi_M5_SEPTA_Lead,   "gfx/Hitachi_M5_SEPTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Hitachi_M5_SEPTA_Rear,   "gfx/Hitachi_M5_SEPTA.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Hitachi_M5_SEPTA_Trailer,   "gfx/Hitachi_M5_SEPTA.png") {template_8(7, 89)}
@@ -3901,7 +4069,7 @@ item(FEAT_TRAINS, Item_Hitachi_M5_SEPTA, 2241) {
 }
 
 //Hitachi_M5_SEPTA2
-spriteset(spriteset_Hitachi_M5_SEPTA2_Purchase,   "gfx/Hitachi_M5_SEPTA2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Hitachi_M5_SEPTA2_Purchase,   "gfx/Hitachi_M5_SEPTA2.png") {template_purchase_77mu(7, 21)}
 spriteset(spriteset_Hitachi_M5_SEPTA2_Lead,   "gfx/Hitachi_M5_SEPTA2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Hitachi_M5_SEPTA2_Rear,   "gfx/Hitachi_M5_SEPTA2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Hitachi_M5_SEPTA2_Trailer,   "gfx/Hitachi_M5_SEPTA2.png") {template_8(7, 89)}
@@ -3972,7 +4140,7 @@ switch(FEAT_TRAINS, SELF, sw_NYCEarly_attach, vehicle_type_id){
 }
 
 //Composite_IRT
-spriteset(spriteset_Composite_IRT_Purchase,   "gfx/Composite_IRT.png") {template_purchase(7, 21)}
+spriteset(spriteset_Composite_IRT_Purchase,   "gfx/Composite_IRT.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_Composite_IRT,   "gfx/Composite_IRT.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Composite_IRT, 5000) {
@@ -4022,7 +4190,7 @@ item(FEAT_TRAINS, Item_Composite_IRT, 5000) {
 }
 
 //LoV_IRT
-spriteset(spriteset_LoV_IRT_Purchase,   "gfx/LoV_IRT.png") {template_purchase(7, 21)}
+spriteset(spriteset_LoV_IRT_Purchase,   "gfx/LoV_IRT.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_LoV_IRT,   "gfx/LoV_IRT.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_LoV_IRT, 5020) {
@@ -4078,7 +4246,7 @@ switch(FEAT_TRAINS, SELF, sw_ABStandard_attach, vehicle_type_id){
 }
 
 //ABStandard_Liv1
-spriteset(spriteset_ABStandard_Liv1_Purchase,   "gfx/ABStandard_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_ABStandard_Liv1_Purchase,   "gfx/ABStandard_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_ABStandard_Liv1_Lead,   "gfx/ABStandard_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_ABStandard_Liv1_Rear,   "gfx/ABStandard_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_ABStandard_Liv1_Trailer,   "gfx/ABStandard_Liv1.png") {template_8(7, 89)}
@@ -4149,10 +4317,10 @@ switch(FEAT_TRAINS, SELF, sw_PressedSteel_Triplex_attach, vehicle_type_id){
 }
 
 //PressedSteel_Triplex_Liv1
-spriteset(spriteset_PressedSteel_Triplex_Liv1_Purchase,   "gfx/PressedSteel_Triplex_Liv1.png") {template_purchase(7, 21)}
-spriteset(spriteset_PressedSteel_Triplex_Liv1_Lead,   "gfx/PressedSteel_Triplex_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
-spriteset(spriteset_PressedSteel_Triplex_Liv1_Rear,   "gfx/PressedSteel_Triplex_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
-spriteset(spriteset_PressedSteel_Triplex_Liv1_Trailer,   "gfx/PressedSteel_Triplex_Liv1.png") {template_8(7, 89)}
+spriteset(spriteset_PressedSteel_Triplex_Liv1_Purchase,   "gfx/PressedSteel_Triplex_Liv1.png") {template_purchase_66mu(7, 21)}
+spriteset(spriteset_PressedSteel_Triplex_Liv1_Lead,   "gfx/PressedSteel_Triplex_Liv1.png") {template_6(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_PressedSteel_Triplex_Liv1_Rear,   "gfx/PressedSteel_Triplex_Liv1.png") {template_6(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
+spriteset(spriteset_PressedSteel_Triplex_Liv1_Trailer,   "gfx/PressedSteel_Triplex_Liv1.png") {template_6(7, 89)}
 
 switch(FEAT_TRAINS, SELF, sw_PressedSteel_Triplex_Liv1_last, position_in_consist_from_end){ // <- This code tells the game whether to use the cab or flipped cab, based on if they're right at the end or not
     0:    spriteset_PressedSteel_Triplex_Liv1_Rear;
@@ -4221,7 +4389,7 @@ switch(FEAT_TRAINS, SELF, sw_SLCC_ME1_attach, vehicle_type_id){
 }
 
 //SLCC_ME1_Liv1
-spriteset(spriteset_SLCC_ME1_Liv1_Purchase,   "gfx/SLCC_ME1_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_ME1_Liv1_Purchase,   "gfx/SLCC_ME1_Liv1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_SLCC_ME1_Liv1,   "gfx/SLCC_ME1_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_ME1_Liv1, 5220) {
@@ -4271,7 +4439,7 @@ item(FEAT_TRAINS, Item_SLCC_ME1_Liv1, 5220) {
 }
 
 //SLCC_ME1_Liv2
-spriteset(spriteset_SLCC_ME1_Liv2_Purchase,   "gfx/SLCC_ME1_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_ME1_Liv2_Purchase,   "gfx/SLCC_ME1_Liv2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_SLCC_ME1_Liv2,   "gfx/SLCC_ME1_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_ME1_Liv2, 5221) {
@@ -4321,7 +4489,7 @@ item(FEAT_TRAINS, Item_SLCC_ME1_Liv2, 5221) {
 }
 
 //SLCC_ME1_Liv3
-spriteset(spriteset_SLCC_ME1_Liv3_Purchase,   "gfx/SLCC_ME1_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_ME1_Liv3_Purchase,   "gfx/SLCC_ME1_Liv3.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_SLCC_ME1_Liv3,   "gfx/SLCC_ME1_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_SLCC_ME1_Liv3, 5222) {
@@ -4371,7 +4539,7 @@ item(FEAT_TRAINS, Item_SLCC_ME1_Liv3, 5222) {
 }
 
 //ACF_Arnine
-spriteset(spriteset_ACF_Arnine_Purchase,   "gfx/ACF_Arnine.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_Arnine_Purchase,   "gfx/ACF_Arnine.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_Arnine,   "gfx/ACF_Arnine.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 switch(FEAT_TRAINS, SELF, sw_ACF_Arnine_attach, vehicle_type_id){
@@ -4431,7 +4599,7 @@ item(FEAT_TRAINS, Item_ACF_Arnine, 5300) {
 }
 
 //ACF_Arnine_TwoTone
-spriteset(spriteset_ACF_Arnine_TwoTone_Purchase,   "gfx/ACF_Arnine_TwoTone.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_Arnine_TwoTone_Purchase,   "gfx/ACF_Arnine_TwoTone.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_Arnine_TwoTone,   "gfx/ACF_Arnine_TwoTone.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_Arnine_TwoTone, 5301) {
@@ -4481,7 +4649,7 @@ item(FEAT_TRAINS, Item_ACF_Arnine_TwoTone, 5301) {
 }
 
 //ACF_Arnine_SRA
-spriteset(spriteset_ACF_Arnine_SRA_Purchase,   "gfx/ACF_Arnine_SRA.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_Arnine_SRA_Purchase,   "gfx/ACF_Arnine_SRA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_Arnine_SRA,   "gfx/ACF_Arnine_SRA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_Arnine_SRA, 5302) {
@@ -4531,7 +4699,7 @@ item(FEAT_TRAINS, Item_ACF_Arnine_SRA, 5302) {
 }
 
 //ACF_Arnine_R7A
-spriteset(spriteset_ACF_Arnine_R7A_Purchase,   "gfx/ACF_Arnine_R7A.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_Arnine_R7A_Purchase,   "gfx/ACF_Arnine_R7A.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_Arnine_R7A,   "gfx/ACF_Arnine_R7A.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_Arnine_R7A, 5303) {
@@ -4581,7 +4749,7 @@ item(FEAT_TRAINS, Item_ACF_Arnine_R7A, 5303) {
 }
 
 //ACF_Arnine_MTA
-spriteset(spriteset_ACF_Arnine_MTA_Purchase,   "gfx/ACF_Arnine_MTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_Arnine_MTA_Purchase,   "gfx/ACF_Arnine_MTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_Arnine_MTA,   "gfx/ACF_Arnine_MTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_Arnine_MTA, 5304) {
@@ -4631,7 +4799,7 @@ item(FEAT_TRAINS, Item_ACF_Arnine_MTA, 5304) {
 }
 
 //ACF_Arnine_Work
-spriteset(spriteset_ACF_Arnine_Work_Purchase,   "gfx/ACF_Arnine_Work.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_Arnine_Work_Purchase,   "gfx/ACF_Arnine_Work.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_Arnine_Work,   "gfx/ACF_Arnine_Work.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_Arnine_Work, 5305) {
@@ -4688,7 +4856,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_R11_attach, vehicle_type_id){
 }
 
 //Budd_R11_Silver
-spriteset(spriteset_Budd_R11_Silver_Purchase,   "gfx/Budd_R11_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_R11_Silver_Purchase,   "gfx/Budd_R11_Silver.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_R11_Silver_Lead,   "gfx/Budd_R11_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_R11_Silver_Rear,   "gfx/Budd_R11_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_R11_Silver_Trailer,   "gfx/Budd_R11_Silver.png") {template_8(7, 89)}
@@ -4752,7 +4920,7 @@ item(FEAT_TRAINS, Item_Budd_R11_Silver, 5441) {
 }
 
 //Budd_R11_MTA
-spriteset(spriteset_Budd_R11_MTA_Purchase,   "gfx/Budd_R11_MTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_R11_MTA_Purchase,   "gfx/Budd_R11_MTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_R11_MTA_Lead,   "gfx/Budd_R11_MTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_R11_MTA_Rear,   "gfx/Budd_R11_MTA.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_R11_MTA_Trailer,   "gfx/Budd_R11_MTA.png") {template_8(7, 89)}
@@ -4826,7 +4994,7 @@ switch(FEAT_TRAINS, SELF, sw_GRCW_GSeries_attach, vehicle_type_id){
 }
 
 //GRCW_GSeries_Rocket
-spriteset(spriteset_GRCW_GSeries_Rocket_Purchase,   "gfx/GRCW_GSeries_Rocket.png") {template_purchase(7, 21)}
+spriteset(spriteset_GRCW_GSeries_Rocket_Purchase,   "gfx/GRCW_GSeries_Rocket.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_GRCW_GSeries_Rocket_Lead,   "gfx/GRCW_GSeries_Rocket.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_GRCW_GSeries_Rocket_Rear,   "gfx/GRCW_GSeries_Rocket.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_GRCW_GSeries_Rocket_Trailer,   "gfx/GRCW_GSeries_Rocket.png") {template_8(7, 89)}
@@ -4890,7 +5058,7 @@ item(FEAT_TRAINS, Item_GRCW_GSeries_Rocket, 5501) {
 }
 
 //GRCW_GSeries_Aluminium
-spriteset(spriteset_GRCW_GSeries_Aluminium_Purchase,   "gfx/GRCW_GSeries_Aluminium.png") {template_purchase(7, 21)}
+spriteset(spriteset_GRCW_GSeries_Aluminium_Purchase,   "gfx/GRCW_GSeries_Aluminium.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_GRCW_GSeries_Aluminium_Lead,   "gfx/GRCW_GSeries_Aluminium.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_GRCW_GSeries_Aluminium_Rear,   "gfx/GRCW_GSeries_Aluminium.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_GRCW_GSeries_Aluminium_Trailer,   "gfx/GRCW_GSeries_Aluminium.png") {template_8(7, 89)}
@@ -4954,7 +5122,7 @@ item(FEAT_TRAINS, Item_GRCW_GSeries_Aluminium, 5502) {
 }
 
 //GRCW_GSeries_Late
-spriteset(spriteset_GRCW_GSeries_Late_Purchase,   "gfx/GRCW_GSeries_Late.png") {template_purchase(7, 21)}
+spriteset(spriteset_GRCW_GSeries_Late_Purchase,   "gfx/GRCW_GSeries_Late.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_GRCW_GSeries_Late_Lead,   "gfx/GRCW_GSeries_Late.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_GRCW_GSeries_Late_Rear,   "gfx/GRCW_GSeries_Late.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_GRCW_GSeries_Late_Trailer,   "gfx/GRCW_GSeries_Late.png") {template_8(7, 89)}
@@ -5018,7 +5186,7 @@ item(FEAT_TRAINS, Item_GRCW_GSeries_Late, 5503) {
 }
 
 //GRCW_GSeries_BCHydro1
-spriteset(spriteset_GRCW_GSeries_BCHydro1_Purchase,   "gfx/GRCW_GSeries_BCHydro1.png") {template_purchase(7, 21)}
+spriteset(spriteset_GRCW_GSeries_BCHydro1_Purchase,   "gfx/GRCW_GSeries_BCHydro1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_GRCW_GSeries_BCHydro1_Lead,   "gfx/GRCW_GSeries_BCHydro1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_GRCW_GSeries_BCHydro1_Rear,   "gfx/GRCW_GSeries_BCHydro1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_GRCW_GSeries_BCHydro1_Trailer,   "gfx/GRCW_GSeries_BCHydro1.png") {template_8(7, 89)}
@@ -5082,7 +5250,7 @@ item(FEAT_TRAINS, Item_GRCW_GSeries_BCHydro1, 5504) {
 }
 
 //GRCW_GSeries_BCHydro2
-spriteset(spriteset_GRCW_GSeries_BCHydro2_Purchase,   "gfx/GRCW_GSeries_BCHydro2.png") {template_purchase(7, 21)}
+spriteset(spriteset_GRCW_GSeries_BCHydro2_Purchase,   "gfx/GRCW_GSeries_BCHydro2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_GRCW_GSeries_BCHydro2_Lead,   "gfx/GRCW_GSeries_BCHydro2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_GRCW_GSeries_BCHydro2_Rear,   "gfx/GRCW_GSeries_BCHydro2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_GRCW_GSeries_BCHydro2_Trailer,   "gfx/GRCW_GSeries_BCHydro2.png") {template_8(7, 89)}
@@ -5157,7 +5325,7 @@ switch(FEAT_TRAINS, SELF, sw_ACF_R16_attach, vehicle_type_id){
 }
 
 //ACF_R16_Redbird1
-spriteset(spriteset_ACF_R16_Redbird1_Purchase,   "gfx/R16-Redbird_Redbird1.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_R16_Redbird1_Purchase,   "gfx/R16-Redbird_Redbird1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_R16_Redbird1,   "gfx/R16-Redbird_Redbird1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_R16_Redbird1, 5521) {
@@ -5207,7 +5375,7 @@ item(FEAT_TRAINS, Item_ACF_R16_Redbird1, 5521) {
 }
 
 //ACF_R16_Redbird2
-spriteset(spriteset_ACF_R16_Redbird2_Purchase,   "gfx/R16-Redbird_Redbird2.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_R16_Redbird2_Purchase,   "gfx/R16-Redbird_Redbird2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_R16_Redbird2,   "gfx/R16-Redbird_Redbird2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_R16_Redbird2, 5522) {
@@ -5257,7 +5425,7 @@ item(FEAT_TRAINS, Item_ACF_R16_Redbird2, 5522) {
 }
 
 //ACF_R16_MTA1
-spriteset(spriteset_ACF_R16_MTA1_Purchase,   "gfx/R16-Redbird_MTA1.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_R16_MTA1_Purchase,   "gfx/R16-Redbird_MTA1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_R16_MTA1,   "gfx/R16-Redbird_MTA1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_R16_MTA1, 5523) {
@@ -5307,7 +5475,7 @@ item(FEAT_TRAINS, Item_ACF_R16_MTA1, 5523) {
 }
 
 //ACF_R16_MTA2
-spriteset(spriteset_ACF_R16_MTA2_Purchase,   "gfx/R16-Redbird_MTA2.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_R16_MTA2_Purchase,   "gfx/R16-Redbird_MTA2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_R16_MTA2,   "gfx/R16-Redbird_MTA2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_R16_MTA2, 5524) {
@@ -5357,7 +5525,7 @@ item(FEAT_TRAINS, Item_ACF_R16_MTA2, 5524) {
 }
 
 //ACF_R16_MTA3
-spriteset(spriteset_ACF_R16_MTA3_Purchase,   "gfx/R16-Redbird_MTA3.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_R16_MTA3_Purchase,   "gfx/R16-Redbird_MTA3.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_R16_MTA3,   "gfx/R16-Redbird_MTA3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_R16_MTA3, 5525) {
@@ -5407,7 +5575,7 @@ item(FEAT_TRAINS, Item_ACF_R16_MTA3, 5525) {
 }
 
 //ACF_R16_Liv1
-spriteset(spriteset_ACF_R16_Liv1_Purchase,   "gfx/R16-Redbird_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_R16_Liv1_Purchase,   "gfx/R16-Redbird_Liv1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_R16_Liv1,   "gfx/R16-Redbird_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_R16_Liv1, 5526) {
@@ -5457,7 +5625,7 @@ item(FEAT_TRAINS, Item_ACF_R16_Liv1, 5526) {
 }
 
 //ACF_R16_Liv2
-spriteset(spriteset_ACF_R16_Liv2_Purchase,   "gfx/R16-Redbird_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_ACF_R16_Liv2_Purchase,   "gfx/R16-Redbird_Liv2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_ACF_R16_Liv2,   "gfx/R16-Redbird_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_ACF_R16_Liv2, 5527) {
@@ -5519,7 +5687,7 @@ switch(FEAT_TRAINS, SELF, sw_SLCC_Redbird_attach, vehicle_type_id){
 }
 
 //SLCC_Redbird_Redbird1
-spriteset(spriteset_SLCC_Redbird_Redbird1_Purchase,   "gfx/R16-Redbird_Redbird1.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_Redbird_Redbird1_Purchase,   "gfx/R16-Redbird_Redbird1.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_SLCC_Redbird_Redbird1_Lead,   "gfx/R16-Redbird_Redbird1.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_Redbird_Redbird1_Rear,   "gfx/R16-Redbird_Redbird1.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_Redbird_Redbird1_Trailer,   "gfx/R16-Redbird_Redbird1.png") {template_8(187, 89)}
@@ -5583,7 +5751,7 @@ item(FEAT_TRAINS, Item_SLCC_Redbird_Redbird1, 5581) {
 }
 
 //SLCC_Redbird_Redbird2
-spriteset(spriteset_SLCC_Redbird_Redbird2_Purchase,   "gfx/R16-Redbird_Redbird2.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_Redbird_Redbird2_Purchase,   "gfx/R16-Redbird_Redbird2.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_SLCC_Redbird_Redbird2_Lead,   "gfx/R16-Redbird_Redbird2.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_Redbird_Redbird2_Rear,   "gfx/R16-Redbird_Redbird2.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_Redbird_Redbird2_Trailer,   "gfx/R16-Redbird_Redbird2.png") {template_8(187, 89)}
@@ -5647,7 +5815,7 @@ item(FEAT_TRAINS, Item_SLCC_Redbird_Redbird2, 5582) {
 }
 
 //SLCC_Redbird_MTA1
-spriteset(spriteset_SLCC_Redbird_MTA1_Purchase,   "gfx/R16-Redbird_MTA1.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_Redbird_MTA1_Purchase,   "gfx/R16-Redbird_MTA1.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_SLCC_Redbird_MTA1_Lead,   "gfx/R16-Redbird_MTA1.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_Redbird_MTA1_Rear,   "gfx/R16-Redbird_MTA1.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_Redbird_MTA1_Trailer,   "gfx/R16-Redbird_MTA1.png") {template_8(187, 89)}
@@ -5711,7 +5879,7 @@ item(FEAT_TRAINS, Item_SLCC_Redbird_MTA1, 5583) {
 }
 
 //SLCC_Redbird_MTA2
-spriteset(spriteset_SLCC_Redbird_MTA2_Purchase,   "gfx/R16-Redbird_MTA2.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_Redbird_MTA2_Purchase,   "gfx/R16-Redbird_MTA2.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_SLCC_Redbird_MTA2_Lead,   "gfx/R16-Redbird_MTA2.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_Redbird_MTA2_Rear,   "gfx/R16-Redbird_MTA2.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_Redbird_MTA2_Trailer,   "gfx/R16-Redbird_MTA2.png") {template_8(187, 89)}
@@ -5775,7 +5943,7 @@ item(FEAT_TRAINS, Item_SLCC_Redbird_MTA2, 5584) {
 }
 
 //SLCC_Redbird_MTA3
-spriteset(spriteset_SLCC_Redbird_MTA3_Purchase,   "gfx/R16-Redbird_MTA3.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_Redbird_MTA3_Purchase,   "gfx/R16-Redbird_MTA3.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_SLCC_Redbird_MTA3_Lead,   "gfx/R16-Redbird_MTA3.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_Redbird_MTA3_Rear,   "gfx/R16-Redbird_MTA3.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_Redbird_MTA3_Trailer,   "gfx/R16-Redbird_MTA3.png") {template_8(187, 89)}
@@ -5839,7 +6007,7 @@ item(FEAT_TRAINS, Item_SLCC_Redbird_MTA3, 5585) {
 }
 
 //SLCC_Redbird_Liv1
-spriteset(spriteset_SLCC_Redbird_Liv1_Purchase,   "gfx/R16-Redbird_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_Redbird_Liv1_Purchase,   "gfx/R16-Redbird_Liv1.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_SLCC_Redbird_Liv1_Lead,   "gfx/R16-Redbird_Liv1.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_Redbird_Liv1_Rear,   "gfx/R16-Redbird_Liv1.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_Redbird_Liv1_Trailer,   "gfx/R16-Redbird_Liv1.png") {template_8(187, 89)}
@@ -5903,7 +6071,7 @@ item(FEAT_TRAINS, Item_SLCC_Redbird_Liv1, 5586) {
 }
 
 //SLCC_Redbird_Liv2
-spriteset(spriteset_SLCC_Redbird_Liv2_Purchase,   "gfx/R16-Redbird_Liv2.png") {template_purchase(187, 21)}
+spriteset(spriteset_SLCC_Redbird_Liv2_Purchase,   "gfx/R16-Redbird_Liv2.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_SLCC_Redbird_Liv2_Lead,   "gfx/R16-Redbird_Liv2.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_Redbird_Liv2_Rear,   "gfx/R16-Redbird_Liv2.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_Redbird_Liv2_Trailer,   "gfx/R16-Redbird_Liv2.png") {template_8(187, 89)}
@@ -5976,7 +6144,7 @@ switch(FEAT_TRAINS, SELF, sw_Toronto_MHT_MSeries_attach, vehicle_type_id){
 }
 
 //Toronto_MHT_Liv1_MSeries
-spriteset(spriteset_Toronto_MHT_Liv1_MSeries_Purchase,   "gfx/Toronto_MHT_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Toronto_MHT_Liv1_MSeries_Purchase,   "gfx/Toronto_MHT_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Toronto_MHT_Liv1_MSeries_Lead,   "gfx/Toronto_MHT_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv1_MSeries_Rear,   "gfx/Toronto_MHT_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv1_MSeries_Trailer,   "gfx/Toronto_MHT_Liv1.png") {template_8(7, 89)}
@@ -6040,7 +6208,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv1_MSeries, 5600) {
 }
 
 //Toronto_MHT_Liv2_MSeries
-spriteset(spriteset_Toronto_MHT_Liv2_MSeries_Purchase,   "gfx/Toronto_MHT_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Toronto_MHT_Liv2_MSeries_Purchase,   "gfx/Toronto_MHT_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Toronto_MHT_Liv2_MSeries_Lead,   "gfx/Toronto_MHT_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv2_MSeries_Rear,   "gfx/Toronto_MHT_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv2_MSeries_Trailer,   "gfx/Toronto_MHT_Liv2.png") {template_8(7, 89)}
@@ -6104,7 +6272,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv2_MSeries, 5601) {
 }
 
 //Toronto_MHT_Liv3_MSeries
-spriteset(spriteset_Toronto_MHT_Liv3_MSeries_Purchase,   "gfx/Toronto_MHT_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Toronto_MHT_Liv3_MSeries_Purchase,   "gfx/Toronto_MHT_Liv3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Toronto_MHT_Liv3_MSeries_Lead,   "gfx/Toronto_MHT_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv3_MSeries_Rear,   "gfx/Toronto_MHT_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv3_MSeries_Trailer,   "gfx/Toronto_MHT_Liv3.png") {template_8(7, 89)}
@@ -6168,7 +6336,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv3_MSeries, 5602) {
 }
 
 //Toronto_MHT_Liv4_MSeries
-spriteset(spriteset_Toronto_MHT_Liv4_MSeries_Purchase,   "gfx/Toronto_MHT_Liv4.png") {template_purchase(7, 21)}
+spriteset(spriteset_Toronto_MHT_Liv4_MSeries_Purchase,   "gfx/Toronto_MHT_Liv4.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Toronto_MHT_Liv4_MSeries_Lead,   "gfx/Toronto_MHT_Liv4.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv4_MSeries_Rear,   "gfx/Toronto_MHT_Liv4.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv4_MSeries_Trailer,   "gfx/Toronto_MHT_Liv4.png") {template_8(7, 89)}
@@ -6239,7 +6407,7 @@ switch(FEAT_TRAINS, SELF, sw_Pullman_MBTACars_Red_attach, vehicle_type_id){
 }
 
 //Pullman_MBTACars_Red_Liv1
-spriteset(spriteset_Pullman_MBTACars_Red_Liv1_Purchase,   "gfx/Pullman_MBTACars_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_MBTACars_Red_Liv1_Purchase,   "gfx/Pullman_MBTACars_Liv1.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Pullman_MBTACars_Red_Liv1_Lead,   "gfx/Pullman_MBTACars_Liv1.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_MBTACars_Red_Liv1_Rear,   "gfx/Pullman_MBTACars_Liv1.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_MBTACars_Red_Liv1_Trailer,   "gfx/Pullman_MBTACars_Liv1.png") {template_8(187, 89)}
@@ -6303,7 +6471,7 @@ item(FEAT_TRAINS, Item_Pullman_MBTACars_Red_Liv1, 5620) {
 }
 
 //Pullman_MBTACars_Red_Liv2
-spriteset(spriteset_Pullman_MBTACars_Red_Liv2_Purchase,   "gfx/Pullman_MBTACars_Liv2.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_MBTACars_Red_Liv2_Purchase,   "gfx/Pullman_MBTACars_Liv2.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Pullman_MBTACars_Red_Liv2_Lead,   "gfx/Pullman_MBTACars_Liv2.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_MBTACars_Red_Liv2_Rear,   "gfx/Pullman_MBTACars_Liv2.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_MBTACars_Red_Liv2_Trailer,   "gfx/Pullman_MBTACars_Liv2.png") {template_8(187, 89)}
@@ -6377,7 +6545,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_R32_attach, vehicle_type_id){
 }
 
 //Budd_R32_Silver
-spriteset(spriteset_Budd_R32_Silver_Purchase,   "gfx/Budd_R32_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_R32_Silver_Purchase,   "gfx/Budd_R32_Silver.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_R32_Silver_Lead,   "gfx/Budd_R32_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_R32_Silver_Rear,   "gfx/Budd_R32_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_R32_Silver_Trailer,   "gfx/Budd_R32_Silver.png") {template_8(7, 89)}
@@ -6441,7 +6609,7 @@ item(FEAT_TRAINS, Item_Budd_R32_Silver, 5681) {
 }
 
 //Budd_R32_MTA
-spriteset(spriteset_Budd_R32_MTA_Purchase,   "gfx/Budd_R32_MTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_R32_MTA_Purchase,   "gfx/Budd_R32_MTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_R32_MTA_Lead,   "gfx/Budd_R32_MTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_R32_MTA_Rear,   "gfx/Budd_R32_MTA.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_R32_MTA_Trailer,   "gfx/Budd_R32_MTA.png") {template_8(7, 89)}
@@ -6505,7 +6673,7 @@ item(FEAT_TRAINS, Item_Budd_R32_MTA, 5682) {
 }
 
 //Budd_R32_Liv1
-spriteset(spriteset_Budd_R32_Liv1_Purchase,   "gfx/Budd_R32_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_R32_Liv1_Purchase,   "gfx/Budd_R32_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_R32_Liv1_Lead,   "gfx/Budd_R32_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_R32_Liv1_Rear,   "gfx/Budd_R32_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_R32_Liv1_Trailer,   "gfx/Budd_R32_Liv1.png") {template_8(7, 89)}
@@ -6569,7 +6737,7 @@ item(FEAT_TRAINS, Item_Budd_R32_Liv1, 5683) {
 }
 
 //Budd_R32_Liv2
-spriteset(spriteset_Budd_R32_Liv2_Purchase,   "gfx/Budd_R32_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_R32_Liv2_Purchase,   "gfx/Budd_R32_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_R32_Liv2_Lead,   "gfx/Budd_R32_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_R32_Liv2_Rear,   "gfx/Budd_R32_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_R32_Liv2_Trailer,   "gfx/Budd_R32_Liv2.png") {template_8(7, 89)}
@@ -6633,7 +6801,7 @@ item(FEAT_TRAINS, Item_Budd_R32_Liv2, 5684) {
 }
 
 //Budd_R32_Liv3
-spriteset(spriteset_Budd_R32_Liv3_Purchase,   "gfx/Budd_R32_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_R32_Liv3_Purchase,   "gfx/Budd_R32_Liv3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_R32_Liv3_Lead,   "gfx/Budd_R32_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_R32_Liv3_Rear,   "gfx/Budd_R32_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_R32_Liv3_Trailer,   "gfx/Budd_R32_Liv3.png") {template_8(7, 89)}
@@ -6706,7 +6874,7 @@ switch(FEAT_TRAINS, SELF, sw_Toronto_MHT_HSeries_attach, vehicle_type_id){
 }
 
 //Toronto_MHT_Liv1_HSeries
-spriteset(spriteset_Toronto_MHT_Liv1_HSeries_Purchase,   "gfx/Toronto_MHT_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_Toronto_MHT_Liv1_HSeries_Purchase,   "gfx/Toronto_MHT_Liv1.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Toronto_MHT_Liv1_HSeries_Lead,   "gfx/Toronto_MHT_Liv1.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv1_HSeries_Rear,   "gfx/Toronto_MHT_Liv1.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv1_HSeries_Trailer,   "gfx/Toronto_MHT_Liv1.png") {template_8(187, 89)}
@@ -6770,7 +6938,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv1_HSeries, 5690) {
 }
 
 //Toronto_MHT_Liv2_HSeries
-spriteset(spriteset_Toronto_MHT_Liv2_HSeries_Purchase,   "gfx/Toronto_MHT_Liv2.png") {template_purchase(187, 21)}
+spriteset(spriteset_Toronto_MHT_Liv2_HSeries_Purchase,   "gfx/Toronto_MHT_Liv2.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Toronto_MHT_Liv2_HSeries_Lead,   "gfx/Toronto_MHT_Liv2.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv2_HSeries_Rear,   "gfx/Toronto_MHT_Liv2.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv2_HSeries_Trailer,   "gfx/Toronto_MHT_Liv2.png") {template_8(187, 89)}
@@ -6834,7 +7002,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv2_HSeries, 5691) {
 }
 
 //Toronto_MHT_Liv3_HSeries
-spriteset(spriteset_Toronto_MHT_Liv3_HSeries_Purchase,   "gfx/Toronto_MHT_Liv3.png") {template_purchase(187, 21)}
+spriteset(spriteset_Toronto_MHT_Liv3_HSeries_Purchase,   "gfx/Toronto_MHT_Liv3.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Toronto_MHT_Liv3_HSeries_Lead,   "gfx/Toronto_MHT_Liv3.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv3_HSeries_Rear,   "gfx/Toronto_MHT_Liv3.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv3_HSeries_Trailer,   "gfx/Toronto_MHT_Liv3.png") {template_8(187, 89)}
@@ -6898,7 +7066,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv3_HSeries, 5692) {
 }
 
 //Toronto_MHT_Liv4_HSeries
-spriteset(spriteset_Toronto_MHT_Liv4_HSeries_Purchase,   "gfx/Toronto_MHT_Liv4.png") {template_purchase(187, 21)}
+spriteset(spriteset_Toronto_MHT_Liv4_HSeries_Purchase,   "gfx/Toronto_MHT_Liv4.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Toronto_MHT_Liv4_HSeries_Lead,   "gfx/Toronto_MHT_Liv4.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv4_HSeries_Rear,   "gfx/Toronto_MHT_Liv4.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv4_HSeries_Trailer,   "gfx/Toronto_MHT_Liv4.png") {template_8(187, 89)}
@@ -6971,7 +7139,7 @@ switch(FEAT_TRAINS, SELF, sw_SLCC_R40_attach, vehicle_type_id){
 }
 
 //SLCC_R40_Silver
-spriteset(spriteset_SLCC_R40_Silver_Purchase,   "gfx/SLCC_R40_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R40_Silver_Purchase,   "gfx/SLCC_R40_Silver.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R40_Silver_Lead,   "gfx/SLCC_R40_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R40_Silver_Rear,   "gfx/SLCC_R40_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R40_Silver_Trailer,   "gfx/SLCC_R40_Silver.png") {template_8(7, 89)}
@@ -7035,7 +7203,7 @@ item(FEAT_TRAINS, Item_SLCC_R40_Silver, 5721) {
 }
 
 //SLCC_R40_Liv1
-spriteset(spriteset_SLCC_R40_Liv1_Purchase,   "gfx/SLCC_R40_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R40_Liv1_Purchase,   "gfx/SLCC_R40_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R40_Liv1_Lead,   "gfx/SLCC_R40_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R40_Liv1_Rear,   "gfx/SLCC_R40_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R40_Liv1_Trailer,   "gfx/SLCC_R40_Liv1.png") {template_8(7, 89)}
@@ -7099,7 +7267,7 @@ item(FEAT_TRAINS, Item_SLCC_R40_Liv1, 5722) {
 }
 
 //SLCC_R40_Liv2
-spriteset(spriteset_SLCC_R40_Liv2_Purchase,   "gfx/SLCC_R40_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R40_Liv2_Purchase,   "gfx/SLCC_R40_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R40_Liv2_Lead,   "gfx/SLCC_R40_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R40_Liv2_Rear,   "gfx/SLCC_R40_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R40_Liv2_Trailer,   "gfx/SLCC_R40_Liv2.png") {template_8(7, 89)}
@@ -7163,7 +7331,7 @@ item(FEAT_TRAINS, Item_SLCC_R40_Liv2, 5723) {
 }
 
 //SLCC_R40_Liv3
-spriteset(spriteset_SLCC_R40_Liv3_Purchase,   "gfx/SLCC_R40_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R40_Liv3_Purchase,   "gfx/SLCC_R40_Liv3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R40_Liv3_Lead,   "gfx/SLCC_R40_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R40_Liv3_Rear,   "gfx/SLCC_R40_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R40_Liv3_Trailer,   "gfx/SLCC_R40_Liv3.png") {template_8(7, 89)}
@@ -7236,7 +7404,7 @@ switch(FEAT_TRAINS, SELF, sw_Pullman_Silverbird_attach, vehicle_type_id){
 }
 
 //Pullman_Silverbird_Liv1_Single
-spriteset(spriteset_Pullman_Silverbird_Liv1_Single_Purchase,   "gfx/Pullman_Silverbird_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Silverbird_Liv1_Single_Purchase,   "gfx/Pullman_Silverbird_Liv1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Silverbird_Liv1_Single,   "gfx/Pullman_Silverbird_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Pullman_Silverbird_Liv1_Single, 5740) {
@@ -7286,7 +7454,7 @@ item(FEAT_TRAINS, Item_Pullman_Silverbird_Liv1_Single, 5740) {
 }
 
 //Pullman_Silverbird_Liv2_Single
-spriteset(spriteset_Pullman_Silverbird_Liv2_Single_Purchase,   "gfx/Pullman_Silverbird_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Silverbird_Liv2_Single_Purchase,   "gfx/Pullman_Silverbird_Liv2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Silverbird_Liv2_Single,   "gfx/Pullman_Silverbird_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Pullman_Silverbird_Liv2_Single, 5741) {
@@ -7336,7 +7504,7 @@ item(FEAT_TRAINS, Item_Pullman_Silverbird_Liv2_Single, 5741) {
 }
 
 //Pullman_Silverbird_Liv1_Pair
-spriteset(spriteset_Pullman_Silverbird_Liv1_Pair_Purchase,   "gfx/Pullman_Silverbird_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Silverbird_Liv1_Pair_Purchase,   "gfx/Pullman_Silverbird_Liv1.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Pullman_Silverbird_Liv1_Pair_Lead,   "gfx/Pullman_Silverbird_Liv1.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_Silverbird_Liv1_Pair_Rear,   "gfx/Pullman_Silverbird_Liv1.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_Silverbird_Liv1_Pair_Trailer,   "gfx/Pullman_Silverbird_Liv1.png") {template_8(187, 89)}
@@ -7400,7 +7568,7 @@ item(FEAT_TRAINS, Item_Pullman_Silverbird_Liv1_Pair, 5750) {
 }
 
 //Pullman_Silverbird_Liv2_Pair
-spriteset(spriteset_Pullman_Silverbird_Liv2_Pair_Purchase,   "gfx/Pullman_Silverbird_Liv2.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Silverbird_Liv2_Pair_Purchase,   "gfx/Pullman_Silverbird_Liv2.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Pullman_Silverbird_Liv2_Pair_Lead,   "gfx/Pullman_Silverbird_Liv2.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Pullman_Silverbird_Liv2_Pair_Rear,   "gfx/Pullman_Silverbird_Liv2.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Pullman_Silverbird_Liv2_Pair_Trailer,   "gfx/Pullman_Silverbird_Liv2.png") {template_8(187, 89)}
@@ -7474,7 +7642,7 @@ switch(FEAT_TRAINS, SELF, sw_SLCC_R44_attach, vehicle_type_id){
 }
 
 //SLCC_R44_Silver
-spriteset(spriteset_SLCC_R44_Silver_Purchase,   "gfx/SLCC_R44_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R44_Silver_Purchase,   "gfx/SLCC_R44_Silver.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R44_Silver_Lead,   "gfx/SLCC_R44_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R44_Silver_Rear,   "gfx/SLCC_R44_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R44_Silver_Trailer,   "gfx/SLCC_R44_Silver.png") {template_8(7, 89)}
@@ -7538,7 +7706,7 @@ item(FEAT_TRAINS, Item_SLCC_R44_Silver, 5761) {
 }
 
 //SLCC_R44_MTA
-spriteset(spriteset_SLCC_R44_MTA_Purchase,   "gfx/SLCC_R44_MTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R44_MTA_Purchase,   "gfx/SLCC_R44_MTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R44_MTA_Lead,   "gfx/SLCC_R44_MTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R44_MTA_Rear,   "gfx/SLCC_R44_MTA.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R44_MTA_Trailer,   "gfx/SLCC_R44_MTA.png") {template_8(7, 89)}
@@ -7602,7 +7770,7 @@ item(FEAT_TRAINS, Item_SLCC_R44_MTA, 5762) {
 }
 
 //SLCC_R44_Liv1
-spriteset(spriteset_SLCC_R44_Liv1_Purchase,   "gfx/SLCC_R44_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R44_Liv1_Purchase,   "gfx/SLCC_R44_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R44_Liv1_Lead,   "gfx/SLCC_R44_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R44_Liv1_Rear,   "gfx/SLCC_R44_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R44_Liv1_Trailer,   "gfx/SLCC_R44_Liv1.png") {template_8(7, 89)}
@@ -7666,7 +7834,7 @@ item(FEAT_TRAINS, Item_SLCC_R44_Liv1, 5763) {
 }
 
 //SLCC_R44_Liv2
-spriteset(spriteset_SLCC_R44_Liv2_Purchase,   "gfx/SLCC_R44_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R44_Liv2_Purchase,   "gfx/SLCC_R44_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R44_Liv2_Lead,   "gfx/SLCC_R44_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R44_Liv2_Rear,   "gfx/SLCC_R44_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R44_Liv2_Trailer,   "gfx/SLCC_R44_Liv2.png") {template_8(7, 89)}
@@ -7730,7 +7898,7 @@ item(FEAT_TRAINS, Item_SLCC_R44_Liv2, 5764) {
 }
 
 //SLCC_R44_Liv3
-spriteset(spriteset_SLCC_R44_Liv3_Purchase,   "gfx/SLCC_R44_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_SLCC_R44_Liv3_Purchase,   "gfx/SLCC_R44_Liv3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SLCC_R44_Liv3_Lead,   "gfx/SLCC_R44_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SLCC_R44_Liv3_Rear,   "gfx/SLCC_R44_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SLCC_R44_Liv3_Trailer,   "gfx/SLCC_R44_Liv3.png") {template_8(7, 89)}
@@ -7800,7 +7968,7 @@ switch(FEAT_TRAINS, SELF, sw_HSC_1200Series_attach, vehicle_type_id){
 }
 
 //HSC_1200Series_Liv1
-spriteset(spriteset_HSC_1200Series_Liv1_Purchase,   "gfx/HSC_1200Series_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_HSC_1200Series_Liv1_Purchase,   "gfx/HSC_1200Series_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_HSC_1200Series_Liv1_Lead,   "gfx/HSC_1200Series_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_HSC_1200Series_Liv1_Rear,   "gfx/HSC_1200Series_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_HSC_1200Series_Liv1_Trailer,   "gfx/HSC_1200Series_Liv1.png") {template_8(7, 89)}
@@ -7873,7 +8041,7 @@ switch(FEAT_TRAINS, SELF, sw_Kawasaki_BIV_attach, vehicle_type_id){
 }
 
 //Kawasaki_BIV_Liv1_Single
-spriteset(spriteset_Kawasaki_BIV_Liv1_Single_Purchase,   "gfx/Kawasaki_BIV_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_BIV_Liv1_Single_Purchase,   "gfx/Kawasaki_BIV_Liv1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Kawasaki_BIV_Liv1_Single,   "gfx/Kawasaki_BIV_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Kawasaki_BIV_Liv1_Single, 5800) {
@@ -7923,7 +8091,7 @@ item(FEAT_TRAINS, Item_Kawasaki_BIV_Liv1_Single, 5800) {
 }
 
 //Kawasaki_BIV_Liv2_Single
-spriteset(spriteset_Kawasaki_BIV_Liv2_Single_Purchase,   "gfx/Kawasaki_BIV_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_BIV_Liv2_Single_Purchase,   "gfx/Kawasaki_BIV_Liv2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Kawasaki_BIV_Liv2_Single,   "gfx/Kawasaki_BIV_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Kawasaki_BIV_Liv2_Single, 5801) {
@@ -7973,7 +8141,7 @@ item(FEAT_TRAINS, Item_Kawasaki_BIV_Liv2_Single, 5801) {
 }
 
 //Kawasaki_BIV_Liv1_Pair
-spriteset(spriteset_Kawasaki_BIV_Liv1_Pair_Purchase,   "gfx/Kawasaki_BIV_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_Kawasaki_BIV_Liv1_Pair_Purchase,   "gfx/Kawasaki_BIV_Liv1.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Kawasaki_BIV_Liv1_Pair_Lead,   "gfx/Kawasaki_BIV_Liv1.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_BIV_Liv1_Pair_Rear,   "gfx/Kawasaki_BIV_Liv1.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_BIV_Liv1_Pair_Trailer,   "gfx/Kawasaki_BIV_Liv1.png") {template_8(187, 89)}
@@ -8037,7 +8205,7 @@ item(FEAT_TRAINS, Item_Kawasaki_BIV_Liv1_Pair, 5810) {
 }
 
 //Kawasaki_BIV_Liv2_Pair
-spriteset(spriteset_Kawasaki_BIV_Liv2_Pair_Purchase,   "gfx/Kawasaki_BIV_Liv2.png") {template_purchase(187, 21)}
+spriteset(spriteset_Kawasaki_BIV_Liv2_Pair_Purchase,   "gfx/Kawasaki_BIV_Liv2.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_Kawasaki_BIV_Liv2_Pair_Lead,   "gfx/Kawasaki_BIV_Liv2.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_BIV_Liv2_Pair_Rear,   "gfx/Kawasaki_BIV_Liv2.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_BIV_Liv2_Pair_Trailer,   "gfx/Kawasaki_BIV_Liv2.png") {template_8(187, 89)}
@@ -8112,7 +8280,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_UTV_attach, vehicle_type_id){
 }
 
 //Budd_UTV_MiamiMetro
-spriteset(spriteset_Budd_UTV_MiamiMetro_Purchase,   "gfx/Budd_UTV_MiamiMetro.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_UTV_MiamiMetro_Purchase,   "gfx/Budd_UTV_MiamiMetro.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_UTV_MiamiMetro_Lead,   "gfx/Budd_UTV_MiamiMetro.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_UTV_MiamiMetro_Rear,   "gfx/Budd_UTV_MiamiMetro.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_UTV_MiamiMetro_Trailer,   "gfx/Budd_UTV_MiamiMetro.png") {template_8(7, 89)}
@@ -8176,7 +8344,7 @@ item(FEAT_TRAINS, Item_Budd_UTV_MiamiMetro, 5821) {
 }
 
 //Budd_UTV_Baltimore
-spriteset(spriteset_Budd_UTV_Baltimore_Purchase,   "gfx/Budd_UTV_Baltimore.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_UTV_Baltimore_Purchase,   "gfx/Budd_UTV_Baltimore.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_UTV_Baltimore_Lead,   "gfx/Budd_UTV_Baltimore.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_UTV_Baltimore_Rear,   "gfx/Budd_UTV_Baltimore.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_UTV_Baltimore_Trailer,   "gfx/Budd_UTV_Baltimore.png") {template_8(7, 89)}
@@ -8240,7 +8408,7 @@ item(FEAT_TRAINS, Item_Budd_UTV_Baltimore, 5822) {
 }
 
 //Budd_UTV_SCTD
-spriteset(spriteset_Budd_UTV_SCTD_Purchase,   "gfx/Budd_UTV_SCTD.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_UTV_SCTD_Purchase,   "gfx/Budd_UTV_SCTD.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_UTV_SCTD_Lead,   "gfx/Budd_UTV_SCTD.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_UTV_SCTD_Rear,   "gfx/Budd_UTV_SCTD.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_UTV_SCTD_Trailer,   "gfx/Budd_UTV_SCTD.png") {template_8(7, 89)}
@@ -8304,7 +8472,7 @@ item(FEAT_TRAINS, Item_Budd_UTV_SCTD, 5823) {
 }
 
 //Budd_UTV_LAMetro
-spriteset(spriteset_Budd_UTV_LAMetro_Purchase,   "gfx/Budd_UTV_LAMetro.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_UTV_LAMetro_Purchase,   "gfx/Budd_UTV_LAMetro.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_UTV_LAMetro_Lead,   "gfx/Budd_UTV_LAMetro.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_UTV_LAMetro_Rear,   "gfx/Budd_UTV_LAMetro.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_UTV_LAMetro_Trailer,   "gfx/Budd_UTV_LAMetro.png") {template_8(7, 89)}
@@ -8368,7 +8536,7 @@ item(FEAT_TRAINS, Item_Budd_UTV_LAMetro, 5824) {
 }
 
 //Budd_UTV_BroadStreet1
-spriteset(spriteset_Budd_UTV_BroadStreet1_Purchase,   "gfx/Budd_UTV_BroadStreet1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_UTV_BroadStreet1_Purchase,   "gfx/Budd_UTV_BroadStreet1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_UTV_BroadStreet1_Lead,   "gfx/Budd_UTV_BroadStreet1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_UTV_BroadStreet1_Rear,   "gfx/Budd_UTV_BroadStreet1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_UTV_BroadStreet1_Trailer,   "gfx/Budd_UTV_BroadStreet1.png") {template_8(7, 89)}
@@ -8432,7 +8600,7 @@ item(FEAT_TRAINS, Item_Budd_UTV_BroadStreet1, 5825) {
 }
 
 //Budd_UTV_BroadStreet2
-spriteset(spriteset_Budd_UTV_BroadStreet2_Purchase,   "gfx/Budd_UTV_BroadStreet2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_UTV_BroadStreet2_Purchase,   "gfx/Budd_UTV_BroadStreet2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_UTV_BroadStreet2_Lead,   "gfx/Budd_UTV_BroadStreet2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_UTV_BroadStreet2_Rear,   "gfx/Budd_UTV_BroadStreet2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_UTV_BroadStreet2_Trailer,   "gfx/Budd_UTV_BroadStreet2.png") {template_8(7, 89)}
@@ -8504,7 +8672,7 @@ switch(FEAT_TRAINS, SELF, sw_Amarail_R68_attach, vehicle_type_id){
 }
 
 //Amarail_R68_Silver
-spriteset(spriteset_Amarail_R68_Silver_Purchase,   "gfx/Amarail_R68_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Amarail_R68_Silver_Purchase,   "gfx/Amarail_R68_Silver.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Amarail_R68_Silver_Lead,   "gfx/Amarail_R68_Silver.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Amarail_R68_Silver_Rear,   "gfx/Amarail_R68_Silver.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Amarail_R68_Silver_Trailer,   "gfx/Amarail_R68_Silver.png") {template_8(7, 89)}
@@ -8568,7 +8736,7 @@ item(FEAT_TRAINS, Item_Amarail_R68_Silver, 5840) {
 }
 
 //Amarail_R68_Liv1
-spriteset(spriteset_Amarail_R68_Liv1_Purchase,   "gfx/Amarail_R68_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Amarail_R68_Liv1_Purchase,   "gfx/Amarail_R68_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Amarail_R68_Liv1_Lead,   "gfx/Amarail_R68_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Amarail_R68_Liv1_Rear,   "gfx/Amarail_R68_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Amarail_R68_Liv1_Trailer,   "gfx/Amarail_R68_Liv1.png") {template_8(7, 89)}
@@ -8632,7 +8800,7 @@ item(FEAT_TRAINS, Item_Amarail_R68_Liv1, 5841) {
 }
 
 //Amarail_R68_Liv2
-spriteset(spriteset_Amarail_R68_Liv2_Purchase,   "gfx/Amarail_R68_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Amarail_R68_Liv2_Purchase,   "gfx/Amarail_R68_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Amarail_R68_Liv2_Lead,   "gfx/Amarail_R68_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Amarail_R68_Liv2_Rear,   "gfx/Amarail_R68_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Amarail_R68_Liv2_Trailer,   "gfx/Amarail_R68_Liv2.png") {template_8(7, 89)}
@@ -8702,7 +8870,7 @@ switch(FEAT_TRAINS, SELF, sw_Bombardier_1800Series_attach, vehicle_type_id){
 }
 
 //Bombardier_1800Series_Liv1
-spriteset(spriteset_Bombardier_1800Series_Liv1_Purchase,   "gfx/Bombardier_1800Series_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_1800Series_Liv1_Purchase,   "gfx/Bombardier_1800Series_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Bombardier_1800Series_Liv1_Lead,   "gfx/Bombardier_1800Series_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Bombardier_1800Series_Liv1_Rear,   "gfx/Bombardier_1800Series_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Bombardier_1800Series_Liv1_Trailer,   "gfx/Bombardier_1800Series_Liv1.png") {template_8(7, 89)}
@@ -8774,7 +8942,7 @@ switch(FEAT_TRAINS, SELF, sw_Breda_A650_attach, vehicle_type_id){
 }
 
 //Breda_A650_Liv1
-spriteset(spriteset_Breda_A650_Liv1_Purchase,   "gfx/Breda_A650_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Breda_A650_Liv1_Purchase,   "gfx/Breda_A650_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Breda_A650_Liv1_Lead,   "gfx/Breda_A650_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Breda_A650_Liv1_Rear,   "gfx/Breda_A650_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Breda_A650_Liv1_Trailer,   "gfx/Breda_A650_Liv1.png") {template_8(7, 89)}
@@ -8838,7 +9006,7 @@ item(FEAT_TRAINS, Item_Breda_A650_Liv1, 5960) {
 }
 
 //Breda_A650_Liv2
-spriteset(spriteset_Breda_A650_Liv2_Purchase,   "gfx/Breda_A650_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Breda_A650_Liv2_Purchase,   "gfx/Breda_A650_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Breda_A650_Liv2_Lead,   "gfx/Breda_A650_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Breda_A650_Liv2_Rear,   "gfx/Breda_A650_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Breda_A650_Liv2_Trailer,   "gfx/Breda_A650_Liv2.png") {template_8(7, 89)}
@@ -8902,7 +9070,7 @@ item(FEAT_TRAINS, Item_Breda_A650_Liv2, 5961) {
 }
 
 //Breda_A650_Liv3
-spriteset(spriteset_Breda_A650_Liv3_Purchase,   "gfx/Breda_A650_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Breda_A650_Liv3_Purchase,   "gfx/Breda_A650_Liv3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Breda_A650_Liv3_Lead,   "gfx/Breda_A650_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Breda_A650_Liv3_Rear,   "gfx/Breda_A650_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Breda_A650_Liv3_Trailer,   "gfx/Breda_A650_Liv3.png") {template_8(7, 89)}
@@ -8975,7 +9143,7 @@ switch(FEAT_TRAINS, SELF, sw_Toronto_MHT_TSeries_attach, vehicle_type_id){
 }
 
 //Toronto_MHT_Liv1_TSeries
-spriteset(spriteset_Toronto_MHT_Liv1_TSeries_Purchase,   "gfx/Toronto_MHT_Liv1.png") {template_purchase(367, 21)}
+spriteset(spriteset_Toronto_MHT_Liv1_TSeries_Purchase,   "gfx/Toronto_MHT_Liv1.png") {template_purchase_88mu(367, 21)}
 spriteset(spriteset_Toronto_MHT_Liv1_TSeries_Lead,   "gfx/Toronto_MHT_Liv1.png") {template_8(367, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv1_TSeries_Rear,   "gfx/Toronto_MHT_Liv1.png") {template_8(367, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv1_TSeries_Trailer,   "gfx/Toronto_MHT_Liv1.png") {template_8(367, 89)}
@@ -9039,7 +9207,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv1_TSeries, 5980) {
 }
 
 //Toronto_MHT_Liv2_TSeries
-spriteset(spriteset_Toronto_MHT_Liv2_TSeries_Purchase,   "gfx/Toronto_MHT_Liv2.png") {template_purchase(367, 21)}
+spriteset(spriteset_Toronto_MHT_Liv2_TSeries_Purchase,   "gfx/Toronto_MHT_Liv2.png") {template_purchase_88mu(367, 21)}
 spriteset(spriteset_Toronto_MHT_Liv2_TSeries_Lead,   "gfx/Toronto_MHT_Liv2.png") {template_8(367, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv2_TSeries_Rear,   "gfx/Toronto_MHT_Liv2.png") {template_8(367, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv2_TSeries_Trailer,   "gfx/Toronto_MHT_Liv2.png") {template_8(367, 89)}
@@ -9103,7 +9271,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv2_TSeries, 5981) {
 }
 
 //Toronto_MHT_Liv3_TSeries
-spriteset(spriteset_Toronto_MHT_Liv3_TSeries_Purchase,   "gfx/Toronto_MHT_Liv3.png") {template_purchase(367, 21)}
+spriteset(spriteset_Toronto_MHT_Liv3_TSeries_Purchase,   "gfx/Toronto_MHT_Liv3.png") {template_purchase_88mu(367, 21)}
 spriteset(spriteset_Toronto_MHT_Liv3_TSeries_Lead,   "gfx/Toronto_MHT_Liv3.png") {template_8(367, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv3_TSeries_Rear,   "gfx/Toronto_MHT_Liv3.png") {template_8(367, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv3_TSeries_Trailer,   "gfx/Toronto_MHT_Liv3.png") {template_8(367, 89)}
@@ -9167,7 +9335,7 @@ item(FEAT_TRAINS, Item_Toronto_MHT_Liv3_TSeries, 5982) {
 }
 
 //Toronto_MHT_Liv4_TSeries
-spriteset(spriteset_Toronto_MHT_Liv4_TSeries_Purchase,   "gfx/Toronto_MHT_Liv4.png") {template_purchase(367, 21)}
+spriteset(spriteset_Toronto_MHT_Liv4_TSeries_Purchase,   "gfx/Toronto_MHT_Liv4.png") {template_purchase_88mu(367, 21)}
 spriteset(spriteset_Toronto_MHT_Liv4_TSeries_Lead,   "gfx/Toronto_MHT_Liv4.png") {template_8(367, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Toronto_MHT_Liv4_TSeries_Rear,   "gfx/Toronto_MHT_Liv4.png") {template_8(367, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Toronto_MHT_Liv4_TSeries_Trailer,   "gfx/Toronto_MHT_Liv4.png") {template_8(367, 89)}
@@ -9241,7 +9409,7 @@ switch(FEAT_TRAINS, SELF, sw_Kawasaki_R143_attach, vehicle_type_id){
 }
 
 //Kawasaki_R143_MTA
-spriteset(spriteset_Kawasaki_R143_MTA_Purchase,   "gfx/Kawasaki_R143_MTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_R143_MTA_Purchase,   "gfx/Kawasaki_R143_MTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Kawasaki_R143_MTA_Lead,   "gfx/Kawasaki_R143_MTA.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_R143_MTA_Rear,   "gfx/Kawasaki_R143_MTA.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_R143_MTA_Trailer,   "gfx/Kawasaki_R143_MTA.png") {template_8(7, 89)}
@@ -9305,7 +9473,7 @@ item(FEAT_TRAINS, Item_Kawasaki_R143_MTA, 6000) {
 }
 
 //Kawasaki_R143_Liv1
-spriteset(spriteset_Kawasaki_R143_Liv1_Purchase,   "gfx/Kawasaki_R143_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_R143_Liv1_Purchase,   "gfx/Kawasaki_R143_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Kawasaki_R143_Liv1_Lead,   "gfx/Kawasaki_R143_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_R143_Liv1_Rear,   "gfx/Kawasaki_R143_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_R143_Liv1_Trailer,   "gfx/Kawasaki_R143_Liv1.png") {template_8(7, 89)}
@@ -9369,7 +9537,7 @@ item(FEAT_TRAINS, Item_Kawasaki_R143_Liv1, 6001) {
 }
 
 //Kawasaki_R143_Liv2
-spriteset(spriteset_Kawasaki_R143_Liv2_Purchase,   "gfx/Kawasaki_R143_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_R143_Liv2_Purchase,   "gfx/Kawasaki_R143_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Kawasaki_R143_Liv2_Lead,   "gfx/Kawasaki_R143_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_R143_Liv2_Rear,   "gfx/Kawasaki_R143_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_R143_Liv2_Trailer,   "gfx/Kawasaki_R143_Liv2.png") {template_8(7, 89)}
@@ -9433,7 +9601,7 @@ item(FEAT_TRAINS, Item_Kawasaki_R143_Liv2, 6002) {
 }
 
 //Kawasaki_R143_Cuomo
-spriteset(spriteset_Kawasaki_R143_Cuomo_Purchase,   "gfx/Kawasaki_R143_Cuomo.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_R143_Cuomo_Purchase,   "gfx/Kawasaki_R143_Cuomo.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Kawasaki_R143_Cuomo_Lead,   "gfx/Kawasaki_R143_Cuomo.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_R143_Cuomo_Rear,   "gfx/Kawasaki_R143_Cuomo.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_R143_Cuomo_Trailer,   "gfx/Kawasaki_R143_Cuomo.png") {template_8(7, 89)}
@@ -9497,7 +9665,7 @@ item(FEAT_TRAINS, Item_Kawasaki_R143_Cuomo, 6003) {
 }
 
 //Kawasaki_R143_PATH
-spriteset(spriteset_Kawasaki_R143_PATH_Purchase,   "gfx/Kawasaki_R143_PATH.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_R143_PATH_Purchase,   "gfx/Kawasaki_R143_PATH.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Kawasaki_R143_PATH_Lead,   "gfx/Kawasaki_R143_PATH.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_R143_PATH_Rear,   "gfx/Kawasaki_R143_PATH.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_R143_PATH_Trailer,   "gfx/Kawasaki_R143_PATH.png") {template_8(7, 89)}
@@ -9568,7 +9736,7 @@ switch(FEAT_TRAINS, SELF, sw_Bombardier_Rocket_attach, vehicle_type_id){
 }
 
 //Bombardier_Rocket_Liv1
-spriteset(spriteset_Bombardier_Rocket_Liv1_Purchase,   "gfx/Bombardier_Rocket_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_Rocket_Liv1_Purchase,   "gfx/Bombardier_Rocket_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Bombardier_Rocket_Liv1_Lead,   "gfx/Bombardier_Rocket_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Bombardier_Rocket_Liv1_Rear,   "gfx/Bombardier_Rocket_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Bombardier_Rocket_Liv1_Trailer,   "gfx/Bombardier_Rocket_Liv1.png") {template_8(7, 89)}
@@ -9632,7 +9800,7 @@ item(FEAT_TRAINS, Item_Bombardier_Rocket_Liv1, 6100) {
 }
 
 //Bombardier_Rocket_Liv2
-spriteset(spriteset_Bombardier_Rocket_Liv2_Purchase,   "gfx/Bombardier_Rocket_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_Rocket_Liv2_Purchase,   "gfx/Bombardier_Rocket_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Bombardier_Rocket_Liv2_Lead,   "gfx/Bombardier_Rocket_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Bombardier_Rocket_Liv2_Rear,   "gfx/Bombardier_Rocket_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Bombardier_Rocket_Liv2_Trailer,   "gfx/Bombardier_Rocket_Liv2.png") {template_8(7, 89)}
@@ -9703,7 +9871,7 @@ switch(FEAT_TRAINS, SELF, sw_Hitachi_MiamiMetro_attach, vehicle_type_id){
 }
 
 //Hitachi_MiamiMetro_Liv1
-spriteset(spriteset_Hitachi_MiamiMetro_Liv1_Purchase,   "gfx/Hitachi_MiamiMetro_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Hitachi_MiamiMetro_Liv1_Purchase,   "gfx/Hitachi_MiamiMetro_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Hitachi_MiamiMetro_Liv1_Lead,   "gfx/Hitachi_MiamiMetro_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Hitachi_MiamiMetro_Liv1_Rear,   "gfx/Hitachi_MiamiMetro_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Hitachi_MiamiMetro_Liv1_Trailer,   "gfx/Hitachi_MiamiMetro_Liv1.png") {template_8(7, 89)}
@@ -9767,7 +9935,7 @@ item(FEAT_TRAINS, Item_Hitachi_MiamiMetro_Liv1, 6120) {
 }
 
 //Hitachi_MiamiMetro_Liv2
-spriteset(spriteset_Hitachi_MiamiMetro_Liv2_Purchase,   "gfx/Hitachi_MiamiMetro_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Hitachi_MiamiMetro_Liv2_Purchase,   "gfx/Hitachi_MiamiMetro_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Hitachi_MiamiMetro_Liv2_Lead,   "gfx/Hitachi_MiamiMetro_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Hitachi_MiamiMetro_Liv2_Rear,   "gfx/Hitachi_MiamiMetro_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Hitachi_MiamiMetro_Liv2_Trailer,   "gfx/Hitachi_MiamiMetro_Liv2.png") {template_8(7, 89)}
@@ -9838,7 +10006,7 @@ switch(FEAT_TRAINS, SELF, sw_CRRC_MBTACars_attach, vehicle_type_id){
 }
 
 //CRRC_MBTACars_Orange_Liv1
-spriteset(spriteset_CRRC_MBTACars_Orange_Liv1_Purchase,   "gfx/CRRC_MBTACars_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_CRRC_MBTACars_Orange_Liv1_Purchase,   "gfx/CRRC_MBTACars_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_CRRC_MBTACars_Orange_Liv1_Lead,   "gfx/CRRC_MBTACars_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_CRRC_MBTACars_Orange_Liv1_Rear,   "gfx/CRRC_MBTACars_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_CRRC_MBTACars_Orange_Liv1_Trailer,   "gfx/CRRC_MBTACars_Liv1.png") {template_8(7, 89)}
@@ -9902,7 +10070,7 @@ item(FEAT_TRAINS, Item_CRRC_MBTACars_Orange_Liv1, 6200) {
 }
 
 //CRRC_MBTACars_Red_Liv1
-spriteset(spriteset_CRRC_MBTACars_Red_Liv1_Purchase,   "gfx/CRRC_MBTACars_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_CRRC_MBTACars_Red_Liv1_Purchase,   "gfx/CRRC_MBTACars_Liv1.png") {template_purchase_88mu(187, 21)}
 spriteset(spriteset_CRRC_MBTACars_Red_Liv1_Lead,   "gfx/CRRC_MBTACars_Liv1.png") {template_8(187, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_CRRC_MBTACars_Red_Liv1_Rear,   "gfx/CRRC_MBTACars_Liv1.png") {template_8(187, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_CRRC_MBTACars_Red_Liv1_Trailer,   "gfx/CRRC_MBTACars_Liv1.png") {template_8(187, 89)}
@@ -9974,7 +10142,7 @@ switch(FEAT_TRAINS, SELF, sw_Kawasaki_R211_attach, vehicle_type_id){
 }
 
 //Kawasaki_R211_Liv1
-spriteset(spriteset_Kawasaki_R211_Liv1_Purchase,   "gfx/Kawasaki_R211_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_R211_Liv1_Purchase,   "gfx/Kawasaki_R211_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Kawasaki_R211_Liv1_Lead,   "gfx/Kawasaki_R211_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_R211_Liv1_Rear,   "gfx/Kawasaki_R211_Liv1.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_R211_Liv1_Trailer,   "gfx/Kawasaki_R211_Liv1.png") {template_8(7, 89)}
@@ -10038,7 +10206,7 @@ item(FEAT_TRAINS, Item_Kawasaki_R211_Liv1, 6220) {
 }
 
 //Kawasaki_R211_Liv2
-spriteset(spriteset_Kawasaki_R211_Liv2_Purchase,   "gfx/Kawasaki_R211_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_R211_Liv2_Purchase,   "gfx/Kawasaki_R211_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Kawasaki_R211_Liv2_Lead,   "gfx/Kawasaki_R211_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_R211_Liv2_Rear,   "gfx/Kawasaki_R211_Liv2.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_R211_Liv2_Trailer,   "gfx/Kawasaki_R211_Liv2.png") {template_8(7, 89)}
@@ -10102,7 +10270,7 @@ item(FEAT_TRAINS, Item_Kawasaki_R211_Liv2, 6221) {
 }
 
 //Kawasaki_R211_Liv3
-spriteset(spriteset_Kawasaki_R211_Liv3_Purchase,   "gfx/Kawasaki_R211_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Kawasaki_R211_Liv3_Purchase,   "gfx/Kawasaki_R211_Liv3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Kawasaki_R211_Liv3_Lead,   "gfx/Kawasaki_R211_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Kawasaki_R211_Liv3_Rear,   "gfx/Kawasaki_R211_Liv3.png") {template_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Kawasaki_R211_Liv3_Trailer,   "gfx/Kawasaki_R211_Liv3.png") {template_8(7, 89)}

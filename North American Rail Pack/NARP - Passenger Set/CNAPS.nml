@@ -151,6 +151,161 @@ template template_purchase(x, y) {
     [x-2 , y,  1,  1,   0,  0, ANIM]
 }
 
+template template_purchase_4(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -31, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_5(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -33, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_6(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -35, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_7(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -37, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_8(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_44(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_55(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -43, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_66(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -47, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_77(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -51, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_77mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -37, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -41, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88xl(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
 
 // 4 Template
 template template_Old_4(x, y) {
@@ -452,7 +607,7 @@ template template_8_r(x, y) {
     [ x+66,     y,        22,        20,        -4,            -11]
 }
 
-spriteset(spriteset_MU_purchase,   "gfx/El_MUDC.png") {template_purchase(7, 21)}
+spriteset(spriteset_MU_purchase,   "gfx/El_MUDC.png") {template_purchase_77(7, 21)}
 spriteset(spriteset_MU_trailer,   "gfx/El_MUDC.png") {template_Old_7(7, 89)}
 
 //Vehicle
@@ -511,8 +666,8 @@ switch(FEAT_TRAINS, SELF, sw_Budd_RDC_attach, vehicle_type_id){
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_Silver_Purchase,   "gfx/Budd_RDC_Silver.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_Silver,   "gfx/Budd_RDC_Silver.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_Silver_Purchase,   "gfx/Budd_RDC_Silver.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_Silver,   "gfx/Budd_RDC_Silver.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_Silver, 451) {
     property {
@@ -560,8 +715,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_Silver, 451) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_AmtrakPHII_Purchase,   "gfx/Budd_RDC_AmtrakPHII.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_AmtrakPHII,   "gfx/Budd_RDC_AmtrakPHII.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_AmtrakPHII_Purchase,   "gfx/Budd_RDC_AmtrakPHII.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_AmtrakPHII,   "gfx/Budd_RDC_AmtrakPHII.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_AmtrakPHII, 452) {
     property {
@@ -609,8 +764,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_AmtrakPHII, 452) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_AmtrakPHIII_Purchase,   "gfx/Budd_RDC_AmtrakPHIII.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_AmtrakPHIII,   "gfx/Budd_RDC_AmtrakPHIII.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_AmtrakPHIII_Purchase,   "gfx/Budd_RDC_AmtrakPHIII.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_AmtrakPHIII,   "gfx/Budd_RDC_AmtrakPHIII.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_AmtrakPHIII, 453) {
     property {
@@ -658,8 +813,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_AmtrakPHIII, 453) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_AmtrakPHIV_Purchase,   "gfx/Budd_RDC_AmtrakPHIV.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_AmtrakPHIV,   "gfx/Budd_RDC_AmtrakPHIV.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_AmtrakPHIV_Purchase,   "gfx/Budd_RDC_AmtrakPHIV.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_AmtrakPHIV,   "gfx/Budd_RDC_AmtrakPHIV.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_AmtrakPHIV, 454) {
     property {
@@ -707,8 +862,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_AmtrakPHIV, 454) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_NewHaven_Purchase,   "gfx/Budd_RDC_NewHaven.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_NewHaven,   "gfx/Budd_RDC_NewHaven.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_NewHaven_Purchase,   "gfx/Budd_RDC_NewHaven.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_NewHaven,   "gfx/Budd_RDC_NewHaven.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_NewHaven, 455) {
     property {
@@ -756,8 +911,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_NewHaven, 455) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_Stripes_Purchase,   "gfx/Budd_RDC_Stripes.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_Stripes,   "gfx/Budd_RDC_Stripes.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_Stripes_Purchase,   "gfx/Budd_RDC_Stripes.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_Stripes,   "gfx/Budd_RDC_Stripes.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_Stripes, 456) {
     property {
@@ -805,8 +960,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_Stripes, 456) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_ColouredFace_Purchase,   "gfx/Budd_RDC_ColouredFace.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_ColouredFace,   "gfx/Budd_RDC_ColouredFace.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_ColouredFace_Purchase,   "gfx/Budd_RDC_ColouredFace.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_ColouredFace,   "gfx/Budd_RDC_ColouredFace.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_ColouredFace, 457) {
     property {
@@ -854,8 +1009,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_ColouredFace, 457) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_ColouredFaceMidStripe_Purchase,   "gfx/Budd_RDC_ColouredFaceMidStripe.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_ColouredFaceMidStripe,   "gfx/Budd_RDC_ColouredFaceMidStripe.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_ColouredFaceMidStripe_Purchase,   "gfx/Budd_RDC_ColouredFaceMidStripe.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_ColouredFaceMidStripe,   "gfx/Budd_RDC_ColouredFaceMidStripe.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_ColouredFaceMidStripe, 458) {
     property {
@@ -903,8 +1058,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_ColouredFaceMidStripe, 458) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_ColouredFaceHighStripe_Purchase,   "gfx/Budd_RDC_ColouredFaceHighStripe.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_ColouredFaceHighStripe,   "gfx/Budd_RDC_ColouredFaceHighStripe.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_ColouredFaceHighStripe_Purchase,   "gfx/Budd_RDC_ColouredFaceHighStripe.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_ColouredFaceHighStripe,   "gfx/Budd_RDC_ColouredFaceHighStripe.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_ColouredFaceHighStripe, 459) {
     property {
@@ -952,8 +1107,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_ColouredFaceHighStripe, 459) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_HalfFace_Purchase,   "gfx/Budd_RDC_HalfFace.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_HalfFace,   "gfx/Budd_RDC_HalfFace.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_HalfFace_Purchase,   "gfx/Budd_RDC_HalfFace.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_HalfFace,   "gfx/Budd_RDC_HalfFace.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_HalfFace, 460) {
     property {
@@ -1001,8 +1156,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_HalfFace, 460) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_HalfFaceMidStripe_Purchase,   "gfx/Budd_RDC_HalfFaceMidStripe.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_HalfFaceMidStripe,   "gfx/Budd_RDC_HalfFaceMidStripe.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_HalfFaceMidStripe_Purchase,   "gfx/Budd_RDC_HalfFaceMidStripe.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_HalfFaceMidStripe,   "gfx/Budd_RDC_HalfFaceMidStripe.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_HalfFaceMidStripe, 461) {
     property {
@@ -1050,8 +1205,8 @@ item(FEAT_TRAINS, Item_Budd_RDC_HalfFaceMidStripe, 461) {
 }
 
 //Budd _RDC
-spriteset(spriteset_Budd_RDC_HalfFaceHighStripe_Purchase,   "gfx/Budd_RDC_HalfFaceHighStripe.png") {template_purchase(7, 21)}
-spriteset(spriteset_Budd_RDC_HalfFaceHighStripe,   "gfx/Budd_RDC_HalfFaceHighStripe.png") {template_Old_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Budd_RDC_HalfFaceHighStripe_Purchase,   "gfx/Budd_RDC_HalfFaceHighStripe.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_RDC_HalfFaceHighStripe,   "gfx/Budd_RDC_HalfFaceHighStripe.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_RDC_HalfFaceHighStripe, 462) {
     property {
@@ -1109,7 +1264,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_Sprinter_attach, vehicle_type_id){
 }
 
 //Budd_Sprinter_Silver
-spriteset(spriteset_Budd_Sprinter_Silver_Purchase,   "gfx/Budd_Sprinter_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Sprinter_Silver_Purchase,   "gfx/Budd_Sprinter_Silver.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Sprinter_Silver,   "gfx/Budd_Sprinter_Silver.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_Sprinter_Silver, 801) {
@@ -1158,7 +1313,7 @@ item(FEAT_TRAINS, Item_Budd_Sprinter_Silver, 801) {
 }
 
 //Budd_Sprinter_Liv1
-spriteset(spriteset_Budd_Sprinter_Liv1_Purchase,   "gfx/Budd_Sprinter_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Sprinter_Liv1_Purchase,   "gfx/Budd_Sprinter_Liv1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Sprinter_Liv1,   "gfx/Budd_Sprinter_Liv1.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_Sprinter_Liv1, 802) {
@@ -1207,7 +1362,7 @@ item(FEAT_TRAINS, Item_Budd_Sprinter_Liv1, 802) {
 }
 
 //Budd_Sprinter_Liv2
-spriteset(spriteset_Budd_Sprinter_Liv2_Purchase,   "gfx/Budd_Sprinter_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Sprinter_Liv2_Purchase,   "gfx/Budd_Sprinter_Liv2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Sprinter_Liv2,   "gfx/Budd_Sprinter_Liv2.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_Sprinter_Liv2, 803) {
@@ -1256,7 +1411,7 @@ item(FEAT_TRAINS, Item_Budd_Sprinter_Liv2, 803) {
 }
 
 //Budd_Sprinter_Liv3
-spriteset(spriteset_Budd_Sprinter_Liv3_Purchase,   "gfx/Budd_Sprinter_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Sprinter_Liv3_Purchase,   "gfx/Budd_Sprinter_Liv3.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Sprinter_Liv3,   "gfx/Budd_Sprinter_Liv3.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 
 item(FEAT_TRAINS, Item_Budd_Sprinter_Liv3, 804) {
@@ -1311,7 +1466,7 @@ switch(FEAT_TRAINS, SELF, sw_EMDFlyLiner_attach, vehicle_type_id){
 }
 
 //EMDFlyLiner_ATSF
-spriteset(spriteset_EMDFlyLiner_ATSF_Purchase,   "gfx/EMDFlyLiner_ATSF.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMDFlyLiner_ATSF_Purchase,   "gfx/EMDFlyLiner_ATSF.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_EMDFlyLiner_ATSF_Lead,   "gfx/EMDFlyLiner_ATSF.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMDFlyLiner_ATSF_Rear,   "gfx/EMDFlyLiner_ATSF.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_EMDFlyLiner_ATSF_Trailer,   "gfx/EMDFlyLiner_ATSF.png") {template_Old_8(7, 89)}
@@ -1380,7 +1535,7 @@ switch(FEAT_TRAINS, SELF, sw_BuddElSargento_attach, vehicle_type_id){
 }
 
 //BuddElSargento_ATSF
-spriteset(spriteset_BuddElSargento_ATSF_Purchase,   "gfx/BuddElSargento_ATSF.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddElSargento_ATSF_Purchase,   "gfx/BuddElSargento_ATSF.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BuddElSargento_ATSF_Lead,   "gfx/BuddElSargento_ATSF.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BuddElSargento_ATSF_Rear,   "gfx/BuddElSargento_ATSF.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BuddElSargento_ATSF_Trailer,   "gfx/BuddElSargento_ATSF.png") {template_Old_8(7, 89)}
@@ -1452,7 +1607,7 @@ switch(FEAT_TRAINS, SELF, sw_BuddComeng_XPT_attach, vehicle_type_id){
 }
 
 //BuddComeng XPT
-spriteset(spriteset_BuddComeng_XPT_AmtrakPHIII_Purchase,   "gfx/BuddComeng_XPT_AmtrakPHIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_XPT_AmtrakPHIII_Purchase,   "gfx/BuddComeng_XPT_AmtrakPHIII.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHIII_Lead,   "gfx/BuddComeng_XPT_AmtrakPHIII.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHIII_Rear,   "gfx/BuddComeng_XPT_AmtrakPHIII.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHIII_Mid,   "gfx/BuddComeng_XPT_AmtrakPHIII.png") {template_Old_8(7, 89)}
@@ -1516,7 +1671,7 @@ item(FEAT_TRAINS, Item_BuddComeng_XPT_AmtrakPHIII, 6901) {
 }
 
 //BuddComeng XPT
-spriteset(spriteset_BuddComeng_XPT_AmtrakPHIV_Purchase,   "gfx/BuddComeng_XPT_AmtrakPHIV.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_XPT_AmtrakPHIV_Purchase,   "gfx/BuddComeng_XPT_AmtrakPHIV.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHIV_Lead,   "gfx/BuddComeng_XPT_AmtrakPHIV.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHIV_Rear,   "gfx/BuddComeng_XPT_AmtrakPHIV.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHIV_Mid,   "gfx/BuddComeng_XPT_AmtrakPHIV.png") {template_Old_8(7, 89)}
@@ -1580,7 +1735,7 @@ item(FEAT_TRAINS, Item_BuddComeng_XPT_AmtrakPHIV, 6902) {
 }
 
 //BuddComeng XPT
-spriteset(spriteset_BuddComeng_XPT_AmtrakPHV_Purchase,   "gfx/BuddComeng_XPT_AmtrakPHV.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_XPT_AmtrakPHV_Purchase,   "gfx/BuddComeng_XPT_AmtrakPHV.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHV_Lead,   "gfx/BuddComeng_XPT_AmtrakPHV.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHV_Rear,   "gfx/BuddComeng_XPT_AmtrakPHV.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BuddComeng_XPT_AmtrakPHV_Mid,   "gfx/BuddComeng_XPT_AmtrakPHV.png") {template_Old_8(7, 89)}
@@ -1644,7 +1799,7 @@ item(FEAT_TRAINS, Item_BuddComeng_XPT_AmtrakPHV, 6903) {
 }
 
 //BuddComeng XPT
-spriteset(spriteset_BuddComeng_XPT_AmtrakCalifornia_Purchase,   "gfx/BuddComeng_XPT_AmtrakCalifornia.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_XPT_AmtrakCalifornia_Purchase,   "gfx/BuddComeng_XPT_AmtrakCalifornia.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BuddComeng_XPT_AmtrakCalifornia_Lead,   "gfx/BuddComeng_XPT_AmtrakCalifornia.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BuddComeng_XPT_AmtrakCalifornia_Rear,   "gfx/BuddComeng_XPT_AmtrakCalifornia.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BuddComeng_XPT_AmtrakCalifornia_Mid,   "gfx/BuddComeng_XPT_AmtrakCalifornia.png") {template_Old_8(7, 89)}
@@ -1714,7 +1869,7 @@ spriteset(spriteset_PRR_MP54_Markerlights,   "gfx/PRR_MP54_Markerlights.png") {t
 spriteset(spriteset_PRR_MP54_Markerlights_r,   "gfx/PRR_MP54_Markerlights.png") {template_Old_8(7, 64)} // <- Define headlights (flipped)
 
 //OH MP54
-spriteset(spriteset_PRR_MP54_OH_Purchase,   "gfx/PRR_MP54_OH.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_OH_Purchase,   "gfx/PRR_MP54_OH.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_OH,   "gfx/PRR_MP54_OH.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_OH_r,   "gfx/PRR_MP54_OH.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -1736,7 +1891,7 @@ switch(FEAT_TRAINS, SELF, sw_PRR_MP54_OH_attach, vehicle_type_id){
 }
 
 //OH MP54
-spriteset(spriteset_PRR_MP54_OH_PRR_Purchase,   "gfx/PRR_MP54_OH_PRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_OH_PRR_Purchase,   "gfx/PRR_MP54_OH_PRR.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_OH_PRR,   "gfx/PRR_MP54_OH_PRR.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_OH_PRR_r,   "gfx/PRR_MP54_OH_PRR.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -1844,7 +1999,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_OH_PRR, 10101) {
 }
 
 //OH MP54
-spriteset(spriteset_PRR_MP54_OH_LIRR_Purchase,   "gfx/PRR_MP54_OH_LIRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_OH_LIRR_Purchase,   "gfx/PRR_MP54_OH_LIRR.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_OH_LIRR,   "gfx/PRR_MP54_OH_LIRR.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_OH_LIRR_r,   "gfx/PRR_MP54_OH_LIRR.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -1952,7 +2107,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_OH_PRR_LIRR, 10102) {
 }
 
 //OH MP54
-spriteset(spriteset_PRR_MP54_OH_LIRRMTA_Purchase,   "gfx/PRR_MP54_OH_LIRRMTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_OH_LIRRMTA_Purchase,   "gfx/PRR_MP54_OH_LIRRMTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_OH_LIRRMTA,   "gfx/PRR_MP54_OH_LIRRMTA.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_OH_LIRRMTA_r,   "gfx/PRR_MP54_OH_LIRRMTA.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -2060,7 +2215,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_OH_PRR_LIRRMTA, 10103) {
 }
 
 //OH MP54
-spriteset(spriteset_PRR_MP54_OH_PennCentral_Purchase,   "gfx/PRR_MP54_OH_PennCentral.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_OH_PennCentral_Purchase,   "gfx/PRR_MP54_OH_PennCentral.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_OH_PennCentral,   "gfx/PRR_MP54_OH_PennCentral.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_OH_PennCentral_r,   "gfx/PRR_MP54_OH_PennCentral.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -2168,7 +2323,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_OH_PRR_PennCentral, 10104) {
 }
 
 //OH MP54
-spriteset(spriteset_PRR_MP54_OH_WTC_Purchase,   "gfx/PRR_MP54_OH_WTC.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_OH_WTC_Purchase,   "gfx/PRR_MP54_OH_WTC.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_OH_WTC,   "gfx/PRR_MP54_OH_WTC.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_OH_WTC_r,   "gfx/PRR_MP54_OH_WTC.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -2276,7 +2431,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_OH_PRR_WTC, 10105) {
 }
 
 //OH MP54
-spriteset(spriteset_PRR_MP54_OH_SEPTA_Purchase,   "gfx/PRR_MP54_OH_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_OH_SEPTA_Purchase,   "gfx/PRR_MP54_OH_SEPTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_OH_SEPTA,   "gfx/PRR_MP54_OH_SEPTA.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_OH_SEPTA_r,   "gfx/PRR_MP54_OH_SEPTA.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -2390,7 +2545,7 @@ switch(FEAT_TRAINS, SELF, sw_LackawannaEMU_attach, vehicle_type_id){
 }
 
 //LackawannaEMU_Twotone
-spriteset(spriteset_LackawannaEMU_Twotone_purchase,   "gfx/LackawannaEMU_Twotone.png") {template_purchase(7, 21)}
+spriteset(spriteset_LackawannaEMU_Twotone_purchase,   "gfx/LackawannaEMU_Twotone.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_LackawannaEMU_Twotone_Motor_lead,   "gfx/LackawannaEMU_Twotone.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_LackawannaEMU_Twotone_Motor_rear,   "gfx/LackawannaEMU_Twotone.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_LackawannaEMU_Twotone_DrivingTrailer_lead,   "gfx/LackawannaEMU_Twotone.png") {template_Old_8(187, 39)}
@@ -2600,7 +2755,7 @@ spriteset(spriteset_BluebirdEMU_Markerlights_r,   "gfx/BluebirdEMU_Markerlights.
 
 
 //BluebirdEMU
-spriteset(spriteset_BluebirdEMU_Purchase,   "gfx/BluebirdEMU.png") {template_purchase(7, 21)}
+spriteset(spriteset_BluebirdEMU_Purchase,   "gfx/BluebirdEMU.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BluebirdEMU,   "gfx/BluebirdEMU.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_BluebirdEMU_r,   "gfx/BluebirdEMU.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -2613,7 +2768,7 @@ switch(FEAT_TRAINS, SELF, sw_BluebirdEMU_attach, vehicle_type_id){
 }
 
 //BluebirdEMU_Reading
-spriteset(spriteset_BluebirdEMU_Reading_Purchase,   "gfx/BluebirdEMU_Reading.png") {template_purchase(7, 21)}
+spriteset(spriteset_BluebirdEMU_Reading_Purchase,   "gfx/BluebirdEMU_Reading.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BluebirdEMU_Reading,   "gfx/BluebirdEMU_Reading.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_BluebirdEMU_Reading_r,   "gfx/BluebirdEMU_Reading.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -2721,7 +2876,7 @@ item(FEAT_TRAINS, Item_BluebirdEMU_Reading, 10351) {
 }
 
 //BluebirdEMU_Bluebird
-spriteset(spriteset_BluebirdEMU_Bluebird_Purchase,   "gfx/BluebirdEMU_Bluebird.png") {template_purchase(7, 21)}
+spriteset(spriteset_BluebirdEMU_Bluebird_Purchase,   "gfx/BluebirdEMU_Bluebird.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BluebirdEMU_Bluebird,   "gfx/BluebirdEMU_Bluebird.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_BluebirdEMU_Bluebird_r,   "gfx/BluebirdEMU_Bluebird.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -2829,7 +2984,7 @@ item(FEAT_TRAINS, Item_BluebirdEMU_Bluebird, 10352) {
 }
 
 //BluebirdEMU_SEPTA
-spriteset(spriteset_BluebirdEMU_SEPTA_Purchase,   "gfx/BluebirdEMU_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_BluebirdEMU_SEPTA_Purchase,   "gfx/BluebirdEMU_SEPTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BluebirdEMU_SEPTA,   "gfx/BluebirdEMU_SEPTA.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_BluebirdEMU_SEPTA_r,   "gfx/BluebirdEMU_SEPTA.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -2945,7 +3100,7 @@ switch(FEAT_TRAINS, SELF, sw_CCandFEMU_attach, vehicle_type_id){
 }
 
 //CCandFEMU_CN1
-spriteset(spriteset_CCandFEMU_CN1_purchase,   "gfx/CCandFEMU_CN1.png") {template_purchase(7, 21)}
+spriteset(spriteset_CCandFEMU_CN1_purchase,   "gfx/CCandFEMU_CN1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_CCandFEMU_CN1_Motor_lead,   "gfx/CCandFEMU_CN1.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_CCandFEMU_CN1_Motor_rear,   "gfx/CCandFEMU_CN1.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_CCandFEMU_CN1_DrivingTrailer_lead,   "gfx/CCandFEMU_CN1.png") {template_Old_8(187, 39)}
@@ -3148,7 +3303,7 @@ item(FEAT_TRAINS, Item_CCandFEMU_CN1, 10501) {
 }
 
 //CCandFEMU_CN2
-spriteset(spriteset_CCandFEMU_CN2_purchase,   "gfx/CCandFEMU_CN2.png") {template_purchase(7, 21)}
+spriteset(spriteset_CCandFEMU_CN2_purchase,   "gfx/CCandFEMU_CN2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_CCandFEMU_CN2_Motor_lead,   "gfx/CCandFEMU_CN2.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_CCandFEMU_CN2_Motor_rear,   "gfx/CCandFEMU_CN2.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_CCandFEMU_CN2_DrivingTrailer_lead,   "gfx/CCandFEMU_CN2.png") {template_Old_8(187, 39)}
@@ -3359,7 +3514,7 @@ switch(FEAT_TRAINS, SELF, sw_WashboardEMU_attach, vehicle_type_id){
 }
 
 //WashboardEMU_NewHaven1
-spriteset(spriteset_WashboardEMU_NewHaven1_Purchase,   "gfx/WashboardEMU_NewHaven1.png") {template_purchase(7, 21)}
+spriteset(spriteset_WashboardEMU_NewHaven1_Purchase,   "gfx/WashboardEMU_NewHaven1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_WashboardEMU_NewHaven1,   "gfx/WashboardEMU_NewHaven1.png") {template_Old_8(7, 39)} 
 spriteset(spriteset_WashboardEMU_NewHaven1_r,   "gfx/WashboardEMU_NewHaven1.png") {template_Old_8_r(7, 39)} 
 
@@ -3413,7 +3568,7 @@ item(FEAT_TRAINS, Item_WashboardEMU_NewHaven1, 10551) {
 }
 
 //WashboardEMU_NewHaven2
-spriteset(spriteset_WashboardEMU_NewHaven2_Purchase,   "gfx/WashboardEMU_NewHaven2.png") {template_purchase(7, 21)}
+spriteset(spriteset_WashboardEMU_NewHaven2_Purchase,   "gfx/WashboardEMU_NewHaven2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_WashboardEMU_NewHaven2,   "gfx/WashboardEMU_NewHaven2.png") {template_Old_8(7, 39)} 
 spriteset(spriteset_WashboardEMU_NewHaven2_r,   "gfx/WashboardEMU_NewHaven2.png") {template_Old_8_r(7, 39)} 
 
@@ -3467,7 +3622,7 @@ item(FEAT_TRAINS, Item_WashboardEMU_NewHaven2, 10552) {
 }
 
 //WashboardEMU_MBTA
-spriteset(spriteset_WashboardEMU_MBTA_Purchase,   "gfx/WashboardEMU_MBTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_WashboardEMU_MBTA_Purchase,   "gfx/WashboardEMU_MBTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_WashboardEMU_MBTA,   "gfx/WashboardEMU_MBTA.png") {template_Old_8(7, 39)} 
 spriteset(spriteset_WashboardEMU_MBTA_r,   "gfx/WashboardEMU_MBTA.png") {template_Old_8_r(7, 39)} 
 
@@ -3521,7 +3676,7 @@ item(FEAT_TRAINS, Item_WashboardEMU_MBTA, 10553) {
 }
 
 //WashboardEMU_Generic1
-spriteset(spriteset_WashboardEMU_Generic1_Purchase,   "gfx/WashboardEMU_Generic1.png") {template_purchase(7, 21)}
+spriteset(spriteset_WashboardEMU_Generic1_Purchase,   "gfx/WashboardEMU_Generic1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_WashboardEMU_Generic1,   "gfx/WashboardEMU_Generic1.png") {template_Old_8(7, 39)} 
 spriteset(spriteset_WashboardEMU_Generic1_r,   "gfx/WashboardEMU_Generic1.png") {template_Old_8_r(7, 39)} 
 
@@ -3582,7 +3737,7 @@ spriteset(spriteset_PioneerIII_Markerlights_r,   "gfx/PioneerIII_Markerlights.pn
 
 
 //PioneerIII
-spriteset(spriteset_PioneerIII_Purchase,   "gfx/PioneerIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIII_Purchase,   "gfx/PioneerIII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIII,   "gfx/PioneerIII.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PioneerIII_r,   "gfx/PioneerIII.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -3596,7 +3751,7 @@ switch(FEAT_TRAINS, SELF, sw_PioneerIII_attach, vehicle_type_id){
 }
 
 //PioneerIII_CompanyColour
-spriteset(spriteset_PioneerIII_CompanyColour_Purchase,   "gfx/PioneerIII_CompanyColour.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIII_CompanyColour_Purchase,   "gfx/PioneerIII_CompanyColour.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIII_CompanyColour,   "gfx/PioneerIII_CompanyColour.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PioneerIII_CompanyColour_r,   "gfx/PioneerIII_CompanyColour.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -3704,7 +3859,7 @@ item(FEAT_TRAINS, Item_PioneerIII_CompanyColour, 10576) {
 }
 
 //PioneerIII_Production
-spriteset(spriteset_PioneerIII_Production_Purchase,   "gfx/PioneerIII_Production.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIII_Production_Purchase,   "gfx/PioneerIII_Production.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIII_Production,   "gfx/PioneerIII_Production.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PioneerIII_Production_r,   "gfx/PioneerIII_Production.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -3812,7 +3967,7 @@ item(FEAT_TRAINS, Item_PioneerIII_Production, 10577) {
 }
 
 //PioneerIII_SEPTA
-spriteset(spriteset_PioneerIII_SEPTA_Purchase,   "gfx/PioneerIII_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIII_SEPTA_Purchase,   "gfx/PioneerIII_SEPTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIII_SEPTA,   "gfx/PioneerIII_SEPTA.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PioneerIII_SEPTA_r,   "gfx/PioneerIII_SEPTA.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -3920,7 +4075,7 @@ item(FEAT_TRAINS, Item_PioneerIII_SEPTA, 10578) {
 }
 
 //PioneerIII_SEPTAAirport
-spriteset(spriteset_PioneerIII_SEPTAAirport_Purchase,   "gfx/PioneerIII_SEPTAAirport.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIII_SEPTAAirport_Purchase,   "gfx/PioneerIII_SEPTAAirport.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIII_SEPTAAirport,   "gfx/PioneerIII_SEPTAAirport.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PioneerIII_SEPTAAirport_r,   "gfx/PioneerIII_SEPTAAirport.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -4040,7 +4195,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_Panamaliner_attach, vehicle_type_id){
 
 //Budd Panamaliner_Silver
 //CC1
-spriteset(spriteset_Budd_Panamaliner_Silver_purchase,   "gfx/Panamaliner_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Panamaliner_Silver_purchase,   "gfx/Panamaliner_Silver.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Panamaliner_Silver_Motor_lead,   "gfx/Panamaliner_Silver.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Panamaliner_Silver_Motor_rear,   "gfx/Panamaliner_Silver.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Panamaliner_Silver_DrivingTrailer_lead,   "gfx/Panamaliner_Silver.png") {template_Old_8(187, 39)}
@@ -4244,7 +4399,7 @@ item(FEAT_TRAINS, Item_Budd_Panamaliner_Silver, 10651) {
 
 //Budd Panamaliner_IllinoisCentral
 //CC1
-spriteset(spriteset_Budd_Panamaliner_IllinoisCentral_purchase,   "gfx/Panamaliner_IllinoisCentral.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Panamaliner_IllinoisCentral_purchase,   "gfx/Panamaliner_IllinoisCentral.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Panamaliner_IllinoisCentral_Motor_lead,   "gfx/Panamaliner_IllinoisCentral.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Panamaliner_IllinoisCentral_Motor_rear,   "gfx/Panamaliner_IllinoisCentral.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Panamaliner_IllinoisCentral_DrivingTrailer_lead,   "gfx/Panamaliner_IllinoisCentral.png") {template_Old_8(187, 39)}
@@ -4448,7 +4603,7 @@ item(FEAT_TRAINS, Item_Budd_Panamaliner_IllinoisCentral, 10652) {
 
 //Budd Panamaliner_RTA
 //CC1
-spriteset(spriteset_Budd_Panamaliner_RTA_purchase,   "gfx/Panamaliner_RTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Panamaliner_RTA_purchase,   "gfx/Panamaliner_RTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Panamaliner_RTA_Motor_lead,   "gfx/Panamaliner_RTA.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Panamaliner_RTA_Motor_rear,   "gfx/Panamaliner_RTA.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Panamaliner_RTA_DrivingTrailer_lead,   "gfx/Panamaliner_RTA.png") {template_Old_8(187, 39)}
@@ -4652,7 +4807,7 @@ item(FEAT_TRAINS, Item_Budd_Panamaliner_RTA, 10653) {
 
 //Budd Panamaliner_Metra
 //CC1
-spriteset(spriteset_Budd_Panamaliner_Metra_purchase,   "gfx/Panamaliner_Metra.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Panamaliner_Metra_purchase,   "gfx/Panamaliner_Metra.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Panamaliner_Metra_Motor_lead,   "gfx/Panamaliner_Metra.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Panamaliner_Metra_Motor_rear,   "gfx/Panamaliner_Metra.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Panamaliner_Metra_DrivingTrailer_lead,   "gfx/Panamaliner_Metra.png") {template_Old_8(187, 39)}
@@ -4856,7 +5011,7 @@ item(FEAT_TRAINS, Item_Budd_Panamaliner_Metra, 10654) {
 
 //Budd Panamaliner_SSL
 //CC1
-spriteset(spriteset_Budd_Panamaliner_SSL_purchase,   "gfx/Panamaliner_SSL.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Panamaliner_SSL_purchase,   "gfx/Panamaliner_SSL.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Panamaliner_SSL_Motor_lead,   "gfx/Panamaliner_SSL.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Panamaliner_SSL_Motor_rear,   "gfx/Panamaliner_SSL.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Panamaliner_SSL_DrivingTrailer_lead,   "gfx/Panamaliner_SSL.png") {template_Old_8(187, 39)}
@@ -5060,7 +5215,7 @@ item(FEAT_TRAINS, Item_Budd_Panamaliner_SSL, 10656) {
 
 //Budd Panamaliner_SSL2
 //CC1
-spriteset(spriteset_Budd_Panamaliner_SSL2_purchase,   "gfx/Panamaliner_SSL2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Panamaliner_SSL2_purchase,   "gfx/Panamaliner_SSL2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Panamaliner_SSL2_Motor_lead,   "gfx/Panamaliner_SSL2.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Panamaliner_SSL2_Motor_rear,   "gfx/Panamaliner_SSL2.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Panamaliner_SSL2_DrivingTrailer_lead,   "gfx/Panamaliner_SSL2.png") {template_Old_8(187, 39)}
@@ -5264,7 +5419,7 @@ item(FEAT_TRAINS, Item_Budd_Panamaliner_SSL2, 10657) {
 
 //Budd Panamaliner_MTA
 //CC1
-spriteset(spriteset_Budd_Panamaliner_MTA_purchase,   "gfx/Panamaliner_MTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Panamaliner_MTA_purchase,   "gfx/Panamaliner_MTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Panamaliner_MTA_Motor_lead,   "gfx/Panamaliner_MTA.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Panamaliner_MTA_Motor_rear,   "gfx/Panamaliner_MTA.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Panamaliner_MTA_DrivingTrailer_lead,   "gfx/Panamaliner_MTA.png") {template_Old_8(187, 39)}
@@ -5479,7 +5634,7 @@ switch(FEAT_TRAINS, SELF, sw_JerseyArrow_attach, vehicle_type_id){
 }
 
 //JerseyArrow_Silver
-spriteset(spriteset_JerseyArrow_Silver_Purchase,   "gfx/JerseyArrow_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_JerseyArrow_Silver_Purchase,   "gfx/JerseyArrow_Silver.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_JerseyArrow_Silver,   "gfx/JerseyArrow_Silver.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_JerseyArrow_Silver_r,   "gfx/JerseyArrow_Silver.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -5587,7 +5742,7 @@ item(FEAT_TRAINS, Item_JerseyArrow_Silver, 10676) {
 }
 
 //JerseyArrow_NJT
-spriteset(spriteset_JerseyArrow_NJT_Purchase,   "gfx/JerseyArrow_NJT.png") {template_purchase(7, 21)}
+spriteset(spriteset_JerseyArrow_NJT_Purchase,   "gfx/JerseyArrow_NJT.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_JerseyArrow_NJT,   "gfx/JerseyArrow_NJT.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_JerseyArrow_NJT_r,   "gfx/JerseyArrow_NJT.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -5705,7 +5860,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_Cosmopolitan_attach, vehicle_type_id){
 }
 
 //Budd_Cosmopolitan_Liv0
-spriteset(spriteset_Budd_Cosmopolitan_Liv0_purchase,   "gfx/Budd_Cosmopolitan_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Cosmopolitan_Liv0_purchase,   "gfx/Budd_Cosmopolitan_Liv0.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Cosmopolitan_Liv0_Motor_lead,   "gfx/Budd_Cosmopolitan_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Cosmopolitan_Liv0_Motor_rear,   "gfx/Budd_Cosmopolitan_Liv0.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Cosmopolitan_Liv0_DrivingTrailer_lead,   "gfx/Budd_Cosmopolitan_Liv0.png") {template_8(187, 39)}
@@ -5908,7 +6063,7 @@ item(FEAT_TRAINS, Item_Budd_Cosmopolitan_Liv0, 10700) {
 }
 
 //Budd_Cosmopolitan_Liv1
-spriteset(spriteset_Budd_Cosmopolitan_Liv1_purchase,   "gfx/Budd_Cosmopolitan_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Cosmopolitan_Liv1_purchase,   "gfx/Budd_Cosmopolitan_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Cosmopolitan_Liv1_Motor_lead,   "gfx/Budd_Cosmopolitan_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Cosmopolitan_Liv1_Motor_rear,   "gfx/Budd_Cosmopolitan_Liv1.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Cosmopolitan_Liv1_DrivingTrailer_lead,   "gfx/Budd_Cosmopolitan_Liv1.png") {template_8(187, 39)}
@@ -6111,7 +6266,7 @@ item(FEAT_TRAINS, Item_Budd_Cosmopolitan_Liv1, 10701) {
 }
 
 //Budd_Cosmopolitan_Liv2
-spriteset(spriteset_Budd_Cosmopolitan_Liv2_purchase,   "gfx/Budd_Cosmopolitan_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Cosmopolitan_Liv2_purchase,   "gfx/Budd_Cosmopolitan_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Cosmopolitan_Liv2_Motor_lead,   "gfx/Budd_Cosmopolitan_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Cosmopolitan_Liv2_Motor_rear,   "gfx/Budd_Cosmopolitan_Liv2.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Cosmopolitan_Liv2_DrivingTrailer_lead,   "gfx/Budd_Cosmopolitan_Liv2.png") {template_8(187, 39)}
@@ -6314,7 +6469,7 @@ item(FEAT_TRAINS, Item_Budd_Cosmopolitan_Liv2, 10702) {
 }
 
 //Budd_Cosmopolitan_Liv3
-spriteset(spriteset_Budd_Cosmopolitan_Liv3_purchase,   "gfx/Budd_Cosmopolitan_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Cosmopolitan_Liv3_purchase,   "gfx/Budd_Cosmopolitan_Liv3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Cosmopolitan_Liv3_Motor_lead,   "gfx/Budd_Cosmopolitan_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Cosmopolitan_Liv3_Motor_rear,   "gfx/Budd_Cosmopolitan_Liv3.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Cosmopolitan_Liv3_DrivingTrailer_lead,   "gfx/Budd_Cosmopolitan_Liv3.png") {template_8(187, 39)}
@@ -6517,7 +6672,7 @@ item(FEAT_TRAINS, Item_Budd_Cosmopolitan_Liv3, 10703) {
 }
 
 //Budd_Cosmopolitan_Liv4
-spriteset(spriteset_Budd_Cosmopolitan_Liv4_purchase,   "gfx/Budd_Cosmopolitan_Liv4.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Cosmopolitan_Liv4_purchase,   "gfx/Budd_Cosmopolitan_Liv4.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Cosmopolitan_Liv4_Motor_lead,   "gfx/Budd_Cosmopolitan_Liv4.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Cosmopolitan_Liv4_Motor_rear,   "gfx/Budd_Cosmopolitan_Liv4.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Cosmopolitan_Liv4_DrivingTrailer_lead,   "gfx/Budd_Cosmopolitan_Liv4.png") {template_8(187, 39)}
@@ -6738,7 +6893,7 @@ spriteset(spriteset_SilverlinerIV_RM_Markerlights,   "gfx/SilverlinerIV_RM_Marke
 spriteset(spriteset_SilverlinerIV_RM_Markerlights_r,   "gfx/SilverlinerIV_RM_Markerlights.png") {template_Old_8(7, 64)} // <- Define headlights (flipped)
 
 //SilverlinerIV_RM_Silver
-spriteset(spriteset_SilverlinerIV_RM_Silver_Purchase,   "gfx/SilverlinerIV_RM_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_SilverlinerIV_RM_Silver_Purchase,   "gfx/SilverlinerIV_RM_Silver.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_SilverlinerIV_RM_Silver,   "gfx/SilverlinerIV_RM_Silver.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_SilverlinerIV_RM_Silver_r,   "gfx/SilverlinerIV_RM_Silver.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -6846,7 +7001,7 @@ item(FEAT_TRAINS, Item_SilverlinerIV_RM_Silver, 10751) {
 }
 
 //SilverlinerIV_RM_SEPTA
-spriteset(spriteset_SilverlinerIV_RM_SEPTA_Purchase,   "gfx/SilverlinerIV_RM_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_SilverlinerIV_RM_SEPTA_Purchase,   "gfx/SilverlinerIV_RM_SEPTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_SilverlinerIV_RM_SEPTA,   "gfx/SilverlinerIV_RM_SEPTA.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_SilverlinerIV_RM_SEPTA_r,   "gfx/SilverlinerIV_RM_SEPTA.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -6954,7 +7109,7 @@ item(FEAT_TRAINS, Item_SilverlinerIV_RM_SEPTA, 10752) {
 }
 
 //SilverlinerIV_RM_Blueliner
-spriteset(spriteset_SilverlinerIV_RM_Blueliner_Purchase,   "gfx/SilverlinerIV_RM_Blueliner.png") {template_purchase(7, 21)}
+spriteset(spriteset_SilverlinerIV_RM_Blueliner_Purchase,   "gfx/SilverlinerIV_RM_Blueliner.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_SilverlinerIV_RM_Blueliner,   "gfx/SilverlinerIV_RM_Blueliner.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_SilverlinerIV_RM_Blueliner_r,   "gfx/SilverlinerIV_RM_Blueliner.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -7062,7 +7217,7 @@ item(FEAT_TRAINS, Item_SilverlinerIV_RM_Blueliner, 10753) {
 }
 
 //SilverlinerIV_MU_Silver
-spriteset(spriteset_SilverlinerIV_MU_Silver_purchase,   "gfx/SilverlinerIV_MU_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_SilverlinerIV_MU_Silver_purchase,   "gfx/SilverlinerIV_MU_Silver.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SilverlinerIV_MU_Silver_Motor_lead,   "gfx/SilverlinerIV_MU_Silver.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SilverlinerIV_MU_Silver_Motor_rear,   "gfx/SilverlinerIV_MU_Silver.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SilverlinerIV_MU_Silver_DrivingTrailer_lead,   "gfx/SilverlinerIV_MU_Silver.png") {template_Old_8(187, 39)}
@@ -7265,7 +7420,7 @@ item(FEAT_TRAINS, Item_SilverlinerIV_MU_Silver, 10761) {
 }
 
 //SilverlinerIV_MU_SEPTA
-spriteset(spriteset_SilverlinerIV_MU_SEPTA_purchase,   "gfx/SilverlinerIV_MU_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_SilverlinerIV_MU_SEPTA_purchase,   "gfx/SilverlinerIV_MU_SEPTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SilverlinerIV_MU_SEPTA_Motor_lead,   "gfx/SilverlinerIV_MU_SEPTA.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SilverlinerIV_MU_SEPTA_Motor_rear,   "gfx/SilverlinerIV_MU_SEPTA.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SilverlinerIV_MU_SEPTA_DrivingTrailer_lead,   "gfx/SilverlinerIV_MU_SEPTA.png") {template_Old_8(187, 39)}
@@ -7468,7 +7623,7 @@ item(FEAT_TRAINS, Item_SilverlinerIV_MU_SEPTA, 10762) {
 }
 
 //SilverlinerIV_MU_Blueliner
-spriteset(spriteset_SilverlinerIV_MU_Blueliner_purchase,   "gfx/SilverlinerIV_MU_Blueliner.png") {template_purchase(7, 21)}
+spriteset(spriteset_SilverlinerIV_MU_Blueliner_purchase,   "gfx/SilverlinerIV_MU_Blueliner.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SilverlinerIV_MU_Blueliner_Motor_lead,   "gfx/SilverlinerIV_MU_Blueliner.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SilverlinerIV_MU_Blueliner_Motor_rear,   "gfx/SilverlinerIV_MU_Blueliner.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SilverlinerIV_MU_Blueliner_DrivingTrailer_lead,   "gfx/SilverlinerIV_MU_Blueliner.png") {template_Old_8(187, 39)}
@@ -7688,7 +7843,7 @@ spriteset(spriteset_JerseyArrowII_RM_Markerlights_r,   "gfx/JerseyArrowII_RM_Mar
 
 
 //JerseyArrowII_RM_Silver
-spriteset(spriteset_JerseyArrowII_RM_Silver_Purchase,   "gfx/JerseyArrowII_RM_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_JerseyArrowII_RM_Silver_Purchase,   "gfx/JerseyArrowII_RM_Silver.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_JerseyArrowII_RM_Silver,   "gfx/JerseyArrowII_RM_Silver.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_JerseyArrowII_RM_Silver_r,   "gfx/JerseyArrowII_RM_Silver.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -7796,7 +7951,7 @@ item(FEAT_TRAINS, Item_JerseyArrowII_RM_Silver, 10771) {
 }
 
 //JerseyArrowII_RM_NJT
-spriteset(spriteset_JerseyArrowII_RM_NJT_Purchase,   "gfx/JerseyArrowII_RM_NJT.png") {template_purchase(7, 21)}
+spriteset(spriteset_JerseyArrowII_RM_NJT_Purchase,   "gfx/JerseyArrowII_RM_NJT.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_JerseyArrowII_RM_NJT,   "gfx/JerseyArrowII_RM_NJT.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_JerseyArrowII_RM_NJT_r,   "gfx/JerseyArrowII_RM_NJT.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -7904,7 +8059,7 @@ item(FEAT_TRAINS, Item_JerseyArrowII_RM_NJT, 10772) {
 }
 
 //JerseyArrowII_MU_Silver
-spriteset(spriteset_JerseyArrowII_MU_Silver_purchase,   "gfx/JerseyArrowII_MU_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_JerseyArrowII_MU_Silver_purchase,   "gfx/JerseyArrowII_MU_Silver.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_JerseyArrowII_MU_Silver_Motor_lead,   "gfx/JerseyArrowII_MU_Silver.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_JerseyArrowII_MU_Silver_Motor_rear,   "gfx/JerseyArrowII_MU_Silver.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_JerseyArrowII_MU_Silver_DrivingTrailer_lead,   "gfx/JerseyArrowII_MU_Silver.png") {template_Old_8(187, 39)}
@@ -8107,7 +8262,7 @@ item(FEAT_TRAINS, Item_JerseyArrowII_MU_Silver, 10781) {
 }
 
 //JerseyArrowII_MU_NJT
-spriteset(spriteset_JerseyArrowII_MU_NJT_purchase,   "gfx/JerseyArrowII_MU_NJT.png") {template_purchase(7, 21)}
+spriteset(spriteset_JerseyArrowII_MU_NJT_purchase,   "gfx/JerseyArrowII_MU_NJT.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_JerseyArrowII_MU_NJT_Motor_lead,   "gfx/JerseyArrowII_MU_NJT.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_JerseyArrowII_MU_NJT_Motor_rear,   "gfx/JerseyArrowII_MU_NJT.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_JerseyArrowII_MU_NJT_DrivingTrailer_lead,   "gfx/JerseyArrowII_MU_NJT.png") {template_Old_8(187, 39)}
@@ -8316,7 +8471,7 @@ switch(FEAT_TRAINS, SELF, sw_MR90_attach, vehicle_type_id){
 }
 
 //MR90_AMT
-spriteset(spriteset_MR90_AMT_purchase,   "gfx/MR90_AMT.png") {template_purchase(7, 21)}
+spriteset(spriteset_MR90_AMT_purchase,   "gfx/MR90_AMT.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_MR90_AMT_Motor_lead,   "gfx/MR90_AMT.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_MR90_AMT_Motor_rear,   "gfx/MR90_AMT.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_MR90_AMT_DrivingTrailer_lead,   "gfx/MR90_AMT.png") {template_Old_8(187, 39)}
@@ -8525,7 +8680,7 @@ switch(FEAT_TRAINS, SELF, sw_Gallery2000_attach, vehicle_type_id){
 }
 
 //Gallery2000_Metra1
-spriteset(spriteset_Gallery2000_Metra1_purchase,   "gfx/Gallery2000_Metra1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Gallery2000_Metra1_purchase,   "gfx/Gallery2000_Metra1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Gallery2000_Metra1_Motor_lead,   "gfx/Gallery2000_Metra1.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Gallery2000_Metra1_Motor_rear,   "gfx/Gallery2000_Metra1.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Gallery2000_Metra1_DrivingTrailer_lead,   "gfx/Gallery2000_Metra1.png") {template_Old_8(187, 39)}
@@ -8736,7 +8891,7 @@ switch(FEAT_TRAINS, SELF, sw_PortLinerI_attach, vehicle_type_id){
 }
 
 //PortLinerI_MTA
-spriteset(spriteset_PortLinerI_MTA_purchase,   "gfx/PortLinerI_MTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PortLinerI_MTA_purchase,   "gfx/PortLinerI_MTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_PortLinerI_MTA_Motor_lead,   "gfx/PortLinerI_MTA.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_PortLinerI_MTA_Motor_rear,   "gfx/PortLinerI_MTA.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_PortLinerI_MTA_DrivingTrailer_lead,   "gfx/PortLinerI_MTA.png") {template_Old_8(187, 39)}
@@ -8939,7 +9094,7 @@ item(FEAT_TRAINS, Item_PortLinerI_MTA, 12901) {
 }
 
 //PortLinerI_LIRR
-spriteset(spriteset_PortLinerI_LIRR_purchase,   "gfx/PortLinerI_LIRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_PortLinerI_LIRR_purchase,   "gfx/PortLinerI_LIRR.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_PortLinerI_LIRR_Motor_lead,   "gfx/PortLinerI_LIRR.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_PortLinerI_LIRR_Motor_rear,   "gfx/PortLinerI_LIRR.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_PortLinerI_LIRR_DrivingTrailer_lead,   "gfx/PortLinerI_LIRR.png") {template_Old_8(187, 39)}
@@ -9142,7 +9297,7 @@ item(FEAT_TRAINS, Item_PortLinerI_LIRR, 12902) {
 }
 
 //PortLinerI_MBTA
-spriteset(spriteset_PortLinerI_MBTA_purchase,   "gfx/PortLinerI_MBTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PortLinerI_MBTA_purchase,   "gfx/PortLinerI_MBTA.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_PortLinerI_MBTA_Motor_lead,   "gfx/PortLinerI_MBTA.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_PortLinerI_MBTA_Motor_rear,   "gfx/PortLinerI_MBTA.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_PortLinerI_MBTA_DrivingTrailer_lead,   "gfx/PortLinerI_MBTA.png") {template_Old_8(187, 39)}
@@ -9358,7 +9513,7 @@ switch(FEAT_TRAINS, SELF, sw_BombardierRailStar_attach, vehicle_type_id){
 }
 
 //BombardierRailStar_PHIII
-spriteset(spriteset_BombardierRailStar_PHIII_purchase,   "gfx/BombardierRailStar_PHIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_BombardierRailStar_PHIII_purchase,   "gfx/BombardierRailStar_PHIII.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BombardierRailStar_PHIII_Motor_lead,   "gfx/BombardierRailStar_PHIII.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BombardierRailStar_PHIII_Motor_rear,   "gfx/BombardierRailStar_PHIII.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BombardierRailStar_PHIII_DrivingTrailer_lead,   "gfx/BombardierRailStar_PHIII.png") {template_Old_8(187, 39)}
@@ -9561,7 +9716,7 @@ item(FEAT_TRAINS, Item_BombardierRailStar_PHIII, 14801) {
 }
 
 //BombardierRailStar_PHIV
-spriteset(spriteset_BombardierRailStar_PHIV_purchase,   "gfx/BombardierRailStar_PHIV.png") {template_purchase(7, 21)}
+spriteset(spriteset_BombardierRailStar_PHIV_purchase,   "gfx/BombardierRailStar_PHIV.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BombardierRailStar_PHIV_Motor_lead,   "gfx/BombardierRailStar_PHIV.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BombardierRailStar_PHIV_Motor_rear,   "gfx/BombardierRailStar_PHIV.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BombardierRailStar_PHIV_DrivingTrailer_lead,   "gfx/BombardierRailStar_PHIV.png") {template_Old_8(187, 39)}
@@ -9764,7 +9919,7 @@ item(FEAT_TRAINS, Item_BombardierRailStar_PHIV, 14802) {
 }
 
 //BombardierRailStar_AmtrakCalifornia
-spriteset(spriteset_BombardierRailStar_AmtrakCalifornia_purchase,   "gfx/BombardierRailStar_AmtrakCalifornia.png") {template_purchase(7, 21)}
+spriteset(spriteset_BombardierRailStar_AmtrakCalifornia_purchase,   "gfx/BombardierRailStar_AmtrakCalifornia.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BombardierRailStar_AmtrakCalifornia_Motor_lead,   "gfx/BombardierRailStar_AmtrakCalifornia.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BombardierRailStar_AmtrakCalifornia_Motor_rear,   "gfx/BombardierRailStar_AmtrakCalifornia.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BombardierRailStar_AmtrakCalifornia_DrivingTrailer_lead,   "gfx/BombardierRailStar_AmtrakCalifornia.png") {template_Old_8(187, 39)}
@@ -9967,7 +10122,7 @@ item(FEAT_TRAINS, Item_BombardierRailStar_AmtrakCalifornia, 14803) {
 }
 
 //BombardierRailStar_Cascades
-spriteset(spriteset_BombardierRailStar_Cascades_purchase,   "gfx/BombardierRailStar_Cascades.png") {template_purchase(7, 21)}
+spriteset(spriteset_BombardierRailStar_Cascades_purchase,   "gfx/BombardierRailStar_Cascades.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BombardierRailStar_Cascades_Motor_lead,   "gfx/BombardierRailStar_Cascades.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BombardierRailStar_Cascades_Motor_rear,   "gfx/BombardierRailStar_Cascades.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BombardierRailStar_Cascades_DrivingTrailer_lead,   "gfx/BombardierRailStar_Cascades.png") {template_Old_8(187, 39)}
@@ -10170,7 +10325,7 @@ item(FEAT_TRAINS, Item_BombardierRailStar_Cascades, 14804) {
 }
 
 //BombardierRailStar_Midwest
-spriteset(spriteset_BombardierRailStar_Midwest_purchase,   "gfx/BombardierRailStar_Midwest.png") {template_purchase(7, 21)}
+spriteset(spriteset_BombardierRailStar_Midwest_purchase,   "gfx/BombardierRailStar_Midwest.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BombardierRailStar_Midwest_Motor_lead,   "gfx/BombardierRailStar_Midwest.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BombardierRailStar_Midwest_Motor_rear,   "gfx/BombardierRailStar_Midwest.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BombardierRailStar_Midwest_DrivingTrailer_lead,   "gfx/BombardierRailStar_Midwest.png") {template_Old_8(187, 39)}
@@ -10373,7 +10528,7 @@ item(FEAT_TRAINS, Item_BombardierRailStar_Midwest, 14805) {
 }
 
 //BombardierRailStar_Via1
-spriteset(spriteset_BombardierRailStar_Via1_purchase,   "gfx/BombardierRailStar_Via1.png") {template_purchase(7, 21)}
+spriteset(spriteset_BombardierRailStar_Via1_purchase,   "gfx/BombardierRailStar_Via1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BombardierRailStar_Via1_Motor_lead,   "gfx/BombardierRailStar_Via1.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BombardierRailStar_Via1_Motor_rear,   "gfx/BombardierRailStar_Via1.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BombardierRailStar_Via1_DrivingTrailer_lead,   "gfx/BombardierRailStar_Via1.png") {template_Old_8(187, 39)}
@@ -10576,7 +10731,7 @@ item(FEAT_TRAINS, Item_BombardierRailStar_Via1, 14806) {
 }
 
 //BombardierRailStar_Via2
-spriteset(spriteset_BombardierRailStar_Via2_purchase,   "gfx/BombardierRailStar_Via2.png") {template_purchase(7, 21)}
+spriteset(spriteset_BombardierRailStar_Via2_purchase,   "gfx/BombardierRailStar_Via2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BombardierRailStar_Via2_Motor_lead,   "gfx/BombardierRailStar_Via2.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BombardierRailStar_Via2_Motor_rear,   "gfx/BombardierRailStar_Via2.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BombardierRailStar_Via2_DrivingTrailer_lead,   "gfx/BombardierRailStar_Via2.png") {template_Old_8(187, 39)}
@@ -10779,7 +10934,7 @@ item(FEAT_TRAINS, Item_BombardierRailStar_Via2, 14807) {
 }
 
 //BombardierRailStar_Via3
-spriteset(spriteset_BombardierRailStar_Via3_purchase,   "gfx/BombardierRailStar_Via3.png") {template_purchase(7, 21)}
+spriteset(spriteset_BombardierRailStar_Via3_purchase,   "gfx/BombardierRailStar_Via3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_BombardierRailStar_Via3_Motor_lead,   "gfx/BombardierRailStar_Via3.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_BombardierRailStar_Via3_Motor_rear,   "gfx/BombardierRailStar_Via3.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_BombardierRailStar_Via3_DrivingTrailer_lead,   "gfx/BombardierRailStar_Via3.png") {template_Old_8(187, 39)}
@@ -10989,7 +11144,7 @@ switch(FEAT_TRAINS, SELF, sw_SuperlinerEMU_attach, vehicle_type_id){
 
 //SuperlinerEMU_Phase1
 //CC1
-spriteset(spriteset_SuperlinerEMU_Phase1_purchase,   "gfx/SuperlinerEMU_Phase1.png") {template_purchase(7, 21)}
+spriteset(spriteset_SuperlinerEMU_Phase1_purchase,   "gfx/SuperlinerEMU_Phase1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_SuperlinerEMU_Phase1_Motor_lead,   "gfx/SuperlinerEMU_Phase1.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_SuperlinerEMU_Phase1_Motor_rear,   "gfx/SuperlinerEMU_Phase1.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_SuperlinerEMU_Phase1_DrivingTrailer_lead,   "gfx/SuperlinerEMU_Phase1.png") {template_Old_8(187, 39)}
@@ -11208,7 +11363,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_MetrolinerI_attach, vehicle_type_id){
 }
 
 //Budd_MetrolinerI_PRR
-spriteset(spriteset_Budd_MetrolinerI_PRR_purchase,   "gfx/Budd_MetrolinerI_PRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_PRR_purchase,   "gfx/Budd_MetrolinerI_PRR.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_PRR_Motor_lead,   "gfx/Budd_MetrolinerI_PRR.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_PRR_Motor_rear,   "gfx/Budd_MetrolinerI_PRR.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_PRR_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_PRR.png") {template_Old_8(187, 39)}
@@ -11411,7 +11566,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_PRR, 18676) {
 }
 
 //Budd_MetrolinerI_AmtrakPHI
-spriteset(spriteset_Budd_MetrolinerI_AmtrakPHI_purchase,   "gfx/Budd_MetrolinerI_AmtrakPHI.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_AmtrakPHI_purchase,   "gfx/Budd_MetrolinerI_AmtrakPHI.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHI_Motor_lead,   "gfx/Budd_MetrolinerI_AmtrakPHI.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHI_Motor_rear,   "gfx/Budd_MetrolinerI_AmtrakPHI.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHI_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_AmtrakPHI.png") {template_Old_8(187, 39)}
@@ -11614,7 +11769,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_AmtrakPHI, 18677) {
 }
 
 //Budd_MetrolinerI_AmtrakPHII
-spriteset(spriteset_Budd_MetrolinerI_AmtrakPHII_purchase,   "gfx/Budd_MetrolinerI_AmtrakPHII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_AmtrakPHII_purchase,   "gfx/Budd_MetrolinerI_AmtrakPHII.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHII_Motor_lead,   "gfx/Budd_MetrolinerI_AmtrakPHII.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHII_Motor_rear,   "gfx/Budd_MetrolinerI_AmtrakPHII.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHII_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_AmtrakPHII.png") {template_Old_8(187, 39)}
@@ -11817,7 +11972,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_AmtrakPHII, 18678) {
 }
 
 //Budd_MetrolinerI_AmtrakPHIII
-spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIII_purchase,   "gfx/Budd_MetrolinerI_AmtrakPHIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIII_purchase,   "gfx/Budd_MetrolinerI_AmtrakPHIII.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIII_Motor_lead,   "gfx/Budd_MetrolinerI_AmtrakPHIII.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIII_Motor_rear,   "gfx/Budd_MetrolinerI_AmtrakPHIII.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIII_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_AmtrakPHIII.png") {template_Old_8(187, 39)}
@@ -12020,7 +12175,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_AmtrakPHIII, 18679) {
 }
 
 //Budd_MetrolinerI_AmtrakPHIV
-spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIV_purchase,   "gfx/Budd_MetrolinerI_AmtrakPHIV.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIV_purchase,   "gfx/Budd_MetrolinerI_AmtrakPHIV.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIV_Motor_lead,   "gfx/Budd_MetrolinerI_AmtrakPHIV.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIV_Motor_rear,   "gfx/Budd_MetrolinerI_AmtrakPHIV.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_AmtrakPHIV_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_AmtrakPHIV.png") {template_Old_8(187, 39)}
@@ -12223,7 +12378,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_AmtrakPHIV, 18680) {
 }
 
 //Budd_MetrolinerI_Shinkansen
-spriteset(spriteset_Budd_MetrolinerI_Shinkansen_purchase,   "gfx/Budd_MetrolinerI_Shinkansen.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_Shinkansen_purchase,   "gfx/Budd_MetrolinerI_Shinkansen.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_Shinkansen_Motor_lead,   "gfx/Budd_MetrolinerI_Shinkansen.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_Shinkansen_Motor_rear,   "gfx/Budd_MetrolinerI_Shinkansen.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_Shinkansen_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_Shinkansen.png") {template_Old_8(187, 39)}
@@ -12426,7 +12581,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_Shinkansen, 18682) {
 }
 
 //Budd_MetrolinerI_ICE
-spriteset(spriteset_Budd_MetrolinerI_ICE_purchase,   "gfx/Budd_MetrolinerI_ICE.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_ICE_purchase,   "gfx/Budd_MetrolinerI_ICE.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_ICE_Motor_lead,   "gfx/Budd_MetrolinerI_ICE.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_ICE_Motor_rear,   "gfx/Budd_MetrolinerI_ICE.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_ICE_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_ICE.png") {template_Old_8(187, 39)}
@@ -12629,7 +12784,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_ICE, 18683) {
 }
 
 //Budd_MetrolinerI_CN
-spriteset(spriteset_Budd_MetrolinerI_CN_purchase,   "gfx/Budd_MetrolinerI_CN.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_CN_purchase,   "gfx/Budd_MetrolinerI_CN.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_CN_Motor_lead,   "gfx/Budd_MetrolinerI_CN.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_CN_Motor_rear,   "gfx/Budd_MetrolinerI_CN.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_CN_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_CN.png") {template_Old_8(187, 39)}
@@ -12832,7 +12987,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_CN, 18684) {
 }
 
 //Budd_MetrolinerI_NH
-spriteset(spriteset_Budd_MetrolinerI_NH_purchase,   "gfx/Budd_MetrolinerI_NH.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_NH_purchase,   "gfx/Budd_MetrolinerI_NH.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_NH_Motor_lead,   "gfx/Budd_MetrolinerI_NH.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_NH_Motor_rear,   "gfx/Budd_MetrolinerI_NH.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_NH_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_NH.png") {template_Old_8(187, 39)}
@@ -13035,7 +13190,7 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerI_NH, 18685) {
 }
 
 //Budd_MetrolinerI_Cascades
-spriteset(spriteset_Budd_MetrolinerI_Cascades_purchase,   "gfx/Budd_MetrolinerI_Cascades.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_MetrolinerI_Cascades_purchase,   "gfx/Budd_MetrolinerI_Cascades.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_MetrolinerI_Cascades_Motor_lead,   "gfx/Budd_MetrolinerI_Cascades.png") {template_Old_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_MetrolinerI_Cascades_Motor_rear,   "gfx/Budd_MetrolinerI_Cascades.png") {template_Old_8(7, 64)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_MetrolinerI_Cascades_DrivingTrailer_lead,   "gfx/Budd_MetrolinerI_Cascades.png") {template_Old_8(187, 39)}
@@ -13248,7 +13403,7 @@ switch(FEAT_TRAINS, SELF, sw_Adtranz_X2000_attach, vehicle_type_id){
 }
 
 //Adtranz_X2000_SJ
-spriteset(spriteset_Adtranz_X2000_SJ_Purchase,   "gfx/Adtranz_X2000_SJ.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_X2000_SJ_Purchase,   "gfx/Adtranz_X2000_SJ.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Adtranz_X2000_SJ_Lead,   "gfx/Adtranz_X2000_SJ.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Adtranz_X2000_SJ_Rear,   "gfx/Adtranz_X2000_SJ.png") {template_Old_8(7, 64)}
 
@@ -13326,7 +13481,7 @@ item(FEAT_TRAINS, Item_Adtranz_X2000_SJ, 18901) {
 }
 
 //Adtranz_X2000_PhaseIII
-spriteset(spriteset_Adtranz_X2000_PhaseIII_Purchase,   "gfx/Adtranz_X2000_PhaseIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_X2000_PhaseIII_Purchase,   "gfx/Adtranz_X2000_PhaseIII.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Adtranz_X2000_PhaseIII_Lead,   "gfx/Adtranz_X2000_PhaseIII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Adtranz_X2000_PhaseIII_Rear,   "gfx/Adtranz_X2000_PhaseIII.png") {template_Old_8(7, 64)}
 
@@ -13404,7 +13559,7 @@ item(FEAT_TRAINS, Item_Adtranz_X2000_PhaseIII, 18902) {
 }
 
 //Adtranz_X2000_PhaseIV
-spriteset(spriteset_Adtranz_X2000_PhaseIV_Purchase,   "gfx/Adtranz_X2000_PhaseIV.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_X2000_PhaseIV_Purchase,   "gfx/Adtranz_X2000_PhaseIV.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Adtranz_X2000_PhaseIV_Lead,   "gfx/Adtranz_X2000_PhaseIV.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Adtranz_X2000_PhaseIV_Rear,   "gfx/Adtranz_X2000_PhaseIV.png") {template_Old_8(7, 64)}
 
@@ -13482,7 +13637,7 @@ item(FEAT_TRAINS, Item_Adtranz_X2000_PhaseIV, 18903) {
 }
 
 //Adtranz_X2000_PhaseV
-spriteset(spriteset_Adtranz_X2000_PhaseV_Purchase,   "gfx/Adtranz_X2000_PhaseV.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_X2000_PhaseV_Purchase,   "gfx/Adtranz_X2000_PhaseV.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Adtranz_X2000_PhaseV_Lead,   "gfx/Adtranz_X2000_PhaseV.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Adtranz_X2000_PhaseV_Rear,   "gfx/Adtranz_X2000_PhaseV.png") {template_Old_8(7, 64)}
 
@@ -13560,7 +13715,7 @@ item(FEAT_TRAINS, Item_Adtranz_X2000_PhaseV, 18904) {
 }
 
 //Adtranz_X2000_Via
-spriteset(spriteset_Adtranz_X2000_Via_Purchase,   "gfx/Adtranz_X2000_Via.png") {template_purchase(7, 21)}
+spriteset(spriteset_Adtranz_X2000_Via_Purchase,   "gfx/Adtranz_X2000_Via.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Adtranz_X2000_Via_Lead,   "gfx/Adtranz_X2000_Via.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Adtranz_X2000_Via_Rear,   "gfx/Adtranz_X2000_Via.png") {template_Old_8(7, 64)}
 
@@ -13638,7 +13793,7 @@ item(FEAT_TRAINS, Item_Adtranz_X2000_Via, 18905) {
 }
 
 //3rd Rail MP54
-spriteset(spriteset_PRR_MP54_3R_Purchase,   "gfx/PRR_MP54_3R.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_3R_Purchase,   "gfx/PRR_MP54_3R.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_3R,   "gfx/PRR_MP54_3R.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_3R_r,   "gfx/PRR_MP54_3R.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -13660,7 +13815,7 @@ switch(FEAT_TRAINS, SELF, sw_PRR_MP54_3R_attach, vehicle_type_id){
 }
 
 //3rd Rail MP54
-spriteset(spriteset_PRR_MP54_3R_PRR_Purchase,   "gfx/PRR_MP54_3R_PRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_3R_PRR_Purchase,   "gfx/PRR_MP54_3R_PRR.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_3R_PRR,   "gfx/PRR_MP54_3R_PRR.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_3R_PRR_r,   "gfx/PRR_MP54_3R_PRR.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -13768,7 +13923,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_3R_PRR, 30076) {
 }
 
 //3rd Rail MP54
-spriteset(spriteset_PRR_MP54_3R_LIRR_Purchase,   "gfx/PRR_MP54_3R_LIRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_3R_LIRR_Purchase,   "gfx/PRR_MP54_3R_LIRR.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_3R_LIRR,   "gfx/PRR_MP54_3R_LIRR.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_3R_LIRR_r,   "gfx/PRR_MP54_3R_LIRR.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -13876,7 +14031,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_3R_LIRR, 30077) {
 }
 
 //3rd Rail MP54
-spriteset(spriteset_PRR_MP54_3R_LIRRMTA_Purchase,   "gfx/PRR_MP54_3R_LIRRMTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_3R_LIRRMTA_Purchase,   "gfx/PRR_MP54_3R_LIRRMTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_3R_LIRRMTA,   "gfx/PRR_MP54_3R_LIRRMTA.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_3R_LIRRMTA_r,   "gfx/PRR_MP54_3R_LIRRMTA.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -13984,7 +14139,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_3R_LIRRMTA, 30078) {
 }
 
 //3rd Rail MP54
-spriteset(spriteset_PRR_MP54_3R_PennCentral_Purchase,   "gfx/PRR_MP54_3R_PennCentral.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_3R_PennCentral_Purchase,   "gfx/PRR_MP54_3R_PennCentral.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_3R_PennCentral,   "gfx/PRR_MP54_3R_PennCentral.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_3R_PennCentral_r,   "gfx/PRR_MP54_3R_PennCentral.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -14092,7 +14247,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_3R_PennCentral, 30079) {
 }
 
 //3rd Rail MP54
-spriteset(spriteset_PRR_MP54_3R_WTC_Purchase,   "gfx/PRR_MP54_3R_WTC.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_3R_WTC_Purchase,   "gfx/PRR_MP54_3R_WTC.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_3R_WTC,   "gfx/PRR_MP54_3R_WTC.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_3R_WTC_r,   "gfx/PRR_MP54_3R_WTC.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -14200,7 +14355,7 @@ item(FEAT_TRAINS, Item_PRR_MP54_3R_WTC, 30080) {
 }
 
 //3rd Rail MP54
-spriteset(spriteset_PRR_MP54_3R_SEPTA_Purchase,   "gfx/PRR_MP54_3R_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_MP54_3R_SEPTA_Purchase,   "gfx/PRR_MP54_3R_SEPTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_MP54_3R_SEPTA,   "gfx/PRR_MP54_3R_SEPTA.png") {template_Old_8(7, 39)} // <- Define a wagon
 spriteset(spriteset_PRR_MP54_3R_SEPTA_r,   "gfx/PRR_MP54_3R_SEPTA.png") {template_Old_8(7, 64)} // <- Define a wagon (flipped)
 
@@ -14318,7 +14473,7 @@ switch(FEAT_TRAINS, SELF, sw_Budd_Metropolitan_attach, vehicle_type_id){
 }
 
 //Budd_Metropolitan_Liv0
-spriteset(spriteset_Budd_Metropolitan_Liv0_Purchase,   "gfx/Budd_Metropolitan_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Metropolitan_Liv0_Purchase,   "gfx/Budd_Metropolitan_Liv0.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Metropolitan_Liv0_Lead,   "gfx/Budd_Metropolitan_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Metropolitan_Liv0_Rear,   "gfx/Budd_Metropolitan_Liv0.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Metropolitan_Liv0_Trailer,   "gfx/Budd_Metropolitan_Liv0.png") {template_8(7, 99)}
@@ -14382,7 +14537,7 @@ item(FEAT_TRAINS, Item_Budd_Metropolitan_Liv0, 30650) {
 }
 
 //Budd_Metropolitan_Liv1
-spriteset(spriteset_Budd_Metropolitan_Liv1_Purchase,   "gfx/Budd_Metropolitan_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Metropolitan_Liv1_Purchase,   "gfx/Budd_Metropolitan_Liv1.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Metropolitan_Liv1_Lead,   "gfx/Budd_Metropolitan_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Metropolitan_Liv1_Rear,   "gfx/Budd_Metropolitan_Liv1.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Metropolitan_Liv1_Trailer,   "gfx/Budd_Metropolitan_Liv1.png") {template_8(7, 99)}
@@ -14446,7 +14601,7 @@ item(FEAT_TRAINS, Item_Budd_Metropolitan_Liv1, 30651) {
 }
 
 //Budd_Metropolitan_Liv2
-spriteset(spriteset_Budd_Metropolitan_Liv2_Purchase,   "gfx/Budd_Metropolitan_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Metropolitan_Liv2_Purchase,   "gfx/Budd_Metropolitan_Liv2.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Metropolitan_Liv2_Lead,   "gfx/Budd_Metropolitan_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Metropolitan_Liv2_Rear,   "gfx/Budd_Metropolitan_Liv2.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Metropolitan_Liv2_Trailer,   "gfx/Budd_Metropolitan_Liv2.png") {template_8(7, 99)}
@@ -14510,7 +14665,7 @@ item(FEAT_TRAINS, Item_Budd_Metropolitan_Liv2, 30652) {
 }
 
 //Budd_Metropolitan_Liv3
-spriteset(spriteset_Budd_Metropolitan_Liv3_Purchase,   "gfx/Budd_Metropolitan_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Metropolitan_Liv3_Purchase,   "gfx/Budd_Metropolitan_Liv3.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Metropolitan_Liv3_Lead,   "gfx/Budd_Metropolitan_Liv3.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Metropolitan_Liv3_Rear,   "gfx/Budd_Metropolitan_Liv3.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Metropolitan_Liv3_Trailer,   "gfx/Budd_Metropolitan_Liv3.png") {template_8(7, 99)}
@@ -14574,7 +14729,7 @@ item(FEAT_TRAINS, Item_Budd_Metropolitan_Liv3, 30653) {
 }
 
 //Budd_Metropolitan_Liv4
-spriteset(spriteset_Budd_Metropolitan_Liv4_Purchase,   "gfx/Budd_Metropolitan_Liv4.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Metropolitan_Liv4_Purchase,   "gfx/Budd_Metropolitan_Liv4.png") {template_purchase_88mu(7, 21)}
 spriteset(spriteset_Budd_Metropolitan_Liv4_Lead,   "gfx/Budd_Metropolitan_Liv4.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Budd_Metropolitan_Liv4_Rear,   "gfx/Budd_Metropolitan_Liv4.png") {template_8(7, 69)} // <- Define the cab wagon again, but this time using a slightly different alignment template to get it flipped. Unsure if necessary for PGT
 spriteset(spriteset_Budd_Metropolitan_Liv4_Trailer,   "gfx/Budd_Metropolitan_Liv4.png") {template_8(7, 99)}
@@ -14638,7 +14793,7 @@ item(FEAT_TRAINS, Item_Budd_Metropolitan_Liv4, 30654) {
 }
 
 //1840GenericCar
-spriteset(spriteset_1840GenericCar_Purchase,   "gfx/1840GenericCar.png") {template_purchase(7, 21)}
+spriteset(spriteset_1840GenericCar_Purchase,   "gfx/1840GenericCar.png") {template_purchase_6(7, 21)}
 spriteset(spriteset_1840GenericCar,   "gfx/1840GenericCar.png") {template_Old_6(7, 39)}
 spriteset(spriteset_1840GenericCar_Rear,   "gfx/1840GenericCar.png") {template_Old_6(7, 64)}
 
@@ -14690,7 +14845,7 @@ item (FEAT_TRAINS, Item_1840GenericCar, 45400) {
 }
 
 //Mail_1840GenericCar
-spriteset(spriteset_Mail_1840GenericCar_Purchase,   "gfx/1840GenericCar.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_1840GenericCar_Purchase,   "gfx/1840GenericCar.png") {template_purchase_6(187, 21)}
 spriteset(spriteset_Mail_1840GenericCar,   "gfx/1840GenericCar.png") {template_Old_6(187, 39)}
 spriteset(spriteset_Mail_1840GenericCar_Rear,   "gfx/1840GenericCar.png") {template_Old_6(187, 64)}
 
@@ -14744,7 +14899,7 @@ item (FEAT_TRAINS, Item_Mail_1840GenericCar, 45410) {
 }
 
 //1840GenericCar_Stripe
-spriteset(spriteset_1840GenericCar_Stripe_Purchase,   "gfx/1840GenericCar_Stripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_1840GenericCar_Stripe_Purchase,   "gfx/1840GenericCar_Stripe.png") {template_purchase_6(7, 21)}
 spriteset(spriteset_1840GenericCar_Stripe,   "gfx/1840GenericCar_Stripe.png") {template_Old_6(7, 39)}
 spriteset(spriteset_1840GenericCar_Stripe_Rear,   "gfx/1840GenericCar_Stripe.png") {template_Old_6(7, 64)}
 
@@ -14796,7 +14951,7 @@ item (FEAT_TRAINS, Item_1840GenericCar_Stripe, 45402) {
 }
 
 //Mail_1840GenericCar_Stripe
-spriteset(spriteset_Mail_1840GenericCar_Stripe_Purchase,   "gfx/1840GenericCar_Stripe.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_1840GenericCar_Stripe_Purchase,   "gfx/1840GenericCar_Stripe.png") {template_purchase_6(187, 21)}
 spriteset(spriteset_Mail_1840GenericCar_Stripe,   "gfx/1840GenericCar_Stripe.png") {template_Old_6(187, 39)}
 spriteset(spriteset_Mail_1840GenericCar_Stripe_Rear,   "gfx/1840GenericCar_Stripe.png") {template_Old_6(187, 64)}
 
@@ -14850,7 +15005,7 @@ item (FEAT_TRAINS, Item_Mail_1840GenericCar_Stripe, 45412) {
 }
 
 //1840GenericCar_BodyStripe
-spriteset(spriteset_1840GenericCar_BodyStripe_Purchase,   "gfx/1840GenericCar_BodyStripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_1840GenericCar_BodyStripe_Purchase,   "gfx/1840GenericCar_BodyStripe.png") {template_purchase_6(7, 21)}
 spriteset(spriteset_1840GenericCar_BodyStripe,   "gfx/1840GenericCar_BodyStripe.png") {template_Old_6(7, 39)}
 spriteset(spriteset_1840GenericCar_BodyStripe_Rear,   "gfx/1840GenericCar_BodyStripe.png") {template_Old_6(7, 64)}
 
@@ -14902,7 +15057,7 @@ item (FEAT_TRAINS, Item_1840GenericCar_BodyStripe, 45403) {
 }
 
 //Mail_1840GenericCar_BodyStripe
-spriteset(spriteset_Mail_1840GenericCar_BodyStripe_Purchase,   "gfx/1840GenericCar_BodyStripe.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_1840GenericCar_BodyStripe_Purchase,   "gfx/1840GenericCar_BodyStripe.png") {template_purchase_6(187, 21)}
 spriteset(spriteset_Mail_1840GenericCar_BodyStripe,   "gfx/1840GenericCar_BodyStripe.png") {template_Old_6(187, 39)}
 spriteset(spriteset_Mail_1840GenericCar_BodyStripe_Rear,   "gfx/1840GenericCar_BodyStripe.png") {template_Old_6(187, 64)}
 
@@ -14956,7 +15111,7 @@ item (FEAT_TRAINS, Item_Mail_1840GenericCar_BodyStripe, 45413) {
 }
 
 //ArchRoofCar
-spriteset(spriteset_ArchRoofCar_Purchase,   "gfx/ArchRoofCar.png") {template_purchase(7, 21)}
+spriteset(spriteset_ArchRoofCar_Purchase,   "gfx/ArchRoofCar.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_ArchRoofCar,   "gfx/ArchRoofCar.png") {template_Old_7(7, 39)}
 spriteset(spriteset_ArchRoofCar_Rear,   "gfx/ArchRoofCar.png") {template_Old_7(7, 64)}
 
@@ -15008,7 +15163,7 @@ item (FEAT_TRAINS, Item_ArchRoofCar, 45600) {
 }
 
 //ArchRoofCar_Stripe
-spriteset(spriteset_ArchRoofCar_Stripe_Purchase,   "gfx/ArchRoofCar_Stripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_ArchRoofCar_Stripe_Purchase,   "gfx/ArchRoofCar_Stripe.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_ArchRoofCar_Stripe,   "gfx/ArchRoofCar_Stripe.png") {template_Old_7(7, 39)}
 spriteset(spriteset_ArchRoofCar_Stripe_Rear,   "gfx/ArchRoofCar_Stripe.png") {template_Old_7(7, 64)}
 
@@ -15060,7 +15215,7 @@ item (FEAT_TRAINS, Item_ArchRoofCar_Stripe, 45601) {
 }
 
 //ArchRoofCar_BodyStripe
-spriteset(spriteset_ArchRoofCar_BodyStripe_Purchase,   "gfx/ArchRoofCar_BodyStripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_ArchRoofCar_BodyStripe_Purchase,   "gfx/ArchRoofCar_BodyStripe.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_ArchRoofCar_BodyStripe,   "gfx/ArchRoofCar_BodyStripe.png") {template_Old_7(7, 39)}
 spriteset(spriteset_ArchRoofCar_BodyStripe_Rear,   "gfx/ArchRoofCar_BodyStripe.png") {template_Old_7(7, 64)}
 
@@ -15112,7 +15267,7 @@ item (FEAT_TRAINS, Item_ArchRoofCar_BodyStripe, 45602) {
 }
 
 //DuckbillCar
-spriteset(spriteset_DuckbillCar_Purchase,   "gfx/DuckbillCar.png") {template_purchase(7, 21)}
+spriteset(spriteset_DuckbillCar_Purchase,   "gfx/DuckbillCar.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_DuckbillCar,   "gfx/DuckbillCar.png") {template_Old_7(7, 39)}
 spriteset(spriteset_DuckbillCar_Rear,   "gfx/DuckbillCar.png") {template_Old_7(7, 64)}
 
@@ -15164,7 +15319,7 @@ item (FEAT_TRAINS, Item_DuckbillCar, 45620) {
 }
 
 //DuckbillCar_Stripe
-spriteset(spriteset_DuckbillCar_Stripe_Purchase,   "gfx/DuckbillCar_Stripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_DuckbillCar_Stripe_Purchase,   "gfx/DuckbillCar_Stripe.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_DuckbillCar_Stripe,   "gfx/DuckbillCar_Stripe.png") {template_Old_7(7, 39)}
 spriteset(spriteset_DuckbillCar_Stripe_Rear,   "gfx/DuckbillCar_Stripe.png") {template_Old_7(7, 64)}
 
@@ -15216,7 +15371,7 @@ item (FEAT_TRAINS, Item_DuckbillCar_Stripe, 45621) {
 }
 
 //DuckbillCar_BodyStripe
-spriteset(spriteset_DuckbillCar_BodyStripe_Purchase,   "gfx/DuckbillCar_BodyStripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_DuckbillCar_BodyStripe_Purchase,   "gfx/DuckbillCar_BodyStripe.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_DuckbillCar_BodyStripe,   "gfx/DuckbillCar_BodyStripe.png") {template_Old_7(7, 39)}
 spriteset(spriteset_DuckbillCar_BodyStripe_Rear,   "gfx/DuckbillCar_BodyStripe.png") {template_Old_7(7, 64)}
 
@@ -15268,7 +15423,7 @@ item (FEAT_TRAINS, Item_DuckbillCar_BodyStripe, 45622) {
 }
 
 //EndPlatformSuburbanCar
-spriteset(spriteset_EndPlatformSuburbanCar_Purchase,   "gfx/EndPlatformSuburbanCar.png") {template_purchase(7, 21)}
+spriteset(spriteset_EndPlatformSuburbanCar_Purchase,   "gfx/EndPlatformSuburbanCar.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EndPlatformSuburbanCar,   "gfx/EndPlatformSuburbanCar.png") {template_Old_7(7, 39)}
 spriteset(spriteset_EndPlatformSuburbanCar_Rear,   "gfx/EndPlatformSuburbanCar.png") {template_Old_7(7, 64)}
 
@@ -15320,7 +15475,7 @@ item (FEAT_TRAINS, Item_EndPlatformSuburbanCar, 45800) {
 }
 
 //EndPlatformSuburbanCar_Stripe
-spriteset(spriteset_EndPlatformSuburbanCar_Stripe_Purchase,   "gfx/EndPlatformSuburbanCar_Stripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_EndPlatformSuburbanCar_Stripe_Purchase,   "gfx/EndPlatformSuburbanCar_Stripe.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EndPlatformSuburbanCar_Stripe,   "gfx/EndPlatformSuburbanCar_Stripe.png") {template_Old_7(7, 39)}
 spriteset(spriteset_EndPlatformSuburbanCar_Stripe_Rear,   "gfx/EndPlatformSuburbanCar_Stripe.png") {template_Old_7(7, 64)}
 
@@ -15372,7 +15527,7 @@ item (FEAT_TRAINS, Item_EndPlatformSuburbanCar_Stripe, 45801) {
 }
 
 //EndPlatformSuburbanCar_BodyStripe
-spriteset(spriteset_EndPlatformSuburbanCar_BodyStripe_Purchase,   "gfx/EndPlatformSuburbanCar_BodyStripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_EndPlatformSuburbanCar_BodyStripe_Purchase,   "gfx/EndPlatformSuburbanCar_BodyStripe.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EndPlatformSuburbanCar_BodyStripe,   "gfx/EndPlatformSuburbanCar_BodyStripe.png") {template_Old_7(7, 39)}
 spriteset(spriteset_EndPlatformSuburbanCar_BodyStripe_Rear,   "gfx/EndPlatformSuburbanCar_BodyStripe.png") {template_Old_7(7, 64)}
 
@@ -15424,9 +15579,9 @@ item (FEAT_TRAINS, Item_EndPlatformSuburbanCar_BodyStripe, 45802) {
 }
 
 //SideLoadingSuburbanCar
-spriteset(spriteset_SideLoadingSuburbanCar_Purchase,   "gfx/SideLoadingSuburbanCar.png") {template_purchase(7, 21)}
-spriteset(spriteset_SideLoadingSuburbanCar,   "gfx/SideLoadingSuburbanCar.png") {template_Old_7(7, 39)}
-spriteset(spriteset_SideLoadingSuburbanCar_Rear,   "gfx/SideLoadingSuburbanCar.png") {template_Old_7(7, 64)}
+spriteset(spriteset_SideLoadingSuburbanCar_Purchase,   "gfx/SideLoadingSuburbanCar.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_SideLoadingSuburbanCar,   "gfx/SideLoadingSuburbanCar.png") {template_Old_8(7, 39)}
+spriteset(spriteset_SideLoadingSuburbanCar_Rear,   "gfx/SideLoadingSuburbanCar.png") {template_Old_8(7, 64)}
 
 switch(FEAT_TRAINS, SELF, sw_SideLoadingSuburbanCar_rearcheck, position_in_consist_from_end){
     0 : spriteset_SideLoadingSuburbanCar_Rear;
@@ -15476,9 +15631,9 @@ item (FEAT_TRAINS, Item_SideLoadingSuburbanCar, 46000) {
 }
 
 //SideLoadingSuburbanCar_Stripe
-spriteset(spriteset_SideLoadingSuburbanCar_Stripe_Purchase,   "gfx/SideLoadingSuburbanCar_Stripe.png") {template_purchase(7, 21)}
-spriteset(spriteset_SideLoadingSuburbanCar_Stripe,   "gfx/SideLoadingSuburbanCar_Stripe.png") {template_Old_7(7, 39)}
-spriteset(spriteset_SideLoadingSuburbanCar_Stripe_Rear,   "gfx/SideLoadingSuburbanCar_Stripe.png") {template_Old_7(7, 64)}
+spriteset(spriteset_SideLoadingSuburbanCar_Stripe_Purchase,   "gfx/SideLoadingSuburbanCar_Stripe.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_SideLoadingSuburbanCar_Stripe,   "gfx/SideLoadingSuburbanCar_Stripe.png") {template_Old_8(7, 39)}
+spriteset(spriteset_SideLoadingSuburbanCar_Stripe_Rear,   "gfx/SideLoadingSuburbanCar_Stripe.png") {template_Old_8(7, 64)}
 
 switch(FEAT_TRAINS, SELF, sw_SideLoadingSuburbanCar_Stripe_rearcheck, position_in_consist_from_end){
     0 : spriteset_SideLoadingSuburbanCar_Stripe_Rear;
@@ -15528,9 +15683,9 @@ item (FEAT_TRAINS, Item_SideLoadingSuburbanCar_Stripe, 46001) {
 }
 
 //SideLoadingSuburbanCar_BodyStripe
-spriteset(spriteset_SideLoadingSuburbanCar_BodyStripe_Purchase,   "gfx/SideLoadingSuburbanCar_BodyStripe.png") {template_purchase(7, 21)}
-spriteset(spriteset_SideLoadingSuburbanCar_BodyStripe,   "gfx/SideLoadingSuburbanCar_BodyStripe.png") {template_Old_7(7, 39)}
-spriteset(spriteset_SideLoadingSuburbanCar_BodyStripe_Rear,   "gfx/SideLoadingSuburbanCar_BodyStripe.png") {template_Old_7(7, 64)}
+spriteset(spriteset_SideLoadingSuburbanCar_BodyStripe_Purchase,   "gfx/SideLoadingSuburbanCar_BodyStripe.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_SideLoadingSuburbanCar_BodyStripe,   "gfx/SideLoadingSuburbanCar_BodyStripe.png") {template_Old_8(7, 39)}
+spriteset(spriteset_SideLoadingSuburbanCar_BodyStripe_Rear,   "gfx/SideLoadingSuburbanCar_BodyStripe.png") {template_Old_8(7, 64)}
 
 switch(FEAT_TRAINS, SELF, sw_SideLoadingSuburbanCar_BodyStripe_rearcheck, position_in_consist_from_end){
     0 : spriteset_SideLoadingSuburbanCar_BodyStripe_Rear;
@@ -15580,7 +15735,7 @@ item (FEAT_TRAINS, Item_SideLoadingSuburbanCar_BodyStripe, 46002) {
 }
 
 //PRR P54
-spriteset(spriteset_PRR_P54_PRR_Purchase,   "gfx/PRR_P54_PRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_P54_PRR_Purchase,   "gfx/PRR_P54_PRR.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_P54_PRR,   "gfx/PRR_P54_PRR.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PRR_P54_PRR_Rear,   "gfx/PRR_P54_PRR.png") {template_Old_8(7, 64)}
 
@@ -15632,7 +15787,7 @@ item (FEAT_TRAINS, Item_PRR_P54_PRR, 46021) {
 }
 
 //PRR P54
-spriteset(spriteset_PRR_P54_LIRR_Purchase,   "gfx/PRR_P54_LIRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_P54_LIRR_Purchase,   "gfx/PRR_P54_LIRR.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_P54_LIRR,   "gfx/PRR_P54_LIRR.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PRR_P54_LIRR_Rear,   "gfx/PRR_P54_LIRR.png") {template_Old_8(7, 64)}
 
@@ -15684,7 +15839,7 @@ item (FEAT_TRAINS, Item_PRR_P54_LIRR, 46022) {
 }
 
 //PRR P54
-spriteset(spriteset_PRR_P54_LIRRMTA_Purchase,   "gfx/PRR_P54_LIRRMTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_P54_LIRRMTA_Purchase,   "gfx/PRR_P54_LIRRMTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_P54_LIRRMTA,   "gfx/PRR_P54_LIRRMTA.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PRR_P54_LIRRMTA_Rear,   "gfx/PRR_P54_LIRRMTA.png") {template_Old_8(7, 64)}
 
@@ -15736,7 +15891,7 @@ item (FEAT_TRAINS, Item_PRR_P54_LIRRMTA, 46023) {
 }
 
 //PRR P54
-spriteset(spriteset_PRR_P54_PennCentral_Purchase,   "gfx/PRR_P54_PennCentral.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_P54_PennCentral_Purchase,   "gfx/PRR_P54_PennCentral.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_P54_PennCentral,   "gfx/PRR_P54_PennCentral.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PRR_P54_PennCentral_Rear,   "gfx/PRR_P54_PennCentral.png") {template_Old_8(7, 64)}
 
@@ -15788,7 +15943,7 @@ item (FEAT_TRAINS, Item_PRR_P54_PennCentral, 46024) {
 }
 
 //PRR P54
-spriteset(spriteset_PRR_P54_WTC_Purchase,   "gfx/PRR_P54_WTC.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_P54_WTC_Purchase,   "gfx/PRR_P54_WTC.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_P54_WTC,   "gfx/PRR_P54_WTC.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PRR_P54_WTC_Rear,   "gfx/PRR_P54_WTC.png") {template_Old_8(7, 64)}
 
@@ -15840,7 +15995,7 @@ item (FEAT_TRAINS, Item_PRR_P54_WTC, 46025) {
 }
 
 //PRR P54
-spriteset(spriteset_PRR_P54_SEPTA_Purchase,   "gfx/PRR_P54_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_P54_SEPTA_Purchase,   "gfx/PRR_P54_SEPTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_P54_SEPTA,   "gfx/PRR_P54_SEPTA.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PRR_P54_SEPTA_Rear,   "gfx/PRR_P54_SEPTA.png") {template_Old_8(7, 64)}
 
@@ -15892,9 +16047,9 @@ item (FEAT_TRAINS, Item_PRR_P54_SEPTA, 46026) {
 }
 
 //RailroadRoofSuburbanCar
-spriteset(spriteset_RailroadRoofSuburbanCar_Purchase,   "gfx/RailroadRoofSuburbanCar.png") {template_purchase(7, 21)}
-spriteset(spriteset_RailroadRoofSuburbanCar,   "gfx/RailroadRoofSuburbanCar.png") {template_Old_7(7, 39)}
-spriteset(spriteset_RailroadRoofSuburbanCar_Rear,   "gfx/RailroadRoofSuburbanCar.png") {template_Old_7(7, 64)}
+spriteset(spriteset_RailroadRoofSuburbanCar_Purchase,   "gfx/RailroadRoofSuburbanCar.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_RailroadRoofSuburbanCar,   "gfx/RailroadRoofSuburbanCar.png") {template_Old_8(7, 39)}
+spriteset(spriteset_RailroadRoofSuburbanCar_Rear,   "gfx/RailroadRoofSuburbanCar.png") {template_Old_8(7, 64)}
 
 switch(FEAT_TRAINS, SELF, sw_RailroadRoofSuburbanCar_rearcheck, position_in_consist_from_end){
     0 : spriteset_RailroadRoofSuburbanCar_Rear;
@@ -15944,9 +16099,9 @@ item (FEAT_TRAINS, Item_RailroadRoofSuburbanCar, 46200) {
 }
 
 //RailroadRoofSuburbanCar_Stripe
-spriteset(spriteset_RailroadRoofSuburbanCar_Stripe_Purchase,   "gfx/RailroadRoofSuburbanCar_Stripe.png") {template_purchase(7, 21)}
-spriteset(spriteset_RailroadRoofSuburbanCar_Stripe,   "gfx/RailroadRoofSuburbanCar_Stripe.png") {template_Old_7(7, 39)}
-spriteset(spriteset_RailroadRoofSuburbanCar_Stripe_Rear,   "gfx/RailroadRoofSuburbanCar_Stripe.png") {template_Old_7(7, 64)}
+spriteset(spriteset_RailroadRoofSuburbanCar_Stripe_Purchase,   "gfx/RailroadRoofSuburbanCar_Stripe.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_RailroadRoofSuburbanCar_Stripe,   "gfx/RailroadRoofSuburbanCar_Stripe.png") {template_Old_8(7, 39)}
+spriteset(spriteset_RailroadRoofSuburbanCar_Stripe_Rear,   "gfx/RailroadRoofSuburbanCar_Stripe.png") {template_Old_8(7, 64)}
 
 switch(FEAT_TRAINS, SELF, sw_RailroadRoofSuburbanCar_Stripe_rearcheck, position_in_consist_from_end){
     0 : spriteset_RailroadRoofSuburbanCar_Stripe_Rear;
@@ -15996,9 +16151,9 @@ item (FEAT_TRAINS, Item_RailroadRoofSuburbanCar_Stripe, 46201) {
 }
 
 //RailroadRoofSuburbanCar_BodyStripe
-spriteset(spriteset_RailroadRoofSuburbanCar_BodyStripe_Purchase,   "gfx/RailroadRoofSuburbanCar_BodyStripe.png") {template_purchase(7, 21)}
-spriteset(spriteset_RailroadRoofSuburbanCar_BodyStripe,   "gfx/RailroadRoofSuburbanCar_BodyStripe.png") {template_Old_7(7, 39)}
-spriteset(spriteset_RailroadRoofSuburbanCar_BodyStripe_Rear,   "gfx/RailroadRoofSuburbanCar_BodyStripe.png") {template_Old_7(7, 64)}
+spriteset(spriteset_RailroadRoofSuburbanCar_BodyStripe_Purchase,   "gfx/RailroadRoofSuburbanCar_BodyStripe.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_RailroadRoofSuburbanCar_BodyStripe,   "gfx/RailroadRoofSuburbanCar_BodyStripe.png") {template_Old_8(7, 39)}
+spriteset(spriteset_RailroadRoofSuburbanCar_BodyStripe_Rear,   "gfx/RailroadRoofSuburbanCar_BodyStripe.png") {template_Old_8(7, 64)}
 
 switch(FEAT_TRAINS, SELF, sw_RailroadRoofSuburbanCar_BodyStripe_rearcheck, position_in_consist_from_end){
     0 : spriteset_RailroadRoofSuburbanCar_BodyStripe_Rear;
@@ -16048,9 +16203,9 @@ item (FEAT_TRAINS, Item_RailroadRoofSuburbanCar_BodyStripe, 46202) {
 }
 
 //PioneerIIICommuterCar_Production
-spriteset(spriteset_PioneerIIICommuterCar_Production_Purchase,   "gfx/PioneerIIICommuterCar_Production.png") {template_purchase(7, 21)}
-spriteset(spriteset_PioneerIIICommuterCar_Production,   "gfx/PioneerIIICommuterCar_Production.png") {template_Old_7(7, 39)}
-spriteset(spriteset_PioneerIIICommuterCar_Production_Rear,   "gfx/PioneerIIICommuterCar_Production.png") {template_Old_7(7, 64)}
+spriteset(spriteset_PioneerIIICommuterCar_Production_Purchase,   "gfx/PioneerIIICommuterCar_Production.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_PioneerIIICommuterCar_Production,   "gfx/PioneerIIICommuterCar_Production.png") {template_Old_8(7, 39)}
+spriteset(spriteset_PioneerIIICommuterCar_Production_Rear,   "gfx/PioneerIIICommuterCar_Production.png") {template_Old_8(7, 64)}
 
 switch(FEAT_TRAINS, SELF, sw_PioneerIIICommuterCar_Production_rearcheck, position_in_consist_from_end){
     0 : spriteset_PioneerIIICommuterCar_Production_Rear;
@@ -16100,9 +16255,9 @@ item (FEAT_TRAINS, Item_PioneerIIICommuterCar_Production, 46521) {
 }
 
 //PioneerIIICommuterCar_SEPTA
-spriteset(spriteset_PioneerIIICommuterCar_SEPTA_Purchase,   "gfx/PioneerIIICommuterCar_SEPTA.png") {template_purchase(7, 21)}
-spriteset(spriteset_PioneerIIICommuterCar_SEPTA,   "gfx/PioneerIIICommuterCar_SEPTA.png") {template_Old_7(7, 39)}
-spriteset(spriteset_PioneerIIICommuterCar_SEPTA_Rear,   "gfx/PioneerIIICommuterCar_SEPTA.png") {template_Old_7(7, 64)}
+spriteset(spriteset_PioneerIIICommuterCar_SEPTA_Purchase,   "gfx/PioneerIIICommuterCar_SEPTA.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_PioneerIIICommuterCar_SEPTA,   "gfx/PioneerIIICommuterCar_SEPTA.png") {template_Old_8(7, 39)}
+spriteset(spriteset_PioneerIIICommuterCar_SEPTA_Rear,   "gfx/PioneerIIICommuterCar_SEPTA.png") {template_Old_8(7, 64)}
 
 switch(FEAT_TRAINS, SELF, sw_PioneerIIICommuterCar_SEPTA_rearcheck, position_in_consist_from_end){
     0 : spriteset_PioneerIIICommuterCar_SEPTA_Rear;
@@ -16152,7 +16307,7 @@ item (FEAT_TRAINS, Item_PioneerIIICommuterCar_SEPTA, 46522) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_Erie_Purchase,   "gfx/Pullman_Comet_Erie.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_Erie_Purchase,   "gfx/Pullman_Comet_Erie.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_Erie,   "gfx/Pullman_Comet_Erie.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_Erie_Rear,   "gfx/Pullman_Comet_Erie.png") {template_Old_8(7, 64)}
 
@@ -16203,7 +16358,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_Erie, 46701) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_Erie_Cab_Purchase,   "gfx/Pullman_Comet_Erie.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_Erie_Cab_Purchase,   "gfx/Pullman_Comet_Erie.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_Erie_Cab,   "gfx/Pullman_Comet_Erie.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_Erie_Cab_Rear,   "gfx/Pullman_Comet_Erie.png") {template_Old_8(187, 64)}
 
@@ -16261,7 +16416,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_Erie_Cab, 46721) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_NJT_Purchase,   "gfx/Pullman_Comet_NJT.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_NJT_Purchase,   "gfx/Pullman_Comet_NJT.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_NJT,   "gfx/Pullman_Comet_NJT.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_NJT_Rear,   "gfx/Pullman_Comet_NJT.png") {template_Old_8(7, 64)}
 
@@ -16312,7 +16467,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_NJT, 46702) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_NJT_Cab_Purchase,   "gfx/Pullman_Comet_NJT.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_NJT_Cab_Purchase,   "gfx/Pullman_Comet_NJT.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_NJT_Cab,   "gfx/Pullman_Comet_NJT.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_NJT_Cab_Rear,   "gfx/Pullman_Comet_NJT.png") {template_Old_8(187, 64)}
 
@@ -16369,7 +16524,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_NJT_Cab, 46722) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_NJTStripes_Cab_Purchase,   "gfx/Pullman_Comet_NJTStripes.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_NJTStripes_Cab_Purchase,   "gfx/Pullman_Comet_NJTStripes.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_NJTStripes_Cab,   "gfx/Pullman_Comet_NJTStripes.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_NJTStripes_Cab_Rear,   "gfx/Pullman_Comet_NJTStripes.png") {template_Old_8(187, 64)}
 
@@ -16427,7 +16582,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_NJTStripes_Cab, 46723) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_MBTA_Purchase,   "gfx/Pullman_Comet_MBTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_MBTA_Purchase,   "gfx/Pullman_Comet_MBTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_MBTA,   "gfx/Pullman_Comet_MBTA.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_MBTA_Rear,   "gfx/Pullman_Comet_MBTA.png") {template_Old_8(7, 64)}
 
@@ -16478,7 +16633,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_MBTA, 46704) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_MBTA_Cab_Purchase,   "gfx/Pullman_Comet_MBTA.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_MBTA_Cab_Purchase,   "gfx/Pullman_Comet_MBTA.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_MBTA_Cab,   "gfx/Pullman_Comet_MBTA.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_MBTA_Cab_Rear,   "gfx/Pullman_Comet_MBTA.png") {template_Old_8(187, 64)}
 
@@ -16536,7 +16691,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_MBTA_Cab, 46724) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_ShoreLiner_Purchase,   "gfx/Pullman_Comet_ShoreLiner.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_ShoreLiner_Purchase,   "gfx/Pullman_Comet_ShoreLiner.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_ShoreLiner,   "gfx/Pullman_Comet_ShoreLiner.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_ShoreLiner_Rear,   "gfx/Pullman_Comet_ShoreLiner.png") {template_Old_8(7, 64)}
 
@@ -16587,7 +16742,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_ShoreLiner, 46705) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_ShoreLiner_Cab_Purchase,   "gfx/Pullman_Comet_ShoreLiner.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_ShoreLiner_Cab_Purchase,   "gfx/Pullman_Comet_ShoreLiner.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_ShoreLiner_Cab,   "gfx/Pullman_Comet_ShoreLiner.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_ShoreLiner_Cab_Rear,   "gfx/Pullman_Comet_ShoreLiner.png") {template_Old_8(187, 64)}
 
@@ -16645,7 +16800,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_ShoreLiner_Cab, 46725) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_ShoreLinerBlack_Purchase,   "gfx/Pullman_Comet_ShoreLinerBlack.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_ShoreLinerBlack_Purchase,   "gfx/Pullman_Comet_ShoreLinerBlack.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_ShoreLinerBlack,   "gfx/Pullman_Comet_ShoreLinerBlack.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_ShoreLinerBlack_Rear,   "gfx/Pullman_Comet_ShoreLinerBlack.png") {template_Old_8(7, 64)}
 
@@ -16696,7 +16851,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_ShoreLinerBlack, 46706) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_ShoreLinerBlack_Cab_Purchase,   "gfx/Pullman_Comet_ShoreLinerBlack.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_ShoreLinerBlack_Cab_Purchase,   "gfx/Pullman_Comet_ShoreLinerBlack.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_ShoreLinerBlack_Cab,   "gfx/Pullman_Comet_ShoreLinerBlack.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_ShoreLinerBlack_Cab_Rear,   "gfx/Pullman_Comet_ShoreLinerBlack.png") {template_Old_8(187, 64)}
 
@@ -16754,7 +16909,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_ShoreLinerBlack_Cab, 46726) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_AMT_Purchase,   "gfx/Pullman_Comet_AMT.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_AMT_Purchase,   "gfx/Pullman_Comet_AMT.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_AMT,   "gfx/Pullman_Comet_AMT.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_AMT_Rear,   "gfx/Pullman_Comet_AMT.png") {template_Old_8(7, 64)}
 
@@ -16805,7 +16960,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_AMT, 46707) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_AMT_Cab_Purchase,   "gfx/Pullman_Comet_AMT.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_AMT_Cab_Purchase,   "gfx/Pullman_Comet_AMT.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_AMT_Cab,   "gfx/Pullman_Comet_AMT.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_AMT_Cab_Rear,   "gfx/Pullman_Comet_AMT.png") {template_Old_8(187, 64)}
 
@@ -16863,7 +17018,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_AMT_Cab, 46727) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_AMTAlt_Purchase,   "gfx/Pullman_Comet_AMTAlt.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_AMTAlt_Purchase,   "gfx/Pullman_Comet_AMTAlt.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_AMTAlt,   "gfx/Pullman_Comet_AMTAlt.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_AMTAlt_Rear,   "gfx/Pullman_Comet_AMTAlt.png") {template_Old_8(7, 64)}
 
@@ -16914,7 +17069,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_AMTAlt, 46708) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_AMTAlt_Cab_Purchase,   "gfx/Pullman_Comet_AMTAlt.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_AMTAlt_Cab_Purchase,   "gfx/Pullman_Comet_AMTAlt.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_AMTAlt_Cab,   "gfx/Pullman_Comet_AMTAlt.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_AMTAlt_Cab_Rear,   "gfx/Pullman_Comet_AMTAlt.png") {template_Old_8(187, 64)}
 
@@ -16972,7 +17127,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_AMTAlt_Cab, 46728) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_SEPTA_Purchase,   "gfx/Pullman_Comet_SEPTA.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_SEPTA_Purchase,   "gfx/Pullman_Comet_SEPTA.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_SEPTA,   "gfx/Pullman_Comet_SEPTA.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_SEPTA_Rear,   "gfx/Pullman_Comet_SEPTA.png") {template_Old_8(7, 64)}
 
@@ -17023,7 +17178,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_SEPTA, 46709) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_SEPTA_Cab_Purchase,   "gfx/Pullman_Comet_SEPTA.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_SEPTA_Cab_Purchase,   "gfx/Pullman_Comet_SEPTA.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_SEPTA_Cab,   "gfx/Pullman_Comet_SEPTA.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_SEPTA_Cab_Rear,   "gfx/Pullman_Comet_SEPTA.png") {template_Old_8(187, 64)}
 
@@ -17081,7 +17236,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_SEPTA_Cab, 46729) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_MARC_Purchase,   "gfx/Pullman_Comet_MARC.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_MARC_Purchase,   "gfx/Pullman_Comet_MARC.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_MARC,   "gfx/Pullman_Comet_MARC.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_MARC_Rear,   "gfx/Pullman_Comet_MARC.png") {template_Old_8(7, 64)}
 
@@ -17132,7 +17287,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_MARC, 46710) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_MARC_Cab_Purchase,   "gfx/Pullman_Comet_MARC.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_MARC_Cab_Purchase,   "gfx/Pullman_Comet_MARC.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_MARC_Cab,   "gfx/Pullman_Comet_MARC.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_MARC_Cab_Rear,   "gfx/Pullman_Comet_MARC.png") {template_Old_8(187, 64)}
 
@@ -17190,7 +17345,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_MARC_Cab, 46730) {
 }
 
 //Pullman Comet
-spriteset(spriteset_Pullman_Comet_FrontRunner_Purchase,   "gfx/Pullman_Comet_FrontRunner.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_Comet_FrontRunner_Purchase,   "gfx/Pullman_Comet_FrontRunner.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_Comet_FrontRunner,   "gfx/Pullman_Comet_FrontRunner.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Pullman_Comet_FrontRunner_Rear,   "gfx/Pullman_Comet_FrontRunner.png") {template_Old_8(7, 64)}
 
@@ -17241,7 +17396,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_FrontRunner, 46711) {
 }
 }
 
-spriteset(spriteset_Pullman_Comet_FrontRunner_Cab_Purchase,   "gfx/Pullman_Comet_FrontRunner.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_Comet_FrontRunner_Cab_Purchase,   "gfx/Pullman_Comet_FrontRunner.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_Comet_FrontRunner_Cab,   "gfx/Pullman_Comet_FrontRunner.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Pullman_Comet_FrontRunner_Cab_Rear,   "gfx/Pullman_Comet_FrontRunner.png") {template_Old_8(187, 64)}
 
@@ -17299,7 +17454,7 @@ item (FEAT_TRAINS, Item_Pullman_Comet_FrontRunner_Cab, 46731) {
 }
 
 //Budd Gallery Car
-spriteset(spriteset_Budd_GalleryCar_Silver_Purchase,   "gfx/Budd_GalleryCar_Silver.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_GalleryCar_Silver_Purchase,   "gfx/Budd_GalleryCar_Silver.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_GalleryCar_Silver,   "gfx/Budd_GalleryCar_Silver.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_GalleryCar_Silver_Rear,   "gfx/Budd_GalleryCar_Silver.png") {template_Old_8(7, 64)}
 
@@ -17350,7 +17505,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Silver, 48501) {
 }
 }
 
-spriteset(spriteset_Budd_GalleryCar_Silver_Cab_Purchase,   "gfx/Budd_GalleryCar_Silver.png") {template_purchase(187, 21)}
+spriteset(spriteset_Budd_GalleryCar_Silver_Cab_Purchase,   "gfx/Budd_GalleryCar_Silver.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Budd_GalleryCar_Silver_Cab,   "gfx/Budd_GalleryCar_Silver.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Budd_GalleryCar_Silver_Cab_Rear,   "gfx/Budd_GalleryCar_Silver.png") {template_Old_8(187, 64)}
 
@@ -17408,7 +17563,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Silver_Cab, 48521) {
 }
 
 //Budd Gallery Car
-spriteset(spriteset_Budd_GalleryCar_Burlington_Purchase,   "gfx/Budd_GalleryCar_Burlington.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_GalleryCar_Burlington_Purchase,   "gfx/Budd_GalleryCar_Burlington.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_GalleryCar_Burlington,   "gfx/Budd_GalleryCar_Burlington.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_GalleryCar_Burlington_Rear,   "gfx/Budd_GalleryCar_Burlington.png") {template_Old_8(7, 64)}
 
@@ -17459,7 +17614,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Burlington, 48502) {
 }
 }
 
-spriteset(spriteset_Budd_GalleryCar_Burlington_Cab_Purchase,   "gfx/Budd_GalleryCar_Burlington.png") {template_purchase(187, 21)}
+spriteset(spriteset_Budd_GalleryCar_Burlington_Cab_Purchase,   "gfx/Budd_GalleryCar_Burlington.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Budd_GalleryCar_Burlington_Cab,   "gfx/Budd_GalleryCar_Burlington.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Budd_GalleryCar_Burlington_Cab_Rear,   "gfx/Budd_GalleryCar_Burlington.png") {template_Old_8(187, 64)}
 
@@ -17517,7 +17672,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Burlington_Cab, 48522) {
 }
 
 //Budd Gallery Car
-spriteset(spriteset_Budd_GalleryCar_Milwaukee_Purchase,   "gfx/Budd_GalleryCar_Milwaukee.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_GalleryCar_Milwaukee_Purchase,   "gfx/Budd_GalleryCar_Milwaukee.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_GalleryCar_Milwaukee,   "gfx/Budd_GalleryCar_Milwaukee.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_GalleryCar_Milwaukee_Rear,   "gfx/Budd_GalleryCar_Milwaukee.png") {template_Old_8(7, 64)}
 
@@ -17568,7 +17723,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Milwaukee, 48503) {
 }
 }
 
-spriteset(spriteset_Budd_GalleryCar_Milwaukee_Cab_Purchase,   "gfx/Budd_GalleryCar_Milwaukee.png") {template_purchase(187, 21)}
+spriteset(spriteset_Budd_GalleryCar_Milwaukee_Cab_Purchase,   "gfx/Budd_GalleryCar_Milwaukee.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Budd_GalleryCar_Milwaukee_Cab,   "gfx/Budd_GalleryCar_Milwaukee.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Budd_GalleryCar_Milwaukee_Cab_Rear,   "gfx/Budd_GalleryCar_Milwaukee.png") {template_Old_8(187, 64)}
 
@@ -17626,7 +17781,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Milwaukee_Cab, 48523) {
 }
 
 //Budd Gallery Car
-spriteset(spriteset_Budd_GalleryCar_Metra_Purchase,   "gfx/Budd_GalleryCar_Metra.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_GalleryCar_Metra_Purchase,   "gfx/Budd_GalleryCar_Metra.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_GalleryCar_Metra,   "gfx/Budd_GalleryCar_Metra.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_GalleryCar_Metra_Rear,   "gfx/Budd_GalleryCar_Metra.png") {template_Old_8(7, 64)}
 
@@ -17677,7 +17832,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Metra, 48504) {
 }
 }
 
-spriteset(spriteset_Budd_GalleryCar_Metra_Cab_Purchase,   "gfx/Budd_GalleryCar_Metra.png") {template_purchase(187, 21)}
+spriteset(spriteset_Budd_GalleryCar_Metra_Cab_Purchase,   "gfx/Budd_GalleryCar_Metra.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Budd_GalleryCar_Metra_Cab,   "gfx/Budd_GalleryCar_Metra.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Budd_GalleryCar_Metra_Cab_Rear,   "gfx/Budd_GalleryCar_Metra.png") {template_Old_8(187, 64)}
 
@@ -17735,7 +17890,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Metra_Cab, 48524) {
 }
 
 //Budd Gallery Car
-spriteset(spriteset_Budd_GalleryCar_Caltrain_Purchase,   "gfx/Budd_GalleryCar_Caltrain.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_GalleryCar_Caltrain_Purchase,   "gfx/Budd_GalleryCar_Caltrain.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_GalleryCar_Caltrain,   "gfx/Budd_GalleryCar_Caltrain.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_GalleryCar_Caltrain_Rear,   "gfx/Budd_GalleryCar_Caltrain.png") {template_Old_8(7, 64)}
 
@@ -17786,7 +17941,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Caltrain, 48505) {
 }
 }
 
-spriteset(spriteset_Budd_GalleryCar_Caltrain_Cab_Purchase,   "gfx/Budd_GalleryCar_Caltrain.png") {template_purchase(187, 21)}
+spriteset(spriteset_Budd_GalleryCar_Caltrain_Cab_Purchase,   "gfx/Budd_GalleryCar_Caltrain.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Budd_GalleryCar_Caltrain_Cab,   "gfx/Budd_GalleryCar_Caltrain.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Budd_GalleryCar_Caltrain_Cab_Rear,   "gfx/Budd_GalleryCar_Caltrain.png") {template_Old_8(187, 64)}
 
@@ -17844,7 +17999,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Caltrain_Cab, 48525) {
 }
 
 //Budd Gallery Car
-spriteset(spriteset_Budd_GalleryCar_VRE_Purchase,   "gfx/Budd_GalleryCar_VRE.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_GalleryCar_VRE_Purchase,   "gfx/Budd_GalleryCar_VRE.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_GalleryCar_VRE,   "gfx/Budd_GalleryCar_VRE.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_GalleryCar_VRE_Rear,   "gfx/Budd_GalleryCar_VRE.png") {template_Old_8(7, 64)}
 
@@ -17895,7 +18050,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_VRE, 48506) {
 }
 }
 
-spriteset(spriteset_Budd_GalleryCar_VRE_Cab_Purchase,   "gfx/Budd_GalleryCar_VRE.png") {template_purchase(187, 21)}
+spriteset(spriteset_Budd_GalleryCar_VRE_Cab_Purchase,   "gfx/Budd_GalleryCar_VRE.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Budd_GalleryCar_VRE_Cab,   "gfx/Budd_GalleryCar_VRE.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Budd_GalleryCar_VRE_Cab_Rear,   "gfx/Budd_GalleryCar_VRE.png") {template_Old_8(187, 64)}
 
@@ -17953,7 +18108,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_VRE_Cab, 48526) {
 }
 
 //Budd Gallery Car
-spriteset(spriteset_Budd_GalleryCar_CP_Purchase,   "gfx/Budd_GalleryCar_CP.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_GalleryCar_CP_Purchase,   "gfx/Budd_GalleryCar_CP.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_GalleryCar_CP,   "gfx/Budd_GalleryCar_CP.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_GalleryCar_CP_Rear,   "gfx/Budd_GalleryCar_CP.png") {template_Old_8(7, 64)}
 
@@ -18004,7 +18159,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_CP, 48507) {
 }
 }
 
-spriteset(spriteset_Budd_GalleryCar_CP_Cab_Purchase,   "gfx/Budd_GalleryCar_CP.png") {template_purchase(187, 21)}
+spriteset(spriteset_Budd_GalleryCar_CP_Cab_Purchase,   "gfx/Budd_GalleryCar_CP.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Budd_GalleryCar_CP_Cab,   "gfx/Budd_GalleryCar_CP.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Budd_GalleryCar_CP_Cab_Rear,   "gfx/Budd_GalleryCar_CP.png") {template_Old_8(187, 64)}
 
@@ -18062,7 +18217,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_CP_Cab, 48527) {
 }
 
 //Budd Gallery Car
-spriteset(spriteset_Budd_GalleryCar_Amtrak_Purchase,   "gfx/Budd_GalleryCar_Amtrak.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_GalleryCar_Amtrak_Purchase,   "gfx/Budd_GalleryCar_Amtrak.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_GalleryCar_Amtrak,   "gfx/Budd_GalleryCar_Amtrak.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_GalleryCar_Amtrak_Rear,   "gfx/Budd_GalleryCar_Amtrak.png") {template_Old_8(7, 64)}
 
@@ -18113,7 +18268,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Amtrak, 48508) {
 }
 }
 
-spriteset(spriteset_Budd_GalleryCar_Amtrak_Cab_Purchase,   "gfx/Budd_GalleryCar_Amtrak.png") {template_purchase(187, 21)}
+spriteset(spriteset_Budd_GalleryCar_Amtrak_Cab_Purchase,   "gfx/Budd_GalleryCar_Amtrak.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Budd_GalleryCar_Amtrak_Cab,   "gfx/Budd_GalleryCar_Amtrak.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Budd_GalleryCar_Amtrak_Cab_Rear,   "gfx/Budd_GalleryCar_Amtrak.png") {template_Old_8(187, 64)}
 
@@ -18171,7 +18326,7 @@ item (FEAT_TRAINS, Item_Budd_GalleryCar_Amtrak_Cab, 48528) {
 }
 
 //Pullman_GalleryCar_Liv0
-spriteset(spriteset_Pullman_GalleryCar_Liv0_Purchase,   "gfx/Pullman_GalleryCar_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_GalleryCar_Liv0_Purchase,   "gfx/Pullman_GalleryCar_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_GalleryCar_Liv0,   "gfx/Pullman_GalleryCar_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_Pullman_GalleryCar_Liv0_Rear,   "gfx/Pullman_GalleryCar_Liv0.png") {template_8(7, 69)}
 
@@ -18222,7 +18377,7 @@ item (FEAT_TRAINS, Item_Pullman_GalleryCar_Liv0, 48540) {
 }
 }
 
-spriteset(spriteset_Pullman_GalleryCar_Liv0_Cab_Purchase,   "gfx/Pullman_GalleryCar_Liv0.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_GalleryCar_Liv0_Cab_Purchase,   "gfx/Pullman_GalleryCar_Liv0.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_GalleryCar_Liv0_Cab,   "gfx/Pullman_GalleryCar_Liv0.png") {template_8(187, 39)}
 spriteset(spriteset_Pullman_GalleryCar_Liv0_Cab_Rear,   "gfx/Pullman_GalleryCar_Liv0.png") {template_8(187, 69)}
 
@@ -18280,7 +18435,7 @@ item (FEAT_TRAINS, Item_Pullman_GalleryCar_Liv0_Cab, 48550) {
 }
 
 //Pullman_GalleryCar_Liv1
-spriteset(spriteset_Pullman_GalleryCar_Liv1_Purchase,   "gfx/Pullman_GalleryCar_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_GalleryCar_Liv1_Purchase,   "gfx/Pullman_GalleryCar_Liv1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_GalleryCar_Liv1,   "gfx/Pullman_GalleryCar_Liv1.png") {template_8(7, 39)}
 spriteset(spriteset_Pullman_GalleryCar_Liv1_Rear,   "gfx/Pullman_GalleryCar_Liv1.png") {template_8(7, 69)}
 
@@ -18331,7 +18486,7 @@ item (FEAT_TRAINS, Item_Pullman_GalleryCar_Liv1, 48541) {
 }
 }
 
-spriteset(spriteset_Pullman_GalleryCar_Liv1_Cab_Purchase,   "gfx/Pullman_GalleryCar_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_GalleryCar_Liv1_Cab_Purchase,   "gfx/Pullman_GalleryCar_Liv1.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_GalleryCar_Liv1_Cab,   "gfx/Pullman_GalleryCar_Liv1.png") {template_8(187, 39)}
 spriteset(spriteset_Pullman_GalleryCar_Liv1_Cab_Rear,   "gfx/Pullman_GalleryCar_Liv1.png") {template_8(187, 69)}
 
@@ -18389,7 +18544,7 @@ item (FEAT_TRAINS, Item_Pullman_GalleryCar_Liv1_Cab, 48551) {
 }
 
 //Pullman_GalleryCar_Liv2
-spriteset(spriteset_Pullman_GalleryCar_Liv2_Purchase,   "gfx/Pullman_GalleryCar_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_GalleryCar_Liv2_Purchase,   "gfx/Pullman_GalleryCar_Liv2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_GalleryCar_Liv2,   "gfx/Pullman_GalleryCar_Liv2.png") {template_8(7, 39)}
 spriteset(spriteset_Pullman_GalleryCar_Liv2_Rear,   "gfx/Pullman_GalleryCar_Liv2.png") {template_8(7, 69)}
 
@@ -18440,7 +18595,7 @@ item (FEAT_TRAINS, Item_Pullman_GalleryCar_Liv2, 48542) {
 }
 }
 
-spriteset(spriteset_Pullman_GalleryCar_Liv2_Cab_Purchase,   "gfx/Pullman_GalleryCar_Liv2.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_GalleryCar_Liv2_Cab_Purchase,   "gfx/Pullman_GalleryCar_Liv2.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_GalleryCar_Liv2_Cab,   "gfx/Pullman_GalleryCar_Liv2.png") {template_8(187, 39)}
 spriteset(spriteset_Pullman_GalleryCar_Liv2_Cab_Rear,   "gfx/Pullman_GalleryCar_Liv2.png") {template_8(187, 69)}
 
@@ -18498,7 +18653,7 @@ item (FEAT_TRAINS, Item_Pullman_GalleryCar_Liv2_Cab, 48552) {
 }
 
 //Pullman_GalleryCar_Liv3
-spriteset(spriteset_Pullman_GalleryCar_Liv3_Purchase,   "gfx/Pullman_GalleryCar_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Pullman_GalleryCar_Liv3_Purchase,   "gfx/Pullman_GalleryCar_Liv3.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Pullman_GalleryCar_Liv3,   "gfx/Pullman_GalleryCar_Liv3.png") {template_8(7, 39)}
 spriteset(spriteset_Pullman_GalleryCar_Liv3_Rear,   "gfx/Pullman_GalleryCar_Liv3.png") {template_8(7, 69)}
 
@@ -18549,7 +18704,7 @@ item (FEAT_TRAINS, Item_Pullman_GalleryCar_Liv3, 48543) {
 }
 }
 
-spriteset(spriteset_Pullman_GalleryCar_Liv3_Cab_Purchase,   "gfx/Pullman_GalleryCar_Liv3.png") {template_purchase(187, 21)}
+spriteset(spriteset_Pullman_GalleryCar_Liv3_Cab_Purchase,   "gfx/Pullman_GalleryCar_Liv3.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Pullman_GalleryCar_Liv3_Cab,   "gfx/Pullman_GalleryCar_Liv3.png") {template_8(187, 39)}
 spriteset(spriteset_Pullman_GalleryCar_Liv3_Cab_Rear,   "gfx/Pullman_GalleryCar_Liv3.png") {template_8(187, 69)}
 
@@ -18607,7 +18762,7 @@ item (FEAT_TRAINS, Item_Pullman_GalleryCar_Liv3_Cab, 48553) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_Metra_Purchase,   "gfx/BuddComeng_DoubleDecker_Metra.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Metra_Purchase,   "gfx/BuddComeng_DoubleDecker_Metra.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metra,   "gfx/BuddComeng_DoubleDecker_Metra.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metra_Rear,   "gfx/BuddComeng_DoubleDecker_Metra.png") {template_Old_8(7, 64)}
 
@@ -18658,7 +18813,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Metra, 48741) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_Metra_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Metra.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Metra_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Metra.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metra_Cab,   "gfx/BuddComeng_DoubleDecker_Metra.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metra_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_Metra.png") {template_Old_8(187, 64)}
 
@@ -18716,7 +18871,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Metra_Cab, 48761) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_Caltrain_Purchase,   "gfx/BuddComeng_DoubleDecker_Caltrain.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Caltrain_Purchase,   "gfx/BuddComeng_DoubleDecker_Caltrain.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Caltrain,   "gfx/BuddComeng_DoubleDecker_Caltrain.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Caltrain_Rear,   "gfx/BuddComeng_DoubleDecker_Caltrain.png") {template_Old_8(7, 64)}
 
@@ -18767,7 +18922,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Caltrain, 48742) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_Caltrain_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Caltrain.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Caltrain_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Caltrain.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Caltrain_Cab,   "gfx/BuddComeng_DoubleDecker_Caltrain.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Caltrain_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_Caltrain.png") {template_Old_8(187, 64)}
 
@@ -18825,7 +18980,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Caltrain_Cab, 48762) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_Amtrak_Purchase,   "gfx/BuddComeng_DoubleDecker_Amtrak.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Amtrak_Purchase,   "gfx/BuddComeng_DoubleDecker_Amtrak.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Amtrak,   "gfx/BuddComeng_DoubleDecker_Amtrak.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Amtrak_Rear,   "gfx/BuddComeng_DoubleDecker_Amtrak.png") {template_Old_8(7, 64)}
 
@@ -18876,7 +19031,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Amtrak, 48743) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_Amtrak_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Amtrak.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Amtrak_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Amtrak.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Amtrak_Cab,   "gfx/BuddComeng_DoubleDecker_Amtrak.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Amtrak_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_Amtrak.png") {template_Old_8(187, 64)}
 
@@ -18934,7 +19089,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Amtrak_Cab, 48763) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_TopBottom_Purchase,   "gfx/BuddComeng_DoubleDecker_TopBottom.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_TopBottom_Purchase,   "gfx/BuddComeng_DoubleDecker_TopBottom.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_TopBottom,   "gfx/BuddComeng_DoubleDecker_TopBottom.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_TopBottom_Rear,   "gfx/BuddComeng_DoubleDecker_TopBottom.png") {template_Old_8(7, 64)}
 
@@ -18985,7 +19140,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_TopBottom, 48744) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_TopBottom_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_TopBottom.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_TopBottom_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_TopBottom.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_TopBottom_Cab,   "gfx/BuddComeng_DoubleDecker_TopBottom.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_TopBottom_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_TopBottom.png") {template_Old_8(187, 64)}
 
@@ -19043,7 +19198,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_TopBottom_Cab, 48764) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit1_Purchase,   "gfx/BuddComeng_DoubleDecker_GoTransit1.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit1_Purchase,   "gfx/BuddComeng_DoubleDecker_GoTransit1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit1,   "gfx/BuddComeng_DoubleDecker_GoTransit1.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit1_Rear,   "gfx/BuddComeng_DoubleDecker_GoTransit1.png") {template_Old_8(7, 64)}
 
@@ -19094,7 +19249,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_GoTransit1, 48745) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit1_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_GoTransit1.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit1_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_GoTransit1.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit1_Cab,   "gfx/BuddComeng_DoubleDecker_GoTransit1.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit1_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_GoTransit1.png") {template_Old_8(187, 64)}
 
@@ -19152,7 +19307,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_GoTransit1_Cab, 48765) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit2_Purchase,   "gfx/BuddComeng_DoubleDecker_GoTransit2.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit2_Purchase,   "gfx/BuddComeng_DoubleDecker_GoTransit2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit2,   "gfx/BuddComeng_DoubleDecker_GoTransit2.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit2_Rear,   "gfx/BuddComeng_DoubleDecker_GoTransit2.png") {template_Old_8(7, 64)}
 
@@ -19203,7 +19358,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_GoTransit2, 48746) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit2_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_GoTransit2.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit2_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_GoTransit2.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit2_Cab,   "gfx/BuddComeng_DoubleDecker_GoTransit2.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_GoTransit2_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_GoTransit2.png") {template_Old_8(187, 64)}
 
@@ -19261,7 +19416,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_GoTransit2_Cab, 48766) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink1_Purchase,   "gfx/BuddComeng_DoubleDecker_Metrolink1.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink1_Purchase,   "gfx/BuddComeng_DoubleDecker_Metrolink1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink1,   "gfx/BuddComeng_DoubleDecker_Metrolink1.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink1_Rear,   "gfx/BuddComeng_DoubleDecker_Metrolink1.png") {template_Old_8(7, 64)}
 
@@ -19312,7 +19467,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Metrolink1, 48747) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink1_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Metrolink1.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink1_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Metrolink1.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink1_Cab,   "gfx/BuddComeng_DoubleDecker_Metrolink1.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink1_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_Metrolink1.png") {template_Old_8(187, 64)}
 
@@ -19370,7 +19525,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Metrolink1_Cab, 48767) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink2_Purchase,   "gfx/BuddComeng_DoubleDecker_Metrolink2.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink2_Purchase,   "gfx/BuddComeng_DoubleDecker_Metrolink2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink2,   "gfx/BuddComeng_DoubleDecker_Metrolink2.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink2_Rear,   "gfx/BuddComeng_DoubleDecker_Metrolink2.png") {template_Old_8(7, 64)}
 
@@ -19421,7 +19576,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Metrolink2, 48748) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink2_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Metrolink2.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink2_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_Metrolink2.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink2_Cab,   "gfx/BuddComeng_DoubleDecker_Metrolink2.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_Metrolink2_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_Metrolink2.png") {template_Old_8(187, 64)}
 
@@ -19479,7 +19634,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_Metrolink2_Cab, 48768) {
 }
 
 //Budd-Comeng Double-Decker
-spriteset(spriteset_BuddComeng_DoubleDecker_MetraSwitching_Purchase,   "gfx/BuddComeng_DoubleDecker_MetraSwitching.png") {template_purchase(7, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_MetraSwitching_Purchase,   "gfx/BuddComeng_DoubleDecker_MetraSwitching.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_MetraSwitching,   "gfx/BuddComeng_DoubleDecker_MetraSwitching.png") {template_Old_8(7, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_MetraSwitching_Rear,   "gfx/BuddComeng_DoubleDecker_MetraSwitching.png") {template_Old_8(7, 64)}
 
@@ -19530,7 +19685,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_MetraSwitching, 48749) {
 }
 }
 
-spriteset(spriteset_BuddComeng_DoubleDecker_MetraSwitching_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_MetraSwitching.png") {template_purchase(187, 21)}
+spriteset(spriteset_BuddComeng_DoubleDecker_MetraSwitching_Cab_Purchase,   "gfx/BuddComeng_DoubleDecker_MetraSwitching.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_BuddComeng_DoubleDecker_MetraSwitching_Cab,   "gfx/BuddComeng_DoubleDecker_MetraSwitching.png") {template_Old_8(187, 39)}
 spriteset(spriteset_BuddComeng_DoubleDecker_MetraSwitching_Cab_Rear,   "gfx/BuddComeng_DoubleDecker_MetraSwitching.png") {template_Old_8(187, 64)}
 
@@ -19588,7 +19743,7 @@ item (FEAT_TRAINS, Item_BuddComeng_DoubleDecker_MetraSwitching_Cab, 48769) {
 }
 
 //Bombardier_Multilevel_Liv0
-spriteset(spriteset_Bombardier_Multilevel_Liv0_Purchase,   "gfx/Bombardier_Multilevel_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_Multilevel_Liv0_Purchase,   "gfx/Bombardier_Multilevel_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Bombardier_Multilevel_Liv0,   "gfx/Bombardier_Multilevel_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_Bombardier_Multilevel_Liv0_Rear,   "gfx/Bombardier_Multilevel_Liv0.png") {template_8(7, 69)}
 
@@ -19639,7 +19794,7 @@ item (FEAT_TRAINS, Item_Bombardier_Multilevel_Liv0, 49000) {
 }
 }
 
-spriteset(spriteset_Bombardier_Multilevel_Liv0_Cab_Purchase,   "gfx/Bombardier_Multilevel_Liv0.png") {template_purchase(187, 21)}
+spriteset(spriteset_Bombardier_Multilevel_Liv0_Cab_Purchase,   "gfx/Bombardier_Multilevel_Liv0.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Bombardier_Multilevel_Liv0_Cab,   "gfx/Bombardier_Multilevel_Liv0.png") {template_8(187, 39)}
 spriteset(spriteset_Bombardier_Multilevel_Liv0_Cab_Rear,   "gfx/Bombardier_Multilevel_Liv0.png") {template_8(187, 69)}
 
@@ -19697,7 +19852,7 @@ item (FEAT_TRAINS, Item_Bombardier_Multilevel_Liv0_Cab, 49020) {
 }
 
 //Bombardier_Multilevel_Liv1
-spriteset(spriteset_Bombardier_Multilevel_Liv1_Purchase,   "gfx/Bombardier_Multilevel_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_Multilevel_Liv1_Purchase,   "gfx/Bombardier_Multilevel_Liv1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Bombardier_Multilevel_Liv1,   "gfx/Bombardier_Multilevel_Liv1.png") {template_8(7, 39)}
 spriteset(spriteset_Bombardier_Multilevel_Liv1_Rear,   "gfx/Bombardier_Multilevel_Liv1.png") {template_8(7, 69)}
 
@@ -19748,7 +19903,7 @@ item (FEAT_TRAINS, Item_Bombardier_Multilevel_Liv1, 49001) {
 }
 }
 
-spriteset(spriteset_Bombardier_Multilevel_Liv1_Cab_Purchase,   "gfx/Bombardier_Multilevel_Liv1.png") {template_purchase(187, 21)}
+spriteset(spriteset_Bombardier_Multilevel_Liv1_Cab_Purchase,   "gfx/Bombardier_Multilevel_Liv1.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Bombardier_Multilevel_Liv1_Cab,   "gfx/Bombardier_Multilevel_Liv1.png") {template_8(187, 39)}
 spriteset(spriteset_Bombardier_Multilevel_Liv1_Cab_Rear,   "gfx/Bombardier_Multilevel_Liv1.png") {template_8(187, 69)}
 
@@ -19806,7 +19961,7 @@ item (FEAT_TRAINS, Item_Bombardier_Multilevel_Liv1_Cab, 49021) {
 }
 
 //Bombardier_Multilevel_Liv2
-spriteset(spriteset_Bombardier_Multilevel_Liv2_Purchase,   "gfx/Bombardier_Multilevel_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_Multilevel_Liv2_Purchase,   "gfx/Bombardier_Multilevel_Liv2.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Bombardier_Multilevel_Liv2,   "gfx/Bombardier_Multilevel_Liv2.png") {template_8(7, 39)}
 spriteset(spriteset_Bombardier_Multilevel_Liv2_Rear,   "gfx/Bombardier_Multilevel_Liv2.png") {template_8(7, 69)}
 
@@ -19857,7 +20012,7 @@ item (FEAT_TRAINS, Item_Bombardier_Multilevel_Liv2, 49002) {
 }
 }
 
-spriteset(spriteset_Bombardier_Multilevel_Liv2_Cab_Purchase,   "gfx/Bombardier_Multilevel_Liv2.png") {template_purchase(187, 21)}
+spriteset(spriteset_Bombardier_Multilevel_Liv2_Cab_Purchase,   "gfx/Bombardier_Multilevel_Liv2.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Bombardier_Multilevel_Liv2_Cab,   "gfx/Bombardier_Multilevel_Liv2.png") {template_8(187, 39)}
 spriteset(spriteset_Bombardier_Multilevel_Liv2_Cab_Rear,   "gfx/Bombardier_Multilevel_Liv2.png") {template_8(187, 69)}
 
@@ -19915,7 +20070,7 @@ item (FEAT_TRAINS, Item_Bombardier_Multilevel_Liv2_Cab, 49022) {
 }
 
 //Bombardier_Multilevel_Liv3
-spriteset(spriteset_Bombardier_Multilevel_Liv3_Purchase,   "gfx/Bombardier_Multilevel_Liv3.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_Multilevel_Liv3_Purchase,   "gfx/Bombardier_Multilevel_Liv3.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Bombardier_Multilevel_Liv3,   "gfx/Bombardier_Multilevel_Liv3.png") {template_8(7, 39)}
 spriteset(spriteset_Bombardier_Multilevel_Liv3_Rear,   "gfx/Bombardier_Multilevel_Liv3.png") {template_8(7, 69)}
 
@@ -19966,7 +20121,7 @@ item (FEAT_TRAINS, Item_Bombardier_Multilevel_Liv3, 49003) {
 }
 }
 
-spriteset(spriteset_Bombardier_Multilevel_Liv3_Cab_Purchase,   "gfx/Bombardier_Multilevel_Liv3.png") {template_purchase(187, 21)}
+spriteset(spriteset_Bombardier_Multilevel_Liv3_Cab_Purchase,   "gfx/Bombardier_Multilevel_Liv3.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Bombardier_Multilevel_Liv3_Cab,   "gfx/Bombardier_Multilevel_Liv3.png") {template_8(187, 39)}
 spriteset(spriteset_Bombardier_Multilevel_Liv3_Cab_Rear,   "gfx/Bombardier_Multilevel_Liv3.png") {template_8(187, 69)}
 
@@ -20024,7 +20179,7 @@ item (FEAT_TRAINS, Item_Bombardier_Multilevel_Liv3_Cab, 49023) {
 }
 
 //12Wheel
-spriteset(spriteset_12Wheel_Purchase,   "gfx/12Wheel.png") {template_purchase(7, 21)}
+spriteset(spriteset_12Wheel_Purchase,   "gfx/12Wheel.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_12Wheel,   "gfx/12Wheel.png") {template_Old_8(7, 39)}
 spriteset(spriteset_12Wheel_Rear,   "gfx/12Wheel.png") {template_Old_8(7, 64)}
 
@@ -20076,7 +20231,7 @@ item (FEAT_TRAINS, Item_12Wheel, 50500) {
 }
 
 //Mail_12Wheel
-spriteset(spriteset_Mail_12Wheel_Purchase,   "gfx/12Wheel.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_12Wheel_Purchase,   "gfx/12Wheel.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_12Wheel,   "gfx/12Wheel.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_12Wheel_Rear,   "gfx/12Wheel.png") {template_Old_8(187, 64)}
 
@@ -20130,7 +20285,7 @@ item (FEAT_TRAINS, Item_Mail_12Wheel, 50510) {
 }
 
 //12Wheel_Stripe
-spriteset(spriteset_12Wheel_Stripe_Purchase,   "gfx/12Wheel_Stripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_12Wheel_Stripe_Purchase,   "gfx/12Wheel_Stripe.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_12Wheel_Stripe,   "gfx/12Wheel_Stripe.png") {template_Old_8(7, 39)}
 spriteset(spriteset_12Wheel_Stripe_Rear,   "gfx/12Wheel_Stripe.png") {template_Old_8(7, 64)}
 
@@ -20182,7 +20337,7 @@ item (FEAT_TRAINS, Item_12Wheel_Stripe, 50501) {
 }
 
 //Mail_12Wheel_Stripe
-spriteset(spriteset_Mail_12Wheel_Stripe_Purchase,   "gfx/12Wheel_Stripe.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_12Wheel_Stripe_Purchase,   "gfx/12Wheel_Stripe.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_12Wheel_Stripe,   "gfx/12Wheel_Stripe.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_12Wheel_Stripe_Rear,   "gfx/12Wheel_Stripe.png") {template_Old_8(187, 64)}
 
@@ -20236,7 +20391,7 @@ item (FEAT_TRAINS, Item_Mail_12Wheel_Stripe, 50511) {
 }
 
 //12Wheel_BodyStripe
-spriteset(spriteset_12Wheel_BodyStripe_Purchase,   "gfx/12Wheel_BodyStripe.png") {template_purchase(7, 21)}
+spriteset(spriteset_12Wheel_BodyStripe_Purchase,   "gfx/12Wheel_BodyStripe.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_12Wheel_BodyStripe,   "gfx/12Wheel_BodyStripe.png") {template_Old_8(7, 39)}
 spriteset(spriteset_12Wheel_BodyStripe_Rear,   "gfx/12Wheel_BodyStripe.png") {template_Old_8(7, 64)}
 
@@ -20288,7 +20443,7 @@ item (FEAT_TRAINS, Item_12Wheel_BodyStripe, 50502) {
 }
 
 //Mail_12Wheel_BodyStripe
-spriteset(spriteset_Mail_12Wheel_BodyStripe_Purchase,   "gfx/12Wheel_BodyStripe.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_12Wheel_BodyStripe_Purchase,   "gfx/12Wheel_BodyStripe.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_12Wheel_BodyStripe,   "gfx/12Wheel_BodyStripe.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_12Wheel_BodyStripe_Rear,   "gfx/12Wheel_BodyStripe.png") {template_Old_8(187, 64)}
 
@@ -20342,7 +20497,7 @@ item (FEAT_TRAINS, Item_Mail_12Wheel_BodyStripe, 50512) {
 }
 
 //PRR_P70_Liv0
-spriteset(spriteset_PRR_P70_Liv0_Purchase,   "gfx/PRR_P70_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_P70_Liv0_Purchase,   "gfx/PRR_P70_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_P70_Liv0,   "gfx/PRR_P70_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_PRR_P70_Liv0_Diner,   "gfx/PRR_P70_Liv0.png") {template_8(7, 69)}
 spriteset(spriteset_PRR_P70_Liv0_Rear,   "gfx/PRR_P70_Liv0.png") {template_8(7, 99)}
@@ -20400,7 +20555,7 @@ item (FEAT_TRAINS, Item_PRR_P70_Liv0, 51000) {
 }
 
 //Observation_PRR_P70_Liv0
-spriteset(spriteset_Observation_PRR_P70_Liv0_Purchase,   "gfx/PRR_P70_Liv0.png") {template_purchase(187, 21)}
+spriteset(spriteset_Observation_PRR_P70_Liv0_Purchase,   "gfx/PRR_P70_Liv0.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Observation_PRR_P70_Liv0,   "gfx/PRR_P70_Liv0.png") {template_8(187, 39)}
 spriteset(spriteset_Observation_PRR_P70_Liv0_Rear,   "gfx/PRR_P70_Liv0.png") {template_8(187, 69)}
 
@@ -20453,7 +20608,7 @@ item (FEAT_TRAINS, Item_Observation_PRR_P70_Liv0, 51010) {
 }
 
 //Budd_Keystone_PRR
-spriteset(spriteset_Budd_Keystone_PRR_Purchase,   "gfx/Budd_Keystone_PRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Keystone_PRR_Purchase,   "gfx/Budd_Keystone_PRR.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Keystone_PRR,   "gfx/Budd_Keystone_PRR.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Keystone_PRR_Rear,   "gfx/Budd_Keystone_PRR.png") {template_Old_8(7, 64)}
 
@@ -20505,7 +20660,7 @@ item (FEAT_TRAINS, Item_Budd_Keystone_PRR, 50542) {
 }
 
 //Budd_Keystone_Tube
-spriteset(spriteset_Budd_Keystone_Tube_Purchase,   "gfx/Budd_Keystone_Tube.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Keystone_Tube_Purchase,   "gfx/Budd_Keystone_Tube.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Keystone_Tube,   "gfx/Budd_Keystone_Tube.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Keystone_Tube_Rear,   "gfx/Budd_Keystone_Tube.png") {template_Old_8(7, 64)}
 
@@ -20557,7 +20712,7 @@ item (FEAT_TRAINS, Item_Budd_Keystone_Tube, 50543) {
 }
 
 //Budd_Keystone_AmtrakPHII
-spriteset(spriteset_Budd_Keystone_AmtrakPHII_Purchase,   "gfx/Budd_Keystone_AmtrakPHII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Keystone_AmtrakPHII_Purchase,   "gfx/Budd_Keystone_AmtrakPHII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Keystone_AmtrakPHII,   "gfx/Budd_Keystone_AmtrakPHII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Keystone_AmtrakPHII_Rear,   "gfx/Budd_Keystone_AmtrakPHII.png") {template_Old_8(7, 64)}
 
@@ -20609,7 +20764,7 @@ item (FEAT_TRAINS, Item_Budd_Keystone_AmtrakPHII, 50544) {
 }
 
 //Budd_Keystone_AmtrakPHIII
-spriteset(spriteset_Budd_Keystone_AmtrakPHIII_Purchase,   "gfx/Budd_Keystone_AmtrakPHIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Keystone_AmtrakPHIII_Purchase,   "gfx/Budd_Keystone_AmtrakPHIII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Keystone_AmtrakPHIII,   "gfx/Budd_Keystone_AmtrakPHIII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Keystone_AmtrakPHIII_Rear,   "gfx/Budd_Keystone_AmtrakPHIII.png") {template_Old_8(7, 64)}
 
@@ -20661,7 +20816,7 @@ item (FEAT_TRAINS, Item_Budd_Keystone_AmtrakPHIII, 50545) {
 }
 
 //Budd_Keystone_AmtrakPHIV
-spriteset(spriteset_Budd_Keystone_AmtrakPHIV_Purchase,   "gfx/Budd_Keystone_AmtrakPHIV.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Keystone_AmtrakPHIV_Purchase,   "gfx/Budd_Keystone_AmtrakPHIV.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Keystone_AmtrakPHIV,   "gfx/Budd_Keystone_AmtrakPHIV.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Keystone_AmtrakPHIV_Rear,   "gfx/Budd_Keystone_AmtrakPHIV.png") {template_Old_8(7, 64)}
 
@@ -20713,7 +20868,7 @@ item (FEAT_TRAINS, Item_Budd_Keystone_AmtrakPHIV, 50546) {
 }
 
 //PioneerIIIIntercityCar_Production
-spriteset(spriteset_PioneerIIIIntercityCar_Production_Purchase,   "gfx/PioneerIIIIntercityCar_Production.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIIIIntercityCar_Production_Purchase,   "gfx/PioneerIIIIntercityCar_Production.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIIIIntercityCar_Production,   "gfx/PioneerIIIIntercityCar_Production.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PioneerIIIIntercityCar_Production_Rear,   "gfx/PioneerIIIIntercityCar_Production.png") {template_Old_8(7, 64)}
 
@@ -20765,7 +20920,7 @@ item (FEAT_TRAINS, Item_PioneerIIIIntercityCar_Production, 50561) {
 }
 
 //Mail_PioneerIIIIntercityCar_Production
-spriteset(spriteset_Mail_PioneerIIIIntercityCar_Production_Purchase,   "gfx/PioneerIIIIntercityCar_Production.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_PioneerIIIIntercityCar_Production_Purchase,   "gfx/PioneerIIIIntercityCar_Production.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_Production,   "gfx/PioneerIIIIntercityCar_Production.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_Production_Rear,   "gfx/PioneerIIIIntercityCar_Production.png") {template_Old_8(187, 64)}
 
@@ -20819,7 +20974,7 @@ item (FEAT_TRAINS, Item_Mail_PioneerIIIIntercityCar_Production, 50571) {
 }
 
 //PioneerIIIIntercityCar_PRR
-spriteset(spriteset_PioneerIIIIntercityCar_PRR_Purchase,   "gfx/PioneerIIIIntercityCar_PRR.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIIIIntercityCar_PRR_Purchase,   "gfx/PioneerIIIIntercityCar_PRR.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIIIIntercityCar_PRR,   "gfx/PioneerIIIIntercityCar_PRR.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PioneerIIIIntercityCar_PRR_Rear,   "gfx/PioneerIIIIntercityCar_PRR.png") {template_Old_8(7, 64)}
 
@@ -20871,7 +21026,7 @@ item (FEAT_TRAINS, Item_PioneerIIIIntercityCar_PRR, 50562) {
 }
 
 //Mail_PioneerIIIIntercityCar_PRR
-spriteset(spriteset_Mail_PioneerIIIIntercityCar_PRR_Purchase,   "gfx/PioneerIIIIntercityCar_PRR.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_PioneerIIIIntercityCar_PRR_Purchase,   "gfx/PioneerIIIIntercityCar_PRR.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_PRR,   "gfx/PioneerIIIIntercityCar_PRR.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_PRR_Rear,   "gfx/PioneerIIIIntercityCar_PRR.png") {template_Old_8(187, 64)}
 
@@ -20925,7 +21080,7 @@ item (FEAT_TRAINS, Item_Mail_PioneerIIIIntercityCar_PRR, 50572) {
 }
 
 //PioneerIIIIntercityCar_AmtrakPHII
-spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHII_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHII.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHII_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHII,   "gfx/PioneerIIIIntercityCar_AmtrakPHII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHII_Rear,   "gfx/PioneerIIIIntercityCar_AmtrakPHII.png") {template_Old_8(7, 64)}
 
@@ -20977,7 +21132,7 @@ item (FEAT_TRAINS, Item_PioneerIIIIntercityCar_AmtrakPHII, 50563) {
 }
 
 //Mail_PioneerIIIIntercityCar_AmtrakPHII
-spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHII_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHII.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHII_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHII.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHII,   "gfx/PioneerIIIIntercityCar_AmtrakPHII.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHII_Rear,   "gfx/PioneerIIIIntercityCar_AmtrakPHII.png") {template_Old_8(187, 64)}
 
@@ -21031,7 +21186,7 @@ item (FEAT_TRAINS, Item_Mail_PioneerIIIIntercityCar_AmtrakPHII, 50573) {
 }
 
 //PioneerIIIIntercityCar_AmtrakPHIII
-spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHIII_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHIII_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHIII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHIII,   "gfx/PioneerIIIIntercityCar_AmtrakPHIII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHIII_Rear,   "gfx/PioneerIIIIntercityCar_AmtrakPHIII.png") {template_Old_8(7, 64)}
 
@@ -21083,7 +21238,7 @@ item (FEAT_TRAINS, Item_PioneerIIIIntercityCar_AmtrakPHIII, 50564) {
 }
 
 //Mail_PioneerIIIIntercityCar_AmtrakPHIII
-spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHIII_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHIII.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHIII_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHIII.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHIII,   "gfx/PioneerIIIIntercityCar_AmtrakPHIII.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHIII_Rear,   "gfx/PioneerIIIIntercityCar_AmtrakPHIII.png") {template_Old_8(187, 64)}
 
@@ -21137,7 +21292,7 @@ item (FEAT_TRAINS, Item_Mail_PioneerIIIIntercityCar_AmtrakPHIII, 50574) {
 }
 
 //PioneerIIIIntercityCar_AmtrakPHIV
-spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHIV_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHIV.png") {template_purchase(7, 21)}
+spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHIV_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHIV.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHIV,   "gfx/PioneerIIIIntercityCar_AmtrakPHIV.png") {template_Old_8(7, 39)}
 spriteset(spriteset_PioneerIIIIntercityCar_AmtrakPHIV_Rear,   "gfx/PioneerIIIIntercityCar_AmtrakPHIV.png") {template_Old_8(7, 64)}
 
@@ -21189,7 +21344,7 @@ item (FEAT_TRAINS, Item_PioneerIIIIntercityCar_AmtrakPHIV, 50565) {
 }
 
 //Mail_PioneerIIIIntercityCar_AmtrakPHIV
-spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHIV_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHIV.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHIV_Purchase,   "gfx/PioneerIIIIntercityCar_AmtrakPHIV.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHIV,   "gfx/PioneerIIIIntercityCar_AmtrakPHIV.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_PioneerIIIIntercityCar_AmtrakPHIV_Rear,   "gfx/PioneerIIIIntercityCar_AmtrakPHIV.png") {template_Old_8(187, 64)}
 
@@ -21243,7 +21398,7 @@ item (FEAT_TRAINS, Item_Mail_PioneerIIIIntercityCar_AmtrakPHIV, 50575) {
 }
 
 //Budd_Amfleet_AmtrakPHII
-spriteset(spriteset_Budd_Amfleet_AmtrakPHII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Amfleet_AmtrakPHII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHII,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHII_Diner,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHII_Rear,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(7, 89)}
@@ -21300,7 +21455,7 @@ item (FEAT_TRAINS, Item_Budd_Amfleet_AmtrakPHII, 50701) {
 }
 }
 
-spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_purchase(367, 21)}
+spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_purchase_8(367, 21)}
 spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHII,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(367, 39)}
 spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHII_Rear,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(367, 64)}
 
@@ -21358,7 +21513,7 @@ item (FEAT_TRAINS, Item_Budd_Cab_Amfleet_AmtrakPHII, 50711) {
 }
 
 //Mail_Budd_Amfleet_AmtrakPHII
-spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHII,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHII_Rear,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(187, 64)}
 
@@ -21411,7 +21566,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_AmtrakPHII, 50721) {
 }
 }
 
-spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_purchase(547, 21)}
+spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_purchase_8(547, 21)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHII,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(547, 39)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHII_Rear,   "gfx/Budd_Amfleet_AmtrakPHII.png") {template_Old_8(547, 64)}
 
@@ -21470,7 +21625,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Cab_Amfleet_AmtrakPHII, 50732) {
 }
 
 //Budd_Amfleet_AmtrakPHIII
-spriteset(spriteset_Budd_Amfleet_AmtrakPHIII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Amfleet_AmtrakPHIII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHIII,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHIII_Diner,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHIII_Rear,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(7, 89)}
@@ -21527,7 +21682,7 @@ item (FEAT_TRAINS, Item_Budd_Amfleet_AmtrakPHIII, 50702) {
 }
 }
 
-spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHIII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_purchase(367, 21)}
+spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHIII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_purchase_8(367, 21)}
 spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHIII,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(367, 39)}
 spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHIII_Rear,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(367, 64)}
 
@@ -21585,7 +21740,7 @@ item (FEAT_TRAINS, Item_Budd_Cab_Amfleet_AmtrakPHIII, 50712) {
 }
 
 //Mail_Budd_Amfleet_AmtrakPHIII
-spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHIII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHIII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHIII,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHIII_Rear,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(187, 64)}
 
@@ -21638,7 +21793,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_AmtrakPHIII, 50722) {
 }
 }
 
-spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHIII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_purchase(547, 21)}
+spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHIII_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_purchase_8(547, 21)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHIII,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(547, 39)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHIII_Rear,   "gfx/Budd_Amfleet_AmtrakPHIII.png") {template_Old_8(547, 64)}
 
@@ -21697,7 +21852,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Cab_Amfleet_AmtrakPHIII, 50732) {
 }
 
 //Budd_Amfleet_AmtrakPHIV
-spriteset(spriteset_Budd_Amfleet_AmtrakPHIV_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Amfleet_AmtrakPHIV_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHIV,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHIV_Diner,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_Amfleet_AmtrakPHIV_Rear,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(7, 89)}
@@ -21754,7 +21909,7 @@ item (FEAT_TRAINS, Item_Budd_Amfleet_AmtrakPHIV, 50703) {
 }
 }
 
-spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHIV_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_purchase(367, 21)}
+spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHIV_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_purchase_8(367, 21)}
 spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHIV,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(367, 39)}
 spriteset(spriteset_Budd_Cab_Amfleet_AmtrakPHIV_Rear,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(367, 64)}
 
@@ -21812,7 +21967,7 @@ item (FEAT_TRAINS, Item_Budd_Cab_Amfleet_AmtrakPHIV, 50713) {
 }
 
 //Mail_Budd_Amfleet_AmtrakPHIV
-spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHIV_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHIV_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHIV,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_Budd_Amfleet_AmtrakPHIV_Rear,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(187, 64)}
 
@@ -21865,7 +22020,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_AmtrakPHIV, 50723) {
 }
 }
 
-spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHIV_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_purchase(547, 21)}
+spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHIV_Purchase,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_purchase_8(547, 21)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHIV,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(547, 39)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_AmtrakPHIV_Rear,   "gfx/Budd_Amfleet_AmtrakPHIV.png") {template_Old_8(547, 64)}
 
@@ -21924,7 +22079,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Cab_Amfleet_AmtrakPHIV, 50733) {
 }
 
 //Budd_Amfleet_ConferenceCar
-spriteset(spriteset_Budd_Cab_Amfleet_ConferenceCar_Purchase,   "gfx/Budd_Amfleet_ConferenceCar.png") {template_purchase(367, 21)}
+spriteset(spriteset_Budd_Cab_Amfleet_ConferenceCar_Purchase,   "gfx/Budd_Amfleet_ConferenceCar.png") {template_purchase_8(367, 21)}
 spriteset(spriteset_Budd_Cab_Amfleet_ConferenceCar,   "gfx/Budd_Amfleet_ConferenceCar.png") {template_Old_8(367, 39)}
 spriteset(spriteset_Budd_Cab_Amfleet_ConferenceCar_Rear,   "gfx/Budd_Amfleet_ConferenceCar.png") {template_Old_8(367, 64)}
 
@@ -21982,7 +22137,7 @@ item (FEAT_TRAINS, Item_Budd_Cab_Amfleet_ConferenceCar, 50734) {
 }
 
 //Budd_Amfleet_AcelaRegional
-spriteset(spriteset_Budd_Amfleet_AcelaRegional_Purchase,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Amfleet_AcelaRegional_Purchase,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Amfleet_AcelaRegional,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Amfleet_AcelaRegional_Diner,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_Amfleet_AcelaRegional_Rear,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(7, 89)}
@@ -22039,7 +22194,7 @@ item (FEAT_TRAINS, Item_Budd_Amfleet_AcelaRegional, 50705) {
 }
 }
 
-spriteset(spriteset_Budd_Cab_Amfleet_AcelaRegional_Purchase,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_purchase(367, 21)}
+spriteset(spriteset_Budd_Cab_Amfleet_AcelaRegional_Purchase,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_purchase_8(367, 21)}
 spriteset(spriteset_Budd_Cab_Amfleet_AcelaRegional,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(367, 39)}
 spriteset(spriteset_Budd_Cab_Amfleet_AcelaRegional_Rear,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(367, 64)}
 
@@ -22097,7 +22252,7 @@ item (FEAT_TRAINS, Item_Budd_Cab_Amfleet_AcelaRegional, 50715) {
 }
 
 //Mail_Budd_Amfleet_AcelaRegional
-spriteset(spriteset_Mail_Budd_Amfleet_AcelaRegional_Purchase,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_AcelaRegional_Purchase,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_Budd_Amfleet_AcelaRegional,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_Budd_Amfleet_AcelaRegional_Rear,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(187, 64)}
 
@@ -22150,7 +22305,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_AcelaRegional, 50725) {
 }
 }
 
-spriteset(spriteset_Mail_Budd_Cab_Amfleet_AcelaRegional_Purchase,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_purchase(547, 21)}
+spriteset(spriteset_Mail_Budd_Cab_Amfleet_AcelaRegional_Purchase,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_purchase_8(547, 21)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_AcelaRegional,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(547, 39)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_AcelaRegional_Rear,   "gfx/Budd_Amfleet_AcelaRegional.png") {template_Old_8(547, 64)}
 
@@ -22209,7 +22364,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Cab_Amfleet_AcelaRegional, 50735) {
 }
 
 //Budd_Amfleet_Via
-spriteset(spriteset_Budd_Amfleet_Via_Purchase,   "gfx/Budd_Amfleet_Via.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_Amfleet_Via_Purchase,   "gfx/Budd_Amfleet_Via.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_Amfleet_Via,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_Amfleet_Via_Diner,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_Amfleet_Via_Rear,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(7, 89)}
@@ -22266,7 +22421,7 @@ item (FEAT_TRAINS, Item_Budd_Amfleet_Via, 50706) {
 }
 }
 
-spriteset(spriteset_Budd_Cab_Amfleet_Via_Purchase,   "gfx/Budd_Amfleet_Via.png") {template_purchase(367, 21)}
+spriteset(spriteset_Budd_Cab_Amfleet_Via_Purchase,   "gfx/Budd_Amfleet_Via.png") {template_purchase_8(367, 21)}
 spriteset(spriteset_Budd_Cab_Amfleet_Via,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(367, 39)}
 spriteset(spriteset_Budd_Cab_Amfleet_Via_Rear,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(367, 64)}
 
@@ -22324,7 +22479,7 @@ item (FEAT_TRAINS, Item_Budd_Cab_Amfleet_Via, 50716) {
 }
 
 //Mail_Budd_Amfleet_Via
-spriteset(spriteset_Mail_Budd_Amfleet_Via_Purchase,   "gfx/Budd_Amfleet_Via.png") {template_purchase(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_Via_Purchase,   "gfx/Budd_Amfleet_Via.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_Mail_Budd_Amfleet_Via,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(187, 39)}
 spriteset(spriteset_Mail_Budd_Amfleet_Via_Rear,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(187, 64)}
 
@@ -22377,7 +22532,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_Via, 50726) {
 }
 }
 
-spriteset(spriteset_Mail_Budd_Cab_Amfleet_Via_Purchase,   "gfx/Budd_Amfleet_Via.png") {template_purchase(547, 21)}
+spriteset(spriteset_Mail_Budd_Cab_Amfleet_Via_Purchase,   "gfx/Budd_Amfleet_Via.png") {template_purchase_8(547, 21)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_Via,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(547, 39)}
 spriteset(spriteset_Mail_Budd_Cab_Amfleet_Via_Rear,   "gfx/Budd_Amfleet_Via.png") {template_Old_8(547, 64)}
 
@@ -22436,7 +22591,7 @@ item (FEAT_TRAINS, Item_Mail_Budd_Cab_Amfleet_Via, 50736) {
 }
 
 //Budd_HiLevel_Production
-spriteset(spriteset_Budd_HiLevel_Production_Purchase,   "gfx/Budd_HiLevel_Production.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_HiLevel_Production_Purchase,   "gfx/Budd_HiLevel_Production.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_HiLevel_Production,   "gfx/Budd_HiLevel_Production.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_HiLevel_Production_Diner,   "gfx/Budd_HiLevel_Production.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_HiLevel_Production_Lounge,   "gfx/Budd_HiLevel_Production.png") {template_Old_8(7, 89)}
@@ -22496,7 +22651,7 @@ item (FEAT_TRAINS, Item_Budd_HiLevel_Production, 52501) {
 }
 
 //Budd_HiLevel_AmtrakPHII
-spriteset(spriteset_Budd_HiLevel_AmtrakPHII_Purchase,   "gfx/Budd_HiLevel_AmtrakPHII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_HiLevel_AmtrakPHII_Purchase,   "gfx/Budd_HiLevel_AmtrakPHII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_HiLevel_AmtrakPHII,   "gfx/Budd_HiLevel_AmtrakPHII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_HiLevel_AmtrakPHII_Diner,   "gfx/Budd_HiLevel_AmtrakPHII.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_HiLevel_AmtrakPHII_Lounge,   "gfx/Budd_HiLevel_AmtrakPHII.png") {template_Old_8(7, 89)}
@@ -22556,7 +22711,7 @@ item (FEAT_TRAINS, Item_Budd_HiLevel_AmtrakPHII, 52502) {
 }
 
 //Budd_HiLevel_AmtrakPHIII
-spriteset(spriteset_Budd_HiLevel_AmtrakPHIII_Purchase,   "gfx/Budd_HiLevel_AmtrakPHIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_HiLevel_AmtrakPHIII_Purchase,   "gfx/Budd_HiLevel_AmtrakPHIII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_HiLevel_AmtrakPHIII,   "gfx/Budd_HiLevel_AmtrakPHIII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_HiLevel_AmtrakPHIII_Diner,   "gfx/Budd_HiLevel_AmtrakPHIII.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_HiLevel_AmtrakPHIII_Lounge,   "gfx/Budd_HiLevel_AmtrakPHIII.png") {template_Old_8(7, 89)}
@@ -22616,7 +22771,7 @@ item (FEAT_TRAINS, Item_Budd_HiLevel_AmtrakPHIII, 52503) {
 }
 
 //Budd_HiLevel_Caltrans
-spriteset(spriteset_Budd_HiLevel_Caltrans_Purchase,   "gfx/Budd_HiLevel_Caltrans.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_HiLevel_Caltrans_Purchase,   "gfx/Budd_HiLevel_Caltrans.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_HiLevel_Caltrans,   "gfx/Budd_HiLevel_Caltrans.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_HiLevel_Caltrans_Diner,   "gfx/Budd_HiLevel_Caltrans.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_HiLevel_Caltrans_Lounge,   "gfx/Budd_HiLevel_Caltrans.png") {template_Old_8(7, 89)}
@@ -22676,7 +22831,7 @@ item (FEAT_TRAINS, Item_Budd_HiLevel_Caltrans, 52504) {
 }
 
 //Budd_SkyView_Production
-spriteset(spriteset_Budd_SkyView_Production_Purchase,   "gfx/Budd_SkyView_Production.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_SkyView_Production_Purchase,   "gfx/Budd_SkyView_Production.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_SkyView_Production,   "gfx/Budd_SkyView_Production.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_SkyView_Production_Diner,   "gfx/Budd_SkyView_Production.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_SkyView_Production_Rear,   "gfx/Budd_SkyView_Production.png") {template_Old_8(7, 89)}
@@ -22734,7 +22889,7 @@ item (FEAT_TRAINS, Item_Budd_SkyView_Production, 52601) {
 }
 
 //Budd_SkyView_AmtrakPHII
-spriteset(spriteset_Budd_SkyView_AmtrakPHII_Purchase,   "gfx/Budd_SkyView_AmtrakPHII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_SkyView_AmtrakPHII_Purchase,   "gfx/Budd_SkyView_AmtrakPHII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_SkyView_AmtrakPHII,   "gfx/Budd_SkyView_AmtrakPHII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_SkyView_AmtrakPHII_Diner,   "gfx/Budd_SkyView_AmtrakPHII.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_SkyView_AmtrakPHII_Rear,   "gfx/Budd_SkyView_AmtrakPHII.png") {template_Old_8(7, 89)}
@@ -22792,7 +22947,7 @@ item (FEAT_TRAINS, Item_Budd_SkyView_AmtrakPHII, 52602) {
 }
 
 //Budd_SkyView_AmtrakPHIII
-spriteset(spriteset_Budd_SkyView_AmtrakPHIII_Purchase,   "gfx/Budd_SkyView_AmtrakPHIII.png") {template_purchase(7, 21)}
+spriteset(spriteset_Budd_SkyView_AmtrakPHIII_Purchase,   "gfx/Budd_SkyView_AmtrakPHIII.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Budd_SkyView_AmtrakPHIII,   "gfx/Budd_SkyView_AmtrakPHIII.png") {template_Old_8(7, 39)}
 spriteset(spriteset_Budd_SkyView_AmtrakPHIII_Diner,   "gfx/Budd_SkyView_AmtrakPHIII.png") {template_Old_8(7, 64)}
 spriteset(spriteset_Budd_SkyView_AmtrakPHIII_Rear,   "gfx/Budd_SkyView_AmtrakPHIII.png") {template_Old_8(7, 89)}

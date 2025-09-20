@@ -119,6 +119,162 @@ template template_purchase(x, y) {
     [x-2 , y,  1,  1,   0,  0, ANIM]
 }
 
+template template_purchase_4(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -31, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_5(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -33, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_6(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -35, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_7(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -37, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_8(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_44(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_55(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -43, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_66(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -47, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_77(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -51, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_77mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -37, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -41, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88xl(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
 // 4 Template
 template template_4(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
@@ -434,7 +590,7 @@ switch(FEAT_TRAINS, SELF, switch_Modern_Electric_Horn, getbits(extra_callback_in
 
 
 //EMC_E1_Liv0
-spriteset(spriteset_EMC_E1_Liv0_Purchase,   "gfx/EMC_E1_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv0_Purchase,   "gfx/EMC_E1_Liv0.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv0_A,   "gfx/EMC_E1_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv0_B,   "gfx/EMC_E1_Liv0.png") {template_8(7, 69)}
@@ -503,7 +659,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv0, 5000) {
 sort(FEAT_TRAINS, [Item_EMC_E1_Liv0, Item_EMC_E1_Liv31]);
 
 //EMC_E1_Liv6
-spriteset(spriteset_EMC_E1_Liv6_Purchase,   "gfx/EMC_E1_Liv6.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv6_Purchase,   "gfx/EMC_E1_Liv6.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv6_A,   "gfx/EMC_E1_Liv6.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv6_B,   "gfx/EMC_E1_Liv6.png") {template_8(7, 69)}
@@ -570,7 +726,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv6, 5006) {
 }
 
 //EMC_E1_Liv7
-spriteset(spriteset_EMC_E1_Liv7_Purchase,   "gfx/EMC_E1_Liv7.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv7_Purchase,   "gfx/EMC_E1_Liv7.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv7_A,   "gfx/EMC_E1_Liv7.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv7_B,   "gfx/EMC_E1_Liv7.png") {template_8(7, 69)}
@@ -637,7 +793,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv7, 5007) {
 }
 
 //EMC_E1_Liv8
-spriteset(spriteset_EMC_E1_Liv8_Purchase,   "gfx/EMC_E1_Liv8.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv8_Purchase,   "gfx/EMC_E1_Liv8.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv8_A,   "gfx/EMC_E1_Liv8.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv8_B,   "gfx/EMC_E1_Liv8.png") {template_8(7, 69)}
@@ -704,7 +860,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv8, 5008) {
 }
 
 //EMC_E1_Liv9
-spriteset(spriteset_EMC_E1_Liv9_Purchase,   "gfx/EMC_E1_Liv9.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv9_Purchase,   "gfx/EMC_E1_Liv9.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv9_A,   "gfx/EMC_E1_Liv9.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv9_B,   "gfx/EMC_E1_Liv9.png") {template_8(7, 69)}
@@ -771,7 +927,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv9, 5009) {
 }
 
 //EMC_E1_Liv10
-spriteset(spriteset_EMC_E1_Liv10_Purchase,   "gfx/EMC_E1_Liv10.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv10_Purchase,   "gfx/EMC_E1_Liv10.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv10_A,   "gfx/EMC_E1_Liv10.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv10_B,   "gfx/EMC_E1_Liv10.png") {template_8(7, 69)}
@@ -838,7 +994,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv10, 5010) {
 }
 
 //EMC_E1_Liv11
-spriteset(spriteset_EMC_E1_Liv11_Purchase,   "gfx/EMC_E1_Liv11.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv11_Purchase,   "gfx/EMC_E1_Liv11.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv11_A,   "gfx/EMC_E1_Liv11.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv11_B,   "gfx/EMC_E1_Liv11.png") {template_8(7, 69)}
@@ -905,7 +1061,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv11, 5011) {
 }
 
 //EMC_E1_Liv12
-spriteset(spriteset_EMC_E1_Liv12_Purchase,   "gfx/EMC_E1_Liv12.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv12_Purchase,   "gfx/EMC_E1_Liv12.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv12_A,   "gfx/EMC_E1_Liv12.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv12_B,   "gfx/EMC_E1_Liv12.png") {template_8(7, 69)}
@@ -972,7 +1128,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv12, 5012) {
 }
 
 //EMC_E1_Liv13
-spriteset(spriteset_EMC_E1_Liv13_Purchase,   "gfx/EMC_E1_Liv13.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv13_Purchase,   "gfx/EMC_E1_Liv13.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv13_A,   "gfx/EMC_E1_Liv13.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv13_B,   "gfx/EMC_E1_Liv13.png") {template_8(7, 69)}
@@ -1039,7 +1195,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv13, 5013) {
 }
 
 //EMC_E1_Liv31
-spriteset(spriteset_EMC_E1_Liv31_Purchase,   "gfx/EMC_E1_Liv31.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E1_Liv31_Purchase,   "gfx/EMC_E1_Liv31.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E1_Liv31_A,   "gfx/EMC_E1_Liv31.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E1_Liv31_B,   "gfx/EMC_E1_Liv31.png") {template_8(7, 69)}
@@ -1106,7 +1262,7 @@ item(FEAT_TRAINS, Item_EMC_E1_Liv31, 5031) {
 }
 
 //EMC_E3_Liv0
-spriteset(spriteset_EMC_E3_Liv0_Purchase,   "gfx/EMC_E3_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMC_E3_Liv0_Purchase,   "gfx/EMC_E3_Liv0.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMC_E3_Liv0_A,   "gfx/EMC_E3_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_EMC_E3_Liv0_B,   "gfx/EMC_E3_Liv0.png") {template_8(7, 69)}
@@ -1173,7 +1329,7 @@ item(FEAT_TRAINS, Item_EMC_E3_Liv0, 5100) {
 }
 
 //EMD_E7_Liv0
-spriteset(spriteset_EMD_E7_Liv0_Purchase,   "gfx/EMD_E7_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_E7_Liv0_Purchase,   "gfx/EMD_E7_Liv0.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMD_E7_Liv0_A,   "gfx/EMD_E7_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_E7_Liv0_B,   "gfx/EMD_E7_Liv0.png") {template_8(7, 69)}
@@ -1240,7 +1396,7 @@ item(FEAT_TRAINS, Item_EMD_E7_Liv0, 5250) {
 }
 
 //ALCO_PA_Liv0
-spriteset(spriteset_ALCO_PA_Liv0_Purchase,   "gfx/ALCO_PA_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_ALCO_PA_Liv0_Purchase,   "gfx/ALCO_PA_Liv0.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_ALCO_PA_Liv0_A,   "gfx/ALCO_PA_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_ALCO_PA_Liv0_B,   "gfx/ALCO_PA_Liv0.png") {template_8(7, 69)}
@@ -1307,7 +1463,7 @@ item(FEAT_TRAINS, Item_ALCO_PA_Liv0, 5300) {
 }
 
 //EMD_E9_Liv0
-spriteset(spriteset_EMD_E9_Liv0_Purchase,   "gfx/EMD_E9_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_E9_Liv0_Purchase,   "gfx/EMD_E9_Liv0.png") {template_purchase_88(7, 21)}
 
 spriteset(spriteset_EMD_E9_Liv0_A,   "gfx/EMD_E9_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_E9_Liv0_B,   "gfx/EMD_E9_Liv0.png") {template_8(7, 69)}
@@ -1374,7 +1530,7 @@ item(FEAT_TRAINS, Item_EMD_E9_Liv0, 5600) {
 }
 
 //EMD_FP45_Liv0
-spriteset(spriteset_EMD_FP45_Liv0_Purchase,   "gfx/EMD_FP45_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FP45_Liv0_Purchase,   "gfx/EMD_FP45_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_FP45_Liv0,   "gfx/EMD_FP45_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FP45_Liv0_r,   "gfx/EMD_FP45_Liv0.png") {template_8_r(7, 39)}
 
@@ -1435,7 +1591,7 @@ item(FEAT_TRAINS, Item_EMD_FP45_Liv0, 5800) {
 }
 
 //EMD_SDP40F_Liv0
-spriteset(spriteset_EMD_SDP40F_Liv0_Purchase,   "gfx/EMD_SDP40F_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv0_Purchase,   "gfx/EMD_SDP40F_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv0,   "gfx/EMD_SDP40F_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv0_r,   "gfx/EMD_SDP40F_Liv0.png") {template_8_r(7, 39)}
 
@@ -1496,7 +1652,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv0, 6000) {
 }
 
 //EMD_SDP40F_Liv6
-spriteset(spriteset_EMD_SDP40F_Liv6_Purchase,   "gfx/EMD_SDP40F_Liv6.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv6_Purchase,   "gfx/EMD_SDP40F_Liv6.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv6,   "gfx/EMD_SDP40F_Liv6.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv6_r,   "gfx/EMD_SDP40F_Liv6.png") {template_8_r(7, 39)}
 
@@ -1557,7 +1713,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv6, 6006) {
 }
 
 //EMD_SDP40F_Liv7
-spriteset(spriteset_EMD_SDP40F_Liv7_Purchase,   "gfx/EMD_SDP40F_Liv7.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv7_Purchase,   "gfx/EMD_SDP40F_Liv7.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv7,   "gfx/EMD_SDP40F_Liv7.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv7_r,   "gfx/EMD_SDP40F_Liv7.png") {template_8_r(7, 39)}
 
@@ -1618,7 +1774,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv7, 6007) {
 }
 
 //EMD_SDP40F_Liv8
-spriteset(spriteset_EMD_SDP40F_Liv8_Purchase,   "gfx/EMD_SDP40F_Liv8.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv8_Purchase,   "gfx/EMD_SDP40F_Liv8.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv8,   "gfx/EMD_SDP40F_Liv8.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv8_r,   "gfx/EMD_SDP40F_Liv8.png") {template_8_r(7, 39)}
 
@@ -1679,7 +1835,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv8, 6008) {
 }
 
 //EMD_SDP40F_Liv9
-spriteset(spriteset_EMD_SDP40F_Liv9_Purchase,   "gfx/EMD_SDP40F_Liv9.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv9_Purchase,   "gfx/EMD_SDP40F_Liv9.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv9,   "gfx/EMD_SDP40F_Liv9.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv9_r,   "gfx/EMD_SDP40F_Liv9.png") {template_8_r(7, 39)}
 
@@ -1740,7 +1896,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv9, 6009) {
 }
 
 //EMD_SDP40F_Liv10
-spriteset(spriteset_EMD_SDP40F_Liv10_Purchase,   "gfx/EMD_SDP40F_Liv10.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv10_Purchase,   "gfx/EMD_SDP40F_Liv10.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv10,   "gfx/EMD_SDP40F_Liv10.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv10_r,   "gfx/EMD_SDP40F_Liv10.png") {template_8_r(7, 39)}
 
@@ -1801,7 +1957,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv10, 6010) {
 }
 
 //EMD_SDP40F_Liv11
-spriteset(spriteset_EMD_SDP40F_Liv11_Purchase,   "gfx/EMD_SDP40F_Liv11.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv11_Purchase,   "gfx/EMD_SDP40F_Liv11.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv11,   "gfx/EMD_SDP40F_Liv11.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv11_r,   "gfx/EMD_SDP40F_Liv11.png") {template_8_r(7, 39)}
 
@@ -1861,7 +2017,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv11, 6011) {
 }
 
 //EMD_SDP40F_Liv12
-spriteset(spriteset_EMD_SDP40F_Liv12_Purchase,   "gfx/EMD_SDP40F_Liv12.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv12_Purchase,   "gfx/EMD_SDP40F_Liv12.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv12,   "gfx/EMD_SDP40F_Liv12.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv12_r,   "gfx/EMD_SDP40F_Liv12.png") {template_8_r(7, 39)}
 
@@ -1922,7 +2078,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv12, 6012) {
 }
 
 //EMD_SDP40F_Liv13
-spriteset(spriteset_EMD_SDP40F_Liv13_Purchase,   "gfx/EMD_SDP40F_Liv13.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv13_Purchase,   "gfx/EMD_SDP40F_Liv13.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv13,   "gfx/EMD_SDP40F_Liv13.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv13_r,   "gfx/EMD_SDP40F_Liv13.png") {template_8_r(7, 39)}
 
@@ -1983,7 +2139,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv13, 6013) {
 }
 
 //EMD_SDP40F_Liv14
-spriteset(spriteset_EMD_SDP40F_Liv14_Purchase,   "gfx/EMD_SDP40F_Liv14.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv14_Purchase,   "gfx/EMD_SDP40F_Liv14.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv14,   "gfx/EMD_SDP40F_Liv14.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv14_r,   "gfx/EMD_SDP40F_Liv14.png") {template_8_r(7, 39)}
 
@@ -2044,7 +2200,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv14, 6014) {
 }
 
 //EMD_SDP40F_Liv15
-spriteset(spriteset_EMD_SDP40F_Liv15_Purchase,   "gfx/EMD_SDP40F_Liv15.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv15_Purchase,   "gfx/EMD_SDP40F_Liv15.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv15,   "gfx/EMD_SDP40F_Liv15.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv15_r,   "gfx/EMD_SDP40F_Liv15.png") {template_8_r(7, 39)}
 
@@ -2105,7 +2261,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv15, 6015) {
 }
 
 //EMD_SDP40F_Liv16
-spriteset(spriteset_EMD_SDP40F_Liv16_Purchase,   "gfx/EMD_SDP40F_Liv16.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv16_Purchase,   "gfx/EMD_SDP40F_Liv16.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv16,   "gfx/EMD_SDP40F_Liv16.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv16_r,   "gfx/EMD_SDP40F_Liv16.png") {template_8_r(7, 39)}
 
@@ -2166,7 +2322,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv16, 6016) {
 }
 
 //EMD_SDP40F_Liv17
-spriteset(spriteset_EMD_SDP40F_Liv17_Purchase,   "gfx/EMD_SDP40F_Liv17.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv17_Purchase,   "gfx/EMD_SDP40F_Liv17.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv17,   "gfx/EMD_SDP40F_Liv17.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv17_r,   "gfx/EMD_SDP40F_Liv17.png") {template_8_r(7, 39)}
 
@@ -2226,7 +2382,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv17, 6017) {
 }
 
 //EMD_SDP40F_Liv18
-spriteset(spriteset_EMD_SDP40F_Liv18_Purchase,   "gfx/EMD_SDP40F_Liv18.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv18_Purchase,   "gfx/EMD_SDP40F_Liv18.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv18,   "gfx/EMD_SDP40F_Liv18.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv18_r,   "gfx/EMD_SDP40F_Liv18.png") {template_8_r(7, 39)}
 
@@ -2287,7 +2443,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv18, 6018) {
 }
 
 //EMD_SDP40F_Liv19
-spriteset(spriteset_EMD_SDP40F_Liv19_Purchase,   "gfx/EMD_SDP40F_Liv19.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_SDP40F_Liv19_Purchase,   "gfx/EMD_SDP40F_Liv19.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_SDP40F_Liv19,   "gfx/EMD_SDP40F_Liv19.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_SDP40F_Liv19_r,   "gfx/EMD_SDP40F_Liv19.png") {template_8_r(7, 39)}
 
@@ -2348,7 +2504,7 @@ item(FEAT_TRAINS, Item_EMD_SDP40F_Liv19, 6019) {
 }
 
 //EMD_F40C_Liv0
-spriteset(spriteset_EMD_F40C_Liv0_Purchase,   "gfx/EMD_F40C_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv0_Purchase,   "gfx/EMD_F40C_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv0,   "gfx/EMD_F40C_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv0_r,   "gfx/EMD_F40C_Liv0.png") {template_8_r(7, 39)}
 
@@ -2409,7 +2565,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv0, 6050) {
 }
 
 //EMD_F40C_Liv1
-spriteset(spriteset_EMD_F40C_Liv1_Purchase,   "gfx/EMD_F40C_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv1_Purchase,   "gfx/EMD_F40C_Liv1.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv1,   "gfx/EMD_F40C_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv1_r,   "gfx/EMD_F40C_Liv1.png") {template_8_r(7, 39)}
 
@@ -2470,7 +2626,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv1, 6051) {
 }
 
 //EMD_F40C_Liv6
-spriteset(spriteset_EMD_F40C_Liv6_Purchase,   "gfx/EMD_F40C_Liv6.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv6_Purchase,   "gfx/EMD_F40C_Liv6.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv6,   "gfx/EMD_F40C_Liv6.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv6_r,   "gfx/EMD_F40C_Liv6.png") {template_8_r(7, 39)}
 
@@ -2531,7 +2687,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv6, 6056) {
 }
 
 //EMD_F40C_Liv7
-spriteset(spriteset_EMD_F40C_Liv7_Purchase,   "gfx/EMD_F40C_Liv7.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv7_Purchase,   "gfx/EMD_F40C_Liv7.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv7,   "gfx/EMD_F40C_Liv7.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv7_r,   "gfx/EMD_F40C_Liv7.png") {template_8_r(7, 39)}
 
@@ -2592,7 +2748,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv7, 6057) {
 }
 
 //EMD_F40C_Liv8
-spriteset(spriteset_EMD_F40C_Liv8_Purchase,   "gfx/EMD_F40C_Liv8.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv8_Purchase,   "gfx/EMD_F40C_Liv8.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv8,   "gfx/EMD_F40C_Liv8.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv8_r,   "gfx/EMD_F40C_Liv8.png") {template_8_r(7, 39)}
 
@@ -2653,7 +2809,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv8, 6058) {
 }
 
 //EMD_F40C_Liv9
-spriteset(spriteset_EMD_F40C_Liv9_Purchase,   "gfx/EMD_F40C_Liv9.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv9_Purchase,   "gfx/EMD_F40C_Liv9.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv9,   "gfx/EMD_F40C_Liv9.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv9_r,   "gfx/EMD_F40C_Liv9.png") {template_8_r(7, 39)}
 
@@ -2714,7 +2870,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv9, 6059) {
 }
 
 //EMD_F40C_Liv10
-spriteset(spriteset_EMD_F40C_Liv10_Purchase,   "gfx/EMD_F40C_Liv10.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv10_Purchase,   "gfx/EMD_F40C_Liv10.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv10,   "gfx/EMD_F40C_Liv10.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv10_r,   "gfx/EMD_F40C_Liv10.png") {template_8_r(7, 39)}
 
@@ -2775,7 +2931,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv10, 6060) {
 }
 
 //EMD_F40C_Liv11
-spriteset(spriteset_EMD_F40C_Liv11_Purchase,   "gfx/EMD_F40C_Liv11.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv11_Purchase,   "gfx/EMD_F40C_Liv11.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv11,   "gfx/EMD_F40C_Liv11.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv11_r,   "gfx/EMD_F40C_Liv11.png") {template_8_r(7, 39)}
 
@@ -2836,7 +2992,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv11, 6061) {
 }
 
 //EMD_F40C_Liv12
-spriteset(spriteset_EMD_F40C_Liv12_Purchase,   "gfx/EMD_F40C_Liv12.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv12_Purchase,   "gfx/EMD_F40C_Liv12.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv12,   "gfx/EMD_F40C_Liv12.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv12_r,   "gfx/EMD_F40C_Liv12.png") {template_8_r(7, 39)}
 
@@ -2897,7 +3053,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv12, 6062) {
 }
 
 //EMD_F40C_Liv13
-spriteset(spriteset_EMD_F40C_Liv13_Purchase,   "gfx/EMD_F40C_Liv13.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv13_Purchase,   "gfx/EMD_F40C_Liv13.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv13,   "gfx/EMD_F40C_Liv13.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv13_r,   "gfx/EMD_F40C_Liv13.png") {template_8_r(7, 39)}
 
@@ -2958,7 +3114,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv13, 6063) {
 }
 
 //EMD_F40C_Liv14
-spriteset(spriteset_EMD_F40C_Liv14_Purchase,   "gfx/EMD_F40C_Liv14.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv14_Purchase,   "gfx/EMD_F40C_Liv14.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv14,   "gfx/EMD_F40C_Liv14.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv14_r,   "gfx/EMD_F40C_Liv14.png") {template_8_r(7, 39)}
 
@@ -3019,7 +3175,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv14, 6064) {
 }
 
 //EMD_F40C_Liv15
-spriteset(spriteset_EMD_F40C_Liv15_Purchase,   "gfx/EMD_F40C_Liv15.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv15_Purchase,   "gfx/EMD_F40C_Liv15.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv15,   "gfx/EMD_F40C_Liv15.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv15_r,   "gfx/EMD_F40C_Liv15.png") {template_8_r(7, 39)}
 
@@ -3080,7 +3236,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv15, 6065) {
 }
 
 //EMD_F40C_Liv16
-spriteset(spriteset_EMD_F40C_Liv16_Purchase,   "gfx/EMD_F40C_Liv16.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv16_Purchase,   "gfx/EMD_F40C_Liv16.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv16,   "gfx/EMD_F40C_Liv16.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv16_r,   "gfx/EMD_F40C_Liv16.png") {template_8_r(7, 39)}
 
@@ -3141,7 +3297,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv16, 6066) {
 }
 
 //EMD_F40C_Liv17
-spriteset(spriteset_EMD_F40C_Liv17_Purchase,   "gfx/EMD_F40C_Liv17.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv17_Purchase,   "gfx/EMD_F40C_Liv17.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv17,   "gfx/EMD_F40C_Liv17.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv17_r,   "gfx/EMD_F40C_Liv17.png") {template_8_r(7, 39)}
 
@@ -3202,7 +3358,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv17, 6067) {
 }
 
 //EMD_F40C_Liv18
-spriteset(spriteset_EMD_F40C_Liv18_Purchase,   "gfx/EMD_F40C_Liv18.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv18_Purchase,   "gfx/EMD_F40C_Liv18.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv18,   "gfx/EMD_F40C_Liv18.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv18_r,   "gfx/EMD_F40C_Liv18.png") {template_8_r(7, 39)}
 
@@ -3263,7 +3419,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv18, 6068) {
 }
 
 //EMD_F40C_Liv19
-spriteset(spriteset_EMD_F40C_Liv19_Purchase,   "gfx/EMD_F40C_Liv19.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40C_Liv19_Purchase,   "gfx/EMD_F40C_Liv19.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_F40C_Liv19,   "gfx/EMD_F40C_Liv19.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40C_Liv19_r,   "gfx/EMD_F40C_Liv19.png") {template_8_r(7, 39)}
 
@@ -3324,7 +3480,7 @@ item(FEAT_TRAINS, Item_EMD_F40C_Liv19, 6069) {
 }
 
 //EMD_F40PH_Liv0
-spriteset(spriteset_EMD_F40PH_Liv0_Purchase,   "gfx/EMD_F40PH_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv0_Purchase,   "gfx/EMD_F40PH_Liv0.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv0,   "gfx/EMD_F40PH_Liv0.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv0_r,   "gfx/EMD_F40PH_Liv0.png") {template_7_r(7, 39)}
 
@@ -3385,7 +3541,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv0, 6150) {
 }
 
 //EMD_F40PH_Liv6
-spriteset(spriteset_EMD_F40PH_Liv6_Purchase,   "gfx/EMD_F40PH_Liv6.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv6_Purchase,   "gfx/EMD_F40PH_Liv6.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv6,   "gfx/EMD_F40PH_Liv6.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv6_r,   "gfx/EMD_F40PH_Liv6.png") {template_7_r(7, 39)}
 
@@ -3446,7 +3602,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv6, 6156) {
 }
 
 //EMD_F40PH_Liv7
-spriteset(spriteset_EMD_F40PH_Liv7_Purchase,   "gfx/EMD_F40PH_Liv7.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv7_Purchase,   "gfx/EMD_F40PH_Liv7.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv7,   "gfx/EMD_F40PH_Liv7.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv7_r,   "gfx/EMD_F40PH_Liv7.png") {template_7_r(7, 39)}
 
@@ -3507,7 +3663,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv7, 6157) {
 }
 
 //EMD_F40PH_Liv8
-spriteset(spriteset_EMD_F40PH_Liv8_Purchase,   "gfx/EMD_F40PH_Liv8.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv8_Purchase,   "gfx/EMD_F40PH_Liv8.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv8,   "gfx/EMD_F40PH_Liv8.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv8_r,   "gfx/EMD_F40PH_Liv8.png") {template_7_r(7, 39)}
 
@@ -3568,7 +3724,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv8, 6158) {
 }
 
 //EMD_F40PH_Liv9
-spriteset(spriteset_EMD_F40PH_Liv9_Purchase,   "gfx/EMD_F40PH_Liv9.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv9_Purchase,   "gfx/EMD_F40PH_Liv9.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv9,   "gfx/EMD_F40PH_Liv9.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv9_r,   "gfx/EMD_F40PH_Liv9.png") {template_7_r(7, 39)}
 
@@ -3629,7 +3785,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv9, 6159) {
 }
 
 //EMD_F40PH_Liv10
-spriteset(spriteset_EMD_F40PH_Liv10_Purchase,   "gfx/EMD_F40PH_Liv10.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv10_Purchase,   "gfx/EMD_F40PH_Liv10.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv10,   "gfx/EMD_F40PH_Liv10.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv10_r,   "gfx/EMD_F40PH_Liv10.png") {template_7_r(7, 39)}
 
@@ -3690,7 +3846,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv10, 6160) {
 }
 
 //EMD_F40PH_Liv11
-spriteset(spriteset_EMD_F40PH_Liv11_Purchase,   "gfx/EMD_F40PH_Liv11.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv11_Purchase,   "gfx/EMD_F40PH_Liv11.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv11,   "gfx/EMD_F40PH_Liv11.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv11_r,   "gfx/EMD_F40PH_Liv11.png") {template_7_r(7, 39)}
 
@@ -3751,7 +3907,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv11, 6161) {
 }
 
 //EMD_F40PH_Liv12
-spriteset(spriteset_EMD_F40PH_Liv12_Purchase,   "gfx/EMD_F40PH_Liv12.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv12_Purchase,   "gfx/EMD_F40PH_Liv12.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv12,   "gfx/EMD_F40PH_Liv12.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv12_r,   "gfx/EMD_F40PH_Liv12.png") {template_7_r(7, 39)}
 
@@ -3812,7 +3968,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv12, 6162) {
 }
 
 //EMD_F40PH_Liv13
-spriteset(spriteset_EMD_F40PH_Liv13_Purchase,   "gfx/EMD_F40PH_Liv13.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv13_Purchase,   "gfx/EMD_F40PH_Liv13.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv13,   "gfx/EMD_F40PH_Liv13.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv13_r,   "gfx/EMD_F40PH_Liv13.png") {template_7_r(7, 39)}
 
@@ -3873,7 +4029,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv13, 6163) {
 }
 
 //EMD_F40PH_Liv14
-spriteset(spriteset_EMD_F40PH_Liv14_Purchase,   "gfx/EMD_F40PH_Liv14.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv14_Purchase,   "gfx/EMD_F40PH_Liv14.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv14,   "gfx/EMD_F40PH_Liv14.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv14_r,   "gfx/EMD_F40PH_Liv14.png") {template_7_r(7, 39)}
 
@@ -3934,7 +4090,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv14, 6164) {
 }
 
 //EMD_F40PH_Liv15
-spriteset(spriteset_EMD_F40PH_Liv15_Purchase,   "gfx/EMD_F40PH_Liv15.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv15_Purchase,   "gfx/EMD_F40PH_Liv15.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv15,   "gfx/EMD_F40PH_Liv15.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv15_r,   "gfx/EMD_F40PH_Liv15.png") {template_7_r(7, 39)}
 
@@ -3995,7 +4151,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv15, 6165) {
 }
 
 //EMD_F40PH_Liv16
-spriteset(spriteset_EMD_F40PH_Liv16_Purchase,   "gfx/EMD_F40PH_Liv16.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv16_Purchase,   "gfx/EMD_F40PH_Liv16.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv16,   "gfx/EMD_F40PH_Liv16.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv16_r,   "gfx/EMD_F40PH_Liv16.png") {template_7_r(7, 39)}
 
@@ -4056,7 +4212,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv16, 6166) {
 }
 
 //EMD_F40PH_Liv17
-spriteset(spriteset_EMD_F40PH_Liv17_Purchase,   "gfx/EMD_F40PH_Liv17.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv17_Purchase,   "gfx/EMD_F40PH_Liv17.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv17,   "gfx/EMD_F40PH_Liv17.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv17_r,   "gfx/EMD_F40PH_Liv17.png") {template_7_r(7, 39)}
 
@@ -4117,7 +4273,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv17, 6167) {
 }
 
 //EMD_F40PH_Liv18
-spriteset(spriteset_EMD_F40PH_Liv18_Purchase,   "gfx/EMD_F40PH_Liv18.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv18_Purchase,   "gfx/EMD_F40PH_Liv18.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv18,   "gfx/EMD_F40PH_Liv18.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv18_r,   "gfx/EMD_F40PH_Liv18.png") {template_7_r(7, 39)}
 
@@ -4178,7 +4334,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv18, 6168) {
 }
 
 //EMD_F40PH_Liv19
-spriteset(spriteset_EMD_F40PH_Liv19_Purchase,   "gfx/EMD_F40PH_Liv19.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv19_Purchase,   "gfx/EMD_F40PH_Liv19.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv19,   "gfx/EMD_F40PH_Liv19.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv19_r,   "gfx/EMD_F40PH_Liv19.png") {template_7_r(7, 39)}
 
@@ -4239,7 +4395,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv19, 6168) {
 }
 
 //EMD_F40PH_Liv26
-spriteset(spriteset_EMD_F40PH_Liv26_Purchase,   "gfx/EMD_F40PH_Liv26.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv26_Purchase,   "gfx/EMD_F40PH_Liv26.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv26,   "gfx/EMD_F40PH_Liv26.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv26_r,   "gfx/EMD_F40PH_Liv26.png") {template_7_r(7, 39)}
 
@@ -4300,7 +4456,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv26, 6176) {
 }
 
 //EMD_F40PH_Liv27
-spriteset(spriteset_EMD_F40PH_Liv27_Purchase,   "gfx/EMD_F40PH_Liv27.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv27_Purchase,   "gfx/EMD_F40PH_Liv27.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv27,   "gfx/EMD_F40PH_Liv27.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv27_r,   "gfx/EMD_F40PH_Liv27.png") {template_7_r(7, 39)}
 
@@ -4360,7 +4516,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv27, 6177) {
 }
 
 //EMD_F40PH_Liv28
-spriteset(spriteset_EMD_F40PH_Liv28_Purchase,   "gfx/EMD_F40PH_Liv28.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F40PH_Liv28_Purchase,   "gfx/EMD_F40PH_Liv28.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_F40PH_Liv28,   "gfx/EMD_F40PH_Liv28.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F40PH_Liv28_r,   "gfx/EMD_F40PH_Liv28.png") {template_7_r(7, 39)}
 
@@ -4421,7 +4577,7 @@ item(FEAT_TRAINS, Item_EMD_F40PH_Liv28, 6178) {
 }
 
 //GE_P40DC_Liv0
-spriteset(spriteset_GE_P40DC_Liv0_Purchase,   "gfx/GE_P40DC_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_P40DC_Liv0_Purchase,   "gfx/GE_P40DC_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GE_P40DC_Liv0,   "gfx/GE_P40DC_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_GE_P40DC_Liv0_r,   "gfx/GE_P40DC_Liv0.png") {template_8_r(7, 39)}
 
@@ -4482,7 +4638,7 @@ item(FEAT_TRAINS, Item_GE_P40DC_Liv0, 6600) {
 }
 
 //GE_P42DC_Liv0
-spriteset(spriteset_GE_P42DC_Liv0_Purchase,   "gfx/GE_P42DC_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_P42DC_Liv0_Purchase,   "gfx/GE_P42DC_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GE_P42DC_Liv0,   "gfx/GE_P42DC_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_GE_P42DC_Liv0_r,   "gfx/GE_P42DC_Liv0.png") {template_8_r(7, 39)}
 
@@ -4543,7 +4699,7 @@ item(FEAT_TRAINS, Item_GE_P42DC_Liv0, 6750) {
 }
 
 //Alstom_PL42AC_Liv0
-spriteset(spriteset_Alstom_PL42AC_Liv0_Purchase,   "gfx/Alstom_PL42AC_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Alstom_PL42AC_Liv0_Purchase,   "gfx/Alstom_PL42AC_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Alstom_PL42AC_Liv0,   "gfx/Alstom_PL42AC_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_Alstom_PL42AC_Liv0_r,   "gfx/Alstom_PL42AC_Liv0.png") {template_8_r(7, 39)}
 
@@ -4604,7 +4760,7 @@ item(FEAT_TRAINS, Item_Alstom_PL42AC_Liv0, 6850) {
 }
 
 //EMD_FT_Liv0
-spriteset(spriteset_EMD_FT_Liv0_Purchase,   "gfx/EMD_FT_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FT_Liv0_Purchase,   "gfx/EMD_FT_Liv0.png") {template_purchase_77(7, 21)}
 
 spriteset(spriteset_EMD_FT_Liv0_A,   "gfx/EMD_FT_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_EMD_FT_Liv0_B,   "gfx/EMD_FT_Liv0.png") {template_7(7, 69)}
@@ -4671,7 +4827,7 @@ item(FEAT_TRAINS, Item_EMD_FT_Liv0, 27000) {
 }
 
 //ALCO_FA_Liv0
-spriteset(spriteset_ALCO_FA_Liv0_Purchase,   "gfx/ALCO_FA_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_ALCO_FA_Liv0_Purchase,   "gfx/ALCO_FA_Liv0.png") {template_purchase_77(7, 21)}
 
 spriteset(spriteset_ALCO_FA_Liv0_A,   "gfx/ALCO_FA_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_ALCO_FA_Liv0_B,   "gfx/ALCO_FA_Liv0.png") {template_7(7, 69)}
@@ -4738,7 +4894,7 @@ item(FEAT_TRAINS, Item_ALCO_FA_Liv0, 27200) {
 }
 
 //EMD_F3_Liv0
-spriteset(spriteset_EMD_F3_Liv0_Purchase,   "gfx/EMD_F3_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F3_Liv0_Purchase,   "gfx/EMD_F3_Liv0.png") {template_purchase_77(7, 21)}
 
 spriteset(spriteset_EMD_F3_Liv0_A,   "gfx/EMD_F3_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_EMD_F3_Liv0_B,   "gfx/EMD_F3_Liv0.png") {template_7(7, 69)}
@@ -4805,7 +4961,7 @@ item(FEAT_TRAINS, Item_EMD_F3_Liv0, 27100) {
 }
 
 //EMD_F7_Liv0
-spriteset(spriteset_EMD_F7_Liv0_Purchase,   "gfx/EMD_F7_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F7_Liv0_Purchase,   "gfx/EMD_F7_Liv0.png") {template_purchase_77(7, 21)}
 
 spriteset(spriteset_EMD_F7_Liv0_A,   "gfx/EMD_F7_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_EMD_F7_Liv0_B,   "gfx/EMD_F7_Liv0.png") {template_7(7, 69)}
@@ -4872,7 +5028,7 @@ item(FEAT_TRAINS, Item_EMD_F7_Liv0, 27300) {
 }
 
 //EMD_F9_Liv0
-spriteset(spriteset_EMD_F9_Liv0_Purchase,   "gfx/EMD_F9_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F9_Liv0_Purchase,   "gfx/EMD_F9_Liv0.png") {template_purchase_77(7, 21)}
 
 spriteset(spriteset_EMD_F9_Liv0_A,   "gfx/EMD_F9_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_EMD_F9_Liv0_B,   "gfx/EMD_F9_Liv0.png") {template_7(7, 69)}
@@ -4943,7 +5099,7 @@ spriteset(spriteset_NYC_P1AMotor_PantoUp_r,   "gfx/NYC_P1AMotor_PantoUp.png") {t
 spriteset(spriteset_NYC_P1AMotor_PantoDown,   "gfx/NYC_P1AMotor_PantoDown.png") {template_8(7, 39)}
 
 //NYC_P1AMotor_Liv0
-spriteset(spriteset_NYC_P1AMotor_Liv0_Purchase,   "gfx/NYC_P1AMotor_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_NYC_P1AMotor_Liv0_Purchase,   "gfx/NYC_P1AMotor_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_NYC_P1AMotor_Liv0,   "gfx/NYC_P1AMotor_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_NYC_P1AMotor_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5024,7 +5180,7 @@ spriteset(spriteset_PRR_R1_PantoUp_r,   "gfx/PRR_R1_PantoUp.png") {template_8(7,
 spriteset(spriteset_PRR_R1_PantoDown,   "gfx/PRR_R1_PantoDown.png") {template_8(7, 39)}
 
 //PRR_R1_Liv0
-spriteset(spriteset_PRR_R1_Liv0_Purchase,   "gfx/PRR_R1_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_R1_Liv0_Purchase,   "gfx/PRR_R1_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_R1_Liv0,   "gfx/PRR_R1_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_R1_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5105,7 +5261,7 @@ spriteset(spriteset_PRR_GG1_PantoUp_r,   "gfx/PRR_GG1_PantoUp.png") {template_8(
 spriteset(spriteset_PRR_GG1_PantoDown,   "gfx/PRR_GG1_PantoDown.png") {template_8(7, 39)}
 
 //PRR_GG1_Liv0
-spriteset(spriteset_PRR_GG1_Liv0_Purchase,   "gfx/PRR_GG1_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_GG1_Liv0_Purchase,   "gfx/PRR_GG1_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_GG1_Liv0,   "gfx/PRR_GG1_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_GG1_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5186,7 +5342,7 @@ spriteset(spriteset_GE_EP4_PantoUp_r,   "gfx/GE_EP4_PantoUp.png") {template_8(7,
 spriteset(spriteset_GE_EP4_PantoDown,   "gfx/GE_EP4_PantoDown.png") {template_8(7, 39)}
 
 //GE_EP4_Liv0
-spriteset(spriteset_GE_EP4_Liv0_Purchase,   "gfx/GE_EP4_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_EP4_Liv0_Purchase,   "gfx/GE_EP4_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GE_EP4_Liv0,   "gfx/GE_EP4_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_EP4_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5263,7 +5419,7 @@ item(FEAT_TRAINS, Item_GE_EP4_Liv0, 29200) {
 }
 
 //GE_EP4_Liv35
-spriteset(spriteset_GE_EP4_Liv35_Purchase,   "gfx/GE_EP4_Liv35.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_EP4_Liv35_Purchase,   "gfx/GE_EP4_Liv35.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GE_EP4_Liv35,   "gfx/GE_EP4_Liv35.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_EP4_Liv35_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5344,7 +5500,7 @@ spriteset(spriteset_GE_EP5_PantoUp_r,   "gfx/GE_EP5_PantoUp.png") {template_8(7,
 spriteset(spriteset_GE_EP5_PantoDown,   "gfx/GE_EP5_PantoDown.png") {template_8(7, 39)}
 
 //GE_EP5_Liv0
-spriteset(spriteset_GE_EP5_Liv0_Purchase,   "gfx/GE_EP5_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_EP5_Liv0_Purchase,   "gfx/GE_EP5_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GE_EP5_Liv0,   "gfx/GE_EP5_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_EP5_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5425,7 +5581,7 @@ spriteset(spriteset_GE_E60CH_PantoUp_r,   "gfx/GE_E60CH_PantoUp.png") {template_
 spriteset(spriteset_GE_E60CH_PantoDown,   "gfx/GE_E60CH_PantoDown.png") {template_8(7, 39)}
 
 //GE_E60CH_Liv0
-spriteset(spriteset_GE_E60CH_Liv0_Purchase,   "gfx/GE_E60CH_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_E60CH_Liv0_Purchase,   "gfx/GE_E60CH_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GE_E60CH_Liv0,   "gfx/GE_E60CH_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_E60CH_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5506,7 +5662,7 @@ spriteset(spriteset_EMD_AEM7_PantoUp_r,   "gfx/EMD_AEM7_PantoUp.png") {template_
 spriteset(spriteset_EMD_AEM7_PantoDown,   "gfx/EMD_AEM7_PantoDown.png") {template_7(7, 39)}
 
 //EMD_AEM7_Liv0
-spriteset(spriteset_EMD_AEM7_Liv0_Purchase,   "gfx/EMD_AEM7_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_AEM7_Liv0_Purchase,   "gfx/EMD_AEM7_Liv0.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_AEM7_Liv0,   "gfx/EMD_AEM7_Liv0.png") {template_7(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5587,7 +5743,7 @@ spriteset(spriteset_GE_AGE8_PantoUp_r,   "gfx/GE_AGE8_PantoUp.png") {template_8(
 spriteset(spriteset_GE_AGE8_PantoDown,   "gfx/GE_AGE8_PantoDown.png") {template_8(7, 39)}
 
 //GE_AGE8_Liv0
-spriteset(spriteset_GE_AGE8_Liv0_Purchase,   "gfx/GE_AGE8_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_AGE8_Liv0_Purchase,   "gfx/GE_AGE8_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GE_AGE8_Liv0,   "gfx/GE_AGE8_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_AGE8_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -5671,7 +5827,7 @@ spriteset(spriteset_EMD_GF6CH_PantoDown,   "gfx/EMD_GF6CH_PantoDown.png") {templ
 spriteset(spriteset_EMD_GF6CH_PantoDown_r,   "gfx/EMD_GF6CH_PantoDown.png") {template_8_r(7, 39)}
 
 //EMD_GF6CH_Liv0
-spriteset(spriteset_EMD_GF6CH_Liv0_Purchase,   "gfx/EMD_GF6CH_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv0_Purchase,   "gfx/EMD_GF6CH_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv0,   "gfx/EMD_GF6CH_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv0_r,   "gfx/EMD_GF6CH_Liv0.png") {template_8_r(7, 39)}
 
@@ -5794,7 +5950,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv0, 29700) {
 }
 
 //EMD_GF6CH_Liv6
-spriteset(spriteset_EMD_GF6CH_Liv6_Purchase,   "gfx/EMD_GF6CH_Liv6.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv6_Purchase,   "gfx/EMD_GF6CH_Liv6.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv6,   "gfx/EMD_GF6CH_Liv6.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv6_r,   "gfx/EMD_GF6CH_Liv6.png") {template_8_r(7, 39)}
 
@@ -5917,7 +6073,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv6, 29706) {
 }
 
 //EMD_GF6CH_Liv7
-spriteset(spriteset_EMD_GF6CH_Liv7_Purchase,   "gfx/EMD_GF6CH_Liv7.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv7_Purchase,   "gfx/EMD_GF6CH_Liv7.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv7,   "gfx/EMD_GF6CH_Liv7.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv7_r,   "gfx/EMD_GF6CH_Liv7.png") {template_8_r(7, 39)}
 
@@ -6040,7 +6196,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv7, 29707) {
 }
 
 //EMD_GF6CH_Liv8
-spriteset(spriteset_EMD_GF6CH_Liv8_Purchase,   "gfx/EMD_GF6CH_Liv8.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv8_Purchase,   "gfx/EMD_GF6CH_Liv8.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv8,   "gfx/EMD_GF6CH_Liv8.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv8_r,   "gfx/EMD_GF6CH_Liv8.png") {template_8_r(7, 39)}
 
@@ -6163,7 +6319,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv8, 29708) {
 }
 
 //EMD_GF6CH_Liv9
-spriteset(spriteset_EMD_GF6CH_Liv9_Purchase,   "gfx/EMD_GF6CH_Liv9.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv9_Purchase,   "gfx/EMD_GF6CH_Liv9.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv9,   "gfx/EMD_GF6CH_Liv9.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv9_r,   "gfx/EMD_GF6CH_Liv9.png") {template_8_r(7, 39)}
 
@@ -6286,7 +6442,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv9, 29709) {
 }
 
 //EMD_GF6CH_Liv10
-spriteset(spriteset_EMD_GF6CH_Liv10_Purchase,   "gfx/EMD_GF6CH_Liv10.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv10_Purchase,   "gfx/EMD_GF6CH_Liv10.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv10,   "gfx/EMD_GF6CH_Liv10.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv10_r,   "gfx/EMD_GF6CH_Liv10.png") {template_8_r(7, 39)}
 
@@ -6409,7 +6565,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv10, 29710) {
 }
 
 //EMD_GF6CH_Liv11
-spriteset(spriteset_EMD_GF6CH_Liv11_Purchase,   "gfx/EMD_GF6CH_Liv11.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv11_Purchase,   "gfx/EMD_GF6CH_Liv11.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv11,   "gfx/EMD_GF6CH_Liv11.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv11_r,   "gfx/EMD_GF6CH_Liv11.png") {template_8_r(7, 39)}
 
@@ -6532,7 +6688,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv11, 29711) {
 }
 
 //EMD_GF6CH_Liv12
-spriteset(spriteset_EMD_GF6CH_Liv12_Purchase,   "gfx/EMD_GF6CH_Liv12.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv12_Purchase,   "gfx/EMD_GF6CH_Liv12.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv12,   "gfx/EMD_GF6CH_Liv12.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv12_r,   "gfx/EMD_GF6CH_Liv12.png") {template_8_r(7, 39)}
 
@@ -6655,7 +6811,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv12, 29712) {
 }
 
 //EMD_GF6CH_Liv13
-spriteset(spriteset_EMD_GF6CH_Liv13_Purchase,   "gfx/EMD_GF6CH_Liv13.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv13_Purchase,   "gfx/EMD_GF6CH_Liv13.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv13,   "gfx/EMD_GF6CH_Liv13.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv13_r,   "gfx/EMD_GF6CH_Liv13.png") {template_8_r(7, 39)}
 
@@ -6778,7 +6934,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv13, 29713) {
 }
 
 //EMD_GF6CH_Liv14
-spriteset(spriteset_EMD_GF6CH_Liv14_Purchase,   "gfx/EMD_GF6CH_Liv14.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv14_Purchase,   "gfx/EMD_GF6CH_Liv14.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv14,   "gfx/EMD_GF6CH_Liv14.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv14_r,   "gfx/EMD_GF6CH_Liv14.png") {template_8_r(7, 39)}
 
@@ -6901,7 +7057,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv14, 29714) {
 }
 
 //EMD_GF6CH_Liv15
-spriteset(spriteset_EMD_GF6CH_Liv15_Purchase,   "gfx/EMD_GF6CH_Liv15.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv15_Purchase,   "gfx/EMD_GF6CH_Liv15.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv15,   "gfx/EMD_GF6CH_Liv15.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv15_r,   "gfx/EMD_GF6CH_Liv15.png") {template_8_r(7, 39)}
 
@@ -7024,7 +7180,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv15, 29715) {
 }
 
 //EMD_GF6CH_Liv16
-spriteset(spriteset_EMD_GF6CH_Liv16_Purchase,   "gfx/EMD_GF6CH_Liv16.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv16_Purchase,   "gfx/EMD_GF6CH_Liv16.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv16,   "gfx/EMD_GF6CH_Liv16.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv16_r,   "gfx/EMD_GF6CH_Liv16.png") {template_8_r(7, 39)}
 
@@ -7147,7 +7303,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv16, 29716) {
 }
 
 //EMD_GF6CH_Liv17
-spriteset(spriteset_EMD_GF6CH_Liv17_Purchase,   "gfx/EMD_GF6CH_Liv17.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv17_Purchase,   "gfx/EMD_GF6CH_Liv17.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv17,   "gfx/EMD_GF6CH_Liv17.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv17_r,   "gfx/EMD_GF6CH_Liv17.png") {template_8_r(7, 39)}
 
@@ -7270,7 +7426,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv17, 29717) {
 }
 
 //EMD_GF6CH_Liv18
-spriteset(spriteset_EMD_GF6CH_Liv18_Purchase,   "gfx/EMD_GF6CH_Liv18.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv18_Purchase,   "gfx/EMD_GF6CH_Liv18.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv18,   "gfx/EMD_GF6CH_Liv18.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv18_r,   "gfx/EMD_GF6CH_Liv18.png") {template_8_r(7, 39)}
 
@@ -7393,7 +7549,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv18, 29718) {
 }
 
 //EMD_GF6CH_Liv19
-spriteset(spriteset_EMD_GF6CH_Liv19_Purchase,   "gfx/EMD_GF6CH_Liv19.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv19_Purchase,   "gfx/EMD_GF6CH_Liv19.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv19,   "gfx/EMD_GF6CH_Liv19.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv19_r,   "gfx/EMD_GF6CH_Liv19.png") {template_8_r(7, 39)}
 
@@ -7516,7 +7672,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv19, 29719) {
 }
 
 //EMD_GF6CH_Liv26
-spriteset(spriteset_EMD_GF6CH_Liv26_Purchase,   "gfx/EMD_GF6CH_Liv26.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv26_Purchase,   "gfx/EMD_GF6CH_Liv26.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv26,   "gfx/EMD_GF6CH_Liv26.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv26_r,   "gfx/EMD_GF6CH_Liv26.png") {template_8_r(7, 39)}
 
@@ -7639,7 +7795,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv26, 29726) {
 }
 
 //EMD_GF6CH_Liv27
-spriteset(spriteset_EMD_GF6CH_Liv27_Purchase,   "gfx/EMD_GF6CH_Liv27.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv27_Purchase,   "gfx/EMD_GF6CH_Liv27.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv27,   "gfx/EMD_GF6CH_Liv27.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv27_r,   "gfx/EMD_GF6CH_Liv27.png") {template_8_r(7, 39)}
 
@@ -7762,7 +7918,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv27, 29727) {
 }
 
 //EMD_GF6CH_Liv28
-spriteset(spriteset_EMD_GF6CH_Liv28_Purchase,   "gfx/EMD_GF6CH_Liv28.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv28_Purchase,   "gfx/EMD_GF6CH_Liv28.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv28,   "gfx/EMD_GF6CH_Liv28.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv28_r,   "gfx/EMD_GF6CH_Liv28.png") {template_8_r(7, 39)}
 
@@ -7885,7 +8041,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv28, 29728) {
 }
 
 //EMD_GF6CH_Liv35
-spriteset(spriteset_EMD_GF6CH_Liv35_Purchase,   "gfx/EMD_GF6CH_Liv35.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv35_Purchase,   "gfx/EMD_GF6CH_Liv35.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv35,   "gfx/EMD_GF6CH_Liv35.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv35_r,   "gfx/EMD_GF6CH_Liv35.png") {template_8_r(7, 39)}
 
@@ -8008,7 +8164,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv35, 29735) {
 }
 
 //EMD_GF6CH_Liv37
-spriteset(spriteset_EMD_GF6CH_Liv37_Purchase,   "gfx/EMD_GF6CH_Liv37.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv37_Purchase,   "gfx/EMD_GF6CH_Liv37.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv37,   "gfx/EMD_GF6CH_Liv37.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv37_r,   "gfx/EMD_GF6CH_Liv37.png") {template_8_r(7, 39)}
 
@@ -8131,7 +8287,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv37, 29737) {
 }
 
 //EMD_GF6CH_Liv39
-spriteset(spriteset_EMD_GF6CH_Liv39_Purchase,   "gfx/EMD_GF6CH_Liv39.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv39_Purchase,   "gfx/EMD_GF6CH_Liv39.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv39,   "gfx/EMD_GF6CH_Liv39.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv39_r,   "gfx/EMD_GF6CH_Liv39.png") {template_8_r(7, 39)}
 
@@ -8254,7 +8410,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv39, 29739) {
 }
 
 //EMD_GF6CH_Liv40
-spriteset(spriteset_EMD_GF6CH_Liv40_Purchase,   "gfx/EMD_GF6CH_Liv40.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv40_Purchase,   "gfx/EMD_GF6CH_Liv40.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv40,   "gfx/EMD_GF6CH_Liv40.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv40_r,   "gfx/EMD_GF6CH_Liv40.png") {template_8_r(7, 39)}
 
@@ -8377,7 +8533,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv40, 29740) {
 }
 
 //EMD_GF6CH_Liv41
-spriteset(spriteset_EMD_GF6CH_Liv41_Purchase,   "gfx/EMD_GF6CH_Liv41.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv41_Purchase,   "gfx/EMD_GF6CH_Liv41.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv41,   "gfx/EMD_GF6CH_Liv41.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv41_r,   "gfx/EMD_GF6CH_Liv41.png") {template_8_r(7, 39)}
 
@@ -8500,7 +8656,7 @@ item(FEAT_TRAINS, Item_EMD_GF6CH_Liv41, 29741) {
 }
 
 //EMD_GF6CH_Liv46
-spriteset(spriteset_EMD_GF6CH_Liv46_Purchase,   "gfx/EMD_GF6CH_Liv46.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_GF6CH_Liv46_Purchase,   "gfx/EMD_GF6CH_Liv46.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_EMD_GF6CH_Liv46,   "gfx/EMD_GF6CH_Liv46.png") {template_8(7, 39)}
 spriteset(spriteset_EMD_GF6CH_Liv46_r,   "gfx/EMD_GF6CH_Liv46.png") {template_8_r(7, 39)}
 
@@ -8627,7 +8783,7 @@ spriteset(spriteset_ABB_ALP44_PantoUp_r,   "gfx/ABB_ALP44_PantoUp.png") {templat
 spriteset(spriteset_ABB_ALP44_PantoDown,   "gfx/ABB_ALP44_PantoDown.png") {template_7(7, 39)}
 
 //ABB_ALP44_Liv0
-spriteset(spriteset_ABB_ALP44_Liv0_Purchase,   "gfx/ABB_ALP44_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_ABB_ALP44_Liv0_Purchase,   "gfx/ABB_ALP44_Liv0.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_ABB_ALP44_Liv0,   "gfx/ABB_ALP44_Liv0.png") {template_7(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_ABB_ALP44_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -8708,7 +8864,7 @@ spriteset(spriteset_Bombardier_HHP8_PantoUp_r,   "gfx/Bombardier_HHP8_PantoUp.pn
 spriteset(spriteset_Bombardier_HHP8_PantoDown,   "gfx/Bombardier_HHP8_PantoDown.png") {template_8(7, 39)}
 
 //Bombardier_HHP8_Liv0
-spriteset(spriteset_Bombardier_HHP8_Liv0_Purchase,   "gfx/Bombardier_HHP8_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_HHP8_Liv0_Purchase,   "gfx/Bombardier_HHP8_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Bombardier_HHP8_Liv0,   "gfx/Bombardier_HHP8_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_Bombardier_HHP8_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -8789,7 +8945,7 @@ spriteset(spriteset_Bombardier_ALP46_PantoUp_r,   "gfx/Bombardier_ALP46_PantoUp.
 spriteset(spriteset_Bombardier_ALP46_PantoDown,   "gfx/Bombardier_ALP46_PantoDown.png") {template_8(7, 39)}
 
 //Bombardier_ALP46_Liv0
-spriteset(spriteset_Bombardier_ALP46_Liv0_Purchase,   "gfx/Bombardier_ALP46_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Bombardier_ALP46_Liv0_Purchase,   "gfx/Bombardier_ALP46_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_Bombardier_ALP46_Liv0,   "gfx/Bombardier_ALP46_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_Bombardier_ALP46_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -8870,7 +9026,7 @@ spriteset(spriteset_PRR_L6_PantoUp_r,   "gfx/PRR_L6_PantoUp.png") {template_7(7,
 spriteset(spriteset_PRR_L6_PantoDown,   "gfx/PRR_L6_PantoDown.png") {template_7(7, 39)}
 
 //PRR_L6_Liv0
-spriteset(spriteset_PRR_L6_Liv0_Purchase,   "gfx/PRR_L6_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_L6_Liv0_Purchase,   "gfx/PRR_L6_Liv0.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_PRR_L6_Liv0,   "gfx/PRR_L6_Liv0.png") {template_7(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_L6_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -8954,7 +9110,7 @@ spriteset(spriteset_GMD_GF6C_PantoDown,   "gfx/GMD_GF6C_PantoDown.png") {templat
 spriteset(spriteset_GMD_GF6C_PantoDown_r,   "gfx/GMD_GF6C_PantoDown.png") {template_8_r(7, 39)}
 
 //GMD_GF6C_Liv0
-spriteset(spriteset_GMD_GF6C_Liv0_Purchase,   "gfx/GMD_GF6C_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv0_Purchase,   "gfx/GMD_GF6C_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv0,   "gfx/GMD_GF6C_Liv0.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv0_r,   "gfx/GMD_GF6C_Liv0.png") {template_8_r(7, 39)}
 
@@ -9077,7 +9233,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv0, 32850) {
 }
 
 //GMD_GF6C_Liv6
-spriteset(spriteset_GMD_GF6C_Liv6_Purchase,   "gfx/GMD_GF6C_Liv6.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv6_Purchase,   "gfx/GMD_GF6C_Liv6.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv6,   "gfx/GMD_GF6C_Liv6.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv6_r,   "gfx/GMD_GF6C_Liv6.png") {template_8_r(7, 39)}
 
@@ -9200,7 +9356,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv6, 32856) {
 }
 
 //GMD_GF6C_Liv7
-spriteset(spriteset_GMD_GF6C_Liv7_Purchase,   "gfx/GMD_GF6C_Liv7.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv7_Purchase,   "gfx/GMD_GF6C_Liv7.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv7,   "gfx/GMD_GF6C_Liv7.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv7_r,   "gfx/GMD_GF6C_Liv7.png") {template_8_r(7, 39)}
 
@@ -9323,7 +9479,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv7, 32857) {
 }
 
 //GMD_GF6C_Liv8
-spriteset(spriteset_GMD_GF6C_Liv8_Purchase,   "gfx/GMD_GF6C_Liv8.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv8_Purchase,   "gfx/GMD_GF6C_Liv8.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv8,   "gfx/GMD_GF6C_Liv8.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv8_r,   "gfx/GMD_GF6C_Liv8.png") {template_8_r(7, 39)}
 
@@ -9446,7 +9602,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv8, 32858) {
 }
 
 //GMD_GF6C_Liv9
-spriteset(spriteset_GMD_GF6C_Liv9_Purchase,   "gfx/GMD_GF6C_Liv9.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv9_Purchase,   "gfx/GMD_GF6C_Liv9.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv9,   "gfx/GMD_GF6C_Liv9.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv9_r,   "gfx/GMD_GF6C_Liv9.png") {template_8_r(7, 39)}
 
@@ -9569,7 +9725,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv9, 32859) {
 }
 
 //GMD_GF6C_Liv10
-spriteset(spriteset_GMD_GF6C_Liv10_Purchase,   "gfx/GMD_GF6C_Liv10.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv10_Purchase,   "gfx/GMD_GF6C_Liv10.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv10,   "gfx/GMD_GF6C_Liv10.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv10_r,   "gfx/GMD_GF6C_Liv10.png") {template_8_r(7, 39)}
 
@@ -9692,7 +9848,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv10, 32860) {
 }
 
 //GMD_GF6C_Liv11
-spriteset(spriteset_GMD_GF6C_Liv11_Purchase,   "gfx/GMD_GF6C_Liv11.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv11_Purchase,   "gfx/GMD_GF6C_Liv11.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv11,   "gfx/GMD_GF6C_Liv11.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv11_r,   "gfx/GMD_GF6C_Liv11.png") {template_8_r(7, 39)}
 
@@ -9815,7 +9971,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv11, 32861) {
 }
 
 //GMD_GF6C_Liv12
-spriteset(spriteset_GMD_GF6C_Liv12_Purchase,   "gfx/GMD_GF6C_Liv12.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv12_Purchase,   "gfx/GMD_GF6C_Liv12.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv12,   "gfx/GMD_GF6C_Liv12.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv12_r,   "gfx/GMD_GF6C_Liv12.png") {template_8_r(7, 39)}
 
@@ -9938,7 +10094,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv12, 32862) {
 }
 
 //GMD_GF6C_Liv13
-spriteset(spriteset_GMD_GF6C_Liv13_Purchase,   "gfx/GMD_GF6C_Liv13.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv13_Purchase,   "gfx/GMD_GF6C_Liv13.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv13,   "gfx/GMD_GF6C_Liv13.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv13_r,   "gfx/GMD_GF6C_Liv13.png") {template_8_r(7, 39)}
 
@@ -10061,7 +10217,7 @@ item(FEAT_TRAINS, Item_GMD_GF6C_Liv13, 32863) {
 }
 
 //GMD_GF6C_Liv14
-spriteset(spriteset_GMD_GF6C_Liv14_Purchase,   "gfx/GMD_GF6C_Liv14.png") {template_purchase(7, 21)}
+spriteset(spriteset_GMD_GF6C_Liv14_Purchase,   "gfx/GMD_GF6C_Liv14.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GMD_GF6C_Liv14,   "gfx/GMD_GF6C_Liv14.png") {template_8(7, 39)}
 spriteset(spriteset_GMD_GF6C_Liv14_r,   "gfx/GMD_GF6C_Liv14.png") {template_8_r(7, 39)}
 
@@ -10188,7 +10344,7 @@ spriteset(spriteset_GE_CascadeBoxcab_PantoUp_r,   "gfx/GE_CascadeBoxcab_PantoUp.
 spriteset(spriteset_GE_CascadeBoxcab_PantoDown,   "gfx/GE_CascadeBoxcab_PantoDown.png") {template_7(7, 39)}
 
 //GE_CascadeBoxcab_Liv0
-spriteset(spriteset_GE_CascadeBoxcab_Liv0_Purchase,   "gfx/GE_CascadeBoxcab_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_CascadeBoxcab_Liv0_Purchase,   "gfx/GE_CascadeBoxcab_Liv0.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_GE_CascadeBoxcab_Liv0,   "gfx/GE_CascadeBoxcab_Liv0.png") {template_7(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_CascadeBoxcab_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -10271,7 +10427,7 @@ spriteset(spriteset_GE_Twincab_PantoDown,   "gfx/GE_Boxcab_PantoDown.png") {temp
 spriteset(spriteset_GE_Twincab_PantoDown_r,   "gfx/GE_Boxcab_PantoDown.png") {template_7_r(7, 39)}
 
 //GE_Twincab_Liv0
-spriteset(spriteset_GE_Twincab_Liv0_Purchase,   "gfx/GE_Boxcab_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_Twincab_Liv0_Purchase,   "gfx/GE_Boxcab_Liv0.png") {template_purchase_77(7, 21)}
 
 spriteset(spriteset_GE_Twincab_Liv0_A,   "gfx/GE_Boxcab_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_GE_Twincab_Liv0_C,   "gfx/GE_Boxcab_Liv0.png") {template_7_r(7, 39)}
@@ -10356,7 +10512,7 @@ spriteset(spriteset_GE_Z1A_PantoUp_r,   "gfx/GE_Z1A_PantoUp.png") {template_6(7,
 spriteset(spriteset_GE_Z1A_PantoDown,   "gfx/GE_Z1A_PantoDown.png") {template_6(7, 39)}
 
 //GE_Z1A_Liv0
-spriteset(spriteset_GE_Z1A_Liv0_Purchase,   "gfx/GE_Z1A_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_Z1A_Liv0_Purchase,   "gfx/GE_Z1A_Liv0.png") {template_purchase_6(7, 21)}
 spriteset(spriteset_GE_Z1A_Liv0,   "gfx/GE_Z1A_Liv0.png") {template_6(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_Z1A_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -10446,7 +10602,7 @@ spriteset(spriteset_PRR_L5_Highnose_PantoUp_r,   "gfx/PRR_L5_PantoUp.png") {temp
 spriteset(spriteset_PRR_L5_Highnose_PantoDown,   "gfx/PRR_L5_PantoDown.png") {template_8(187, 39)}
 
 //PRR_L5_Liv0_Lownose
-spriteset(spriteset_PRR_L5_Liv0_Lownose_Purchase,   "gfx/PRR_L5_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_L5_Liv0_Lownose_Purchase,   "gfx/PRR_L5_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_L5_Liv0_Lownose,   "gfx/PRR_L5_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_L5_Liv0_Lownose_FWanimation, motion_counter % 4){
@@ -10541,7 +10697,7 @@ item(FEAT_TRAINS, Item_PRR_L5_Liv0_Lownose, 35050) {
 }
 
 //PRR_L5_Liv0_Highnose
-spriteset(spriteset_PRR_L5_Liv0_Highnose_Purchase,   "gfx/PRR_L5_Liv0.png") {template_purchase(187, 21)}
+spriteset(spriteset_PRR_L5_Liv0_Highnose_Purchase,   "gfx/PRR_L5_Liv0.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_PRR_L5_Liv0_Highnose,   "gfx/PRR_L5_Liv0.png") {template_8(187, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_L5_Liv0_Highnose_FWanimation, motion_counter % 4){
@@ -10640,7 +10796,7 @@ spriteset(spriteset_Baldwin_Z1_PantoUp_r,   "gfx/Baldwin_Z1_PantoUp.png") {templ
 spriteset(spriteset_Baldwin_Z1_PantoDown,   "gfx/Baldwin_Z1_PantoDown.png") {template_7(7, 39)}
 
 //Baldwin_Z1_Liv0
-spriteset(spriteset_Baldwin_Z1_Liv0_Purchase,   "gfx/Baldwin_Z1_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Baldwin_Z1_Liv0_Purchase,   "gfx/Baldwin_Z1_Liv0.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_Baldwin_Z1_Liv0,   "gfx/Baldwin_Z1_Liv0.png") {template_7(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_Baldwin_Z1_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -10721,7 +10877,7 @@ spriteset(spriteset_GE_Y1_PantoUp_r,   "gfx/GE_Y1_PantoUp.png") {template_8(7, 6
 spriteset(spriteset_GE_Y1_PantoDown,   "gfx/GE_Y1_PantoDown.png") {template_8(7, 39)}
 
 //GE_Y1_Liv0
-spriteset(spriteset_GE_Y1_Liv0_Purchase,   "gfx/GE_Y1_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_Y1_Liv0_Purchase,   "gfx/GE_Y1_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_GE_Y1_Liv0,   "gfx/GE_Y1_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_GE_Y1_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -10802,7 +10958,7 @@ spriteset(spriteset_PRR_O1_PantoUp_r,   "gfx/PRR_O1_PantoUp.png") {template_7(7,
 spriteset(spriteset_PRR_O1_PantoDown,   "gfx/PRR_O1_PantoDown.png") {template_7(7, 39)}
 
 //PRR_O1_Liv0
-spriteset(spriteset_PRR_O1_Liv0_Purchase,   "gfx/PRR_O1_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_O1_Liv0_Purchase,   "gfx/PRR_O1_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_O1_Liv0,   "gfx/PRR_O1_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_O1_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -10885,7 +11041,7 @@ spriteset(spriteset_GE_Tricab_PantoDown,   "gfx/GE_Boxcab_PantoDown.png") {templ
 spriteset(spriteset_GE_Tricab_PantoDown_r,   "gfx/GE_Boxcab_PantoDown.png") {template_7_r(7, 39)}
 
 //GE_Tricab_Liv0
-spriteset(spriteset_GE_Tricab_Liv0_Purchase,   "gfx/GE_Boxcab_Liv0.png") {template_purchase(187, 21)}
+spriteset(spriteset_GE_Tricab_Liv0_Purchase,   "gfx/GE_Boxcab_Liv0.png") {template_purchase_88xl(187, 21)}
 
 spriteset(spriteset_GE_Tricab_Liv0_A,   "gfx/GE_Boxcab_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_GE_Tricab_Liv0_B,   "gfx/GE_Boxcab_Liv0.png") {template_6(7, 69)}
@@ -10985,7 +11141,7 @@ spriteset(spriteset_GE_Quadcab_PantoDown,   "gfx/GE_Boxcab_PantoDown.png") {temp
 spriteset(spriteset_GE_Quadcab_PantoDown_r,   "gfx/GE_Boxcab_PantoDown.png") {template_7_r(7, 39)}
 
 //GE_Quadcab_Liv0
-spriteset(spriteset_GE_Quadcab_Liv0_Purchase,   "gfx/GE_Boxcab_Liv0.png") {template_purchase(367, 21)}
+spriteset(spriteset_GE_Quadcab_Liv0_Purchase,   "gfx/GE_Boxcab_Liv0.png") {template_purchase_88xl(367, 21)}
 
 spriteset(spriteset_GE_Quadcab_Liv0_A,   "gfx/GE_Boxcab_Liv0.png") {template_7(7, 39)}
 spriteset(spriteset_GE_Quadcab_Liv0_B,   "gfx/GE_Boxcab_Liv0.png") {template_6(7, 69)}
@@ -11082,7 +11238,7 @@ spriteset(spriteset_PRR_P5A_PantoUp_r,   "gfx/PRR_P5A_PantoUp.png") {template_8(
 spriteset(spriteset_PRR_P5A_PantoDown,   "gfx/PRR_P5A_PantoDown.png") {template_8(7, 39)}
 
 //PRR_P5A_Liv0
-spriteset(spriteset_PRR_P5A_Liv0_Purchase,   "gfx/PRR_P5A_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_P5A_Liv0_Purchase,   "gfx/PRR_P5A_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_P5A_Liv0,   "gfx/PRR_P5A_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_P5A_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -11163,7 +11319,7 @@ spriteset(spriteset_PRR_DD2_PantoUp_r,   "gfx/PRR_DD2_PantoUp.png") {template_8(
 spriteset(spriteset_PRR_DD2_PantoDown,   "gfx/PRR_DD2_PantoDown.png") {template_8(7, 39)}
 
 //PRR_DD2_Liv0
-spriteset(spriteset_PRR_DD2_Liv0_Purchase,   "gfx/PRR_DD2_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_DD2_Liv0_Purchase,   "gfx/PRR_DD2_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_DD2_Liv0,   "gfx/PRR_DD2_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_DD2_Liv0_Fw_railtype, tile_powers_railtype("ELRL")) {
@@ -11240,7 +11396,7 @@ item(FEAT_TRAINS, Item_PRR_DD2_Liv0, 35500) {
 }
 
 //NYC_SMotor_Liv0
-spriteset(spriteset_NYC_SMotor_Liv0_Purchase,   "gfx/NYC_SMotor_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_NYC_SMotor_Liv0_Purchase,   "gfx/NYC_SMotor_Liv0.png") {template_purchase_6(7, 21)}
 spriteset(spriteset_NYC_SMotor_Liv0,   "gfx/NYC_SMotor_Liv0.png") {template_6(7, 39)}
 
 item(FEAT_TRAINS, Item_NYC_SMotor_Liv0, 40000) {
@@ -11286,7 +11442,7 @@ item(FEAT_TRAINS, Item_NYC_SMotor_Liv0, 40000) {
 }
 
 //NYC_TMotor_Liv0
-spriteset(spriteset_NYC_TMotor_Liv0_Purchase,   "gfx/NYC_TMotor_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_NYC_TMotor_Liv0_Purchase,   "gfx/NYC_TMotor_Liv0.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_NYC_TMotor_Liv0,   "gfx/NYC_TMotor_Liv0.png") {template_7(7, 39)}
 
 item(FEAT_TRAINS, Item_NYC_TMotor_Liv0, 40100) {
@@ -11344,7 +11500,7 @@ spriteset(spriteset_PRR_DD1_Jackshaft3_r,   "gfx/PRR_DD1_Jackshaft3.png") {templ
 spriteset(spriteset_PRR_DD1_Jackshaft4_r,   "gfx/PRR_DD1_Jackshaft4.png") {template_5_r(7, 39)}
 
 //PRR_DD1_Liv0
-spriteset(spriteset_PRR_DD1_Liv0_Purchase,   "gfx/PRR_DD1_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_DD1_Liv0_Purchase,   "gfx/PRR_DD1_Liv0.png") {template_purchase_55(7, 21)}
 spriteset(spriteset_PRR_DD1_Liv0,   "gfx/PRR_DD1_Liv0.png") {template_5(7, 39)}
 spriteset(spriteset_PRR_DD1_Liv0_r,   "gfx/PRR_DD1_Liv0.png") {template_5_r(7, 39)}
 
@@ -11434,7 +11590,7 @@ item(FEAT_TRAINS, Item_PRR_DD1_Liv0, 2000) {
 }
 
 //PRR_L5A_Liv0_Lownose
-spriteset(spriteset_PRR_L5A_Liv0_Lownose_Purchase,   "gfx/PRR_L5A_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_PRR_L5A_Liv0_Lownose_Purchase,   "gfx/PRR_L5A_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_PRR_L5A_Liv0_Lownose,   "gfx/PRR_L5A_Liv0.png") {template_8(7, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_L5A_Liv0_Lownose_FWanimation, motion_counter % 4){
@@ -11517,7 +11673,7 @@ item(FEAT_TRAINS, Item_PRR_L5A_Liv0_Lownose, 40150) {
 }
 
 //PRR_L5A_Liv0_Highnose
-spriteset(spriteset_PRR_L5A_Liv0_Highnose_Purchase,   "gfx/PRR_L5A_Liv0.png") {template_purchase(187, 21)}
+spriteset(spriteset_PRR_L5A_Liv0_Highnose_Purchase,   "gfx/PRR_L5A_Liv0.png") {template_purchase_8(187, 21)}
 spriteset(spriteset_PRR_L5A_Liv0_Highnose,   "gfx/PRR_L5A_Liv0.png") {template_8(187, 39)}
 
 switch(FEAT_TRAINS, SELF, switch_PRR_L5A_Liv0_Highnose_FWanimation, motion_counter % 4){
@@ -11600,7 +11756,7 @@ item(FEAT_TRAINS, Item_PRR_L5A_Liv0_Highnose, 40200) {
 }
 
 //NYC_P2Motor_Liv0
-spriteset(spriteset_NYC_P2Motor_Liv0_Purchase,   "gfx/NYC_P2Motor_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_NYC_P2Motor_Liv0_Purchase,   "gfx/NYC_P2Motor_Liv0.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_NYC_P2Motor_Liv0,   "gfx/NYC_P2Motor_Liv0.png") {template_8(7, 39)}
 
 item(FEAT_TRAINS, Item_NYC_P2Motor_Liv0, 40450) {
@@ -11648,7 +11804,7 @@ item(FEAT_TRAINS, Item_NYC_P2Motor_Liv0, 40450) {
 
 
 //EMD_FL9_Liv0
-spriteset(spriteset_EMD_FL9_Liv0_Purchase,   "gfx/EMD_FL9_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv0_Purchase,   "gfx/EMD_FL9_Liv0.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv0,   "gfx/EMD_FL9_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv0_r,   "gfx/EMD_FL9_Liv0.png") {template_8_r(7, 39)}
@@ -11743,7 +11899,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv0, 52000) {
 }
 
 //EMD_FL9_Liv1
-spriteset(spriteset_EMD_FL9_Liv1_Purchase,   "gfx/EMD_FL9_Liv1.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv1_Purchase,   "gfx/EMD_FL9_Liv1.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv1,   "gfx/EMD_FL9_Liv1.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv1_r,   "gfx/EMD_FL9_Liv1.png") {template_8_r(7, 39)}
@@ -11838,7 +11994,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv1, 52001) {
 }
 
 //EMD_FL9_Liv2
-spriteset(spriteset_EMD_FL9_Liv2_Purchase,   "gfx/EMD_FL9_Liv2.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv2_Purchase,   "gfx/EMD_FL9_Liv2.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv2,   "gfx/EMD_FL9_Liv2.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv2_r,   "gfx/EMD_FL9_Liv2.png") {template_8_r(7, 39)}
@@ -11933,7 +12089,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv2, 52002) {
 }
 
 //EMD_FL9_Liv6
-spriteset(spriteset_EMD_FL9_Liv6_Purchase,   "gfx/EMD_FL9_Liv6.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv6_Purchase,   "gfx/EMD_FL9_Liv6.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv6,   "gfx/EMD_FL9_Liv6.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv6_r,   "gfx/EMD_FL9_Liv6.png") {template_8_r(7, 39)}
@@ -12028,7 +12184,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv6, 52006) {
 }
 
 //EMD_FL9_Liv7
-spriteset(spriteset_EMD_FL9_Liv7_Purchase,   "gfx/EMD_FL9_Liv7.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv7_Purchase,   "gfx/EMD_FL9_Liv7.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv7,   "gfx/EMD_FL9_Liv7.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv7_r,   "gfx/EMD_FL9_Liv7.png") {template_8_r(7, 39)}
@@ -12123,7 +12279,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv7, 52007) {
 }
 
 //EMD_FL9_Liv8
-spriteset(spriteset_EMD_FL9_Liv8_Purchase,   "gfx/EMD_FL9_Liv8.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv8_Purchase,   "gfx/EMD_FL9_Liv8.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv8,   "gfx/EMD_FL9_Liv8.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv8_r,   "gfx/EMD_FL9_Liv8.png") {template_8_r(7, 39)}
@@ -12218,7 +12374,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv8, 52008) {
 }
 
 //EMD_FL9_Liv9
-spriteset(spriteset_EMD_FL9_Liv9_Purchase,   "gfx/EMD_FL9_Liv9.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv9_Purchase,   "gfx/EMD_FL9_Liv9.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv9,   "gfx/EMD_FL9_Liv9.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv9_r,   "gfx/EMD_FL9_Liv9.png") {template_8_r(7, 39)}
@@ -12313,7 +12469,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv9, 52009) {
 }
 
 //EMD_FL9_Liv10
-spriteset(spriteset_EMD_FL9_Liv10_Purchase,   "gfx/EMD_FL9_Liv10.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv10_Purchase,   "gfx/EMD_FL9_Liv10.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv10,   "gfx/EMD_FL9_Liv10.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv10_r,   "gfx/EMD_FL9_Liv10.png") {template_8_r(7, 39)}
@@ -12408,7 +12564,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv10, 52010) {
 }
 
 //EMD_FL9_Liv11
-spriteset(spriteset_EMD_FL9_Liv11_Purchase,   "gfx/EMD_FL9_Liv11.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv11_Purchase,   "gfx/EMD_FL9_Liv11.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv11,   "gfx/EMD_FL9_Liv11.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv11_r,   "gfx/EMD_FL9_Liv11.png") {template_8_r(7, 39)}
@@ -12503,7 +12659,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv11, 52011) {
 }
 
 //EMD_FL9_Liv12
-spriteset(spriteset_EMD_FL9_Liv12_Purchase,   "gfx/EMD_FL9_Liv12.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv12_Purchase,   "gfx/EMD_FL9_Liv12.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv12,   "gfx/EMD_FL9_Liv12.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv12_r,   "gfx/EMD_FL9_Liv12.png") {template_8_r(7, 39)}
@@ -12598,7 +12754,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv12, 52012) {
 }
 
 //EMD_FL9_Liv13
-spriteset(spriteset_EMD_FL9_Liv13_Purchase,   "gfx/EMD_FL9_Liv13.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv13_Purchase,   "gfx/EMD_FL9_Liv13.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv13,   "gfx/EMD_FL9_Liv13.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv13_r,   "gfx/EMD_FL9_Liv13.png") {template_8_r(7, 39)}
@@ -12693,7 +12849,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv13, 52013) {
 }
 
 //EMD_FL9_Liv14
-spriteset(spriteset_EMD_FL9_Liv14_Purchase,   "gfx/EMD_FL9_Liv14.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv14_Purchase,   "gfx/EMD_FL9_Liv14.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv14,   "gfx/EMD_FL9_Liv14.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv14_r,   "gfx/EMD_FL9_Liv14.png") {template_8_r(7, 39)}
@@ -12788,7 +12944,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv14, 52014) {
 }
 
 //EMD_FL9_Liv15
-spriteset(spriteset_EMD_FL9_Liv15_Purchase,   "gfx/EMD_FL9_Liv15.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv15_Purchase,   "gfx/EMD_FL9_Liv15.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv15,   "gfx/EMD_FL9_Liv15.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv15_r,   "gfx/EMD_FL9_Liv15.png") {template_8_r(7, 39)}
@@ -12883,7 +13039,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv15, 52015) {
 }
 
 //EMD_FL9_Liv16
-spriteset(spriteset_EMD_FL9_Liv16_Purchase,   "gfx/EMD_FL9_Liv16.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv16_Purchase,   "gfx/EMD_FL9_Liv16.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv16,   "gfx/EMD_FL9_Liv16.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv16_r,   "gfx/EMD_FL9_Liv16.png") {template_8_r(7, 39)}
@@ -12978,7 +13134,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv16, 52016) {
 }
 
 //EMD_FL9_Liv17
-spriteset(spriteset_EMD_FL9_Liv17_Purchase,   "gfx/EMD_FL9_Liv17.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv17_Purchase,   "gfx/EMD_FL9_Liv17.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv17,   "gfx/EMD_FL9_Liv17.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv17_r,   "gfx/EMD_FL9_Liv17.png") {template_8_r(7, 39)}
@@ -13073,7 +13229,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv17, 52017) {
 }
 
 //EMD_FL9_Liv18
-spriteset(spriteset_EMD_FL9_Liv18_Purchase,   "gfx/EMD_FL9_Liv18.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv18_Purchase,   "gfx/EMD_FL9_Liv18.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv18,   "gfx/EMD_FL9_Liv18.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv18_r,   "gfx/EMD_FL9_Liv18.png") {template_8_r(7, 39)}
@@ -13168,7 +13324,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv18, 52018) {
 }
 
 //EMD_FL9_Liv19
-spriteset(spriteset_EMD_FL9_Liv19_Purchase,   "gfx/EMD_FL9_Liv19.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_FL9_Liv19_Purchase,   "gfx/EMD_FL9_Liv19.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_FL9_Liv19,   "gfx/EMD_FL9_Liv19.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_FL9_Liv19_r,   "gfx/EMD_FL9_Liv19.png") {template_8_r(7, 39)}
@@ -13265,7 +13421,7 @@ item(FEAT_TRAINS, Item_EMD_FL9_Liv19, 52019) {
 
 
 //EMD_F39PHDM_Liv0
-spriteset(spriteset_EMD_F39PHDM_Liv0_Purchase,   "gfx/EMD_F39PHDM_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_EMD_F39PHDM_Liv0_Purchase,   "gfx/EMD_F39PHDM_Liv0.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_EMD_F39PHDM_Liv0,   "gfx/EMD_F39PHDM_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_EMD_F39PHDM_Liv0_r,   "gfx/EMD_F39PHDM_Liv0.png") {template_8_r(7, 39)}
@@ -13360,7 +13516,7 @@ item(FEAT_TRAINS, Item_EMD_F39PHDM_Liv0, 52150) {
 }
 
 //GE_P32AC_Liv0
-spriteset(spriteset_GE_P32AC_Liv0_Purchase,   "gfx/GE_P32AC_Liv0.png") {template_purchase(7, 21)}
+spriteset(spriteset_GE_P32AC_Liv0_Purchase,   "gfx/GE_P32AC_Liv0.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_GE_P32AC_Liv0,   "gfx/GE_P32AC_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 spriteset(spriteset_GE_P32AC_Liv0_r,   "gfx/GE_P32AC_Liv0.png") {template_8_r(7, 39)}
