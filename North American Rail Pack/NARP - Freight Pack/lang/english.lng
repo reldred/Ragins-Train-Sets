@@ -18,6 +18,12 @@ STR_PARAM_TIMES_4                   :4
 STR_PARAM_TIMES_8                   :8
 STR_PARAM_TIMES_16                  :16
 
+STR_PARAM_FREIGHT_NAME_CAPACITY:Passenger Car Capacity
+STR_PARAM_NAME_FREIGHT_CAPACITY:Freight Car Capacity
+STR_PARAM_DESC_CAPACITY:You can use this setting to adjust the capacity of trains. Useful for balancing it against sets like NARS or UKRS
+STR_PARAM_REAL_CAPACITY:Realistic Capacity
+STR_PARAM_NORMAL_REDUCED:Reduced Capacity
+
 STR_PARAM_NAME_REALDISABLE:Disable Real Trains
 STR_PARAM_DESC_REALDISABLE:Enable/disable Real trains (Trains that were physically built, and put in service).
 

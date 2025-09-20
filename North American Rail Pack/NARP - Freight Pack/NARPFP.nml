@@ -48,6 +48,23 @@ grf{
             };
         }
 }
+
+//Carry Capacity Parameter
+    param {
+                param_freight_capacities {
+                        type: int;
+                        name: string(STR_PARAM_NAME_FREIGHT_CAPACITY);
+                        desc: string(STR_PARAM_DESC_CAPACITY);
+                        min_value: 0;
+                        max_value: 1;
+                        def_value: 0;
+                        names: {
+                                                0: string(STR_PARAM_REAL_CAPACITY);
+                                                1: string(STR_PARAM_NORMAL_REDUCED);
+                        };
+                }
+        }
+
 //RealDisable
 	param {
     param_RealDisable {
@@ -89,6 +106,24 @@ grf{
     }
     }
 	}
+	
+//Carry Capacity Variables
+if (param_freight_capacities == 0) {
+    param_freight_capacity_mod = 0;
+}
+
+if (param_freight_capacities == 1) {
+    param_freight_capacity_mod = 2;
+}
+
+// extra nml constants for Polar Fox 2024 cargo class names that substitute legacy NML class names
+const CC_OPEN_BULK = 4; // remaps legacy NML class: CC_BULK
+const CC_COVERED_BULK = 9; // remaps legacy NML class: CC_COVERED
+const CC_POWDER_BULK = 11; // remaps legacy NML class: CC_POWDERIZED
+const CC_LIQUID_BULK = 6; // remaps legacy NML class: CC_LIQUID
+const CC_GAS_BULK = 8; // remaps legacy NML class: CC_HAZARDOUS
+const CC_FLATBED = 10; // remaps legacy NML class: CC_OVERSIZED
+const CC_WEIRD = 12; // remaps legacy NML class: CC_NON_POURABLE
 
 railtypetable {
     RAIL, SAA3: [ MTRO, SBA3, SCA3, SDA3, "3RDR", "3RDC", MTRO, ELRL], ELRL, IHBA: [SGAA, SGAE, ELRL], TR_UNIVERSAL: [_AAE, RAIL],
@@ -483,13 +518,13 @@ template template_8_repeat(x, y) {
 }
 
 spriteset(spriteset_5_Old_EOTD,   "gfx/5_Old_EOTD.png") {template_5(7, 39)}
-spriteset(spriteset_5_Old_EOTD_r,   "gfx/5_Old_EOTD.png") {template_5_r(7, 39)}
+spriteset(spriteset_5_Old_EOTD_r,   "gfx/5_Old_EOTD.png") {template_5(7, 69)}
 
 spriteset(spriteset_8_Modern_EOTD,   "gfx/Gen5_Boxcar_EOTD.png") {template_8(7, 39)}
 spriteset(spriteset_8_Modern_EOTD_r,   "gfx/Gen5_Boxcar_EOTD.png") {template_8_r(7, 39)}
 
 //Gen2_Boxcar_Base
-spriteset(spriteset_Gen2_Boxcar_Purchase,   "gfx/Gen2_Boxcar_Base0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Gen2_Boxcar_Purchase,   "gfx/Gen2_Boxcar_Base0.png") {template_purchase_5(7, 21)}
 
 spriteset(spriteset_Gen2_Boxcar_Base0,   "gfx/Gen2_Boxcar_Base0.png") {template_5_repeat(7, 39)}
 spriteset(spriteset_Gen2_Boxcar_Base1,   "gfx/Gen2_Boxcar_Base1.png") {template_5_repeat(7, 39)}
@@ -534,7 +569,7 @@ switch(FEAT_TRAINS, SELF, switch_Gen2_Boxcar_position, vehicle_is_flipped) {
 item (FEAT_TRAINS, Item_Gen2_Boxcar_Base, 21000) {
     property {
         climates_available:             ALL_CLIMATES;
-        refittable_cargo_classes:		bitmask(CC_EXPRESS,CC_ARMOURED,CC_PIECE_GOODS);
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_OPEN_BULK, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
 		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
 		default_cargo_type:				GOOD;
 		cargo_disallow_refit:			[TOUR, LVST];
@@ -566,7 +601,7 @@ item (FEAT_TRAINS, Item_Gen2_Boxcar_Base, 21000) {
 
         speed:                            45 mph;
         weight:                            14 ton;
-        cargo_capacity:                    45; // /param_capacity_mod
+        cargo_capacity:                    45/param_freight_capacity_mod;
     }
     graphics {
     default:                             switch_Gen2_Boxcar_position;
@@ -702,7 +737,7 @@ switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_position, vehicle_is_flipped) 
 item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 25000) {
     property {
         climates_available:             ALL_CLIMATES;
-        refittable_cargo_classes:		bitmask(CC_EXPRESS,CC_ARMOURED,CC_PIECE_GOODS);
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_OPEN_BULK, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
 		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
 		default_cargo_type:				GOOD;
 		cargo_disallow_refit:			[TOUR, LVST];
@@ -722,7 +757,7 @@ item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 25000) {
         model_life:                        30;
 
         length:                            8;
-        cost_factor:                    80;
+        cost_factor:                    160;
         running_cost_factor:            1;
         loading_speed:                    5;
 
@@ -734,7 +769,7 @@ item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 25000) {
 
         speed:                            80 mph;
         weight:                            21 ton;
-        cargo_capacity:                    80; // /param_capacity_mod
+        cargo_capacity:                    80/param_freight_capacity_mod;
     }
     graphics {
     default:                             switch_Gen5_Boxcar_Base_position;
@@ -744,7 +779,7 @@ item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 25000) {
 }
 
 //Gen6_HiCube_Boxcar_Base
-spriteset(spriteset_Gen6_HiCube_Boxcar_Purchase,   "gfx/Gen6_HiCube_Boxcar_Base0.png") {template_purchase(7, 21)}
+spriteset(spriteset_Gen6_HiCube_Boxcar_Purchase,   "gfx/Gen6_HiCube_Boxcar_Base0.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_Gen6_HiCube_Boxcar_Base0,   "gfx/Gen6_HiCube_Boxcar_Base0.png") {template_8_repeat(7, 39)}
 spriteset(spriteset_Gen6_HiCube_Boxcar_Base1,   "gfx/Gen6_HiCube_Boxcar_Base1.png") {template_8_repeat(7, 39)}
@@ -801,7 +836,7 @@ switch(FEAT_TRAINS, SELF, switch_Gen6_HiCube_Boxcar_position, vehicle_is_flipped
 item (FEAT_TRAINS, Item_Gen6_HiCube_Boxcar_Base, 26000) {
     property {
         climates_available:             ALL_CLIMATES;
-        refittable_cargo_classes:		bitmask(CC_EXPRESS,CC_ARMOURED,CC_PIECE_GOODS);
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_OPEN_BULK, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
 		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
 		default_cargo_type:				GOOD;
 		cargo_disallow_refit:			[TOUR, LVST];
@@ -821,7 +856,7 @@ item (FEAT_TRAINS, Item_Gen6_HiCube_Boxcar_Base, 26000) {
         model_life:                        30;
 
         length:                            8;
-        cost_factor:                    80;
+        cost_factor:                    180;
         running_cost_factor:            1;
         loading_speed:                    5;
 
@@ -833,7 +868,7 @@ item (FEAT_TRAINS, Item_Gen6_HiCube_Boxcar_Base, 26000) {
 
         speed:                            80 mph;
         weight:                            33 ton;
-        cargo_capacity:                    100; // /param_capacity_mod
+        cargo_capacity:                    100/param_freight_capacity_mod;
     }
     graphics {
     default:                             switch_Gen6_HiCube_Boxcar_position;
