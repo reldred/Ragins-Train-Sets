@@ -983,7 +983,17 @@ spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv11,   "gfx/Gen5_Boxcar_Liv11.pn
 spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv11,   "gfx/Gen5_Boxcar_Liv11.png") {template_8_repeat(7, 69)}
 spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv11,   "gfx/Gen5_Boxcar_Liv11.png") {template_8_repeat(7, 99)}
 
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv12,   "gfx/Gen5_Boxcar_Liv12.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv12,   "gfx/Gen5_Boxcar_Liv12.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv12,   "gfx/Gen5_Boxcar_Liv12.png") {template_8_repeat(7, 99)}
 
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv13,   "gfx/Gen5_Boxcar_Liv13.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv13,   "gfx/Gen5_Boxcar_Liv13.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv13,   "gfx/Gen5_Boxcar_Liv13.png") {template_8_repeat(7, 99)}
+
+spriteset(spriteset_Gen5_Boxcar_Base_Standard_Liv14,   "gfx/Gen5_Boxcar_Liv14.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Gen5_Boxcar_Base_Waffle_Liv14,   "gfx/Gen5_Boxcar_Liv14.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv14,   "gfx/Gen5_Boxcar_Liv14.png") {template_8_repeat(7, 99)}
 
  random_switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_Random){
     1 : spriteset_Gen5_Boxcar_Base_Standard_Liv0;
@@ -1022,6 +1032,15 @@ spriteset(spriteset_Gen5_Boxcar_Base_Cross_Liv11,   "gfx/Gen5_Boxcar_Liv11.png")
 	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv11;
     1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv11;
 	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv11;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv12;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv12;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv12;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv13;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv13;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv13;
+	1 : spriteset_Gen5_Boxcar_Base_Standard_Liv14;
+    1 : spriteset_Gen5_Boxcar_Base_Waffle_Liv14;
+	1 : spriteset_Gen5_Boxcar_Base_Cross_Liv14;
 }
 
 switch (FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_SpriteStack1, [
