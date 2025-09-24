@@ -340,30 +340,30 @@ template template_4(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x,        y,        8,        29,        -3,            -24]
-    [ x+9,      y,        22,        20,        -8,        -15]
-    [ x+32,     y,        33,        16,        0,        -12]
-    [ x+66,     y,        22,        20,        -4,            -11]
+    [ x,        y,        8,        29,        -3,            -24, ANIM]
+    [ x+9,      y,        22,        20,        -8,        -15, ANIM]
+    [ x+32,     y,        33,        16,        0,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
 
-    [ x+89,     y,        8,        29,        -3,            -16]
-    [ x+98,     y,        22,        20,        -16,        -11]
-    [ x+121,    y,        33,        16,        -16,        -12]
-    [ x+155,    y,        22,        20,        -12,        -15]
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -12,        -15, ANIM]
 }
 
 template template_4_r(x, y) { //WIP
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x+89,     y,        8,        29,        -3,            -23]
-    [ x+98,     y,        22,        20,        -8,        -15]
-    [ x+121,    y,        33,        16,        0,        -12]
-    [ x+155,    y,        22,        20,        -4,            -11]
+    [ x+89,     y,        8,        29,        -3,            -23, ANIM]
+    [ x+98,     y,        22,        20,        -8,        -15, ANIM]
+    [ x+121,    y,        33,        16,        0,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,            -11, ANIM]
 
-    [ x,        y,        8,        29,        -3,            -16]
-    [ x+9,      y,        22,        20,        -16,        -11]
-    [ x+32,     y,        33,        16,        -16,        -12]
-    [ x+66,     y,        22,        20,        -12,        -15]
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -12,        -15, ANIM]
 }
 
 // 5 Template
@@ -371,45 +371,45 @@ template template_5(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x,        y,        8,        29,        -3,            -22]
-    [ x+9,      y,        22,        20,        -10,        -14]
-    [ x+32,     y,        33,        16,        -4,        -12]
-    [ x+66,     y,        22,        20,        -4,            -11]
+    [ x,        y,        8,        29,        -3,            -22, ANIM]
+    [ x+9,      y,        22,        20,        -10,        -14, ANIM]
+    [ x+32,     y,        33,        16,        -4,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
 
-    [ x+89,     y,        8,        29,        -3,            -16]
-    [ x+98,     y,        22,        20,        -16,        -11]
-    [ x+121,    y,        33,        16,        -16,        -12]
-    [ x+155,    y,        22,        20,        -10,        -14]
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -10,        -14, ANIM]
 }
 
 template template_5_r(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x,        y,        8,        29,        -3,            -22]
-    [ x+9,      y,        22,        20,        -10,        -14]
-    [ x+32,     y,        33,        16,        -4,        -12]
-    [ x+66,     y,        22,        20,        -4,            -11]
+    [ x,        y,        8,        29,        -3,            -22, ANIM]
+    [ x+9,      y,        22,        20,        -10,        -14, ANIM]
+    [ x+32,     y,        33,        16,        -4,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
 
-    [ x+89,     y,        8,        29,        -3,            -16]
-    [ x+98,     y,        22,        20,        -16,        -11]
-    [ x+121,    y,        33,        16,        -16,        -12]
-    [ x+155,    y,        22,        20,        -10,        -14]
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -10,        -14, ANIM]
 }
 
 template template_5_repeat(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x,        y,        8,        29,        -3,            -22]
-    [ x+9,      y,        22,        20,        -10,        -14]
-    [ x+32,     y,        33,        16,        -4,        -12]
-    [ x+66,     y,        22,        20,        -4,            -11]
+    [ x,        y,        8,        29,        -3,            -22, ANIM]
+    [ x+9,      y,        22,        20,        -10,        -14, ANIM]
+    [ x+32,     y,        33,        16,        -4,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
 
-    [ x,        y,        8,        29,        -3,            -16]
-    [ x+9,      y,        22,        20,        -16,        -11]
-    [ x+32,     y,        33,        16,        -16,        -12]
-    [ x+66,     y,        22,        20,        -10,        -14]
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -10,        -14, ANIM]
 }
 
 // 6 Template
@@ -1254,10 +1254,10 @@ switch(FEAT_TRAINS, SELF, switch_Gen2_Boxcar_position, vehicle_is_flipped) {
 }
 
 
-item (FEAT_TRAINS, Item_Gen2_Boxcar_Base, 21000) {
+item (FEAT_TRAINS, Item_Gen2_Boxcar_Base, 20010) {
     property {
         climates_available:             ALL_CLIMATES;
-        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_OPEN_BULK, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
 		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
 		default_cargo_type:				GOOD;
 		cargo_disallow_refit:			[TOUR, LVST];
@@ -1345,10 +1345,10 @@ switch(FEAT_TRAINS, SELF, switch_Gen3_Boxcar_position, vehicle_is_flipped) {
 }
 
 
-item (FEAT_TRAINS, Item_Gen3_Boxcar_Base, 23000) {
+item (FEAT_TRAINS, Item_Gen3_Boxcar_Base, 20030) {
     property {
         climates_available:             ALL_CLIMATES;
-        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_OPEN_BULK, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
 		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
 		default_cargo_type:				GOOD;
 		cargo_disallow_refit:			[TOUR, LVST];
@@ -1387,223 +1387,6 @@ item (FEAT_TRAINS, Item_Gen3_Boxcar_Base, 23000) {
     purchase:                            spriteset_Gen3_Boxcar_Purchase;
     additional_text: string(STR_INFO_GEN3_BOXCAR);
 	cargo_capacity:                   return 50/param_freight_capacity_mod;
-}
-}
-
-//Gen3_Reefer_Base
-spriteset(spriteset_Gen3_Reefer_Purchase,   "gfx/Gen3_Reefer_Base0.png") {template_purchase_6(7, 21)}
-
-spriteset(spriteset_Gen3_Reefer_Base0,   "gfx/Gen3_Reefer_Base0.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Reefer_Base1,   "gfx/Gen3_Reefer_Base1.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Reefer_Base2,   "gfx/Gen3_Reefer_Base2.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Reefer_Base3,   "gfx/Gen3_Reefer_Base3.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Reefer_Base4,   "gfx/Gen3_Reefer_Base4.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Reefer_Base5,   "gfx/Gen3_Reefer_Base5.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Reefer_Base6,   "gfx/Gen3_Reefer_Base6.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Reefer_Base7,   "gfx/Gen3_Reefer_Base7.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Reefer_Base8,   "gfx/Gen3_Reefer_Base7.png") {template_6_repeat(7, 39)}
-
- random_switch(FEAT_TRAINS, SELF, switch_Gen3_Reefer_Random, bitmask(TRIGGER_VEHICLE_NEW_LOAD)){
-    1 : spriteset_Gen3_Reefer_Base0;
-	1 : spriteset_Gen3_Reefer_Base1;
-	1 : spriteset_Gen3_Reefer_Base2;
-	1 : spriteset_Gen3_Reefer_Base3;
-	1 : spriteset_Gen3_Reefer_Base4;
-	1 : spriteset_Gen3_Reefer_Base5;
-	1 : spriteset_Gen3_Reefer_Base6;
-	1 : spriteset_Gen3_Reefer_Base7;
-	1 : spriteset_Gen3_Reefer_Base8;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Gen3_Reefer_SpriteStack1, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: switch_Gen3_Reefer_Random;
-    1: spriteset_6_Old_EOTD;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Gen3_Reefer_rearcheck1, position_in_consist_from_end){
-    0 : switch_Gen3_Reefer_SpriteStack1;
-    return switch_Gen3_Reefer_Random;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Gen3_Reefer_SpriteStack2, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: switch_Gen3_Reefer_Random;
-    1: spriteset_6_Old_EOTD_r;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Gen3_Reefer_rearcheck2, position_in_consist_from_end){
-    0 : switch_Gen3_Reefer_SpriteStack2;
-    return switch_Gen3_Reefer_Random;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Gen3_Reefer_position, vehicle_is_flipped) {
- 0: switch_Gen3_Reefer_rearcheck1;
- 1: switch_Gen3_Reefer_rearcheck2;
-}
-
-
-item (FEAT_TRAINS, Item_Gen3_Reefer_Base, 23040) {
-    property {
-        climates_available:             ALL_CLIMATES;
-        refittable_cargo_classes:		bitmask(CC_REFRIGERATED);
-		non_refittable_cargo_classes:		bitmask(CC_NON_POTABLE);
-		default_cargo_type:				FOOD;
-//		cargo_disallow_refit:			[TOUR, LVST];
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
-        refit_cost:                        0;
-        track_type:                        RAIL;
-        ai_special_flag:                AI_FLAG_CARGO;
-        power:                            0 hp;
-        dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        bitmask_vehicle_info:            0;
-
-        running_cost_base:                RUNNING_COST_DIESEL;
-
-        model_life:                        30;
-
-        length:                            6;
-        cost_factor:                    120;
-        running_cost_factor:            1;
-        loading_speed:                    5;
-
-//        variant_group: Item_Gen3_Reefer_Base;
-//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
-
-        name:                             string(STR_NAME_GEN3_REEFER);
-        introduction_date:                date(1895, 1, 1);
-
-        speed:                            100 mph;
-        weight:                            20 ton;
-        cargo_capacity:                    45/param_freight_capacity_mod;
-    }
-    graphics {
-    default:                             switch_Gen3_Reefer_position;
-    purchase:                            spriteset_Gen3_Reefer_Purchase;
-    additional_text: string(STR_INFO_GEN3_REEFER);
-}
-}
-
-spriteset(spriteset_Gen3_Hopper_Loadh,   "gfx/Gen3_Hopper_Load.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Hopper_Loadf,   "gfx/Gen3_Hopper_Load.png") {template_6_repeat(7, 69)}
-
-//Gen3_Hopper_Base
-spriteset(spriteset_Gen3_Hopper_Purchase,   "gfx/Gen3_Hopper_Base0.png") {template_purchase_6(7, 21)}
-
-spriteset(spriteset_Gen3_Hopper_Base0,   "gfx/Gen3_Hopper_Base0.png") {template_6_repeat(7, 39)}
-spriteset(spriteset_Gen3_Hopper_Base1,   "gfx/Gen3_Hopper_Base1.png") {template_6_repeat(7, 39)}
-
-switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_loadcheck_COAL, cargo_count * (100 / cargo_capacity)){
-	1..50	: spriteset_Gen3_Hopper_Loadh ;
-	51..100	: spriteset_Gen3_Hopper_Loadf ;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_recolour_load, STORE_TEMP(switch_generic_recolour(), 0x100)) {
-    return switch_Gen3_Hopper_loadcheck_COAL;
-}
-
- random_switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Random, bitmask(TRIGGER_VEHICLE_NEW_LOAD)){
-    1 : spriteset_Gen3_Hopper_Base0;
-	1 : spriteset_Gen3_Hopper_Base1;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_CargoStack1, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: switch_Gen3_Hopper_Random;
-    1: switch_Gen3_Hopper_recolour_load;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_RearStack1, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: switch_Gen3_Hopper_Random;
-	1: switch_Gen3_Hopper_recolour_load;
-    2: spriteset_6_Old_EOTD;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_rearcheck1, position_in_consist_from_end){
-    0 : switch_Gen3_Hopper_RearStack1;
-    return switch_Gen3_Hopper_CargoStack1;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_CargoStack2, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: switch_Gen3_Hopper_Random;
-    1: switch_Gen3_Hopper_recolour_load;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_RearStack2, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: switch_Gen3_Hopper_Random;
-	1: switch_Gen3_Hopper_recolour_load;
-    2: spriteset_6_Old_EOTD_r;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_rearcheck2, position_in_consist_from_end){
-    0 : switch_Gen3_Hopper_RearStack2;
-    return switch_Gen3_Hopper_CargoStack2;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_position, vehicle_is_flipped) {
- 0: switch_Gen3_Hopper_rearcheck1;
- 1: switch_Gen3_Hopper_rearcheck2;
-}
-
-
-item (FEAT_TRAINS, Item_Gen3_Hopper_Base, 2330) {
-    property {
-        climates_available:             ALL_CLIMATES;
-		refittable_cargo_classes:		bitmask(CC_BULK);
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS);
-		default_cargo_type:				COAL;
-		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF];
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
-        refit_cost:                        0;
-        track_type:                        RAIL;
-        ai_special_flag:                AI_FLAG_CARGO;
-        power:                            0 hp;
-        dual_headed:                    0;
-        default_cargo_type:                GOOD;
-        air_drag_coefficient:            0.08;
-        bitmask_vehicle_info:            0;
-
-        running_cost_base:                RUNNING_COST_DIESEL;
-
-        model_life:                        30;
-
-        length:                            6;
-        cost_factor:                    120;
-        running_cost_factor:            1;
-        loading_speed:                    5;
-
-//        variant_group: Item_Gen3_Hopper_Base;
-//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
-
-        name:                             string(STR_NAME_GEN3_HOPPER);
-        introduction_date:                date(1895, 1, 1);
-
-        speed:                            70 mph;
-        weight:                            20 ton;
-        cargo_capacity:                    70/param_freight_capacity_mod;
-    }
-    graphics {
-    default:                             switch_Gen3_Hopper_position;
-    purchase:                            spriteset_Gen3_Hopper_Purchase;
-    additional_text: string(STR_INFO_GEN3_HOPPER);
 }
 }
 
@@ -1750,10 +1533,10 @@ switch(FEAT_TRAINS, SELF, switch_Gen5_Boxcar_Base_position, vehicle_is_flipped) 
 }
 
 
-item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 25000) {
+item (FEAT_TRAINS, Item_Gen5_Boxcar_Base, 20040) {
     property {
         climates_available:             ALL_CLIMATES;
-        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_OPEN_BULK, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
 		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
 		default_cargo_type:				GOOD;
 		cargo_disallow_refit:			[TOUR, LVST];
@@ -1849,10 +1632,10 @@ switch(FEAT_TRAINS, SELF, switch_Gen6_HiCube_Boxcar_position, vehicle_is_flipped
 }
 
 
-item (FEAT_TRAINS, Item_Gen6_HiCube_Boxcar_Base, 26000) {
+item (FEAT_TRAINS, Item_Gen6_HiCube_Boxcar_Base, 20050) {
     property {
         climates_available:             ALL_CLIMATES;
-        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_OPEN_BULK, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED );
 		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_HAZARDOUS);
 		default_cargo_type:				GOOD;
 		cargo_disallow_refit:			[TOUR, LVST];
@@ -1892,3 +1675,336 @@ item (FEAT_TRAINS, Item_Gen6_HiCube_Boxcar_Base, 26000) {
 	cargo_capacity:                   return 100/param_freight_capacity_mod;
 }
 }
+
+//Gen3_Reefer_Base
+spriteset(spriteset_Gen3_Reefer_Purchase,   "gfx/Gen3_Reefer_Base0.png") {template_purchase_6(7, 21)}
+
+spriteset(spriteset_Gen3_Reefer_Base0,   "gfx/Gen3_Reefer_Base0.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Reefer_Base1,   "gfx/Gen3_Reefer_Base1.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Reefer_Base2,   "gfx/Gen3_Reefer_Base2.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Reefer_Base3,   "gfx/Gen3_Reefer_Base3.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Reefer_Base4,   "gfx/Gen3_Reefer_Base4.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Reefer_Base5,   "gfx/Gen3_Reefer_Base5.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Reefer_Base6,   "gfx/Gen3_Reefer_Base6.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Reefer_Base7,   "gfx/Gen3_Reefer_Base7.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Reefer_Base8,   "gfx/Gen3_Reefer_Base7.png") {template_6_repeat(7, 39)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_Gen3_Reefer_Random, bitmask(TRIGGER_VEHICLE_NEW_LOAD)){
+    1 : spriteset_Gen3_Reefer_Base0;
+	1 : spriteset_Gen3_Reefer_Base1;
+	1 : spriteset_Gen3_Reefer_Base2;
+	1 : spriteset_Gen3_Reefer_Base3;
+	1 : spriteset_Gen3_Reefer_Base4;
+	1 : spriteset_Gen3_Reefer_Base5;
+	1 : spriteset_Gen3_Reefer_Base6;
+	1 : spriteset_Gen3_Reefer_Base7;
+	1 : spriteset_Gen3_Reefer_Base8;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3_Reefer_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen3_Reefer_Random;
+    1: spriteset_6_Old_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3_Reefer_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen3_Reefer_SpriteStack1;
+    return switch_Gen3_Reefer_Random;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3_Reefer_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen3_Reefer_Random;
+    1: spriteset_6_Old_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3_Reefer_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen3_Reefer_SpriteStack2;
+    return switch_Gen3_Reefer_Random;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3_Reefer_position, vehicle_is_flipped) {
+ 0: switch_Gen3_Reefer_rearcheck1;
+ 1: switch_Gen3_Reefer_rearcheck2;
+}
+
+
+item (FEAT_TRAINS, Item_Gen3_Reefer_Base, 20320) {
+    property {
+        climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask(CC_REFRIGERATED);
+		non_refittable_cargo_classes:		bitmask(CC_NON_POTABLE);
+		default_cargo_type:				FOOD;
+//		cargo_disallow_refit:			[TOUR, LVST];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        power:                            0 hp;
+        dual_headed:                    0;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            6;
+        cost_factor:                    120;
+        running_cost_factor:            1;
+        loading_speed:                    5;
+
+//        variant_group: Item_Gen3_Reefer_Base;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_GEN3_REEFER);
+        introduction_date:                date(1895, 1, 1);
+
+        speed:                            100 mph;
+        weight:                            20 ton;
+        cargo_capacity:                    45/param_freight_capacity_mod;
+    }
+    graphics {
+    default:                             switch_Gen3_Reefer_position;
+    purchase:                            spriteset_Gen3_Reefer_Purchase;
+    additional_text: string(STR_INFO_GEN3_REEFER);
+}
+}
+
+spriteset(spriteset_Gen2_Hopper_Loadh,   "gfx/Gen2_Hopper_Load.png") {template_5_repeat(7, 39)}
+spriteset(spriteset_Gen2_Hopper_Loadf,   "gfx/Gen2_Hopper_Load.png") {template_5_repeat(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_loadcheck, cargo_count * (100 / cargo_capacity)){
+	1..50	: spriteset_Gen2_Hopper_Loadh ;
+	51..100	: spriteset_Gen2_Hopper_Loadf ;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2_Hopper_recolour_load, STORE_TEMP(switch_generic_recolour(), 0x100)) {
+    return switch_Gen2_Hopper_loadcheck;
+}
+
+//Gen2_Hopper_Liv0
+spriteset(spriteset_Gen2_Hopper_Liv0_Purchase,   "gfx/Gen2_Hopper_Liv0_0.png") {template_purchase_5(7, 21)}
+
+spriteset(spriteset_Gen2_Hopper_Liv0_0,   "gfx/Gen2_Hopper_Liv0_0.png") {template_5_repeat(7, 39)}
+spriteset(spriteset_Gen2_Hopper_Liv0_1,   "gfx/Gen2_Hopper_Liv0_1.png") {template_5_repeat(7, 39)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_Random, bitmask(TRIGGER_VEHICLE_NEW_LOAD)){
+    1 : spriteset_Gen2_Hopper_Liv0_0;
+	1 : spriteset_Gen2_Hopper_Liv0_1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_CargoStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen2_Hopper_Liv0_Random;
+    1: switch_Gen2_Hopper_recolour_load;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_RearStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen2_Hopper_Liv0_Random;
+	1: switch_Gen2_Hopper_recolour_load;
+    2: spriteset_5_Old_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen2_Hopper_Liv0_RearStack1;
+    return switch_Gen2_Hopper_Liv0_CargoStack1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_CargoStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen2_Hopper_Liv0_Random;
+    1: switch_Gen2_Hopper_recolour_load;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_RearStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen2_Hopper_Liv0_Random;
+	1: switch_Gen2_Hopper_recolour_load;
+    2: spriteset_5_Old_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen2_Hopper_Liv0_RearStack2;
+    return switch_Gen2_Hopper_Liv0_CargoStack2;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen2_Hopper_Liv0_rearcheck1;
+ 1: switch_Gen2_Hopper_Liv0_rearcheck2;
+}
+
+
+item (FEAT_TRAINS, Item_Gen2_Hopper_Liv0, 23010) {
+    property {
+        climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask(CC_BULK);
+		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS);
+		default_cargo_type:				COAL;
+		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        power:                            0 hp;
+        dual_headed:                    0;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            5;
+        cost_factor:                    120;
+        running_cost_factor:            1;
+        loading_speed:                    5;
+
+//        variant_group: Item_Gen2_Hopper_Liv0;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_GEN2_HOPPER);
+        introduction_date:                date(1870, 1, 1);
+
+        speed:                            45 mph;
+        weight:                            13 ton;
+        cargo_capacity:                    55/param_freight_capacity_mod;
+    }
+    graphics {
+    default:                             switch_Gen2_Hopper_Liv0_position;
+    purchase:                            spriteset_Gen2_Hopper_Liv0_Purchase;
+    additional_text: string(STR_INFO_GEN2_HOPPER);
+}
+}
+
+spriteset(spriteset_Gen3_Hopper_Loadh,   "gfx/Gen3_Hopper_Load.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Hopper_Loadf,   "gfx/Gen3_Hopper_Load.png") {template_6_repeat(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_loadcheck, cargo_count * (100 / cargo_capacity)){
+	1..50	: spriteset_Gen3_Hopper_Loadh ;
+	51..100	: spriteset_Gen3_Hopper_Loadf ;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_recolour_load, STORE_TEMP(switch_generic_recolour(), 0x100)) {
+    return switch_Gen3_Hopper_loadcheck;
+}
+
+//Gen3_Hopper_Liv0
+spriteset(spriteset_Gen3_Hopper_Liv0_Purchase,   "gfx/Gen3_Hopper_Liv0_0.png") {template_purchase_6(7, 21)}
+
+spriteset(spriteset_Gen3_Hopper_Liv0_0,   "gfx/Gen3_Hopper_Liv0_0.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen3_Hopper_Liv0_1,   "gfx/Gen3_Hopper_Liv0_1.png") {template_6_repeat(7, 39)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_Random, bitmask(TRIGGER_VEHICLE_NEW_LOAD)){
+    1 : spriteset_Gen3_Hopper_Liv0_0;
+	1 : spriteset_Gen3_Hopper_Liv0_1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_CargoStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen3_Hopper_Liv0_Random;
+    1: switch_Gen3_Hopper_recolour_load;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_RearStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen3_Hopper_Liv0_Random;
+	1: switch_Gen3_Hopper_recolour_load;
+    2: spriteset_6_Old_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen3_Hopper_Liv0_RearStack1;
+    return switch_Gen3_Hopper_Liv0_CargoStack1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_CargoStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen3_Hopper_Liv0_Random;
+    1: switch_Gen3_Hopper_recolour_load;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_RearStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen3_Hopper_Liv0_Random;
+	1: switch_Gen3_Hopper_recolour_load;
+    2: spriteset_6_Old_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen3_Hopper_Liv0_RearStack2;
+    return switch_Gen3_Hopper_Liv0_CargoStack2;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen3_Hopper_Liv0_rearcheck1;
+ 1: switch_Gen3_Hopper_Liv0_rearcheck2;
+}
+
+
+item (FEAT_TRAINS, Item_Gen3_Hopper_Liv0, 23020) {
+    property {
+        climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask(CC_BULK);
+		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS);
+		default_cargo_type:				COAL;
+		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        power:                            0 hp;
+        dual_headed:                    0;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            6;
+        cost_factor:                    120;
+        running_cost_factor:            1;
+        loading_speed:                    5;
+
+//        variant_group: Item_Gen3_Hopper_Liv0;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_GEN3_HOPPER);
+        introduction_date:                date(1895, 1, 1);
+
+        speed:                            70 mph;
+        weight:                            20 ton;
+        cargo_capacity:                    70/param_freight_capacity_mod;
+    }
+    graphics {
+    default:                             switch_Gen3_Hopper_Liv0_position;
+    purchase:                            spriteset_Gen3_Hopper_Liv0_Purchase;
+    additional_text: string(STR_INFO_GEN3_HOPPER);
+}
+}
+
