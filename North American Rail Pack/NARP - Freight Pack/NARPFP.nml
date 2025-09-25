@@ -1794,7 +1794,7 @@ spriteset(spriteset_Gen2_Hopper_Liv0_Purchase,   "gfx/Gen2_Hopper_Liv0_0.png") {
 spriteset(spriteset_Gen2_Hopper_Liv0_0,   "gfx/Gen2_Hopper_Liv0_0.png") {template_5_repeat(7, 39)}
 spriteset(spriteset_Gen2_Hopper_Liv0_1,   "gfx/Gen2_Hopper_Liv0_1.png") {template_5_repeat(7, 39)}
 
- random_switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_Random, bitmask(TRIGGER_VEHICLE_NEW_LOAD)){
+ random_switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_Random){
     1 : spriteset_Gen2_Hopper_Liv0_0;
 	1 : spriteset_Gen2_Hopper_Liv0_1;
 }
@@ -1812,8 +1812,8 @@ switch (FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_RearStack1, [
     getbits(extra_callback_info1, 8, 8)
     ]) {
     0: switch_Gen2_Hopper_Liv0_Random;
-	1: switch_Gen2_Hopper_recolour_load;
-    2: spriteset_5_Old_EOTD;
+	1: spriteset_5_Old_EOTD;
+    2: switch_Gen2_Hopper_recolour_load;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_rearcheck1, position_in_consist_from_end){
@@ -1834,8 +1834,8 @@ switch (FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_RearStack2, [
     getbits(extra_callback_info1, 8, 8)
     ]) {
     0: switch_Gen2_Hopper_Liv0_Random;
-	1: switch_Gen2_Hopper_recolour_load;
-    2: spriteset_5_Old_EOTD_r;
+	1: spriteset_5_Old_EOTD_r;
+    2: switch_Gen2_Hopper_recolour_load;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen2_Hopper_Liv0_rearcheck2, position_in_consist_from_end){
@@ -1910,7 +1910,7 @@ spriteset(spriteset_Gen3_Hopper_Liv0_Purchase,   "gfx/Gen3_Hopper_Liv0_0.png") {
 spriteset(spriteset_Gen3_Hopper_Liv0_0,   "gfx/Gen3_Hopper_Liv0_0.png") {template_6_repeat(7, 39)}
 spriteset(spriteset_Gen3_Hopper_Liv0_1,   "gfx/Gen3_Hopper_Liv0_1.png") {template_6_repeat(7, 39)}
 
- random_switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_Random, bitmask(TRIGGER_VEHICLE_NEW_LOAD)){
+ random_switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_Random){
     1 : spriteset_Gen3_Hopper_Liv0_0;
 	1 : spriteset_Gen3_Hopper_Liv0_1;
 }
@@ -1928,8 +1928,8 @@ switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_RearStack1, [
     getbits(extra_callback_info1, 8, 8)
     ]) {
     0: switch_Gen3_Hopper_Liv0_Random;
-	1: switch_Gen3_Hopper_recolour_load;
-    2: spriteset_6_Old_EOTD;
+	1: spriteset_6_Old_EOTD;
+    2: switch_Gen3_Hopper_recolour_load;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_rearcheck1, position_in_consist_from_end){
@@ -1950,8 +1950,8 @@ switch (FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_RearStack2, [
     getbits(extra_callback_info1, 8, 8)
     ]) {
     0: switch_Gen3_Hopper_Liv0_Random;
-	1: switch_Gen3_Hopper_recolour_load;
-    2: spriteset_6_Old_EOTD_r;
+	1: spriteset_6_Old_EOTD_r;
+    2: switch_Gen3_Hopper_recolour_load;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen3_Hopper_Liv0_rearcheck2, position_in_consist_from_end){
@@ -2008,3 +2008,118 @@ item (FEAT_TRAINS, Item_Gen3_Hopper_Liv0, 23020) {
 }
 }
 
+spriteset(spriteset_Gen4_Hopper_Loadh,   "gfx/Gen4_Hopper_Load.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen4_Hopper_Loadf,   "gfx/Gen4_Hopper_Load.png") {template_6_repeat(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Gen4_Hopper_loadcheck, cargo_count * (100 / cargo_capacity)){
+	1..50	: spriteset_Gen4_Hopper_Loadh ;
+	51..100	: spriteset_Gen4_Hopper_Loadf ;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen4_Hopper_recolour_load, STORE_TEMP(switch_generic_recolour(), 0x100)) {
+    return switch_Gen4_Hopper_loadcheck;
+}
+
+//Gen4_Hopper_Liv0
+spriteset(spriteset_Gen4_Hopper_Liv0_Purchase,   "gfx/Gen4_Hopper_Liv0_0.png") {template_purchase_6(7, 21)}
+
+spriteset(spriteset_Gen4_Hopper_Liv0_0,   "gfx/Gen4_Hopper_Liv0_0.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen4_Hopper_Liv0_1,   "gfx/Gen4_Hopper_Liv0_1.png") {template_6_repeat(7, 39)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_Gen4_Hopper_Liv0_Random){
+    1 : spriteset_Gen4_Hopper_Liv0_0;
+	1 : spriteset_Gen4_Hopper_Liv0_1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen4_Hopper_Liv0_CargoStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen4_Hopper_Liv0_Random;
+    1: switch_Gen4_Hopper_recolour_load;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen4_Hopper_Liv0_RearStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen4_Hopper_Liv0_Random;
+	1: spriteset_6_Old_EOTD;
+    2: switch_Gen4_Hopper_recolour_load;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen4_Hopper_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen4_Hopper_Liv0_RearStack1;
+    return switch_Gen4_Hopper_Liv0_CargoStack1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen4_Hopper_Liv0_CargoStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen4_Hopper_Liv0_Random;
+    1: switch_Gen4_Hopper_recolour_load;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen4_Hopper_Liv0_RearStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Gen4_Hopper_Liv0_Random;
+	1: spriteset_6_Old_EOTD_r;
+    2: switch_Gen4_Hopper_recolour_load;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen4_Hopper_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen4_Hopper_Liv0_RearStack2;
+    return switch_Gen4_Hopper_Liv0_CargoStack2;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen4_Hopper_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen4_Hopper_Liv0_rearcheck1;
+ 1: switch_Gen4_Hopper_Liv0_rearcheck2;
+}
+
+
+item (FEAT_TRAINS, Item_Gen4_Hopper_Liv0, 23030) {
+    property {
+        climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask(CC_BULK);
+		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS);
+		default_cargo_type:				COAL;
+		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF];
+        sprite_id:                        SPRITE_ID_NEW_TRAIN;
+        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK);
+        refit_cost:                        0;
+        track_type:                        RAIL;
+        ai_special_flag:                AI_FLAG_CARGO;
+        power:                            0 hp;
+        dual_headed:                    0;
+        air_drag_coefficient:            0.08;
+        bitmask_vehicle_info:            0;
+
+        running_cost_base:                RUNNING_COST_DIESEL;
+
+        model_life:                        30;
+
+        length:                            6;
+        cost_factor:                    120;
+        running_cost_factor:            1;
+        loading_speed:                    5;
+
+//        variant_group: Item_Gen4_Hopper_Liv0;
+//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+
+        name:                             string(STR_NAME_GEN4_HOPPER);
+        introduction_date:                date(1935, 1, 1);
+
+        speed:                            70 mph;
+        weight:                            19 ton;
+        cargo_capacity:                    76/param_freight_capacity_mod;
+    }
+    graphics {
+    default:                             switch_Gen4_Hopper_Liv0_position;
+    purchase:                            spriteset_Gen4_Hopper_Liv0_Purchase;
+    additional_text: string(STR_INFO_GEN4_HOPPER);
+}
+}
