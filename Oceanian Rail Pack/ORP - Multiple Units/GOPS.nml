@@ -9360,7 +9360,7 @@ item(FEAT_TRAINS, Item_Comeng_VSet_Liv1, Comeng_VSet_ID_Liv1) {
 //ID
 const X2000 = 15040;
 //introduction_date
-const X2000_IntroDate = date(1990, 1, 1);
+const X2000_IntroDate = date(1997, 1, 1);
 //speed
 const X2000_Speed = 210;
 //cost_factor
@@ -9369,6 +9369,7 @@ const X2000_CostFactor = 36;
 const X2000_RunningCostFactor = 94;
 //Cargo Capacity
 const X2000_CargoCapacity = 77;
+const X2000_CargoCapacity_Half = 39;
 //power
 const X2000_Power = 4370;
 //weight
@@ -9473,7 +9474,7 @@ item(FEAT_TRAINS, Item_X2000_Liv0, X2000_Liv0) {
 		speed:							X2000_Speed km/h;
 		cost_factor:					(X2000_CostFactor * 2);
 		running_cost_factor:			(X2000_RunningCostFactor * 2);
-		cargo_capacity: 				1;
+		cargo_capacity: 				X2000_CargoCapacity_Half;
 		power:							X2000_Power;
 		weight:							X2000_Weight ton;
 
@@ -9566,7 +9567,7 @@ item(FEAT_TRAINS, Item_X2000_Liv1, X2000_Liv1) {
 		speed:							X2000_Speed km/h;
 		cost_factor:					(X2000_CostFactor * 2);
 		running_cost_factor:			(X2000_RunningCostFactor * 2);
-		cargo_capacity: 				1;
+		cargo_capacity: 				X2000_CargoCapacity_Half;
 		power:							X2000_Power;
 		weight:							X2000_Weight ton;
 

@@ -295,6 +295,18 @@ template template_purchase_77mu(x, y) {
     [x-2 , y,  1,  1,   0,  0, ANIM]
 }
 
+template template_purchase_78mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
 template template_purchase_88(x, y) {
     //[left_x, upper_y, width, height, offset_x, offset_y]
     [x-2 , y,  1,  1,   0,  0, ANIM]
@@ -315,7 +327,7 @@ template template_purchase_88mu(x, y) {
     [x-2 , y,  1,  1,   0,  0, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x     , y, 88, 15, -41, -11, ANIM]
+    [x   , y, 88, 15, -41, -11, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
 }
 
@@ -360,6 +372,22 @@ template template_4_r(x, y) { //WIP
     [ x+9,      y,        22,        20,        -16,        -11, ANIM]
     [ x+32,     y,        33,        16,        -16,        -12, ANIM]
     [ x+66,     y,        22,        20,        -12,        -15, ANIM]
+}
+
+// 4 Template
+template template_4_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -24, ANIM]
+    [ x+9,      y,        22,        20,        -8,        -15, ANIM]
+    [ x+32,     y,        33,        16,        0,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,    y,        22,        20,        -12,        -15, ANIM]
 }
 
 // 5 Template
@@ -459,15 +487,30 @@ template template_7(x, y) {
     //left_x, upper_y, width, height, offset_x, offset_y
     //                            more negative to shift left
     //                                            more negative to shift up
-    [ x,        y,        8,        29,        -3,            -18, ANIM]
-    [ x+9,      y,        22,        20,        -14,        -12, ANIM]
-    [ x+32,     y,        33,        16,        -12,        -12, ANIM]
-    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+    [ x,     y, 8,  29, -3,  -18, ANIM]
+    [ x+9,   y, 22, 20, -14, -12, ANIM]
+    [ x+32,  y, 33, 16, -12, -12, ANIM]
+    [ x+66,  y, 22, 20, -4,  -11, ANIM]
 
-    [ x+89,     y,        8,        29,        -3,            -15, ANIM]
-    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
-    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
-    [ x+155,    y,        22,        20,        -6,        -12, ANIM]
+    [ x+89,  y, 8,  29, -3,  -16, ANIM]
+    [ x+98,  y, 22, 20, -16, -11, ANIM]
+    [ x+121, y, 33, 16, -16, -12, ANIM]
+    [ x+155, y, 22, 20, -6,  -12, ANIM]
+}
+
+template template_7_alt(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,     y, 8,  29, -3,  -16, ANIM]
+    [ x+9,   y, 22, 20, -18, -10, ANIM]
+    [ x+32,  y, 33, 16, -16, -12, ANIM]
+    [ x+66,  y, 22, 20, -6,  -12, ANIM]
+
+    [ x+89,  y, 8,  29, -3,  -18, ANIM]
+    [ x+98,  y, 22, 20, -14, -12, ANIM]
+    [ x+121, y, 33, 16, -12, -12, ANIM]
+    [ x+155, y, 22, 20, -4,  -11, ANIM]
 }
 
 //7 Template Reversed
@@ -564,6 +607,157 @@ template template_8_repeat(x, y) {
     [ x+32,     y,        33,        16,        -16,        -12, ANIM]
     [ x+66,     y,        22,        20,        -4,            -11, ANIM]
 }
+
+//Extra Long Templates
+template template_9(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        33,        -3,            -18, ANIM]
+    [ x+9,      y,        26,        22,        -18,        -12, ANIM]
+    [ x+36,     y,        41,        16,        -20,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x+105,     y,        8,        33,        -3,            -16, ANIM]
+    [ x+114,     y,        26,        22,        -16,        -13, ANIM]
+    [ x+141,    y,        41,        16,        -16,        -12, ANIM]
+    [ x+183,    y,        26,        22,        -4,            -11, ANIM]
+}
+
+template template_9_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+105,        y,        8,        33,        -3,            -18, ANIM]
+    [ x+114,      y,        26,        22,        -18,        -12, ANIM]
+    [ x+141,     y,        41,        16,        -20,        -12, ANIM]
+    [ x+183,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x,     y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,     y,        26,        22,        -16,        -13, ANIM]
+    [ x+36,    y,        41,        16,        -16,        -12, ANIM]
+    [ x+78,    y,        26,        22,        -4,            -11, ANIM]
+}
+
+template template_9_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        33,        -3,            -18, ANIM]
+    [ x+9,      y,        26,        22,        -18,        -12, ANIM]
+    [ x+36,     y,        41,        16,        -20,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x,        y,        8,        33,        -3,            -20, ANIM]
+    [ x+9,      y,        26,        22,        -16,        -13, ANIM]
+    [ x+36,     y,        41,        16,        -16,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -6,            -12, ANIM]
+}
+
+template template_10(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -20,        -11, ANIM]
+    [ x+36,     y,        41,        16,        -24,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x+105,     y,        8,        33,        -3,            -16, ANIM]
+    [ x+114,     y,        26,        22,        -16,        -13, ANIM]
+    [ x+141,    y,        41,        16,        -16,        -12, ANIM]
+    [ x+183,    y,        26,        22,        -4,            -11, ANIM]
+}
+
+template template_10_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+105,     y,        8,        33,        -3,            -16, ANIM]
+    [ x+114,     y,        26,        22,        -20,        -11, ANIM]
+    [ x+141,    y,        41,        16,        -24,        -12, ANIM]
+    [ x+183,    y,        26,        22,        -8,            -13, ANIM]
+
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -16,        -13, ANIM]
+    [ x+36,     y,        41,        16,        -16,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -4,            -11, ANIM]
+}
+
+template template_10_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -20,        -11, ANIM]
+    [ x+36,     y,        41,        16,        -24,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -16,        -13, ANIM]
+    [ x+36,     y,        41,        16,        -16,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -4,            -11, ANIM]
+}
+
+const Light_Metro_LoadingSpeed = 30;
+const Heavy_Metro_LoadingSpeed = 30;
+const SD_Suburban_LoadingSpeed = 10;
+const DD_Suburban_LoadingSpeed = 8;
+const SD_Intercity_LoadingSpeed = 5;
+const DD_Intercity_LoadingSpeed = 3;
+const SD_Express_LoadingSpeed = 5;
+const DD_Express_LoadingSpeed = 3;
+
+const Liv0_ID = 0;
+const Liv1_ID = 1;
+const Liv2_ID = 2;
+const Liv3_ID = 3;
+const Liv4_ID = 4;
+const Liv5_ID = 5;
+const Liv6_ID = 6;
+const Liv7_ID = 7;
+const Liv8_ID = 8;
+const Liv9_ID = 9;
+const Liv10_ID = 10;
+const Liv11_ID = 11;
+const Liv12_ID = 12;
+const Liv13_ID = 13;
+const Liv14_ID = 14;
+const Liv15_ID = 15;
+const Liv16_ID = 16;
+const Liv17_ID = 17;
+const Liv18_ID = 18;
+const Liv19_ID = 19;
+const Liv20_ID = 20;
+const Liv21_ID = 21;
+const Liv22_ID = 22;
+const Liv23_ID = 23;
+const Liv24_ID = 24;
+const Liv25_ID = 25;
+const Liv26_ID = 26;
+const Liv27_ID = 27;
+const Liv28_ID = 28;
+const Liv29_ID = 29;
+const Liv30_ID = 30;
+const Liv31_ID = 31;
+const Liv32_ID = 32;
+const Liv33_ID = 33;
+const Liv34_ID = 34;
+const Liv35_ID = 35;
+const Liv36_ID = 36;
+const Liv37_ID = 37;
+const Liv38_ID = 38;
+const Liv39_ID = 39;
+const Liv40_ID = 40;
+const Liv41_ID = 41;
+const Liv42_ID = 42;
+const Liv43_ID = 43;
+const Liv44_ID = 44;
+const Liv45_ID = 45;
+const Liv46_ID = 46;
+const Liv47_ID = 47;
+const Liv48_ID = 48;
+const Liv49_ID = 49;
 
 spriteset(spriteset_MU_purchase,   "gfx/MU_Carriage.png") {template_purchase_8(7, 21)}
 spriteset(spriteset_MU_trailer,   "gfx/MU_Carriage.png") {template_8_repeat(7, 39)}
@@ -6332,6 +6526,519 @@ item(FEAT_TRAINS, Item_Budd_MetrolinerII_Liv1, 21181) {
 		weight:                        63;
 		running_cost_factor: 55;
 
+    }
+}
+
+//ID
+const X2000 = 21200;
+//introduction_date
+const X2000_IntroDate = date(1995, 1, 1);
+//speed
+const X2000_Speed = 210;
+//cost_factor
+const X2000_CostFactor = 36;
+//running_cost_factor
+const X2000_RunningCostFactor = 94;
+//Cargo Capacity
+const X2000_CargoCapacity = 77;
+const X2000_CargoCapacity_Half = 39;
+//power
+const X2000_Power = 4370;
+//weight
+const X2000_Weight = 73;
+const X2000_Weight_T = 44;
+//length
+const X2000_Length = 8;
+
+//Pantographs
+spriteset(spriteset_X2000_Panto_Purchase,   "gfx/X2000_Pantographs.png") {template_purchase_78mu(7, 21)}
+spriteset(spriteset_X2000_PantoDown,   "gfx/X2000_Pantographs.png") {template_7(7, 39)}
+spriteset(spriteset_X2000_PantoUp,   "gfx/X2000_Pantographs.png") {template_7(7, 69)}
+spriteset(spriteset_X2000_PantoUp_Alt,   "gfx/X2000_Pantographs.png") {template_7(7, 99)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_X2000_Pantograph_Panto, train_is_driving_backwards) {
+ 0: spriteset_X2000_PantoUp_Alt;
+ 1: spriteset_X2000_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_railtype, tile_powers_railtype("OHLE_AC")) {
+ 0: spriteset_X2000_PantoDown;
+ 1: switch_X2000_Pantograph_Panto;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Length, vehicle_is_flipped){
+    0:	7;
+    1: 	8;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Endcapacity, vehicle_is_flipped){
+    0:	0;
+    1: 	(X2000_CargoCapacity / param_capacity_mod);
+}
+
+//X2000_Liv0
+spriteset(spriteset_X2000_Liv0_Purchase,   "gfx/X2000_Liv0.png") {template_purchase_78mu(7, 21)}
+spriteset(spriteset_X2000_Liv0_Lead,   "gfx/X2000_Liv0.png") {template_7(7, 39)}
+spriteset(spriteset_X2000_Liv0_DT_Lead,   "gfx/X2000_Liv0.png") {template_8(7, 69)}
+spriteset(spriteset_X2000_Liv0_Trailer,   "gfx/X2000_Liv0.png") {template_8(7, 99)}
+spriteset(spriteset_X2000_Liv0_Diner,   "gfx/X2000_Liv0.png") {template_8(7, 129)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv0_Purchase;
+    1: spriteset_X2000_Panto_Purchase;
+}
+
+//Power Car Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv0_Lead_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv0_Lead;
+    1: switch_X2000_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv0_Endcars, vehicle_is_flipped){
+    0:	switch_X2000_Liv0_Lead_Stack;
+    1: 	spriteset_X2000_Liv0_DT_Lead;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv0_Dinerposition, position_in_vehid_chain - position_in_vehid_chain_from_end){
+    0..1:	spriteset_X2000_Liv0_Diner;
+    spriteset_X2000_Liv0_Trailer;
+}
+
+const X2000_Liv0 = (X2000 + Liv0_ID );
+
+item(FEAT_TRAINS, Item_X2000_Liv0, X2000_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_TILT); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_X2000);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              X2000_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							X2000_Speed km/h;
+		cost_factor:					(X2000_CostFactor * 2);
+		running_cost_factor:			(X2000_RunningCostFactor * 2);
+		cargo_capacity: 				X2000_CargoCapacity_Half;
+		power:							X2000_Power;
+		weight:							X2000_Weight ton;
+
+//        variant_group: 					Item_X2000_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_X2000_Liv0_Endcars;
+        purchase: 						switch_X2000_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_X2000);
+		length:							switch_X2000_Length;
+		cargo_capacity: 				switch_X2000_Endcapacity;
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_X2000_Liv0_Dinerposition ;
+        length: 						X2000_Length;
+        cargo_capacity:                 (X2000_CargoCapacity / param_capacity_mod);
+        power:                          0;
+		weight:                        	X2000_Weight_T;
+		running_cost_factor:            (X2000_RunningCostFactor / 2); //maybe remove the divide?
+    }
+}
+
+//X2000_Liv1
+spriteset(spriteset_X2000_Liv1_Purchase,   "gfx/X2000_Liv1.png") {template_purchase_78mu(7, 21)}
+spriteset(spriteset_X2000_Liv1_Lead,   "gfx/X2000_Liv1.png") {template_7(7, 39)}
+spriteset(spriteset_X2000_Liv1_DT_Lead,   "gfx/X2000_Liv1.png") {template_8(7, 69)}
+spriteset(spriteset_X2000_Liv1_Trailer,   "gfx/X2000_Liv1.png") {template_8(7, 99)}
+spriteset(spriteset_X2000_Liv1_Diner,   "gfx/X2000_Liv1.png") {template_8(7, 129)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv1_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv1_Purchase;
+    1: spriteset_X2000_Panto_Purchase;
+}
+
+//Power Car Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv1_Lead_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv1_Lead;
+    1: switch_X2000_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv1_Endcars, vehicle_is_flipped){
+    0:	switch_X2000_Liv1_Lead_Stack;
+    1: 	spriteset_X2000_Liv1_DT_Lead;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv1_Dinerposition, position_in_vehid_chain - position_in_vehid_chain_from_end){
+    0..1:	spriteset_X2000_Liv1_Diner;
+    spriteset_X2000_Liv1_Trailer;
+}
+
+const X2000_Liv1 = (X2000 + Liv1_ID );
+
+item(FEAT_TRAINS, Item_X2000_Liv1, X2000_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_TILT); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_X2000);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              X2000_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							X2000_Speed km/h;
+		cost_factor:					(X2000_CostFactor * 2);
+		running_cost_factor:			(X2000_RunningCostFactor * 2);
+		cargo_capacity: 				X2000_CargoCapacity_Half;
+		power:							X2000_Power;
+		weight:							X2000_Weight ton;
+
+        variant_group: 					Item_X2000_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_X2000_Liv1_Endcars;
+        purchase: 						switch_X2000_Liv1_Purchase_Stack;
+        additional_text: 				string(STR_INFO_X2000);
+		length:							switch_X2000_Length;
+		cargo_capacity: 				switch_X2000_Endcapacity;
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_X2000_Liv1_Dinerposition ;
+        length: 						X2000_Length;
+        cargo_capacity:                 (X2000_CargoCapacity / param_capacity_mod);
+        power:                          0;
+		weight:                        	X2000_Weight_T;
+		running_cost_factor:            (X2000_RunningCostFactor / 2); //maybe remove the divide?
+    }
+}
+
+//X2000_Liv2
+spriteset(spriteset_X2000_Liv2_Purchase,   "gfx/X2000_Liv2.png") {template_purchase_78mu(7, 21)}
+spriteset(spriteset_X2000_Liv2_Lead,   "gfx/X2000_Liv2.png") {template_7(7, 39)}
+spriteset(spriteset_X2000_Liv2_DT_Lead,   "gfx/X2000_Liv2.png") {template_8(7, 69)}
+spriteset(spriteset_X2000_Liv2_Trailer,   "gfx/X2000_Liv2.png") {template_8(7, 99)}
+spriteset(spriteset_X2000_Liv2_Diner,   "gfx/X2000_Liv2.png") {template_8(7, 129)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv2_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv2_Purchase;
+    1: spriteset_X2000_Panto_Purchase;
+}
+
+//Power Car Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv2_Lead_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv2_Lead;
+    1: switch_X2000_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv2_Endcars, vehicle_is_flipped){
+    0:	switch_X2000_Liv2_Lead_Stack;
+    1: 	spriteset_X2000_Liv2_DT_Lead;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv2_Dinerposition, position_in_vehid_chain - position_in_vehid_chain_from_end){
+    0..1:	spriteset_X2000_Liv2_Diner;
+    spriteset_X2000_Liv2_Trailer;
+}
+
+const X2000_Liv2 = (X2000 + Liv2_ID );
+
+item(FEAT_TRAINS, Item_X2000_Liv2, X2000_Liv2) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_TILT); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_X2000);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              X2000_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							X2000_Speed km/h;
+		cost_factor:					(X2000_CostFactor * 2);
+		running_cost_factor:			(X2000_RunningCostFactor * 2);
+		cargo_capacity: 				X2000_CargoCapacity_Half;
+		power:							X2000_Power;
+		weight:							X2000_Weight ton;
+
+        variant_group: 					Item_X2000_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_X2000_Liv2_Endcars;
+        purchase: 						switch_X2000_Liv2_Purchase_Stack;
+        additional_text: 				string(STR_INFO_X2000);
+		length:							switch_X2000_Length;
+		cargo_capacity: 				switch_X2000_Endcapacity;
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_X2000_Liv2_Dinerposition ;
+        length: 						X2000_Length;
+        cargo_capacity:                 (X2000_CargoCapacity / param_capacity_mod);
+        power:                          0;
+		weight:                        	X2000_Weight_T;
+		running_cost_factor:            (X2000_RunningCostFactor / 2); //maybe remove the divide?
+    }
+}
+
+//X2000_Liv3
+spriteset(spriteset_X2000_Liv3_Purchase,   "gfx/X2000_Liv3.png") {template_purchase_78mu(7, 21)}
+spriteset(spriteset_X2000_Liv3_Lead,   "gfx/X2000_Liv3.png") {template_7(7, 39)}
+spriteset(spriteset_X2000_Liv3_DT_Lead,   "gfx/X2000_Liv3.png") {template_8(7, 69)}
+spriteset(spriteset_X2000_Liv3_Trailer,   "gfx/X2000_Liv3.png") {template_8(7, 99)}
+spriteset(spriteset_X2000_Liv3_Diner,   "gfx/X2000_Liv3.png") {template_8(7, 129)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv3_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv3_Purchase;
+    1: spriteset_X2000_Panto_Purchase;
+}
+
+//Power Car Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv3_Lead_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv3_Lead;
+    1: switch_X2000_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv3_Endcars, vehicle_is_flipped){
+    0:	switch_X2000_Liv3_Lead_Stack;
+    1: 	spriteset_X2000_Liv3_DT_Lead;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv3_Dinerposition, position_in_vehid_chain - position_in_vehid_chain_from_end){
+    0..1:	spriteset_X2000_Liv3_Diner;
+    spriteset_X2000_Liv3_Trailer;
+}
+
+const X2000_Liv3 = (X2000 + Liv3_ID );
+
+item(FEAT_TRAINS, Item_X2000_Liv3, X2000_Liv3) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_TILT); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_X2000);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              X2000_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							X2000_Speed km/h;
+		cost_factor:					(X2000_CostFactor * 2);
+		running_cost_factor:			(X2000_RunningCostFactor * 2);
+		cargo_capacity: 				X2000_CargoCapacity_Half;
+		power:							X2000_Power;
+		weight:							X2000_Weight ton;
+
+        variant_group: 					Item_X2000_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_X2000_Liv3_Endcars;
+        purchase: 						switch_X2000_Liv3_Purchase_Stack;
+        additional_text: 				string(STR_INFO_X2000);
+		length:							switch_X2000_Length;
+		cargo_capacity: 				switch_X2000_Endcapacity;
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_X2000_Liv3_Dinerposition ;
+        length: 						X2000_Length;
+        cargo_capacity:                 (X2000_CargoCapacity / param_capacity_mod);
+        power:                          0;
+		weight:                        	X2000_Weight_T;
+		running_cost_factor:            (X2000_RunningCostFactor / 2); //maybe remove the divide?
+    }
+}
+
+//X2000_Liv4
+spriteset(spriteset_X2000_Liv4_Purchase,   "gfx/X2000_Liv4.png") {template_purchase_78mu(7, 21)}
+spriteset(spriteset_X2000_Liv4_Lead,   "gfx/X2000_Liv4.png") {template_7(7, 39)}
+spriteset(spriteset_X2000_Liv4_DT_Lead,   "gfx/X2000_Liv4.png") {template_8(7, 69)}
+spriteset(spriteset_X2000_Liv4_Trailer,   "gfx/X2000_Liv4.png") {template_8(7, 99)}
+spriteset(spriteset_X2000_Liv4_Diner,   "gfx/X2000_Liv4.png") {template_8(7, 129)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv4_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv4_Purchase;
+    1: spriteset_X2000_Panto_Purchase;
+}
+
+//Power Car Stacker
+switch (FEAT_TRAINS, SELF, switch_X2000_Liv4_Lead_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_X2000_Liv4_Lead;
+    1: switch_X2000_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv4_Endcars, vehicle_is_flipped){
+    0:	switch_X2000_Liv4_Lead_Stack;
+    1: 	spriteset_X2000_Liv4_DT_Lead;
+}
+
+switch(FEAT_TRAINS, SELF, switch_X2000_Liv4_Dinerposition, position_in_vehid_chain - position_in_vehid_chain_from_end){
+    0..1:	spriteset_X2000_Liv4_Diner;
+    spriteset_X2000_Liv4_Trailer;
+}
+
+const X2000_Liv4 = (X2000 + Liv4_ID );
+
+item(FEAT_TRAINS, Item_X2000_Liv4, X2000_Liv4) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_TILT); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_X2000);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              X2000_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							X2000_Speed km/h;
+		cost_factor:					(X2000_CostFactor * 2);
+		running_cost_factor:			(X2000_RunningCostFactor * 2);
+		cargo_capacity: 				X2000_CargoCapacity_Half;
+		power:							X2000_Power;
+		weight:							X2000_Weight ton;
+
+        variant_group: 					Item_X2000_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_X2000_Liv4_Endcars;
+        purchase: 						switch_X2000_Liv4_Purchase_Stack;
+        additional_text: 				string(STR_INFO_X2000);
+		length:							switch_X2000_Length;
+		cargo_capacity: 				switch_X2000_Endcapacity;
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_X2000_Liv4_Dinerposition ;
+        length: 						X2000_Length;
+        cargo_capacity:                 (X2000_CargoCapacity / param_capacity_mod);
+        power:                          0;
+		weight:                        	X2000_Weight_T;
+		running_cost_factor:            (X2000_RunningCostFactor / 2); //maybe remove the divide?
     }
 }
 

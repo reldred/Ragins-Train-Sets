@@ -154,8 +154,8 @@ STR_INFO_BUDD_METROLINERI:{BLACK}Role:{GOLD}Express{}{BLACK}Formation:{GOLD}Mult
 STR_NAME_BUDD_METROLINERII:Budd Metroliner II
 STR_INFO_BUDD_METROLINERII:{BLACK}Role:{GOLD}Express{}{BLACK}Formation:{GOLD}Multiple-Unit{}{BLACK}Gauge: {GOLD}Standard Gauge{}{BLACK}Power: {RED}AC Overhead Line
 
-STR_NAME_ADTRANZ_X2000:Adtranz X2000
-STR_INFO_ADTRANZ_X2000:{BLACK}Role:{GOLD}Express Service{}{BLACK}Formation:{GOLD}Push-Pull Trainset {}{BLACK}Power:{LTBLUE}Overhead Line{}{BLACK}Special:{GOLD}Tilt train (20% faster through curves)
+STR_NAME_X2000:Adtranz X2000
+STR_INFO_X2000:{BLACK}Role: {GOLD}Express Service {}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Special: {GOLD}Tilt train (20% faster through curves)
 
 
 
