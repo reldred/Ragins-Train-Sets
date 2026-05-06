@@ -10063,6 +10063,127 @@ item(FEAT_TRAINS, Item_Comeng_CL632_Liv0, 32400) {
 }
 }
 
+//ID
+const EE_EDClass_ID = 34350;
+//introduction_date
+const EE_EDClass_IntroDate = date(1938, 1, 1);
+//speed
+const EE_EDClass_Speed = 90;
+//cost_factor
+const EE_EDClass_CostFactor = 28;
+//running_cost_factor
+const EE_EDClass_RunningCostFactor = 76;
+//power
+const EE_EDClass_Power = 898;
+//weight
+const EE_EDClass_Weight = 90;
+//length
+const EE_EDClass_Length = 6;
+
+spriteset(spriteset_EE_EDClass_Pantograph_Purchase,   "gfx/EE_EDClass_Pantographs.png") {template_purchase_6(7, 21)}
+
+spriteset(spriteset_EE_EDClass_PantoDown,   "gfx/EE_EDClass_Pantographs.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_EE_EDClass_PantoUp,   "gfx/EE_EDClass_Pantographs.png") {template_6(7, 69)}
+spriteset(spriteset_EE_EDClass_PantoUp_r,   "gfx/EE_EDClass_Pantographs.png") {template_6_r(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_EE_EDClass_Pantograph_PantoUp, train_is_driving_backwards) {
+ 0: spriteset_EE_EDClass_PantoUp;
+ 1: spriteset_EE_EDClass_PantoUp_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_EDClass_Fw_railtype, tile_powers_railtype("NG_RAIL_OHLE_DC")) {
+ 0: spriteset_EE_EDClass_PantoDown;
+ 1: switch_EE_EDClass_Pantograph_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_EDClass_r_railtype, tile_powers_railtype("NG_RAIL_OHLE_DC")) {
+ 0: spriteset_EE_EDClass_PantoDown;
+ 1: switch_EE_EDClass_Pantograph_PantoUp;
+}
+
+//EE_EDClass_Liv0
+spriteset(spriteset_EE_EDClass_Liv0_Purchase,   "gfx/EE_EDClass_Liv0.png") {template_purchase_6(7, 21)}
+spriteset(spriteset_EE_EDClass_Liv0,   "gfx/EE_EDClass_Liv0.png") {template_6(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EE_EDClass_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_EDClass_Liv0_Purchase;
+    1: switch_Couplers_6_Repeat_Purchase;
+	2: spriteset_EE_EDClass_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_EDClass_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_EDClass_Liv0;
+	1: switch_Couplers_6_Repeat;
+    2: switch_EE_EDClass_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_EDClass_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_EDClass_Liv0;
+	1: switch_Couplers_6_Repeat;
+    2: switch_EE_EDClass_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_EDClass_Liv0_position, vehicle_is_flipped) {
+ 0: switch_EE_EDClass_Liv0_Fw;
+ 1: switch_EE_EDClass_Liv0_r;
+}
+
+const EE_EDClass_Liv0_ID = (EE_EDClass_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_EE_EDClass_Liv0, EE_EDClass_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EE_EDCLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_EDClass_IntroDate;		
+		length:                         EE_EDClass_Length;
+		
+		speed:							EE_EDClass_Speed km/h;
+		cost_factor:					EE_EDClass_CostFactor;
+		running_cost_factor:			EE_EDClass_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_EDClass_Power;
+		weight:							EE_EDClass_Weight;
+		
+//        variant_group: 					Item_EE_EDClass_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_EDClass_Liv0_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EE_EDClass_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_EDCLASS);
+		reverse_build_probability:		return 50;
+}
+}
+
 spriteset(spriteset_MetroVick_46Class_PantoDown,   "gfx/MetroVick_46Class_Pantographs.png") {template_7_repeat(7, 39)}
 spriteset(spriteset_MetroVick_46Class_PantoBothUp,   "gfx/MetroVick_46Class_Pantographs.png") {template_7_repeat(7, 69)}
 spriteset(spriteset_MetroVick_46Class_PantoUp,   "gfx/MetroVick_46Class_Pantographs.png") {template_7(7, 99)}
@@ -10130,7 +10251,7 @@ switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_position, vehicle_is_fli
  1: switch_MetroVick_46Class_Liv0_r;
 }
 
-item(FEAT_TRAINS, Item_MetroVick_46Class_Liv0, 34550) {
+item(FEAT_TRAINS, Item_MetroVick_46Class_Liv0, 34600) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -10173,138 +10294,7 @@ item(FEAT_TRAINS, Item_MetroVick_46Class_Liv0, 34550) {
 }
 
 //ID
-const Clyde_JE28C_ID = 34650;
-//introduction_date
-const Clyde_JE28C_IntroDate = date(1980, 1, 1);
-//speed
-const Clyde_JE28C_Speed = 130;
-//cost_factor
-const Clyde_JE28C_CostFactor = 55;
-//running_cost_factor
-const Clyde_JE28C_RunningCostFactor = 146;
-//power
-const Clyde_JE28C_Power = 3750;
-//weight
-const Clyde_JE28C_Weight = 122;
-
-spriteset(spriteset_Clyde_JE28C_Pantograph_Purchase,   "gfx/Clyde_JE28C_Pantographs.png") {template_purchase_8(7, 21)}
-
-spriteset(spriteset_Clyde_JE28C_PantoDown,   "gfx/Clyde_JE28C_Pantographs.png") {template_8_repeat(7, 39)}
-spriteset(spriteset_Clyde_JE28C_PantoBothUp,   "gfx/Clyde_JE28C_Pantographs.png") {template_8_repeat(7, 69)}
-spriteset(spriteset_Clyde_JE28C_PantoUp,   "gfx/Clyde_JE28C_Pantographs.png") {template_8(7, 99)}
-spriteset(spriteset_Clyde_JE28C_PantoUp_r,   "gfx/Clyde_JE28C_Pantographs.png") {template_8_r(7, 99)}
-
-switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Pantograph_PantoUp, train_is_driving_backwards) {
- 0: spriteset_Clyde_JE28C_PantoUp;
- 1: spriteset_Clyde_JE28C_PantoUp_r;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Pantograph_PantoUp_r, train_is_driving_backwards) {
- 0: spriteset_Clyde_JE28C_PantoUp_r;
- 1: spriteset_Clyde_JE28C_PantoUp;
-}
-
-random_switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Pantograph_Random, bitmask(TRIGGER_VEHICLE_SERVICE)){ //verify this works before using it in more stuff
-    1 : spriteset_Clyde_JE28C_PantoBothUp;
-    1 : switch_Clyde_JE28C_Pantograph_PantoUp;
-	1 : switch_Clyde_JE28C_Pantograph_PantoUp_r;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
- 0: spriteset_Clyde_JE28C_PantoDown;
- 1: switch_Clyde_JE28C_Pantograph_Random;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_r_railtype, tile_powers_railtype("OHLE_DC")) {
- 0: spriteset_Clyde_JE28C_PantoDown;
- 1: switch_Clyde_JE28C_Pantograph_Random;
-}
-
-//Clyde_JE28C_Liv0
-spriteset(spriteset_Clyde_JE28C_Liv0_Purchase,   "gfx/Clyde_JE28C_Liv0.png") {template_purchase_8(7, 21)}
-spriteset(spriteset_Clyde_JE28C_Liv0,   "gfx/Clyde_JE28C_Liv0.png") {template_8_repeat(7, 39)}
-
-//Purchase Sprite Stacker
-switch (FEAT_TRAINS, SELF, switch_Clyde_JE28C_Liv0_Purchase_Stack, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: spriteset_Clyde_JE28C_Liv0_Purchase;
-    1: switch_Couplers_8_Repeat_Purchase;
-	2: spriteset_Clyde_JE28C_Pantograph_Purchase;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Clyde_JE28C_Liv0_Fw, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: spriteset_Clyde_JE28C_Liv0;
-	1: switch_Couplers_8_Repeat;
-    2: switch_Clyde_JE28C_Fw_railtype;
-}
-
-switch (FEAT_TRAINS, SELF, switch_Clyde_JE28C_Liv0_r, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
-    getbits(extra_callback_info1, 8, 8)
-    ]) {
-    0: spriteset_Clyde_JE28C_Liv0;
-	1: switch_Couplers_8_Repeat;
-    2: switch_Clyde_JE28C_r_railtype;
-}
-
-switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Liv0_position, vehicle_is_flipped) {
- 0: switch_Clyde_JE28C_Liv0_Fw;
- 1: switch_Clyde_JE28C_Liv0_r;
-}
-
-const Clyde_JE28C_Liv0_ID = (Clyde_JE28C_ID + Liv0_ID);
-
-item(FEAT_TRAINS, Item_Clyde_JE28C_Liv0, Clyde_JE28C_Liv0_ID) {
-    property {
-        sprite_id:                      SPRITE_ID_NEW_TRAIN;
-		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
-		track_type:                     OHLE_DC;
-		running_cost_base:              RUNNING_COST_DIESEL;
-        engine_class:                   ENGINE_CLASS_ELECTRIC;
-//        ai_special_flag:                AI_FLAG_PASSENGER;
-		bitmask_vehicle_info:           0;
-	
-		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
-		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
-
-        name:                           string(STR_NAME_CLYDE_JE28C);
-		
-		refit_cost:                     0;
-        dual_headed:                    0;
-        air_drag_coefficient:           0.08;
-        model_life:                     30;
-		vehicle_life:                   50;
-		tractive_effort_coefficient:	0.3;
-		
-        introduction_date:              Clyde_JE28C_IntroDate;		
-		length:                         8;
-		
-		speed:							Clyde_JE28C_Speed km/h;
-		cost_factor:					Clyde_JE28C_CostFactor;
-		running_cost_factor:			Clyde_JE28C_RunningCostFactor;
-		cargo_capacity: 				0;
-		power:							Clyde_JE28C_Power;
-		weight:							Clyde_JE28C_Weight;
-		
-//        variant_group: 					Item_Clyde_JE28C_Liv0;
-//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
-    }
-    graphics {
-        default: 						switch_Clyde_JE28C_Liv0_position;
-//		sound_effect:					 switch_Modern_Electric_Horn;
-        purchase: 						switch_Clyde_JE28C_Liv0_Purchase_Stack;
-        additional_text: 				string(STR_INFO_CLYDE_JE28C);
-		reverse_build_probability:		return 50;
-}
-}
-
-//ID
-const Comeng_CL627_ID = 34600;
+const Comeng_CL627_ID = 34650;
 //introduction_date
 const Comeng_CL627_IntroDate = date(1979, 1, 1);
 //speed
@@ -10434,6 +10424,137 @@ item(FEAT_TRAINS, Item_Comeng_CL627_Liv0, Comeng_CL627_Liv0_ID) {
 }
 }
 
+//ID
+const Clyde_JE28C_ID = 34700;
+//introduction_date
+const Clyde_JE28C_IntroDate = date(1980, 1, 1);
+//speed
+const Clyde_JE28C_Speed = 130;
+//cost_factor
+const Clyde_JE28C_CostFactor = 55;
+//running_cost_factor
+const Clyde_JE28C_RunningCostFactor = 146;
+//power
+const Clyde_JE28C_Power = 3750;
+//weight
+const Clyde_JE28C_Weight = 122;
+
+spriteset(spriteset_Clyde_JE28C_Pantograph_Purchase,   "gfx/Clyde_JE28C_Pantographs.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_Clyde_JE28C_PantoDown,   "gfx/Clyde_JE28C_Pantographs.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Clyde_JE28C_PantoBothUp,   "gfx/Clyde_JE28C_Pantographs.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Clyde_JE28C_PantoUp,   "gfx/Clyde_JE28C_Pantographs.png") {template_8(7, 99)}
+spriteset(spriteset_Clyde_JE28C_PantoUp_r,   "gfx/Clyde_JE28C_Pantographs.png") {template_8_r(7, 99)}
+
+switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Pantograph_PantoUp, train_is_driving_backwards) {
+ 0: spriteset_Clyde_JE28C_PantoUp;
+ 1: spriteset_Clyde_JE28C_PantoUp_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Pantograph_PantoUp_r, train_is_driving_backwards) {
+ 0: spriteset_Clyde_JE28C_PantoUp_r;
+ 1: spriteset_Clyde_JE28C_PantoUp;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Pantograph_Random, bitmask(TRIGGER_VEHICLE_SERVICE)){ //verify this works before using it in more stuff
+    1 : spriteset_Clyde_JE28C_PantoBothUp;
+    1 : switch_Clyde_JE28C_Pantograph_PantoUp;
+	1 : switch_Clyde_JE28C_Pantograph_PantoUp_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_Clyde_JE28C_PantoDown;
+ 1: switch_Clyde_JE28C_Pantograph_Random;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_r_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_Clyde_JE28C_PantoDown;
+ 1: switch_Clyde_JE28C_Pantograph_Random;
+}
+
+//Clyde_JE28C_Liv0
+spriteset(spriteset_Clyde_JE28C_Liv0_Purchase,   "gfx/Clyde_JE28C_Liv0.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Clyde_JE28C_Liv0,   "gfx/Clyde_JE28C_Liv0.png") {template_8_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Clyde_JE28C_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_JE28C_Liv0_Purchase;
+    1: switch_Couplers_8_Repeat_Purchase;
+	2: spriteset_Clyde_JE28C_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_JE28C_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_JE28C_Liv0;
+	1: switch_Couplers_8_Repeat;
+    2: switch_Clyde_JE28C_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_JE28C_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_JE28C_Liv0;
+	1: switch_Couplers_8_Repeat;
+    2: switch_Clyde_JE28C_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Clyde_JE28C_Liv0_Fw;
+ 1: switch_Clyde_JE28C_Liv0_r;
+}
+
+const Clyde_JE28C_Liv0_ID = (Clyde_JE28C_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Clyde_JE28C_Liv0, Clyde_JE28C_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_CLYDE_JE28C);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_JE28C_IntroDate;		
+		length:                         8;
+		
+		speed:							Clyde_JE28C_Speed km/h;
+		cost_factor:					Clyde_JE28C_CostFactor;
+		running_cost_factor:			Clyde_JE28C_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_JE28C_Power;
+		weight:							Clyde_JE28C_Weight;
+		
+//        variant_group: 					Item_Clyde_JE28C_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Clyde_JE28C_Liv0_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_Clyde_JE28C_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_JE28C);
+		reverse_build_probability:		return 50;
+}
+}
+
 spriteset(spriteset_Comeng_CL627A_Pantograph_Purchase,   "gfx/Comeng_CL627A_Pantographs.png") {template_purchase_8(7, 21)}
 
 spriteset(spriteset_Comeng_CL627A_PantoDown,   "gfx/Comeng_CL627A_Pantographs.png") {template_8_repeat(7, 39)}
@@ -10526,7 +10647,7 @@ switch(FEAT_TRAINS, SELF, switch_Comeng_CL627A_Liv0_position, vehicle_is_flipped
  1: switch_Comeng_CL627A_Liv0_r;
 }
 
-item(FEAT_TRAINS, Item_Comeng_CL627A_Liv0, 34700) {
+item(FEAT_TRAINS, Item_Comeng_CL627A_Liv0, 34750) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -10605,7 +10726,7 @@ switch(FEAT_TRAINS, SELF, switch_Comeng_CL627A_Liv0_TriBo_position, vehicle_is_f
  1: switch_Comeng_CL627A_Liv0_TriBo_r;
 }
 
-item(FEAT_TRAINS, Item_Comeng_CL627A_Liv0_TriBo, 34750) {
+item(FEAT_TRAINS, Item_Comeng_CL627A_Liv0_TriBo, 34800) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -10671,7 +10792,7 @@ switch (FEAT_TRAINS, SELF, switch_Clyde_JAE393B_Liv0_Stack, [
 }
 
 
-item(FEAT_TRAINS, Item_Clyde_JAE393B_Liv0, 34850) {
+item(FEAT_TRAINS, Item_Clyde_JAE393B_Liv0, 34900) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
