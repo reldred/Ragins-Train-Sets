@@ -1,0 +1,1531 @@
+disable_item(FEAT_TRAINS);
+
+grf{
+    grfid: "ZM\18\00";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESCRIPTION);
+    version: 3;
+    min_compatible_version: 1;
+//Purchase Cost Parameter
+    param {
+        param_purchase_cost {
+            type: int;
+            name: string(STR_PARAM_PURCHASE_COST);
+            desc: string(STR_PARAM_PURCHASE_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+    }
+//Running Cost Parameter
+     param {
+        param_running_cost {
+            type: int;
+            name: string(STR_PARAM_RUNNING_COST);
+            desc: string(STR_PARAM_RUNNING_COST_DESC);
+            min_value: 0;
+            max_value: 8;
+            def_value: 4;
+            names: {
+                        0: string(STR_PARAM_DIVIDE_16);
+                        1: string(STR_PARAM_DIVIDE_8);
+                        2: string(STR_PARAM_DIVIDE_4);
+                        3: string(STR_PARAM_DIVIDE_2);
+                        4: string(STR_PARAM_NORMAL);
+                        5: string(STR_PARAM_TIMES_2);
+                        6: string(STR_PARAM_TIMES_4);
+                        7: string(STR_PARAM_TIMES_8);
+                        8: string(STR_PARAM_TIMES_16);
+            };
+        }
+}
+//RealDisable
+	param {
+    param_RealDisable {
+     name: string(STR_PARAM_NAME_REALDISABLE);
+     desc: string(STR_PARAM_DESC_REALDISABLE);
+     type: bool;
+     bit: 0;
+     def_value: 0;
+    }
+  }
+//PrototypeDisable
+	param {
+    param_PrototypeDisable {
+     name: string(STR_PARAM_NAME_PROTOTYPEDISABLE);
+     desc: string(STR_PARAM_DESC_PROTOTYPEDISABLE);
+     type: bool;
+     bit: 0;
+     def_value: 0;
+    }
+  }
+//ProposalDisable
+	param {
+    param_ProposalDisable {
+     name: string(STR_PARAM_NAME_PROPOSALDISABLE);
+     desc: string(STR_PARAM_DESC_PROPOSALDISABLE);
+     type: bool;
+     bit: 0;
+     def_value: 0;
+    }
+  }
+//FictionalDisable
+	param {
+    param_FictionalDisable {
+     name: string(STR_PARAM_NAME_FICTIONALDISABLE);
+     desc: string(STR_PARAM_DESC_FICTIONALDISABLE);
+     type: bool;
+     bit: 0;
+     def_value: 0;
+    }
+    }
+//3rdRailDisable
+	param {
+    param_ThirdRailDisable {
+     name: string(STR_PARAM_NAME_THIRDRAILDISABLE);
+     desc: string(STR_PARAM_DESC_THIRDRAILDISABLE);
+     type: bool;
+     bit: 0;
+     def_value: 1;
+    }
+    }
+//PilbaraDisable
+	param {
+    param_PilbaraDisable {
+     name: string(STR_PARAM_NAME_PILBARADISABLE);
+     desc: string(STR_PARAM_DESC_PILBARADISABLE);
+     type: bool;
+     bit: 0;
+     def_value: 1;
+    }
+    }
+//Couplers Control
+	param {
+    param_Couplers {
+     type: int;
+            name: string(STR_PARAM_NAME_COUPLERS);
+            desc: string(STR_PARAM_DESC_COUPLERS);
+            min_value: 0;
+            max_value: 2;
+            def_value: 2;
+            names: {
+                        0: string(STR_PARAM_COUPLERS_BUFFERS);
+                        1: string(STR_PARAM_COUPLERS_KNUCKLES);
+                        2: string(STR_PARAM_TRANSITION);
+            };
+        }
+    }
+  }
+
+railtypetable {
+    RAIL, 
+	SAA3: [ MTRO, SBA3, SCA3, SDA3, "3RDR", "3RDC", MTRO, ELRL], 
+	OHLE_DC: [SAAD, SAAE, ELRL], 
+	OHLE_AC: [SAAA, SAAE, ELRL], 
+	TR_UNIVERSAL: [_AAE, RAIL], 
+	BG_RAIL: [BAAN, RAIL], 
+	BG_RAIL_ONLY: [BAAN], 
+	NG_RAIL: [NAAN, RAIL], 
+	NG_RAIL_ONLY: [NAAN], 
+	NG_RAIL_OHLE_DC: [NAAD, NAAE, SAAD, SAAE, ELRL], 
+	NG_RAIL_ONLY_OHLE_DC: [NAAD, NAAE],
+	NG_RAIL_OHLE_AC: [NAAA, NAAE, SAAA, SAAE, ELRL], 
+	NG_RAIL_ONLY_OHLE_AC: [NAAA, NAAE],
+}
+
+//Basecost Paramater Variables
+basecost {
+ PR_BUILD_VEHICLE_TRAIN: 	1 + param_purchase_cost - 6;
+ PR_BUILD_VEHICLE_WAGON: 	1 + param_purchase_cost - 4;
+ PR_RUNNING_TRAIN_ELECTRIC: 3 + param_running_cost - 4;
+ PR_RUNNING_TRAIN_DIESEL: 	3 + param_running_cost - 4;
+ PR_RUNNING_TRAIN_STEAM: 	0 + param_running_cost - 4;
+}
+
+// Fix depot view
+traininfo_y_offset = 2;
+train_width_32_px = 1;
+
+
+// Purchase Sprite
+template template_purchase_3(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -29, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_4(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -31, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_5(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -33, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_6(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x   , y, 88, 15, -35, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_7(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -37, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_8(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_9(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -41, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_10(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -43, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_11(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -45, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_12(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -47, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_13(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -49, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_14(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -47, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_15(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -51, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_16(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_44(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -39, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_55(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -43, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_66(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -47, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_77(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -51, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_77mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -37, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88mu(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -41, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+template template_purchase_88xl(x, y) {
+    //[left_x, upper_y, width, height, offset_x, offset_y]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+    [x     , y, 88, 15, -55, -11, ANIM]
+    [x-2 , y,  1,  1,   0,  0, ANIM]
+}
+
+// 3 Template
+template template_3(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -25, ANIM]
+    [ x+9,      y,        22,        20,        -6,        -16, ANIM]
+    [ x+32,     y,        33,        16,        4,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -17,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -14,        -16, ANIM]
+}
+
+template template_3_r(x, y) { //WIP
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89,     y,        8,        29,        -3,            -25, ANIM]
+    [ x+98,     y,        22,        20,        -6,        -16, ANIM]
+    [ x+121,    y,        33,        16,        4,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -14,        -16, ANIM]
+}
+
+// 4 Template
+template template_4(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -24, ANIM]
+    [ x+9,      y,        22,        20,        -8,        -15, ANIM]
+    [ x+32,     y,        33,        16,        0,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -12,        -15, ANIM]
+}
+
+template template_4_r(x, y) { //WIP
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89,     y,        8,        29,        -3,            -24, ANIM]
+    [ x+98,     y,        22,        20,        -8,        -15, ANIM]
+    [ x+121,    y,        33,        16,        0,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -12,        -15, ANIM]
+}
+
+template template_4_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -24, ANIM]
+    [ x+9,      y,        22,        20,        -8,        -15, ANIM]
+    [ x+32,     y,        33,        16,        0,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,    y,        22,        20,        -12,        -15, ANIM]
+}
+
+// 5 Template
+template template_5(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -22, ANIM]
+    [ x+9,      y,        22,        20,        -10,        -14, ANIM]
+    [ x+32,     y,        33,        16,        -4,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -10,        -14, ANIM]
+}
+
+template template_5_r(x, y) { //fix this
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -22, ANIM]
+    [ x+9,      y,        22,        20,        -10,        -14, ANIM]
+    [ x+32,     y,        33,        16,        -4,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -10,        -14, ANIM]
+}
+
+template template_5_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -22, ANIM]
+    [ x+9,      y,        22,        20,        -10,        -14, ANIM]
+    [ x+32,     y,        33,        16,        -4,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -10,        -14, ANIM]
+}
+
+// 6 Template
+template template_6(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -20, ANIM]
+    [ x+9,      y,        22,        20,        -12,        -13, ANIM]
+    [ x+32,     y,        33,        16,        -8,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -8,        -13, ANIM]
+}
+
+template template_6_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89,     y,        8,        24,        -3,            -20, ANIM]
+    [ x+98,     y,        22,        20,        -12,        -13, ANIM]
+    [ x+121,    y,        33,        16,        -8,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,        -11, ANIM]
+
+    [ x,        y,        8,        24,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -8,            -13, ANIM]
+}
+
+template template_6_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -20, ANIM]
+    [ x+9,      y,        22,        20,        -12,        -13, ANIM]
+    [ x+32,     y,        33,        16,        -8,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,    y,        22,        20,        -8,        -13, ANIM]
+}
+
+//7 Template
+template template_7(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -18, ANIM]
+    [ x+9,      y,        22,        20,        -14,        -12, ANIM]
+    [ x+32,     y,        33,        16,        -12,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -15, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -6,        -12, ANIM]
+}
+
+//7 Template Alt
+template template_7_GR(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -18, ANIM]
+    [ x+9,      y,        22,        20,        -12,        -12, ANIM]
+    [ x+32,     y,        33,        16,        -8,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -2,            -10, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -15, ANIM]
+    [ x+98,     y,        22,        20,        -18,        -10, ANIM]
+    [ x+121,    y,        33,        16,        -20,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -8,        -12, ANIM]
+}
+
+//7 Template Reversed
+template template_7_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+89 , y, 8 , 29,  -3, -18, ANIM]
+    [ x+98 , y, 22, 20, -14, -12, ANIM]
+    [ x+121, y, 33, 16, -12, -12, ANIM]
+    [ x+155, y, 22, 20,  -4, -11, ANIM]
+
+    [ x    , y, 8 , 29,  -3, -15, ANIM]
+    [ x+9  , y, 22, 20, -16, -11, ANIM]
+    [ x+32 , y, 33, 16, -16, -12, ANIM]
+    [ x+66 , y, 22, 20,  -6, -12, ANIM]
+}
+
+//7 Template Reversed Alt
+template template_7_alt_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -15, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -6,            -12, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -14,        -12, ANIM]
+    [ x+121,    y,        33,        16,        -12,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,        -11, ANIM]
+}
+
+//7 Template
+template template_7_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -18, ANIM]
+    [ x+9,      y,        22,        20,        -14,        -12, ANIM]
+    [ x+32,     y,        33,        16,        -12,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,     y,        8,        29,        -3,            -15, ANIM]
+    [ x+9,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,    y,        22,        20,        -6,        -12, ANIM]
+}
+
+// 8 Template
+template template_8(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,        -11, ANIM]
+}
+
+template template_8_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+
+    [ x+89,     y,        8,        29,        -3,            -16, ANIM]
+    [ x+98,     y,        22,        20,        -16,        -11, ANIM]
+    [ x+121,    y,        33,        16,        -16,        -12, ANIM]
+    [ x+155,    y,        22,        20,        -4,        -11, ANIM]
+
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+}
+
+template template_8_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+
+    [ x,        y,        8,        29,        -3,            -16, ANIM]
+    [ x+9,      y,        22,        20,        -16,        -11, ANIM]
+    [ x+32,     y,        33,        16,        -16,        -12, ANIM]
+    [ x+66,     y,        22,        20,        -4,            -11, ANIM]
+}
+
+//Extra Long Templates
+template template_9(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -20,        -11, ANIM]
+    [ x+36,     y,        41,        16,        -20,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x+105,     y,        8,        33,        -3,            -16, ANIM]
+    [ x+114,     y,        26,        22,        -16,        -13, ANIM]
+    [ x+141,    y,        41,        16,        -16,        -12, ANIM]
+    [ x+183,    y,        26,        22,        -4,            -11, ANIM]
+}
+
+template template_9_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+105,     y,        8,        33,        -3,            -16, ANIM]
+    [ x+114,     y,        26,        22,        -20,        -11, ANIM]
+    [ x+141,    y,        41,        16,        -20,        -12, ANIM]
+    [ x+183,    y,        26,        22,        -8,            -13, ANIM]
+
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -16,        -13, ANIM]
+    [ x+36,     y,        41,        16,        -16,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -4,            -11, ANIM]
+}
+
+template template_9_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        33,        -3,            -18, ANIM]
+    [ x+9,      y,        26,        22,        -18,        -12, ANIM]
+    [ x+36,     y,        41,        16,        -20,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x,        y,        8,        33,        -3,            -20, ANIM]
+    [ x+9,      y,        26,        22,        -16,        -13, ANIM]
+    [ x+36,     y,        41,        16,        -16,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -6,            -12, ANIM]
+}
+
+template template_10(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -20,        -11, ANIM]
+    [ x+36,     y,        41,        16,        -24,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x+105,     y,        8,        33,        -3,            -16, ANIM]
+    [ x+114,     y,        26,        22,        -16,        -13, ANIM]
+    [ x+141,    y,        41,        16,        -16,        -12, ANIM]
+    [ x+183,    y,        26,        22,        -4,            -11, ANIM]
+}
+
+template template_10_r(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x+105,     y,        8,        33,        -3,            -16, ANIM]
+    [ x+114,     y,        26,        22,        -20,        -11, ANIM]
+    [ x+141,    y,        41,        16,        -24,        -12, ANIM]
+    [ x+183,    y,        26,        22,        -8,            -13, ANIM]
+
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -16,        -13, ANIM]
+    [ x+36,     y,        41,        16,        -16,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -4,            -11, ANIM]
+}
+
+template template_10_repeat(x, y) {
+    //left_x, upper_y, width, height, offset_x, offset_y
+    //                            more negative to shift left
+    //                                            more negative to shift up
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -20,        -11, ANIM]
+    [ x+36,     y,        41,        16,        -24,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -8,            -13, ANIM]
+
+    [ x,        y,        8,        33,        -3,            -16, ANIM]
+    [ x+9,      y,        26,        22,        -16,        -13, ANIM]
+    [ x+36,     y,        41,        16,        -16,        -12, ANIM]
+    [ x+78,     y,        26,        22,        -4,            -11, ANIM]
+}
+
+//4 Long Couplers
+spriteset(spriteset_Knuckles_3_Purchase,   "gfx/Couplers_3.png") {template_purchase_3(7, 21)}
+spriteset(spriteset_Knuckles_3,   "gfx/Couplers_3.png") {template_3(7, 39)}
+spriteset(spriteset_Knuckles_3_r,   "gfx/Couplers_3.png") {template_3_r(7, 39)}
+
+spriteset(spriteset_Buffers_3_Purchase,   "gfx/Couplers_3.png") {template_purchase_3(187, 21)}
+spriteset(spriteset_Buffers_3,   "gfx/Couplers_3.png") {template_3(187, 39)}
+spriteset(spriteset_Buffers_3_r,   "gfx/Couplers_3.png") {template_3_r(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_3_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_3_Purchase;
+	1945..2100: spriteset_Knuckles_3_Purchase;
+  return spriteset_Knuckles_3_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_3_Purchase, param_Couplers) {0:spriteset_Buffers_3_Purchase; 1:spriteset_Knuckles_3_Purchase; 2:switch_Couplers_3_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_3_Transition, current_year) {
+    0..1945: spriteset_Buffers_3;
+	1945..2100: spriteset_Knuckles_3;
+  return spriteset_Knuckles_3;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_3, param_Couplers) {0:spriteset_Buffers_3; 1:spriteset_Knuckles_3; 2:switch_Couplers_3_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_3_r_Transition, current_year) {
+    0..1945: spriteset_Buffers_3_r;
+	1945..2100: spriteset_Knuckles_3_r;
+  return spriteset_Knuckles_3_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_3_r, param_Couplers) {0:spriteset_Buffers_3_r; 1:spriteset_Knuckles_3_r; 2:switch_Couplers_3_r_Transition;}
+
+//4 Long Couplers repeat
+spriteset(spriteset_Knuckles_4_Repeat_Purchase,   "gfx/Couplers_4_Repeat.png") {template_purchase_4(7, 21)}
+spriteset(spriteset_Knuckles_4_Repeat,   "gfx/Couplers_4_Repeat.png") {template_4_repeat(7, 39)}
+
+spriteset(spriteset_Buffers_4_Repeat_Purchase,   "gfx/Couplers_4_Repeat.png") {template_purchase_4(187, 21)}
+spriteset(spriteset_Buffers_4_Repeat,   "gfx/Couplers_4_Repeat.png") {template_4_repeat(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_4_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_4_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_4_Repeat_Purchase;
+  return spriteset_Knuckles_4_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_4_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_4_Repeat_Purchase; 1:spriteset_Knuckles_4_Repeat_Purchase; 2:switch_Couplers_4_Repeat_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_4_Repeat_Transition, current_year) {
+    0..1945: spriteset_Buffers_4_Repeat;
+	1945..2100: spriteset_Knuckles_4_Repeat;
+  return spriteset_Knuckles_4_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_4_Repeat, param_Couplers) {0:spriteset_Buffers_4_Repeat; 1:spriteset_Knuckles_4_Repeat; 2:switch_Couplers_4_Repeat_Transition;}
+
+//4 Long Couplers
+spriteset(spriteset_Knuckles_4_Purchase,   "gfx/Couplers_4.png") {template_purchase_4(7, 21)}
+spriteset(spriteset_Knuckles_4,   "gfx/Couplers_4.png") {template_4(7, 39)}
+spriteset(spriteset_Knuckles_4_r,   "gfx/Couplers_4.png") {template_4_r(7, 39)}
+
+spriteset(spriteset_Buffers_4_Purchase,   "gfx/Couplers_4.png") {template_purchase_4(187, 21)}
+spriteset(spriteset_Buffers_4,   "gfx/Couplers_4.png") {template_4(187, 39)}
+spriteset(spriteset_Buffers_4_r,   "gfx/Couplers_4.png") {template_4_r(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_4_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_4_Purchase;
+	1945..2100: spriteset_Knuckles_4_Purchase;
+  return spriteset_Knuckles_4_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_4_Purchase, param_Couplers) {0:spriteset_Buffers_4_Purchase; 1:spriteset_Knuckles_4_Purchase; 2:switch_Couplers_4_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_4_Transition, current_year) {
+    0..1945: spriteset_Buffers_4;
+	1945..2100: spriteset_Knuckles_4;
+  return spriteset_Knuckles_4;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_4, param_Couplers) {0:spriteset_Buffers_4; 1:spriteset_Knuckles_4; 2:switch_Couplers_4_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_4_r_Transition, current_year) {
+    0..1945: spriteset_Buffers_4_r;
+	1945..2100: spriteset_Knuckles_4_r;
+  return spriteset_Knuckles_4_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_4_r, param_Couplers) {0:spriteset_Buffers_4_r; 1:spriteset_Knuckles_4_r; 2:switch_Couplers_4_r_Transition;}
+
+//5 Long Couplers repeat
+spriteset(spriteset_Knuckles_5_Repeat_Purchase,   "gfx/Couplers_5_Repeat.png") {template_purchase_5(7, 21)}
+spriteset(spriteset_Knuckles_5_Repeat,   "gfx/Couplers_5_Repeat.png") {template_5_repeat(7, 39)}
+
+spriteset(spriteset_Buffers_5_Repeat_Purchase,   "gfx/Couplers_5_Repeat.png") {template_purchase_5(187, 21)}
+spriteset(spriteset_Buffers_5_Repeat,   "gfx/Couplers_5_Repeat.png") {template_5_repeat(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_5_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_5_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_5_Repeat_Purchase;
+  return spriteset_Knuckles_5_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_5_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_5_Repeat_Purchase; 1:spriteset_Knuckles_5_Repeat_Purchase; 2:switch_Couplers_5_Repeat_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_5_Repeat_Transition, current_year) {
+    0..1945: spriteset_Buffers_5_Repeat;
+	1945..2100: spriteset_Knuckles_5_Repeat;
+  return spriteset_Knuckles_5_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_5_Repeat, param_Couplers) {0:spriteset_Buffers_5_Repeat; 1:spriteset_Knuckles_5_Repeat; 2:switch_Couplers_5_Repeat_Transition;}
+
+//5 Long Couplers
+spriteset(spriteset_Knuckles_5_Purchase,   "gfx/Couplers_5.png") {template_purchase_5(7, 21)}
+spriteset(spriteset_Knuckles_5,   "gfx/Couplers_5.png") {template_5(7, 39)}
+spriteset(spriteset_Knuckles_5_r,   "gfx/Couplers_5.png") {template_5_r(7, 39)}
+
+spriteset(spriteset_Buffers_5_Purchase,   "gfx/Couplers_5.png") {template_purchase_5(187, 21)}
+spriteset(spriteset_Buffers_5,   "gfx/Couplers_5.png") {template_5(187, 39)}
+spriteset(spriteset_Buffers_5_r,   "gfx/Couplers_5.png") {template_5_r(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_5_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_5_Purchase;
+	1945..2100: spriteset_Knuckles_5_Purchase;
+  return spriteset_Knuckles_5_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_5_Purchase, param_Couplers) {0:spriteset_Buffers_5_Purchase; 1:spriteset_Knuckles_5_Purchase; 2:switch_Couplers_5_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_5_Transition, current_year) {
+    0..1945: spriteset_Buffers_5;
+	1945..2100: spriteset_Knuckles_5;
+  return spriteset_Knuckles_5;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_5, param_Couplers) {0:spriteset_Buffers_5; 1:spriteset_Knuckles_5; 2:switch_Couplers_5_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_5_r_Transition, current_year) {
+    0..1945: spriteset_Buffers_5_r;
+	1945..2100: spriteset_Knuckles_5_r;
+  return spriteset_Knuckles_5_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_5_r, param_Couplers) {0:spriteset_Buffers_5_r; 1:spriteset_Knuckles_5_r; 2:switch_Couplers_5_r_Transition;}
+
+//6 Long Couplers
+spriteset(spriteset_Knuckles_6_Purchase,   "gfx/Couplers_6.png") {template_purchase_6(7, 21)}
+spriteset(spriteset_Knuckles_6,   "gfx/Couplers_6.png") {template_6(7, 39)}
+spriteset(spriteset_Knuckles_6_r,   "gfx/Couplers_6.png") {template_6_r(7, 39)}
+
+spriteset(spriteset_Buffers_6_Purchase,   "gfx/Couplers_6.png") {template_purchase_6(187, 21)}
+spriteset(spriteset_Buffers_6,   "gfx/Couplers_6.png") {template_6(187, 39)}
+spriteset(spriteset_Buffers_6_r,   "gfx/Couplers_6.png") {template_6_r(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_6_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_6_Purchase;
+	1945..2100: spriteset_Knuckles_6_Purchase;
+  return spriteset_Knuckles_6_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_6_Purchase, param_Couplers) {0:spriteset_Buffers_6_Purchase; 1:spriteset_Knuckles_6_Purchase; 2:switch_Couplers_6_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_6_Transition, current_year) {
+    0..1945: spriteset_Buffers_6;
+	1945..2100: spriteset_Knuckles_6;
+  return spriteset_Knuckles_6;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_6, param_Couplers) {0:spriteset_Buffers_6; 1:spriteset_Knuckles_6; 2:switch_Couplers_6_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_6_r_Transition, current_year) {
+    0..1945: spriteset_Buffers_6_r;
+	1945..2100: spriteset_Knuckles_6_r;
+  return spriteset_Knuckles_6_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_6_r, param_Couplers) {0:spriteset_Buffers_6_r; 1:spriteset_Knuckles_6_r; 2:switch_Couplers_6_r_Transition;}
+
+//6 Long Couplers repeat
+spriteset(spriteset_Knuckles_6_Repeat_Purchase,   "gfx/Couplers_6_Repeat.png") {template_purchase_6(7, 21)}
+spriteset(spriteset_Knuckles_6_Repeat,   "gfx/Couplers_6_Repeat.png") {template_6_repeat(7, 39)}
+
+spriteset(spriteset_Buffers_6_Repeat_Purchase,   "gfx/Couplers_6_Repeat.png") {template_purchase_6(187, 21)}
+spriteset(spriteset_Buffers_6_Repeat,   "gfx/Couplers_6_Repeat.png") {template_6_repeat(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_6_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_6_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_6_Repeat_Purchase;
+  return spriteset_Knuckles_6_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_6_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_6_Repeat_Purchase; 1:spriteset_Knuckles_6_Repeat_Purchase; 2:switch_Couplers_6_Repeat_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_6_Repeat_Transition, current_year) {
+    0..1945: spriteset_Buffers_6_Repeat;
+	1945..2100: spriteset_Knuckles_6_Repeat;
+  return spriteset_Knuckles_6_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_6_Repeat, param_Couplers) {0:spriteset_Buffers_6_Repeat; 1:spriteset_Knuckles_6_Repeat; 2:switch_Couplers_6_Repeat_Transition;}
+
+//7 Long Couplers
+spriteset(spriteset_Knuckles_7_Purchase,   "gfx/Couplers_7.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_Knuckles_7,   "gfx/Couplers_7.png") {template_7(7, 39)}
+spriteset(spriteset_Knuckles_7_r,   "gfx/Couplers_7.png") {template_7_r(7, 39)}
+
+spriteset(spriteset_Buffers_7_Purchase,   "gfx/Couplers_7.png") {template_purchase_7(187, 21)}
+spriteset(spriteset_Buffers_7,   "gfx/Couplers_7.png") {template_7(187, 39)}
+spriteset(spriteset_Buffers_7_r,   "gfx/Couplers_7.png") {template_7_r(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_7_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_7_Purchase;
+	1945..2100: spriteset_Knuckles_7_Purchase;
+  return spriteset_Knuckles_7_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_7_Purchase, param_Couplers) {0:spriteset_Buffers_7_Purchase; 1:spriteset_Knuckles_7_Purchase; 2:switch_Couplers_7_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_7_Transition, current_year) {
+    0..1945: spriteset_Buffers_7;
+	1945..2100: spriteset_Knuckles_7;
+  return spriteset_Knuckles_7;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_7, param_Couplers) {0:spriteset_Buffers_7; 1:spriteset_Knuckles_7; 2:switch_Couplers_7_Transition;}
+
+//7 Long Couplers repeat
+spriteset(spriteset_Knuckles_7_Repeat_Purchase,   "gfx/Couplers_7_Repeat.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_Knuckles_7_Repeat,   "gfx/Couplers_7_Repeat.png") {template_7_repeat(7, 39)}
+
+spriteset(spriteset_Buffers_7_Repeat_Purchase,   "gfx/Couplers_7_Repeat.png") {template_purchase_7(187, 21)}
+spriteset(spriteset_Buffers_7_Repeat,   "gfx/Couplers_7_Repeat.png") {template_7_repeat(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_7_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_7_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_7_Repeat_Purchase;
+  return spriteset_Knuckles_7_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_7_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_7_Repeat_Purchase; 1:spriteset_Knuckles_7_Repeat_Purchase; 2:switch_Couplers_7_Repeat_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_7_Repeat_Transition, current_year) {
+    0..1945: spriteset_Buffers_7_Repeat;
+	1945..2100: spriteset_Knuckles_7_Repeat;
+  return spriteset_Knuckles_7_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_7_Repeat, param_Couplers) {0:spriteset_Buffers_7_Repeat; 1:spriteset_Knuckles_7_Repeat; 2:switch_Couplers_7_Repeat_Transition;}
+
+//8 Long Couplers
+spriteset(spriteset_Knuckles_8_Purchase,   "gfx/Couplers_8.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Knuckles_8,   "gfx/Couplers_8.png") {template_8(7, 39)}
+spriteset(spriteset_Knuckles_8_r,   "gfx/Couplers_8.png") {template_8_r(7, 39)}
+
+spriteset(spriteset_Buffers_8_Purchase,   "gfx/Couplers_8.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Buffers_8,   "gfx/Couplers_8.png") {template_8(187, 39)}
+spriteset(spriteset_Buffers_8_r,   "gfx/Couplers_8.png") {template_8_r(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_8_Purchase;
+	1945..2100: spriteset_Knuckles_8_Purchase;
+  return spriteset_Knuckles_8_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8_Purchase, param_Couplers) {0:spriteset_Buffers_8_Purchase; 1:spriteset_Knuckles_8_Purchase; 2:switch_Couplers_8_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8_Transition, current_year) {
+    0..1945: spriteset_Buffers_8;
+	1945..2100: spriteset_Knuckles_8;
+  return spriteset_Knuckles_8;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8, param_Couplers) {0:spriteset_Buffers_8; 1:spriteset_Knuckles_8; 2:switch_Couplers_8_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8_r_Transition, current_year) {
+    0..1945: spriteset_Buffers_8_r;
+	1945..2100: spriteset_Knuckles_8_r;
+  return spriteset_Knuckles_8_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8_r, param_Couplers) {0:spriteset_Buffers_8_r; 1:spriteset_Knuckles_8_r; 2:switch_Couplers_8_r_Transition;}
+
+//8 Long Couplers Repeat
+spriteset(spriteset_Knuckles_8_Repeat_Purchase,   "gfx/Couplers_8_Repeat.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Knuckles_8_Repeat,   "gfx/Couplers_8_Repeat.png") {template_8_repeat(7, 39)}
+
+spriteset(spriteset_Buffers_8_Repeat_Purchase,   "gfx/Couplers_8_Repeat.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Buffers_8_Repeat,   "gfx/Couplers_8_Repeat.png") {template_8_repeat(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_8_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_8_Repeat_Purchase;
+  return spriteset_Knuckles_8_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_8_Repeat_Purchase; 1:spriteset_Knuckles_8_Repeat_Purchase; 2:switch_Couplers_8_Repeat_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8_Repeat_Transition, current_year) {
+    0..1945: spriteset_Buffers_8_Repeat;
+	1945..2100: spriteset_Knuckles_8_Repeat;
+  return spriteset_Knuckles_8_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8_Repeat, param_Couplers) {0:spriteset_Buffers_8_Repeat; 1:spriteset_Knuckles_8_Repeat; 2:switch_Couplers_8_Repeat_Transition;}
+
+//8F Long Couplers
+spriteset(spriteset_Knuckles_8F_Purchase,   "gfx/Couplers_8F.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Knuckles_8F,   "gfx/Couplers_8F.png") {template_8(7, 39)}
+spriteset(spriteset_Knuckles_8F_r,   "gfx/Couplers_8F.png") {template_8_r(7, 39)}
+
+spriteset(spriteset_Buffers_8F_Purchase,   "gfx/Couplers_8F.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Buffers_8F,   "gfx/Couplers_8F.png") {template_8(187, 39)}
+spriteset(spriteset_Buffers_8F_r,   "gfx/Couplers_8F.png") {template_8_r(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8F_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_8F_Purchase;
+	1945..2100: spriteset_Knuckles_8F_Purchase;
+  return spriteset_Knuckles_8F_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8F_Purchase, param_Couplers) {0:spriteset_Buffers_8F_Purchase; 1:spriteset_Knuckles_8F_Purchase; 2:switch_Couplers_8F_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8F_Transition, current_year) {
+    0..1945: spriteset_Buffers_8F;
+	1945..2100: spriteset_Knuckles_8F;
+  return spriteset_Knuckles_8F;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8F, param_Couplers) {0:spriteset_Buffers_8F; 1:spriteset_Knuckles_8F; 2:switch_Couplers_8F_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8F_r_Transition, current_year) {
+    0..1945: spriteset_Buffers_8F_r;
+	1945..2100: spriteset_Knuckles_8F_r;
+  return spriteset_Knuckles_8F_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8F_r, param_Couplers) {0:spriteset_Buffers_8F_r; 1:spriteset_Knuckles_8F_r; 2:switch_Couplers_8F_r_Transition;}
+
+//8F Long Couplers Repeat
+spriteset(spriteset_Knuckles_8F_Repeat_Purchase,   "gfx/Couplers_8F_Repeat.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Knuckles_8F_Repeat,   "gfx/Couplers_8F_Repeat.png") {template_8_repeat(7, 39)}
+
+spriteset(spriteset_Buffers_8F_Repeat_Purchase,   "gfx/Couplers_8F_Repeat.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Buffers_8F_Repeat,   "gfx/Couplers_8F_Repeat.png") {template_8_repeat(187, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8F_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_8F_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_8F_Repeat_Purchase;
+  return spriteset_Knuckles_8F_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8F_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_8F_Repeat_Purchase; 1:spriteset_Knuckles_8F_Repeat_Purchase; 2:switch_Couplers_8F_Repeat_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_8F_Repeat_Transition, current_year) {
+    0..1945: spriteset_Buffers_8F_Repeat;
+	1945..2100: spriteset_Knuckles_8F_Repeat;
+  return spriteset_Knuckles_8F_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_8F_Repeat, param_Couplers) {0:spriteset_Buffers_8F_Repeat; 1:spriteset_Knuckles_8F_Repeat; 2:switch_Couplers_8F_Repeat_Transition;}
+
+//9 Long Couplers Repeat
+spriteset(spriteset_Knuckles_9_Repeat_Purchase,   "gfx/Couplers_9_Repeat.png") {template_purchase_9(7, 21)}
+spriteset(spriteset_Knuckles_9_Repeat,   "gfx/Couplers_9_Repeat.png") {template_9_repeat(7, 39)}
+
+spriteset(spriteset_Buffers_9_Repeat_Purchase,   "gfx/Couplers_9_Repeat.png") {template_purchase_9(219, 21)}
+spriteset(spriteset_Buffers_9_Repeat,   "gfx/Couplers_9_Repeat.png") {template_9_repeat(219, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_9_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_9_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_9_Repeat_Purchase;
+  return spriteset_Knuckles_9_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_9_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_9_Repeat_Purchase; 1:spriteset_Knuckles_9_Repeat_Purchase; 2:switch_Couplers_9_Repeat_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_9_Repeat_Transition, current_year) {
+    0..1945: spriteset_Buffers_9_Repeat;
+	1945..2100: spriteset_Knuckles_9_Repeat;
+  return spriteset_Knuckles_9_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_9_Repeat, param_Couplers) {0:spriteset_Buffers_9_Repeat; 1:spriteset_Knuckles_9_Repeat; 2:switch_Couplers_9_Repeat_Transition;}
+
+//9F Long Couplers
+spriteset(spriteset_Knuckles_9F_Purchase,   "gfx/Couplers_9F.png") {template_purchase_9(7, 21)}
+spriteset(spriteset_Knuckles_9F,   "gfx/Couplers_9F.png") {template_9(7, 39)}
+spriteset(spriteset_Knuckles_9F_r,   "gfx/Couplers_9F.png") {template_9_r(7, 39)}
+
+spriteset(spriteset_Buffers_9F_Purchase,   "gfx/Couplers_9F.png") {template_purchase_9(219, 21)}
+spriteset(spriteset_Buffers_9F,   "gfx/Couplers_9F.png") {template_9(219, 39)}
+spriteset(spriteset_Buffers_9F_r,   "gfx/Couplers_9F.png") {template_9_r(219, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_9F_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_9F_Purchase;
+	1945..2100: spriteset_Knuckles_9F_Purchase;
+  return spriteset_Knuckles_9F_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_9F_Purchase, param_Couplers) {0:spriteset_Buffers_9F_Purchase; 1:spriteset_Knuckles_9F_Purchase; 2:switch_Couplers_9F_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_9F_Transition, current_year) {
+    0..1945: spriteset_Buffers_9F;
+	1945..2100: spriteset_Knuckles_9F;
+  return spriteset_Knuckles_9F;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_9F, param_Couplers) {0:spriteset_Buffers_9F; 1:spriteset_Knuckles_9F; 2:switch_Couplers_9F_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_9F_r_Transition, current_year) {
+    0..1945: spriteset_Buffers_9F_r;
+	1945..2100: spriteset_Knuckles_9F_r;
+  return spriteset_Knuckles_9F_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_9F_r, param_Couplers) {0:spriteset_Buffers_9F_r; 1:spriteset_Knuckles_9F_r; 2:switch_Couplers_9F_r_Transition;}
+
+//10 Long Couplers Repeat
+spriteset(spriteset_Knuckles_10_Repeat_Purchase,   "gfx/Couplers_10_Repeat.png") {template_purchase_10(7, 21)}
+spriteset(spriteset_Knuckles_10_Repeat,   "gfx/Couplers_10_Repeat.png") {template_10_repeat(7, 39)}
+
+spriteset(spriteset_Buffers_10_Repeat_Purchase,   "gfx/Couplers_10_Repeat.png") {template_purchase_10(219, 21)}
+spriteset(spriteset_Buffers_10_Repeat,   "gfx/Couplers_10_Repeat.png") {template_10_repeat(219, 39)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_10_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_10_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_10_Repeat_Purchase;
+  return spriteset_Knuckles_10_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_10_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_10_Repeat_Purchase; 1:spriteset_Knuckles_10_Repeat_Purchase; 2:switch_Couplers_10_Repeat_Purchase_Transition;}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_10_Repeat_Transition, current_year) {
+    0..1945: spriteset_Buffers_10_Repeat;
+	1945..2100: spriteset_Knuckles_10_Repeat;
+  return spriteset_Knuckles_10_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_10_Repeat, param_Couplers) {0:spriteset_Buffers_10_Repeat; 1:spriteset_Knuckles_10_Repeat; 2:switch_Couplers_10_Repeat_Transition;}
+
+//11 Long Couplers Repeat
+spriteset(spriteset_Knuckles_11_Repeat_Purchase,   "gfx/Couplers_11_Repeat.png") {template_purchase_11(7, 21)}
+spriteset(spriteset_Buffers_11_Repeat_Purchase,   "gfx/Couplers_11_Repeat.png") {template_purchase_11(219, 21)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_11_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_11_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_11_Repeat_Purchase;
+  return spriteset_Knuckles_11_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_11_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_11_Repeat_Purchase; 1:spriteset_Knuckles_11_Repeat_Purchase; 2:switch_Couplers_11_Repeat_Purchase_Transition;}
+
+//12 Long Couplers Repeat
+spriteset(spriteset_Knuckles_12_Repeat_Purchase,   "gfx/Couplers_12_Repeat.png") {template_purchase_12(7, 21)}
+spriteset(spriteset_Buffers_12_Repeat_Purchase,   "gfx/Couplers_12_Repeat.png") {template_purchase_12(187, 21)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_12_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_12_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_12_Repeat_Purchase;
+  return spriteset_Knuckles_12_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_12_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_12_Repeat_Purchase; 1:spriteset_Knuckles_12_Repeat_Purchase; 2:switch_Couplers_12_Repeat_Purchase_Transition;}
+
+//16 Long Couplers Repeat
+spriteset(spriteset_Knuckles_16_Repeat_Purchase,   "gfx/Couplers_16_Repeat.png") {template_purchase_16(7, 21)}
+spriteset(spriteset_Buffers_16_Repeat_Purchase,   "gfx/Couplers_16_Repeat.png") {template_purchase_16(187, 21)}
+
+switch(FEAT_TRAINS, PARENT, switch_Couplers_16_Repeat_Purchase_Transition, current_year) {
+    0..1945: spriteset_Buffers_16_Repeat_Purchase;
+	1945..2100: spriteset_Knuckles_16_Repeat_Purchase;
+  return spriteset_Knuckles_16_Repeat_Purchase;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Couplers_16_Repeat_Purchase, param_Couplers) {0:spriteset_Buffers_16_Repeat_Purchase; 1:spriteset_Knuckles_16_Repeat_Purchase; 2:switch_Couplers_16_Repeat_Purchase_Transition;}
+
+spriteset(spriteset_8_Blank, "gfx/Blank.png") {template_8_repeat(7, 39)}
+
+const Liv0_ID = 0;
+const Liv1_ID = 1;
+const Liv2_ID = 2;
+const Liv3_ID = 3;
+const Liv4_ID = 4;
+const Liv5_ID = 5;
+const Liv6_ID = 6;
+const Liv7_ID = 7;
+const Liv8_ID = 8;
+const Liv9_ID = 9;
+const Liv10_ID = 10;
+const Liv11_ID = 11;
+const Liv12_ID = 12;
+const Liv13_ID = 13;
+const Liv14_ID = 14;
+const Liv15_ID = 15;
+const Liv16_ID = 16;
+const Liv17_ID = 17;
+const Liv18_ID = 18;
+const Liv19_ID = 19;
+const Liv20_ID = 20;
+const Liv21_ID = 21;
+const Liv22_ID = 22;
+const Liv23_ID = 23;
+const Liv24_ID = 24;
+const Liv25_ID = 25;
+const Liv26_ID = 26;
+const Liv27_ID = 27;
+const Liv28_ID = 28;
+const Liv29_ID = 29;
+const Liv30_ID = 30;
+const Liv31_ID = 31;
+const Liv32_ID = 32;
+const Liv33_ID = 33;
+const Liv34_ID = 34;
+const Liv35_ID = 35;
+const Liv36_ID = 36;
+const Liv37_ID = 37;
+const Liv38_ID = 38;
+const Liv39_ID = 39;
+const Liv40_ID = 40;
+const Liv41_ID = 41;
+const Liv42_ID = 42;
+const Liv43_ID = 43;
+const Liv44_ID = 44;
+const Liv45_ID = 45;
+const Liv46_ID = 46;
+const Liv47_ID = 47;
+const Liv48_ID = 48;
+const Liv49_ID = 49;
+
+//Trains Below!
+
+//ID
+const Henschel_TT12_ID = 14000;
+//introduction_date
+const Henschel_TT12_IntroDate = date(1959, 1, 1);
+//speed
+const Henschel_TT12_Speed = 80;
+//cost_factor
+const Henschel_TT12_CostFactor = 39;
+//running_cost_factor
+const Henschel_TT12_RunningCostFactor = 105;
+//power
+const Henschel_TT12_Power = 1425;
+//weight
+const Henschel_TT12_Weight = 100;
+//length
+const Henschel_TT12_Length = 8;
+
+//Henschel_TT12_Liv0
+spriteset(spriteset_Henschel_TT12_Liv0_Purchase,   "gfx/Henschel_TT12_Liv0.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Henschel_TT12_Liv0,   "gfx/Henschel_TT12_Liv0.png") {template_8(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Henschel_TT12_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Henschel_TT12_Liv0_Purchase;
+    1: switch_Couplers_8F_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Henschel_TT12_Liv0_Normal_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Henschel_TT12_Liv0;
+    1: switch_Couplers_8F_Repeat;
+}
+
+const Henschel_TT12_Liv0_ID = (Henschel_TT12_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Henschel_TT12_Liv0, Henschel_TT12_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_HENSCHEL_TT12);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Henschel_TT12_IntroDate;		
+		length:                         Henschel_TT12_Length;
+		
+		speed:							Henschel_TT12_Speed km/h;
+		cost_factor:					Henschel_TT12_CostFactor;
+		running_cost_factor:			Henschel_TT12_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Henschel_TT12_Power;
+		weight:							Henschel_TT12_Weight;
+		
+//        variant_group: 					Item_Henschel_TT12_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+		default: 						switch_Henschel_TT12_Liv0_Normal_Stack;
+//		sound_effect: 					switch_Clyde_16_645;
+        purchase: 						switch_Henschel_TT12_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_HENSCHEL_TT12);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//ID
+const GE_U26C_ID = 14850;
+//introduction_date
+const GE_U26C_IntroDate = date(1972, 1, 1);
+//speed
+const GE_U26C_Speed = 105;
+//cost_factor
+const GE_U26C_CostFactor = 50;
+//running_cost_factor
+const GE_U26C_RunningCostFactor = 135;
+//power
+const GE_U26C_Power = 2500;
+//weight
+const GE_U26C_Weight = 98;
+
+//GE_U26C_Liv0
+spriteset(spriteset_GE_U26C_Liv0_Purchase,   "gfx/GE_U26C_Liv0.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_GE_U26C_Liv0,   "gfx/GE_U26C_Liv0.png") {template_7(7, 39)}
+spriteset(spriteset_GE_U26C_Liv0_r,   "gfx/GE_U26C_Liv0.png") {template_7_r(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_GE_U26C_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GE_U26C_Liv0_Purchase;
+    1: switch_Couplers_7_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_GE_U26C_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GE_U26C_Liv0;
+	1: switch_Couplers_7_Repeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_GE_U26C_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GE_U26C_Liv0_r;
+	1: switch_Couplers_7_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_GE_U26C_Liv0_pair, position_in_vehid_chain % 2) {
+ 1: switch_GE_U26C_Liv0_r;
+  switch_GE_U26C_Liv0_Fw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_GE_U26C_Liv0_rear, position_in_vehid_chain_from_end) {
+ 0: switch_GE_U26C_Liv0_r;
+  switch_GE_U26C_Liv0_pair;
+}
+
+switch(FEAT_TRAINS, SELF, switch_GE_U26C_Liv0_position, position_in_consist) {
+ 0: switch_GE_U26C_Liv0_Fw;
+  switch_GE_U26C_Liv0_rear;
+}
+
+const GE_U26C_Liv0_ID = (GE_U26C_ID + Liv0_ID);
+//GE_U26C_Liv0
+item(FEAT_TRAINS, Item_GE_U26C_Liv0, GE_U26C_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_GE_U26C);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              GE_U26C_IntroDate;		
+		length:                         7;
+		
+		speed:							GE_U26C_Speed km/h;
+		cost_factor:					GE_U26C_CostFactor;
+		running_cost_factor:			GE_U26C_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							GE_U26C_Power;
+		weight:							GE_U26C_Weight;
+		
+//        variant_group: 					Item_GE_U26C_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_GE_U26C_Liv0_position;
+//		sound_effect: 					switch_GE_7FDL12;
+        purchase: 						switch_GE_U26C_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_GE_U26C);
+}
+}

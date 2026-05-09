@@ -252,6 +252,9 @@ STR_INFO_GONINAN_C44ACHI:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN
 STR_NAME_EE_RSE45B:English Electric RSE45B
 STR_INFO_EE_RSE45B:{BLACK}Role: {GOLD}Light Mixed Traffic {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}TGR X Class
 
+STR_NAME_BCW_NSU:BCW NSU Class
+STR_INFO_BCW_NSU:{BLACK}Role: {GOLD}Light Mixed Traffic {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Commonwealth Railways NSU Class
+
 STR_NAME_ALCO_DL531_NG:Goodwin-ALCO DL531
 STR_INFO_ALCO_DL531_NG:{BLACK}Role: {GOLD}Light Freight {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 48 Class, SAR 830 Class, Silverton 48s Class {}{GOLD}Also known as the ALCO RSD-8
 STR_NAME_ALCO_DL531:Goodwin-ALCO DL531
