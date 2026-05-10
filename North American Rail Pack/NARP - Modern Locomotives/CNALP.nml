@@ -6979,51 +6979,171 @@ item(FEAT_TRAINS, Item_Alstom_PL42AC_Liv0, Alstom_PL42AC_Liv0_ID) {
 }
 }
 
+//ID
+const Lima_LT2500_ID = 15450;
+//introduction_date
+const Lima_LT2500_IntroDate = date(1950, 1, 1);
+//speed
+const Lima_LT2500_Speed = 55;
+//cost_factor
+const Lima_LT2500_CostFactor = 46;
+//running_cost_factor
+const Lima_LT2500_RunningCostFactor = 124;
+//power
+const Lima_LT2500_Power = 2500;
+//weight
+const Lima_LT2500_Weight = 164;
+//length
+const Lima_LT2500_Length = 8;
+
 //Lima_LT2500_Liv0
 spriteset(spriteset_Lima_LT2500_Liv0_Purchase,   "gfx/Lima_LT2500_Liv0.png") {template_purchase_8(7, 21)}
-spriteset(spriteset_Lima_LT2500_Liv0,   "gfx/Lima_LT2500_Liv0.png") {template_8_repeat(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_Lima_LT2500_Liv0,   "gfx/Lima_LT2500_Liv0.png") {template_8(7, 39)} // <- Define a wagon, in this case the cab
 
-item(FEAT_TRAINS, Item_Lima_LT2500_Liv0, 15450) {
+const Lima_LT2500_Liv0_ID = (Lima_LT2500_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Lima_LT2500_Liv0, Lima_LT2500_Liv0_ID) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-        refit_cost:                        0;
-        climates_available:                (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
-        bitmask_vehicle_info:            0;
-        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
 
-        track_type:                        RAIL;
-        running_cost_base:                RUNNING_COST_DIESEL;
-        engine_class:                     ENGINE_CLASS_DIESEL;
-//        ai_special_flag:                AI_FLAG_CARGO;
-        dual_headed:                    0; // <- Double Headed, so cab on each end
-
-        visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
-
-        name:                            string(STR_NAME_LIMA_LT2500);
-        introduction_date:                date(1950,1,1);
-        vehicle_life:                     50;
-        model_life:                        30;
-        length:                            8;
-
-        weight:                        164 ton;
-        speed:                            55 mph;
-        power:                            2500 hp;
-        tractive_effort_coefficient:     0.5;
-        cost_factor:                     15;
-        running_cost_factor:             128;
-		cargo_capacity:                  0;
-
-//        variant_group: Item_Lima_LT2500_Liv0;
-//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+        name:                           string(STR_NAME_LIMA_LT2500);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Lima_LT2500_IntroDate;		
+		length:                         Lima_LT2500_Length;
+		
+		speed:							Lima_LT2500_Speed mph;
+		cost_factor:					Lima_LT2500_CostFactor;
+		running_cost_factor:			Lima_LT2500_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Lima_LT2500_Power;
+		weight:							Lima_LT2500_Weight;
+		
+//        variant_group: 					Item_Lima_LT2500_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
-        default: spriteset_Lima_LT2500_Liv0;
-		sound_effect: switch_Generic_Modern_Diesel;
-        purchase: spriteset_Lima_LT2500_Liv0_Purchase;
-        additional_text: string(STR_INFO_LIMA_LT2500);
+        default: 						spriteset_Lima_LT2500_Liv0;
+//		sound_effect: 					switch_EMD_16_567;
+        purchase: 						spriteset_Lima_LT2500_Liv0_Purchase;
+        additional_text: 				string(STR_INFO_LIMA_LT2500);
 		reverse_build_probability: return 50;
 }
 }
+
+//ID
+const ALCO_RSC3_ID = 17500;
+//introduction_date
+const ALCO_RSC3_IntroDate = date(1950, 1, 1);
+//speed
+const ALCO_RSC3_Speed = 65;
+//cost_factor
+const ALCO_RSC3_CostFactor = 39;
+//running_cost_factor
+const ALCO_RSC3_RunningCostFactor = 105;
+//power
+const ALCO_RSC3_Power = 1600;
+//weight
+const ALCO_RSC3_Weight = 115;
+//length
+const ALCO_RSC3_Length = 7;
+
+//ALCO_RSC3_Liv0
+spriteset(spriteset_ALCO_RSC3_Liv0_Purchase,   "gfx/ALCO_RSC3_Liv0.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_ALCO_RSC3_Liv0,   "gfx/ALCO_RSC3_Liv0.png") {template_7(7, 39)} // <- Define a wagon, in this case the cab
+spriteset(spriteset_ALCO_RSC3_Liv0_r,   "gfx/ALCO_RSC3_Liv0.png") {template_7_r(7, 39)}
+
+switch(FEAT_TRAINS, SELF, switch_ALCO_RSC3_Liv0_pair, position_in_vehid_chain % 2) {
+ 1: spriteset_ALCO_RSC3_Liv0_r;
+  spriteset_ALCO_RSC3_Liv0;
+}
+
+switch(FEAT_TRAINS, SELF, switch_ALCO_RSC3_Liv0_rear, position_in_vehid_chain_from_end) {
+ 0: spriteset_ALCO_RSC3_Liv0_r;
+  switch_ALCO_RSC3_Liv0_pair;
+}
+
+switch(FEAT_TRAINS, SELF, switch_ALCO_RSC3_Liv0_position, position_in_consist) {
+ 0: spriteset_ALCO_RSC3_Liv0;
+  switch_ALCO_RSC3_Liv0_rear;
+}
+
+const ALCO_RSC3_Liv0_ID = (ALCO_RSC3_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_ALCO_RSC3_Liv0, ALCO_RSC3_Liv0_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_ALCO_RSC3);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              ALCO_RSC3_IntroDate;		
+		length:                         ALCO_RSC3_Length;
+		
+		speed:							ALCO_RSC3_Speed mph;
+		cost_factor:					ALCO_RSC3_CostFactor;
+		running_cost_factor:			ALCO_RSC3_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							ALCO_RSC3_Power;
+		weight:							ALCO_RSC3_Weight;
+		
+//        variant_group: 					Item_ALCO_RSC3_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_ALCO_RSC3_Liv0_position;
+//		sound_effect: 					switch_EMD_16_567;
+        purchase: 						spriteset_ALCO_RSC3_Liv0_Purchase;
+        additional_text: 				string(STR_INFO_ALCO_RSC3);
+}
+}
+
+//ID
+const EMD_SDL39_ID = 17850;
+//introduction_date
+const EMD_SDL39_IntroDate = date(1969, 1, 1);
+//speed
+const EMD_SDL39_Speed = 65;
+//cost_factor
+const EMD_SDL39_CostFactor = 48;
+//running_cost_factor
+const EMD_SDL39_RunningCostFactor = 129;
+//power
+const EMD_SDL39_Power = 2300;
+//weight
+const EMD_SDL39_Weight = 113;
+//length
+const EMD_SDL39_Length = 7;
 
 //EMD_SDL39_Liv0
 spriteset(spriteset_EMD_SDL39_Liv0_Purchase,   "gfx/EMD_SDL39_Liv0.png") {template_purchase_7(7, 21)}
@@ -7045,44 +7165,48 @@ switch(FEAT_TRAINS, SELF, switch_EMD_SDL39_Liv0_position, position_in_consist) {
   switch_EMD_SDL39_Liv0_rear;
 }
 
-item(FEAT_TRAINS, Item_EMD_SDL39_Liv0, 17850) {
+const EMD_SDL39_Liv0_ID = (EMD_SDL39_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_EMD_SDL39_Liv0, EMD_SDL39_Liv0_ID) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-        refit_cost:                        0;
-        climates_available:                (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
-        bitmask_vehicle_info:            0;
-        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
 
-        track_type:                        RAIL;
-        running_cost_base:                RUNNING_COST_DIESEL;
-        engine_class:                     ENGINE_CLASS_DIESEL;
-//        ai_special_flag:                AI_FLAG_CARGO;
-        dual_headed:                    0; // <- Double Headed, so cab on each end
-
-        visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
-
-        name:                            string(STR_NAME_EMD_SDL39);
-        introduction_date:                date(1969,1,1);
-        vehicle_life:                     50;
-        model_life:                        30;
-        length:                            7;
-
-        weight:                        113 ton;
-        speed:                            65 mph;
-        power:                            2300 hp;
-        tractive_effort_coefficient:     0.3;
-        cost_factor:                     14;
-        running_cost_factor:             117;
-		cargo_capacity:                  0;
-
-//        variant_group: Item_EMD_SDL39_Liv0;
-//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+        name:                           string(STR_NAME_EMD_SDL39);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EMD_SDL39_IntroDate;		
+		length:                         EMD_SDL39_Length;
+		
+		speed:							EMD_SDL39_Speed mph;
+		cost_factor:					EMD_SDL39_CostFactor;
+		running_cost_factor:			EMD_SDL39_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EMD_SDL39_Power;
+		weight:							EMD_SDL39_Weight;
+		
+//        variant_group: 					Item_EMD_SDL39_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
-        default: switch_EMD_SDL39_Liv0_position;
-		sound_effect: switch_EMD_12_645;
-        purchase: spriteset_EMD_SDL39_Liv0_Purchase;
-        additional_text: string(STR_INFO_EMD_SDL39);
+        default: 						switch_EMD_SDL39_Liv0_position;
+//		sound_effect: 					switch_EMD_16_567;
+        purchase: 						spriteset_EMD_SDL39_Liv0_Purchase;
+        additional_text: 				string(STR_INFO_EMD_SDL39);
 }
 }
 

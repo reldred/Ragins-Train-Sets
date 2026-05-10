@@ -98,6 +98,9 @@ STR_INFO_LIMA_LT2500:{BLACK}Role: {GOLD}Transfer Switcher {}{BLACK}Gauge:{GOLD} 
 
 
 
+STR_NAME_ALCO_RSC3:ALCO RSC-3
+STR_INFO_ALCO_RSC3:{BLACK}Role: {GOLD}Light Freight {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {BROWN}Diesel
+
 STR_NAME_EMD_SDL39:EMD SDL39
 STR_INFO_EMD_SDL39:{BLACK}Role: {GOLD}Light Freight {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {BROWN}Diesel
 
