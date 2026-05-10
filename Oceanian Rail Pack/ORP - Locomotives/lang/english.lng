@@ -271,16 +271,16 @@ STR_INFO_CLYDE_JL22C:{BLACK}Role: {GOLD}Light Mixed Traffic {}{BLACK}Gauge:{GOLD
 
 
 STR_NAME_CLYDE_ML2:Clyde-EMD ML2
-STR_INFO_CLYDE_ML2:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge: {GOLD}Standard Gauge{}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR B Class
+STR_INFO_CLYDE_ML2:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR B Class
 
 STR_NAME_CLYDE_ML2_BG:Clyde-EMD ML2
-STR_INFO_CLYDE_ML2_BG:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge: {GOLD}Broad Gauge{}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR B Class
+STR_INFO_CLYDE_ML2_BG:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR B Class
+
+STR_NAME_EE_DFCLASS:English-Electric DF Class
+STR_INFO_EE_DFCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR DF Class
 
 STR_NAME_CLYDE_G12A:Clyde-EMD G12A
 STR_INFO_CLYDE_G12A:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZ DA Class
-
-STR_NAME_EE_DFCLASS:English-Electric DF Class
-STR_INFO_EE_DFCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR DF Class
 
 STR_NAME_ALCO_DL500B:Goodwin-ALCO DL500B
 STR_INFO_ALCO_DL500B:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge: {GOLD}Standard Gauge{}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 44 Class, SAR 930 Class
