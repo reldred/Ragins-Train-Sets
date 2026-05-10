@@ -475,8 +475,11 @@ STR_INFO_EMD_FL9:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gau
 STR_NAME_EMD_F39PHDM:EMD F39PH-DM
 STR_INFO_EMD_F39PHDM:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {GREEN}Third Rail Electro-Diesel
 
-STR_NAME_GE_P32AC:GE P32AC-DM
-STR_INFO_GE_P32AC:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {GREEN}Third Rail Electro-Diesel
+STR_NAME_EMD_F70PHDM:EMD F70PHAC-DM
+STR_INFO_EMD_F70PHDM:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {GREEN}Third Rail Electro-Diesel
+
+STR_NAME_GE_P32ACDM:GE P32AC-DM
+STR_INFO_GE_P32ACDM:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {GREEN}Third Rail Electro-Diesel
 
 STR_NAME_EMD_DM30AC:EMD DM30AC
 STR_INFO_EMD_DM30AC:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {GREEN}Third Rail Electro-Diesel
