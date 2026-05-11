@@ -11605,11 +11605,28 @@ item(FEAT_TRAINS, Item_EMD_SD90MACH2_Liv0, 32350) {
 
 
 
-//EMD_FT_Liv0
-spriteset(spriteset_EMD_FT_Liv0_Purchase,   "gfx/EMD_FT_Liv0.png") {template_purchase_77(7, 21)}
+//ID
+const EMD_FT_ID = 33150;
+//introduction_date
+const EMD_FT_IntroDate = date(1939, 1, 1);
+//speed
+const EMD_FT_Speed = 75;
+//cost_factor
+const EMD_FT_CostFactor = 36;
+//running_cost_factor
+const EMD_FT_RunningCostFactor = 95;
+//power
+const EMD_FT_Power = 1350;
+//weight
+const EMD_FT_Weight = 105;
+//length
+const EMD_FT_Length = 6;
 
-spriteset(spriteset_EMD_FT_Liv0_A,   "gfx/EMD_FT_Liv0.png") {template_7(7, 39)}
-spriteset(spriteset_EMD_FT_Liv0_B,   "gfx/EMD_FT_Liv0.png") {template_7(7, 69)}
+//EMD_FT_Liv0
+spriteset(spriteset_EMD_FT_Liv0_Purchase,   "gfx/EMD_FT_Liv0.png") {template_purchase_66(7, 21)}
+
+spriteset(spriteset_EMD_FT_Liv0_A,   "gfx/EMD_FT_Liv0.png") {template_6(7, 39)}
+spriteset(spriteset_EMD_FT_Liv0_B,   "gfx/EMD_FT_Liv0.png") {template_6(7, 69)}
 
 switch(FEAT_TRAINS, SELF, switch_EMD_FT_Liv0_lead_Altcheck, position_in_consist_from_end) {
  0: spriteset_EMD_FT_Liv0_A; // <- not flipped
@@ -11636,44 +11653,48 @@ switch(FEAT_TRAINS, SELF, switch_EMD_FT_Liv0_graphics, position_in_vehid_chain) 
   switch_EMD_FT_Liv0_rear_position;
 }
 
-item(FEAT_TRAINS, Item_EMD_FT_Liv0, 33150) {
+const EMD_FT_Liv0_ID = (EMD_FT_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_EMD_FT_Liv0, EMD_FT_Liv0_ID) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-        refit_cost:                        0;
-        climates_available:                (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
-        bitmask_vehicle_info:            0;
-        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
 
-        track_type:                        RAIL;
-        running_cost_base:                RUNNING_COST_DIESEL;
-        engine_class:                     ENGINE_CLASS_DIESEL;
-//        ai_special_flag:                AI_FLAG_CARGO;
-        dual_headed:                    0; // <- Double Headed, so cab on each end
-
-        visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
-
-        name:                            string(STR_NAME_EMD_FT);
-        introduction_date:                date(1939,1,1);
-        vehicle_life:                     50;
-        model_life:                        30;
-        length:                            7;
-
-        weight:                        104 ton;
-        speed:                            75 mph;
-        power:                            1350 hp;
-        tractive_effort_coefficient:     0.3;
-        cost_factor:                     11;
-        running_cost_factor:             88;
-        cargo_capacity:                  0;
-
-//        variant_group: Item_EMD_FT_Liv0;
-//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+        name:                           string(STR_NAME_EMD_FT);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EMD_FT_IntroDate;		
+		length:                         EMD_FT_Length;
+		
+		speed:							EMD_FT_Speed mph;
+		cost_factor:					EMD_FT_CostFactor;
+		running_cost_factor:			EMD_FT_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EMD_FT_Power;
+		weight:							EMD_FT_Weight;
+		
+//        variant_group: 					Item_EMD_FT_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
-        default: switch_EMD_FT_Liv0_graphics;
-		sound_effect: switch_EMD_16_567;
-        purchase: spriteset_EMD_FT_Liv0_Purchase;
-        additional_text: string(STR_INFO_EMD_FT);
+        default: 						switch_EMD_FT_Liv0_graphics;
+//		sound_effect: 					switch_EMD_16_567;
+        purchase: 						spriteset_EMD_FT_Liv0_Purchase;
+        additional_text: 				string(STR_INFO_EMD_FT);
 }
 }
 
