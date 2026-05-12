@@ -192,6 +192,9 @@ STR_INFO_ALCODL541_CROCODILE:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}D
 STR_NAME_ALCODL541_PILBARA:Goodwin-ALCO DL541 (Pilbara Cab)
 STR_INFO_ALCODL541_PILBARA:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Junee Workshops attempted rebuild of NSW 3505 (formerly 4505)
 
+STR_NAME_GMD_GL22MC:GMD GL22MC
+STR_INFO_GMD_GL22MC:{BLACK}Role: {GOLD}Freight {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZ DF Class
+
 STR_NAME_CLYDE_GL26C2:Clyde-EMD GL26C-2
 STR_INFO_CLYDE_GL26C2:{BLACK}Role: {GOLD}Freight {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR 2170 Class
 
@@ -378,6 +381,9 @@ STR_NAME_CLYDE_AAT22C2R:Clyde-EMD AAT22C-2R
 STR_INFO_CLYDE_AAT22C2R:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}Clyde-EMD ML2 {}{BLACK}Based on: {GOLD}V/Line A Class
 STR_NAME_CLYDE_AAT22C2R_BG:Clyde-EMD AAT22C-2R
 STR_INFO_CLYDE_AAT22C2R_BG:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}Clyde-EMD ML2 {}{BLACK}Based on: {GOLD}V/Line A Class
+
+STR_NAME_GMD_GT22MC:GMD GT22MC
+STR_INFO_GMD_GT22MC:{BLACK}Role: {GOLD}Freight {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}GMD GL22MC {}{BLACK}Based on: {GOLD}NZ DFT Class
 
 
 
