@@ -374,6 +374,9 @@ STR_INFO_COMENG_CL632_3R:{BLACK}Role: {GOLD}Freight {}{BLACK}Gauge:{GOLD} Standa
 
 
 
+STR_NAME_CLYDE_G22AR:Clyde-EMD G22AR
+STR_INFO_CLYDE_G22AR:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}GMD G12A {}{BLACK}Based on: {GOLD}NZ DC Class
+
 STR_NAME_CLYDE_J26C2SS:Clyde-EMD J26C-2SS
 STR_INFO_CLYDE_J26C2SS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}Clyde-EMD J26C {}{BLACK}Based on: {GOLD}NSW 42220 Rebuild {}{GOLD}Built to demonstrate the SD50 series Super-Series creep control later used in the 81 Class (JT26C-2SS)
 

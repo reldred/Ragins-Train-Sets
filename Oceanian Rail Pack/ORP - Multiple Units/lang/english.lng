@@ -160,8 +160,8 @@ STR_INFO_CAF_CXK:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple U
 STR_NAME_SDD_EMU_TULLOCHDD:Tulloch Double-Decker
 STR_INFO_SDD_EMU_TULLOCHDD:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{GOLD}First Double-Deck EMUs in the world
 
-STR_NAME_SDD_EMU_COMENGSSET:Comeng S-Set
-STR_INFO_SDD_EMU_COMENGSSET:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line
+STR_NAME_COMENG_SSET:Comeng S-Set
+STR_INFO_COMENG_SSET:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Sydney S-Set EMUs
 
 STR_NAME_SDD_EMU_AUPTDD:Comeng AUPT Double-Decker
 STR_INFO_SDD_EMU_AUPTDD:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line
