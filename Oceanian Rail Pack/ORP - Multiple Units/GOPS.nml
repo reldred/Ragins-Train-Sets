@@ -6198,200 +6198,200 @@ item(FEAT_TRAINS, Item_CAF_CxK_Liv0, CAF_CxK_ID_Liv0) {
 }
 
 //ID
-const Comeng_Sset_ID = 12040;
+const Comeng_SSet_ID = 12040;
 //introduction_date
-const Comeng_Sset_IntroDate = date(1972, 1, 1);
+const Comeng_SSet_IntroDate = date(1972, 1, 1);
 //speed
-const Comeng_Sset_Speed = 115;
+const Comeng_SSet_Speed = 115;
 //cost_factor
-const Comeng_Sset_CostFactor = 34;
+const Comeng_SSet_CostFactor = 34;
 //running_cost_factor
-const Comeng_Sset_RunningCostFactor = 88;
+const Comeng_SSet_RunningCostFactor = 88;
 //Cargo Capacity
-const Comeng_Sset_CargoCapacity = 163;
+const Comeng_SSet_CargoCapacity = 163;
 //power
-const Comeng_Sset_Power = 400;
+const Comeng_SSet_Power = 400;
 //weight
-const Comeng_Sset_Weight = 50;
+const Comeng_SSet_Weight = 50;
 //length
-const Comeng_Sset_Length = 8;
+const Comeng_SSet_Length = 8;
 
 //Pantographs
-spriteset(spriteset_Comeng_Sset_Panto_Purchase,   "gfx/Comeng_Sset_Pantographs.png") {template_purchase_88mu(7, 21)}
-spriteset(spriteset_Comeng_Sset_PantoDown,   "gfx/Comeng_Sset_Pantographs.png") {template_8(7, 39)}
-spriteset(spriteset_Comeng_Sset_PantoDown_r,   "gfx/Comeng_Sset_Pantographs.png") {template_8_r(7, 39)}
-spriteset(spriteset_Comeng_Sset_PantoUp,   "gfx/Comeng_Sset_Pantographs.png") {template_8(7, 69)}
-spriteset(spriteset_Comeng_Sset_PantoUp_r,   "gfx/Comeng_Sset_Pantographs.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Panto_Purchase,   "gfx/Comeng_SSet_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Comeng_SSet_PantoDown,   "gfx/Comeng_SSet_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_PantoDown_r,   "gfx/Comeng_SSet_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_PantoUp,   "gfx/Comeng_SSet_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_PantoUp_r,   "gfx/Comeng_SSet_Pantographs.png") {template_8_r(7, 69)}
 
 //Pantograph Controls
-switch(FEAT_TRAINS, SELF, switch_Comeng_Sset_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
- 0: spriteset_Comeng_Sset_PantoDown;
- 1: spriteset_Comeng_Sset_PantoUp;
+switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_Comeng_SSet_PantoDown;
+ 1: spriteset_Comeng_SSet_PantoUp;
 }
 
-switch(FEAT_TRAINS, SELF, switch_Comeng_Sset_Rw_railtype, tile_powers_railtype("OHLE_DC")) {
- 0: spriteset_Comeng_Sset_PantoDown_r;
- 1: spriteset_Comeng_Sset_PantoUp_r;
+switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Rw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_Comeng_SSet_PantoDown_r;
+ 1: spriteset_Comeng_SSet_PantoUp_r;
 }
 
-//Comeng_Sset_Liv0
-spriteset(spriteset_Comeng_Sset_Liv0_purchase_S1,   "gfx/Comeng_Sset_Liv0.png") {template_purchase_88mu(7, 21)}
-spriteset(spriteset_Comeng_Sset_Liv0_purchase_S2,   "gfx/Comeng_Sset_Liv0.png") {template_purchase_88mu(187, 21)}
-spriteset(spriteset_Comeng_Sset_Liv0_lead_S1,   "gfx/Comeng_Sset_Liv0.png") {template_8(7, 39)}
-spriteset(spriteset_Comeng_Sset_Liv0_lead_S2,   "gfx/Comeng_Sset_Liv0.png") {template_8(7, 69)}
-spriteset(spriteset_Comeng_Sset_Liv0_lead_S1_r,   "gfx/Comeng_Sset_Liv0.png") {template_8_r(7, 39)}
-spriteset(spriteset_Comeng_Sset_Liv0_lead_S2_r,   "gfx/Comeng_Sset_Liv0.png") {template_8_r(7, 69)}
-spriteset(spriteset_Comeng_Sset_Liv0_Trailer_Tulloch,   "gfx/Comeng_Sset_Liv0.png") {template_8_repeat(7, 99)}
-spriteset(spriteset_Comeng_Sset_Liv0_Trailer_Normal,   "gfx/Comeng_Sset_Liv0.png") {template_8_repeat(7, 129)}
+//Comeng_SSet_Liv0
+spriteset(spriteset_Comeng_SSet_Liv0_purchase_S1,   "gfx/Comeng_SSet_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Comeng_SSet_Liv0_purchase_S2,   "gfx/Comeng_SSet_Liv0.png") {template_purchase_88mu(187, 21)}
+spriteset(spriteset_Comeng_SSet_Liv0_lead_S1,   "gfx/Comeng_SSet_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv0_lead_S2,   "gfx/Comeng_SSet_Liv0.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv0_lead_S1_r,   "gfx/Comeng_SSet_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv0_lead_S2_r,   "gfx/Comeng_SSet_Liv0.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv0_Trailer_Tulloch,   "gfx/Comeng_SSet_Liv0.png") {template_8_repeat(7, 99)}
+spriteset(spriteset_Comeng_SSet_Liv0_Trailer_Normal,   "gfx/Comeng_SSet_Liv0.png") {template_8_repeat(7, 129)}
 
 //Purchase timeline
-switch(FEAT_TRAINS, PARENT, switch_Comeng_Sset_Timeline_Purchase, current_year) {
-    0..1973: spriteset_Comeng_Sset_Liv0_purchase_S1;
-	1974..2100: spriteset_Comeng_Sset_Liv0_purchase_S2;
-  return spriteset_Comeng_Sset_Liv0_purchase_S2;
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv0_Timeline_Purchase, current_year) {
+    0..1973: spriteset_Comeng_SSet_Liv0_purchase_S1;
+	1974..2100: spriteset_Comeng_SSet_Liv0_purchase_S2;
+  return spriteset_Comeng_SSet_Liv0_purchase_S2;
 }
 
 //Motor Cars
 //Forward
-random_switch(FEAT_TRAINS, SELF, switch_Comeng_Sset_Transition_Motor_Random){
-    1 : spriteset_Comeng_Sset_Liv0_lead_S1;
-	3 : spriteset_Comeng_Sset_Liv0_lead_S2;
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv0_Transition_Motor_Random){
+    1 : spriteset_Comeng_SSet_Liv0_lead_S1;
+	3 : spriteset_Comeng_SSet_Liv0_lead_S2;
 }
 
-switch(FEAT_TRAINS, PARENT, switch_Comeng_Sset_Transition_Motor, date_of_last_service) {
-    0..date(1973, 12, 31): spriteset_Comeng_Sset_Liv0_lead_S1;
-	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_Sset_Transition_Motor_Random;
-  return switch_Comeng_Sset_Transition_Motor_Random;
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv0_Transition_Motor, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv0_lead_S1;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv0_Transition_Motor_Random;
+  return switch_Comeng_SSet_Liv0_Transition_Motor_Random;
 }
 
 //Backward
-random_switch(FEAT_TRAINS, SELF, switch_Comeng_Sset_Transition_Motor_Random_r){
-    1 : spriteset_Comeng_Sset_Liv0_lead_S1_r;
-	3 : spriteset_Comeng_Sset_Liv0_lead_S2_r;
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv0_Transition_Motor_Random_r){
+    1 : spriteset_Comeng_SSet_Liv0_lead_S1_r;
+	3 : spriteset_Comeng_SSet_Liv0_lead_S2_r;
 }
 
-switch(FEAT_TRAINS, PARENT, switch_Comeng_Sset_Transition_Motor_r, date_of_last_service) {
-    0..date(1973, 12, 31): spriteset_Comeng_Sset_Liv0_lead_S1_r;
-	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_Sset_Transition_Motor_Random_r;
-  return switch_Comeng_Sset_Transition_Motor_Random_r;
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv0_Transition_Motor_r, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv0_lead_S1_r;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv0_Transition_Motor_Random_r;
+  return switch_Comeng_SSet_Liv0_Transition_Motor_Random_r;
 }
 
 //Trailer Cars
-random_switch(FEAT_TRAINS, SELF, switch_Comeng_Sset_Transition_Trailer_Random){
-    1 : spriteset_Comeng_Sset_Liv0_Trailer_Tulloch;
-	3 : spriteset_Comeng_Sset_Liv0_Trailer_Normal;
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv0_Transition_Trailer_Random){
+    1 : spriteset_Comeng_SSet_Liv0_Trailer_Tulloch;
+	3 : spriteset_Comeng_SSet_Liv0_Trailer_Normal;
 }
 
-switch(FEAT_TRAINS, PARENT, switch_Comeng_Sset_Transition_Trailer, date_of_last_service) {
-    0..date(1973, 12, 31): spriteset_Comeng_Sset_Liv0_Trailer_Tulloch;
-	date(1974, 1, 1)..date(2004, 1, 1): switch_Comeng_Sset_Transition_Trailer_Random;
-  return spriteset_Comeng_Sset_Liv0_Trailer_Normal;
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv0_Transition_Trailer, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv0_Trailer_Tulloch;
+	date(1974, 1, 1)..date(2004, 1, 1): switch_Comeng_SSet_Liv0_Transition_Trailer_Random;
+  return spriteset_Comeng_SSet_Liv0_Trailer_Normal;
 }
 //Purchase Stack
-switch (FEAT_TRAINS, SELF, switch_Comeng_Sset_Liv0_PurchaseStack, [
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv0_PurchaseStack, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: switch_Comeng_Sset_Timeline_Purchase;
-	1: spriteset_Comeng_Sset_Panto_Purchase;
+    0: switch_Comeng_SSet_Liv0_Timeline_Purchase;
+	1: spriteset_Comeng_SSet_Panto_Purchase;
 }
 
 //C Lead
-switch (FEAT_TRAINS, SELF, switch_Comeng_Sset_Liv0_MotorStack, [
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv0_MotorStack, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: switch_Comeng_Sset_Transition_Motor;
-	1: switch_Comeng_Sset_Fw_railtype;
+    0: switch_Comeng_SSet_Liv0_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
 }
 //C Rear
-switch (FEAT_TRAINS, SELF, switch_Comeng_Sset_Liv0_MotorStack_r, [
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv0_MotorStack_r, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: switch_Comeng_Sset_Transition_Motor;
-	1: switch_Comeng_Sset_Fw_railtype;
+    0: switch_Comeng_SSet_Liv0_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
 }
 
 //N Lead
-switch (FEAT_TRAINS, SELF, switch_Comeng_Sset_Liv0_NonControlMotorStack, [
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv0_NonControlMotorStack, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: switch_Comeng_Sset_Transition_Motor;
-	1: switch_Comeng_Sset_Fw_railtype;
+    0: switch_Comeng_SSet_Liv0_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
 }
 //N Rear
-switch (FEAT_TRAINS, SELF, switch_Comeng_Sset_Liv0_NonControlMotorStack_r, [
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv0_NonControlMotorStack_r, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: switch_Comeng_Sset_Transition_Motor_r;
-	1: switch_Comeng_Sset_Rw_railtype;
+    0: switch_Comeng_SSet_Liv0_Transition_Motor_r;
+	1: switch_Comeng_SSet_Rw_railtype;
 }
 
 //Midcars
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_pantocheck_at_2, position_in_vehid_chain % 3){
-    2 : switch_Comeng_Sset_Liv0_NonControlMotorStack_r;
-    return switch_Comeng_Sset_Transition_Trailer;
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Comeng_SSet_Liv0_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv0_Transition_Trailer;
 }
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
-    2 : switch_Comeng_Sset_Liv0_NonControlMotorStack;
-    return switch_Comeng_Sset_Transition_Trailer;
-}
-
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_pantocheck_at_1, position_in_vehid_chain % 2){
-    1 : switch_Comeng_Sset_Liv0_NonControlMotorStack_r;
-    return switch_Comeng_Sset_Transition_Trailer;
-}
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
-    1 : switch_Comeng_Sset_Liv0_NonControlMotorStack;
-    return switch_Comeng_Sset_Transition_Trailer;
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Comeng_SSet_Liv0_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv0_Transition_Trailer;
 }
 
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
-    1 : sw_Comeng_Sset_Liv0_pantocheck_at_1;
-    return sw_Comeng_Sset_Liv0_pantocheck_at_1r;
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Comeng_SSet_Liv0_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv0_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Comeng_SSet_Liv0_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv0_Transition_Trailer;
 }
 
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
-    1 : sw_Comeng_Sset_Liv0_pantocheck_at_1;
-    return switch_Comeng_Sset_Transition_Trailer;
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv0_pantocheck_at_1;
+    return sw_Comeng_SSet_Liv0_pantocheck_at_1r;
 }
 
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
-    1 : sw_Comeng_Sset_Liv0_pantocheck_at_2;
-    return sw_Comeng_Sset_Liv0_pantocheck_at_2r;
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv0_pantocheck_at_1;
+    return switch_Comeng_SSet_Liv0_Transition_Trailer;
 }
 
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_lencheck, num_vehs_in_vehid_chain ) {
-    0 .. 2 : switch_Comeng_Sset_Transition_Trailer;
-    3 : sw_Comeng_Sset_Liv0_pantocheck_at_1;
-    4 : sw_Comeng_Sset_Liv0_sidecheck_4;
-    5 : sw_Comeng_Sset_Liv0_pantocheck_at_2;
-    6 .. 7 : sw_Comeng_Sset_Liv0_sidecheck_6;
-    return sw_Comeng_Sset_Liv0_sidecheck_other;
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv0_pantocheck_at_2;
+    return sw_Comeng_SSet_Liv0_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : switch_Comeng_SSet_Liv0_Transition_Trailer;
+    3 : sw_Comeng_SSet_Liv0_pantocheck_at_1;
+    4 : sw_Comeng_SSet_Liv0_sidecheck_4;
+    5 : sw_Comeng_SSet_Liv0_pantocheck_at_2;
+    6 .. 7 : sw_Comeng_SSet_Liv0_sidecheck_6;
+    return sw_Comeng_SSet_Liv0_sidecheck_other;
 }
 
 //Endcars
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_panto_direction, vehicle_is_flipped){
-    0 : switch_Comeng_Sset_Liv0_MotorStack;        //Front panto
-    return switch_Comeng_Sset_Liv0_MotorStack_r;    //Rear panto
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_panto_direction, vehicle_is_flipped){
+    0 : switch_Comeng_SSet_Liv0_MotorStack;        //Front panto
+    return switch_Comeng_SSet_Liv0_MotorStack_r;    //Rear panto
 }
 
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_panto_flipcheck, vehicle_is_flipped){
-    0 : sw_Comeng_Sset_Liv0_panto_direction;        //Not flipped, give Panto
-    return switch_Comeng_Sset_Transition_Motor;    //Flipped, no panto
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Comeng_SSet_Liv0_panto_direction;        //Not flipped, give Panto
+    return switch_Comeng_SSet_Liv0_Transition_Motor;    //Flipped, no panto
 }
 
-switch(FEAT_TRAINS, SELF, sw_Comeng_Sset_Liv0_frontcheck, position_in_vehid_chain){
-    0: sw_Comeng_Sset_Liv0_panto_direction; //We need a pantograph, guaranteed
-    return sw_Comeng_Sset_Liv0_panto_flipcheck; //More Checks
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv0_frontcheck, position_in_vehid_chain){
+    0: sw_Comeng_SSet_Liv0_panto_direction; //We need a pantograph, guaranteed
+    return sw_Comeng_SSet_Liv0_panto_flipcheck; //More Checks
 }
 
-const Comeng_Sset_ID_Liv0 = (Comeng_Sset_ID + Liv0_ID );
+const Comeng_SSet_ID_Liv0 = (Comeng_SSet_ID + Liv0_ID );
 
-item(FEAT_TRAINS, Item_Comeng_Sset_Liv0, Comeng_Sset_ID_Liv0) {
+item(FEAT_TRAINS, Item_Comeng_SSet_Liv0, Comeng_SSet_ID_Liv0) {
     property {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
 		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
@@ -6416,32 +6416,1336 @@ item(FEAT_TRAINS, Item_Comeng_Sset_Liv0, Comeng_Sset_ID_Liv0) {
 		vehicle_life:                   50;
 		tractive_effort_coefficient:	0.3;
 		
-        introduction_date:              Comeng_Sset_IntroDate;		
-		length:                         Comeng_Sset_Length;
+        introduction_date:              Comeng_SSet_IntroDate;		
+		length:                         Comeng_SSet_Length;
 		
 		loading_speed:					DD_Intercity_LoadingSpeed;
-		speed:							Comeng_Sset_Speed km/h;
-		cost_factor:					(Comeng_Sset_CostFactor * 2);
-		running_cost_factor:			(Comeng_Sset_RunningCostFactor * 2);
-		cargo_capacity: 				(Comeng_Sset_CargoCapacity / param_capacity_mod);
-		power:							(Comeng_Sset_Power * 2);
-		weight:							Comeng_Sset_Weight ton;
+		speed:							Comeng_SSet_Speed km/h;
+		cost_factor:					(Comeng_SSet_CostFactor * 2);
+		running_cost_factor:			(Comeng_SSet_RunningCostFactor * 2);
+		cargo_capacity: 				(Comeng_SSet_CargoCapacity / param_capacity_mod);
+		power:							(Comeng_SSet_Power * 2);
+		weight:							Comeng_SSet_Weight ton;
 
-//        variant_group: 					Item_Comeng_Sset_Liv0;
+//        variant_group: 					Item_Comeng_SSet_Liv0;
 //        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
-        default: 						sw_Comeng_Sset_Liv0_frontcheck;
-        purchase: 						switch_Comeng_Sset_Liv0_PurchaseStack;
+        default: 						sw_Comeng_SSet_Liv0_frontcheck;
+        purchase: 						switch_Comeng_SSet_Liv0_PurchaseStack;
         additional_text: 				string(STR_INFO_COMENG_SSET);
     }
     livery_override (Item_MU_Trailer){
-        default: 						sw_Comeng_Sset_Liv0_lencheck ;
+        default: 						sw_Comeng_SSet_Liv0_lencheck ;
         length: 						8;
-        cargo_capacity:                 (Comeng_Sset_CargoCapacity / param_capacity_mod);
-        power:                          Comeng_Sset_Power;
-		weight:                        	Comeng_Sset_Weight;
-		running_cost_factor:            Comeng_Sset_RunningCostFactor;
+        cargo_capacity:                 (Comeng_SSet_CargoCapacity / param_capacity_mod);
+        power:                          Comeng_SSet_Power;
+		weight:                        	Comeng_SSet_Weight;
+		running_cost_factor:            Comeng_SSet_RunningCostFactor;
+    }
+}
+
+//Comeng_SSet_Liv1
+spriteset(spriteset_Comeng_SSet_Liv1_purchase_S1,   "gfx/Comeng_SSet_Liv1A.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Comeng_SSet_Liv1_purchase_S2,   "gfx/Comeng_SSet_Liv1A.png") {template_purchase_88mu(187, 21)}
+
+spriteset(spriteset_Comeng_SSet_Liv1A_lead_S1,   "gfx/Comeng_SSet_Liv1A.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv1A_lead_S2,   "gfx/Comeng_SSet_Liv1A.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv1A_lead_S1_r,   "gfx/Comeng_SSet_Liv1A.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv1A_lead_S2_r,   "gfx/Comeng_SSet_Liv1A.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv1A_Trailer_Tulloch,   "gfx/Comeng_SSet_Liv1A.png") {template_8_repeat(7, 99)}
+spriteset(spriteset_Comeng_SSet_Liv1A_Trailer_Normal,   "gfx/Comeng_SSet_Liv1A.png") {template_8_repeat(7, 129)}
+
+spriteset(spriteset_Comeng_SSet_Liv1B_lead_S1,   "gfx/Comeng_SSet_Liv1B.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv1B_lead_S2,   "gfx/Comeng_SSet_Liv1B.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv1B_lead_S1_r,   "gfx/Comeng_SSet_Liv1B.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv1B_lead_S2_r,   "gfx/Comeng_SSet_Liv1B.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv1B_Trailer_Tulloch,   "gfx/Comeng_SSet_Liv1B.png") {template_8_repeat(7, 99)}
+spriteset(spriteset_Comeng_SSet_Liv1B_Trailer_Normal,   "gfx/Comeng_SSet_Liv1B.png") {template_8_repeat(7, 129)}
+
+//Purchase timeline
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv1_Timeline_Purchase, current_year) {
+    0..1973: spriteset_Comeng_SSet_Liv1_purchase_S1;
+	1974..2100: spriteset_Comeng_SSet_Liv1_purchase_S2;
+  return spriteset_Comeng_SSet_Liv1_purchase_S2;
+}
+
+//Motor Cars
+//Forward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_S1_Motor_Random){
+    1 : spriteset_Comeng_SSet_Liv1A_lead_S1;
+	1 : spriteset_Comeng_SSet_Liv1B_lead_S1;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_S2_Motor_Random){
+    1 : spriteset_Comeng_SSet_Liv1A_lead_S2;
+	1 : spriteset_Comeng_SSet_Liv1B_lead_S2;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_S1_Motor_Random_r){
+    1 : spriteset_Comeng_SSet_Liv1A_lead_S1_r;
+	1 : spriteset_Comeng_SSet_Liv1B_lead_S1_r;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_S2_Motor_Random_r){
+    1 : spriteset_Comeng_SSet_Liv1A_lead_S2_r;
+	1 : spriteset_Comeng_SSet_Liv1B_lead_S2_r;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_Transition_Motor_Random){
+    1 : switch_Comeng_SSet_Liv1_S1_Motor_Random;
+	3 : switch_Comeng_SSet_Liv1_S2_Motor_Random;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv1_Transition_Motor, date_of_last_service) {
+    0..date(1973, 12, 31): switch_Comeng_SSet_Liv1_S1_Motor_Random;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv1_Transition_Motor_Random;
+  return switch_Comeng_SSet_Liv1_Transition_Motor_Random;
+}
+
+//Backward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_Transition_Motor_Random_r){
+    1 : switch_Comeng_SSet_Liv1_S1_Motor_Random_r;
+	3 : switch_Comeng_SSet_Liv1_S2_Motor_Random_r;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv1_Transition_Motor_r, date_of_last_service) {
+    0..date(1973, 12, 31): switch_Comeng_SSet_Liv1_S1_Motor_Random_r;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv1_Transition_Motor_Random_r;
+  return switch_Comeng_SSet_Liv1_Transition_Motor_Random_r;
+}
+
+//Trailer Cars
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_Tulloch_Trailer_Random){
+    1 : spriteset_Comeng_SSet_Liv1A_Trailer_Tulloch;
+	1 : spriteset_Comeng_SSet_Liv1B_Trailer_Tulloch;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_Normal_Trailer_Random){
+    1 : spriteset_Comeng_SSet_Liv1A_Trailer_Normal;
+	1 : spriteset_Comeng_SSet_Liv1B_Trailer_Normal;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_Transition_Trailer_Random){
+    1 : switch_Comeng_SSet_Liv1_Tulloch_Trailer_Random;
+	3 : switch_Comeng_SSet_Liv1_Normal_Trailer_Random;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv1_Transition_Trailer, date_of_last_service) {
+    0..date(1973, 12, 31): switch_Comeng_SSet_Liv1_Tulloch_Trailer_Random;
+	date(1974, 1, 1)..date(2004, 1, 1): switch_Comeng_SSet_Liv1_Transition_Trailer_Random;
+  return switch_Comeng_SSet_Liv1_Normal_Trailer_Random;
+}
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv1_Timeline_Purchase;
+	1: spriteset_Comeng_SSet_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv1_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv1_Transition_Motor_r;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv1_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv1_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv1_Transition_Motor_r;
+	1: switch_Comeng_SSet_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Comeng_SSet_Liv1_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv1_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Comeng_SSet_Liv1_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv1_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Comeng_SSet_Liv1_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv1_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Comeng_SSet_Liv1_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv1_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv1_pantocheck_at_1;
+    return sw_Comeng_SSet_Liv1_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv1_pantocheck_at_1;
+    return switch_Comeng_SSet_Liv1_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv1_pantocheck_at_2;
+    return sw_Comeng_SSet_Liv1_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : switch_Comeng_SSet_Liv1_Transition_Trailer;
+    3 : sw_Comeng_SSet_Liv1_pantocheck_at_1;
+    4 : sw_Comeng_SSet_Liv1_sidecheck_4;
+    5 : sw_Comeng_SSet_Liv1_pantocheck_at_2;
+    6 .. 7 : sw_Comeng_SSet_Liv1_sidecheck_6;
+    return sw_Comeng_SSet_Liv1_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_panto_direction, vehicle_is_flipped){
+    0 : switch_Comeng_SSet_Liv1_MotorStack;        //Front panto
+    return switch_Comeng_SSet_Liv1_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Comeng_SSet_Liv1_panto_direction;        //Not flipped, give Panto
+    return switch_Comeng_SSet_Liv1_Transition_Motor;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv1_frontcheck, position_in_vehid_chain){
+    0: sw_Comeng_SSet_Liv1_panto_direction; //We need a pantograph, guaranteed
+    return sw_Comeng_SSet_Liv1_panto_flipcheck; //More Checks
+}
+
+const Comeng_SSet_ID_Liv1 = (Comeng_SSet_ID + Liv1_ID );
+
+item(FEAT_TRAINS, Item_Comeng_SSet_Liv1, Comeng_SSet_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_COMENG_SSET);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_SSet_IntroDate;		
+		length:                         Comeng_SSet_Length;
+		
+		loading_speed:					DD_Intercity_LoadingSpeed;
+		speed:							Comeng_SSet_Speed km/h;
+		cost_factor:					(Comeng_SSet_CostFactor * 2);
+		running_cost_factor:			(Comeng_SSet_RunningCostFactor * 2);
+		cargo_capacity: 				(Comeng_SSet_CargoCapacity / param_capacity_mod);
+		power:							(Comeng_SSet_Power * 2);
+		weight:							Comeng_SSet_Weight ton;
+
+        variant_group: 					Item_Comeng_SSet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Comeng_SSet_Liv1_frontcheck;
+        purchase: 						switch_Comeng_SSet_Liv1_PurchaseStack;
+        additional_text: 				string(STR_INFO_COMENG_SSET);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						sw_Comeng_SSet_Liv1_lencheck ;
+        length: 						8;
+        cargo_capacity:                 (Comeng_SSet_CargoCapacity / param_capacity_mod);
+        power:                          Comeng_SSet_Power;
+		weight:                        	Comeng_SSet_Weight;
+		running_cost_factor:            Comeng_SSet_RunningCostFactor;
+    }
+}
+
+//Comeng_SSet_Liv2
+spriteset(spriteset_Comeng_SSet_Liv2_purchase_S1,   "gfx/Comeng_SSet_Liv2.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Comeng_SSet_Liv2_purchase_S2,   "gfx/Comeng_SSet_Liv2.png") {template_purchase_88mu(187, 21)}
+spriteset(spriteset_Comeng_SSet_Liv2_lead_S1,   "gfx/Comeng_SSet_Liv2.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv2_lead_S2,   "gfx/Comeng_SSet_Liv2.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv2_lead_S1_r,   "gfx/Comeng_SSet_Liv2.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv2_lead_S2_r,   "gfx/Comeng_SSet_Liv2.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv2_Trailer_Tulloch,   "gfx/Comeng_SSet_Liv2.png") {template_8_repeat(7, 99)}
+spriteset(spriteset_Comeng_SSet_Liv2_Trailer_Normal,   "gfx/Comeng_SSet_Liv2.png") {template_8_repeat(7, 129)}
+
+//Purchase timeline
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv2_Timeline_Purchase, current_year) {
+    0..1973: spriteset_Comeng_SSet_Liv2_purchase_S1;
+	1974..2100: spriteset_Comeng_SSet_Liv2_purchase_S2;
+  return spriteset_Comeng_SSet_Liv2_purchase_S2;
+}
+
+//Motor Cars
+//Forward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv2_Transition_Motor_Random){
+    1 : spriteset_Comeng_SSet_Liv2_lead_S1;
+	3 : spriteset_Comeng_SSet_Liv2_lead_S2;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv2_Transition_Motor, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv2_lead_S1;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv2_Transition_Motor_Random;
+  return switch_Comeng_SSet_Liv2_Transition_Motor_Random;
+}
+
+//Backward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv2_Transition_Motor_Random_r){
+    1 : spriteset_Comeng_SSet_Liv2_lead_S1_r;
+	3 : spriteset_Comeng_SSet_Liv2_lead_S2_r;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv2_Transition_Motor_r, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv2_lead_S1_r;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv2_Transition_Motor_Random_r;
+  return switch_Comeng_SSet_Liv2_Transition_Motor_Random_r;
+}
+
+//Trailer Cars
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv2_Transition_Trailer_Random){
+    1 : spriteset_Comeng_SSet_Liv2_Trailer_Tulloch;
+	3 : spriteset_Comeng_SSet_Liv2_Trailer_Normal;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv2_Transition_Trailer, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv2_Trailer_Tulloch;
+	date(1974, 1, 1)..date(2004, 1, 1): switch_Comeng_SSet_Liv2_Transition_Trailer_Random;
+  return spriteset_Comeng_SSet_Liv2_Trailer_Normal;
+}
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv2_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv2_Timeline_Purchase;
+	1: spriteset_Comeng_SSet_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv2_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv2_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv2_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv2_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv2_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv2_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv2_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv2_Transition_Motor_r;
+	1: switch_Comeng_SSet_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Comeng_SSet_Liv2_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv2_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Comeng_SSet_Liv2_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv2_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Comeng_SSet_Liv2_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv2_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Comeng_SSet_Liv2_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv2_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv2_pantocheck_at_1;
+    return sw_Comeng_SSet_Liv2_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv2_pantocheck_at_1;
+    return switch_Comeng_SSet_Liv2_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv2_pantocheck_at_2;
+    return sw_Comeng_SSet_Liv2_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : switch_Comeng_SSet_Liv2_Transition_Trailer;
+    3 : sw_Comeng_SSet_Liv2_pantocheck_at_1;
+    4 : sw_Comeng_SSet_Liv2_sidecheck_4;
+    5 : sw_Comeng_SSet_Liv2_pantocheck_at_2;
+    6 .. 7 : sw_Comeng_SSet_Liv2_sidecheck_6;
+    return sw_Comeng_SSet_Liv2_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_panto_direction, vehicle_is_flipped){
+    0 : switch_Comeng_SSet_Liv2_MotorStack;        //Front panto
+    return switch_Comeng_SSet_Liv2_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Comeng_SSet_Liv2_panto_direction;        //Not flipped, give Panto
+    return switch_Comeng_SSet_Liv2_Transition_Motor;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv2_frontcheck, position_in_vehid_chain){
+    0: sw_Comeng_SSet_Liv2_panto_direction; //We need a pantograph, guaranteed
+    return sw_Comeng_SSet_Liv2_panto_flipcheck; //More Checks
+}
+
+const Comeng_SSet_ID_Liv2 = (Comeng_SSet_ID + Liv2_ID );
+
+item(FEAT_TRAINS, Item_Comeng_SSet_Liv2, Comeng_SSet_ID_Liv2) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_COMENG_SSET);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_SSet_IntroDate;		
+		length:                         Comeng_SSet_Length;
+		
+		loading_speed:					DD_Intercity_LoadingSpeed;
+		speed:							Comeng_SSet_Speed km/h;
+		cost_factor:					(Comeng_SSet_CostFactor * 2);
+		running_cost_factor:			(Comeng_SSet_RunningCostFactor * 2);
+		cargo_capacity: 				(Comeng_SSet_CargoCapacity / param_capacity_mod);
+		power:							(Comeng_SSet_Power * 2);
+		weight:							Comeng_SSet_Weight ton;
+
+        variant_group: 					Item_Comeng_SSet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Comeng_SSet_Liv2_frontcheck;
+        purchase: 						switch_Comeng_SSet_Liv2_PurchaseStack;
+        additional_text: 				string(STR_INFO_COMENG_SSET);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						sw_Comeng_SSet_Liv2_lencheck ;
+        length: 						8;
+        cargo_capacity:                 (Comeng_SSet_CargoCapacity / param_capacity_mod);
+        power:                          Comeng_SSet_Power;
+		weight:                        	Comeng_SSet_Weight;
+		running_cost_factor:            Comeng_SSet_RunningCostFactor;
+    }
+}
+
+//Comeng_SSet_Liv3
+spriteset(spriteset_Comeng_SSet_Liv3_purchase_S1,   "gfx/Comeng_SSet_Liv3.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Comeng_SSet_Liv3_purchase_S2,   "gfx/Comeng_SSet_Liv3.png") {template_purchase_88mu(187, 21)}
+spriteset(spriteset_Comeng_SSet_Liv3_lead_S1,   "gfx/Comeng_SSet_Liv3.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv3_lead_S2,   "gfx/Comeng_SSet_Liv3.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv3_lead_S1_r,   "gfx/Comeng_SSet_Liv3.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv3_lead_S2_r,   "gfx/Comeng_SSet_Liv3.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv3_Trailer_Tulloch,   "gfx/Comeng_SSet_Liv3.png") {template_8_repeat(7, 99)}
+spriteset(spriteset_Comeng_SSet_Liv3_Trailer_Normal,   "gfx/Comeng_SSet_Liv3.png") {template_8_repeat(7, 129)}
+
+//Purchase timeline
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv3_Timeline_Purchase, current_year) {
+    0..1973: spriteset_Comeng_SSet_Liv3_purchase_S1;
+	1974..2100: spriteset_Comeng_SSet_Liv3_purchase_S2;
+  return spriteset_Comeng_SSet_Liv3_purchase_S2;
+}
+
+//Motor Cars
+//Forward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv3_Transition_Motor_Random){
+    1 : spriteset_Comeng_SSet_Liv3_lead_S1;
+	3 : spriteset_Comeng_SSet_Liv3_lead_S2;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv3_Transition_Motor, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv3_lead_S1;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv3_Transition_Motor_Random;
+  return switch_Comeng_SSet_Liv3_Transition_Motor_Random;
+}
+
+//Backward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv3_Transition_Motor_Random_r){
+    1 : spriteset_Comeng_SSet_Liv3_lead_S1_r;
+	3 : spriteset_Comeng_SSet_Liv3_lead_S2_r;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv3_Transition_Motor_r, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv3_lead_S1_r;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv3_Transition_Motor_Random_r;
+  return switch_Comeng_SSet_Liv3_Transition_Motor_Random_r;
+}
+
+//Trailer Cars
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv3_Transition_Trailer_Random){
+    1 : spriteset_Comeng_SSet_Liv3_Trailer_Tulloch;
+	3 : spriteset_Comeng_SSet_Liv3_Trailer_Normal;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv3_Transition_Trailer, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv3_Trailer_Tulloch;
+	date(1974, 1, 1)..date(2004, 1, 1): switch_Comeng_SSet_Liv3_Transition_Trailer_Random;
+  return spriteset_Comeng_SSet_Liv3_Trailer_Normal;
+}
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv3_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv3_Timeline_Purchase;
+	1: spriteset_Comeng_SSet_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv3_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv3_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv3_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv3_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv3_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv3_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv3_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv3_Transition_Motor_r;
+	1: switch_Comeng_SSet_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Comeng_SSet_Liv3_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv3_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Comeng_SSet_Liv3_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv3_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Comeng_SSet_Liv3_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv3_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Comeng_SSet_Liv3_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv3_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv3_pantocheck_at_1;
+    return sw_Comeng_SSet_Liv3_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv3_pantocheck_at_1;
+    return switch_Comeng_SSet_Liv3_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv3_pantocheck_at_2;
+    return sw_Comeng_SSet_Liv3_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : switch_Comeng_SSet_Liv3_Transition_Trailer;
+    3 : sw_Comeng_SSet_Liv3_pantocheck_at_1;
+    4 : sw_Comeng_SSet_Liv3_sidecheck_4;
+    5 : sw_Comeng_SSet_Liv3_pantocheck_at_2;
+    6 .. 7 : sw_Comeng_SSet_Liv3_sidecheck_6;
+    return sw_Comeng_SSet_Liv3_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_panto_direction, vehicle_is_flipped){
+    0 : switch_Comeng_SSet_Liv3_MotorStack;        //Front panto
+    return switch_Comeng_SSet_Liv3_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Comeng_SSet_Liv3_panto_direction;        //Not flipped, give Panto
+    return switch_Comeng_SSet_Liv3_Transition_Motor;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv3_frontcheck, position_in_vehid_chain){
+    0: sw_Comeng_SSet_Liv3_panto_direction; //We need a pantograph, guaranteed
+    return sw_Comeng_SSet_Liv3_panto_flipcheck; //More Checks
+}
+
+const Comeng_SSet_ID_Liv3 = (Comeng_SSet_ID + Liv3_ID );
+
+item(FEAT_TRAINS, Item_Comeng_SSet_Liv3, Comeng_SSet_ID_Liv3) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_COMENG_SSET);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_SSet_IntroDate;		
+		length:                         Comeng_SSet_Length;
+		
+		loading_speed:					DD_Intercity_LoadingSpeed;
+		speed:							Comeng_SSet_Speed km/h;
+		cost_factor:					(Comeng_SSet_CostFactor * 2);
+		running_cost_factor:			(Comeng_SSet_RunningCostFactor * 2);
+		cargo_capacity: 				(Comeng_SSet_CargoCapacity / param_capacity_mod);
+		power:							(Comeng_SSet_Power * 2);
+		weight:							Comeng_SSet_Weight ton;
+
+        variant_group: 					Item_Comeng_SSet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Comeng_SSet_Liv3_frontcheck;
+        purchase: 						switch_Comeng_SSet_Liv3_PurchaseStack;
+        additional_text: 				string(STR_INFO_COMENG_SSET);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						sw_Comeng_SSet_Liv3_lencheck ;
+        length: 						8;
+        cargo_capacity:                 (Comeng_SSet_CargoCapacity / param_capacity_mod);
+        power:                          Comeng_SSet_Power;
+		weight:                        	Comeng_SSet_Weight;
+		running_cost_factor:            Comeng_SSet_RunningCostFactor;
+    }
+}
+
+//Comeng_SSet_Liv4
+spriteset(spriteset_Comeng_SSet_Liv4_purchase_S1,   "gfx/Comeng_SSet_Liv4.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Comeng_SSet_Liv4_purchase_S2,   "gfx/Comeng_SSet_Liv4.png") {template_purchase_88mu(187, 21)}
+spriteset(spriteset_Comeng_SSet_Liv4_lead_S1,   "gfx/Comeng_SSet_Liv4.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv4_lead_S2,   "gfx/Comeng_SSet_Liv4.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv4_lead_S1_r,   "gfx/Comeng_SSet_Liv4.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv4_lead_S2_r,   "gfx/Comeng_SSet_Liv4.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv4_Trailer_Tulloch,   "gfx/Comeng_SSet_Liv4.png") {template_8_repeat(7, 99)}
+spriteset(spriteset_Comeng_SSet_Liv4_Trailer_Normal,   "gfx/Comeng_SSet_Liv4.png") {template_8_repeat(7, 129)}
+
+//Purchase timeline
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv4_Timeline_Purchase, current_year) {
+    0..1973: spriteset_Comeng_SSet_Liv4_purchase_S1;
+	1974..2100: spriteset_Comeng_SSet_Liv4_purchase_S2;
+  return spriteset_Comeng_SSet_Liv4_purchase_S2;
+}
+
+//Motor Cars
+//Forward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv4_Transition_Motor_Random){
+    1 : spriteset_Comeng_SSet_Liv4_lead_S1;
+	3 : spriteset_Comeng_SSet_Liv4_lead_S2;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv4_Transition_Motor, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv4_lead_S1;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv4_Transition_Motor_Random;
+  return switch_Comeng_SSet_Liv4_Transition_Motor_Random;
+}
+
+//Backward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv4_Transition_Motor_Random_r){
+    1 : spriteset_Comeng_SSet_Liv4_lead_S1_r;
+	3 : spriteset_Comeng_SSet_Liv4_lead_S2_r;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv4_Transition_Motor_r, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv4_lead_S1_r;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv4_Transition_Motor_Random_r;
+  return switch_Comeng_SSet_Liv4_Transition_Motor_Random_r;
+}
+
+//Trailer Cars
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv4_Transition_Trailer_Random){
+    1 : spriteset_Comeng_SSet_Liv4_Trailer_Tulloch;
+	3 : spriteset_Comeng_SSet_Liv4_Trailer_Normal;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv4_Transition_Trailer, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv4_Trailer_Tulloch;
+	date(1974, 1, 1)..date(2004, 1, 1): switch_Comeng_SSet_Liv4_Transition_Trailer_Random;
+  return spriteset_Comeng_SSet_Liv4_Trailer_Normal;
+}
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv4_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv4_Timeline_Purchase;
+	1: spriteset_Comeng_SSet_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv4_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv4_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv4_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv4_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv4_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv4_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv4_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv4_Transition_Motor_r;
+	1: switch_Comeng_SSet_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Comeng_SSet_Liv4_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv4_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Comeng_SSet_Liv4_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv4_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Comeng_SSet_Liv4_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv4_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Comeng_SSet_Liv4_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv4_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv4_pantocheck_at_1;
+    return sw_Comeng_SSet_Liv4_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv4_pantocheck_at_1;
+    return switch_Comeng_SSet_Liv4_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv4_pantocheck_at_2;
+    return sw_Comeng_SSet_Liv4_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : switch_Comeng_SSet_Liv4_Transition_Trailer;
+    3 : sw_Comeng_SSet_Liv4_pantocheck_at_1;
+    4 : sw_Comeng_SSet_Liv4_sidecheck_4;
+    5 : sw_Comeng_SSet_Liv4_pantocheck_at_2;
+    6 .. 7 : sw_Comeng_SSet_Liv4_sidecheck_6;
+    return sw_Comeng_SSet_Liv4_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_panto_direction, vehicle_is_flipped){
+    0 : switch_Comeng_SSet_Liv4_MotorStack;        //Front panto
+    return switch_Comeng_SSet_Liv4_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Comeng_SSet_Liv4_panto_direction;        //Not flipped, give Panto
+    return switch_Comeng_SSet_Liv4_Transition_Motor;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv4_frontcheck, position_in_vehid_chain){
+    0: sw_Comeng_SSet_Liv4_panto_direction; //We need a pantograph, guaranteed
+    return sw_Comeng_SSet_Liv4_panto_flipcheck; //More Checks
+}
+
+const Comeng_SSet_ID_Liv4 = (Comeng_SSet_ID + Liv4_ID );
+
+item(FEAT_TRAINS, Item_Comeng_SSet_Liv4, Comeng_SSet_ID_Liv4) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_COMENG_SSET);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_SSet_IntroDate;		
+		length:                         Comeng_SSet_Length;
+		
+		loading_speed:					DD_Intercity_LoadingSpeed;
+		speed:							Comeng_SSet_Speed km/h;
+		cost_factor:					(Comeng_SSet_CostFactor * 2);
+		running_cost_factor:			(Comeng_SSet_RunningCostFactor * 2);
+		cargo_capacity: 				(Comeng_SSet_CargoCapacity / param_capacity_mod);
+		power:							(Comeng_SSet_Power * 2);
+		weight:							Comeng_SSet_Weight ton;
+
+        variant_group: 					Item_Comeng_SSet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Comeng_SSet_Liv4_frontcheck;
+        purchase: 						switch_Comeng_SSet_Liv4_PurchaseStack;
+        additional_text: 				string(STR_INFO_COMENG_SSET);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						sw_Comeng_SSet_Liv4_lencheck ;
+        length: 						8;
+        cargo_capacity:                 (Comeng_SSet_CargoCapacity / param_capacity_mod);
+        power:                          Comeng_SSet_Power;
+		weight:                        	Comeng_SSet_Weight;
+		running_cost_factor:            Comeng_SSet_RunningCostFactor;
+    }
+}
+
+//Comeng_SSet_Liv5
+spriteset(spriteset_Comeng_SSet_Liv5_purchase_S1,   "gfx/Comeng_SSet_Liv5.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Comeng_SSet_Liv5_purchase_S2,   "gfx/Comeng_SSet_Liv5.png") {template_purchase_88mu(187, 21)}
+spriteset(spriteset_Comeng_SSet_Liv5_lead_S1,   "gfx/Comeng_SSet_Liv5.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv5_lead_S2,   "gfx/Comeng_SSet_Liv5.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv5_lead_S1_r,   "gfx/Comeng_SSet_Liv5.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv5_lead_S2_r,   "gfx/Comeng_SSet_Liv5.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv5_Trailer_Tulloch,   "gfx/Comeng_SSet_Liv5.png") {template_8_repeat(7, 99)}
+spriteset(spriteset_Comeng_SSet_Liv5_Trailer_Normal,   "gfx/Comeng_SSet_Liv5.png") {template_8_repeat(7, 129)}
+
+//Purchase timeline
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv5_Timeline_Purchase, current_year) {
+    0..1973: spriteset_Comeng_SSet_Liv5_purchase_S1;
+	1974..2100: spriteset_Comeng_SSet_Liv5_purchase_S2;
+  return spriteset_Comeng_SSet_Liv5_purchase_S2;
+}
+
+//Motor Cars
+//Forward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv5_Transition_Motor_Random){
+    1 : spriteset_Comeng_SSet_Liv5_lead_S1;
+	3 : spriteset_Comeng_SSet_Liv5_lead_S2;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv5_Transition_Motor, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv5_lead_S1;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv5_Transition_Motor_Random;
+  return switch_Comeng_SSet_Liv5_Transition_Motor_Random;
+}
+
+//Backward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv5_Transition_Motor_Random_r){
+    1 : spriteset_Comeng_SSet_Liv5_lead_S1_r;
+	3 : spriteset_Comeng_SSet_Liv5_lead_S2_r;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv5_Transition_Motor_r, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv5_lead_S1_r;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv5_Transition_Motor_Random_r;
+  return switch_Comeng_SSet_Liv5_Transition_Motor_Random_r;
+}
+
+//Trailer Cars
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv5_Transition_Trailer_Random){
+    1 : spriteset_Comeng_SSet_Liv5_Trailer_Tulloch;
+	3 : spriteset_Comeng_SSet_Liv5_Trailer_Normal;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv5_Transition_Trailer, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv5_Trailer_Tulloch;
+	date(1974, 1, 1)..date(2004, 1, 1): switch_Comeng_SSet_Liv5_Transition_Trailer_Random;
+  return spriteset_Comeng_SSet_Liv5_Trailer_Normal;
+}
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv5_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv5_Timeline_Purchase;
+	1: spriteset_Comeng_SSet_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv5_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv5_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv5_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv5_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv5_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv5_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv5_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv5_Transition_Motor_r;
+	1: switch_Comeng_SSet_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Comeng_SSet_Liv5_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv5_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Comeng_SSet_Liv5_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv5_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Comeng_SSet_Liv5_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv5_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Comeng_SSet_Liv5_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv5_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv5_pantocheck_at_1;
+    return sw_Comeng_SSet_Liv5_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv5_pantocheck_at_1;
+    return switch_Comeng_SSet_Liv5_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv5_pantocheck_at_2;
+    return sw_Comeng_SSet_Liv5_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : switch_Comeng_SSet_Liv5_Transition_Trailer;
+    3 : sw_Comeng_SSet_Liv5_pantocheck_at_1;
+    4 : sw_Comeng_SSet_Liv5_sidecheck_4;
+    5 : sw_Comeng_SSet_Liv5_pantocheck_at_2;
+    6 .. 7 : sw_Comeng_SSet_Liv5_sidecheck_6;
+    return sw_Comeng_SSet_Liv5_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_panto_direction, vehicle_is_flipped){
+    0 : switch_Comeng_SSet_Liv5_MotorStack;        //Front panto
+    return switch_Comeng_SSet_Liv5_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Comeng_SSet_Liv5_panto_direction;        //Not flipped, give Panto
+    return switch_Comeng_SSet_Liv5_Transition_Motor;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv5_frontcheck, position_in_vehid_chain){
+    0: sw_Comeng_SSet_Liv5_panto_direction; //We need a pantograph, guaranteed
+    return sw_Comeng_SSet_Liv5_panto_flipcheck; //More Checks
+}
+
+const Comeng_SSet_ID_Liv5 = (Comeng_SSet_ID + Liv5_ID );
+
+item(FEAT_TRAINS, Item_Comeng_SSet_Liv5, Comeng_SSet_ID_Liv5) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_COMENG_SSET);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_SSet_IntroDate;		
+		length:                         Comeng_SSet_Length;
+		
+		loading_speed:					DD_Intercity_LoadingSpeed;
+		speed:							Comeng_SSet_Speed km/h;
+		cost_factor:					(Comeng_SSet_CostFactor * 2);
+		running_cost_factor:			(Comeng_SSet_RunningCostFactor * 2);
+		cargo_capacity: 				(Comeng_SSet_CargoCapacity / param_capacity_mod);
+		power:							(Comeng_SSet_Power * 2);
+		weight:							Comeng_SSet_Weight ton;
+
+        variant_group: 					Item_Comeng_SSet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Comeng_SSet_Liv5_frontcheck;
+        purchase: 						switch_Comeng_SSet_Liv5_PurchaseStack;
+        additional_text: 				string(STR_INFO_COMENG_SSET);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						sw_Comeng_SSet_Liv5_lencheck ;
+        length: 						8;
+        cargo_capacity:                 (Comeng_SSet_CargoCapacity / param_capacity_mod);
+        power:                          Comeng_SSet_Power;
+		weight:                        	Comeng_SSet_Weight;
+		running_cost_factor:            Comeng_SSet_RunningCostFactor;
+    }
+}
+
+//Comeng_SSet_Liv6
+spriteset(spriteset_Comeng_SSet_Liv6_purchase_S1,   "gfx/Comeng_SSet_Liv6.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Comeng_SSet_Liv6_purchase_S2,   "gfx/Comeng_SSet_Liv6.png") {template_purchase_88mu(187, 21)}
+spriteset(spriteset_Comeng_SSet_Liv6_lead_S1,   "gfx/Comeng_SSet_Liv6.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv6_lead_S2,   "gfx/Comeng_SSet_Liv6.png") {template_8(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv6_lead_S1_r,   "gfx/Comeng_SSet_Liv6.png") {template_8_r(7, 39)}
+spriteset(spriteset_Comeng_SSet_Liv6_lead_S2_r,   "gfx/Comeng_SSet_Liv6.png") {template_8_r(7, 69)}
+spriteset(spriteset_Comeng_SSet_Liv6_Trailer_Tulloch,   "gfx/Comeng_SSet_Liv6.png") {template_8_repeat(7, 99)}
+spriteset(spriteset_Comeng_SSet_Liv6_Trailer_Normal,   "gfx/Comeng_SSet_Liv6.png") {template_8_repeat(7, 129)}
+
+//Purchase timeline
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv6_Timeline_Purchase, current_year) {
+    0..1973: spriteset_Comeng_SSet_Liv6_purchase_S1;
+	1974..2100: spriteset_Comeng_SSet_Liv6_purchase_S2;
+  return spriteset_Comeng_SSet_Liv6_purchase_S2;
+}
+
+//Motor Cars
+//Forward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv6_Transition_Motor_Random){
+    1 : spriteset_Comeng_SSet_Liv6_lead_S1;
+	3 : spriteset_Comeng_SSet_Liv6_lead_S2;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv6_Transition_Motor, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv6_lead_S1;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv6_Transition_Motor_Random;
+  return switch_Comeng_SSet_Liv6_Transition_Motor_Random;
+}
+
+//Backward
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv6_Transition_Motor_Random_r){
+    1 : spriteset_Comeng_SSet_Liv6_lead_S1_r;
+	3 : spriteset_Comeng_SSet_Liv6_lead_S2_r;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv6_Transition_Motor_r, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv6_lead_S1_r;
+	date(1974, 1, 1)..date(2100, 1, 1): switch_Comeng_SSet_Liv6_Transition_Motor_Random_r;
+  return switch_Comeng_SSet_Liv6_Transition_Motor_Random_r;
+}
+
+//Trailer Cars
+random_switch(FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv6_Transition_Trailer_Random){
+    1 : spriteset_Comeng_SSet_Liv6_Trailer_Tulloch;
+	3 : spriteset_Comeng_SSet_Liv6_Trailer_Normal;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Comeng_SSet_Liv6_Transition_Trailer, date_of_last_service) {
+    0..date(1973, 12, 31): spriteset_Comeng_SSet_Liv6_Trailer_Tulloch;
+	date(1974, 1, 1)..date(2004, 1, 1): switch_Comeng_SSet_Liv6_Transition_Trailer_Random;
+  return spriteset_Comeng_SSet_Liv6_Trailer_Normal;
+}
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv6_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv6_Timeline_Purchase;
+	1: spriteset_Comeng_SSet_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv6_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv6_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv6_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv6_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv6_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv6_Transition_Motor;
+	1: switch_Comeng_SSet_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Comeng_SSet_Liv6_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Comeng_SSet_Liv6_Transition_Motor_r;
+	1: switch_Comeng_SSet_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Comeng_SSet_Liv6_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv6_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Comeng_SSet_Liv6_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv6_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Comeng_SSet_Liv6_NonControlMotorStack_r;
+    return switch_Comeng_SSet_Liv6_Transition_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Comeng_SSet_Liv6_NonControlMotorStack;
+    return switch_Comeng_SSet_Liv6_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv6_pantocheck_at_1;
+    return sw_Comeng_SSet_Liv6_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv6_pantocheck_at_1;
+    return switch_Comeng_SSet_Liv6_Transition_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Comeng_SSet_Liv6_pantocheck_at_2;
+    return sw_Comeng_SSet_Liv6_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : switch_Comeng_SSet_Liv6_Transition_Trailer;
+    3 : sw_Comeng_SSet_Liv6_pantocheck_at_1;
+    4 : sw_Comeng_SSet_Liv6_sidecheck_4;
+    5 : sw_Comeng_SSet_Liv6_pantocheck_at_2;
+    6 .. 7 : sw_Comeng_SSet_Liv6_sidecheck_6;
+    return sw_Comeng_SSet_Liv6_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_panto_direction, vehicle_is_flipped){
+    0 : switch_Comeng_SSet_Liv6_MotorStack;        //Front panto
+    return switch_Comeng_SSet_Liv6_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Comeng_SSet_Liv6_panto_direction;        //Not flipped, give Panto
+    return switch_Comeng_SSet_Liv6_Transition_Motor;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Comeng_SSet_Liv6_frontcheck, position_in_vehid_chain){
+    0: sw_Comeng_SSet_Liv6_panto_direction; //We need a pantograph, guaranteed
+    return sw_Comeng_SSet_Liv6_panto_flipcheck; //More Checks
+}
+
+const Comeng_SSet_ID_Liv6 = (Comeng_SSet_ID + Liv6_ID );
+
+item(FEAT_TRAINS, Item_Comeng_SSet_Liv6, Comeng_SSet_ID_Liv6) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_COMENG_SSET);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_SSet_IntroDate;		
+		length:                         Comeng_SSet_Length;
+		
+		loading_speed:					DD_Intercity_LoadingSpeed;
+		speed:							Comeng_SSet_Speed km/h;
+		cost_factor:					(Comeng_SSet_CostFactor * 2);
+		running_cost_factor:			(Comeng_SSet_RunningCostFactor * 2);
+		cargo_capacity: 				(Comeng_SSet_CargoCapacity / param_capacity_mod);
+		power:							(Comeng_SSet_Power * 2);
+		weight:							Comeng_SSet_Weight ton;
+
+        variant_group: 					Item_Comeng_SSet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Comeng_SSet_Liv6_frontcheck;
+        purchase: 						switch_Comeng_SSet_Liv6_PurchaseStack;
+        additional_text: 				string(STR_INFO_COMENG_SSET);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						sw_Comeng_SSet_Liv6_lencheck ;
+        length: 						8;
+        cargo_capacity:                 (Comeng_SSet_CargoCapacity / param_capacity_mod);
+        power:                          Comeng_SSet_Power;
+		weight:                        	Comeng_SSet_Weight;
+		running_cost_factor:            Comeng_SSet_RunningCostFactor;
     }
 }
 
@@ -7170,6 +8474,205 @@ item(FEAT_TRAINS, Item_Goninan_4D_Liv0, Goninan_4D_ID_Liv0) {
 		weight:                        	Goninan_4D_Weight;
 		running_cost_factor:            Goninan_4D_RunningCostFactor;
 
+    }
+}
+
+//ID
+const EDi_Millenium_ID = 12300;
+//introduction_date
+const EDi_Millenium_IntroDate = date(2002, 1, 1);
+//speed
+const EDi_Millenium_Speed = 130;
+//cost_factor
+const EDi_Millenium_CostFactor = 38;
+//running_cost_factor
+const EDi_Millenium_RunningCostFactor = 98;
+//Cargo Capacity
+const EDi_Millenium_CargoCapacity = 181;
+//power
+const EDi_Millenium_Power = 300;
+//weight
+const EDi_Millenium_Weight = 42;
+
+//Pantographs
+spriteset(spriteset_EDi_Millenium_Panto_Purchase,   "gfx/EDi_Millenium_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_EDi_Millenium_PantoDown,   "gfx/EDi_Millenium_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_EDi_Millenium_PantoDown_r,   "gfx/EDi_Millenium_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_EDi_Millenium_PantoUp,   "gfx/EDi_Millenium_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_EDi_Millenium_PantoUp_r,   "gfx/EDi_Millenium_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_EDi_Millenium_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_EDi_Millenium_PantoDown;
+ 1: spriteset_EDi_Millenium_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EDi_Millenium_Rw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_EDi_Millenium_PantoDown_r;
+ 1: spriteset_EDi_Millenium_PantoUp_r;
+}
+
+//EDi_Millenium_Liv0
+spriteset(spriteset_EDi_Millenium_Liv0_purchase,   "gfx/EDi_Millenium_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_EDi_Millenium_Liv0_lead,   "gfx/EDi_Millenium_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_EDi_Millenium_Liv0_lead_r,   "gfx/EDi_Millenium_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_EDi_Millenium_Liv0_Trailer,   "gfx/EDi_Millenium_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_EDi_Millenium_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EDi_Millenium_Liv0_purchase;
+	1: spriteset_EDi_Millenium_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_EDi_Millenium_Liv0_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EDi_Millenium_Liv0_lead;
+	1: switch_EDi_Millenium_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_EDi_Millenium_Liv0_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EDi_Millenium_Liv0_lead;
+	1: switch_EDi_Millenium_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_EDi_Millenium_Liv0_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EDi_Millenium_Liv0_Trailer;
+	1: switch_EDi_Millenium_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_EDi_Millenium_Liv0_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EDi_Millenium_Liv0_Trailer;
+	1: switch_EDi_Millenium_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_EDi_Millenium_Liv0_NonControlMotorStack_r;
+    return spriteset_EDi_Millenium_Liv0_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_EDi_Millenium_Liv0_NonControlMotorStack;
+    return spriteset_EDi_Millenium_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_EDi_Millenium_Liv0_NonControlMotorStack_r;
+    return spriteset_EDi_Millenium_Liv0_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_EDi_Millenium_Liv0_NonControlMotorStack;
+    return spriteset_EDi_Millenium_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_EDi_Millenium_Liv0_pantocheck_at_1;
+    return sw_EDi_Millenium_Liv0_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_EDi_Millenium_Liv0_pantocheck_at_1;
+    return spriteset_EDi_Millenium_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_EDi_Millenium_Liv0_pantocheck_at_2;
+    return sw_EDi_Millenium_Liv0_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : spriteset_EDi_Millenium_Liv0_Trailer;
+    3 : sw_EDi_Millenium_Liv0_pantocheck_at_1;
+    4 : sw_EDi_Millenium_Liv0_sidecheck_4;
+    5 : sw_EDi_Millenium_Liv0_pantocheck_at_2;
+    6 .. 7 : sw_EDi_Millenium_Liv0_sidecheck_6;
+    return sw_EDi_Millenium_Liv0_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_panto_direction, vehicle_is_flipped){
+    0 : switch_EDi_Millenium_Liv0_MotorStack;        //Front panto
+    return switch_EDi_Millenium_Liv0_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_EDi_Millenium_Liv0_panto_direction;        //Not flipped, give Panto
+    return spriteset_EDi_Millenium_Liv0_lead;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_EDi_Millenium_Liv0_frontcheck, position_in_vehid_chain){
+    0: sw_EDi_Millenium_Liv0_panto_direction; //We need a pantograph, guaranteed
+    return sw_EDi_Millenium_Liv0_panto_flipcheck; //More Checks
+}
+
+const EDi_Millenium_ID_Liv0 = (EDi_Millenium_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_EDi_Millenium_Liv0, EDi_Millenium_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EDI_MILLENIUM);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EDi_Millenium_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							EDi_Millenium_Speed km/h;
+		cost_factor:					(EDi_Millenium_CostFactor * 2);
+		running_cost_factor:			(EDi_Millenium_RunningCostFactor * 2);
+		cargo_capacity: 				(EDi_Millenium_CargoCapacity / param_capacity_mod);
+		power:							(EDi_Millenium_Power * 2);
+		weight:							EDi_Millenium_Weight ton;
+
+//        variant_group: 					Item_EDi_Millenium_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_EDi_Millenium_Liv0_frontcheck;
+        purchase: 						switch_EDi_Millenium_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_EDI_MILLENIUM);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						sw_EDi_Millenium_Liv0_lencheck ;
+        length:							8;
+        cargo_capacity:                 [EDi_Millenium_CargoCapacity / param_capacity_mod];
+        power:                          EDi_Millenium_Power;
+		weight:                        	EDi_Millenium_Weight;
+		running_cost_factor:            EDi_Millenium_RunningCostFactor;
     }
 }
 

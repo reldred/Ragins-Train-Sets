@@ -193,8 +193,8 @@ STR_INFO_SDD_EMU_COMENGABBVRDD:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {G
 STR_NAME_SDD_EMU_ABBVRDD:ABB VR Double-Decker
 STR_INFO_SDD_EMU_ABBVRDD:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line{}{GOLD}More Doors, More Better
 
-STR_NAME_SDD_EMU_MILLENIUM:Downer EDi Millenium
-STR_INFO_SDD_EMU_MILLENIUM:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line{}{GOLD}Crew *hate* these
+STR_NAME_EDI_MILLENIUM:Downer EDi Millenium
+STR_INFO_EDI_MILLENIUM:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Sydney Millenium Trains {}{GOLD}Crew *hate* these
 
 STR_NAME_SDD_EMU_WARATAH:Downer EDi Waratah
 STR_INFO_SDD_EMU_WARATAH:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line
