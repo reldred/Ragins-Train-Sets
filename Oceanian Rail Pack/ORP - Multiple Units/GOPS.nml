@@ -722,6 +722,8 @@ template template_10_repeat(x, y) {
     [ x+78,     y,        26,        22,        -4,            -11, ANIM]
 }
 
+spriteset(spriteset_8_Blank, "gfx/Blank.png") {template_8_repeat(7, 39)}
+
 const Light_Metro_LoadingSpeed = 30;
 const Heavy_Metro_LoadingSpeed = 30;
 const SD_Suburban_LoadingSpeed = 10;
@@ -1348,6 +1350,97 @@ item(FEAT_TRAINS, Item_Comeng_1100Class_Liv0, Comeng_1100Class_ID_Liv0) {
 		reverse_build_probability: 		return 50;
     }
     }
+	
+sort(FEAT_TRAINS, [Item_Comeng_1100Class_Liv0, Item_Comeng_Prospector_Liv0]);
+
+//ID
+const Comeng_Prospector_ID = 50;
+//introduction_date
+const Comeng_Prospector_IntroDate = date(1971, 1, 1);
+//speed
+const Comeng_Prospector_Speed = 150;
+//cost_factor
+const Comeng_Prospector_CostFactor = 56;
+//running_cost_factor
+const Comeng_Prospector_RunningCostFactor = 142;
+//Cargo Capacity
+const Comeng_Prospector_CargoCapacity = 163;
+//power
+const Comeng_Prospector_Power = 720;
+//weight
+const Comeng_Prospector_Weight = 65;
+
+//Comeng_Prospector_Liv0
+spriteset(spriteset_Comeng_Prospector_Liv0_Purchase,   "gfx/Comeng_Prospector_Liv0.png") {template_purchase_10(7, 21)}
+
+spriteset(spriteset_Comeng_Prospector_Liv0,   "gfx/Comeng_Prospector_Liv0.png") {template_10_repeat(7, 39)}
+
+switch(FEAT_TRAINS, SELF, switch_Comeng_Prospector_Liv0_position, position_in_articulated_veh) {
+ 0: spriteset_Comeng_Prospector_Liv0;
+ 1: spriteset_8_Blank;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Comeng_Prospector_Liv0_length, position_in_vehid_chain % 2) {
+ 0: 5;
+ 1: 5;
+ }
+ 
+ // Articulated part callback
+switch(FEAT_TRAINS, SELF, switch_Comeng_Prospector_Liv0_articulated_part, extra_callback_info1) {
+    0..1: return Item_Comeng_Prospector_Liv0;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+const Comeng_Prospector_Liv0_ID = (Comeng_Prospector_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Comeng_Prospector_Liv0, Comeng_Prospector_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_COMENG_PROSPECTOR);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_Prospector_IntroDate;		
+//		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Comeng_Prospector_Speed km/h;
+		cost_factor:					Comeng_Prospector_CostFactor;
+		running_cost_factor:			Comeng_Prospector_RunningCostFactor;
+		cargo_capacity: 				(Comeng_Prospector_CargoCapacity / param_capacity_mod);
+		power:							Comeng_Prospector_Power;
+		weight:							Comeng_Prospector_Weight ton;
+		
+//        variant_group: 					Item_Comeng_Prospector_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Comeng_Prospector_Liv0_position;
+//        sound_effect: 				switch_EMD_16_567;
+        purchase: 						spriteset_Comeng_Prospector_Liv0_Purchase;
+        additional_text: 				string(STR_INFO_COMENG_PROSPECTOR);
+        length: 						switch_Comeng_Prospector_Liv0_length;
+        articulated_part: 				switch_Comeng_Prospector_Liv0_articulated_part;        
+}
+}
 
 //ID
 const SilverFern_ID = 8240;
