@@ -77,9 +77,6 @@ STR_INFO_DEBSET:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Gauge: {GOLD}Stand
 STR_NAME_COMENG_1100CLASS:Budd-Comeng 1100 Class
 STR_INFO_COMENG_1100CLASS:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 1100 Class Railcars
 
-STR_NAME_COMENG_PROSPECTOR:Comeng Prospector Railcar
-STR_INFO_COMENG_PROSPECTOR:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR WCA/WCE Class Railcars {}{GOLD}Surprisingly, these are still underscaled
-
 STR_NAME_SILVERFERN:Kawasaki Silver Fern
 STR_INFO_SILVERFERN:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Silver Fern Railcars
 
@@ -87,6 +84,9 @@ STR_INFO_SILVERFERN:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GO
 
 STR_NAME_XPTINTERURBAN:Comeng Interurban HST
 STR_INFO_XPTINTERURBAN:{BLACK}Role: {GOLD}Express Service{}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Power: {BROWN}Diesel
+
+STR_NAME_COMENG_PROSPECTOR:Comeng Prospector Railcar
+STR_INFO_COMENG_PROSPECTOR:{BLACK}Role: {GOLD}Express Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR WCA/WCE Class Railcars {}{GOLD}Surprisingly, these are still underscaled
 
 STR_NAME_COMENG_XPT:Comeng XPT
 STR_INFO_COMENG_XPT:{BLACK}Role: {GOLD}Express Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Power: {BROWN}Diesel {}{GOLD}Specification 2542 Appendix D
