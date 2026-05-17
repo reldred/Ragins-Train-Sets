@@ -17175,6 +17175,220 @@ item (FEAT_TRAINS, Item_Gen20_OpenHopper_Liv2_BG, Gen20_OpenHopper_ID_Liv2_BG) {
 }
 
 //ID
+const Gen3B_OpenHopper_ID = 43550;
+//weight
+const Gen3B_OpenHopper_Weight = 18;
+//length
+const Gen3B_OpenHopper_Length = 5;
+
+//Hoppers
+spriteset(spriteset_Gen3B_OpenHopper_Loadh,   "gfx/Gen3B_OpenHopper_Load.png") {template_5_repeat(7, 39)}
+spriteset(spriteset_Gen3B_OpenHopper_Loadf,   "gfx/Gen3B_OpenHopper_Load.png") {template_5_repeat(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_loadcheck, cargo_count * (100 / cargo_capacity)){
+	1..50	: spriteset_Gen3B_OpenHopper_Loadh ;
+	51..100	: spriteset_Gen3B_OpenHopper_Loadf ;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_recolour_load, STORE_TEMP(switch_generic_recolour(), 0x100)) {
+    return switch_Gen3B_OpenHopper_loadcheck;
+}
+
+//Gen3B_OpenHopper_Liv0
+spriteset(spriteset_Gen3B_OpenHopper_Liv0_Purchase,   "gfx/Gen3B_OpenHopper_Liv0_0.png") {template_purchase_5(7, 21)}
+
+spriteset(spriteset_Gen3B_OpenHopper_Liv0_0,   "gfx/Gen3B_OpenHopper_Liv0_0.png") {template_5_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen3B_OpenHopper_Liv0_Purchase;
+    1: switch_Couplers_5_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_Liv0_CargoStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen3B_OpenHopper_Liv0_0;
+	1: switch_Couplers_5_Repeat;
+    2: switch_Gen3B_OpenHopper_recolour_load;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_Liv0_RearStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen3B_OpenHopper_Liv0_0;
+	1: switch_Couplers_5_Repeat;
+	2: switch_5_EOTD;
+    3: switch_Gen3B_OpenHopper_recolour_load;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen3B_OpenHopper_Liv0_RearStack1;
+    return switch_Gen3B_OpenHopper_Liv0_CargoStack;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_Liv0_RearStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen3B_OpenHopper_Liv0_0;
+	1: switch_Couplers_5_Repeat;
+	2: switch_5_EOTD_r;
+    3: switch_Gen3B_OpenHopper_recolour_load;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen3B_OpenHopper_Liv0_RearStack2;
+    return switch_Gen3B_OpenHopper_Liv0_CargoStack;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen3B_OpenHopper_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen3B_OpenHopper_Liv0_rearcheck1;
+ 1: switch_Gen3B_OpenHopper_Liv0_rearcheck2;
+}
+
+const Gen3B_OpenHopper_ID_Liv0_NG = (Gen3B_OpenHopper_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen3B_OpenHopper_Liv0_NG, Gen3B_OpenHopper_ID_Liv0_NG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		default_cargo_type:				COAL; //OpenHopper
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
+		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
+
+        name:                           string(STR_NAME_GEN3B_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen3_IntroDate;		
+		length:                         Gen3B_OpenHopper_Length;
+		
+		loading_speed:					Gen3_LoadingSpeed;
+		speed:							Gen3_Speed km/h;
+		cost_factor:					Gen3_5_CostFactor;
+		running_cost_factor:			Gen3_5_RunningCostFactor;
+		cargo_capacity: 				(Gen3_5_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen3B_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen3B_OpenHopper_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen3B_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen3B_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN3B_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen3_5_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen3B_OpenHopper_ID_Liv0 = (Gen3B_OpenHopper_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen3B_OpenHopper_Liv0, Gen3B_OpenHopper_ID_Liv0) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		default_cargo_type:				COAL; //OpenHopper
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
+		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
+
+        name:                           string(STR_NAME_GEN3B_OPENHOPPER);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen3_IntroDate;		
+		length:                         Gen3B_OpenHopper_Length;
+		
+		loading_speed:					Gen3_LoadingSpeed;
+		speed:							Gen3_Speed km/h;
+		cost_factor:					Gen3_5_CostFactor;
+		running_cost_factor:			Gen3_5_RunningCostFactor;
+		cargo_capacity: 				(Gen3_5_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen3B_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen3B_OpenHopper_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen3B_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen3B_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN3B_OPENHOPPER);
+		cargo_capacity: 				(Gen3_5_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen3B_OpenHopper_ID_Liv0_BG = (Gen3B_OpenHopper_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen3B_OpenHopper_Liv0_BG, Gen3B_OpenHopper_ID_Liv0_BG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		default_cargo_type:				COAL; //OpenHopper
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
+		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
+
+        name:                           string(STR_NAME_GEN3B_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen3_IntroDate;		
+		length:                         Gen3B_OpenHopper_Length;
+		
+		loading_speed:					Gen3_LoadingSpeed;
+		speed:							Gen3_Speed km/h;
+		cost_factor:					Gen3_5_CostFactor;
+		running_cost_factor:			Gen3_5_RunningCostFactor;
+		cargo_capacity: 				(Gen3_5_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen3B_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen3B_OpenHopper_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen3B_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen3B_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN3B_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen3_5_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+//ID
 const Gen4D_OpenHopper_ID = 44650;
 //weight
 const Gen4D_OpenHopper_Weight = 20;
@@ -17588,6 +17802,13 @@ item (FEAT_TRAINS, Item_Gen4D_OpenHopper_Liv1_BG, Gen4D_OpenHopper_ID_Liv1_BG) {
 }
 }
 
+//ID
+const Gen4E_OpenHopper_ID = 44650;
+//weight
+const Gen4E_OpenHopper_Weight = 20;
+//length
+const Gen4E_OpenHopper_Length = 6;
+
 //Hoppers
 spriteset(spriteset_Gen4E_OpenHopper_Loadh,   "gfx/Gen4E_OpenHopper_Load.png") {template_6_repeat(7, 39)}
 spriteset(spriteset_Gen4E_OpenHopper_Loadf,   "gfx/Gen4E_OpenHopper_Load.png") {template_6_repeat(7, 69)}
@@ -17630,7 +17851,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen4E_OpenHopper_Liv0_RearStack1, [
     ]) {
     0: spriteset_Gen4E_OpenHopper_Liv0_0;
 	1: switch_Couplers_6_Repeat;
-	2: spriteset_6_Old_EOTD;
+	2: switch_6_EOTD;
     3: switch_Gen4E_OpenHopper_recolour_load;
 }
 
@@ -17645,7 +17866,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen4E_OpenHopper_Liv0_RearStack2, [
     ]) {
     0: spriteset_Gen4E_OpenHopper_Liv0_0;
 	1: switch_Couplers_6_Repeat;
-	2: spriteset_6_Old_EOTD_r;
+	2: switch_6_EOTD_r;
     3: switch_Gen4E_OpenHopper_recolour_load;
 }
 
@@ -17659,151 +17880,139 @@ switch(FEAT_TRAINS, SELF, switch_Gen4E_OpenHopper_Liv0_position, vehicle_is_flip
  1: switch_Gen4E_OpenHopper_Liv0_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv0_NG, 42650) {
+const Gen4E_OpenHopper_ID_Liv0_NG = (Gen4E_OpenHopper_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv0_NG, Gen4E_OpenHopper_ID_Liv0_NG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN4E_OPENHOPPER_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN4E_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4E_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4E_OpenHopper_Liv0_NG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4E_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen4E_OpenHopper_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4E_OpenHopper_Liv0_position;
-    purchase:                            switch_Gen4E_OpenHopper_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4E_OPENHOPPER_NG);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4E_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen4E_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN4E_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv0, 42665) {
+const Gen4E_OpenHopper_ID_Liv0 = (Gen4E_OpenHopper_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv0, Gen4E_OpenHopper_ID_Liv0) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN4E_OPENHOPPER);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN4E_OPENHOPPER);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4E_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4E_OpenHopper_Liv0;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4E_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen4E_OpenHopper_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4E_OpenHopper_Liv0_position;
-    purchase:                            switch_Gen4E_OpenHopper_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4E_OPENHOPPER);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4E_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen4E_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN4E_OPENHOPPER);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv0_BG, 42680) {
+const Gen4E_OpenHopper_ID_Liv0_BG = (Gen4E_OpenHopper_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv0_BG, Gen4E_OpenHopper_ID_Liv0_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN4E_OPENHOPPER_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN4E_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4E_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4E_OpenHopper_Liv0_NG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4E_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen4E_OpenHopper_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4E_OpenHopper_Liv0_position;
-    purchase:                            switch_Gen4E_OpenHopper_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4E_OPENHOPPER_BG);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4E_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen4E_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN4E_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
@@ -17811,6 +18020,12 @@ item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv0_BG, 42680) {
 spriteset(spriteset_Gen4E_OpenHopper_Liv1_Purchase,   "gfx/Gen4E_OpenHopper_Liv1_0.png") {template_purchase_6(7, 21)}
 
 spriteset(spriteset_Gen4E_OpenHopper_Liv1_0,   "gfx/Gen4E_OpenHopper_Liv1_0.png") {template_6_repeat(7, 39)}
+spriteset(spriteset_Gen4E_OpenHopper_Liv1_1,   "gfx/Gen4E_OpenHopper_Liv1_1.png") {template_6_repeat(7, 39)}
+
+random_switch (FEAT_TRAINS, SELF, random_Gen4E_OpenHopper_Liv1_Random) {
+	1: spriteset_Gen4E_OpenHopper_Liv1_0;
+	1: spriteset_Gen4E_OpenHopper_Liv1_1;
+}
 
 //Purchase Sprite Stacker
 switch (FEAT_TRAINS, SELF, switch_Gen4E_OpenHopper_Liv1_PurchaseStack, [
@@ -17825,7 +18040,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen4E_OpenHopper_Liv1_CargoStack, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: spriteset_Gen4E_OpenHopper_Liv1_0;
+    0: random_Gen4E_OpenHopper_Liv1_Random;
 	1: switch_Couplers_6_Repeat;
     2: switch_Gen4E_OpenHopper_recolour_load;
 }
@@ -17834,9 +18049,9 @@ switch (FEAT_TRAINS, SELF, switch_Gen4E_OpenHopper_Liv1_RearStack1, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: spriteset_Gen4E_OpenHopper_Liv1_0;
+    0: random_Gen4E_OpenHopper_Liv1_Random;
 	1: switch_Couplers_6_Repeat;
-	2: spriteset_6_Old_EOTD;
+	2: switch_6_EOTD;
     3: switch_Gen4E_OpenHopper_recolour_load;
 }
 
@@ -17849,9 +18064,9 @@ switch (FEAT_TRAINS, SELF, switch_Gen4E_OpenHopper_Liv1_RearStack2, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: spriteset_Gen4E_OpenHopper_Liv1_0;
+    0: random_Gen4E_OpenHopper_Liv1_Random;
 	1: switch_Couplers_6_Repeat;
-	2: spriteset_6_Old_EOTD_r;
+	2: switch_6_EOTD_r;
     3: switch_Gen4E_OpenHopper_recolour_load;
 }
 
@@ -17865,153 +18080,148 @@ switch(FEAT_TRAINS, SELF, switch_Gen4E_OpenHopper_Liv1_position, vehicle_is_flip
  1: switch_Gen4E_OpenHopper_Liv1_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv1_NG, 42651) {
+const Gen4E_OpenHopper_ID_Liv1_NG = (Gen4E_OpenHopper_ID + Liv1_ID);
+
+item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv1_NG, Gen4E_OpenHopper_ID_Liv1_NG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN4E_OPENHOPPER_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN4E_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4E_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen4E_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4E_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen4E_OpenHopper_Liv0_NG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4E_OpenHopper_Liv1_position;
-    purchase:                            switch_Gen4E_OpenHopper_Liv1_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4E_OPENHOPPER_NG);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4E_OpenHopper_Liv1_position;
+		purchase:                       switch_Gen4E_OpenHopper_Liv1_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN4E_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv1, 42666) {
+const Gen4E_OpenHopper_ID_Liv1 = (Gen4E_OpenHopper_ID_Liv1_NG + 15);
+item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv1, Gen4E_OpenHopper_ID_Liv1) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN4E_OPENHOPPER);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN4E_OPENHOPPER);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4E_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen4E_OpenHopper_Liv0;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4E_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen4E_OpenHopper_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4E_OpenHopper_Liv1_position;
-    purchase:                            switch_Gen4E_OpenHopper_Liv1_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4E_OPENHOPPER);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4E_OpenHopper_Liv1_position;
+		purchase:                       switch_Gen4E_OpenHopper_Liv1_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN4E_OPENHOPPER);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv1_BG, 42681) {
+const Gen4E_OpenHopper_ID_Liv1_BG = (Gen4E_OpenHopper_ID_Liv1 + 15);
+item (FEAT_TRAINS, Item_Gen4E_OpenHopper_Liv1_BG, Gen4E_OpenHopper_ID_Liv1_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN4E_OPENHOPPER_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN4E_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4E_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen4E_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4E_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen4E_OpenHopper_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4E_OpenHopper_Liv1_position;
-    purchase:                            switch_Gen4E_OpenHopper_Liv1_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4E_OPENHOPPER_BG);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4E_OpenHopper_Liv1_position;
+		purchase:                       switch_Gen4E_OpenHopper_Liv1_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN4E_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
+
+//ID
+const Gen5H_OpenHopper_ID = 46700;
+//weight
+const Gen5H_OpenHopper_Weight = 23;
+//length
+const Gen5H_OpenHopper_Length = 7;
 
 //Hoppers
 spriteset(spriteset_Gen5H_OpenHopper_Loadh,   "gfx/Gen5H_OpenHopper_Load.png") {template_7_repeat(7, 39)}
@@ -18055,7 +18265,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv0_RearStack1, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv0_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD;
+	2: switch_7_EOTD;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18070,7 +18280,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv0_RearStack2, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv0_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD_r;
+	2: switch_7_EOTD_r;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18084,151 +18294,139 @@ switch(FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv0_position, vehicle_is_flip
  1: switch_Gen5H_OpenHopper_Liv0_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv0_NG, 44200) {
+const Gen5H_OpenHopper_ID_Liv0_NG = (Gen5H_OpenHopper_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv0_NG, Gen5H_OpenHopper_ID_Liv0_NG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen5H_OpenHopper_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv0_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_NG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv0, 44215) {
+const Gen5H_OpenHopper_ID_Liv0 = (Gen5H_OpenHopper_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv0, Gen5H_OpenHopper_ID_Liv0) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen5H_OpenHopper_Liv0;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen5H_OpenHopper_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv0_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv0_BG, 44230) {
+const Gen5H_OpenHopper_ID_Liv0_BG = (Gen5H_OpenHopper_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv0_BG, Gen5H_OpenHopper_ID_Liv0_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+//        variant_group: 					Item_Gen5H_OpenHopper_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv0_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_BG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv0_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
@@ -18261,7 +18459,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv1_RearStack1, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv1_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD;
+	2: switch_7_EOTD;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18276,7 +18474,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv1_RearStack2, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv1_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD_r;
+	2: switch_7_EOTD_r;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18290,151 +18488,139 @@ switch(FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv1_position, vehicle_is_flip
  1: switch_Gen5H_OpenHopper_Liv1_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv1_NG, 44201) {
+const Gen5H_OpenHopper_ID_Liv1_NG = (Gen5H_OpenHopper_ID + Liv1_ID);
+
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv1_NG, Gen5H_OpenHopper_ID_Liv1_NG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_NG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv1_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv1_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_NG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv1_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv1_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv1, 44216) {
+const Gen5H_OpenHopper_ID_Liv1 = (Gen5H_OpenHopper_ID_Liv1_NG + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv1, Gen5H_OpenHopper_ID_Liv1) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv1_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv1_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv1_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv1_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv1_BG, 44231) {
+const Gen5H_OpenHopper_ID_Liv1_BG = (Gen5H_OpenHopper_ID_Liv1 + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv1_BG, Gen5H_OpenHopper_ID_Liv1_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv1_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv1_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_BG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv1_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv1_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
@@ -18467,7 +18653,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv2_RearStack1, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv2_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD;
+	2: switch_7_EOTD;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18482,7 +18668,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv2_RearStack2, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv2_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD_r;
+	2: switch_7_EOTD_r;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18496,151 +18682,139 @@ switch(FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv2_position, vehicle_is_flip
  1: switch_Gen5H_OpenHopper_Liv2_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv2_NG, 44202) {
+const Gen5H_OpenHopper_ID_Liv2_NG = (Gen5H_OpenHopper_ID + Liv2_ID);
+
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv2_NG, Gen5H_OpenHopper_ID_Liv2_NG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_NG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv2_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv2_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_NG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv2_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv2_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv2, 44217) {
+const Gen5H_OpenHopper_ID_Liv2 = (Gen5H_OpenHopper_ID_Liv2_NG + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv2, Gen5H_OpenHopper_ID_Liv2) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv2_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv2_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv2_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv2_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv2_BG, 44232) {
+const Gen5H_OpenHopper_ID_Liv2_BG = (Gen5H_OpenHopper_ID_Liv2 + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv2_BG, Gen5H_OpenHopper_ID_Liv2_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv2_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv2_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_BG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv2_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv2_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
@@ -18673,7 +18847,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv3_RearStack1, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv3_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD;
+	2: switch_7_EOTD;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18688,7 +18862,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv3_RearStack2, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv3_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD_r;
+	2: switch_7_EOTD_r;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18702,151 +18876,139 @@ switch(FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv3_position, vehicle_is_flip
  1: switch_Gen5H_OpenHopper_Liv3_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv3_NG, 44203) {
+const Gen5H_OpenHopper_ID_Liv3_NG = (Gen5H_OpenHopper_ID + Liv3_ID);
+
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv3_NG, Gen5H_OpenHopper_ID_Liv3_NG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_NG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv3_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv3_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_NG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv3_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv3_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv3, 44218) {
+const Gen5H_OpenHopper_ID_Liv3 = (Gen5H_OpenHopper_ID_Liv3_NG + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv3, Gen5H_OpenHopper_ID_Liv3) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv3_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv3_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv3_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv3_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv3_BG, 44233) {
+const Gen5H_OpenHopper_ID_Liv3_BG = (Gen5H_OpenHopper_ID_Liv3 + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv3_BG, Gen5H_OpenHopper_ID_Liv3_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv3_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv3_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_BG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv3_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv3_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
@@ -18879,7 +19041,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv4_RearStack1, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv4_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD;
+	2: switch_7_EOTD;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18894,7 +19056,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv4_RearStack2, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv4_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD_r;
+	2: switch_7_EOTD_r;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -18908,151 +19070,139 @@ switch(FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv4_position, vehicle_is_flip
  1: switch_Gen5H_OpenHopper_Liv4_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv4_NG, 44204) {
+const Gen5H_OpenHopper_ID_Liv4_NG = (Gen5H_OpenHopper_ID + Liv4_ID);
+
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv4_NG, Gen5H_OpenHopper_ID_Liv4_NG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_NG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv4_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv4_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_NG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv4_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv4_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv4, 44219) {
+const Gen5H_OpenHopper_ID_Liv4 = (Gen5H_OpenHopper_ID_Liv4_NG + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv4, Gen5H_OpenHopper_ID_Liv4) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv4_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv4_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv4_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv4_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv4_BG, 44234) {
+const Gen5H_OpenHopper_ID_Liv4_BG = (Gen5H_OpenHopper_ID_Liv4 + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv4_BG, Gen5H_OpenHopper_ID_Liv4_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv4_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv4_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_BG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv4_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv4_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
@@ -19085,7 +19235,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv5_RearStack1, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv5_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD;
+	2: switch_7_EOTD;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -19100,7 +19250,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv5_RearStack2, [
     ]) {
     0: spriteset_Gen5H_OpenHopper_Liv5_0;
 	1: switch_Couplers_7_Repeat;
-	2: spriteset_7_Modern_EOTD_r;
+	2: switch_7_EOTD_r;
     3: switch_Gen5H_OpenHopper_recolour_load;
 }
 
@@ -19114,151 +19264,139 @@ switch(FEAT_TRAINS, SELF, switch_Gen5H_OpenHopper_Liv5_position, vehicle_is_flip
  1: switch_Gen5H_OpenHopper_Liv5_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv5_NG, 44205) {
+const Gen5H_OpenHopper_ID_Liv5_NG = (Gen5H_OpenHopper_ID + Liv5_ID);
+
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv5_NG, Gen5H_OpenHopper_ID_Liv5_NG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_NG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_NG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv5_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv5_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_NG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv5_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv5_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_NG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv5, 44220) {
+const Gen5H_OpenHopper_ID_Liv5 = (Gen5H_OpenHopper_ID_Liv5_NG + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv5, Gen5H_OpenHopper_ID_Liv5) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv5_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv5_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv5_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv5_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv5_BG, 44235) {
+const Gen5H_OpenHopper_ID_Liv5_BG = (Gen5H_OpenHopper_ID_Liv5 + 15);
+item (FEAT_TRAINS, Item_Gen5H_OpenHopper_Liv5_BG, Gen5H_OpenHopper_ID_Liv5_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
 		refittable_cargo_classes:		bitmask(CC_BULK); //OpenHopper
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS, CC_COVERED_BULK, CC_POTABLE, CC_HAZARDOUS); //OpenHopper
 		default_cargo_type:				COAL; //OpenHopper
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //OpenHopper
 		cargo_disallow_refit:			[TOUR, LVST, MAIZ, GRAI, WHEA, CERE, BEAN, CASS, SGBT, CTCD, TOFF]; //OpenHopper
 
-        name:                             string(STR_NAME_GEN5H_OPENHOPPER_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GEN5H_OPENHOPPER_BG);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         23 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5H_OpenHopper_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		variant_group: Item_Gen5H_OpenHopper_Liv0_NG;
-		extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5H_OpenHopper_Weight ton;
+
+        variant_group: 					Item_Gen5H_OpenHopper_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5H_OpenHopper_Liv5_position;
-    purchase:                            switch_Gen5H_OpenHopper_Liv5_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5H_OPENHOPPER_BG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5H_OpenHopper_Liv5_position;
+		purchase:                       switch_Gen5H_OpenHopper_Liv5_PurchaseStack;
+		additional_text: 				string(STR_INFO_GEN5H_OPENHOPPER_BG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
