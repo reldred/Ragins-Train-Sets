@@ -420,6 +420,11 @@ STR_INFO_CLYDE_AAT22C2R:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Stand
 STR_NAME_CLYDE_AAT22C2R_BG:Clyde-EMD AAT22C-2R
 STR_INFO_CLYDE_AAT22C2R_BG:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}Clyde-EMD ML2 {}{BLACK}Based on: {GOLD}V/Line A Class
 
+STR_NAME_CLYDE_G18HBR:Clyde-EMD G18HBR
+STR_INFO_CLYDE_G18HBR:{BLACK}Role: {GOLD}Light Mixed Traffic {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}Clyde-EMD G8B (Flat Top) {}{BLACK}Based on: {GOLD}VR P Class
+STR_NAME_CLYDE_G18HBR_BG:Clyde-EMD G18HBR
+STR_INFO_CLYDE_G18HBR_BG:{BLACK}Role: {GOLD}Light Mixed Traffic {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}Clyde-EMD G8B (Flat Top) {}{BLACK}Based on: {GOLD}VR P Class
+
 STR_NAME_GMD_GT22MC:GMD GT22MC
 STR_INFO_GMD_GT22MC:{BLACK}Role: {GOLD}Freight {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Rebuild of: {GOLD}GMD GL22MC {}{BLACK}Based on: {GOLD}NZ DFT Class
 

@@ -12390,10 +12390,166 @@ item(FEAT_TRAINS, Item_Clyde_AAT22C2R_BG_Liv0, 50350) {
 }
 }
 
+sort(FEAT_TRAINS, [Item_Clyde_G8B_FlatTop_BG_Liv0, Item_Clyde_G18HBR_Liv0, Item_Clyde_G18HBR_BG_Liv0]);
+
+//ID
+const Clyde_G18HBR_ID = 50500;
+//introduction_date
+const Clyde_G18HBR_IntroDate = date(1984, 1, 1);
+//speed
+const Clyde_G18HBR_Speed = 115;
+//cost_factor
+const Clyde_G18HBR_CostFactor = 40;
+//running_cost_factor
+const Clyde_G18HBR_RunningCostFactor = 106;
+//power
+const Clyde_G18HBR_Power = 1100;
+//weight
+const Clyde_G18HBR_Weight = 77;
+//length
+const Clyde_G18HBR_Length = 6;
+
+//Clyde_G18HBR_Liv0
+spriteset(spriteset_Clyde_G18HBR_Liv0_Purchase,   "gfx/Clyde_G18HBR_Liv0.png") {template_purchase_6(7, 21)}
+spriteset(spriteset_Clyde_G18HBR_Liv0,   "gfx/Clyde_G18HBR_Liv0.png") {template_6(7, 39)}
+spriteset(spriteset_Clyde_G18HBR_Liv0_r,   "gfx/Clyde_G18HBR_Liv0.png") {template_6_r(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Clyde_G18HBR_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_G18HBR_Liv0_Purchase;
+    1: switch_Couplers_6_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_G18HBR_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_G18HBR_Liv0;
+	1: switch_Couplers_6_Repeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_G18HBR_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_G18HBR_Liv0_r;
+	1: switch_Couplers_6_Repeat;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Clyde_G18HBR_Liv0_pair, position_in_vehid_chain % 2) {
+ 1: switch_Clyde_G18HBR_Liv0_r;
+  switch_Clyde_G18HBR_Liv0_Fw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Clyde_G18HBR_Liv0_rear, position_in_vehid_chain_from_end) {
+ 0: switch_Clyde_G18HBR_Liv0_r;
+  switch_Clyde_G18HBR_Liv0_pair;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Clyde_G18HBR_Liv0_position, position_in_consist) {
+ 0: switch_Clyde_G18HBR_Liv0_Fw;
+  switch_Clyde_G18HBR_Liv0_rear;
+}
+
+const Clyde_G18HBR_Liv0_ID = (Clyde_G18HBR_ID + Liv0_ID);
+//Clyde_G18HBR_Liv0
+item(FEAT_TRAINS, Item_Clyde_G18HBR_Liv0, Clyde_G18HBR_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_CLYDE_G18HBR);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_G18HBR_IntroDate;		
+		length:                         Clyde_G18HBR_Length;
+		
+		speed:							Clyde_G18HBR_Speed km/h;
+		cost_factor:					Clyde_G18HBR_CostFactor;
+		running_cost_factor:			Clyde_G18HBR_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_G18HBR_Power;
+		weight:							Clyde_G18HBR_Weight;
+		
+//        variant_group: 					Item_Clyde_G18HBR_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Clyde_G18HBR_Liv0_position;
+//		sound_effect: 					switch_EMD_16_567;
+        purchase: 						switch_Clyde_G18HBR_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_G18HBR);
+//		reverse_build_probability: 		return 25;
+}
+}
+
+const Clyde_G18HBR_BG_Liv0_ID = (Clyde_G18HBR_Liv0_ID + 50);
+//Clyde_G18HBR_BG_Liv0
+item(FEAT_TRAINS, Item_Clyde_G18HBR_BG_Liv0, Clyde_G18HBR_BG_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_CLYDE_G18HBR_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_G18HBR_IntroDate;		
+		length:                         Clyde_G18HBR_Length;
+		
+		speed:							Clyde_G18HBR_Speed km/h;
+		cost_factor:					Clyde_G18HBR_CostFactor;
+		running_cost_factor:			Clyde_G18HBR_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_G18HBR_Power;
+		weight:							Clyde_G18HBR_Weight;
+		
+//        variant_group: 					Item_Clyde_G18HBR_BG_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Clyde_G18HBR_Liv0_position;
+//		sound_effect: 					switch_EMD_16_567;
+        purchase: 						switch_Clyde_G18HBR_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_G18HBR_BG);
+//		reverse_build_probability: 		return 25;
+}
+}
+
 sort(FEAT_TRAINS, [Item_GMD_GL22MC_Liv0, Item_GMD_GT22MC_Liv0]);
 
 //ID
-const GMD_GT22MC_ID = 50750;
+const GMD_GT22MC_ID = 50850;
 //introduction_date
 const GMD_GT22MC_IntroDate = date(1992, 1, 1);
 //speed
