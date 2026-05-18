@@ -233,23 +233,25 @@ STR_INFO_STADLERSALI:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {BROWN}Diesel {}
 
 
 
+STR_NAME_CLYDE_GT26C:Clyde-EMD GT26C
+STR_INFO_CLYDE_GT26C:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR L Class
+
 STR_NAME_CLYDE_A32D:Clyde-EMD A32D
 STR_INFO_CLYDE_A32D:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed twin 16-645 locomotive for Commonwealth Railways
 
 STR_NAME_EMD_JT30C2:EMD-Nohab JT30C-2
 STR_INFO_EMD_JT30C2:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Imported DSB Class MZ III locomotives
 
-STR_NAME_CLYDE_GT26C:Clyde-EMD GT26C
-STR_INFO_CLYDE_GT26C:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR L Class
-
 STR_NAME_NOHAB_JT30C2:EMD-Nohab JT30C-2
 STR_INFO_NOHAB_JT30C2:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}DSB Class MZIII imported by Independant Rail Australia in 2006
 
 STR_NAME_CLYDE_GT26CW:Clyde-EMD GT26CW
-STR_INFO_CLYDE_GT26CW:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR C Class
+STR_INFO_CLYDE_GT26CW:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR C Class
+STR_NAME_CLYDE_GT26CW_BG:Clyde-EMD GT26CW
+STR_INFO_CLYDE_GT26CW_BG:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR C Class
 
 STR_NAME_CLYDE_GT46CWM:Clyde-EMD GT46CWM
-STR_INFO_CLYDE_GT46CWM:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 90 Class
+STR_INFO_CLYDE_GT46CWM:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 90 Class
 
 STR_NAME_GONINAN_C40ACI:GE-UGL C40aci
 STR_INFO_GONINAN_C40ACI:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR National 5000 Class {}{}{GOLD}Basically an NR Class with AC motors, after it ate too many kebabs.
