@@ -10640,6 +10640,8 @@ const Clyde_J26C_RunningCostFactor = 123;
 const Clyde_J26C_Power = 2000;
 //weight
 const Clyde_J26C_Weight = 108;
+//length
+const Clyde_J26C_Length = 8;
 
 //Clyde_J26C_Liv0
 spriteset(spriteset_Clyde_J26C_Liv0_Purchase,   "gfx/Clyde_J26C_Liv0.png") {template_purchase_8(7, 21)}
@@ -10687,7 +10689,7 @@ item(FEAT_TRAINS, Item_Clyde_J26C_Liv0, Clyde_J26C_Liv0_ID) {
 		tractive_effort_coefficient:	0.3;
 		
         introduction_date:              Clyde_J26C_IntroDate;		
-		length:                         8;
+		length:                         Clyde_J26C_Length;
 		
 		speed:							Clyde_J26C_Speed km/h;
 		cost_factor:					Clyde_J26C_CostFactor;
@@ -10703,6 +10705,140 @@ item(FEAT_TRAINS, Item_Clyde_J26C_Liv0, Clyde_J26C_Liv0_ID) {
 		default: 						switch_Clyde_J26C_Liv0_Normal_Stack;
 //		sound_effect: 					switch_Clyde_16_645;
         purchase: 						switch_Clyde_J26C_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_J26C);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Clyde_J26C_Liv17
+spriteset(spriteset_Clyde_J26C_Liv17_Purchase,   "gfx/Clyde_J26C_Liv17.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Clyde_J26C_Liv17,   "gfx/Clyde_J26C_Liv17.png") {template_8(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Clyde_J26C_Liv17_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_J26C_Liv17_Purchase;
+    1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_J26C_Liv17_Normal_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_J26C_Liv17;
+    1: switch_Couplers_8_Repeat;
+}
+
+const Clyde_J26C_Liv17_ID = (Clyde_J26C_ID + Liv17_ID);
+
+item(FEAT_TRAINS, Item_Clyde_J26C_Liv17, Clyde_J26C_Liv17_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_CLYDE_J26C);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_J26C_IntroDate;		
+		length:                         Clyde_J26C_Length;
+		
+		speed:							Clyde_J26C_Speed km/h;
+		cost_factor:					Clyde_J26C_CostFactor;
+		running_cost_factor:			Clyde_J26C_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_J26C_Power;
+		weight:							Clyde_J26C_Weight;
+		
+        variant_group: 					Item_Clyde_J26C_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+		default: 						switch_Clyde_J26C_Liv17_Normal_Stack;
+//		sound_effect: 					switch_Clyde_16_645;
+        purchase: 						switch_Clyde_J26C_Liv17_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_J26C);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Clyde_J26C_Liv18
+spriteset(spriteset_Clyde_J26C_Liv18_Purchase,   "gfx/Clyde_J26C_Liv18.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Clyde_J26C_Liv18,   "gfx/Clyde_J26C_Liv18.png") {template_8(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Clyde_J26C_Liv18_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_J26C_Liv18_Purchase;
+    1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_J26C_Liv18_Normal_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_J26C_Liv18;
+    1: switch_Couplers_8_Repeat;
+}
+
+const Clyde_J26C_Liv18_ID = (Clyde_J26C_ID + Liv18_ID);
+
+item(FEAT_TRAINS, Item_Clyde_J26C_Liv18, Clyde_J26C_Liv18_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_CLYDE_J26C);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_J26C_IntroDate;		
+		length:                         Clyde_J26C_Length;
+		
+		speed:							Clyde_J26C_Speed km/h;
+		cost_factor:					Clyde_J26C_CostFactor;
+		running_cost_factor:			Clyde_J26C_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_J26C_Power;
+		weight:							Clyde_J26C_Weight;
+		
+        variant_group: 					Item_Clyde_J26C_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+		default: 						switch_Clyde_J26C_Liv18_Normal_Stack;
+//		sound_effect: 					switch_Clyde_16_645;
+        purchase: 						switch_Clyde_J26C_Liv18_Purchase_Stack;
         additional_text: 				string(STR_INFO_CLYDE_J26C);
 		reverse_build_probability: 		return 50;
 }
@@ -12466,7 +12602,7 @@ item(FEAT_TRAINS, Item_Clyde_G22AR_Liv0, Clyde_G22AR_Liv0_ID) {
 }
 }
 
-sort(FEAT_TRAINS, [Item_Comeng_CE615A_Liv0, Item_Clyde_J26C2SS_Liv0]);
+sort(FEAT_TRAINS, [Item_Clyde_J26C_Liv0, Item_Clyde_J26C2SS_Liv0]);
 
 //ID
 const Clyde_J26C2SS_ID = 50250;
@@ -12482,6 +12618,8 @@ const Clyde_J26C2SS_RunningCostFactor = 128;
 const Clyde_J26C2SS_Power = 2000;
 //weight
 const Clyde_J26C2SS_Weight = 110;
+//length
+const Clyde_J26C2SS_Length = 8;
 
 //Clyde_J26C2SS_Liv0
 spriteset(spriteset_Clyde_J26C2SS_Liv0_Purchase,   "gfx/Clyde_J26C_Liv0.png") {template_purchase_8(187, 21)}
@@ -12529,7 +12667,7 @@ item(FEAT_TRAINS, Item_Clyde_J26C2SS_Liv0, Clyde_J26C2SS_Liv0_ID) {
 		tractive_effort_coefficient:	0.3;
 		
         introduction_date:              Clyde_J26C2SS_IntroDate;		
-		length:                         8;
+		length:                         Clyde_J26C2SS_Length;
 		
 		speed:							Clyde_J26C2SS_Speed km/h;
 		cost_factor:					Clyde_J26C2SS_CostFactor;
@@ -12545,6 +12683,140 @@ item(FEAT_TRAINS, Item_Clyde_J26C2SS_Liv0, Clyde_J26C2SS_Liv0_ID) {
 		default: 						switch_Clyde_J26C2SS_Liv0_Normal_Stack;
 //		sound_effect: 					switch_Clyde_16_645;
         purchase: 						switch_Clyde_J26C2SS_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_J26C2SS);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Clyde_J26C2SS_Liv17
+spriteset(spriteset_Clyde_J26C2SS_Liv17_Purchase,   "gfx/Clyde_J26C_Liv17.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Clyde_J26C2SS_Liv17,   "gfx/Clyde_J26C_Liv17.png") {template_8(187, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Clyde_J26C2SS_Liv17_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_J26C2SS_Liv17_Purchase;
+    1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_J26C2SS_Liv17_Normal_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_J26C2SS_Liv17;
+    1: switch_Couplers_8_Repeat;
+}
+
+const Clyde_J26C2SS_Liv17_ID = (Clyde_J26C2SS_ID + Liv17_ID);
+
+item(FEAT_TRAINS, Item_Clyde_J26C2SS_Liv17, Clyde_J26C2SS_Liv17_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_CLYDE_J26C2SS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_J26C2SS_IntroDate;		
+		length:                         Clyde_J26C2SS_Length;
+		
+		speed:							Clyde_J26C2SS_Speed km/h;
+		cost_factor:					Clyde_J26C2SS_CostFactor;
+		running_cost_factor:			Clyde_J26C2SS_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_J26C2SS_Power;
+		weight:							Clyde_J26C2SS_Weight;
+		
+        variant_group: 					Item_Clyde_J26C2SS_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+		default: 						switch_Clyde_J26C2SS_Liv17_Normal_Stack;
+//		sound_effect: 					switch_Clyde_16_645;
+        purchase: 						switch_Clyde_J26C2SS_Liv17_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_J26C2SS);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Clyde_J26C2SS_Liv18
+spriteset(spriteset_Clyde_J26C2SS_Liv18_Purchase,   "gfx/Clyde_J26C_Liv18.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Clyde_J26C2SS_Liv18,   "gfx/Clyde_J26C_Liv18.png") {template_8(187, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Clyde_J26C2SS_Liv18_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_J26C2SS_Liv18_Purchase;
+    1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_J26C2SS_Liv18_Normal_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_J26C2SS_Liv18;
+    1: switch_Couplers_8_Repeat;
+}
+
+const Clyde_J26C2SS_Liv18_ID = (Clyde_J26C2SS_ID + Liv18_ID);
+
+item(FEAT_TRAINS, Item_Clyde_J26C2SS_Liv18, Clyde_J26C2SS_Liv18_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_CLYDE_J26C2SS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_J26C2SS_IntroDate;		
+		length:                         Clyde_J26C2SS_Length;
+		
+		speed:							Clyde_J26C2SS_Speed km/h;
+		cost_factor:					Clyde_J26C2SS_CostFactor;
+		running_cost_factor:			Clyde_J26C2SS_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_J26C2SS_Power;
+		weight:							Clyde_J26C2SS_Weight;
+		
+        variant_group: 					Item_Clyde_J26C2SS_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+		default: 						switch_Clyde_J26C2SS_Liv18_Normal_Stack;
+//		sound_effect: 					switch_Clyde_16_645;
+        purchase: 						switch_Clyde_J26C2SS_Liv18_Purchase_Stack;
         additional_text: 				string(STR_INFO_CLYDE_J26C2SS);
 		reverse_build_probability: 		return 50;
 }
