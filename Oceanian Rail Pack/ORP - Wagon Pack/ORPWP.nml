@@ -9750,6 +9750,13 @@ item (FEAT_TRAINS, Item_Gen50_GoodsVan_Liv0_BG, Gen50_GoodsVan_ID_Liv0_BG) {
 }
 }
 
+//ID
+const Gen2A_GoodsVan_ID = 30550;
+//weight
+const Gen2A_GoodsVan_Weight = 14;
+//length
+const Gen2A_GoodsVan_Length = 5;
+
 //Gen2A_GoodsVan_Liv0
 spriteset(spriteset_Gen2A_GoodsVan_Liv0_Purchase,   "gfx/Gen2A_GoodsVan_Liv0_0.png") {template_purchase_5(7, 21)}
 
@@ -9777,7 +9784,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen2A_GoodsVan_Liv0_SpriteStack1, [
     ]) {
     0: spriteset_Gen2A_GoodsVan_Liv0_0;
 	1: switch_Couplers_5_Repeat;
-    2: spriteset_5_Old_EOTD;
+    2: switch_5_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen2A_GoodsVan_Liv0_rearcheck1, position_in_consist_from_end){
@@ -9791,7 +9798,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen2A_GoodsVan_Liv0_SpriteStack2, [
     ]) {
     0: spriteset_Gen2A_GoodsVan_Liv0_0;
 	1: switch_Couplers_5_Repeat;
-    2: spriteset_5_Old_EOTD_r;
+    2: switch_5_EOTD_r;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen2A_GoodsVan_Liv0_rearcheck2, position_in_consist_from_end){
@@ -9804,153 +9811,148 @@ switch(FEAT_TRAINS, SELF, switch_Gen2A_GoodsVan_Liv0_position, vehicle_is_flippe
  1: switch_Gen2A_GoodsVan_Liv0_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen2A_GoodsVan_Liv0_NG, 30550) {
+const Gen2A_GoodsVan_ID_Liv0_NG = (Gen2A_GoodsVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen2A_GoodsVan_Liv0_NG, Gen2A_GoodsVan_ID_Liv0_NG) {
     property {
-		sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN2A_GOODSVAN_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-		introduction_date:              date(1880, 1, 1);		
-		length:                         5;
-		weight:                         14 ton;
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen2A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0_NG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_5_CostFactor;
+		running_cost_factor:			Gen2_5_RunningCostFactor;
+		cargo_capacity: 				(Gen2_5_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen2A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen2A_GoodsVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen2A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen2A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN2A_GOODSVAN_NG);
-	loading_speed:					  return Gen2_LoadingSpeed;
-	speed:							  return Gen2_Speed;
-	cost_factor:					  return Gen2_5_CostFactor;
-	running_cost_factor:			  return Gen2_5_RunningCostFactor;
-	cargo_capacity:                   return Gen2_5_CargoCapacity;
+		default:                        switch_Gen2A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen2A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				(Gen2_5_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen2A_GoodsVan_Liv0, 30565) {
+const Gen2A_GoodsVan_ID_Liv0 = (Gen2A_GoodsVan_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen2A_GoodsVan_Liv0, Gen2A_GoodsVan_ID_Liv0) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN2A_GOODSVAN);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1880, 1, 1);		
-		length:                         5;
-		weight:                         14 ton;
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen2A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_5_CostFactor;
+		running_cost_factor:			Gen2_5_RunningCostFactor;
+		cargo_capacity: 				(Gen2_5_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen2A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen2A_GoodsVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen2A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen2A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN2A_GOODSVAN);
-	loading_speed:					  return Gen2_LoadingSpeed;
-	speed:							  return Gen2_Speed;
-	cost_factor:					  return Gen2_5_CostFactor;
-	running_cost_factor:			  return Gen2_5_RunningCostFactor;
-	cargo_capacity:                   return Gen2_5_CargoCapacity;
+		default:                        switch_Gen2A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen2A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				(Gen2_5_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen2A_GoodsVan_Liv0_BG, 30580) {
+const Gen2A_GoodsVan_ID_Liv0_BG = (Gen2A_GoodsVan_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen2A_GoodsVan_Liv0_BG, Gen2A_GoodsVan_ID_Liv0_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN2A_GOODSVAN_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-		introduction_date:              date(1880, 1, 1);		
-		length:                         5;
-		weight:                         14 ton;
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen2A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0_BG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_5_CostFactor;
+		running_cost_factor:			Gen2_5_RunningCostFactor;
+		cargo_capacity: 				(Gen2_5_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen2A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen2A_GoodsVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen2A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen2A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN2A_GOODSVAN_BG);
-	loading_speed:					  return Gen2_LoadingSpeed;
-	speed:							  return Gen2_Speed;
-	cost_factor:					  return Gen2_5_CostFactor;
-	running_cost_factor:			  return Gen2_5_RunningCostFactor;
-	cargo_capacity:                   return Gen2_5_CargoCapacity;
+		default:                        switch_Gen2A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen2A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				(Gen2_5_CargoCapacity / param_freight_capacity_mod);
 }
 }
+
+//ID
+const Gen3A_GoodsVan_ID = 30600;
+//weight
+const Gen3A_GoodsVan_Weight = 16;
+//length
+const Gen3A_GoodsVan_Length = 6;
 
 //Gen3A_GoodsVan_Liv0
 spriteset(spriteset_Gen3A_GoodsVan_Liv0_Purchase,   "gfx/Gen3A_GoodsVan_Liv0_0.png") {template_purchase_6(7, 21)}
@@ -9979,7 +9981,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen3A_GoodsVan_Liv0_SpriteStack1, [
     ]) {
     0: spriteset_Gen3A_GoodsVan_Liv0_0;
 	1: switch_Couplers_6_Repeat;
-    2: spriteset_6_Old_EOTD;
+    2: switch_6_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen3A_GoodsVan_Liv0_rearcheck1, position_in_consist_from_end){
@@ -9993,7 +9995,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen3A_GoodsVan_Liv0_SpriteStack2, [
     ]) {
     0: spriteset_Gen3A_GoodsVan_Liv0_0;
 	1: switch_Couplers_6_Repeat;
-    2: spriteset_6_Old_EOTD_r;
+    2: switch_6_EOTD_r;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen3A_GoodsVan_Liv0_rearcheck2, position_in_consist_from_end){
@@ -10006,153 +10008,148 @@ switch(FEAT_TRAINS, SELF, switch_Gen3A_GoodsVan_Liv0_position, vehicle_is_flippe
  1: switch_Gen3A_GoodsVan_Liv0_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen3A_GoodsVan_Liv0_NG, 30600) {
+const Gen3A_GoodsVan_ID_Liv0_NG = (Gen3A_GoodsVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen3A_GoodsVan_Liv0_NG, Gen3A_GoodsVan_ID_Liv0_NG) {
     property {
-		sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN3A_GOODSVAN_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1910, 1, 1);		
-		length:                         6;
-		weight:                         16 ton;
+        introduction_date:              Gen3_IntroDate;		
+		length:                         Gen3A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0_NG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen3_LoadingSpeed;
+		speed:							Gen3_Speed km/h;
+		cost_factor:					Gen3_6_CostFactor;
+		running_cost_factor:			Gen3_6_RunningCostFactor;
+		cargo_capacity: 				(Gen3_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen3A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen3A_GoodsVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen3A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen3A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN3A_GOODSVAN_NG);
-	loading_speed:					  return Gen3_LoadingSpeed;
-	speed:							  return Gen3_Speed;
-	cost_factor:					  return Gen3_6_CostFactor;
-	running_cost_factor:			  return Gen3_6_RunningCostFactor;
-	cargo_capacity:                   return Gen3_6_CargoCapacity;
+		default:                        switch_Gen3A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen3A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				(Gen3_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen3A_GoodsVan_Liv0, 30615) {
+const Gen3A_GoodsVan_ID_Liv0 = (Gen3A_GoodsVan_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen3A_GoodsVan_Liv0, Gen3A_GoodsVan_ID_Liv0) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN3A_GOODSVAN);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1910, 1, 1);		
-		length:                         6;
-		weight:                         16 ton;
+        introduction_date:              Gen3_IntroDate;		
+		length:                         Gen3A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen3_LoadingSpeed;
+		speed:							Gen3_Speed km/h;
+		cost_factor:					Gen3_6_CostFactor;
+		running_cost_factor:			Gen3_6_RunningCostFactor;
+		cargo_capacity: 				(Gen3_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen3A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen3A_GoodsVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen3A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen3A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN3A_GOODSVAN);
-	loading_speed:					  return Gen3_LoadingSpeed;
-	speed:							  return Gen3_Speed;
-	cost_factor:					  return Gen3_6_CostFactor;
-	running_cost_factor:			  return Gen3_6_RunningCostFactor;
-	cargo_capacity:                   return Gen3_6_CargoCapacity;
+		default:                        switch_Gen3A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen3A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				(Gen3_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen3A_GoodsVan_Liv0_BG, 30630) {
+const Gen3A_GoodsVan_ID_Liv0_BG = (Gen3A_GoodsVan_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen3A_GoodsVan_Liv0_BG, Gen3A_GoodsVan_ID_Liv0_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN3A_GOODSVAN_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1910, 1, 1);		
-		length:                         6;
-		weight:                         16 ton;
+        introduction_date:              Gen3_IntroDate;		
+		length:                         Gen3A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0_BG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen3_LoadingSpeed;
+		speed:							Gen3_Speed km/h;
+		cost_factor:					Gen3_6_CostFactor;
+		running_cost_factor:			Gen3_6_RunningCostFactor;
+		cargo_capacity: 				(Gen3_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen3A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen3A_GoodsVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen3A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen3A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN3A_GOODSVAN_BG);
-	loading_speed:					  return Gen3_LoadingSpeed;
-	speed:							  return Gen3_Speed;
-	cost_factor:					  return Gen3_6_CostFactor;
-	running_cost_factor:			  return Gen3_6_RunningCostFactor;
-	cargo_capacity:                   return Gen3_6_CargoCapacity;
+		default:                        switch_Gen3A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen3A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				(Gen3_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
+
+//ID
+const Gen4A_GoodsVan_ID = 30650;
+//weight
+const Gen4A_GoodsVan_Weight = 17;
+//length
+const Gen4A_GoodsVan_Length = 6;
 
 //Gen4A_GoodsVan_Liv0
 spriteset(spriteset_Gen4A_GoodsVan_Liv0_Purchase,   "gfx/Gen4A_GoodsVan_Liv0_0.png") {template_purchase_6(7, 21)}
@@ -10181,7 +10178,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen4A_GoodsVan_Liv0_SpriteStack1, [
     ]) {
     0: spriteset_Gen4A_GoodsVan_Liv0_0;
 	1: switch_Couplers_6_Repeat;
-    2: spriteset_6_Old_EOTD;
+    2: switch_6_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen4A_GoodsVan_Liv0_rearcheck1, position_in_consist_from_end){
@@ -10195,7 +10192,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen4A_GoodsVan_Liv0_SpriteStack2, [
     ]) {
     0: spriteset_Gen4A_GoodsVan_Liv0_0;
 	1: switch_Couplers_6_Repeat;
-    2: spriteset_6_Old_EOTD_r;
+    2: switch_6_EOTD_r;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen4A_GoodsVan_Liv0_rearcheck2, position_in_consist_from_end){
@@ -10208,153 +10205,148 @@ switch(FEAT_TRAINS, SELF, switch_Gen4A_GoodsVan_Liv0_position, vehicle_is_flippe
  1: switch_Gen4A_GoodsVan_Liv0_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen4A_GoodsVan_Liv0_NG, 30650) {
+const Gen4A_GoodsVan_ID_Liv0_NG = (Gen4A_GoodsVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen4A_GoodsVan_Liv0_NG, Gen4A_GoodsVan_ID_Liv0_NG) {
     property {
-		sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN4A_GOODSVAN_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0_NG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen4A_GoodsVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen4A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4A_GOODSVAN_NG);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen4A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen4A_GoodsVan_Liv0, 30665) {
+const Gen4A_GoodsVan_ID_Liv0 = (Gen4A_GoodsVan_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen4A_GoodsVan_Liv0, Gen4A_GoodsVan_ID_Liv0) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN4A_GOODSVAN);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen4A_GoodsVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen4A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4A_GOODSVAN);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen4A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen4A_GoodsVan_Liv0_BG, 30680) {
+const Gen4A_GoodsVan_ID_Liv0_BG = (Gen4A_GoodsVan_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen4A_GoodsVan_Liv0_BG, Gen4A_GoodsVan_ID_Liv0_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN4A_GOODSVAN_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1950, 1, 1);		
-		length:                         6;
-		weight:                         20 ton;
+        introduction_date:              Gen4_IntroDate;		
+		length:                         Gen4A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen4A_GoodsVan_Liv0_BG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen4_LoadingSpeed;
+		speed:							Gen4_Speed km/h;
+		cost_factor:					Gen4_6_CostFactor;
+		running_cost_factor:			Gen4_6_RunningCostFactor;
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen4A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen4A_GoodsVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen4A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen4A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN4A_GOODSVAN_BG);
-	loading_speed:					  return Gen4_LoadingSpeed;
-	speed:							  return Gen4_Speed;
-	cost_factor:					  return Gen4_6_CostFactor;
-	running_cost_factor:			  return Gen4_6_RunningCostFactor;
-	cargo_capacity:                   return Gen4_6_CargoCapacity;
+		default:                        switch_Gen4A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen4A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
+
+//ID
+const Gen5A_GoodsVan_ID = 30700;
+//weight
+const Gen5A_GoodsVan_Weight = 23;
+//length
+const Gen5A_GoodsVan_Length = 7;
 
 //Gen5A_GoodsVan_Liv0
 spriteset(spriteset_Gen5A_GoodsVan_Liv0_Purchase,   "gfx/Gen5A_GoodsVan_Liv0_0.png") {template_purchase_7(7, 21)}
@@ -10383,7 +10375,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5A_GoodsVan_Liv0_SpriteStack1, [
     ]) {
     0: spriteset_Gen5A_GoodsVan_Liv0_0;
 	1: switch_Couplers_7_Repeat;
-    2: spriteset_7_Modern_EOTD;
+    2: switch_7_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5A_GoodsVan_Liv0_rearcheck1, position_in_consist_from_end){
@@ -10397,7 +10389,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5A_GoodsVan_Liv0_SpriteStack2, [
     ]) {
     0: spriteset_Gen5A_GoodsVan_Liv0_0;
 	1: switch_Couplers_7_Repeat;
-    2: spriteset_7_Modern_EOTD_r;
+    2: switch_7_EOTD_r;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5A_GoodsVan_Liv0_rearcheck2, position_in_consist_from_end){
@@ -10410,160 +10402,343 @@ switch(FEAT_TRAINS, SELF, switch_Gen5A_GoodsVan_Liv0_position, vehicle_is_flippe
  1: switch_Gen5A_GoodsVan_Liv0_rearcheck2;
 }
 
-item (FEAT_TRAINS, Item_Gen5A_GoodsVan_Liv0_NG, 30700) {
+const Gen5A_GoodsVan_ID_Liv0_NG = (Gen5A_GoodsVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen5A_GoodsVan_Liv0_NG, Gen5A_GoodsVan_ID_Liv0_NG) {
     property {
-		sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        NG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN5A_GOODSVAN_NG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         27 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen5A_GoodsVan_Liv0_NG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen5A_GoodsVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen5A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5A_GOODSVAN_NG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen5A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-
-item (FEAT_TRAINS, Item_Gen5A_GoodsVan_Liv0, 30715) {
+const Gen5A_GoodsVan_ID_Liv0 = (Gen5A_GoodsVan_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen5A_GoodsVan_Liv0, Gen5A_GoodsVan_ID_Liv0) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        RAIL;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN5A_GOODSVAN);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         27 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen5A_GoodsVan_Liv0;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen5A_GoodsVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen5A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5A_GOODSVAN);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen5A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-item (FEAT_TRAINS, Item_Gen5A_GoodsVan_Liv0_BG, 30730) {
+const Gen5A_GoodsVan_ID_Liv0_BG = (Gen5A_GoodsVan_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen5A_GoodsVan_Liv0_BG, Gen5A_GoodsVan_ID_Liv0_BG) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-		misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
-		track_type:                        BG_RAIL_ONLY;
-		ai_special_flag:                AI_FLAG_CARGO;
-		bitmask_vehicle_info:            0;
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
 	
 		climates_available:             ALL_CLIMATES;
         refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
-		non_refittable_cargo_classes:		bitmask(CC_PASSENGERS); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
 		default_cargo_type:				GOOD; //GoodsVan
 //		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                             string(STR_NAME_GEN5A_GOODSVAN_BG);
-
-        refit_cost:                        0;
-        power:                            0 hp;
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
         dual_headed:                    0;
-        air_drag_coefficient:            0.08;
-        running_cost_base:                RUNNING_COST_STEAM;
-        model_life:                        30;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
 		
-        introduction_date:              date(1970, 1, 1);		
-		length:                         7;
-		weight:                         27 ton;
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5A_GoodsVan_Length;
 		
-		loading_speed:					1;
-		speed:							1;
-		cost_factor:					1;
-		running_cost_factor:			1;
-		cargo_capacity: 				1;
-		
-		//variant_group: Item_Gen5A_GoodsVan_Liv0_BG;
-		//extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_7_CostFactor;
+		running_cost_factor:			Gen5_7_RunningCostFactor;
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen5A_GoodsVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
 	}
     graphics {
-    default:                             switch_Gen5A_GoodsVan_Liv0_position;
-    purchase:                            switch_Gen5A_GoodsVan_Liv0_PurchaseStack;
-    additional_text: string(STR_INFO_GEN5A_GOODSVAN_BG);
-	loading_speed:					  return Gen5_LoadingSpeed;
-	speed:							  return Gen5_Speed;
-	cost_factor:					  return Gen5_7_CostFactor;
-	running_cost_factor:			  return Gen5_7_RunningCostFactor;
-	cargo_capacity:                   return Gen5_7_CargoCapacity;
+		default:                        switch_Gen5A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen5A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				(Gen5_7_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
-sort(FEAT_TRAINS, [Item_Gen5A_GoodsVan_Liv0_BG, Item_Gen5B_GoodsVan_Liv0_NG, Item_Gen5B_GoodsVan_Liv0, Item_Gen5B_GoodsVan_Liv0_BG]);
+//ID
+const Gen6A_GoodsVan_ID = 30750;
+//weight
+const Gen6A_GoodsVan_Weight = 27;
+//length
+const Gen6A_GoodsVan_Length = 8;
+
+//Gen6A_GoodsVan_Liv0
+spriteset(spriteset_Gen6A_GoodsVan_Liv0_Purchase,   "gfx/Gen6A_GoodsVan_Liv0_0.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_Gen6A_GoodsVan_Liv0_0,   "gfx/Gen6A_GoodsVan_Liv0_0.png") {template_8_repeat(7, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6A_GoodsVan_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6A_GoodsVan_Liv0_Purchase;
+	1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6A_GoodsVan_Liv0_NormalStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6A_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6A_GoodsVan_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6A_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+    2: switch_8_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6A_GoodsVan_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen6A_GoodsVan_Liv0_SpriteStack1;
+    return switch_Gen6A_GoodsVan_Liv0_NormalStack;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6A_GoodsVan_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6A_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+    2: switch_8_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6A_GoodsVan_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen6A_GoodsVan_Liv0_SpriteStack2;
+    return switch_Gen6A_GoodsVan_Liv0_NormalStack;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6A_GoodsVan_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen6A_GoodsVan_Liv0_rearcheck1;
+ 1: switch_Gen6A_GoodsVan_Liv0_rearcheck2;
+}
+
+const Gen6A_GoodsVan_ID_Liv0_NG = (Gen6A_GoodsVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen6A_GoodsVan_Liv0_NG, Gen6A_GoodsVan_ID_Liv0_NG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         Gen6A_GoodsVan_Length;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_8_CostFactor;
+		running_cost_factor:			Gen6_8_RunningCostFactor;
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen6A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6A_GoodsVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen6A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen6A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen6A_GoodsVan_ID_Liv0 = (Gen6A_GoodsVan_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen6A_GoodsVan_Liv0, Gen6A_GoodsVan_ID_Liv0) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         Gen6A_GoodsVan_Length;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_8_CostFactor;
+		running_cost_factor:			Gen6_8_RunningCostFactor;
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen6A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6A_GoodsVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen6A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen6A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen6A_GoodsVan_ID_Liv0_BG = (Gen6A_GoodsVan_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen6A_GoodsVan_Liv0_BG, Gen6A_GoodsVan_ID_Liv0_BG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         Gen6A_GoodsVan_Length;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_8_CostFactor;
+		running_cost_factor:			Gen6_8_RunningCostFactor;
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen6A_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6A_GoodsVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen6A_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen6A_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+sort(FEAT_TRAINS, [Item_Gen6A_GoodsVan_Liv0_NG, Item_Gen6A_GoodsVan_Liv0, Item_Gen6A_GoodsVan_Liv0_BG, Item_Gen5B_GoodsVan_Liv0_NG, Item_Gen5B_GoodsVan_Liv0, Item_Gen5B_GoodsVan_Liv0_BG]);
 
 //ID
 const Gen5B_GoodsVan_ID = 3000;
-//introduction_date
-const Gen5B_GoodsVan_IntroDate = date(1970, 1, 1);
 //weight
 const Gen5B_GoodsVan_Weight = 45;
 
@@ -10594,7 +10769,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv0_RearStack, [
     ]) {
     0: spriteset_Gen5B_GoodsVan_Liv0_0;
     1: switch_Couplers_9_Repeat;
-	2: spriteset_9_Modern_EOTD;
+	2: switch_9_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv0_rearcheck, position_in_consist_from_end){
@@ -10636,14 +10811,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv0_NG, Gen5B_GoodsVan_Liv0_NG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -10659,7 +10834,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv0_NG, Gen5B_GoodsVan_Liv0_NG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv0_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv0_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_NG);
+    additional_text: 					string(STR_INFO_NG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv0_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv0_NG_articulated_part;  
 }
@@ -10688,14 +10864,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv0, Gen5B_GoodsVan_Liv0_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -10711,7 +10887,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv0, Gen5B_GoodsVan_Liv0_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv0_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv0_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN);
+    additional_text: 					string(STR_INFO_SG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv0_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv0_articulated_part;  
 }
@@ -10740,14 +10917,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv0_BG, Gen5B_GoodsVan_Liv0_BG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -10763,7 +10940,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv0_BG, Gen5B_GoodsVan_Liv0_BG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv0_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv0_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_BG);
+    additional_text: 					string(STR_INFO_BG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv0_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv0_BG_articulated_part;  
 }
@@ -10796,7 +10974,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv1_RearStack, [
     ]) {
     0: spriteset_Gen5B_GoodsVan_Liv1_0;
     1: switch_Couplers_9_Repeat;
-	2: spriteset_9_Modern_EOTD;
+	2: switch_9_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv1_rearcheck, position_in_consist_from_end){
@@ -10838,14 +11016,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv1_NG, Gen5B_GoodsVan_Liv1_NG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -10861,7 +11039,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv1_NG, Gen5B_GoodsVan_Liv1_NG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv1_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv1_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_NG);
+    additional_text: 					string(STR_INFO_NG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv1_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv1_NG_articulated_part;  
 }
@@ -10890,14 +11069,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv1, Gen5B_GoodsVan_Liv1_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -10913,7 +11092,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv1, Gen5B_GoodsVan_Liv1_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv1_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv1_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN);
+    additional_text: 					string(STR_INFO_SG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv1_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv1_articulated_part;  
 }
@@ -10942,14 +11122,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv1_BG, Gen5B_GoodsVan_Liv1_BG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -10965,7 +11145,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv1_BG, Gen5B_GoodsVan_Liv1_BG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv1_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv1_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_BG);
+    additional_text: 					string(STR_INFO_BG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv1_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv1_BG_articulated_part;  
 }
@@ -10975,12 +11156,6 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv1_BG, Gen5B_GoodsVan_Liv1_BG_ID) {
 spriteset(spriteset_Gen5B_GoodsVan_Liv2_Purchase,   "gfx/Gen5B_GoodsVan_Liv2_0.png") {template_purchase_9(7, 21)}
 
 spriteset(spriteset_Gen5B_GoodsVan_Liv2_0,   "gfx/Gen5B_GoodsVan_Liv2_0.png") {template_9_repeat(7, 39)}
-spriteset(spriteset_Gen5B_GoodsVan_Liv2_1,   "gfx/Gen5B_GoodsVan_Liv2_1.png") {template_9_repeat(7, 39)}
-
-random_switch(FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv2_Random){
-    3 : spriteset_Gen5B_GoodsVan_Liv2_0;
-	1 : spriteset_Gen5B_GoodsVan_Liv2_1;
-}
 
 switch (FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv2_PurchaseStack, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
@@ -10994,7 +11169,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv2_SpriteStack, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: switch_Gen5B_GoodsVan_Liv2_Random;
+    0: spriteset_Gen5B_GoodsVan_Liv2_0;
     1: switch_Couplers_9_Repeat;
 }
 
@@ -11002,9 +11177,9 @@ switch (FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv2_RearStack, [
     STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
-    0: switch_Gen5B_GoodsVan_Liv2_Random;
+    0: spriteset_Gen5B_GoodsVan_Liv2_0;
     1: switch_Couplers_9_Repeat;
-	2: spriteset_9_Modern_EOTD;
+	2: switch_9_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv2_rearcheck, position_in_consist_from_end){
@@ -11046,14 +11221,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv2_NG, Gen5B_GoodsVan_Liv2_NG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11069,7 +11244,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv2_NG, Gen5B_GoodsVan_Liv2_NG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv2_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv2_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_NG);
+    additional_text: 					string(STR_INFO_NG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv2_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv2_NG_articulated_part;  
 }
@@ -11098,14 +11274,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv2, Gen5B_GoodsVan_Liv2_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11121,7 +11297,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv2, Gen5B_GoodsVan_Liv2_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv2_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv2_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN);
+    additional_text: 					string(STR_INFO_SG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv2_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv2_articulated_part;  
 }
@@ -11150,14 +11327,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv2_BG, Gen5B_GoodsVan_Liv2_BG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11173,7 +11350,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv2_BG, Gen5B_GoodsVan_Liv2_BG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv2_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv2_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_BG);
+    additional_text: 					string(STR_INFO_BG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv2_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv2_BG_articulated_part;  
 }
@@ -11206,7 +11384,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv3_RearStack, [
     ]) {
     0: spriteset_Gen5B_GoodsVan_Liv3_0;
     1: switch_Couplers_9_Repeat;
-	2: spriteset_9_Modern_EOTD;
+	2: switch_9_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv3_rearcheck, position_in_consist_from_end){
@@ -11248,14 +11426,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv3_NG, Gen5B_GoodsVan_Liv3_NG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11271,7 +11449,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv3_NG, Gen5B_GoodsVan_Liv3_NG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv3_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv3_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_NG);
+    additional_text: 					string(STR_INFO_NG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv3_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv3_NG_articulated_part;  
 }
@@ -11300,14 +11479,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv3, Gen5B_GoodsVan_Liv3_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11323,7 +11502,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv3, Gen5B_GoodsVan_Liv3_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv3_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv3_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN);
+    additional_text: 					string(STR_INFO_SG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv3_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv3_articulated_part;  
 }
@@ -11352,14 +11532,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv3_BG, Gen5B_GoodsVan_Liv3_BG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11375,7 +11555,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv3_BG, Gen5B_GoodsVan_Liv3_BG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv3_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv3_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_BG);
+    additional_text: 					string(STR_INFO_BG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv3_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv3_BG_articulated_part;  
 }
@@ -11408,7 +11589,7 @@ switch (FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv4_RearStack, [
     ]) {
     0: spriteset_Gen5B_GoodsVan_Liv4_0;
     1: switch_Couplers_9_Repeat;
-	2: spriteset_9_Modern_EOTD;
+	2: switch_9_EOTD;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Gen5B_GoodsVan_Liv4_rearcheck, position_in_consist_from_end){
@@ -11450,14 +11631,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv4_NG, Gen5B_GoodsVan_Liv4_NG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11473,7 +11654,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv4_NG, Gen5B_GoodsVan_Liv4_NG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv4_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv4_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_NG);
+    additional_text: 					string(STR_INFO_NG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv4_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv4_NG_articulated_part;  
 }
@@ -11502,14 +11684,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv4, Gen5B_GoodsVan_Liv4_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11525,7 +11707,8 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv4, Gen5B_GoodsVan_Liv4_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv4_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv4_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN);
+    additional_text: 					string(STR_INFO_SG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv4_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv4_articulated_part;  
 }
@@ -11554,14 +11737,14 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv4_BG, Gen5B_GoodsVan_Liv4_BG_ID) {
 		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
 		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
 
-        name:                           string(STR_NAME_GEN5B_GOODSVAN_NG);
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
 		
 		refit_cost:                     0;
         dual_headed:                    0;
         air_drag_coefficient:           0.08;
         model_life:                     30;
 		
-        introduction_date:              Gen5B_GoodsVan_IntroDate;		
+        introduction_date:              Gen5_IntroDate;		
 		length:                         8;
 		
 		loading_speed:					Gen5_LoadingSpeed;
@@ -11577,9 +11760,616 @@ item (FEAT_TRAINS, Item_Gen5B_GoodsVan_Liv4_BG, Gen5B_GoodsVan_Liv4_BG_ID) {
     graphics {
     default:                            switch_Gen5B_GoodsVan_Liv4_position;
     purchase:                           switch_Gen5B_GoodsVan_Liv4_PurchaseStack;
-    additional_text: 					string(STR_INFO_GEN5B_GOODSVAN_BG);
+    additional_text: 					string(STR_INFO_BG);
+	cargo_capacity: 					((Gen5_9_CargoCapacity / param_freight_capacity_mod) / 2);
 	length: 							switch_Gen5B_GoodsVan_Liv4_length;
     articulated_part: 					switch_Gen5B_GoodsVan_Liv4_BG_articulated_part;  
+}
+}
+
+sort(FEAT_TRAINS, [Item_Gen5B_GoodsVan_Liv0_NG, Item_Gen5B_GoodsVan_Liv0, Item_Gen5B_GoodsVan_Liv0_BG, Item_Gen6B_GoodsVan_Liv0_NG, Item_Gen6B_GoodsVan_Liv0, Item_Gen6B_GoodsVan_Liv0_BG]);
+
+//ID
+const Gen6B_GoodsVan_ID = 3050;
+//weight
+const Gen6B_GoodsVan_Weight = 44;
+
+//Gen6B_GoodsVan_Liv0
+spriteset(spriteset_Gen6B_GoodsVan_Liv0_Purchase,   "gfx/Gen6B_GoodsVan_Liv0_0.png") {template_purchase_9(7, 21)}
+
+spriteset(spriteset_Gen6B_GoodsVan_Liv0_0,   "gfx/Gen6B_GoodsVan_Liv0_0.png") {template_9_repeat(7, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6B_GoodsVan_Liv0_Purchase;
+    1: switch_Couplers_9_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_SpriteStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6B_GoodsVan_Liv0_0;
+    1: switch_Couplers_9_Repeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_RearStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6B_GoodsVan_Liv0_0;
+    1: switch_Couplers_9_Repeat;
+	2: switch_9_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_rearcheck, position_in_consist_from_end){
+    0 : switch_Gen6B_GoodsVan_Liv0_SpriteStack;
+	1 : switch_Gen6B_GoodsVan_Liv0_RearStack;
+    return switch_Gen6B_GoodsVan_Liv0_SpriteStack;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_position, position_in_articulated_veh) {
+ 0: switch_Gen6B_GoodsVan_Liv0_rearcheck;
+ 1: spriteset_8_Blank;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_length, position_in_vehid_chain % 2) {
+ 0: 5;
+ 1: 4;
+ }
+
+// Articulated part callback
+switch(FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_NG_articulated_part, extra_callback_info1) {
+    0..1: return Item_Gen6B_GoodsVan_Liv0_NG;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+const Gen6B_GoodsVan_Liv0_NG_ID = (Gen6B_GoodsVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen6B_GoodsVan_Liv0_NG, Gen6B_GoodsVan_Liv0_NG_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_9_CostFactor;
+		running_cost_factor:			Gen6_9_RunningCostFactor;
+		cargo_capacity: 				((Gen6_9_CargoCapacity / param_freight_capacity_mod) / 2);
+		weight:							Gen6B_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6B_GoodsVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Gen6B_GoodsVan_Liv0_position;
+    purchase:                           switch_Gen6B_GoodsVan_Liv0_PurchaseStack;
+    additional_text: 					string(STR_INFO_NG);
+	cargo_capacity: 					((Gen6_9_CargoCapacity / param_freight_capacity_mod) / 2);
+	length: 							switch_Gen6B_GoodsVan_Liv0_length;
+    articulated_part: 					switch_Gen6B_GoodsVan_Liv0_NG_articulated_part;  
+}
+}
+
+// Articulated part callback
+switch(FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_articulated_part, extra_callback_info1) {
+    0..1: return Item_Gen6B_GoodsVan_Liv0;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+const Gen6B_GoodsVan_Liv0_ID = (Gen6B_GoodsVan_Liv0_NG_ID + 15);
+
+item (FEAT_TRAINS, Item_Gen6B_GoodsVan_Liv0, Gen6B_GoodsVan_Liv0_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_9_CostFactor;
+		running_cost_factor:			Gen6_9_RunningCostFactor;
+		cargo_capacity: 				((Gen6_9_CargoCapacity / param_freight_capacity_mod) / 2);
+		weight:							Gen6B_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6B_GoodsVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Gen6B_GoodsVan_Liv0_position;
+    purchase:                           switch_Gen6B_GoodsVan_Liv0_PurchaseStack;
+    additional_text: 					string(STR_INFO_SG);
+	cargo_capacity: 					((Gen6_9_CargoCapacity / param_freight_capacity_mod) / 2);
+	length: 							switch_Gen6B_GoodsVan_Liv0_length;
+    articulated_part: 					switch_Gen6B_GoodsVan_Liv0_articulated_part;  
+}
+}
+
+// Articulated part callback
+switch(FEAT_TRAINS, SELF, switch_Gen6B_GoodsVan_Liv0_BG_articulated_part, extra_callback_info1) {
+    0..1: return Item_Gen6B_GoodsVan_Liv0_BG;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+const Gen6B_GoodsVan_Liv0_BG_ID = (Gen6B_GoodsVan_Liv0_ID + 15);
+
+item (FEAT_TRAINS, Item_Gen6B_GoodsVan_Liv0_BG, Gen6B_GoodsVan_Liv0_BG_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_LARGE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_9_CostFactor;
+		running_cost_factor:			Gen6_9_RunningCostFactor;
+		cargo_capacity: 				((Gen6_9_CargoCapacity / param_freight_capacity_mod) / 2);
+		weight:							Gen6B_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6B_GoodsVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Gen6B_GoodsVan_Liv0_position;
+    purchase:                           switch_Gen6B_GoodsVan_Liv0_PurchaseStack;
+    additional_text: 					string(STR_INFO_BG);
+	cargo_capacity: 					((Gen6_9_CargoCapacity / param_freight_capacity_mod) / 2);
+	length: 							switch_Gen6B_GoodsVan_Liv0_length;
+    articulated_part: 					switch_Gen6B_GoodsVan_Liv0_BG_articulated_part;  
+}
+}
+
+//ID
+const Gen5C_GoodsVan_ID = 31700;
+//weight
+const Gen5C_GoodsVan_Weight = 30;
+//length
+const Gen5C_GoodsVan_Length = 8;
+
+//Gen5C_GoodsVan_Liv0
+spriteset(spriteset_Gen5C_GoodsVan_Liv0_Purchase,   "gfx/Gen5C_GoodsVan_Liv0_0.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_Gen5C_GoodsVan_Liv0_0,   "gfx/Gen5C_GoodsVan_Liv0_0.png") {template_8_repeat(7, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Gen5C_GoodsVan_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen5C_GoodsVan_Liv0_Purchase;
+	1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen5C_GoodsVan_Liv0_NormalStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen5C_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen5C_GoodsVan_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen5C_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+    2: switch_8_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen5C_GoodsVan_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen5C_GoodsVan_Liv0_SpriteStack1;
+    return switch_Gen5C_GoodsVan_Liv0_NormalStack;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen5C_GoodsVan_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen5C_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+    2: switch_8_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen5C_GoodsVan_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen5C_GoodsVan_Liv0_SpriteStack2;
+    return switch_Gen5C_GoodsVan_Liv0_NormalStack;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen5C_GoodsVan_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen5C_GoodsVan_Liv0_rearcheck1;
+ 1: switch_Gen5C_GoodsVan_Liv0_rearcheck2;
+}
+
+const Gen5C_GoodsVan_ID_Liv0_NG = (Gen5C_GoodsVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen5C_GoodsVan_Liv0_NG, Gen5C_GoodsVan_ID_Liv0_NG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_HICUBE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5C_GoodsVan_Length;
+		
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_8_CostFactor;
+		running_cost_factor:			Gen5_8_RunningCostFactor;
+		cargo_capacity: 				(Gen5_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5C_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen5C_GoodsVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen5C_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen5C_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				(Gen5_8_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen5C_GoodsVan_ID_Liv0 = (Gen5C_GoodsVan_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen5C_GoodsVan_Liv0, Gen5C_GoodsVan_ID_Liv0) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_HICUBE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5C_GoodsVan_Length;
+		
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_8_CostFactor;
+		running_cost_factor:			Gen5_8_RunningCostFactor;
+		cargo_capacity: 				(Gen5_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5C_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen5C_GoodsVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen5C_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen5C_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				(Gen5_8_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen5C_GoodsVan_ID_Liv0_BG = (Gen5C_GoodsVan_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen5C_GoodsVan_Liv0_BG, Gen5C_GoodsVan_ID_Liv0_BG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_HICUBE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen5_IntroDate;		
+		length:                         Gen5C_GoodsVan_Length;
+		
+		loading_speed:					Gen5_LoadingSpeed;
+		speed:							Gen5_Speed km/h;
+		cost_factor:					Gen5_8_CostFactor;
+		running_cost_factor:			Gen5_8_RunningCostFactor;
+		cargo_capacity: 				(Gen5_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen5C_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen5C_GoodsVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen5C_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen5C_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				(Gen5_8_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+//ID
+const Gen6C_GoodsVan_ID = 31750;
+//weight
+const Gen6C_GoodsVan_Weight = 30;
+//length
+const Gen6C_GoodsVan_Length = 8;
+
+//Gen6C_GoodsVan_Liv0
+spriteset(spriteset_Gen6C_GoodsVan_Liv0_Purchase,   "gfx/Gen6C_GoodsVan_Liv0_0.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_Gen6C_GoodsVan_Liv0_0,   "gfx/Gen6C_GoodsVan_Liv0_0.png") {template_8_repeat(7, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6C_GoodsVan_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6C_GoodsVan_Liv0_Purchase;
+	1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6C_GoodsVan_Liv0_NormalStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6C_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6C_GoodsVan_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6C_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+    2: switch_8_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6C_GoodsVan_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen6C_GoodsVan_Liv0_SpriteStack1;
+    return switch_Gen6C_GoodsVan_Liv0_NormalStack;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen6C_GoodsVan_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen6C_GoodsVan_Liv0_0;
+	1: switch_Couplers_8_Repeat;
+    2: switch_8_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6C_GoodsVan_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen6C_GoodsVan_Liv0_SpriteStack2;
+    return switch_Gen6C_GoodsVan_Liv0_NormalStack;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen6C_GoodsVan_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen6C_GoodsVan_Liv0_rearcheck1;
+ 1: switch_Gen6C_GoodsVan_Liv0_rearcheck2;
+}
+
+const Gen6C_GoodsVan_ID_Liv0_NG = (Gen6C_GoodsVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen6C_GoodsVan_Liv0_NG, Gen6C_GoodsVan_ID_Liv0_NG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_HICUBE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         Gen6C_GoodsVan_Length;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_8_CostFactor;
+		running_cost_factor:			Gen6_8_RunningCostFactor;
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen6C_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6C_GoodsVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen6C_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen6C_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen6C_GoodsVan_ID_Liv0 = (Gen6C_GoodsVan_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen6C_GoodsVan_Liv0, Gen6C_GoodsVan_ID_Liv0) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_HICUBE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         Gen6C_GoodsVan_Length;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_8_CostFactor;
+		running_cost_factor:			Gen6_8_RunningCostFactor;
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen6C_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6C_GoodsVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen6C_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen6C_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen6C_GoodsVan_ID_Liv0_BG = (Gen6C_GoodsVan_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen6C_GoodsVan_Liv0_BG, Gen6C_GoodsVan_ID_Liv0_BG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+        refittable_cargo_classes:		bitmask( CC_MAIL, CC_POTABLE, CC_PIECE_GOODS, CC_COVERED_BULK, CC_POWDER_BULK, CC_LIQUID_BULK, CC_GAS_BULK, CC_EXPRESS, CC_ARMOURED ); //GoodsVan
+		non_refittable_cargo_classes:	bitmask(CC_PASSENGERS); //GoodsVan
+		default_cargo_type:				GOOD; //GoodsVan
+//		cargo_allow_refit:				[GRAI, WHEA, BEAN, SGCN, SGBT, OLSD, MAIZ, PEAT, SEED]; //GoodsVan
+		cargo_disallow_refit:			[TOUR, LVST]; //GoodsVan
+
+        name:                           string(STR_NAME_GOODSVAN_HICUBE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen6_IntroDate;		
+		length:                         Gen6C_GoodsVan_Length;
+		
+		loading_speed:					Gen6_LoadingSpeed;
+		speed:							Gen6_Speed km/h;
+		cost_factor:					Gen6_8_CostFactor;
+		running_cost_factor:			Gen6_8_RunningCostFactor;
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen6C_GoodsVan_Weight ton;
+
+//        variant_group: 					Item_Gen6C_GoodsVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen6C_GoodsVan_Liv0_position;
+		purchase:                       switch_Gen6C_GoodsVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				(Gen6_8_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
