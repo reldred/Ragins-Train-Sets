@@ -24567,3 +24567,397 @@ item (FEAT_TRAINS, Item_Gen4A_CoveredHopper_Liv1_BG, Gen4A_CoveredHopper_ID_Liv1
 		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
 }
 }
+
+//ID
+const Gen20_TankWagon_ID = 54550;
+//weight
+const Gen20_TankWagon_Weight = 16;
+//length
+const Gen20_TankWagon_Length = 4;
+
+//Gen20_TankWagon_Liv0
+spriteset(spriteset_Gen20_TankWagon_Liv0_Purchase,   "gfx/Gen20_TankWagon_Liv0_0.png") {template_purchase_4(7, 21)}
+
+spriteset(spriteset_Gen20_TankWagon_Liv0_0,   "gfx/Gen20_TankWagon_Liv0_0.png") {template_4_repeat(7, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Gen20_TankWagon_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen20_TankWagon_Liv0_Purchase;
+	1: switch_Couplers_4_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen20_TankWagon_Liv0_NormalStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen20_TankWagon_Liv0_0;
+	1: switch_Couplers_4_Repeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen20_TankWagon_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen20_TankWagon_Liv0_0;
+	1: switch_Couplers_4_Repeat;
+    2: switch_4_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen20_TankWagon_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen20_TankWagon_Liv0_SpriteStack1;
+    return switch_Gen20_TankWagon_Liv0_NormalStack;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen20_TankWagon_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen20_TankWagon_Liv0_0;
+	1: switch_Couplers_4_Repeat;
+    2: switch_4_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen20_TankWagon_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen20_TankWagon_Liv0_SpriteStack2;
+    return switch_Gen20_TankWagon_Liv0_NormalStack;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen20_TankWagon_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen20_TankWagon_Liv0_rearcheck1;
+ 1: switch_Gen20_TankWagon_Liv0_rearcheck2;
+}
+
+const Gen20_TankWagon_ID_Liv0_NG = (Gen20_TankWagon_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen20_TankWagon_Liv0_NG, Gen20_TankWagon_ID_Liv0_NG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes: 		bitmask(CC_LIQUID_BULK); //Reefer
+		non_refittable_cargo_classes: 	bitmask(CC_POTABLE); //Reefer
+		default_cargo_type:				OIL_; //Reefer
+//		cargo_allow_refit: 				[]; //Reefer
+//		cargo_disallow_refit:			[]; //Reefer
+
+        name:                           string(STR_NAME_TANKWAGON);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen20_TankWagon_Length;
+		
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_4_CostFactor;
+		running_cost_factor:			Gen2_4_RunningCostFactor;
+		cargo_capacity: 				(Gen2_4_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen20_TankWagon_Weight ton;
+
+//        variant_group: 					Item_Gen20_TankWagon_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen20_TankWagon_Liv0_position;
+		purchase:                       switch_Gen20_TankWagon_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				(Gen2_4_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen20_TankWagon_ID_Liv0 = (Gen20_TankWagon_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen20_TankWagon_Liv0, Gen20_TankWagon_ID_Liv0) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes: 		bitmask(CC_LIQUID_BULK); //Reefer
+		non_refittable_cargo_classes: 	bitmask(CC_POTABLE); //Reefer
+		default_cargo_type:				OIL_; //Reefer
+//		cargo_allow_refit: 				[]; //Reefer
+//		cargo_disallow_refit:			[]; //Reefer
+
+        name:                           string(STR_NAME_TANKWAGON);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen20_TankWagon_Length;
+		
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_4_CostFactor;
+		running_cost_factor:			Gen2_4_RunningCostFactor;
+		cargo_capacity: 				(Gen2_4_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen20_TankWagon_Weight ton;
+
+//        variant_group: 					Item_Gen20_TankWagon_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen20_TankWagon_Liv0_position;
+		purchase:                       switch_Gen20_TankWagon_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				(Gen2_4_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+const Gen20_TankWagon_ID_Liv0_BG = (Gen20_TankWagon_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen20_TankWagon_Liv0_BG, Gen20_TankWagon_ID_Liv0_BG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes: 		bitmask(CC_LIQUID_BULK); //Reefer
+		non_refittable_cargo_classes: 	bitmask(CC_POTABLE); //Reefer
+		default_cargo_type:				OIL_; //Reefer
+//		cargo_allow_refit: 				[]; //Reefer
+//		cargo_disallow_refit:			[]; //Reefer
+
+        name:                           string(STR_NAME_TANKWAGON);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen20_TankWagon_Length;
+		
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_4_CostFactor;
+		running_cost_factor:			Gen2_4_RunningCostFactor;
+		cargo_capacity: 				(Gen2_4_CargoCapacity / param_freight_capacity_mod);
+		weight:							Gen20_TankWagon_Weight ton;
+
+//        variant_group: 					Item_Gen20_TankWagon_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen20_TankWagon_Liv0_position;
+		purchase:                       switch_Gen20_TankWagon_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				(Gen2_4_CargoCapacity / param_freight_capacity_mod);
+}
+}
+
+//ID
+const Gen2B_BrakeVan_ID = 61050;
+//weight
+const Gen2B_BrakeVan_Weight = 12;
+//length
+const Gen2B_BrakeVan_Length = 4;
+
+//Gen2B_BrakeVan_Liv0
+spriteset(spriteset_Gen2B_BrakeVan_Liv0_Purchase,   "gfx/Gen2B_BrakeVan_Liv0_0.png") {template_purchase_4(7, 21)}
+
+spriteset(spriteset_Gen2B_BrakeVan_Liv0_0,   "gfx/Gen2B_BrakeVan_Liv0_0.png") {template_4_repeat(7, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2B_BrakeVan_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen2B_BrakeVan_Liv0_Purchase;
+	1: switch_Couplers_4_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2B_BrakeVan_Liv0_NormalStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen2B_BrakeVan_Liv0_0;
+	1: switch_Couplers_4_Repeat;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2B_BrakeVan_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen2B_BrakeVan_Liv0_0;
+	1: switch_Couplers_4_Repeat;
+    2: switch_4_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2B_BrakeVan_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Gen2B_BrakeVan_Liv0_SpriteStack1;
+    return switch_Gen2B_BrakeVan_Liv0_NormalStack;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Gen2B_BrakeVan_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Gen2B_BrakeVan_Liv0_0;
+	1: switch_Couplers_4_Repeat;
+    2: switch_4_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2B_BrakeVan_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Gen2B_BrakeVan_Liv0_SpriteStack2;
+    return switch_Gen2B_BrakeVan_Liv0_NormalStack;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Gen2B_BrakeVan_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Gen2B_BrakeVan_Liv0_rearcheck1;
+ 1: switch_Gen2B_BrakeVan_Liv0_rearcheck2;
+}
+
+const Gen2B_BrakeVan_ID_Liv0_NG = (Gen2B_BrakeVan_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Gen2B_BrakeVan_Liv0_NG, Gen2B_BrakeVan_ID_Liv0_NG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     NG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+//      refittable_cargo_classes:		bitmask(); //BrakeVan
+//		non_refittable_cargo_classes:	bitmask(); //BrakeVan
+//		default_cargo_type:				GOOD; //BrakeVan
+//		cargo_allow_refit:				[ ]; //BrakeVan
+//		cargo_disallow_refit:			[ ]; //BrakeVan
+
+        name:                           string(STR_NAME_BRAKEVAN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen2B_BrakeVan_Length;
+		
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_4_CostFactor;
+		running_cost_factor:			Gen2_4_RunningCostFactor;
+		cargo_capacity: 				0;
+		weight:							Gen2B_BrakeVan_Weight ton;
+
+//        variant_group: 					Item_Gen2B_BrakeVan_Liv0_NG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen2B_BrakeVan_Liv0_position;
+		purchase:                       switch_Gen2B_BrakeVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_NG);
+		cargo_capacity: 				0;
+}
+}
+
+const Gen2B_BrakeVan_ID_Liv0 = (Gen2B_BrakeVan_ID_Liv0_NG + 15);
+item (FEAT_TRAINS, Item_Gen2B_BrakeVan_Liv0, Gen2B_BrakeVan_ID_Liv0) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+//      refittable_cargo_classes:		bitmask(); //BrakeVan
+//		non_refittable_cargo_classes:	bitmask(); //BrakeVan
+//		default_cargo_type:				GOOD; //BrakeVan
+//		cargo_allow_refit:				[ ]; //BrakeVan
+//		cargo_disallow_refit:			[ ]; //BrakeVan
+
+        name:                           string(STR_NAME_BRAKEVAN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen2B_BrakeVan_Length;
+		
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_4_CostFactor;
+		running_cost_factor:			Gen2_4_RunningCostFactor;
+		cargo_capacity: 				0;
+		weight:							Gen2B_BrakeVan_Weight ton;
+
+//        variant_group: 					Item_Gen2B_BrakeVan_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen2B_BrakeVan_Liv0_position;
+		purchase:                       switch_Gen2B_BrakeVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_SG);
+		cargo_capacity: 				0;
+}
+}
+
+const Gen2B_BrakeVan_ID_Liv0_BG = (Gen2B_BrakeVan_ID_Liv0 + 15);
+item (FEAT_TRAINS, Item_Gen2B_BrakeVan_Liv0_BG, Gen2B_BrakeVan_ID_Liv0_BG) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+//      refittable_cargo_classes:		bitmask(); //BrakeVan
+//		non_refittable_cargo_classes:	bitmask(); //BrakeVan
+//		default_cargo_type:				GOOD; //BrakeVan
+//		cargo_allow_refit:				[ ]; //BrakeVan
+//		cargo_disallow_refit:			[ ]; //BrakeVan
+
+        name:                           string(STR_NAME_BRAKEVAN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Gen2_IntroDate;		
+		length:                         Gen2B_BrakeVan_Length;
+		
+		loading_speed:					Gen2_LoadingSpeed;
+		speed:							Gen2_Speed km/h;
+		cost_factor:					Gen2_4_CostFactor;
+		running_cost_factor:			Gen2_4_RunningCostFactor;
+		cargo_capacity: 				0;
+		weight:							Gen2B_BrakeVan_Weight ton;
+
+//        variant_group: 					Item_Gen2B_BrakeVan_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+		default:                        switch_Gen2B_BrakeVan_Liv0_position;
+		purchase:                       switch_Gen2B_BrakeVan_Liv0_PurchaseStack;
+		additional_text: 				string(STR_INFO_BG);
+		cargo_capacity: 				0;
+}
+}
