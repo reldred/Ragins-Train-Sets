@@ -24075,9 +24075,9 @@ item (FEAT_TRAINS, Item_Gen40_CoveredHopper_Liv0_NG, Gen40_CoveredHopper_ID_Liv0
 		
 		loading_speed:					Gen4_LoadingSpeed;
 		speed:							Gen4_Speed km/h;
-		cost_factor:					Gen4_6_CostFactor;
-		running_cost_factor:			Gen4_6_RunningCostFactor;
-		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		cost_factor:					Gen4_4_CostFactor;
+		running_cost_factor:			Gen4_4_RunningCostFactor;
+		cargo_capacity: 				(Gen4_4_CargoCapacity / param_freight_capacity_mod);
 		weight:							Gen40_CoveredHopper_Weight ton;
 
 //        variant_group: 					Item_Gen40_CoveredHopper_Liv0_NG;
@@ -24087,7 +24087,7 @@ item (FEAT_TRAINS, Item_Gen40_CoveredHopper_Liv0_NG, Gen40_CoveredHopper_ID_Liv0
 		default:                        switch_Gen40_CoveredHopper_Liv0_position;
 		purchase:                       switch_Gen40_CoveredHopper_Liv0_PurchaseStack;
 		additional_text: 				string(STR_INFO_GEN40_COVEREDHOPPER_NG);
-		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		cargo_capacity: 				(Gen4_4_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
@@ -24120,9 +24120,9 @@ item (FEAT_TRAINS, Item_Gen40_CoveredHopper_Liv0, Gen40_CoveredHopper_ID_Liv0) {
 		
 		loading_speed:					Gen4_LoadingSpeed;
 		speed:							Gen4_Speed km/h;
-		cost_factor:					Gen4_6_CostFactor;
-		running_cost_factor:			Gen4_6_RunningCostFactor;
-		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		cost_factor:					Gen4_4_CostFactor;
+		running_cost_factor:			Gen4_4_RunningCostFactor;
+		cargo_capacity: 				(Gen4_4_CargoCapacity / param_freight_capacity_mod);
 		weight:							Gen40_CoveredHopper_Weight ton;
 
 //        variant_group: 					Item_Gen40_CoveredHopper_Liv0;
@@ -24132,7 +24132,7 @@ item (FEAT_TRAINS, Item_Gen40_CoveredHopper_Liv0, Gen40_CoveredHopper_ID_Liv0) {
 		default:                        switch_Gen40_CoveredHopper_Liv0_position;
 		purchase:                       switch_Gen40_CoveredHopper_Liv0_PurchaseStack;
 		additional_text: 				string(STR_INFO_GEN40_COVEREDHOPPER);
-		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		cargo_capacity: 				(Gen4_4_CargoCapacity / param_freight_capacity_mod);
 }
 }
 
@@ -24165,9 +24165,9 @@ item (FEAT_TRAINS, Item_Gen40_CoveredHopper_Liv0_BG, Gen40_CoveredHopper_ID_Liv0
 		
 		loading_speed:					Gen4_LoadingSpeed;
 		speed:							Gen4_Speed km/h;
-		cost_factor:					Gen4_6_CostFactor;
-		running_cost_factor:			Gen4_6_RunningCostFactor;
-		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		cost_factor:					Gen4_4_CostFactor;
+		running_cost_factor:			Gen4_4_RunningCostFactor;
+		cargo_capacity: 				(Gen4_4_CargoCapacity / param_freight_capacity_mod);
 		weight:							Gen40_CoveredHopper_Weight ton;
 
 //        variant_group: 					Item_Gen40_CoveredHopper_Liv0_BG;
@@ -24177,7 +24177,7 @@ item (FEAT_TRAINS, Item_Gen40_CoveredHopper_Liv0_BG, Gen40_CoveredHopper_ID_Liv0
 		default:                        switch_Gen40_CoveredHopper_Liv0_position;
 		purchase:                       switch_Gen40_CoveredHopper_Liv0_PurchaseStack;
 		additional_text: 				string(STR_INFO_GEN40_COVEREDHOPPER_BG);
-		cargo_capacity: 				(Gen4_6_CargoCapacity / param_freight_capacity_mod);
+		cargo_capacity: 				(Gen4_4_CargoCapacity / param_freight_capacity_mod);
 }
 }
 

@@ -192,9 +192,9 @@ STR_INFO_MAIL_BREL_MK3:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Standard
 STR_NAME_MAIL_BREL_MK3_BG:BREL Mk3 Mail Van
 STR_INFO_MAIL_BREL_MK3_BG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Based on:{GOLD}BREL Mk3 coaches proposed for use by V/Line
 
-STR_NAME_BREL_MK3_DT:BREL Mk3 Driving Van Trailer
+STR_NAME_BREL_MK3_DT:BREL Mk3 Driving Trailer
 STR_INFO_BREL_MK3_DT:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Based on:{GOLD}BREL Mk3 coaches proposed for use by V/Line
-STR_NAME_BREL_MK3_DT_BG:BREL Mk3 Driving Van Trailer
+STR_NAME_BREL_MK3_DT_BG:BREL Mk3 Driving Trailer
 STR_INFO_BREL_MK3_DT_BG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Based on:{GOLD}BREL Mk3 coaches proposed for use by V/Line
 
 
