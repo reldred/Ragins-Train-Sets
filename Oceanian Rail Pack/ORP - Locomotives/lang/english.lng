@@ -140,6 +140,11 @@ STR_INFO_CLYDE_AJT32HB2:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Dies
 STR_NAME_AGE_41CLASS:AGE 41 Class
 STR_INFO_AGE_41CLASS:{BLACK}Role: {GOLD}Shunter {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 41 Class {}{GOLD}I hope you like engine fires!
 
+STR_NAME_CLYDE_G6B:Clyde-EMD G6B
+STR_INFO_CLYDE_G6B:{BLACK}Role: {GOLD}Shunter {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR Y Class {}{GOLD}Got a discount on these by re-using bogies from the old Tait sets.
+STR_NAME_CLYDE_G6B_BG:Clyde-EMD G6B
+STR_INFO_CLYDE_G6B_BG:{BLACK}Role: {GOLD}Shunter {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR Y Class {}{GOLD}Got a discount on these by re-using bogies from the old Tait sets.
+
 STR_NAME_CLYDE_G18BM_NG:Clyde-EMD G18BM
 STR_INFO_CLYDE_G18BM_NG:{BLACK}Role: {GOLD}Shunter {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR H Class
 STR_NAME_CLYDE_G18BM:Clyde-EMD G18BM
