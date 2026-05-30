@@ -137,6 +137,11 @@ STR_INFO_CLYDE_AJT32HB2:{BLACK}Role: {GOLD}Passenger {}{BLACK}Power: {BROWN}Dies
 
 
 
+STR_NAME_EE_SE26:English-Electric SE26
+STR_INFO_EE_SE26:{BLACK}Role: {GOLD}Shunter {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR F Class {}{GOLD}Australian version of the UK Class 11.
+STR_NAME_EE_SE26_BG:English-Electric SE26
+STR_INFO_EE_SE26_BG:{BLACK}Role: {GOLD}Shunter {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}VR F Class {}{GOLD}Australian version of the UK Class 11.
+
 STR_NAME_AGE_41CLASS:AGE 41 Class
 STR_INFO_AGE_41CLASS:{BLACK}Role: {GOLD}Shunter {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 41 Class {}{GOLD}I hope you like engine fires!
 
@@ -173,10 +178,10 @@ STR_INFO_GMD_G8A:{BLACK}Role: {GOLD}Light Freight {}{BLACK}Gauge:{GOLD} Narrow G
 STR_NAME_GONINAN_47CLASS:Goninan 47 Class
 STR_INFO_GONINAN_47CLASS:{BLACK}Role: {GOLD}Light Freight {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 47 Class {}{GOLD}Born to haul coal trains, forced to go to Bathurst
 
-STR_NAME_EE_ML202C:English Electric ML202C
+STR_NAME_EE_ML202C:English-Electric ML202C
 STR_INFO_EE_ML202C:{BLACK}Role: {GOLD}Light Freight {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}TGR Z Class
 
-STR_NAME_EE_ML255C:English Electric ML255C
+STR_NAME_EE_ML255C:English-Electric ML255C
 STR_INFO_EE_ML255C:{BLACK}Role: {GOLD}Light Freight {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR 2350 Class,TGR Za/Zb Class
 
 
@@ -276,7 +281,7 @@ STR_INFO_GONINAN_C44ACHI:{BLACK}Role: {GOLD}Heavy Freight {}{BLACK}Power: {BROWN
 
 
 
-STR_NAME_EE_RSE45B:English Electric RSE45B
+STR_NAME_EE_RSE45B:English-Electric RSE45B
 STR_INFO_EE_RSE45B:{BLACK}Role: {GOLD}Light Mixed Traffic {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}TGR X Class
 
 STR_NAME_BCW_NSU:BCW NSU Class

@@ -4373,6 +4373,179 @@ item(FEAT_TRAINS, Item_Clyde_JT22HC2_BG_Liv0, Clyde_JT22HC2_Liv0_BG_ID) {
 }
 }
 
+//ID
+const EE_SE26_ID = 8300;
+//introduction_date
+const EE_SE26_IntroDate = date(1951, 1, 1);
+//speed
+const EE_SE26_Speed = 35;
+//cost_factor
+const EE_SE26_CostFactor = 27;
+//running_cost_factor
+const EE_SE26_RunningCostFactor = 73;
+//power
+const EE_SE26_Power = 350;
+//weight
+const EE_SE26_Weight = 48;
+//length
+const EE_SE26_Length = 4;
+
+//Animated Parts
+spriteset(spriteset_EE_SE26_Anim1,   "gfx/EE_SE26_Anim1.png") {template_4(7, 39)}
+spriteset(spriteset_EE_SE26_Anim2,   "gfx/EE_SE26_Anim2.png") {template_4(7, 39)}
+spriteset(spriteset_EE_SE26_Anim3,   "gfx/EE_SE26_Anim3.png") {template_4(7, 39)}
+spriteset(spriteset_EE_SE26_Anim4,   "gfx/EE_SE26_Anim4.png") {template_4(7, 39)}
+
+spriteset(spriteset_EE_SE26_Anim1_r,   "gfx/EE_SE26_Anim1.png") {template_4_r(7, 39)}
+spriteset(spriteset_EE_SE26_Anim2_r,   "gfx/EE_SE26_Anim2.png") {template_4_r(7, 39)}
+spriteset(spriteset_EE_SE26_Anim3_r,   "gfx/EE_SE26_Anim3.png") {template_4_r(7, 39)}
+spriteset(spriteset_EE_SE26_Anim4_r,   "gfx/EE_SE26_Anim4.png") {template_4_r(7, 39)}
+
+switch(FEAT_TRAINS, SELF, switch_EE_SE26_Animation, motion_counter % 4){
+    0: spriteset_EE_SE26_Anim1;
+    1: spriteset_EE_SE26_Anim2;
+    2: spriteset_EE_SE26_Anim3;
+    3: spriteset_EE_SE26_Anim4;
+    spriteset_EE_SE26_Anim1;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_SE26_Animation_Reversed, motion_counter % 4){
+    0: spriteset_EE_SE26_Anim4;
+    1: spriteset_EE_SE26_Anim3;
+    2: spriteset_EE_SE26_Anim2;
+    3: spriteset_EE_SE26_Anim1;
+    spriteset_EE_SE26_Anim4;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_EE_SE26_Animation_Direction, train_is_driving_backwards){
+    0: switch_EE_SE26_Animation;
+    1: switch_EE_SE26_Animation_Reversed;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_EE_SE26_Animation_Direction_Alt, train_is_driving_backwards){
+    0: switch_EE_SE26_Animation_Reversed;
+    1: switch_EE_SE26_Animation;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_EE_SE26_Animation_Flipcheck, vehicle_is_flipped){
+    0: switch_EE_SE26_Animation_Direction;
+    1: switch_EE_SE26_Animation_Direction_Alt;
+}
+
+//EE_SE26_Liv0
+spriteset(spriteset_EE_SE26_Liv0_Purchase,   "gfx/EE_SE26_Liv0.png") {template_purchase_4(7, 21)}
+spriteset(spriteset_EE_SE26_Liv0,   "gfx/EE_SE26_Liv0.png") {template_4(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EE_SE26_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_SE26_Liv0_Purchase;
+    1: switch_Couplers_4_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_SE26_Liv0_SpriteStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 3 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_SE26_Liv0;
+	1: switch_EE_SE26_Animation_Flipcheck;
+	2: switch_Couplers_4_Repeat;
+}
+
+const EE_SE26_Liv0_ID = (EE_SE26_ID + Liv0_ID);
+//EE_SE26_Liv0
+item(FEAT_TRAINS, Item_EE_SE26_Liv0, EE_SE26_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_EE_SE26);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_SE26_IntroDate;		
+		length:                         EE_SE26_Length;
+		
+		speed:							EE_SE26_Speed km/h;
+		cost_factor:					EE_SE26_CostFactor;
+		running_cost_factor:			EE_SE26_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_SE26_Power;
+		weight:							EE_SE26_Weight;
+		
+//        variant_group: 					Item_EE_SE26_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_SE26_Liv0_SpriteStack;
+//		sound_effect: 					switch_EMD_16_567;
+        purchase: 						switch_EE_SE26_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_SE26);
+		reverse_build_probability: 		return 50;
+}
+}
+
+const EE_SE26_BG_Liv0_ID = (EE_SE26_Liv0_ID + 50);
+//EE_SE26_BG_Liv0
+item(FEAT_TRAINS, Item_EE_SE26_BG_Liv0, EE_SE26_BG_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_EE_SE26_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_SE26_IntroDate;		
+		length:                         EE_SE26_Length;
+		
+		speed:							EE_SE26_Speed km/h;
+		cost_factor:					EE_SE26_CostFactor;
+		running_cost_factor:			EE_SE26_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_SE26_Power;
+		weight:							EE_SE26_Weight;
+		
+//        variant_group: 					Item_EE_SE26_BG_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_SE26_Liv0_SpriteStack;
+//		sound_effect: 					switch_EMD_16_567;
+        purchase: 						switch_EE_SE26_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_SE26_BG);
+		reverse_build_probability: 		return 50;
+}
+}
+
 //AGE_41Class_Liv0
 spriteset(spriteset_AGE_41Class_Liv0_Purchase,   "gfx/AGE_41Class_Liv0.png") {template_purchase_6(7, 21)}
 spriteset(spriteset_AGE_41Class_Liv0,   "gfx/AGE_41Class_Liv0.png") {template_6_repeat(7, 39)} // <- Define a wagon, in this case the cab
@@ -4485,6 +4658,16 @@ switch(FEAT_TRAINS, PARENT, switch_Tulloch_1MS_Animation_Direction, train_is_dri
     1: switch_Tulloch_1MS_Animation_Reversed;
 }
 
+switch(FEAT_TRAINS, PARENT, switch_Tulloch_1MS_Animation_Direction_Alt, train_is_driving_backwards){
+    0: switch_Tulloch_1MS_Animation_Reversed;
+    1: switch_Tulloch_1MS_Animation;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Tulloch_1MS_Animation_Flipcheck, vehicle_is_flipped){
+    0: switch_Tulloch_1MS_Animation_Direction;
+    1: switch_Tulloch_1MS_Animation_Direction_Alt;
+}
+
 //Tulloch_1MS_Liv0
 spriteset(spriteset_Tulloch_1MS_Liv0_Purchase,   "gfx/Tulloch_1MS_Liv0.png") {template_purchase_4(7, 21)}
 spriteset(spriteset_Tulloch_1MS_Liv0,   "gfx/Tulloch_1MS_Liv0.png") {template_4(7, 39)}
@@ -4503,7 +4686,7 @@ switch (FEAT_TRAINS, SELF, switch_Tulloch_1MS_Liv0_SpriteStack, [
     getbits(extra_callback_info1, 8, 8)
     ]) {
     0: spriteset_Tulloch_1MS_Liv0;
-	1: switch_Tulloch_1MS_Animation_Direction;
+	1: switch_Tulloch_1MS_Animation_Flipcheck;
 	2: switch_Couplers_4_Repeat;
 }
 
