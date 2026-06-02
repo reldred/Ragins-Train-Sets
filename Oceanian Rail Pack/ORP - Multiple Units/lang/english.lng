@@ -70,6 +70,9 @@ STR_INFO_NSW600700RAILMOTOR:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK
 STR_NAME_QR_1900:Comeng 1900 Class
 STR_INFO_QR_1900:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR 1900 Class
 
+STR_NAME_EVELEIGH_NWC:Evelight NWC Railmotor
+STR_INFO_EVELEIGH_NWC:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed Newcastle, Wollongong and Canberra railmotors.
+
 
 STR_NAME_DEBSET:DEB Set
 STR_INFO_DEBSET:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW DEB Sets
