@@ -47,7 +47,7 @@ STR_MU_TRAILER:MU Car (ORP-Passenger Set)
 STR_MU_TRAILER_INFO: {GOLD}Attach this to a another multiple unit to make it longer
 
 STR_NAME_KATHLEEN:Kathleen Railmotor
-STR_INFO_KATHLEEN:{BLACK}Role: {GOLD}Suburban & Country Service{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Petrol {}{GOLD}"It may be for years and it may be forever"
+STR_INFO_KATHLEEN:{BLACK}Role: {GOLD}Suburban & Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Petrol {}{GOLD}"It may be for years and it may be forever"
 
 STR_NAME_SSD_DMU_CPH:CPH Railmotor
 STR_INFO_SSD_DMU_CPH:{BLACK}Role: {GOLD}Suburban & Country Service{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Petrol

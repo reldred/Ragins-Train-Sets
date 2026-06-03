@@ -826,6 +826,184 @@ item (FEAT_TRAINS, Item_MU_Trailer, 0) {
 }
 
 //ID
+const Kathleen_ID = 5060;
+//introduction_date
+const Kathleen_IntroDate = date(1921, 1, 1);
+//speed
+const Kathleen_Speed = 65;
+//cost_factor
+const Kathleen_CostFactor = 21;
+//running_cost_factor
+const Kathleen_RunningCostFactor = 52;
+//Cargo Capacity
+const Kathleen_CargoCapacity = 88;
+//power
+const Kathleen_Power = 100;
+//weight
+const Kathleen_Weight = 26;
+//length
+const Kathleen_Length = 6;
+
+//Kathleen_Liv0
+spriteset(spriteset_Kathleen_Liv0_purchase,   "gfx/Kathleen_Liv0.png") {template_purchase_6(7, 21)}
+spriteset(spriteset_Kathleen_Liv0,   "gfx/Kathleen_Liv0.png") {template_6_repeat(7, 39)}
+
+const Kathleen_ID_Liv0 = (Kathleen_ID + Liv0_ID );
+
+item(FEAT_TRAINS, Item_Kathleen_Liv0, Kathleen_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_KATHLEEN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Kathleen_IntroDate;		
+		length:                         Kathleen_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Kathleen_Speed km/h;
+		cost_factor:					Kathleen_CostFactor;
+		running_cost_factor:			Kathleen_RunningCostFactor;
+		cargo_capacity: 				(Kathleen_CargoCapacity / param_capacity_mod);
+		power:							Kathleen_Power;
+		weight:							Kathleen_Weight ton;
+
+//        variant_group: 					Item_Kathleen_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Kathleen_Liv0;
+        purchase: 						spriteset_Kathleen_Liv0_purchase;
+        additional_text: 				string(STR_INFO_KATHLEEN);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Kathleen_Liv1
+spriteset(spriteset_Kathleen_Liv1_purchase,   "gfx/Kathleen_Liv1.png") {template_purchase_6(7, 21)}
+spriteset(spriteset_Kathleen_Liv1,   "gfx/Kathleen_Liv1.png") {template_6_repeat(7, 39)}
+
+const Kathleen_ID_Liv1 = (Kathleen_ID + Liv1_ID );
+
+item(FEAT_TRAINS, Item_Kathleen_Liv1, Kathleen_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_KATHLEEN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Kathleen_IntroDate;		
+		length:                         Kathleen_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Kathleen_Speed km/h;
+		cost_factor:					Kathleen_CostFactor;
+		running_cost_factor:			Kathleen_RunningCostFactor;
+		cargo_capacity: 				(Kathleen_CargoCapacity / param_capacity_mod);
+		power:							Kathleen_Power;
+		weight:							Kathleen_Weight ton;
+
+        variant_group: 					Item_Kathleen_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Kathleen_Liv1;
+        purchase: 						spriteset_Kathleen_Liv1_purchase;
+        additional_text: 				string(STR_INFO_KATHLEEN);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Kathleen_Liv2
+spriteset(spriteset_Kathleen_Liv2_purchase,   "gfx/Kathleen_Liv2.png") {template_purchase_6(7, 21)}
+spriteset(spriteset_Kathleen_Liv2,   "gfx/Kathleen_Liv2.png") {template_6_repeat(7, 39)}
+
+const Kathleen_ID_Liv2 = (Kathleen_ID + Liv2_ID );
+
+item(FEAT_TRAINS, Item_Kathleen_Liv2, Kathleen_ID_Liv2) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_KATHLEEN);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Kathleen_IntroDate;		
+		length:                         Kathleen_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Kathleen_Speed km/h;
+		cost_factor:					Kathleen_CostFactor;
+		running_cost_factor:			Kathleen_RunningCostFactor;
+		cargo_capacity: 				(Kathleen_CargoCapacity / param_capacity_mod);
+		power:							Kathleen_Power;
+		weight:							Kathleen_Weight ton;
+
+        variant_group: 					Item_Kathleen_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Kathleen_Liv2;
+        purchase: 						spriteset_Kathleen_Liv2_purchase;
+        additional_text: 				string(STR_INFO_KATHLEEN);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//ID
 const NSW600700Railmotor_ID = 5300;
 //introduction_date
 const NSW600700Railmotor_IntroDate = date(1949, 1, 1);
