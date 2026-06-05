@@ -4374,7 +4374,7 @@ item(FEAT_TRAINS, Item_Clyde_JT22HC2_BG_Liv0, Clyde_JT22HC2_Liv0_BG_ID) {
 }
 
 //ID
-const EE_SE26_ID = 8300;
+const EE_SE26_ID = 8400;
 //introduction_date
 const EE_SE26_IntroDate = date(1951, 1, 1);
 //speed
@@ -4567,7 +4567,7 @@ switch (FEAT_TRAINS, SELF, switch_AGE_41Class_Liv0_Normal_Stack, [
     1: switch_Couplers_6_Repeat;
 }
 
-item(FEAT_TRAINS, Item_AGE_41Class_Liv0, 5550) {
+item(FEAT_TRAINS, Item_AGE_41Class_Liv0, 8650) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -4610,7 +4610,7 @@ item(FEAT_TRAINS, Item_AGE_41Class_Liv0, 5550) {
 }
 
 //ID
-const Tulloch_1MS_ID = 9300;
+const Tulloch_1MS_ID = 9400;
 //introduction_date
 const Tulloch_1MS_IntroDate = date(1960, 1, 1);
 //speed
@@ -4783,7 +4783,7 @@ item(FEAT_TRAINS, Item_Tulloch_1MS_BG_Liv0, Tulloch_1MS_BG_Liv0_ID) {
 }
 
 //ID
-const Clyde_G6B_ID = 9650;
+const Clyde_G6B_ID = 9750;
 //introduction_date
 const Clyde_G6B_IntroDate = date(1963, 1, 1);
 //speed
@@ -4937,7 +4937,7 @@ item(FEAT_TRAINS, Item_Clyde_G6B_BG_Liv0, Clyde_G6B_BG_Liv0_ID) {
 }
 
 //ID
-const Tulloch_2MS_ID = 9900;
+const Tulloch_2MS_ID = 10350;
 //introduction_date
 const Tulloch_2MS_IntroDate = date(1964, 1, 1);
 //speed

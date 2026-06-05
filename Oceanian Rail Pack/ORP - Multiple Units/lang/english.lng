@@ -47,22 +47,22 @@ STR_MU_TRAILER:MU Car (ORP-Passenger Set)
 STR_MU_TRAILER_INFO: {GOLD}Attach this to a another multiple unit to make it longer
 
 STR_NAME_KATHLEEN:Kathleen Railmotor
-STR_INFO_KATHLEEN:{BLACK}Role: {GOLD}Suburban & Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Petrol {}{GOLD}"It may be for years and it may be forever"
+STR_INFO_KATHLEEN:{BLACK}Role: {GOLD}Suburban & Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Petrol {}{BLACK}Based on: {GOLD}NSW Prototype Railmotor No.2  {}{GOLD}"It may be for years and it may be forever"
 
 STR_NAME_SSD_DMU_CPH:CPH Railmotor
 STR_INFO_SSD_DMU_CPH:{BLACK}Role: {GOLD}Suburban & Country Service{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Petrol
 
-STR_NAME_EDISON:Edison Railmotor
-STR_INFO_EDISON:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {GREEN}Battery {}{GOLD}When it's done, just chuck it in the ocean
+STR_NAME_NZR_EDISON:Edison Railmotor
+STR_INFO_NZR_EDISON:{BLACK}Role: {GOLD}Suburban {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {GREEN}Battery {}{BLACK}Based on: {GOLD}NZR Prototype Battery-Electric Railmotor {}{GOLD}When it's done, just chuck it in the ocean
 
-STR_NAME_SSD_DMU_PERM:Petrol-Electric Railmotor
-STR_INFO_SSD_DMU_PERM:{BLACK}Role: {GOLD}Suburban & Country Service{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Petrol
+STR_NAME_VR_PERM:Petrol-Electric Railmotor
+STR_INFO_VR_PERM:{BLACK}Role: {GOLD}Suburban & Country Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Petrol {}{BLACK}Based on: {GOLD}VR PERM Railmotors, later converted to Diesel and renamed "DERMS"
 
-STR_NAME_STANDARDDMU:Standard Railmotor
-STR_INFO_STANDARDDMU:{BLACK}Role: {GOLD}Country Service{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel
+STR_NAME_NZR_STANDARD:Hutt WorkshopsStandard Railmotor
+STR_INFO_NZR_STANDARD:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Standard Railmotors
 
-STR_NAME_SSD_DMU_VULCAN:Vulcan Railmotor
-STR_INFO_SSD_DMU_VULCAN:{BLACK}Role: {GOLD}Country Service{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{GOLD}One of these may or may not be at the bottom of the ocean
+STR_NAME_NZR_VULCAN:Vulcan Railmotor
+STR_INFO_NZR_VULCAN:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Vulcan Railmotors {}{GOLD}One of these may or may not be at the bottom of the ocean
 
 STR_NAME_NSW600700RAILMOTOR:600/700 Railmotor
 STR_INFO_NSW600700RAILMOTOR:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 600/700 class railmotors
