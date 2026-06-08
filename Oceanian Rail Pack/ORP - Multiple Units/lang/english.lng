@@ -83,6 +83,12 @@ STR_NAME_EVELEIGH_NWC:Evelight NWC Railmotor
 STR_INFO_EVELEIGH_NWC:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed Newcastle, Wollongong and Canberra railmotors.
 
 
+
+STR_NAME_COMENG_2000DDPROPOSAL:Comeng Double-Deck Suburban Diesel Multiple Unit
+STR_INFO_COMENG_2000DDPROPOSAL:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed double-deck design for the SA 2000 class contract.
+
+
+
 STR_NAME_DEBSET:DEB Set
 STR_INFO_DEBSET:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW DEB Sets
 
@@ -91,6 +97,9 @@ STR_INFO_COMENG_1100CLASS:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Gauge: {
 
 STR_NAME_SILVERFERN:Kawasaki Silver Fern
 STR_INFO_SILVERFERN:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Silver Fern Railcars
+
+STR_NAME_COMENG_HPTREGIONAL:Comeng HPT Regional
+STR_INFO_COMENG_HPTREGIONAL:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed centre locomotive HPT design.
 
 
 
@@ -193,6 +202,9 @@ STR_INFO_SDD_EMU_COMENGKSET:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD
 STR_NAME_SDD_EMU_GONINANCHOPPER:Goninan Chopper Set
 STR_INFO_SDD_EMU_GONINANCHOPPER:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{GOLD}Chopper Chopper Chopper
 
+STR_NAME_COMENG_2000DDPROPOSAL_AC:Comeng Double-Deck Suburban Electric Multiple Unit
+STR_INFO_COMENG_2000DDPROPOSAL_AC:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {RED}AC Overhead Line  {}{BLACK}Based on: {GOLD}Proposed double-deck design for the SA 2000 class contract.
+
 STR_NAME_GONINAN_TANGARA:Goninan Tangara
 STR_INFO_GONINAN_TANGARA:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Sydney Tangara Tains
 
@@ -224,6 +236,9 @@ STR_INFO_TULLOCHINTERURBAN:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formati
 
 STR_NAME_COMENGINTERURBAN:Comeng Interurban
 STR_INFO_COMENGINTERURBAN:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge{}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW U-Set EMUs {}{GOLD}The Fish & the Chips
+
+STR_NAME_COMENG_HPTREGIONAL_OHLE:Comeng HPT Regional EMU
+STR_INFO_COMENG_HPTREGIONAL_OHLE:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Fictional OHLE version of the HPT regional DMU.
 
 STR_NAME_COMENGINTERURBANMK2:Comeng Interurban Mk2
 STR_INFO_COMENGINTERURBANMK2:{BLACK}Role: {GOLD}Intercity Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}Proposed Gippsland line EMU
