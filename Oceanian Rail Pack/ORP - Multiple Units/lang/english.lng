@@ -65,22 +65,25 @@ STR_NAME_NZR_VULCAN:Vulcan Railmotor
 STR_INFO_NZR_VULCAN:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Vulcan Railmotors {}{GOLD}One of these may or may not be at the bottom of the ocean
 
 STR_NAME_NSW600700RAILMOTOR:600/700 Railmotor
-STR_INFO_NSW600700RAILMOTOR:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 600/700 class railmotors
+STR_INFO_NSW600700RAILMOTOR:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 600/700 class railmotors.
 
 STR_NAME_CRAVENS_SUBURBANRAILCAR:Cravens Suburban Railmotor
-STR_INFO_CRAVENS_SUBURBANRAILCAR:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR ADG Class railmotors
+STR_INFO_CRAVENS_SUBURBANRAILCAR:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR ADG Class railmotors.
 
 STR_NAME_QR_1900:Comeng 1900 Class
-STR_INFO_QR_1900:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR 1900 Class
+STR_INFO_QR_1900:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}QR 1900 Class.
 
 STR_NAME_TULLOCH_RAILMOTOR:Tulloch Railmotor
-STR_INFO_TULLOCH_RAILMOTOR:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}South Maitland Railway railcars
+STR_INFO_TULLOCH_RAILMOTOR:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}South Maitland Railway railcars.
 
 STR_NAME_COMENG_ADK:Comeng ADK/ADB Suburban Railmotor
 STR_INFO_COMENG_ADK:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR ADK/ADB railmotors used in Perth, Auckland and Mozambique.
 
 STR_NAME_EVELEIGH_NWC:Evelight NWC Railmotor
 STR_INFO_EVELEIGH_NWC:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed Newcastle, Wollongong and Canberra railmotors.
+
+STR_NAME_COMENG_RAILCAR:Comeng Railcar
+STR_INFO_COMENG_RAILCAR:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed country railcar proposed by Comeng to replace 1920s CPH railmotors.
 
 
 

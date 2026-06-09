@@ -2247,6 +2247,78 @@ item(FEAT_TRAINS, Item_Eveleigh_NWC_Liv2, Eveleigh_NWC_ID_Liv2) {
 }
 
 //ID
+const Comeng_Railcar_ID = 5980;
+//introduction_date
+const Comeng_Railcar_IntroDate = date(1982, 1, 1);
+//speed
+const Comeng_Railcar_Speed = 115;
+//cost_factor
+const Comeng_Railcar_CostFactor = 23;
+//running_cost_factor
+const Comeng_Railcar_RunningCostFactor = 58;
+//Cargo Capacity
+const Comeng_Railcar_CargoCapacity = 99;
+//power
+const Comeng_Railcar_Power = 350;
+//weight
+const Comeng_Railcar_Weight = 30;
+//Length
+const Comeng_Railcar_Length = 7;
+
+//Comeng_Railcar_Liv0
+spriteset(spriteset_Comeng_Railcar_Liv0_purchase,   "gfx/Comeng_Railcar_Liv0.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_Comeng_Railcar_Liv0,   "gfx/Comeng_Railcar_Liv0.png") {template_7_repeat(7, 39)}
+
+const Comeng_Railcar_ID_Liv0 = (Comeng_Railcar_ID + Liv0_ID );
+
+item(FEAT_TRAINS, Item_Comeng_Railcar_Liv0, Comeng_Railcar_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_COMENG_RAILCAR);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_Railcar_IntroDate;		
+		length:                         Comeng_Railcar_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Comeng_Railcar_Speed km/h;
+		cost_factor:					Comeng_Railcar_CostFactor;
+		running_cost_factor:			Comeng_Railcar_RunningCostFactor;
+		cargo_capacity: 				(Comeng_Railcar_CargoCapacity / param_capacity_mod);
+		power:							Comeng_Railcar_Power;
+		weight:							Comeng_Railcar_Weight ton;
+
+//        variant_group: 					Item_Comeng_Railcar_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Comeng_Railcar_Liv0;
+        purchase: 						spriteset_Comeng_Railcar_Liv0_purchase;
+        additional_text: 				string(STR_INFO_COMENG_RAILCAR);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//ID
 const Comeng_2000DDProposal_ID = 7040;
 //introduction_date
 const Comeng_2000DDProposal_IntroDate = date(1982, 1, 1);
