@@ -62,7 +62,7 @@ STR_NAME_NZR_STANDARD:Hutt WorkshopsStandard Railmotor
 STR_INFO_NZR_STANDARD:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Standard Railmotors
 
 STR_NAME_NZR_VULCAN:Vulcan Railmotor
-STR_INFO_NZR_VULCAN:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Vulcan Railmotors {}{GOLD}One of these may or may not be at the bottom of the ocean
+STR_INFO_NZR_VULCAN:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Vulcan Railmotors {}{GOLD}One of these may or may not be at the bottom of the ocean.
 
 STR_NAME_NSW600700RAILMOTOR:600/700 Railmotor
 STR_INFO_NSW600700RAILMOTOR:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW 600/700 class railmotors.
@@ -85,6 +85,9 @@ STR_INFO_EVELEIGH_NWC:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge
 STR_NAME_COMENG_RAILCAR:Comeng Railcar
 STR_INFO_COMENG_RAILCAR:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed country railcar proposed by Comeng to replace 1920s CPH railmotors.
 
+STR_NAME_COMENG_2000CLASSDMU:Comeng 2000 Class Suburban DMU
+STR_INFO_COMENG_2000CLASSDMU:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}SA 2000/2100 Class Suburban DMUs. {}{GOLD}Unholy child of an NS Koploper and a Budd Metroliner.
+
 
 
 STR_NAME_COMENG_2000DDPROPOSAL:Comeng Double-Deck Suburban Diesel Multiple Unit
@@ -100,6 +103,9 @@ STR_INFO_COMENG_1100CLASS:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Gauge: {
 
 STR_NAME_SILVERFERN:Kawasaki Silver Fern
 STR_INFO_SILVERFERN:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NZR Silver Fern Railcars
+
+STR_NAME_COMENG_ADPADQ:Comeng ADP/ADQ DMU
+STR_INFO_COMENG_ADPADQ:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Transwa ADP/ADQ Railcars
 
 STR_NAME_COMENG_HPTREGIONAL:Comeng HPT Regional
 STR_INFO_COMENG_HPTREGIONAL:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed centre locomotive HPT design.
