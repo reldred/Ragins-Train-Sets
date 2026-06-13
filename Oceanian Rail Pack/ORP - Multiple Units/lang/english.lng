@@ -79,14 +79,20 @@ STR_INFO_TULLOCH_RAILMOTOR:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}
 STR_NAME_COMENG_ADK:Comeng ADK/ADB Suburban Railmotor
 STR_INFO_COMENG_ADK:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR ADK/ADB railmotors used in Perth, Auckland and Mozambique.
 
+STR_NAME_COMENG_2000CLASSDMU:Comeng 2000 Class Suburban DMU
+STR_INFO_COMENG_2000CLASSDMU:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}SA 2000/2100 Class Suburban DMUs. {}{GOLD}Unholy child of an NS Koploper and a Budd Metroliner.
+
 STR_NAME_EVELEIGH_NWC:Evelight NWC Railmotor
 STR_INFO_EVELEIGH_NWC:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed Newcastle, Wollongong and Canberra railmotors.
 
 STR_NAME_COMENG_RAILCAR:Comeng Railcar
 STR_INFO_COMENG_RAILCAR:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed country railcar proposed by Comeng to replace 1920s CPH railmotors.
 
-STR_NAME_COMENG_2000CLASSDMU:Comeng 2000 Class Suburban DMU
-STR_INFO_COMENG_2000CLASSDMU:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}SA 2000/2100 Class Suburban DMUs. {}{GOLD}Unholy child of an NS Koploper and a Budd Metroliner.
+STR_NAME_COMENG_3000CLASS:Comeng 3000 Class Railmotor
+STR_INFO_COMENG_3000CLASS:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}SA 3000 Class Suburban Railmotors.
+
+STR_NAME_COMENG_3000CLASS_DMU:Comeng 3100 Class DMU
+STR_INFO_COMENG_3000CLASS_DMU:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}SA 3100 Class Suburban Railmotors.
 
 
 

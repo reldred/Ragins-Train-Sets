@@ -1758,7 +1758,7 @@ item(FEAT_TRAINS, Item_Tulloch_Railmotor_Liv0, Tulloch_Railmotor_ID_Liv0) {
         introduction_date:              Tulloch_Railmotor_IntroDate;		
 		length:                         Tulloch_Railmotor_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Tulloch_Railmotor_Speed km/h;
 		cost_factor:					Tulloch_Railmotor_CostFactor;
 		running_cost_factor:			Tulloch_Railmotor_RunningCostFactor;
@@ -1811,7 +1811,7 @@ item(FEAT_TRAINS, Item_Tulloch_Railmotor_Liv1, Tulloch_Railmotor_ID_Liv1) {
         introduction_date:              Tulloch_Railmotor_IntroDate;		
 		length:                         Tulloch_Railmotor_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Tulloch_Railmotor_Speed km/h;
 		cost_factor:					Tulloch_Railmotor_CostFactor;
 		running_cost_factor:			Tulloch_Railmotor_RunningCostFactor;
@@ -1864,7 +1864,7 @@ item(FEAT_TRAINS, Item_Tulloch_Railmotor_Liv2, Tulloch_Railmotor_ID_Liv2) {
         introduction_date:              Tulloch_Railmotor_IntroDate;		
 		length:                         Tulloch_Railmotor_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Tulloch_Railmotor_Speed km/h;
 		cost_factor:					Tulloch_Railmotor_CostFactor;
 		running_cost_factor:			Tulloch_Railmotor_RunningCostFactor;
@@ -1917,7 +1917,7 @@ item(FEAT_TRAINS, Item_Tulloch_Railmotor_Liv3, Tulloch_Railmotor_ID_Liv3) {
         introduction_date:              Tulloch_Railmotor_IntroDate;		
 		length:                         Tulloch_Railmotor_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Tulloch_Railmotor_Speed km/h;
 		cost_factor:					Tulloch_Railmotor_CostFactor;
 		running_cost_factor:			Tulloch_Railmotor_RunningCostFactor;
@@ -2541,6 +2541,139 @@ item(FEAT_TRAINS, Item_Comeng_Railcar_Liv0, Comeng_Railcar_ID_Liv0) {
         additional_text: 				string(STR_INFO_COMENG_RAILCAR);
 		reverse_build_probability: 		return 50;
 }
+}
+
+//ID
+const Comeng_3000Class_ID = 6060;
+//introduction_date
+const Comeng_3000Class_IntroDate = date(1987, 1, 1);
+//speed
+const Comeng_3000Class_Speed = 130;
+//cost_factor
+const Comeng_3000Class_CostFactor = 27;
+//running_cost_factor
+const Comeng_3000Class_RunningCostFactor = 67;
+//Cargo Capacity
+const Comeng_3000Class_CargoCapacity = 115;
+//power
+const Comeng_3000Class_Power = 1050;
+//weight
+const Comeng_3000Class_Weight = 48;
+//Length
+const Comeng_3000Class_Length = 8;
+
+//Comeng_3000Class_Liv0
+spriteset(spriteset_Comeng_3000Class_Liv0_purchase,   "gfx/Comeng_3000Class_Liv0.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Comeng_3000Class_Liv0,   "gfx/Comeng_3000Class_Liv0.png") {template_8_repeat(7, 39)}
+
+const Comeng_3000Class_ID_Liv0 = (Comeng_3000Class_ID + Liv0_ID );
+
+item(FEAT_TRAINS, Item_Comeng_3000Class_Liv0, Comeng_3000Class_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_COMENG_3000CLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_3000Class_IntroDate;		
+		length:                         Comeng_3000Class_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Comeng_3000Class_Speed km/h;
+		cost_factor:					Comeng_3000Class_CostFactor;
+		running_cost_factor:			Comeng_3000Class_RunningCostFactor;
+		cargo_capacity: 				(Comeng_3000Class_CargoCapacity / param_capacity_mod);
+		power:							Comeng_3000Class_Power;
+		weight:							Comeng_3000Class_Weight ton;
+
+//        variant_group: 					Item_Comeng_3000Class_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Comeng_3000Class_Liv0;
+        purchase: 						spriteset_Comeng_3000Class_Liv0_purchase;
+        additional_text: 				string(STR_INFO_COMENG_3000CLASS);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Comeng_3000Class_DMU_Liv0
+spriteset(spriteset_Comeng_3000Class_DMU_Liv0_purchase,   "gfx/Comeng_3000Class_Liv0.png") {template_purchase_88mu(187, 21)}
+spriteset(spriteset_Comeng_3000Class_DMU_Liv0_lead,   "gfx/Comeng_3000Class_Liv0.png") {template_8(187, 39)}
+spriteset(spriteset_Comeng_3000Class_DMU_Liv0_Trailer,   "gfx/Comeng_3000Class_Liv0.png") {template_8_repeat(187, 69)}
+
+const Comeng_3000Class_DMU_ID_Liv0 = (Comeng_3000Class_ID_Liv0 + 20 );
+
+item(FEAT_TRAINS, Item_Comeng_3000Class_DMU_Liv0, Comeng_3000Class_DMU_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_COMENG_3000CLASS_DMU);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Comeng_3000Class_IntroDate;		
+		length:                         Comeng_3000Class_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Comeng_3000Class_Speed km/h;
+		cost_factor:					(Comeng_3000Class_CostFactor * 2);
+		running_cost_factor:			(Comeng_3000Class_RunningCostFactor * 2);
+		cargo_capacity: 				(Comeng_3000Class_CargoCapacity / param_capacity_mod);
+		power:							(Comeng_3000Class_Power * 2);
+		weight:							Comeng_3000Class_Weight ton;
+
+//        variant_group: 					Item_Comeng_3000Class_DMU_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Comeng_3000Class_DMU_Liv0_lead;
+        purchase: 						spriteset_Comeng_3000Class_DMU_Liv0_purchase;
+        additional_text: 				string(STR_INFO_COMENG_3000CLASS_DMU);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						spriteset_Comeng_3000Class_DMU_Liv0_Trailer ;
+        length: 						8;
+        cargo_capacity:                 (Comeng_3000Class_CargoCapacity / param_capacity_mod);
+        power:                          Comeng_3000Class_Power;
+		weight:                        	Comeng_3000Class_Weight;
+		running_cost_factor:            Comeng_3000Class_RunningCostFactor;
+    }
 }
 
 //ID
