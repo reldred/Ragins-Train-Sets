@@ -3008,6 +3008,147 @@ item(FEAT_TRAINS, Item_Comeng_3000Class_DMU_Liv2, Comeng_3000Class_DMU_ID_Liv2) 
 }
 
 //ID
+const Goninan_HunterRailcar = 6160;
+//introduction_date
+const Goninan_HunterRailcar_IntroDate = date(2006, 1, 1);
+//speed
+const Goninan_HunterRailcar_Speed = 160;
+//cost_factor
+const Goninan_HunterRailcar_CostFactor = 29;
+//running_cost_factor
+const Goninan_HunterRailcar_RunningCostFactor = 71;
+//Cargo Capacity
+const Goninan_HunterRailcar_CargoCapacity = 122;
+//power
+const Goninan_HunterRailcar_Power = 750;
+//weight
+const Goninan_HunterRailcar_Weight = 63;
+//length
+const Goninan_HunterRailcar_Length = 8;
+
+//Goninan_HunterRailcar_Liv0
+spriteset(spriteset_Goninan_HunterRailcar_Liv0_purchase,   "gfx/Goninan_HunterRailcar_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Goninan_HunterRailcar_Liv0_lead,   "gfx/Goninan_HunterRailcar_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Goninan_HunterRailcar_Liv0_Trailer,   "gfx/Goninan_HunterRailcar_Liv0.png") {template_8_repeat(7, 69)}
+
+const Goninan_HunterRailcar_Liv0 = (Goninan_HunterRailcar + Liv0_ID );
+
+item(FEAT_TRAINS, Item_Goninan_HunterRailcar_Liv0, Goninan_HunterRailcar_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_GONINAN_HUNTERRAILCAR);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Goninan_HunterRailcar_IntroDate;		
+		length:                         Goninan_HunterRailcar_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Goninan_HunterRailcar_Speed km/h;
+		cost_factor:					(Goninan_HunterRailcar_CostFactor * 2);
+		running_cost_factor:			(Goninan_HunterRailcar_RunningCostFactor * 2);
+		cargo_capacity: 				(Goninan_HunterRailcar_CargoCapacity / param_capacity_mod);
+		power:							(Goninan_HunterRailcar_Power * 2);
+		weight:							Goninan_HunterRailcar_Weight ton;
+
+//        variant_group: 					Item_Goninan_HunterRailcar_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Goninan_HunterRailcar_Liv0_lead;
+        purchase: 						spriteset_Goninan_HunterRailcar_Liv0_purchase;
+        additional_text: 				string(STR_INFO_GONINAN_HUNTERRAILCAR);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						spriteset_Goninan_HunterRailcar_Liv0_Trailer ;
+        length: 						8;
+        cargo_capacity:                 (Goninan_HunterRailcar_CargoCapacity / param_capacity_mod);
+        power:                          Goninan_HunterRailcar_Power;
+		weight:                        	Goninan_HunterRailcar_Weight;
+		running_cost_factor:            Goninan_HunterRailcar_RunningCostFactor;
+}
+}
+
+//Goninan_HunterRailcar_Liv1
+spriteset(spriteset_Goninan_HunterRailcar_Liv1_purchase,   "gfx/Goninan_HunterRailcar_Liv1.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Goninan_HunterRailcar_Liv1_lead,   "gfx/Goninan_HunterRailcar_Liv1.png") {template_8(7, 39)}
+spriteset(spriteset_Goninan_HunterRailcar_Liv1_Trailer,   "gfx/Goninan_HunterRailcar_Liv1.png") {template_8_repeat(7, 69)}
+
+const Goninan_HunterRailcar_Liv1 = (Goninan_HunterRailcar + Liv1_ID );
+
+item(FEAT_TRAINS, Item_Goninan_HunterRailcar_Liv1, Goninan_HunterRailcar_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_GONINAN_HUNTERRAILCAR);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Goninan_HunterRailcar_IntroDate;		
+		length:                         Goninan_HunterRailcar_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Goninan_HunterRailcar_Speed km/h;
+		cost_factor:					(Goninan_HunterRailcar_CostFactor * 2);
+		running_cost_factor:			(Goninan_HunterRailcar_RunningCostFactor * 2);
+		cargo_capacity: 				(Goninan_HunterRailcar_CargoCapacity / param_capacity_mod);
+		power:							(Goninan_HunterRailcar_Power * 2);
+		weight:							Goninan_HunterRailcar_Weight ton;
+
+        variant_group: 					Item_Goninan_HunterRailcar_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Goninan_HunterRailcar_Liv1_lead;
+        purchase: 						spriteset_Goninan_HunterRailcar_Liv1_purchase;
+        additional_text: 				string(STR_INFO_GONINAN_HUNTERRAILCAR);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						spriteset_Goninan_HunterRailcar_Liv1_Trailer ;
+        length: 						8;
+        cargo_capacity:                 (Goninan_HunterRailcar_CargoCapacity / param_capacity_mod);
+        power:                          Goninan_HunterRailcar_Power;
+		weight:                        	Goninan_HunterRailcar_Weight;
+		running_cost_factor:            Goninan_HunterRailcar_RunningCostFactor;
+}
+}
+
+//ID
 const Comeng_2000DDProposal_ID = 7040;
 //introduction_date
 const Comeng_2000DDProposal_IntroDate = date(1982, 1, 1);

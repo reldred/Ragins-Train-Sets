@@ -94,6 +94,9 @@ STR_INFO_COMENG_3000CLASS:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {G
 STR_NAME_COMENG_3000CLASS_DMU:Comeng 3100 Class DMU
 STR_INFO_COMENG_3000CLASS_DMU:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}SA 3100 Class Suburban Railmotors.
 
+STR_NAME_GONINAN_HUNTERRAILCAR:UGL Hunter Railcar
+STR_INFO_GONINAN_HUNTERRAILCAR:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW Hunter Railcars.
+
 
 
 STR_NAME_COMENG_2000DDPROPOSAL:Comeng Double-Deck Suburban Diesel Multiple Unit
