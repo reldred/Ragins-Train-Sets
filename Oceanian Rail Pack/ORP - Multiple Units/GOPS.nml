@@ -3606,8 +3606,542 @@ item(FEAT_TRAINS, Item_Comeng_1100Class_Liv0, Comeng_1100Class_ID_Liv0) {
         purchase: 						spriteset_Comeng_1100Class_Liv0_purchase;
         additional_text: 				string(STR_INFO_COMENG_1100CLASS);
 		reverse_build_probability: 		return 50;
+}
+}
+	
+//ID
+const Tulloch_DRC_ID = 8260;
+//introduction_date
+const Tulloch_DRC_IntroDate = date(1971, 1, 1);
+//speed
+const Tulloch_DRC_Speed = 120;
+//cost_factor
+const Tulloch_DRC_CostFactor = 30;
+//running_cost_factor
+const Tulloch_DRC_RunningCostFactor = 76;
+//Cargo Capacity
+const Tulloch_DRC_CargoCapacity = 87;
+//power
+const Tulloch_DRC_Power = 600;
+//weight
+const Tulloch_DRC_Weight = 48;
+//length
+const Tulloch_DRC_Length = 8;
+
+//Tulloch_DRC_Liv0
+spriteset(spriteset_Tulloch_DRC_Liv0_purchase,   "gfx/Tulloch_DRC_Liv0.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Tulloch_DRC_Liv0,   "gfx/Tulloch_DRC_Liv0.png") {template_8(7, 39)}
+
+const Tulloch_DRC_ID_Liv0 = (Tulloch_DRC_ID + Liv0_ID );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv0, Tulloch_DRC_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+//        variant_group: 					Item_Tulloch_DRC_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv0;
+        purchase: 						spriteset_Tulloch_DRC_Liv0_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv0_BG
+const Tulloch_DRC_ID_Liv0_BG = (Tulloch_DRC_ID_Liv0 + 20 );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv0_BG, Tulloch_DRC_ID_Liv0_BG) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+//        variant_group: 					Item_Tulloch_DRC_Liv0_BG;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv0;
+        purchase: 						spriteset_Tulloch_DRC_Liv0_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC_BG);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv1
+spriteset(spriteset_Tulloch_DRC_Liv1_purchase,   "gfx/Tulloch_DRC_Liv1.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Tulloch_DRC_Liv1,   "gfx/Tulloch_DRC_Liv1.png") {template_8(7, 39)}
+
+const Tulloch_DRC_ID_Liv1 = (Tulloch_DRC_ID + Liv1_ID );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv1, Tulloch_DRC_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+        variant_group: 					Item_Tulloch_DRC_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv1;
+        purchase: 						spriteset_Tulloch_DRC_Liv1_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv1_BG
+const Tulloch_DRC_ID_Liv1_BG = (Tulloch_DRC_ID_Liv1 + 20 );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv1_BG, Tulloch_DRC_ID_Liv1_BG) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+        variant_group: 					Item_Tulloch_DRC_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv1;
+        purchase: 						spriteset_Tulloch_DRC_Liv1_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC_BG);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv2
+spriteset(spriteset_Tulloch_DRC_Liv2_purchase,   "gfx/Tulloch_DRC_Liv2.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Tulloch_DRC_Liv2,   "gfx/Tulloch_DRC_Liv2.png") {template_8(7, 39)}
+
+const Tulloch_DRC_ID_Liv2 = (Tulloch_DRC_ID + Liv2_ID );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv2, Tulloch_DRC_ID_Liv2) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+        variant_group: 					Item_Tulloch_DRC_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv2;
+        purchase: 						spriteset_Tulloch_DRC_Liv2_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv2_BG
+const Tulloch_DRC_ID_Liv2_BG = (Tulloch_DRC_ID_Liv2 + 20 );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv2_BG, Tulloch_DRC_ID_Liv2_BG) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+        variant_group: 					Item_Tulloch_DRC_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv2;
+        purchase: 						spriteset_Tulloch_DRC_Liv2_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC_BG);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv3
+spriteset(spriteset_Tulloch_DRC_Liv3_purchase,   "gfx/Tulloch_DRC_Liv3.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Tulloch_DRC_Liv3,   "gfx/Tulloch_DRC_Liv3.png") {template_8(7, 39)}
+
+const Tulloch_DRC_ID_Liv3 = (Tulloch_DRC_ID + Liv3_ID );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv3, Tulloch_DRC_ID_Liv3) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+        variant_group: 					Item_Tulloch_DRC_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv3;
+        purchase: 						spriteset_Tulloch_DRC_Liv3_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv3_BG
+const Tulloch_DRC_ID_Liv3_BG = (Tulloch_DRC_ID_Liv3 + 20 );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv3_BG, Tulloch_DRC_ID_Liv3_BG) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+        variant_group: 					Item_Tulloch_DRC_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv3;
+        purchase: 						spriteset_Tulloch_DRC_Liv3_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC_BG);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv4
+spriteset(spriteset_Tulloch_DRC_Liv4_purchase,   "gfx/Tulloch_DRC_Liv4.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Tulloch_DRC_Liv4,   "gfx/Tulloch_DRC_Liv4.png") {template_8(7, 39)}
+
+const Tulloch_DRC_ID_Liv4 = (Tulloch_DRC_ID + Liv4_ID );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv4, Tulloch_DRC_ID_Liv4) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+        variant_group: 					Item_Tulloch_DRC_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv4;
+        purchase: 						spriteset_Tulloch_DRC_Liv4_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Tulloch_DRC_Liv4_BG
+const Tulloch_DRC_ID_Liv4_BG = (Tulloch_DRC_ID_Liv4 + 20 );
+
+item(FEAT_TRAINS, Item_Tulloch_DRC_Liv4_BG, Tulloch_DRC_ID_Liv4_BG) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_TULLOCH_DRC_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Tulloch_DRC_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Tulloch_DRC_Speed km/h;
+		cost_factor:					Tulloch_DRC_CostFactor;
+		running_cost_factor:			Tulloch_DRC_RunningCostFactor;
+		cargo_capacity: 				(Tulloch_DRC_CargoCapacity / param_capacity_mod);
+		power:							Tulloch_DRC_Power;
+		weight:							Tulloch_DRC_Weight ton;
+
+        variant_group: 					Item_Tulloch_DRC_Liv0_BG;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Tulloch_DRC_Liv4;
+        purchase: 						spriteset_Tulloch_DRC_Liv4_purchase;
+        additional_text: 				string(STR_INFO_TULLOCH_DRC_BG);
+		reverse_build_probability: 		return 50;
+}
+}
 
 //ID
 const SilverFern_ID = 8240;
