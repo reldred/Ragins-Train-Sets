@@ -88,6 +88,9 @@ STR_INFO_EVELEIGH_NWC:{BLACK}Role: {GOLD}Suburban/Country Service {}{BLACK}Gauge
 STR_NAME_COMENG_RAILCAR:Comeng Railcar
 STR_INFO_COMENG_RAILCAR:{BLACK}Role: {GOLD}Country Service {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed country railcar proposed by Comeng to replace 1920s CPH railmotors.
 
+STR_NAME_GONINAN_ADL:Goninan ADL/ADC Suburban Railmotor
+STR_INFO_GONINAN_ADL:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Formation: {GOLD}Multiple Unit  {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}WAGR ADL/ADC Railcars used in Perth and Auckland.
+
 STR_NAME_COMENG_3000CLASS:Comeng 3000 Class Railmotor
 STR_INFO_COMENG_3000CLASS:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}SA 3000 Class Suburban Railmotors.
 
