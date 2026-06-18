@@ -842,7 +842,7 @@ item (FEAT_TRAINS, Item_MU_Trailer, 0) {
 }
 
 //ID
-const Kathleen_ID = 5120;
+const Kathleen_ID = 5160;
 //introduction_date
 const Kathleen_IntroDate = date(1921, 1, 1);
 //speed
@@ -1020,7 +1020,7 @@ item(FEAT_TRAINS, Item_Kathleen_Liv2, Kathleen_ID_Liv2) {
 }
 
 //ID
-const NZR_Edison_ID = 5300;
+const NZR_Edison_ID = 5340;
 //introduction_date
 const NZR_Edison_IntroDate = date(1926, 1, 1);
 //speed
@@ -1198,7 +1198,7 @@ item(FEAT_TRAINS, Item_NZR_Edison_Liv2, NZR_Edison_ID_Liv2) {
 }
 
 //ID
-const VR_PERM_ID = 5360;
+const VR_PERM_ID = 5400;
 //introduction_date
 const VR_PERM_IntroDate = date(1928, 1, 1);
 //speed
@@ -1270,7 +1270,7 @@ item(FEAT_TRAINS, Item_VR_PERM_Liv0, VR_PERM_ID_Liv0) {
 }
 
 //ID
-const NZR_Standard_ID = 5520;
+const NZR_Standard_ID = 5560;
 //introduction_date
 const NZR_Standard_IntroDate = date(1938, 1, 1);
 //speed
@@ -1395,7 +1395,7 @@ item(FEAT_TRAINS, Item_NZR_Standard_Liv1, NZR_Standard_ID_Liv1) {
 }
 
 //ID
-const NZR_Vulcan_ID = 5540;
+const NZR_Vulcan_ID = 5580;
 //introduction_date
 const NZR_Vulcan_IntroDate = date(1940, 1, 1);
 //speed
@@ -1467,7 +1467,7 @@ item(FEAT_TRAINS, Item_NZR_Vulcan_Liv0, NZR_Vulcan_ID_Liv0) {
 }
 
 //ID
-const NSW600700Railmotor_ID = 5600;
+const NSW600700Railmotor_ID = 5640;
 //introduction_date
 const NSW600700Railmotor_IntroDate = date(1949, 1, 1);
 //speed
@@ -1562,7 +1562,7 @@ item(FEAT_TRAINS, Item_NSW600700Railmotor_Liv0, NSW600700Railmotor_ID_Liv0) {
 }
 
 //ID
-const Cravens_SuburbanRailcar_ID = 5660;
+const Cravens_SuburbanRailcar_ID = 5700;
 //introduction_date
 const Cravens_SuburbanRailcar_IntroDate = date(1954, 1, 1);
 //speed
@@ -1634,7 +1634,7 @@ item(FEAT_TRAINS, Item_Cravens_SuburbanRailcar_Liv0, Cravens_SuburbanRailcar_ID_
 }
 
 //ID
-const QR_1900_ID = 5740;
+const QR_1900_ID = 5780;
 //introduction_date
 const QR_1900_IntroDate = date(1957, 1, 1);
 //speed
@@ -1706,7 +1706,7 @@ item(FEAT_TRAINS, Item_QR_1900_Liv0, QR_1900_ID_Liv0) {
 }
 
 //ID
-const Tulloch_Railmotor_ID = 5760;
+const Tulloch_Railmotor_ID = 5800;
 //introduction_date
 const Tulloch_Railmotor_IntroDate = date(1961, 1, 1);
 //speed
@@ -1937,7 +1937,7 @@ item(FEAT_TRAINS, Item_Tulloch_Railmotor_Liv3, Tulloch_Railmotor_ID_Liv3) {
 }
 
 //ID
-const Comeng_ADK_ID = 5820;
+const Comeng_ADK_ID = 5880;
 //introduction_date
 const Comeng_ADK_IntroDate = date(1967, 1, 1);
 //speed
@@ -2045,7 +2045,7 @@ item(FEAT_TRAINS, Item_Comeng_ADK_Liv0, Comeng_ADK_ID_Liv0) {
 }
 
 //ID
-const Comeng_2000ClassDMU_ID = 5900;
+const Comeng_2000ClassDMU_ID = 5940;
 //introduction_date
 const Comeng_2000ClassDMU_IntroDate = date(1979, 1, 1);
 //speed
@@ -2373,7 +2373,7 @@ item(FEAT_TRAINS, Item_Comeng_2000ClassDMU_Liv2, Comeng_2000ClassDMU_ID_Liv2) {
 }
 	
 //ID
-const Eveleigh_NWC_ID = 5940;
+const Eveleigh_NWC_ID = 6000;
 //introduction_date
 const Eveleigh_NWC_IntroDate = date(1981, 1, 1);
 //speed
@@ -3271,6 +3271,78 @@ item(FEAT_TRAINS, Item_Comeng_3000Class_DMU_Liv2, Comeng_3000Class_DMU_ID_Liv2) 
 }
 
 //ID
+const Goninan_Sprinter_ID = 6100;
+//introduction_date
+const Goninan_Sprinter_IntroDate = date(1993, 1, 1);
+//speed
+const Goninan_Sprinter_Speed = 130;
+//cost_factor
+const Goninan_Sprinter_CostFactor = 27;
+//running_cost_factor
+const Goninan_Sprinter_RunningCostFactor = 68;
+//Cargo Capacity
+const Goninan_Sprinter_CargoCapacity = 117;
+//power
+const Goninan_Sprinter_Power = 630;
+//weight
+const Goninan_Sprinter_Weight = 50;
+//Length
+const Goninan_Sprinter_Length = 8;
+
+//Goninan_Sprinter_Liv0
+spriteset(spriteset_Goninan_Sprinter_Liv0_purchase,   "gfx/Goninan_Sprinter_Liv0.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Goninan_Sprinter_Liv0,   "gfx/Goninan_Sprinter_Liv0.png") {template_8(7, 39)}
+
+const Goninan_Sprinter_ID_Liv0 = (Goninan_Sprinter_ID + Liv0_ID );
+
+item(FEAT_TRAINS, Item_Goninan_Sprinter_Liv0, Goninan_Sprinter_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 2, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_GONINAN_SPRINTER);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Goninan_Sprinter_IntroDate;		
+		length:                         Goninan_Sprinter_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Goninan_Sprinter_Speed km/h;
+		cost_factor:					Goninan_Sprinter_CostFactor;
+		running_cost_factor:			Goninan_Sprinter_RunningCostFactor;
+		cargo_capacity: 				(Goninan_Sprinter_CargoCapacity / param_capacity_mod);
+		power:							Goninan_Sprinter_Power;
+		weight:							Goninan_Sprinter_Weight ton;
+
+//        variant_group: 					Item_Goninan_Sprinter_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Goninan_Sprinter_Liv0;
+        purchase: 						spriteset_Goninan_Sprinter_Liv0_purchase;
+        additional_text: 				string(STR_INFO_GONINAN_SPRINTER);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//ID
 const Goninan_HunterRailcar = 6160;
 //introduction_date
 const Goninan_HunterRailcar_IntroDate = date(2006, 1, 1);
@@ -3514,7 +3586,7 @@ item(FEAT_TRAINS, Item_Comeng_2000DDProposal_Liv0, Comeng_2000DDProposal_ID_Liv0
 }
 
 //ID
-const DEBSet_ID = 8120;
+const DEBSet_ID = 8140;
 //introduction_date
 const DEBSet_IntroDate = date(1951, 1, 1);
 //speed
@@ -3803,7 +3875,7 @@ item(FEAT_TRAINS, Item_DEBSet_Liv3, DEBSet_ID_Liv3) {
 }
 
 //ID
-const Comeng_1100Class_ID = 8180;
+const Comeng_1100Class_ID = 8240;
 //introduction_date
 const Comeng_1100Class_IntroDate = date(1961, 1, 1);
 //speed
@@ -4407,7 +4479,7 @@ item(FEAT_TRAINS, Item_Tulloch_DRC_Liv4_BG, Tulloch_DRC_ID_Liv4_BG) {
 }
 
 //ID
-const SilverFern_ID = 8240;
+const SilverFern_ID = 8300;
 //introduction_date
 const SilverFern_IntroDate = date(1972, 1, 1);
 //speed
@@ -4765,7 +4837,7 @@ item(FEAT_TRAINS, Item_SilverFern_Liv4, SilverFern_ID_Liv4) {
 }
 
 //ID
-const Comeng_ADPADQ_ID = 8320;
+const Comeng_ADPADQ_ID = 8340;
 //introduction_date
 const Comeng_ADPADQ_IntroDate = date(1987, 1, 1);
 //speed
@@ -4851,7 +4923,7 @@ item(FEAT_TRAINS, Item_Comeng_ADPADQ_Liv0, Comeng_ADPADQ_ID_Liv0) {
 }
 
 //ID
-const Comeng_HPTRegional_ID = 8300;
+const Comeng_HPTRegional_ID = 8360;
 //introduction_date
 const Comeng_HPTRegional_IntroDate = date(1988, 1, 1);
 //speed
@@ -7101,7 +7173,7 @@ item(FEAT_TRAINS, Item_TullochSuburbanEMU_Liv0, TullochSuburbanEMU_ID_Liv0) {
 }
 
 //ID
-const Harris_ID = 11200;
+const Harris_ID = 11220;
 //introduction_date
 const Harris_IntroDate = date(1956, 1, 1);
 //speed
@@ -7520,7 +7592,7 @@ item(FEAT_TRAINS, Item_SputnikSuburbanEMU_Liv0, SputnikSuburbanEMU_ID_Liv0) {
 }
 
 //ID
-const Hitachi_ID = 11300;
+const Hitachi_ID = 11320;
 //introduction_date
 const Hitachi_IntroDate = date(1972, 1, 1);
 //speed
@@ -8025,7 +8097,7 @@ item(FEAT_TRAINS, Item_AucklandART_Liv0, AucklandART_ID_Liv0) {
 }
 
 //ID
-const Comeng_SMU_ID = 11400;
+const Comeng_SMU_ID = 11420;
 //introduction_date
 const Comeng_SMU_IntroDate = date(1981, 1, 1);
 //speed
@@ -8384,7 +8456,7 @@ item(FEAT_TRAINS, Item_Comeng_SMU_Liv1, Comeng_SMU_ID_Liv1) {
 }
 
 //ID
-const NZ_GanzMavag_ID = 11420;
+const NZ_GanzMavag_ID = 11440;
 //introduction_date
 const NZ_GanzMavag_IntroDate = date(1982, 1, 1);
 //speed
@@ -8916,7 +8988,7 @@ item(FEAT_TRAINS, Item_NZ_GanzMavag_Liv2, NZ_GanzMavag_ID_Liv2) {
 }
 
 //ID
-const XTrapolis100_ID = 11500;
+const XTrapolis100_ID = 11580;
 //introduction_date
 const XTrapolis100_IntroDate = date(2002, 1, 1);
 //speed
@@ -9213,7 +9285,7 @@ item(FEAT_TRAINS, Item_XTrapolis100_Liv1, XTrapolis100_ID_Liv1) {
 }
 
 //ID
-const Matangi_ID = 11560;
+const Matangi_ID = 11640;
 //introduction_date
 const Matangi_IntroDate = date(2010, 1, 1);
 //speed
@@ -9415,7 +9487,7 @@ item(FEAT_TRAINS, Item_Matangi_Liv0, Matangi_ID_Liv0) {
 }
 
 //ID
-const CAF_CxK_ID = 11580;
+const CAF_CxK_ID = 11660;
 //introduction_date
 const CAF_CxK_IntroDate = date(2014, 1, 1);
 //speed
