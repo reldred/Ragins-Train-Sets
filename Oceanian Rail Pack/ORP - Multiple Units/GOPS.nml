@@ -5023,7 +5023,361 @@ item(FEAT_TRAINS, Item_Comeng_HPTRegional_Liv0, Comeng_HPTRegional_ID_Liv0) {
 }
 }
 
-sort(FEAT_TRAINS, [Item_Comeng_HPTRegional_Liv0, Item_Comeng_Prospector_Liv0]);
+//ID
+const ABB_Xplorer_ID = 8480;
+//introduction_date
+const ABB_Xplorer_IntroDate = date(1993, 1, 1);
+//speed
+const ABB_Xplorer_Speed = 160;
+//cost_factor
+const ABB_Xplorer_CostFactor = 33;
+//running_cost_factor
+const ABB_Xplorer_RunningCostFactor = 82;
+//Cargo Capacity
+const ABB_Xplorer_CargoCapacity = 94;
+//power
+const ABB_Xplorer_Power = 514;
+//weight
+const ABB_Xplorer_Weight = 57;
+//length
+const ABB_Xplorer_Length = 8;
+
+//ABB_Xplorer_Liv0
+spriteset(spriteset_ABB_Xplorer_Liv0_purchase,   "gfx/ABB_Xplorer_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_ABB_Xplorer_Liv0_lead,   "gfx/ABB_Xplorer_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_ABB_Xplorer_Liv0_Trailer,   "gfx/ABB_Xplorer_Liv0.png") {template_8(7, 69)}
+spriteset(spriteset_ABB_Xplorer_Liv0_Trailer_r,   "gfx/ABB_Xplorer_Liv0.png") {template_8_r(7, 69)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_ABB_Xplorer_Liv0_Trailer_Random){
+    1 : spriteset_ABB_Xplorer_Liv0_Trailer;
+    1 : spriteset_ABB_Xplorer_Liv0_Trailer_r;
+}
+
+const ABB_Xplorer_ID_Liv0 = (ABB_Xplorer_ID + Liv0_ID );
+
+item(FEAT_TRAINS, Item_ABB_Xplorer_Liv0, ABB_Xplorer_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_ABB_XPLORER);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              ABB_Xplorer_IntroDate;		
+		length:                         ABB_Xplorer_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							ABB_Xplorer_Speed km/h;
+		cost_factor:					(ABB_Xplorer_CostFactor * 2);
+		running_cost_factor:			(ABB_Xplorer_RunningCostFactor * 2);
+		cargo_capacity: 				(ABB_Xplorer_CargoCapacity / param_capacity_mod);
+		power:							(ABB_Xplorer_Power * 2);
+		weight:							ABB_Xplorer_Weight ton;
+
+//        variant_group: 					Item_ABB_Xplorer_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_ABB_Xplorer_Liv0_lead;
+        purchase: 						spriteset_ABB_Xplorer_Liv0_purchase;
+        additional_text: 				string(STR_INFO_ABB_XPLORER);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_ABB_Xplorer_Liv0_Trailer_Random ;
+        length: 						ABB_Xplorer_Length;
+        cargo_capacity:                 (ABB_Xplorer_CargoCapacity / param_capacity_mod);
+        power:                          ABB_Xplorer_Power;
+		weight:                        	ABB_Xplorer_Weight;
+		running_cost_factor:            ABB_Xplorer_RunningCostFactor;
+}
+}
+
+//ABB_Xplorer_Liv1
+spriteset(spriteset_ABB_Xplorer_Liv1_purchase,   "gfx/ABB_Xplorer_Liv1.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_ABB_Xplorer_Liv1_lead,   "gfx/ABB_Xplorer_Liv1.png") {template_8(7, 39)}
+spriteset(spriteset_ABB_Xplorer_Liv1_Trailer,   "gfx/ABB_Xplorer_Liv1.png") {template_8(7, 69)}
+spriteset(spriteset_ABB_Xplorer_Liv1_Trailer_r,   "gfx/ABB_Xplorer_Liv1.png") {template_8_r(7, 69)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_ABB_Xplorer_Liv1_Trailer_Random){
+    1 : spriteset_ABB_Xplorer_Liv1_Trailer;
+    1 : spriteset_ABB_Xplorer_Liv1_Trailer_r;
+}
+
+const ABB_Xplorer_ID_Liv1 = (ABB_Xplorer_ID + Liv1_ID );
+
+item(FEAT_TRAINS, Item_ABB_Xplorer_Liv1, ABB_Xplorer_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_ABB_XPLORER);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              ABB_Xplorer_IntroDate;		
+		length:                         ABB_Xplorer_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							ABB_Xplorer_Speed km/h;
+		cost_factor:					(ABB_Xplorer_CostFactor * 2);
+		running_cost_factor:			(ABB_Xplorer_RunningCostFactor * 2);
+		cargo_capacity: 				(ABB_Xplorer_CargoCapacity / param_capacity_mod);
+		power:							(ABB_Xplorer_Power * 2);
+		weight:							ABB_Xplorer_Weight ton;
+
+        variant_group: 					Item_ABB_Xplorer_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_ABB_Xplorer_Liv1_lead;
+        purchase: 						spriteset_ABB_Xplorer_Liv1_purchase;
+        additional_text: 				string(STR_INFO_ABB_XPLORER);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_ABB_Xplorer_Liv1_Trailer_Random ;
+        length: 						ABB_Xplorer_Length;
+        cargo_capacity:                 (ABB_Xplorer_CargoCapacity / param_capacity_mod);
+        power:                          ABB_Xplorer_Power;
+		weight:                        	ABB_Xplorer_Weight;
+		running_cost_factor:            ABB_Xplorer_RunningCostFactor;
+}
+}
+
+//ABB_Xplorer_Liv2
+spriteset(spriteset_ABB_Xplorer_Liv2_purchase,   "gfx/ABB_Xplorer_Liv2.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_ABB_Xplorer_Liv2_lead,   "gfx/ABB_Xplorer_Liv2.png") {template_8(7, 39)}
+spriteset(spriteset_ABB_Xplorer_Liv2_Trailer,   "gfx/ABB_Xplorer_Liv2.png") {template_8(7, 69)}
+spriteset(spriteset_ABB_Xplorer_Liv2_Trailer_r,   "gfx/ABB_Xplorer_Liv2.png") {template_8_r(7, 69)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_ABB_Xplorer_Liv2_Trailer_Random){
+    1 : spriteset_ABB_Xplorer_Liv2_Trailer;
+    1 : spriteset_ABB_Xplorer_Liv2_Trailer_r;
+}
+
+const ABB_Xplorer_ID_Liv2 = (ABB_Xplorer_ID + Liv2_ID );
+
+item(FEAT_TRAINS, Item_ABB_Xplorer_Liv2, ABB_Xplorer_ID_Liv2) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_ABB_XPLORER);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              ABB_Xplorer_IntroDate;		
+		length:                         ABB_Xplorer_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							ABB_Xplorer_Speed km/h;
+		cost_factor:					(ABB_Xplorer_CostFactor * 2);
+		running_cost_factor:			(ABB_Xplorer_RunningCostFactor * 2);
+		cargo_capacity: 				(ABB_Xplorer_CargoCapacity / param_capacity_mod);
+		power:							(ABB_Xplorer_Power * 2);
+		weight:							ABB_Xplorer_Weight ton;
+
+        variant_group: 					Item_ABB_Xplorer_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_ABB_Xplorer_Liv2_lead;
+        purchase: 						spriteset_ABB_Xplorer_Liv2_purchase;
+        additional_text: 				string(STR_INFO_ABB_XPLORER);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_ABB_Xplorer_Liv2_Trailer_Random ;
+        length: 						ABB_Xplorer_Length;
+        cargo_capacity:                 (ABB_Xplorer_CargoCapacity / param_capacity_mod);
+        power:                          ABB_Xplorer_Power;
+		weight:                        	ABB_Xplorer_Weight;
+		running_cost_factor:            ABB_Xplorer_RunningCostFactor;
+}
+}
+
+//ABB_Xplorer_Liv3
+spriteset(spriteset_ABB_Xplorer_Liv3_purchase,   "gfx/ABB_Xplorer_Liv3.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_ABB_Xplorer_Liv3_lead,   "gfx/ABB_Xplorer_Liv3.png") {template_8(7, 39)}
+spriteset(spriteset_ABB_Xplorer_Liv3_Trailer,   "gfx/ABB_Xplorer_Liv3.png") {template_8(7, 69)}
+spriteset(spriteset_ABB_Xplorer_Liv3_Trailer_r,   "gfx/ABB_Xplorer_Liv3.png") {template_8_r(7, 69)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_ABB_Xplorer_Liv3_Trailer_Random){
+    1 : spriteset_ABB_Xplorer_Liv3_Trailer;
+    1 : spriteset_ABB_Xplorer_Liv3_Trailer_r;
+}
+
+const ABB_Xplorer_ID_Liv3 = (ABB_Xplorer_ID + Liv3_ID );
+
+item(FEAT_TRAINS, Item_ABB_Xplorer_Liv3, ABB_Xplorer_ID_Liv3) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_ABB_XPLORER);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              ABB_Xplorer_IntroDate;		
+		length:                         ABB_Xplorer_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							ABB_Xplorer_Speed km/h;
+		cost_factor:					(ABB_Xplorer_CostFactor * 2);
+		running_cost_factor:			(ABB_Xplorer_RunningCostFactor * 2);
+		cargo_capacity: 				(ABB_Xplorer_CargoCapacity / param_capacity_mod);
+		power:							(ABB_Xplorer_Power * 2);
+		weight:							ABB_Xplorer_Weight ton;
+
+        variant_group: 					Item_ABB_Xplorer_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_ABB_Xplorer_Liv3_lead;
+        purchase: 						spriteset_ABB_Xplorer_Liv3_purchase;
+        additional_text: 				string(STR_INFO_ABB_XPLORER);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_ABB_Xplorer_Liv3_Trailer_Random ;
+        length: 						ABB_Xplorer_Length;
+        cargo_capacity:                 (ABB_Xplorer_CargoCapacity / param_capacity_mod);
+        power:                          ABB_Xplorer_Power;
+		weight:                        	ABB_Xplorer_Weight;
+		running_cost_factor:            ABB_Xplorer_RunningCostFactor;
+}
+}
+
+//ABB_Xplorer_Liv4
+spriteset(spriteset_ABB_Xplorer_Liv4_purchase,   "gfx/ABB_Xplorer_Liv4.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_ABB_Xplorer_Liv4_lead,   "gfx/ABB_Xplorer_Liv4.png") {template_8(7, 39)}
+spriteset(spriteset_ABB_Xplorer_Liv4_Trailer,   "gfx/ABB_Xplorer_Liv4.png") {template_8(7, 69)}
+spriteset(spriteset_ABB_Xplorer_Liv4_Trailer_r,   "gfx/ABB_Xplorer_Liv4.png") {template_8_r(7, 69)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_ABB_Xplorer_Liv4_Trailer_Random){
+    1 : spriteset_ABB_Xplorer_Liv4_Trailer;
+    1 : spriteset_ABB_Xplorer_Liv4_Trailer_r;
+}
+
+const ABB_Xplorer_ID_Liv4 = (ABB_Xplorer_ID + Liv4_ID );
+
+item(FEAT_TRAINS, Item_ABB_Xplorer_Liv4, ABB_Xplorer_ID_Liv4) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_ABB_XPLORER);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              ABB_Xplorer_IntroDate;		
+		length:                         ABB_Xplorer_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							ABB_Xplorer_Speed km/h;
+		cost_factor:					(ABB_Xplorer_CostFactor * 2);
+		running_cost_factor:			(ABB_Xplorer_RunningCostFactor * 2);
+		cargo_capacity: 				(ABB_Xplorer_CargoCapacity / param_capacity_mod);
+		power:							(ABB_Xplorer_Power * 2);
+		weight:							ABB_Xplorer_Weight ton;
+
+        variant_group: 					Item_ABB_Xplorer_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_ABB_Xplorer_Liv4_lead;
+        purchase: 						spriteset_ABB_Xplorer_Liv4_purchase;
+        additional_text: 				string(STR_INFO_ABB_XPLORER);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_ABB_Xplorer_Liv4_Trailer_Random ;
+        length: 						ABB_Xplorer_Length;
+        cargo_capacity:                 (ABB_Xplorer_CargoCapacity / param_capacity_mod);
+        power:                          ABB_Xplorer_Power;
+		weight:                        	ABB_Xplorer_Weight;
+		running_cost_factor:            ABB_Xplorer_RunningCostFactor;
+}
+}
+
+sort(FEAT_TRAINS, [Item_ABB_Xplorer_Liv0, Item_Comeng_Prospector_Liv0]);
 
 //ID
 const Comeng_Prospector_ID = 50;
