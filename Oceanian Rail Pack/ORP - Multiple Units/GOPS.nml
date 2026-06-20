@@ -8286,7 +8286,7 @@ item(FEAT_TRAINS, Item_Hitachi_Liv0, Hitachi_ID_Liv0) {
 }
 
 //ID
-const AucklandART_ID = 11320;
+const AucklandART_ID = 11340;
 //introduction_date
 const AucklandART_IntroDate = date(1974, 1, 1);
 //speed
@@ -8301,6 +8301,8 @@ const AucklandART_CargoCapacity = 110;
 const AucklandART_Power = 480; //MU power is for 2 individual vehicles
 //weight
 const AucklandART_Weight = 38;
+//length
+const AucklandART_Length = 8;
 
 //Pantographs
 spriteset(spriteset_AucklandART_Panto_Purchase,   "gfx/AucklandART_Pantographs.png") {template_purchase_88mu(7, 21)}
@@ -8377,7 +8379,7 @@ switch (FEAT_TRAINS, SELF, switch_AucklandART_Liv0_PantoCarStack, [
                 0:  spriteset_AucklandART_Liv0_Trailer;
                 switch_AucklandART_Liv0_PantoCarStack;                
             }
-    switch (FEAT_TRAINS, SELF, switch_AucklandART_Liv0_forwards_length, num_vehs_in_vehid_chain) {
+    switch (FEAT_TRAINS, SELF, switch_AucklandART_Liv0_midcars, num_vehs_in_vehid_chain) {
             0..1: switch_AucklandART_Liv0_forwards_length_large;
             2:  switch_AucklandART_Liv0_forwards_length_small;
             switch_AucklandART_Liv0_forwards_length_large;
@@ -8389,7 +8391,7 @@ switch(FEAT_TRAINS, SELF, switch_AucklandART_Liv0_panto_flipcheck, vehicle_is_fl
     return switch_AucklandART_Liv0_LeadStack;    //Flipped, no panto
 }
 
-switch(FEAT_TRAINS, SELF, switch_AucklandART_Liv0_frontcheck, position_in_vehid_chain){
+switch(FEAT_TRAINS, SELF, switch_AucklandART_Liv0_endcars, position_in_vehid_chain){
     0: spriteset_AucklandART_Liv0_lead; //We need a pantograph, guaranteed
     return switch_AucklandART_Liv0_panto_flipcheck; //More Checks
 }
@@ -8399,7 +8401,7 @@ const AucklandART_ID_Liv0 = (AucklandART_ID + Liv0_ID);
 item(FEAT_TRAINS, Item_AucklandART_Liv0, AucklandART_ID_Liv0) {
     property {
         sprite_id:                      SPRITE_ID_NEW_TRAIN;
-		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
 		track_type:                     NG_RAIL_OHLE_AC;
 		running_cost_base:              RUNNING_COST_ELECTRIC;
         engine_class:                   ENGINE_CLASS_ELECTRIC;
@@ -8422,7 +8424,7 @@ item(FEAT_TRAINS, Item_AucklandART_Liv0, AucklandART_ID_Liv0) {
 		tractive_effort_coefficient:	0.3;
 		
         introduction_date:              AucklandART_IntroDate;		
-		length:                         8;
+		length:                         AucklandART_Length;
 		
 		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							AucklandART_Speed km/h;
@@ -8436,18 +8438,18 @@ item(FEAT_TRAINS, Item_AucklandART_Liv0, AucklandART_ID_Liv0) {
 //        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
-        default: 						switch_AucklandART_Liv0_frontcheck;
+        default: 						switch_AucklandART_Liv0_endcars;
         purchase: 						switch_AucklandART_Liv0_PurchaseStack;
         additional_text: 				string(STR_INFO_AUCKLANDART);
     }
     livery_override (Item_MU_Trailer){
-        default:						switch_AucklandART_Liv0_forwards_length;
+        default:						switch_AucklandART_Liv0_midcars;
         length:							8;
         cargo_capacity:                 [AucklandART_CargoCapacity / param_capacity_mod];
         power:                          AucklandART_Power;
 		weight:                        	AucklandART_Weight;
 		running_cost_factor:            AucklandART_RunningCostFactor;
-    }
+}
 }
 
 //ID
