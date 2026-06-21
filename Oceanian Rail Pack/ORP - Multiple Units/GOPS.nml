@@ -8444,7 +8444,7 @@ item(FEAT_TRAINS, Item_AucklandART_Liv0, AucklandART_ID_Liv0) {
     }
     livery_override (Item_MU_Trailer){
         default:						switch_AucklandART_Liv0_midcars;
-        length:							8;
+        length:							AucklandART_Length;
         cargo_capacity:                 [AucklandART_CargoCapacity / param_capacity_mod];
         power:                          AucklandART_Power;
 		weight:                        	AucklandART_Weight;
@@ -8453,7 +8453,434 @@ item(FEAT_TRAINS, Item_AucklandART_Liv0, AucklandART_ID_Liv0) {
 }
 
 //ID
-const Comeng_SMU_ID = 11420;
+const Walkers_EMU_ID = 11420;
+//introduction_date
+const Walkers_EMU_IntroDate = date(1979, 1, 1);
+//speed
+const Walkers_EMU_Speed = 100;
+//cost_factor
+const Walkers_EMU_CostFactor = 23;
+//running_cost_factor
+const Walkers_EMU_RunningCostFactor = 60;
+//Cargo Capacity
+const Walkers_EMU_CargoCapacity = 112;
+//power
+const Walkers_EMU_Power = 483;
+//weight
+const Walkers_EMU_Weight = 39;
+//length
+const Walkers_EMU_Length = 8;
+
+//Pantographs
+spriteset(spriteset_Walkers_EMU_Panto_Purchase,   "gfx/Walkers_EMU_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Walkers_EMU_PantoDown,   "gfx/Walkers_EMU_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_Walkers_EMU_PantoDown_r,   "gfx/Walkers_EMU_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_Walkers_EMU_PantoUp,   "gfx/Walkers_EMU_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Walkers_EMU_PantoUp_r,   "gfx/Walkers_EMU_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_Walkers_EMU_Fw_railtype, tile_powers_railtype("BG_RAIL_OHLE_DC")) {
+ 0: spriteset_Walkers_EMU_PantoDown;
+ 1: spriteset_Walkers_EMU_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Walkers_EMU_Rw_railtype, tile_powers_railtype("BG_RAIL_OHLE_DC")) {
+ 0: spriteset_Walkers_EMU_PantoDown_r; //might need switching back to just panto down
+ 1: spriteset_Walkers_EMU_PantoUp_r;
+}
+
+//Walkers_EMU_Liv0
+spriteset(spriteset_Walkers_EMU_Liv0_purchase,   "gfx/Walkers_EMU_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Walkers_EMU_Liv0_lead,   "gfx/Walkers_EMU_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Walkers_EMU_Liv0_lead_r,   "gfx/Walkers_EMU_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_Walkers_EMU_Liv0_Trailer,   "gfx/Walkers_EMU_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv0_purchase;
+	1: spriteset_Walkers_EMU_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv0_lead;
+	1: switch_Walkers_EMU_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv0_Trailer;
+	1: switch_Walkers_EMU_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv0_Trailer;
+	1: switch_Walkers_EMU_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Walkers_EMU_Liv0_PantoCarStack;
+                switch_Walkers_EMU_Liv0_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Walkers_EMU_Liv0_pantos_large_forwards;
+                spriteset_Walkers_EMU_Liv0_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Walkers_EMU_Liv0_Trailer;
+                switch_Walkers_EMU_Liv0_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Walkers_EMU_Liv0_forwards_length_large;
+            2:  switch_Walkers_EMU_Liv0_forwards_length_small;
+            switch_Walkers_EMU_Liv0_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Walkers_EMU_Liv0_lead;        //Not flipped, give Panto
+    return switch_Walkers_EMU_Liv0_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv0_endcars, position_in_vehid_chain){
+    0: spriteset_Walkers_EMU_Liv0_lead; //We need a pantograph, guaranteed
+    return switch_Walkers_EMU_Liv0_panto_flipcheck; //More Checks
+}
+
+const Walkers_EMU_ID_Liv0 = (Walkers_EMU_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Walkers_EMU_Liv0, Walkers_EMU_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_WALKERS_EMU);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Walkers_EMU_IntroDate;		
+		length:                         Walkers_EMU_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Walkers_EMU_Speed km/h;
+		cost_factor:					(Walkers_EMU_CostFactor * 2);
+		running_cost_factor:			(Walkers_EMU_RunningCostFactor * 2);
+		cargo_capacity: 				(Walkers_EMU_CargoCapacity / param_capacity_mod);
+		power:							(Walkers_EMU_Power * 2);
+		weight:							Walkers_EMU_Weight ton;
+
+//        variant_group: 					Item_Walkers_EMU_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Walkers_EMU_Liv0_endcars;
+        purchase: 						switch_Walkers_EMU_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_WALKERS_EMU);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Walkers_EMU_Liv0_midcars;
+        length:							Walkers_EMU_Length;
+        cargo_capacity:                 [Walkers_EMU_CargoCapacity / param_capacity_mod];
+        power:                          Walkers_EMU_Power;
+		weight:                        	Walkers_EMU_Weight;
+		running_cost_factor:            Walkers_EMU_RunningCostFactor;
+}
+}
+
+//Walkers_EMU_Liv1
+spriteset(spriteset_Walkers_EMU_Liv1_purchase,   "gfx/Walkers_EMU_Liv1.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Walkers_EMU_Liv1_lead,   "gfx/Walkers_EMU_Liv1.png") {template_8(7, 39)}
+spriteset(spriteset_Walkers_EMU_Liv1_lead_r,   "gfx/Walkers_EMU_Liv1.png") {template_8_r(7, 39)}
+spriteset(spriteset_Walkers_EMU_Liv1_Trailer,   "gfx/Walkers_EMU_Liv1.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv1_purchase;
+	1: spriteset_Walkers_EMU_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv1_lead;
+	1: switch_Walkers_EMU_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv1_Trailer;
+	1: switch_Walkers_EMU_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv1_Trailer;
+	1: switch_Walkers_EMU_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Walkers_EMU_Liv1_PantoCarStack;
+                switch_Walkers_EMU_Liv1_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Walkers_EMU_Liv1_pantos_large_forwards;
+                spriteset_Walkers_EMU_Liv1_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Walkers_EMU_Liv1_Trailer;
+                switch_Walkers_EMU_Liv1_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Walkers_EMU_Liv1_forwards_length_large;
+            2:  switch_Walkers_EMU_Liv1_forwards_length_small;
+            switch_Walkers_EMU_Liv1_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Walkers_EMU_Liv1_lead;        //Not flipped, give Panto
+    return switch_Walkers_EMU_Liv1_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv1_endcars, position_in_vehid_chain){
+    0: spriteset_Walkers_EMU_Liv1_lead; //We need a pantograph, guaranteed
+    return switch_Walkers_EMU_Liv1_panto_flipcheck; //More Checks
+}
+
+const Walkers_EMU_ID_Liv1 = (Walkers_EMU_ID + Liv1_ID);
+
+item(FEAT_TRAINS, Item_Walkers_EMU_Liv1, Walkers_EMU_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_WALKERS_EMU);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Walkers_EMU_IntroDate;		
+		length:                         Walkers_EMU_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Walkers_EMU_Speed km/h;
+		cost_factor:					(Walkers_EMU_CostFactor * 2);
+		running_cost_factor:			(Walkers_EMU_RunningCostFactor * 2);
+		cargo_capacity: 				(Walkers_EMU_CargoCapacity / param_capacity_mod);
+		power:							(Walkers_EMU_Power * 2);
+		weight:							Walkers_EMU_Weight ton;
+
+        variant_group: 					Item_Walkers_EMU_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Walkers_EMU_Liv1_endcars;
+        purchase: 						switch_Walkers_EMU_Liv1_PurchaseStack;
+        additional_text: 				string(STR_INFO_WALKERS_EMU);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Walkers_EMU_Liv1_midcars;
+        length:							Walkers_EMU_Length;
+        cargo_capacity:                 [Walkers_EMU_CargoCapacity / param_capacity_mod];
+        power:                          Walkers_EMU_Power;
+		weight:                        	Walkers_EMU_Weight;
+		running_cost_factor:            Walkers_EMU_RunningCostFactor;
+}
+}
+
+//Walkers_EMU_Liv2
+spriteset(spriteset_Walkers_EMU_Liv2_purchase,   "gfx/Walkers_EMU_Liv2.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Walkers_EMU_Liv2_lead,   "gfx/Walkers_EMU_Liv2.png") {template_8(7, 39)}
+spriteset(spriteset_Walkers_EMU_Liv2_lead_r,   "gfx/Walkers_EMU_Liv2.png") {template_8_r(7, 39)}
+spriteset(spriteset_Walkers_EMU_Liv2_Trailer,   "gfx/Walkers_EMU_Liv2.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv2_purchase;
+	1: spriteset_Walkers_EMU_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv2_lead;
+	1: switch_Walkers_EMU_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv2_Trailer;
+	1: switch_Walkers_EMU_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_EMU_Liv2_Trailer;
+	1: switch_Walkers_EMU_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Walkers_EMU_Liv2_PantoCarStack;
+                switch_Walkers_EMU_Liv2_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Walkers_EMU_Liv2_pantos_large_forwards;
+                spriteset_Walkers_EMU_Liv2_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Walkers_EMU_Liv2_Trailer;
+                switch_Walkers_EMU_Liv2_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Walkers_EMU_Liv2_forwards_length_large;
+            2:  switch_Walkers_EMU_Liv2_forwards_length_small;
+            switch_Walkers_EMU_Liv2_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Walkers_EMU_Liv2_lead;        //Not flipped, give Panto
+    return switch_Walkers_EMU_Liv2_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Walkers_EMU_Liv2_endcars, position_in_vehid_chain){
+    0: spriteset_Walkers_EMU_Liv2_lead; //We need a pantograph, guaranteed
+    return switch_Walkers_EMU_Liv2_panto_flipcheck; //More Checks
+}
+
+const Walkers_EMU_ID_Liv2 = (Walkers_EMU_ID + Liv2_ID);
+
+item(FEAT_TRAINS, Item_Walkers_EMU_Liv2, Walkers_EMU_ID_Liv2) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_WALKERS_EMU);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Walkers_EMU_IntroDate;		
+		length:                         Walkers_EMU_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Walkers_EMU_Speed km/h;
+		cost_factor:					(Walkers_EMU_CostFactor * 2);
+		running_cost_factor:			(Walkers_EMU_RunningCostFactor * 2);
+		cargo_capacity: 				(Walkers_EMU_CargoCapacity / param_capacity_mod);
+		power:							(Walkers_EMU_Power * 2);
+		weight:							Walkers_EMU_Weight ton;
+
+        variant_group: 					Item_Walkers_EMU_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Walkers_EMU_Liv2_endcars;
+        purchase: 						switch_Walkers_EMU_Liv2_PurchaseStack;
+        additional_text: 				string(STR_INFO_WALKERS_EMU);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Walkers_EMU_Liv2_midcars;
+        length:							Walkers_EMU_Length;
+        cargo_capacity:                 [Walkers_EMU_CargoCapacity / param_capacity_mod];
+        power:                          Walkers_EMU_Power;
+		weight:                        	Walkers_EMU_Weight;
+		running_cost_factor:            Walkers_EMU_RunningCostFactor;
+}
+}
+
+//ID
+const Comeng_SMU_ID = 11440;
 //introduction_date
 const Comeng_SMU_IntroDate = date(1981, 1, 1);
 //speed
@@ -8812,7 +9239,7 @@ item(FEAT_TRAINS, Item_Comeng_SMU_Liv1, Comeng_SMU_ID_Liv1) {
 }
 
 //ID
-const NZ_GanzMavag_ID = 11440;
+const NZ_GanzMavag_ID = 11460;
 //introduction_date
 const NZ_GanzMavag_IntroDate = date(1982, 1, 1);
 //speed
@@ -9340,11 +9767,376 @@ item(FEAT_TRAINS, Item_NZ_GanzMavag_Liv2, NZ_GanzMavag_ID_Liv2) {
         power:                          NZ_GanzMavag_Power;
 		weight:                        	NZ_GanzMavag_Weight;
 		running_cost_factor:            NZ_GanzMavag_RunningCostFactor;
-    }
+}
 }
 
 //ID
-const XTrapolis100_ID = 11580;
+const GreyGhost_ID = 11480;
+//introduction_date
+const GreyGhost_IntroDate = date(1982, 1, 1);
+//speed
+const GreyGhost_Speed = 115;
+//cost_factor
+const GreyGhost_CostFactor = 24;
+//running_cost_factor
+const GreyGhost_RunningCostFactor = 64;
+//Cargo Capacity
+const GreyGhost_CargoCapacity = 113;
+//power
+const GreyGhost_Power = 200;
+//weight
+const GreyGhost_Weight = 45;
+//length
+const GreyGhost_Length = 8;
+
+//Pantographs
+spriteset(spriteset_GreyGhost_Panto_Purchase,   "gfx/GreyGhost_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_GreyGhost_PantoDown,   "gfx/GreyGhost_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_GreyGhost_PantoDown_r,   "gfx/GreyGhost_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_GreyGhost_PantoUp,   "gfx/GreyGhost_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_GreyGhost_PantoUp_r,   "gfx/GreyGhost_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_GreyGhost_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_GreyGhost_PantoDown;
+ 1: spriteset_GreyGhost_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_GreyGhost_Rw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_GreyGhost_PantoDown_r; //might need switching back to just panto down
+ 1: spriteset_GreyGhost_PantoUp_r;
+}
+
+//GreyGhost_Liv0
+spriteset(spriteset_GreyGhost_Liv0_purchase,   "gfx/GreyGhost_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_GreyGhost_Liv0_lead,   "gfx/GreyGhost_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_GreyGhost_Liv0_lead_r,   "gfx/GreyGhost_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_GreyGhost_Liv0_Trailer,   "gfx/GreyGhost_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv0_purchase;
+	1: spriteset_GreyGhost_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv0_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv0_lead;
+	1: switch_GreyGhost_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv0_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv0_lead;
+	1: switch_GreyGhost_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv0_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv0_lead;
+	1: switch_GreyGhost_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv0_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv0_lead_r;
+	1: switch_GreyGhost_Rw_railtype;
+}
+
+//Forward
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_GreyGhost_Liv0_NonControlMotorStack_r;
+    return spriteset_GreyGhost_Liv0_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_GreyGhost_Liv0_NonControlMotorStack;
+    return spriteset_GreyGhost_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_GreyGhost_Liv0_NonControlMotorStack_r;
+    return spriteset_GreyGhost_Liv0_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_GreyGhost_Liv0_NonControlMotorStack;
+    return spriteset_GreyGhost_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_GreyGhost_Liv0_pantocheck_at_1;
+    return sw_GreyGhost_Liv0_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_GreyGhost_Liv0_pantocheck_at_1;
+    return spriteset_GreyGhost_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_GreyGhost_Liv0_pantocheck_at_2;
+    return sw_GreyGhost_Liv0_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : spriteset_GreyGhost_Liv0_Trailer;
+    3 : sw_GreyGhost_Liv0_pantocheck_at_1;
+    4 : sw_GreyGhost_Liv0_sidecheck_4;
+    5 : sw_GreyGhost_Liv0_pantocheck_at_2;
+    6 .. 7 : sw_GreyGhost_Liv0_sidecheck_6;
+    return sw_GreyGhost_Liv0_sidecheck_other;
+}
+
+//endcars
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_panto_direction, vehicle_is_flipped){
+    0 : switch_GreyGhost_Liv0_MotorStack;        //Front panto
+    return switch_GreyGhost_Liv0_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_GreyGhost_Liv0_panto_direction;        //Not flipped, give Panto
+    return spriteset_GreyGhost_Liv0_lead;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv0_frontcheck, position_in_vehid_chain){
+    0: sw_GreyGhost_Liv0_panto_direction; //We need a pantograph, guaranteed
+    return sw_GreyGhost_Liv0_panto_flipcheck; //More Checks
+}
+
+const GreyGhost_ID_Liv0 = (GreyGhost_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_GreyGhost_Liv0, GreyGhost_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_PrototypeDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_GREYGHOST);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              GreyGhost_IntroDate;		
+		length:                         GreyGhost_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							GreyGhost_Speed km/h;
+		cost_factor:					(GreyGhost_CostFactor * 2);
+		running_cost_factor:			(GreyGhost_RunningCostFactor * 2);
+		cargo_capacity: 				(GreyGhost_CargoCapacity / param_capacity_mod);
+		power:							(GreyGhost_Power * 2);
+		weight:							GreyGhost_Weight ton;
+
+//        variant_group: 					Item_GreyGhost_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_GreyGhost_Liv0_frontcheck;
+        purchase: 						switch_GreyGhost_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_GREYGHOST);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						sw_GreyGhost_Liv0_lencheck ;
+        length:							GreyGhost_Length;
+        cargo_capacity:                 [GreyGhost_CargoCapacity / param_capacity_mod];
+        power:                          GreyGhost_Power;
+		weight:                        	GreyGhost_Weight;
+		running_cost_factor:            GreyGhost_RunningCostFactor;
+}
+}
+
+//GreyGhost_Liv1
+spriteset(spriteset_GreyGhost_Liv1_purchase,   "gfx/GreyGhost_Liv1.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_GreyGhost_Liv1_lead,   "gfx/GreyGhost_Liv1.png") {template_8(7, 39)}
+spriteset(spriteset_GreyGhost_Liv1_lead_r,   "gfx/GreyGhost_Liv1.png") {template_8_r(7, 39)}
+spriteset(spriteset_GreyGhost_Liv1_Trailer,   "gfx/GreyGhost_Liv1.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv1_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv1_purchase;
+	1: spriteset_GreyGhost_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv1_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv1_lead;
+	1: switch_GreyGhost_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv1_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv1_lead;
+	1: switch_GreyGhost_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv1_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv1_lead;
+	1: switch_GreyGhost_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_GreyGhost_Liv1_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_GreyGhost_Liv1_lead_r;
+	1: switch_GreyGhost_Rw_railtype;
+}
+
+//Forward
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_GreyGhost_Liv1_NonControlMotorStack_r;
+    return spriteset_GreyGhost_Liv1_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_GreyGhost_Liv1_NonControlMotorStack;
+    return spriteset_GreyGhost_Liv1_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_GreyGhost_Liv1_NonControlMotorStack_r;
+    return spriteset_GreyGhost_Liv1_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_GreyGhost_Liv1_NonControlMotorStack;
+    return spriteset_GreyGhost_Liv1_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_GreyGhost_Liv1_pantocheck_at_1;
+    return sw_GreyGhost_Liv1_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_GreyGhost_Liv1_pantocheck_at_1;
+    return spriteset_GreyGhost_Liv1_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_GreyGhost_Liv1_pantocheck_at_2;
+    return sw_GreyGhost_Liv1_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : spriteset_GreyGhost_Liv1_Trailer;
+    3 : sw_GreyGhost_Liv1_pantocheck_at_1;
+    4 : sw_GreyGhost_Liv1_sidecheck_4;
+    5 : sw_GreyGhost_Liv1_pantocheck_at_2;
+    6 .. 7 : sw_GreyGhost_Liv1_sidecheck_6;
+    return sw_GreyGhost_Liv1_sidecheck_other;
+}
+
+//endcars
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_panto_direction, vehicle_is_flipped){
+    0 : switch_GreyGhost_Liv1_MotorStack;        //Front panto
+    return switch_GreyGhost_Liv1_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_GreyGhost_Liv1_panto_direction;        //Not flipped, give Panto
+    return spriteset_GreyGhost_Liv1_lead;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_GreyGhost_Liv1_frontcheck, position_in_vehid_chain){
+    0: sw_GreyGhost_Liv1_panto_direction; //We need a pantograph, guaranteed
+    return sw_GreyGhost_Liv1_panto_flipcheck; //More Checks
+}
+
+const GreyGhost_ID_Liv1 = (GreyGhost_ID + Liv1_ID);
+
+item(FEAT_TRAINS, Item_GreyGhost_Liv1, GreyGhost_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_PrototypeDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_GREYGHOST);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              GreyGhost_IntroDate;		
+		length:                         GreyGhost_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							GreyGhost_Speed km/h;
+		cost_factor:					(GreyGhost_CostFactor * 2);
+		running_cost_factor:			(GreyGhost_RunningCostFactor * 2);
+		cargo_capacity: 				(GreyGhost_CargoCapacity / param_capacity_mod);
+		power:							(GreyGhost_Power * 2);
+		weight:							GreyGhost_Weight ton;
+
+        variant_group: 					Item_GreyGhost_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_GreyGhost_Liv1_frontcheck;
+        purchase: 						switch_GreyGhost_Liv1_PurchaseStack;
+        additional_text: 				string(STR_INFO_GREYGHOST);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						sw_GreyGhost_Liv1_lencheck ;
+        length:							GreyGhost_Length;
+        cargo_capacity:                 [GreyGhost_CargoCapacity / param_capacity_mod];
+        power:                          GreyGhost_Power;
+		weight:                        	GreyGhost_Weight;
+		running_cost_factor:            GreyGhost_RunningCostFactor;
+}
+}
+
+//ID
+const XTrapolis100_ID = 11600;
 //introduction_date
 const XTrapolis100_IntroDate = date(2002, 1, 1);
 //speed
@@ -9464,7 +10256,7 @@ item(FEAT_TRAINS, Item_XTrapolis100_Liv0, XTrapolis100_ID_Liv0) {
         ai_special_flag:                AI_FLAG_PASSENGER;
 		bitmask_vehicle_info:           0;
 	
-		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
 		refittable_cargo_classes:       CC_PASSENGERS;
 		default_cargo_type:				PASS;
 		cargo_allow_refit:              [PASS, TOUR];
@@ -9595,7 +10387,7 @@ item(FEAT_TRAINS, Item_XTrapolis100_Liv1, XTrapolis100_ID_Liv1) {
         ai_special_flag:                AI_FLAG_PASSENGER;
 		bitmask_vehicle_info:           0;
 	
-		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
 		refittable_cargo_classes:       CC_PASSENGERS;
 		default_cargo_type:				PASS;
 		cargo_allow_refit:              [PASS, TOUR];
@@ -9641,7 +10433,7 @@ item(FEAT_TRAINS, Item_XTrapolis100_Liv1, XTrapolis100_ID_Liv1) {
 }
 
 //ID
-const Matangi_ID = 11640;
+const Matangi_ID = 11660;
 //introduction_date
 const Matangi_IntroDate = date(2010, 1, 1);
 //speed
@@ -9843,7 +10635,7 @@ item(FEAT_TRAINS, Item_Matangi_Liv0, Matangi_ID_Liv0) {
 }
 
 //ID
-const CAF_CxK_ID = 11660;
+const CAF_CxK_ID = 11680;
 //introduction_date
 const CAF_CxK_IntroDate = date(2014, 1, 1);
 //speed

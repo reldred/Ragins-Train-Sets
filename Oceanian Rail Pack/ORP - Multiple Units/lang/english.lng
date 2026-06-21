@@ -157,60 +157,63 @@ STR_INFO_EXP_DMU_DTT:{BLACK}Role: {GOLD}Express Service{}{BLACK}Formation: {GOLD
 
 
 STR_NAME_TAIT:Tait Set (Single)
-STR_INFO_TAIT:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}VR Tait-Set EMUs {}{GOLD}Subscribe to Taitset on Youtube!
+STR_INFO_TAIT:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Single Car {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}VR Tait-Set EMUs. {}{GOLD}Subscribe to Taitset on Youtube.
 STR_NAME_TAIT_MU:Tait Set
-STR_INFO_TAIT_MU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}VR Tait-Set EMUs {}{GOLD}Subscribe to Taitset on Youtube!
+STR_INFO_TAIT_MU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}VR Tait-Set EMUs. {}{GOLD}Subscribe to Taitset on Youtube.
 
 STR_NAME_SSD_EMU_BRADFIELD:Bradfield Set
 STR_INFO_SSD_EMU_BRADFIELD:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {LTBLUE}Overhead Line
 
 STR_NAME_SYDNEYSTANDARDEMU:Standard EMU
-STR_INFO_SYDNEYSTANDARDEMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Sydney Standard EMUs
+STR_INFO_SYDNEYSTANDARDEMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Sydney Standard EMUs.
 
 STR_NAME_NZ_DMD:English Electric DM/D Class
-STR_INFO_NZ_DMD:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Wellington DM/D Class EMUs {}{GOLD}Good ol' Cyclops
+STR_INFO_NZ_DMD:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Wellington DM/D Class EMUs {}{GOLD}Good ol' Cyclops.
 
 STR_NAME_TULLOCHSUBURBANEMU:Tulloch Suburban EMU
-STR_INFO_TULLOCHSUBURBANEMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Tulloch Single-Deck EMUs
+STR_INFO_TULLOCHSUBURBANEMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Tulloch Single-Deck EMUs.
 
 STR_NAME_HARRIS:M&K Harris Set
-STR_INFO_HARRIS:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne Harris Trains
+STR_INFO_HARRIS:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne Harris Trains.
 
 STR_NAME_SPUTNIKSUBURBANEMU:Comeng Sputnik EMU
-STR_INFO_SPUTNIKSUBURBANEMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW Sputnik EMUs
+STR_INFO_SPUTNIKSUBURBANEMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW Sputnik EMUs.
 
 STR_NAME_SXEMU:Comeng SX EMU
 STR_INFO_SXEMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{GOLD}If only the Banana Benders put up the wires...
 
 STR_NAME_HITACHI:Comeng-M&K Hitachi EMU
-STR_INFO_HITACHI:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne Hitachi Trains {}{GOLD}Surprisingly, not built by Hitachi
+STR_INFO_HITACHI:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne Hitachi Trains. {}{GOLD}Surprisingly, not built by Hitachi.
 
 STR_NAME_AUCKLANDART:Auckland ART EMU
-STR_INFO_AUCKLANDART:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Proposed EMUs for Auckland ART Service
+STR_INFO_AUCKLANDART:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Proposed EMUs for Auckland ART Service.
 
 STR_NAME_SSD_EMU_AUPTMKI:Comeng AUPT Mk I
-STR_INFO_SSD_EMU_AUPTMKI:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{GOLD}The guy that designed these was a former spy!
+STR_INFO_SSD_EMU_AUPTMKI:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{GOLD}The guy that designed these was a former spy.
 
 STR_NAME_SSD_EMU_AUPTMKII:Comeng-Walkers AUPT Mk II
 STR_INFO_SSD_EMU_AUPTMKII:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line
 
-STR_NAME_SSD_EMU_QREMU:Walkers-ASEA EMU
-STR_INFO_SSD_EMU_QREMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}QR EMUs
+STR_NAME_WALKERS_EMU:Walkers-ASEA EMU
+STR_INFO_WALKERS_EMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}QR Suburban EMUs.
 
 STR_NAME_COMENG_SMU:Comeng EMU
-STR_INFO_COMENG_SMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne Comeng Trains
+STR_INFO_COMENG_SMU:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne Comeng Trains.
 
 STR_NAME_NZ_GANZMAVAG:Ganz-Mavag EMU
-STR_INFO_NZ_GANZMAVAG:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Wellington EM/ET Class EMUs
+STR_INFO_NZ_GANZMAVAG:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Wellington EM/ET Class EMUs.
+
+STR_NAME_GREYGHOST:Comeng-M&K Refurbished Harris "Grey Ghost"
+STR_INFO_GREYGHOST:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Prototype refurbish of Melbourne Harris Trains.
 
 STR_NAME_XTRAPOLIS100:Alstom X-Trapolis 100
-STR_INFO_XTRAPOLIS100:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne X'trapolis Trains {}{GOLD}Who needs suspension?
+STR_INFO_XTRAPOLIS100:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne X'trapolis Trains. {}{GOLD}Who needs suspension?.
 
 STR_NAME_MATANGI:Hyundai Rotem Matangi EMU
-STR_INFO_MATANGI:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Wellington FP/FT Class EMUs
+STR_INFO_MATANGI:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Wellington FP/FT Class EMUs.
 
 STR_NAME_CAF_CXK:CAF CxK Suburban EMU
-STR_INFO_CAF_CXK:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line  {}{BLACK}Based on: {GOLD}Auckland AM Class EMUs
+STR_INFO_CAF_CXK:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line  {}{BLACK}Based on: {GOLD}Auckland AM Class EMUs.
 
 
 
