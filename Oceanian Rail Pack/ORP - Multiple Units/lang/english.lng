@@ -213,13 +213,24 @@ STR_NAME_WALKERS_SMU200:Walkers-ABB Suburban Multiple Unit
 STR_INFO_WALKERS_SMU200:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}QR 200 & 220 Series suburban multiple units.
 
 STR_NAME_XTRAPOLIS100:Alstom X-Trapolis 100
-STR_INFO_XTRAPOLIS100:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne X'trapolis Trains. {}{GOLD}Who needs suspension?.
+STR_INFO_XTRAPOLIS100:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne X'trapolis Trains. {}{GOLD}Who needs suspension?.
+
+STR_NAME_SIEMENS_NEXAS:Siemens Nexas
+STR_INFO_SIEMENS_NEXAS:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne Nexas Trains. {}{GOLD}Who needs brakes?.
+
+STR_NAME_BOMBARDIER_BSERIES:Bombardier-Downer EDi Suburban Multiple Unit
+STR_INFO_BOMBARDIER_BSERIES:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Transperth B-Series & QR SMU260 Series.
 
 STR_NAME_MATANGI:Hyundai Rotem Matangi EMU
 STR_INFO_MATANGI:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Wellington FP/FT Class EMUs.
 
 STR_NAME_CAF_CXK:CAF CxK Suburban EMU
 STR_INFO_CAF_CXK:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line  {}{BLACK}Based on: {GOLD}Auckland AM Class EMUs.
+
+STR_NAME_BOMBARDIER_ACITY:Bombardier A-City Suburban Multiple Unit
+STR_INFO_BOMBARDIER_ACITY:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Adelaide Metro 4000 Class EMUs.
+STR_NAME_BOMBARDIER_ACITY_BG:Bombardier A-City Suburban Multiple Unit
+STR_INFO_BOMBARDIER_ACITY_BG:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Adelaide Metro 4000 Class EMUs.
 
 
 

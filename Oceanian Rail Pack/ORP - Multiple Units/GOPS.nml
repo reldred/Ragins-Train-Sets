@@ -137,6 +137,7 @@ railtypetable {
 	BG_RAIL_ONLY: [BAAN], 
 	BG_RAIL_OHLE_DC: [BADD, BAAE, SAAD, SAAE, ELRL], 
 	BG_RAIL_OHLE_AC: [BADA, BAAE, SAAA, SAAE, ELRL], 
+	BG_RAIL_OHLE_AC_ONLY: [BADA, BAAE], 
 	NG_RAIL: [NAAN, RAIL], 
 	NG_RAIL_ONLY: [NAAN], 
 	NG_RAIL_OHLE_DC: [NAAD, NAAE, SAAD, SAAE, ELRL], 
@@ -11022,8 +11023,1127 @@ item(FEAT_TRAINS, Item_XTrapolis100_Liv1, XTrapolis100_ID_Liv1) {
         power:                          XTrapolis100_Power;
 		weight:                        	XTrapolis100_Weight;
 		running_cost_factor:            XTrapolis100_RunningCostFactor;
+}
+}
 
+//ID
+const Siemens_Nexas_ID = 11620;
+//introduction_date
+const Siemens_Nexas_IntroDate = date(2003, 1, 1);
+//speed
+const Siemens_Nexas_Speed = 115;
+//cost_factor
+const Siemens_Nexas_CostFactor = 25;
+//running_cost_factor
+const Siemens_Nexas_RunningCostFactor = 66;
+//Cargo Capacity
+const Siemens_Nexas_CargoCapacity = 121;
+//power
+const Siemens_Nexas_Power = 906;
+//weight
+const Siemens_Nexas_Weight = 40;
+//length
+const Siemens_Nexas_Length = 8;
+
+//Pantographs
+spriteset(spriteset_Siemens_Nexas_Panto_Purchase,   "gfx/Siemens_Nexas_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Siemens_Nexas_PantoDown,   "gfx/Siemens_Nexas_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_Siemens_Nexas_PantoDown_r,   "gfx/Siemens_Nexas_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_Siemens_Nexas_PantoUp,   "gfx/Siemens_Nexas_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Siemens_Nexas_PantoUp_r,   "gfx/Siemens_Nexas_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_Siemens_Nexas_Fw_railtype, tile_powers_railtype("BG_RAIL_OHLE_DC")) {
+ 0: spriteset_Siemens_Nexas_PantoDown;
+ 1: spriteset_Siemens_Nexas_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Siemens_Nexas_Rw_railtype, tile_powers_railtype("BG_RAIL_OHLE_DC")) {
+ 0: spriteset_Siemens_Nexas_PantoDown_r;
+ 1: spriteset_Siemens_Nexas_PantoUp_r;
+}
+
+//Siemens_Nexas_Liv0
+spriteset(spriteset_Siemens_Nexas_Liv0_purchase,   "gfx/Siemens_Nexas_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Siemens_Nexas_Liv0_lead,   "gfx/Siemens_Nexas_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Siemens_Nexas_Liv0_lead_r,   "gfx/Siemens_Nexas_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_Siemens_Nexas_Liv0_Trailer,   "gfx/Siemens_Nexas_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv0_purchase;
+	1: spriteset_Siemens_Nexas_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv0_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv0_lead;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv0_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv0_lead;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv0_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv0_Trailer;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv0_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv0_Trailer;
+	1: switch_Siemens_Nexas_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Siemens_Nexas_Liv0_NonControlMotorStack_r;
+    return spriteset_Siemens_Nexas_Liv0_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Siemens_Nexas_Liv0_NonControlMotorStack;
+    return spriteset_Siemens_Nexas_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Siemens_Nexas_Liv0_NonControlMotorStack_r;
+    return spriteset_Siemens_Nexas_Liv0_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Siemens_Nexas_Liv0_NonControlMotorStack;
+    return spriteset_Siemens_Nexas_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv0_pantocheck_at_1;
+    return sw_Siemens_Nexas_Liv0_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv0_pantocheck_at_1;
+    return spriteset_Siemens_Nexas_Liv0_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv0_pantocheck_at_2;
+    return sw_Siemens_Nexas_Liv0_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : spriteset_Siemens_Nexas_Liv0_Trailer;
+    3 : sw_Siemens_Nexas_Liv0_pantocheck_at_1;
+    4 : sw_Siemens_Nexas_Liv0_sidecheck_4;
+    5 : sw_Siemens_Nexas_Liv0_pantocheck_at_2;
+    6 .. 7 : sw_Siemens_Nexas_Liv0_sidecheck_6;
+    return sw_Siemens_Nexas_Liv0_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_panto_direction, vehicle_is_flipped){
+    0 : switch_Siemens_Nexas_Liv0_MotorStack;        //Front panto
+    return switch_Siemens_Nexas_Liv0_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Siemens_Nexas_Liv0_panto_direction;        //Not flipped, give Panto
+    return spriteset_Siemens_Nexas_Liv0_lead;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv0_frontcheck, position_in_vehid_chain){
+    0: sw_Siemens_Nexas_Liv0_panto_direction; //We need a pantograph, guaranteed
+    return sw_Siemens_Nexas_Liv0_panto_flipcheck; //More Checks
+}
+
+const Siemens_Nexas_ID_Liv0 = (Siemens_Nexas_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Siemens_Nexas_Liv0, Siemens_Nexas_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_PrototypeDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_SIEMENS_NEXAS);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Siemens_Nexas_IntroDate;		
+		length:                         Siemens_Nexas_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Siemens_Nexas_Speed km/h;
+		cost_factor:					(Siemens_Nexas_CostFactor * 2);
+		running_cost_factor:			(Siemens_Nexas_RunningCostFactor * 2);
+		cargo_capacity: 				(Siemens_Nexas_CargoCapacity / param_capacity_mod);
+		power:							(Siemens_Nexas_Power * 2);
+		weight:							Siemens_Nexas_Weight ton;
+
+//        variant_group: 					Item_Siemens_Nexas_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
+    graphics {
+        default: 						sw_Siemens_Nexas_Liv0_frontcheck;
+        purchase: 						switch_Siemens_Nexas_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_SIEMENS_NEXAS);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						sw_Siemens_Nexas_Liv0_lencheck ;
+        length:							Siemens_Nexas_Length;
+        cargo_capacity:                 [Siemens_Nexas_CargoCapacity / param_capacity_mod];
+        power:                          Siemens_Nexas_Power;
+		weight:                        	Siemens_Nexas_Weight;
+		running_cost_factor:            Siemens_Nexas_RunningCostFactor;
+}
+}
+
+//Siemens_Nexas_Liv1
+spriteset(spriteset_Siemens_Nexas_Liv1_purchase,   "gfx/Siemens_Nexas_Liv1.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Siemens_Nexas_Liv1_lead,   "gfx/Siemens_Nexas_Liv1.png") {template_8(7, 39)}
+spriteset(spriteset_Siemens_Nexas_Liv1_lead_r,   "gfx/Siemens_Nexas_Liv1.png") {template_8_r(7, 39)}
+spriteset(spriteset_Siemens_Nexas_Liv1_Trailer,   "gfx/Siemens_Nexas_Liv1.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv1_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv1_purchase;
+	1: spriteset_Siemens_Nexas_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv1_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv1_lead;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv1_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv1_lead;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv1_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv1_Trailer;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv1_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv1_Trailer;
+	1: switch_Siemens_Nexas_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Siemens_Nexas_Liv1_NonControlMotorStack_r;
+    return spriteset_Siemens_Nexas_Liv1_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Siemens_Nexas_Liv1_NonControlMotorStack;
+    return spriteset_Siemens_Nexas_Liv1_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Siemens_Nexas_Liv1_NonControlMotorStack_r;
+    return spriteset_Siemens_Nexas_Liv1_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Siemens_Nexas_Liv1_NonControlMotorStack;
+    return spriteset_Siemens_Nexas_Liv1_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv1_pantocheck_at_1;
+    return sw_Siemens_Nexas_Liv1_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv1_pantocheck_at_1;
+    return spriteset_Siemens_Nexas_Liv1_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv1_pantocheck_at_2;
+    return sw_Siemens_Nexas_Liv1_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : spriteset_Siemens_Nexas_Liv1_Trailer;
+    3 : sw_Siemens_Nexas_Liv1_pantocheck_at_1;
+    4 : sw_Siemens_Nexas_Liv1_sidecheck_4;
+    5 : sw_Siemens_Nexas_Liv1_pantocheck_at_2;
+    6 .. 7 : sw_Siemens_Nexas_Liv1_sidecheck_6;
+    return sw_Siemens_Nexas_Liv1_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_panto_direction, vehicle_is_flipped){
+    0 : switch_Siemens_Nexas_Liv1_MotorStack;        //Front panto
+    return switch_Siemens_Nexas_Liv1_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Siemens_Nexas_Liv1_panto_direction;        //Not flipped, give Panto
+    return spriteset_Siemens_Nexas_Liv1_lead;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv1_frontcheck, position_in_vehid_chain){
+    0: sw_Siemens_Nexas_Liv1_panto_direction; //We need a pantograph, guaranteed
+    return sw_Siemens_Nexas_Liv1_panto_flipcheck; //More Checks
+}
+
+const Siemens_Nexas_ID_Liv1 = (Siemens_Nexas_ID + Liv1_ID);
+
+item(FEAT_TRAINS, Item_Siemens_Nexas_Liv1, Siemens_Nexas_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_PrototypeDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_SIEMENS_NEXAS);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Siemens_Nexas_IntroDate;		
+		length:                         Siemens_Nexas_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Siemens_Nexas_Speed km/h;
+		cost_factor:					(Siemens_Nexas_CostFactor * 2);
+		running_cost_factor:			(Siemens_Nexas_RunningCostFactor * 2);
+		cargo_capacity: 				(Siemens_Nexas_CargoCapacity / param_capacity_mod);
+		power:							(Siemens_Nexas_Power * 2);
+		weight:							Siemens_Nexas_Weight ton;
+
+        variant_group: 					Item_Siemens_Nexas_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Siemens_Nexas_Liv1_frontcheck;
+        purchase: 						switch_Siemens_Nexas_Liv1_PurchaseStack;
+        additional_text: 				string(STR_INFO_SIEMENS_NEXAS);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						sw_Siemens_Nexas_Liv1_lencheck ;
+        length:							Siemens_Nexas_Length;
+        cargo_capacity:                 [Siemens_Nexas_CargoCapacity / param_capacity_mod];
+        power:                          Siemens_Nexas_Power;
+		weight:                        	Siemens_Nexas_Weight;
+		running_cost_factor:            Siemens_Nexas_RunningCostFactor;
+}
+}
+
+//Siemens_Nexas_Liv2
+spriteset(spriteset_Siemens_Nexas_Liv2_purchase,   "gfx/Siemens_Nexas_Liv2.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Siemens_Nexas_Liv2_lead,   "gfx/Siemens_Nexas_Liv2.png") {template_8(7, 39)}
+spriteset(spriteset_Siemens_Nexas_Liv2_lead_r,   "gfx/Siemens_Nexas_Liv2.png") {template_8_r(7, 39)}
+spriteset(spriteset_Siemens_Nexas_Liv2_Trailer,   "gfx/Siemens_Nexas_Liv2.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv2_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv2_purchase;
+	1: spriteset_Siemens_Nexas_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv2_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv2_lead;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv2_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv2_lead;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv2_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv2_Trailer;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv2_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv2_Trailer;
+	1: switch_Siemens_Nexas_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Siemens_Nexas_Liv2_NonControlMotorStack_r;
+    return spriteset_Siemens_Nexas_Liv2_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Siemens_Nexas_Liv2_NonControlMotorStack;
+    return spriteset_Siemens_Nexas_Liv2_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Siemens_Nexas_Liv2_NonControlMotorStack_r;
+    return spriteset_Siemens_Nexas_Liv2_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Siemens_Nexas_Liv2_NonControlMotorStack;
+    return spriteset_Siemens_Nexas_Liv2_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv2_pantocheck_at_1;
+    return sw_Siemens_Nexas_Liv2_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv2_pantocheck_at_1;
+    return spriteset_Siemens_Nexas_Liv2_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv2_pantocheck_at_2;
+    return sw_Siemens_Nexas_Liv2_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : spriteset_Siemens_Nexas_Liv2_Trailer;
+    3 : sw_Siemens_Nexas_Liv2_pantocheck_at_1;
+    4 : sw_Siemens_Nexas_Liv2_sidecheck_4;
+    5 : sw_Siemens_Nexas_Liv2_pantocheck_at_2;
+    6 .. 7 : sw_Siemens_Nexas_Liv2_sidecheck_6;
+    return sw_Siemens_Nexas_Liv2_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_panto_direction, vehicle_is_flipped){
+    0 : switch_Siemens_Nexas_Liv2_MotorStack;        //Front panto
+    return switch_Siemens_Nexas_Liv2_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Siemens_Nexas_Liv2_panto_direction;        //Not flipped, give Panto
+    return spriteset_Siemens_Nexas_Liv2_lead;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv2_frontcheck, position_in_vehid_chain){
+    0: sw_Siemens_Nexas_Liv2_panto_direction; //We need a pantograph, guaranteed
+    return sw_Siemens_Nexas_Liv2_panto_flipcheck; //More Checks
+}
+
+const Siemens_Nexas_ID_Liv2 = (Siemens_Nexas_ID + Liv2_ID);
+
+item(FEAT_TRAINS, Item_Siemens_Nexas_Liv2, Siemens_Nexas_ID_Liv2) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_PrototypeDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_SIEMENS_NEXAS);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Siemens_Nexas_IntroDate;		
+		length:                         Siemens_Nexas_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Siemens_Nexas_Speed km/h;
+		cost_factor:					(Siemens_Nexas_CostFactor * 2);
+		running_cost_factor:			(Siemens_Nexas_RunningCostFactor * 2);
+		cargo_capacity: 				(Siemens_Nexas_CargoCapacity / param_capacity_mod);
+		power:							(Siemens_Nexas_Power * 2);
+		weight:							Siemens_Nexas_Weight ton;
+
+        variant_group: 					Item_Siemens_Nexas_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Siemens_Nexas_Liv2_frontcheck;
+        purchase: 						switch_Siemens_Nexas_Liv2_PurchaseStack;
+        additional_text: 				string(STR_INFO_SIEMENS_NEXAS);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						sw_Siemens_Nexas_Liv2_lencheck ;
+        length:							Siemens_Nexas_Length;
+        cargo_capacity:                 [Siemens_Nexas_CargoCapacity / param_capacity_mod];
+        power:                          Siemens_Nexas_Power;
+		weight:                        	Siemens_Nexas_Weight;
+		running_cost_factor:            Siemens_Nexas_RunningCostFactor;
+}
+}
+
+//Siemens_Nexas_Liv3
+spriteset(spriteset_Siemens_Nexas_Liv3_purchase,   "gfx/Siemens_Nexas_Liv3.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Siemens_Nexas_Liv3_lead,   "gfx/Siemens_Nexas_Liv3.png") {template_8(7, 39)}
+spriteset(spriteset_Siemens_Nexas_Liv3_lead_r,   "gfx/Siemens_Nexas_Liv3.png") {template_8_r(7, 39)}
+spriteset(spriteset_Siemens_Nexas_Liv3_Trailer,   "gfx/Siemens_Nexas_Liv3.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv3_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv3_purchase;
+	1: spriteset_Siemens_Nexas_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv3_MotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv3_lead;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+//C Rear
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv3_MotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv3_lead;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+
+//N Lead
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv3_NonControlMotorStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv3_Trailer;
+	1: switch_Siemens_Nexas_Fw_railtype;
+}
+//N Rear
+switch (FEAT_TRAINS, SELF, switch_Siemens_Nexas_Liv3_NonControlMotorStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_Nexas_Liv3_Trailer;
+	1: switch_Siemens_Nexas_Rw_railtype;
+}
+
+//Midcars
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_pantocheck_at_2, position_in_vehid_chain % 3){
+    2 : switch_Siemens_Nexas_Liv3_NonControlMotorStack_r;
+    return spriteset_Siemens_Nexas_Liv3_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_pantocheck_at_2r, position_in_vehid_chain_from_end % 3){
+    2 : switch_Siemens_Nexas_Liv3_NonControlMotorStack;
+    return spriteset_Siemens_Nexas_Liv3_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_pantocheck_at_1, position_in_vehid_chain % 2){
+    1 : switch_Siemens_Nexas_Liv3_NonControlMotorStack_r;
+    return spriteset_Siemens_Nexas_Liv3_Trailer;
+}
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_pantocheck_at_1r, position_in_vehid_chain_from_end % 2){
+    1 : switch_Siemens_Nexas_Liv3_NonControlMotorStack;
+    return spriteset_Siemens_Nexas_Liv3_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_sidecheck_other, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv3_pantocheck_at_1;
+    return sw_Siemens_Nexas_Liv3_pantocheck_at_1r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_sidecheck_4, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv3_pantocheck_at_1;
+    return spriteset_Siemens_Nexas_Liv3_Trailer;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_sidecheck_6, num_vehs_in_vehid_chain/2 > position_in_vehid_chain ) {
+    1 : sw_Siemens_Nexas_Liv3_pantocheck_at_2;
+    return sw_Siemens_Nexas_Liv3_pantocheck_at_2r;
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_lencheck, num_vehs_in_vehid_chain ) {
+    0 .. 2 : spriteset_Siemens_Nexas_Liv3_Trailer;
+    3 : sw_Siemens_Nexas_Liv3_pantocheck_at_1;
+    4 : sw_Siemens_Nexas_Liv3_sidecheck_4;
+    5 : sw_Siemens_Nexas_Liv3_pantocheck_at_2;
+    6 .. 7 : sw_Siemens_Nexas_Liv3_sidecheck_6;
+    return sw_Siemens_Nexas_Liv3_sidecheck_other;
+}
+
+//Endcars
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_panto_direction, vehicle_is_flipped){
+    0 : switch_Siemens_Nexas_Liv3_MotorStack;        //Front panto
+    return switch_Siemens_Nexas_Liv3_MotorStack_r;    //Rear panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_panto_flipcheck, vehicle_is_flipped){
+    0 : sw_Siemens_Nexas_Liv3_panto_direction;        //Not flipped, give Panto
+    return spriteset_Siemens_Nexas_Liv3_lead;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, sw_Siemens_Nexas_Liv3_frontcheck, position_in_vehid_chain){
+    0: sw_Siemens_Nexas_Liv3_panto_direction; //We need a pantograph, guaranteed
+    return sw_Siemens_Nexas_Liv3_panto_flipcheck; //More Checks
+}
+
+const Siemens_Nexas_ID_Liv3 = (Siemens_Nexas_ID + Liv3_ID);
+
+item(FEAT_TRAINS, Item_Siemens_Nexas_Liv3, Siemens_Nexas_ID_Liv3) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_PrototypeDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_SIEMENS_NEXAS);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Siemens_Nexas_IntroDate;		
+		length:                         Siemens_Nexas_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Siemens_Nexas_Speed km/h;
+		cost_factor:					(Siemens_Nexas_CostFactor * 2);
+		running_cost_factor:			(Siemens_Nexas_RunningCostFactor * 2);
+		cargo_capacity: 				(Siemens_Nexas_CargoCapacity / param_capacity_mod);
+		power:							(Siemens_Nexas_Power * 2);
+		weight:							Siemens_Nexas_Weight ton;
+
+        variant_group: 					Item_Siemens_Nexas_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						sw_Siemens_Nexas_Liv3_frontcheck;
+        purchase: 						switch_Siemens_Nexas_Liv3_PurchaseStack;
+        additional_text: 				string(STR_INFO_SIEMENS_NEXAS);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						sw_Siemens_Nexas_Liv3_lencheck ;
+        length:							Siemens_Nexas_Length;
+        cargo_capacity:                 [Siemens_Nexas_CargoCapacity / param_capacity_mod];
+        power:                          Siemens_Nexas_Power;
+		weight:                        	Siemens_Nexas_Weight;
+		running_cost_factor:            Siemens_Nexas_RunningCostFactor;
+}
+}
+
+//ID
+const Bombardier_BSeries_ID = 11640;
+//introduction_date
+const Bombardier_BSeries_IntroDate = date(2004, 1, 1);
+//speed
+const Bombardier_BSeries_Speed = 130;
+//cost_factor
+const Bombardier_BSeries_CostFactor = 25;
+//running_cost_factor
+const Bombardier_BSeries_RunningCostFactor = 66;
+//Cargo Capacity
+const Bombardier_BSeries_CargoCapacity = 122;
+//power
+const Bombardier_BSeries_Power = 643;
+//weight
+const Bombardier_BSeries_Weight = 40;
+//length
+const Bombardier_BSeries_Length = 8;
+
+//Pantographs
+spriteset(spriteset_Bombardier_BSeries_Panto_Purchase,   "gfx/Bombardier_BSeries_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_BSeries_PantoDown,   "gfx/Bombardier_BSeries_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_BSeries_PantoDown_r,   "gfx/Bombardier_BSeries_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_Bombardier_BSeries_PantoUp,   "gfx/Bombardier_BSeries_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Bombardier_BSeries_PantoUp_r,   "gfx/Bombardier_BSeries_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Fw_railtype, tile_powers_railtype("NG_RAIL_OHLE_AC")) {
+ 0: spriteset_Bombardier_BSeries_PantoDown;
+ 1: spriteset_Bombardier_BSeries_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Rw_railtype, tile_powers_railtype("NG_RAIL_OHLE_AC")) {
+ 0: spriteset_Bombardier_BSeries_PantoDown_r; //might need switching back to just panto down
+ 1: spriteset_Bombardier_BSeries_PantoUp_r;
+}
+
+//Bombardier_BSeries_Liv0
+spriteset(spriteset_Bombardier_BSeries_Liv0_purchase,   "gfx/Bombardier_BSeries_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_BSeries_Liv0_lead,   "gfx/Bombardier_BSeries_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_BSeries_Liv0_lead_r,   "gfx/Bombardier_BSeries_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_Bombardier_BSeries_Liv0_Trailer,   "gfx/Bombardier_BSeries_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv0_purchase;
+	1: spriteset_Bombardier_BSeries_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv0_lead;
+	1: switch_Bombardier_BSeries_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv0_Trailer;
+	1: switch_Bombardier_BSeries_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv0_Trailer;
+	1: switch_Bombardier_BSeries_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Bombardier_BSeries_Liv0_PantoCarStack;
+                switch_Bombardier_BSeries_Liv0_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Bombardier_BSeries_Liv0_pantos_large_forwards;
+                spriteset_Bombardier_BSeries_Liv0_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Bombardier_BSeries_Liv0_Trailer;
+                switch_Bombardier_BSeries_Liv0_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Bombardier_BSeries_Liv0_forwards_length_large;
+            2:  switch_Bombardier_BSeries_Liv0_forwards_length_small;
+            switch_Bombardier_BSeries_Liv0_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Bombardier_BSeries_Liv0_lead;        //Not flipped, give Panto
+    return switch_Bombardier_BSeries_Liv0_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv0_endcars, position_in_vehid_chain){
+    0: spriteset_Bombardier_BSeries_Liv0_lead; //We need a pantograph, guaranteed
+    return switch_Bombardier_BSeries_Liv0_panto_flipcheck; //More Checks
+}
+
+const Bombardier_BSeries_ID_Liv0 = (Bombardier_BSeries_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Bombardier_BSeries_Liv0, Bombardier_BSeries_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_BOMBARDIER_BSERIES);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Bombardier_BSeries_IntroDate;		
+		length:                         Bombardier_BSeries_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Bombardier_BSeries_Speed km/h;
+		cost_factor:					(Bombardier_BSeries_CostFactor * 2);
+		running_cost_factor:			(Bombardier_BSeries_RunningCostFactor * 2);
+		cargo_capacity: 				(Bombardier_BSeries_CargoCapacity / param_capacity_mod);
+		power:							(Bombardier_BSeries_Power * 2);
+		weight:							Bombardier_BSeries_Weight ton;
+
+//        variant_group: 					Item_Bombardier_BSeries_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Bombardier_BSeries_Liv0_endcars;
+        purchase: 						switch_Bombardier_BSeries_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_BOMBARDIER_BSERIES);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Bombardier_BSeries_Liv0_midcars;
+        length:							Bombardier_BSeries_Length;
+        cargo_capacity:                 [Bombardier_BSeries_CargoCapacity / param_capacity_mod];
+        power:                          Bombardier_BSeries_Power;
+		weight:                        	Bombardier_BSeries_Weight;
+		running_cost_factor:            Bombardier_BSeries_RunningCostFactor;
+}
+}
+
+//Bombardier_BSeries_Liv1
+spriteset(spriteset_Bombardier_BSeries_Liv1_purchase,   "gfx/Bombardier_BSeries_Liv1.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_BSeries_Liv1_lead,   "gfx/Bombardier_BSeries_Liv1.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_BSeries_Liv1_lead_r,   "gfx/Bombardier_BSeries_Liv1.png") {template_8_r(7, 39)}
+spriteset(spriteset_Bombardier_BSeries_Liv1_Trailer,   "gfx/Bombardier_BSeries_Liv1.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv1_purchase;
+	1: spriteset_Bombardier_BSeries_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv1_lead;
+	1: switch_Bombardier_BSeries_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv1_Trailer;
+	1: switch_Bombardier_BSeries_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv1_Trailer;
+	1: switch_Bombardier_BSeries_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Bombardier_BSeries_Liv1_PantoCarStack;
+                switch_Bombardier_BSeries_Liv1_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Bombardier_BSeries_Liv1_pantos_large_forwards;
+                spriteset_Bombardier_BSeries_Liv1_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Bombardier_BSeries_Liv1_Trailer;
+                switch_Bombardier_BSeries_Liv1_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Bombardier_BSeries_Liv1_forwards_length_large;
+            2:  switch_Bombardier_BSeries_Liv1_forwards_length_small;
+            switch_Bombardier_BSeries_Liv1_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Bombardier_BSeries_Liv1_lead;        //Not flipped, give Panto
+    return switch_Bombardier_BSeries_Liv1_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv1_endcars, position_in_vehid_chain){
+    0: spriteset_Bombardier_BSeries_Liv1_lead; //We need a pantograph, guaranteed
+    return switch_Bombardier_BSeries_Liv1_panto_flipcheck; //More Checks
+}
+
+const Bombardier_BSeries_ID_Liv1 = (Bombardier_BSeries_ID + Liv1_ID);
+
+item(FEAT_TRAINS, Item_Bombardier_BSeries_Liv1, Bombardier_BSeries_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_BOMBARDIER_BSERIES);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Bombardier_BSeries_IntroDate;		
+		length:                         Bombardier_BSeries_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Bombardier_BSeries_Speed km/h;
+		cost_factor:					(Bombardier_BSeries_CostFactor * 2);
+		running_cost_factor:			(Bombardier_BSeries_RunningCostFactor * 2);
+		cargo_capacity: 				(Bombardier_BSeries_CargoCapacity / param_capacity_mod);
+		power:							(Bombardier_BSeries_Power * 2);
+		weight:							Bombardier_BSeries_Weight ton;
+
+        variant_group: 					Item_Bombardier_BSeries_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Bombardier_BSeries_Liv1_endcars;
+        purchase: 						switch_Bombardier_BSeries_Liv1_PurchaseStack;
+        additional_text: 				string(STR_INFO_BOMBARDIER_BSERIES);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Bombardier_BSeries_Liv1_midcars;
+        length:							Bombardier_BSeries_Length;
+        cargo_capacity:                 [Bombardier_BSeries_CargoCapacity / param_capacity_mod];
+        power:                          Bombardier_BSeries_Power;
+		weight:                        	Bombardier_BSeries_Weight;
+		running_cost_factor:            Bombardier_BSeries_RunningCostFactor;
+}
+}
+
+//Bombardier_BSeries_Liv2
+spriteset(spriteset_Bombardier_BSeries_Liv2_purchase,   "gfx/Bombardier_BSeries_Liv2.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_BSeries_Liv2_lead,   "gfx/Bombardier_BSeries_Liv2.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_BSeries_Liv2_lead_r,   "gfx/Bombardier_BSeries_Liv2.png") {template_8_r(7, 39)}
+spriteset(spriteset_Bombardier_BSeries_Liv2_Trailer,   "gfx/Bombardier_BSeries_Liv2.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv2_purchase;
+	1: spriteset_Bombardier_BSeries_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv2_lead;
+	1: switch_Bombardier_BSeries_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv2_Trailer;
+	1: switch_Bombardier_BSeries_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_BSeries_Liv2_Trailer;
+	1: switch_Bombardier_BSeries_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Bombardier_BSeries_Liv2_PantoCarStack;
+                switch_Bombardier_BSeries_Liv2_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Bombardier_BSeries_Liv2_pantos_large_forwards;
+                spriteset_Bombardier_BSeries_Liv2_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Bombardier_BSeries_Liv2_Trailer;
+                switch_Bombardier_BSeries_Liv2_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Bombardier_BSeries_Liv2_forwards_length_large;
+            2:  switch_Bombardier_BSeries_Liv2_forwards_length_small;
+            switch_Bombardier_BSeries_Liv2_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Bombardier_BSeries_Liv2_lead;        //Not flipped, give Panto
+    return switch_Bombardier_BSeries_Liv2_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_BSeries_Liv2_endcars, position_in_vehid_chain){
+    0: spriteset_Bombardier_BSeries_Liv2_lead; //We need a pantograph, guaranteed
+    return switch_Bombardier_BSeries_Liv2_panto_flipcheck; //More Checks
+}
+
+const Bombardier_BSeries_ID_Liv2 = (Bombardier_BSeries_ID + Liv2_ID);
+
+item(FEAT_TRAINS, Item_Bombardier_BSeries_Liv2, Bombardier_BSeries_ID_Liv2) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_BOMBARDIER_BSERIES);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Bombardier_BSeries_IntroDate;		
+		length:                         Bombardier_BSeries_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Bombardier_BSeries_Speed km/h;
+		cost_factor:					(Bombardier_BSeries_CostFactor * 2);
+		running_cost_factor:			(Bombardier_BSeries_RunningCostFactor * 2);
+		cargo_capacity: 				(Bombardier_BSeries_CargoCapacity / param_capacity_mod);
+		power:							(Bombardier_BSeries_Power * 2);
+		weight:							Bombardier_BSeries_Weight ton;
+
+        variant_group: 					Item_Bombardier_BSeries_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Bombardier_BSeries_Liv2_endcars;
+        purchase: 						switch_Bombardier_BSeries_Liv2_PurchaseStack;
+        additional_text: 				string(STR_INFO_BOMBARDIER_BSERIES);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Bombardier_BSeries_Liv2_midcars;
+        length:							Bombardier_BSeries_Length;
+        cargo_capacity:                 [Bombardier_BSeries_CargoCapacity / param_capacity_mod];
+        power:                          Bombardier_BSeries_Power;
+		weight:                        	Bombardier_BSeries_Weight;
+		running_cost_factor:            Bombardier_BSeries_RunningCostFactor;
+}
 }
 
 //ID
@@ -11344,6 +12464,308 @@ item(FEAT_TRAINS, Item_CAF_CxK_Liv0, CAF_CxK_ID_Liv0) {
 		weight:                        	CAF_CxK_Weight;
 		running_cost_factor:            CAF_CxK_RunningCostFactor;
     }
+}
+
+//ID
+const Bombardier_ACity_ID = 11700;
+//introduction_date
+const Bombardier_ACity_IntroDate = date(2014, 1, 1);
+//speed
+const Bombardier_ACity_Speed = 110;
+//cost_factor
+const Bombardier_ACity_CostFactor = 26;
+//running_cost_factor
+const Bombardier_ACity_RunningCostFactor = 68;
+//Cargo Capacity
+const Bombardier_ACity_CargoCapacity = 126;
+//power
+const Bombardier_ACity_Power = 715;
+//weight
+const Bombardier_ACity_Weight = 40;
+//length
+const Bombardier_ACity_Length = 8;
+
+//Pantographs
+spriteset(spriteset_Bombardier_ACity_Panto_Purchase,   "gfx/Bombardier_ACity_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_ACity_PantoDown,   "gfx/Bombardier_ACity_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_ACity_PantoDown_r,   "gfx/Bombardier_ACity_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_Bombardier_ACity_PantoUp,   "gfx/Bombardier_ACity_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Bombardier_ACity_PantoUp_r,   "gfx/Bombardier_ACity_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_ACity_Fw_railtype, tile_powers_railtype("OHLE_AC")) {
+ 0: spriteset_Bombardier_ACity_PantoDown;
+ 1: spriteset_Bombardier_ACity_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_ACity_Rw_railtype, tile_powers_railtype("OHLE_AC")) {
+ 0: spriteset_Bombardier_ACity_PantoDown_r; //might need switching back to just panto down
+ 1: spriteset_Bombardier_ACity_PantoUp_r;
+}
+
+//Bombardier_ACity_Liv0
+spriteset(spriteset_Bombardier_ACity_Liv0_purchase,   "gfx/Bombardier_ACity_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_ACity_Liv0_lead,   "gfx/Bombardier_ACity_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_ACity_Liv0_lead_r,   "gfx/Bombardier_ACity_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_Bombardier_ACity_Liv0_Trailer,   "gfx/Bombardier_ACity_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_ACity_Liv0_purchase;
+	1: spriteset_Bombardier_ACity_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_ACity_Liv0_lead;
+	1: switch_Bombardier_ACity_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_ACity_Liv0_Trailer;
+	1: switch_Bombardier_ACity_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_ACity_Liv0_Trailer;
+	1: switch_Bombardier_ACity_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Bombardier_ACity_Liv0_PantoCarStack;
+                switch_Bombardier_ACity_Liv0_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Bombardier_ACity_Liv0_pantos_large_forwards;
+                spriteset_Bombardier_ACity_Liv0_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Bombardier_ACity_Liv0_Trailer;
+                switch_Bombardier_ACity_Liv0_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Bombardier_ACity_Liv0_forwards_length_large;
+            2:  switch_Bombardier_ACity_Liv0_forwards_length_small;
+            switch_Bombardier_ACity_Liv0_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Bombardier_ACity_Liv0_lead;        //Not flipped, give Panto
+    return switch_Bombardier_ACity_Liv0_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_ACity_Liv0_endcars, position_in_vehid_chain){
+    0: spriteset_Bombardier_ACity_Liv0_lead; //We need a pantograph, guaranteed
+    return switch_Bombardier_ACity_Liv0_panto_flipcheck; //More Checks
+}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Fw_railtype, tile_powers_railtype("BG_RAIL_OHLE_AC")) {
+ 0: spriteset_Bombardier_ACity_PantoDown;
+ 1: spriteset_Bombardier_ACity_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Rw_railtype, tile_powers_railtype("BG_RAIL_OHLE_AC")) {
+ 0: spriteset_Bombardier_ACity_PantoDown_r; //might need switching back to just panto down
+ 1: spriteset_Bombardier_ACity_PantoUp_r;
+}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_ACity_Liv0_purchase;
+	1: spriteset_Bombardier_ACity_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_ACity_Liv0_lead;
+	1: switch_Bombardier_ACity_BG_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_ACity_Liv0_Trailer;
+	1: switch_Bombardier_ACity_BG_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_ACity_Liv0_Trailer;
+	1: switch_Bombardier_ACity_BG_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Bombardier_ACity_BG_Liv0_PantoCarStack;
+                switch_Bombardier_ACity_BG_Liv0_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Bombardier_ACity_BG_Liv0_pantos_large_forwards;
+                spriteset_Bombardier_ACity_Liv0_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Bombardier_ACity_Liv0_Trailer;
+                switch_Bombardier_ACity_BG_Liv0_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Bombardier_ACity_BG_Liv0_forwards_length_large;
+            2:  switch_Bombardier_ACity_BG_Liv0_forwards_length_small;
+            switch_Bombardier_ACity_BG_Liv0_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Bombardier_ACity_Liv0_lead;        //Not flipped, give Panto
+    return switch_Bombardier_ACity_BG_Liv0_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_ACity_BG_Liv0_endcars, position_in_vehid_chain){
+    0: spriteset_Bombardier_ACity_Liv0_lead; //We need a pantograph, guaranteed
+    return switch_Bombardier_ACity_BG_Liv0_panto_flipcheck; //More Checks
+}
+
+const Bombardier_ACity_ID_Liv0 = (Bombardier_ACity_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Bombardier_ACity_Liv0, Bombardier_ACity_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_BOMBARDIER_ACITY);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Bombardier_ACity_IntroDate;		
+		length:                         Bombardier_ACity_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Bombardier_ACity_Speed km/h;
+		cost_factor:					(Bombardier_ACity_CostFactor * 2);
+		running_cost_factor:			(Bombardier_ACity_RunningCostFactor * 2);
+		cargo_capacity: 				(Bombardier_ACity_CargoCapacity / param_capacity_mod);
+		power:							(Bombardier_ACity_Power * 2);
+		weight:							Bombardier_ACity_Weight ton;
+
+//        variant_group: 					Item_Bombardier_ACity_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Bombardier_ACity_Liv0_endcars;
+        purchase: 						switch_Bombardier_ACity_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_BOMBARDIER_ACITY);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Bombardier_ACity_Liv0_midcars;
+        length:							Bombardier_ACity_Length;
+        cargo_capacity:                 [Bombardier_ACity_CargoCapacity / param_capacity_mod];
+        power:                          Bombardier_ACity_Power;
+		weight:                        	Bombardier_ACity_Weight;
+		running_cost_factor:            Bombardier_ACity_RunningCostFactor;
+}
+}
+
+const Bombardier_ACity_BG_ID_Liv0 = (Bombardier_ACity_ID_Liv0 + 20);
+
+item(FEAT_TRAINS, Item_Bombardier_ACity_BG_Liv0, Bombardier_ACity_BG_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_OHLE_AC_ONLY;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_BOMBARDIER_ACITY_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Bombardier_ACity_IntroDate;		
+		length:                         Bombardier_ACity_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Bombardier_ACity_Speed km/h;
+		cost_factor:					(Bombardier_ACity_CostFactor * 2);
+		running_cost_factor:			(Bombardier_ACity_RunningCostFactor * 2);
+		cargo_capacity: 				(Bombardier_ACity_CargoCapacity / param_capacity_mod);
+		power:							(Bombardier_ACity_Power * 2);
+		weight:							Bombardier_ACity_Weight ton;
+
+//        variant_group: 					Item_Bombardier_ACity_BG_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Bombardier_ACity_BG_Liv0_endcars;
+        purchase: 						switch_Bombardier_ACity_BG_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_BOMBARDIER_ACITY_BG);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Bombardier_ACity_BG_Liv0_midcars;
+        length:							Bombardier_ACity_Length;
+        cargo_capacity:                 [Bombardier_ACity_CargoCapacity / param_capacity_mod];
+        power:                          Bombardier_ACity_Power;
+		weight:                        	Bombardier_ACity_Weight;
+		running_cost_factor:            Bombardier_ACity_RunningCostFactor;
+}
 }
 
 //ID
