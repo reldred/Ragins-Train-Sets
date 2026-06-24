@@ -12769,6 +12769,173 @@ item(FEAT_TRAINS, Item_Bombardier_ACity_BG_Liv0, Bombardier_ACity_BG_ID_Liv0) {
 }
 
 //ID
+const Bombardier_NGR_ID = 11740;
+//introduction_date
+const Bombardier_NGR_IntroDate = date(2018, 1, 1);
+//speed
+const Bombardier_NGR_Speed = 140;
+//cost_factor
+const Bombardier_NGR_CostFactor = 26;
+//running_cost_factor
+const Bombardier_NGR_RunningCostFactor = 69;
+//Cargo Capacity
+const Bombardier_NGR_CargoCapacity = 127;
+//power
+const Bombardier_NGR_Power = 643;
+//weight
+const Bombardier_NGR_Weight = 40;
+//length
+const Bombardier_NGR_Length = 8;
+
+//Pantographs
+spriteset(spriteset_Bombardier_NGR_Panto_Purchase,   "gfx/Bombardier_NGR_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_NGR_PantoDown,   "gfx/Bombardier_NGR_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_NGR_PantoDown_r,   "gfx/Bombardier_NGR_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_Bombardier_NGR_PantoUp,   "gfx/Bombardier_NGR_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Bombardier_NGR_PantoUp_r,   "gfx/Bombardier_NGR_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_NGR_Fw_railtype, tile_powers_railtype("NG_RAIL_OHLE_AC")) {
+ 0: spriteset_Bombardier_NGR_PantoDown;
+ 1: spriteset_Bombardier_NGR_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_NGR_Rw_railtype, tile_powers_railtype("NG_RAIL_OHLE_AC")) {
+ 0: spriteset_Bombardier_NGR_PantoDown_r; //might need switching back to just panto down
+ 1: spriteset_Bombardier_NGR_PantoUp_r;
+}
+
+//Bombardier_NGR_Liv0
+spriteset(spriteset_Bombardier_NGR_Liv0_purchase,   "gfx/Bombardier_NGR_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_NGR_Liv0_lead,   "gfx/Bombardier_NGR_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_NGR_Liv0_lead_r,   "gfx/Bombardier_NGR_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_Bombardier_NGR_Liv0_Trailer,   "gfx/Bombardier_NGR_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_NGR_Liv0_purchase;
+	1: spriteset_Bombardier_NGR_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_NGR_Liv0_lead;
+	1: switch_Bombardier_NGR_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_NGR_Liv0_Trailer;
+	1: switch_Bombardier_NGR_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Bombardier_NGR_Liv0_Trailer;
+	1: switch_Bombardier_NGR_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Bombardier_NGR_Liv0_PantoCarStack;
+                switch_Bombardier_NGR_Liv0_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Bombardier_NGR_Liv0_pantos_large_forwards;
+                spriteset_Bombardier_NGR_Liv0_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Bombardier_NGR_Liv0_Trailer;
+                switch_Bombardier_NGR_Liv0_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_midcars, num_vehs_in_vehid_chain) {
+            0..1: switch_Bombardier_NGR_Liv0_forwards_length_large;
+            2:  switch_Bombardier_NGR_Liv0_forwards_length_small;
+            switch_Bombardier_NGR_Liv0_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Bombardier_NGR_Liv0_lead;        //Not flipped, give Panto
+    return switch_Bombardier_NGR_Liv0_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Bombardier_NGR_Liv0_endcars, position_in_vehid_chain){
+    0: spriteset_Bombardier_NGR_Liv0_lead; //We need a pantograph, guaranteed
+    return switch_Bombardier_NGR_Liv0_panto_flipcheck; //More Checks
+}
+
+const Bombardier_NGR_ID_Liv0 = (Bombardier_NGR_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Bombardier_NGR_Liv0, Bombardier_NGR_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_BOMBARDIER_NGR);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Bombardier_NGR_IntroDate;		
+		length:                         Bombardier_NGR_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Bombardier_NGR_Speed km/h;
+		cost_factor:					(Bombardier_NGR_CostFactor * 2);
+		running_cost_factor:			(Bombardier_NGR_RunningCostFactor * 2);
+		cargo_capacity: 				(Bombardier_NGR_CargoCapacity / param_capacity_mod);
+		power:							(Bombardier_NGR_Power * 2);
+		weight:							Bombardier_NGR_Weight ton;
+
+//        variant_group: 					Item_Bombardier_NGR_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Bombardier_NGR_Liv0_endcars;
+        purchase: 						switch_Bombardier_NGR_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_BOMBARDIER_NGR);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Bombardier_NGR_Liv0_midcars;
+        length:							Bombardier_NGR_Length;
+        cargo_capacity:                 [Bombardier_NGR_CargoCapacity / param_capacity_mod];
+        power:                          Bombardier_NGR_Power;
+		weight:                        	Bombardier_NGR_Weight;
+		running_cost_factor:            Bombardier_NGR_RunningCostFactor;
+}
+}
+
+//ID
 const Comeng_SSet_ID = 12040;
 //introduction_date
 const Comeng_SSet_IntroDate = date(1972, 1, 1);

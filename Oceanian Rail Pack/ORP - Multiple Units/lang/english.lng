@@ -232,6 +232,9 @@ STR_INFO_BOMBARDIER_ACITY:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}
 STR_NAME_BOMBARDIER_ACITY_BG:Bombardier A-City Suburban Multiple Unit
 STR_INFO_BOMBARDIER_ACITY_BG:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Adelaide Metro 4000 Class EMUs.
 
+STR_NAME_BOMBARDIER_NGR:Bombardier New Generation Rolling Stock
+STR_INFO_BOMBARDIER_NGR:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}QR NGR Stock.
+
 
 
 
