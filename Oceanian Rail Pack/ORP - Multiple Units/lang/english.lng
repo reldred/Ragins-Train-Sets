@@ -207,7 +207,7 @@ STR_NAME_GREYGHOST:Comeng-M&K Refurbished Harris "Grey Ghost"
 STR_INFO_GREYGHOST:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Prototype refurbish of Melbourne Harris Trains.
 
 STR_NAME_WALKERS_ASERIES:Walkers-ABB A-Series
-STR_INFO_WALKERS_ASERIES:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Transperth A-Series suburban multiple unit.
+STR_INFO_WALKERS_ASERIES:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Transperth A-Series.
 
 STR_NAME_WALKERS_SMU200:Walkers-ABB Suburban Multiple Unit
 STR_INFO_WALKERS_SMU200:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}QR 200 & 220 Series suburban multiple units.
@@ -237,6 +237,9 @@ STR_INFO_BOMBARDIER_NGR:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Mu
 
 STR_NAME_CRRC_HCMT:CRRC High Capacity Metro Train
 STR_INFO_CRRC_HCMT:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne HCMT trains.
+
+STR_NAME_ALSTOM_CSERIES:Alstom Suburban Multiple Unit
+STR_INFO_ALSTOM_CSERIES:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Transperth C-Series.
 
 
 

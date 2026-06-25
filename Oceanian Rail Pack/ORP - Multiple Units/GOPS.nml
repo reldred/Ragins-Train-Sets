@@ -8594,7 +8594,7 @@ item(FEAT_TRAINS, Item_Walkers_EMU_Liv0, Walkers_EMU_ID_Liv0) {
         introduction_date:              Walkers_EMU_IntroDate;		
 		length:                         Walkers_EMU_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Walkers_EMU_Speed km/h;
 		cost_factor:					(Walkers_EMU_CostFactor * 2);
 		running_cost_factor:			(Walkers_EMU_RunningCostFactor * 2);
@@ -8724,7 +8724,7 @@ item(FEAT_TRAINS, Item_Walkers_EMU_Liv1, Walkers_EMU_ID_Liv1) {
         introduction_date:              Walkers_EMU_IntroDate;		
 		length:                         Walkers_EMU_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Walkers_EMU_Speed km/h;
 		cost_factor:					(Walkers_EMU_CostFactor * 2);
 		running_cost_factor:			(Walkers_EMU_RunningCostFactor * 2);
@@ -8854,7 +8854,7 @@ item(FEAT_TRAINS, Item_Walkers_EMU_Liv2, Walkers_EMU_ID_Liv2) {
         introduction_date:              Walkers_EMU_IntroDate;		
 		length:                         Walkers_EMU_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Walkers_EMU_Speed km/h;
 		cost_factor:					(Walkers_EMU_CostFactor * 2);
 		running_cost_factor:			(Walkers_EMU_RunningCostFactor * 2);
@@ -10277,7 +10277,7 @@ item(FEAT_TRAINS, Item_Walkers_ASeries_Liv0, Walkers_ASeries_ID_Liv0) {
         introduction_date:              Walkers_ASeries_IntroDate;		
 		length:                         Walkers_ASeries_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Walkers_ASeries_Speed km/h;
 		cost_factor:					(Walkers_ASeries_CostFactor * 2);
 		running_cost_factor:			(Walkers_ASeries_RunningCostFactor * 2);
@@ -10444,7 +10444,7 @@ item(FEAT_TRAINS, Item_Walkers_SMU200_Liv0, Walkers_SMU200_ID_Liv0) {
         introduction_date:              Walkers_SMU200_IntroDate;		
 		length:                         Walkers_SMU200_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Walkers_SMU200_Speed km/h;
 		cost_factor:					(Walkers_SMU200_CostFactor * 2);
 		running_cost_factor:			(Walkers_SMU200_RunningCostFactor * 2);
@@ -10574,7 +10574,7 @@ item(FEAT_TRAINS, Item_Walkers_SMU200_Liv1, Walkers_SMU200_ID_Liv1) {
         introduction_date:              Walkers_SMU200_IntroDate;		
 		length:                         Walkers_SMU200_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Walkers_SMU200_Speed km/h;
 		cost_factor:					(Walkers_SMU200_CostFactor * 2);
 		running_cost_factor:			(Walkers_SMU200_RunningCostFactor * 2);
@@ -10704,7 +10704,7 @@ item(FEAT_TRAINS, Item_Walkers_SMU200_Liv2, Walkers_SMU200_ID_Liv2) {
         introduction_date:              Walkers_SMU200_IntroDate;		
 		length:                         Walkers_SMU200_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Walkers_SMU200_Speed km/h;
 		cost_factor:					(Walkers_SMU200_CostFactor * 2);
 		running_cost_factor:			(Walkers_SMU200_RunningCostFactor * 2);
@@ -10869,7 +10869,7 @@ item(FEAT_TRAINS, Item_XTrapolis100_Liv0, XTrapolis100_ID_Liv0) {
         introduction_date:              XTrapolis100_IntroDate;		
 		length:                         8;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							XTrapolis100_Speed km/h;
 		cost_factor:					(XTrapolis100_CostFactor * 2);
 		running_cost_factor:			(XTrapolis100_RunningCostFactor * 2);
@@ -11000,7 +11000,7 @@ item(FEAT_TRAINS, Item_XTrapolis100_Liv1, XTrapolis100_ID_Liv1) {
         introduction_date:              XTrapolis100_IntroDate;		
 		length:                         8;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							XTrapolis100_Speed km/h;
 		cost_factor:					(XTrapolis100_CostFactor * 2);
 		running_cost_factor:			(XTrapolis100_RunningCostFactor * 2);
@@ -11860,7 +11860,7 @@ item(FEAT_TRAINS, Item_Bombardier_BSeries_Liv0, Bombardier_BSeries_ID_Liv0) {
         introduction_date:              Bombardier_BSeries_IntroDate;		
 		length:                         Bombardier_BSeries_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Bombardier_BSeries_Speed km/h;
 		cost_factor:					(Bombardier_BSeries_CostFactor * 2);
 		running_cost_factor:			(Bombardier_BSeries_RunningCostFactor * 2);
@@ -11990,7 +11990,7 @@ item(FEAT_TRAINS, Item_Bombardier_BSeries_Liv1, Bombardier_BSeries_ID_Liv1) {
         introduction_date:              Bombardier_BSeries_IntroDate;		
 		length:                         Bombardier_BSeries_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Bombardier_BSeries_Speed km/h;
 		cost_factor:					(Bombardier_BSeries_CostFactor * 2);
 		running_cost_factor:			(Bombardier_BSeries_RunningCostFactor * 2);
@@ -12120,7 +12120,7 @@ item(FEAT_TRAINS, Item_Bombardier_BSeries_Liv2, Bombardier_BSeries_ID_Liv2) {
         introduction_date:              Bombardier_BSeries_IntroDate;		
 		length:                         Bombardier_BSeries_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Bombardier_BSeries_Speed km/h;
 		cost_factor:					(Bombardier_BSeries_CostFactor * 2);
 		running_cost_factor:			(Bombardier_BSeries_RunningCostFactor * 2);
@@ -12686,7 +12686,7 @@ item(FEAT_TRAINS, Item_Bombardier_ACity_Liv0, Bombardier_ACity_ID_Liv0) {
         introduction_date:              Bombardier_ACity_IntroDate;		
 		length:                         Bombardier_ACity_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Bombardier_ACity_Speed km/h;
 		cost_factor:					(Bombardier_ACity_CostFactor * 2);
 		running_cost_factor:			(Bombardier_ACity_RunningCostFactor * 2);
@@ -12742,7 +12742,7 @@ item(FEAT_TRAINS, Item_Bombardier_ACity_BG_Liv0, Bombardier_ACity_BG_ID_Liv0) {
         introduction_date:              Bombardier_ACity_IntroDate;		
 		length:                         Bombardier_ACity_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Bombardier_ACity_Speed km/h;
 		cost_factor:					(Bombardier_ACity_CostFactor * 2);
 		running_cost_factor:			(Bombardier_ACity_RunningCostFactor * 2);
@@ -12909,7 +12909,7 @@ item(FEAT_TRAINS, Item_Bombardier_NGR_Liv0, Bombardier_NGR_ID_Liv0) {
         introduction_date:              Bombardier_NGR_IntroDate;		
 		length:                         Bombardier_NGR_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							Bombardier_NGR_Speed km/h;
 		cost_factor:					(Bombardier_NGR_CostFactor * 2);
 		running_cost_factor:			(Bombardier_NGR_RunningCostFactor * 2);
@@ -13079,7 +13079,7 @@ item(FEAT_TRAINS, Item_CRRC_HCMT_Liv0, CRRC_HCMT_ID_Liv0) {
         introduction_date:              CRRC_HCMT_IntroDate;		
 		length:                         CRRC_HCMT_Length;
 		
-		loading_speed:					SD_Intercity_LoadingSpeed;
+		loading_speed:					SD_Suburban_LoadingSpeed;
 		speed:							CRRC_HCMT_Speed km/h;
 		cost_factor:					(CRRC_HCMT_CostFactor * 2);
 		running_cost_factor:			(CRRC_HCMT_RunningCostFactor * 2);
@@ -13102,6 +13102,172 @@ item(FEAT_TRAINS, Item_CRRC_HCMT_Liv0, CRRC_HCMT_ID_Liv0) {
         power:                          CRRC_HCMT_Power;
 		weight:                        	CRRC_HCMT_Weight;
 		running_cost_factor:            CRRC_HCMT_RunningCostFactor;
+}
+}
+
+//ID
+const Alstom_CSeries_ID = 11780;
+//introduction_date
+const Alstom_CSeries_IntroDate = date(2024, 1, 1);
+//speed
+const Alstom_CSeries_Speed = 130;
+//cost_factor
+const Alstom_CSeries_CostFactor = 27;
+//running_cost_factor
+const Alstom_CSeries_RunningCostFactor = 70;
+//Cargo Capacity
+const Alstom_CSeries_CargoCapacity = 130;
+//power
+const Alstom_CSeries_Power = 1108;
+//weight
+const Alstom_CSeries_Weight = 40;
+//length
+const Alstom_CSeries_Length = 8;
+
+//Pantographs
+spriteset(spriteset_Alstom_CSeries_Panto_Purchase,   "gfx/Alstom_CSeries_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Alstom_CSeries_PantoDown,   "gfx/Alstom_CSeries_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_Alstom_CSeries_PantoDown_r,   "gfx/Alstom_CSeries_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_Alstom_CSeries_PantoUp,   "gfx/Alstom_CSeries_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Alstom_CSeries_PantoUp_r,   "gfx/Alstom_CSeries_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_Alstom_CSeries_Fw_railtype, tile_powers_railtype("NG_RAIL_OHLE_AC")) {
+ 0: spriteset_Alstom_CSeries_PantoDown;
+ 1: spriteset_Alstom_CSeries_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Alstom_CSeries_Rw_railtype, tile_powers_railtype("NG_RAIL_OHLE_AC")) {
+ 0: spriteset_Alstom_CSeries_PantoDown_r; //might need switching back to just panto down
+ 1: spriteset_Alstom_CSeries_PantoUp_r;
+}
+
+//Alstom_CSeries_Liv0
+spriteset(spriteset_Alstom_CSeries_Liv0_purchase,   "gfx/Alstom_CSeries_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Alstom_CSeries_Liv0_lead,   "gfx/Alstom_CSeries_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Alstom_CSeries_Liv0_lead_r,   "gfx/Alstom_CSeries_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_Alstom_CSeries_Liv0_Trailer,   "gfx/Alstom_CSeries_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Alstom_CSeries_Liv0_purchase;
+	1: spriteset_Alstom_CSeries_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Alstom_CSeries_Liv0_lead;
+	1: switch_Alstom_CSeries_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Alstom_CSeries_Liv0_Trailer;
+	1: switch_Alstom_CSeries_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Alstom_CSeries_Liv0_Trailer;
+	1: switch_Alstom_CSeries_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_Alstom_CSeries_Liv0_PantoCarStack;
+                switch_Alstom_CSeries_Liv0_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_Alstom_CSeries_Liv0_pantos_large_forwards;
+                spriteset_Alstom_CSeries_Liv0_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_Alstom_CSeries_Liv0_Trailer;
+                switch_Alstom_CSeries_Liv0_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_midcars, num_vehs_in_vehid_chain ) {
+            0..3: switch_Alstom_CSeries_Liv0_forwards_length_small;
+            switch_Alstom_CSeries_Liv0_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_Alstom_CSeries_Liv0_lead;        //Not flipped, give Panto
+    return switch_Alstom_CSeries_Liv0_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_Alstom_CSeries_Liv0_endcars, position_in_vehid_chain){
+    0: spriteset_Alstom_CSeries_Liv0_lead; //We need a pantograph, guaranteed
+    return switch_Alstom_CSeries_Liv0_panto_flipcheck; //More Checks
+}
+
+const Alstom_CSeries_ID_Liv0 = (Alstom_CSeries_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Alstom_CSeries_Liv0, Alstom_CSeries_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_ALSTOM_CSERIES);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Alstom_CSeries_IntroDate;		
+		length:                         Alstom_CSeries_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Alstom_CSeries_Speed km/h;
+		cost_factor:					(Alstom_CSeries_CostFactor * 2);
+		running_cost_factor:			(Alstom_CSeries_RunningCostFactor * 2);
+		cargo_capacity: 				(Alstom_CSeries_CargoCapacity / param_capacity_mod);
+		power:							(Alstom_CSeries_Power * 2);
+		weight:							Alstom_CSeries_Weight ton;
+
+//        variant_group: 					Item_Alstom_CSeries_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Alstom_CSeries_Liv0_endcars;
+        purchase: 						switch_Alstom_CSeries_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_ALSTOM_CSERIES);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Alstom_CSeries_Liv0_midcars;
+        length:							Alstom_CSeries_Length;
+        cargo_capacity:                 [Alstom_CSeries_CargoCapacity / param_capacity_mod];
+        power:                          Alstom_CSeries_Power;
+		weight:                        	Alstom_CSeries_Weight;
+		running_cost_factor:            Alstom_CSeries_RunningCostFactor;
 }
 }
 
