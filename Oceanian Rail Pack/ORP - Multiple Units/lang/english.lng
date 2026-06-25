@@ -235,6 +235,9 @@ STR_INFO_BOMBARDIER_ACITY_BG:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GO
 STR_NAME_BOMBARDIER_NGR:Bombardier New Generation Rolling Stock
 STR_INFO_BOMBARDIER_NGR:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}QR NGR Stock.
 
+STR_NAME_CRRC_HCMT:CRRC High Capacity Metro Train
+STR_INFO_CRRC_HCMT:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne HCMT trains.
+
 
 
 
