@@ -241,6 +241,9 @@ STR_INFO_CRRC_HCMT:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multipl
 STR_NAME_ALSTOM_CSERIES:Alstom Suburban Multiple Unit
 STR_INFO_ALSTOM_CSERIES:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Transperth C-Series.
 
+STR_NAME_XTRAP2:Alstom X-Trapolis 2.0
+STR_INFO_XTRAP2:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne X-Trapolis 2.0 trains. {}{GOLD}We added suspension this time.
+
 
 
 

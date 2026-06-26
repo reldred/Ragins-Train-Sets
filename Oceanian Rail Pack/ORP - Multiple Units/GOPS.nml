@@ -13118,7 +13118,7 @@ const Alstom_CSeries_RunningCostFactor = 70;
 //Cargo Capacity
 const Alstom_CSeries_CargoCapacity = 130;
 //power
-const Alstom_CSeries_Power = 1108;
+const Alstom_CSeries_Power = 650;
 //weight
 const Alstom_CSeries_Weight = 40;
 //length
@@ -13268,6 +13268,172 @@ item(FEAT_TRAINS, Item_Alstom_CSeries_Liv0, Alstom_CSeries_ID_Liv0) {
         power:                          Alstom_CSeries_Power;
 		weight:                        	Alstom_CSeries_Weight;
 		running_cost_factor:            Alstom_CSeries_RunningCostFactor;
+}
+}
+
+//ID
+const XTrap2_ID = 11800;
+//introduction_date
+const XTrap2_IntroDate = date(2026, 1, 1);
+//speed
+const XTrap2_Speed = 130;
+//cost_factor
+const XTrap2_CostFactor = 27;
+//running_cost_factor
+const XTrap2_RunningCostFactor = 71;
+//Cargo Capacity
+const XTrap2_CargoCapacity = 130;
+//power
+const XTrap2_Power = 650;
+//weight
+const XTrap2_Weight = 40;
+//length
+const XTrap2_Length = 8;
+
+//Pantographs
+spriteset(spriteset_XTrap2_Panto_Purchase,   "gfx/XTrap2_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_XTrap2_PantoDown,   "gfx/XTrap2_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_XTrap2_PantoDown_r,   "gfx/XTrap2_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_XTrap2_PantoUp,   "gfx/XTrap2_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_XTrap2_PantoUp_r,   "gfx/XTrap2_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_XTrap2_Fw_railtype, tile_powers_railtype("BG_RAIL_OHLE_DC")) {
+ 0: spriteset_XTrap2_PantoDown;
+ 1: spriteset_XTrap2_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_XTrap2_Rw_railtype, tile_powers_railtype("BG_RAIL_OHLE_DC")) {
+ 0: spriteset_XTrap2_PantoDown_r; //might need switching back to just panto down
+ 1: spriteset_XTrap2_PantoUp_r;
+}
+
+//XTrap2_Liv0
+spriteset(spriteset_XTrap2_Liv0_purchase,   "gfx/XTrap2_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_XTrap2_Liv0_lead,   "gfx/XTrap2_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_XTrap2_Liv0_lead_r,   "gfx/XTrap2_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_XTrap2_Liv0_Trailer,   "gfx/XTrap2_Liv0.png") {template_8_repeat(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_XTrap2_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_XTrap2_Liv0_purchase;
+	1: spriteset_XTrap2_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_XTrap2_Liv0_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_XTrap2_Liv0_lead;
+	1: switch_XTrap2_Fw_railtype;
+}
+
+//Pantograph cars
+//Swap normal & _r cars to swap pantograph arrangements
+switch (FEAT_TRAINS, SELF, switch_XTrap2_Liv0_PantoCarStack_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_XTrap2_Liv0_Trailer;
+	1: switch_XTrap2_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_XTrap2_Liv0_PantoCarStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_XTrap2_Liv0_Trailer;
+	1: switch_XTrap2_Rw_railtype;
+}
+
+/* Midcars */
+        // Penultipantos
+        switch (FEAT_TRAINS, SELF, switch_XTrap2_Liv0_pantos_large_forwards, position_in_vehid_chain ) {                
+                0:  switch_XTrap2_Liv0_PantoCarStack;
+                switch_XTrap2_Liv0_PantoCarStack_r;          
+            }
+        switch (FEAT_TRAINS, SELF, switch_XTrap2_Liv0_forwards_length_large, (position_in_vehid_chain == 0) || (position_in_vehid_chain_from_end == 0 )) {                
+                1:  switch_XTrap2_Liv0_pantos_large_forwards;
+                spriteset_XTrap2_Liv0_Trailer;        
+            }
+        // Panto in Middle
+        switch (FEAT_TRAINS, SELF, switch_XTrap2_Liv0_forwards_length_small, (position_in_vehid_chain == position_in_vehid_chain_from_end ) || (position_in_vehid_chain - 1 == position_in_vehid_chain_from_end) ) {                
+                0:  spriteset_XTrap2_Liv0_Trailer;
+                switch_XTrap2_Liv0_PantoCarStack;                
+            }
+    switch (FEAT_TRAINS, SELF, switch_XTrap2_Liv0_midcars, num_vehs_in_vehid_chain ) {
+            0..3: switch_XTrap2_Liv0_forwards_length_small;
+            switch_XTrap2_Liv0_forwards_length_large;
+        }
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_XTrap2_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : spriteset_XTrap2_Liv0_lead;        //Not flipped, give Panto
+    return switch_XTrap2_Liv0_LeadStack;    //Flipped, no panto
+}
+
+switch(FEAT_TRAINS, SELF, switch_XTrap2_Liv0_endcars, position_in_vehid_chain){
+    0: spriteset_XTrap2_Liv0_lead; //We need a pantograph, guaranteed
+    return switch_XTrap2_Liv0_panto_flipcheck; //More Checks
+}
+
+const XTrap2_ID_Liv0 = (XTrap2_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_XTrap2_Liv0, XTrap2_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_OHLE_DC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_XTRAP2);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              XTrap2_IntroDate;		
+		length:                         XTrap2_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							XTrap2_Speed km/h;
+		cost_factor:					(XTrap2_CostFactor * 2);
+		running_cost_factor:			(XTrap2_RunningCostFactor * 2);
+		cargo_capacity: 				(XTrap2_CargoCapacity / param_capacity_mod);
+		power:							(XTrap2_Power * 2);
+		weight:							XTrap2_Weight ton;
+
+//        variant_group: 					Item_XTrap2_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_XTrap2_Liv0_endcars;
+        purchase: 						switch_XTrap2_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_XTRAP2);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_XTrap2_Liv0_midcars;
+        length:							XTrap2_Length;
+        cargo_capacity:                 [XTrap2_CargoCapacity / param_capacity_mod];
+        power:                          XTrap2_Power;
+		weight:                        	XTrap2_Weight;
+		running_cost_factor:            XTrap2_RunningCostFactor;
 }
 }
 
