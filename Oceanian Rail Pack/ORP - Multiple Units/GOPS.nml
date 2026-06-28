@@ -316,7 +316,7 @@ template template_purchase_77mu(x, y) {
     [x-2 , y,  1,  1,   0,  0, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x     , y, 88, 15, -37, -11, ANIM]
+    [x     , y, 88, 15, -35, -11, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
 }
 
@@ -328,7 +328,7 @@ template template_purchase_78mu(x, y) {
     [x-2 , y,  1,  1,   0,  0, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x     , y, 88, 15, -39, -11, ANIM]
+    [x     , y, 88, 15, -35, -11, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
 }
 
@@ -352,19 +352,7 @@ template template_purchase_88mu(x, y) {
     [x-2 , y,  1,  1,   0,  0, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x   , y, 88, 15, -41, -11, ANIM]
-    [x-2 , y,  1,  1,   0,  0, ANIM]
-}
-
-template template_purchase_88xl(x, y) {
-    //[left_x, upper_y, width, height, offset_x, offset_y]
-    [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x-2 , y,  1,  1,   0,  0, ANIM]
-    [x     , y, 88, 15, -55, -11, ANIM]
+    [x   , y, 88, 15, -39, -11, ANIM]
     [x-2 , y,  1,  1,   0,  0, ANIM]
 }
 
