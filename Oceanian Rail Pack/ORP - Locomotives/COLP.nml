@@ -4937,7 +4937,7 @@ item(FEAT_TRAINS, Item_Clyde_G6B_BG_Liv0, Clyde_G6B_BG_Liv0_ID) {
 }
 
 //ID
-const Tulloch_2MS_ID = 10350;
+const Tulloch_2MS_ID = 10000;
 //introduction_date
 const Tulloch_2MS_IntroDate = date(1964, 1, 1);
 //speed
@@ -5067,7 +5067,7 @@ item(FEAT_TRAINS, Item_Tulloch_2MS_BG_Liv0, Tulloch_2MS_BG_Liv0_ID) {
 }
 
 //ID
-const Clyde_G18BM_ID = 10250;
+const Clyde_G18BM_ID = 10350;
 //introduction_date
 const Clyde_G18BM_IntroDate = date(1968, 1, 1);
 //speed
