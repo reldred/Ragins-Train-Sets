@@ -133,7 +133,12 @@ STR_NAME_COMENG_HPTREGIONAL:Comeng HPT Regional
 STR_INFO_COMENG_HPTREGIONAL:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Push-Pull Trainset {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Proposed centre locomotive HPT design.
 
 STR_NAME_ABB_XPLORER:ABB Xplorer/Endeavour Railcar
-STR_INFO_ABB_XPLORER:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW Xplorer/Endeavour Railcars.
+STR_INFO_ABB_XPLORER:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}NSW Xplorer/Endeavour Railcars.
+
+STR_NAME_BOMBARDIER_VLOCITY:Bombardier Vlocity
+STR_INFO_BOMBARDIER_VLOCITY:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Victorian VLocity DMUs.
+STR_NAME_BOMBARDIER_VLOCITY_BG:Bombardier Vlocity
+STR_INFO_BOMBARDIER_VLOCITY_BG:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BROWN}Diesel {}{BLACK}Based on: {GOLD}Victorian VLocity DMUs.
 
 
 

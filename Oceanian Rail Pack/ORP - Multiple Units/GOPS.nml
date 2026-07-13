@@ -5366,7 +5366,149 @@ item(FEAT_TRAINS, Item_ABB_Xplorer_Liv4, ABB_Xplorer_ID_Liv4) {
 }
 }
 
-sort(FEAT_TRAINS, [Item_ABB_Xplorer_Liv0, Item_Comeng_Prospector_Liv0]);
+//ID
+const Bombardier_Vlocity_ID = 8500;
+//introduction_date
+const Bombardier_Vlocity_IntroDate = date(2005, 1, 1);
+//speed
+const Bombardier_Vlocity_Speed = 160;
+//cost_factor
+const Bombardier_Vlocity_CostFactor = 34;
+//running_cost_factor
+const Bombardier_Vlocity_RunningCostFactor = 85;
+//Cargo Capacity
+const Bombardier_Vlocity_CargoCapacity = 98;
+//power
+const Bombardier_Vlocity_Power = 750;
+//weight
+const Bombardier_Vlocity_Weight = 57;
+//length
+const Bombardier_Vlocity_Length = 8;
+
+//Bombardier_Vlocity_Liv0
+spriteset(spriteset_Bombardier_Vlocity_Liv0_purchase,   "gfx/Bombardier_Vlocity_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Bombardier_Vlocity_Liv0_lead,   "gfx/Bombardier_Vlocity_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Bombardier_Vlocity_Liv0_Trailer,   "gfx/Bombardier_Vlocity_Liv0.png") {template_8(7, 69)}
+spriteset(spriteset_Bombardier_Vlocity_Liv0_Trailer_r,   "gfx/Bombardier_Vlocity_Liv0.png") {template_8_r(7, 69)}
+
+ random_switch(FEAT_TRAINS, SELF, switch_Bombardier_Vlocity_Liv0_Trailer_Random){
+    1 : spriteset_Bombardier_Vlocity_Liv0_Trailer;
+    1 : spriteset_Bombardier_Vlocity_Liv0_Trailer_r;
+}
+
+const Bombardier_Vlocity_ID_Liv0 = (Bombardier_Vlocity_ID + Liv0_ID );
+
+item(FEAT_TRAINS, Item_Bombardier_Vlocity_Liv0, Bombardier_Vlocity_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_BOMBARDIER_VLOCITY);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Bombardier_Vlocity_IntroDate;		
+		length:                         Bombardier_Vlocity_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Bombardier_Vlocity_Speed km/h;
+		cost_factor:					(Bombardier_Vlocity_CostFactor * 2);
+		running_cost_factor:			(Bombardier_Vlocity_RunningCostFactor * 2);
+		cargo_capacity: 				(Bombardier_Vlocity_CargoCapacity / param_capacity_mod);
+		power:							(Bombardier_Vlocity_Power * 2);
+		weight:							Bombardier_Vlocity_Weight ton;
+
+//        variant_group: 					Item_Bombardier_Vlocity_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Bombardier_Vlocity_Liv0_lead;
+        purchase: 						spriteset_Bombardier_Vlocity_Liv0_purchase;
+        additional_text: 				string(STR_INFO_BOMBARDIER_VLOCITY);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_Bombardier_Vlocity_Liv0_Trailer_Random ;
+        length: 						Bombardier_Vlocity_Length;
+        cargo_capacity:                 (Bombardier_Vlocity_CargoCapacity / param_capacity_mod);
+        power:                          Bombardier_Vlocity_Power;
+		weight:                        	Bombardier_Vlocity_Weight;
+		running_cost_factor:            Bombardier_Vlocity_RunningCostFactor;
+}
+}
+
+const Bombardier_Vlocity_ID_Liv0_BG = (Bombardier_Vlocity_ID_Liv0 + 20);
+
+item(FEAT_TRAINS, Item_Bombardier_Vlocity_Liv0_BG, Bombardier_Vlocity_ID_Liv0_BG) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_DIESEL;
+
+        name:                           string(STR_NAME_BOMBARDIER_VLOCITY_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Bombardier_Vlocity_IntroDate;		
+		length:                         Bombardier_Vlocity_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Bombardier_Vlocity_Speed km/h;
+		cost_factor:					(Bombardier_Vlocity_CostFactor * 2);
+		running_cost_factor:			(Bombardier_Vlocity_RunningCostFactor * 2);
+		cargo_capacity: 				(Bombardier_Vlocity_CargoCapacity / param_capacity_mod);
+		power:							(Bombardier_Vlocity_Power * 2);
+		weight:							Bombardier_Vlocity_Weight ton;
+
+//        variant_group: 					Item_Bombardier_Vlocity_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						spriteset_Bombardier_Vlocity_Liv0_lead;
+        purchase: 						spriteset_Bombardier_Vlocity_Liv0_purchase;
+        additional_text: 				string(STR_INFO_BOMBARDIER_VLOCITY_BG);
+    }
+    livery_override (Item_MU_Trailer){
+        default: 						switch_Bombardier_Vlocity_Liv0_Trailer_Random ;
+        length: 						Bombardier_Vlocity_Length;
+        cargo_capacity:                 (Bombardier_Vlocity_CargoCapacity / param_capacity_mod);
+        power:                          Bombardier_Vlocity_Power;
+		weight:                        	Bombardier_Vlocity_Weight;
+		running_cost_factor:            Bombardier_Vlocity_RunningCostFactor;
+}
+}
+
+sort(FEAT_TRAINS, [Item_Bombardier_Vlocity_Liv0_BG, Item_Comeng_Prospector_Liv0]);
 
 //ID
 const Comeng_Prospector_ID = 50;
