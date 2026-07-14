@@ -1,7 +1,7 @@
 ##grflangid 0x0
 
 STR_GRF_NAME:North American Rail Pack - Multiple Units v4
-STR_GRF_DESCRIPTION:Multiple units from the US, Canada, and Mexico, all in 2cc. Drawn and Coded by Zachary Moore (Ragin1_)
+STR_GRF_DESCRIPTION:Multiple units from the US, Canada, and Mexico, all in 2cc. Drawn and Coded by Zoe Moore (Ragin1_)
 
 STR_PARAM_PURCHASE_COST             :Purchase cost multiplier
 STR_PARAM_PURCHASE_COST_DESC        :You can use this setting to increase or decrease the purchase costs of the vehicles in this set.
