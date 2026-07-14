@@ -353,13 +353,16 @@ STR_NAME_ABB_ALP44:ABB ALP-44
 STR_INFO_ABB_ALP44:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {RED}AC Overhead Line {GREEN}Third Rail
 
 STR_NAME_COMENG_CL657:Comeng-Hitachi CL657
-STR_INFO_COMENG_CL657:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {RED}AC Overhead Line {}{GOLD}NJT did show interest in Comeng's electrics for Queensland, so this is what if they actually bought some.
+STR_INFO_COMENG_CL657:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{GOLD}NJT did show interest in Comeng's electrics for Queensland, so this is what if they actually bought some.
 
 STR_NAME_BOMBARDIER_HHP8:Bombardier HHP-8
-STR_INFO_BOMBARDIER_HHP8:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {RED}AC Overhead Line
+STR_INFO_BOMBARDIER_HHP8:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {RED}AC Overhead Line
 
 STR_NAME_BOMBARDIER_ALP46:Bombardier ALP-46
-STR_INFO_BOMBARDIER_ALP46:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {RED}AC Overhead Line
+STR_INFO_BOMBARDIER_ALP46:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {RED}AC Overhead Line
+
+STR_NAME_SIEMENS_ACS64:Siemens ACS-64
+STR_INFO_SIEMENS_ACS64:{BLACK}Role: {GOLD}Passenger {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {RED}AC Overhead Line
 
 
 

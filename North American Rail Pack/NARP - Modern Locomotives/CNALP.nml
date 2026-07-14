@@ -16537,6 +16537,290 @@ item(FEAT_TRAINS, Item_Bombardier_ALP46_Liv0, 36100) {
 }
 }
 
+//ID
+const Siemens_ACS64_ID = 36200;
+//introduction_date
+const Siemens_ACS64_IntroDate = date(2014, 1, 1);
+//speed
+const Siemens_ACS64_Speed = 135;
+//cost_factor
+const Siemens_ACS64_CostFactor = 75;
+//running_cost_factor
+const Siemens_ACS64_RunningCostFactor = 201;
+//power
+const Siemens_ACS64_Power = 6700;
+//weight
+const Siemens_ACS64_Weight = 98;
+//length
+const Siemens_ACS64_Length = 8;
+
+spriteset(spriteset_Siemens_ACS64_Pantograph_Purchase,   "gfx/Siemens_ACS64_Pantographs.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_Siemens_ACS64_PantoDown,   "gfx/Siemens_ACS64_Pantographs.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Siemens_ACS64_PantoBothUp,   "gfx/Siemens_ACS64_Pantographs.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Siemens_ACS64_PantoUp,   "gfx/Siemens_ACS64_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Siemens_ACS64_PantoUp_r,   "gfx/Siemens_ACS64_Pantographs.png") {template_8_r(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Siemens_ACS64_Fw_railtype, tile_powers_railtype("OHLE_AC")) {
+ 0: spriteset_Siemens_ACS64_PantoDown;
+ 1: spriteset_Siemens_ACS64_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Siemens_ACS64_r_railtype, tile_powers_railtype("OHLE_AC")) {
+ 0: spriteset_Siemens_ACS64_PantoDown;
+ 1: spriteset_Siemens_ACS64_PantoUp_r;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Siemens_ACS64_Travel_Direction_A, train_is_driving_backwards){
+    0: switch_Siemens_ACS64_Fw_railtype;
+    1: switch_Siemens_ACS64_r_railtype;
+}
+
+switch(FEAT_TRAINS, PARENT, switch_Siemens_ACS64_Travel_Direction_B, train_is_driving_backwards){
+    0: switch_Siemens_ACS64_r_railtype;
+    1: switch_Siemens_ACS64_Fw_railtype;
+}
+
+//Siemens_ACS64_Liv0
+spriteset(spriteset_Siemens_ACS64_Liv0_Purchase,   "gfx/Siemens_ACS64_Liv0.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Siemens_ACS64_Liv0,   "gfx/Siemens_ACS64_Liv0.png") {template_8_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv0_Purchase;
+    1: spriteset_Siemens_ACS64_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv0;
+	1: switch_Siemens_ACS64_Travel_Direction_A;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv0;
+	1: switch_Siemens_ACS64_Travel_Direction_B;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Siemens_ACS64_Liv0_Fw;
+ 1: switch_Siemens_ACS64_Liv0_r;
+}
+
+const Siemens_ACS64_Liv0_ID = (Siemens_ACS64_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Siemens_ACS64_Liv0, Siemens_ACS64_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_SIEMENS_ACS64);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Siemens_ACS64_IntroDate;		
+		length:                         8;
+		
+		speed:							Siemens_ACS64_Speed mph;
+		cost_factor:					Siemens_ACS64_CostFactor;
+		running_cost_factor:			Siemens_ACS64_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Siemens_ACS64_Power;
+		weight:							Siemens_ACS64_Weight;
+		
+//        variant_group: 					Item_Siemens_ACS64_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Siemens_ACS64_Liv0_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_Siemens_ACS64_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_SIEMENS_ACS64);
+		reverse_build_probability:		return 50;
+}
+}
+
+//Siemens_ACS64_Liv17
+spriteset(spriteset_Siemens_ACS64_Liv17_Purchase,   "gfx/Siemens_ACS64_Liv17.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Siemens_ACS64_Liv17,   "gfx/Siemens_ACS64_Liv17.png") {template_8_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv17_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv17_Purchase;
+    1: spriteset_Siemens_ACS64_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv17_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv17;
+	1: switch_Siemens_ACS64_Travel_Direction_A;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv17_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv17;
+	1: switch_Siemens_ACS64_Travel_Direction_B;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv17_position, vehicle_is_flipped) {
+ 0: switch_Siemens_ACS64_Liv17_Fw;
+ 1: switch_Siemens_ACS64_Liv17_r;
+}
+
+const Siemens_ACS64_Liv17_ID = (Siemens_ACS64_ID + Liv17_ID);
+
+item(FEAT_TRAINS, Item_Siemens_ACS64_Liv17, Siemens_ACS64_Liv17_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_SIEMENS_ACS64);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Siemens_ACS64_IntroDate;		
+		length:                         8;
+		
+		speed:							Siemens_ACS64_Speed mph;
+		cost_factor:					Siemens_ACS64_CostFactor;
+		running_cost_factor:			Siemens_ACS64_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Siemens_ACS64_Power;
+		weight:							Siemens_ACS64_Weight;
+		
+        variant_group: 					Item_Siemens_ACS64_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Siemens_ACS64_Liv17_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_Siemens_ACS64_Liv17_Purchase_Stack;
+        additional_text: 				string(STR_INFO_SIEMENS_ACS64);
+		reverse_build_probability:		return 50;
+}
+}
+
+//Siemens_ACS64_Liv32
+spriteset(spriteset_Siemens_ACS64_Liv32_Purchase,   "gfx/Siemens_ACS64_Liv32.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Siemens_ACS64_Liv32,   "gfx/Siemens_ACS64_Liv32.png") {template_8_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv32_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv32_Purchase;
+    1: spriteset_Siemens_ACS64_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv32_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv32;
+	1: switch_Siemens_ACS64_Travel_Direction_A;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv32_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Siemens_ACS64_Liv32;
+	1: switch_Siemens_ACS64_Travel_Direction_B;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Siemens_ACS64_Liv32_position, vehicle_is_flipped) {
+ 0: switch_Siemens_ACS64_Liv32_Fw;
+ 1: switch_Siemens_ACS64_Liv32_r;
+}
+
+const Siemens_ACS64_Liv32_ID = (Siemens_ACS64_ID + Liv32_ID);
+
+item(FEAT_TRAINS, Item_Siemens_ACS64_Liv32, Siemens_ACS64_Liv32_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_SIEMENS_ACS64);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Siemens_ACS64_IntroDate;		
+		length:                         8;
+		
+		speed:							Siemens_ACS64_Speed mph;
+		cost_factor:					Siemens_ACS64_CostFactor;
+		running_cost_factor:			Siemens_ACS64_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Siemens_ACS64_Power;
+		weight:							Siemens_ACS64_Weight;
+		
+        variant_group: 					Item_Siemens_ACS64_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Siemens_ACS64_Liv32_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_Siemens_ACS64_Liv32_Purchase_Stack;
+        additional_text: 				string(STR_INFO_SIEMENS_ACS64);
+		reverse_build_probability:		return 50;
+}
+}
+
 spriteset(spriteset_PRR_L6_PantoUp,   "gfx/PRR_L6_PantoUp.png") {template_7(7, 39)}
 spriteset(spriteset_PRR_L6_PantoUp_r,   "gfx/PRR_L6_PantoUp.png") {template_7(7, 69)}
 spriteset(spriteset_PRR_L6_PantoDown,   "gfx/PRR_L6_PantoDown.png") {template_7(7, 39)}
