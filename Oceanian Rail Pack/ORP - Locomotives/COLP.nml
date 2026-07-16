@@ -12614,20 +12614,14 @@ switch(FEAT_TRAINS, SELF, switch_Comeng_CL627_Pantograph_PantoUp_r, train_is_dri
  1: spriteset_Comeng_CL627_PantoUp;
 }
 
-random_switch(FEAT_TRAINS, SELF, switch_Comeng_CL627_Pantograph_Random, bitmask(TRIGGER_VEHICLE_SERVICE)){ //verify this works before using it in more stuff
-    1 : spriteset_Comeng_CL627_PantoBothUp;
-    1 : switch_Comeng_CL627_Pantograph_PantoUp;
-	1 : switch_Comeng_CL627_Pantograph_PantoUp_r;
-}
-
 switch(FEAT_TRAINS, SELF, switch_Comeng_CL627_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
  0: spriteset_Comeng_CL627_PantoDown;
- 1: switch_Comeng_CL627_Pantograph_Random;
+ 1: switch_Comeng_CL627_Pantograph_PantoUp;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Comeng_CL627_r_railtype, tile_powers_railtype("OHLE_DC")) {
  0: spriteset_Comeng_CL627_PantoDown;
- 1: switch_Comeng_CL627_Pantograph_Random;
+ 1: switch_Comeng_CL627_Pantograph_PantoUp_r;
 }
 
 //Comeng_CL627_Liv0
@@ -12745,20 +12739,14 @@ switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Pantograph_PantoUp_r, train_is_driv
  1: spriteset_Clyde_JE28C_PantoUp;
 }
 
-random_switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Pantograph_Random, bitmask(TRIGGER_VEHICLE_SERVICE)){ //verify this works before using it in more stuff
-    1 : spriteset_Clyde_JE28C_PantoBothUp;
-    1 : switch_Clyde_JE28C_Pantograph_PantoUp;
-	1 : switch_Clyde_JE28C_Pantograph_PantoUp_r;
-}
-
 switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
  0: spriteset_Clyde_JE28C_PantoDown;
- 1: switch_Clyde_JE28C_Pantograph_Random;
+ 1: switch_Clyde_JE28C_Pantograph_PantoUp;
 }
 
 switch(FEAT_TRAINS, SELF, switch_Clyde_JE28C_r_railtype, tile_powers_railtype("OHLE_DC")) {
  0: spriteset_Clyde_JE28C_PantoDown;
- 1: switch_Clyde_JE28C_Pantograph_Random;
+ 1: switch_Clyde_JE28C_Pantograph_PantoUp_r;
 }
 
 //Clyde_JE28C_Liv0

@@ -1,7 +1,7 @@
 ##grflangid 0x01
 
 STR_NAME	:Oceanian Extra Station Names
-STR_DESC	:A pack containting extra Australian/Kiwi style station names. Created by Ragin1_ (Zachary Moore), Based on the work of Gwyd and JGR
+STR_DESC	:A pack containting extra Australian/Kiwi style station names. Created by Ragin1_ (Zoe Moore), Based on the work of Gwyd and JGR
 
 STR_ERROR_JGR:You must use a recent version of JGR Patch Pack, or extra station names may not function
 
