@@ -402,10 +402,12 @@ STR_NAME_EE_EDCLASS:English-Electric ED Class
 STR_INFO_EE_EDCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Narrow Gauge{}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NZR ED Class
 
 STR_NAME_EE_LCLASS:English-Electric L Class
-STR_INFO_EE_LCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}VR L Class
+STR_INFO_EE_LCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}VR L Class
+STR_NAME_EE_LCLASS_BG:English-Electric L Class
+STR_INFO_EE_LCLASS_BG:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}VR L Class
 
 STR_NAME_METROVICK_46CLASS:Metro-Vick 46 Class
-STR_INFO_METROVICK_46CLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW 46 Class {}{GOLD}King of the Mountain
+STR_INFO_METROVICK_46CLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW 46 Class {}{GOLD}King of the Mountain
 
 STR_NAME_CLYDE_JE28C:Clyde JE28C
 STR_INFO_CLYDE_JE28C:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Standard Gauge{}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Proposed Clyde locomotive for NSW PTC

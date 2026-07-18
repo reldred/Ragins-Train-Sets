@@ -136,6 +136,10 @@ railtypetable {
 	TR_UNIVERSAL: [_AAE, RAIL], 
 	BG_RAIL: [BAAN, RAIL], 
 	BG_RAIL_ONLY: [BAAN], 
+	BG_RAIL_OHLE_DC: [BAAD, BAAE, SAAD, SAAE, ELRL], 
+	BG_RAIL_ONLY_OHLE_DC: [BAAD, BAAE],
+	BG_RAIL_OHLE_AC: [BAAA, BAAE, SAAA, SAAE, ELRL], 
+	BG_RAIL_ONLY_OHLE_AC: [BAAA, BAAE],
 	NG_RAIL: [NAAN, RAIL], 
 	NG_RAIL_ONLY: [NAAN], 
 	NG_RAIL_OHLE_DC: [NAAD, NAAE, SAAD, SAAE, ELRL], 
@@ -12353,7 +12357,7 @@ item(FEAT_TRAINS, Item_Comeng_CL632_Liv0, 32400) {
 }
 
 //ID
-const EE_EDClass_ID = 34350;
+const EE_EDClass_ID = 34450;
 //introduction_date
 const EE_EDClass_IntroDate = date(1938, 1, 1);
 //speed
@@ -12473,6 +12477,523 @@ item(FEAT_TRAINS, Item_EE_EDClass_Liv0, EE_EDClass_Liv0_ID) {
 }
 }
 
+//ID
+const EE_LClass_ID = 34600;
+//introduction_date
+const EE_LClass_IntroDate = date(1953, 1, 1);
+//speed
+const EE_LClass_Speed = 120;
+//cost_factor
+const EE_LClass_CostFactor = 42;
+//running_cost_factor
+const EE_LClass_RunningCostFactor = 111;
+//power
+const EE_LClass_Power = 2400;
+//weight
+const EE_LClass_Weight = 97;
+//length
+const EE_LClass_Length = 7;
+
+spriteset(spriteset_EE_LClass_Pantograph_Purchase,   "gfx/EE_LClass_Pantographs.png") {template_purchase_7(7, 21)}
+
+spriteset(spriteset_EE_LClass_PantoDown,   "gfx/EE_LClass_Pantographs.png") {template_7_repeat(7, 39)}
+spriteset(spriteset_EE_LClass_PantoUp,   "gfx/EE_LClass_Pantographs.png") {template_7(7, 69)}
+spriteset(spriteset_EE_LClass_PantoUp_r,   "gfx/EE_LClass_Pantographs.png") {template_7_r(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_Pantograph_PantoUp, train_is_driving_backwards) {
+ 0: spriteset_EE_LClass_PantoUp;
+ 1: spriteset_EE_LClass_PantoUp_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_Pantograph_PantoUp_r, train_is_driving_backwards) {
+ 0: spriteset_EE_LClass_PantoUp_r;
+ 1: spriteset_EE_LClass_PantoUp;
+}
+
+//Standard Gauge
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_EE_LClass_PantoDown;
+ 1: switch_EE_LClass_Pantograph_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_r_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_EE_LClass_PantoDown;
+ 1: switch_EE_LClass_Pantograph_PantoUp_r;
+}
+
+//Broad Gauge
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_BG_Fw_railtype, tile_powers_railtype("BG_RAIL_OHLE_DC")) {
+ 0: spriteset_EE_LClass_PantoDown;
+ 1: switch_EE_LClass_Pantograph_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_BG_r_railtype, tile_powers_railtype("BG_RAIL_OHLE_DC")) {
+ 0: spriteset_EE_LClass_PantoDown;
+ 1: switch_EE_LClass_Pantograph_PantoUp_r;
+}
+
+//EE_LClass_Liv0
+spriteset(spriteset_EE_LClass_Liv0_Purchase,   "gfx/EE_LClass_Liv0.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_EE_LClass_Liv0,   "gfx/EE_LClass_Liv0.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv0_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv0_Purchase;
+    1: switch_Couplers_7_Repeat_Purchase;
+	2: spriteset_EE_LClass_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv0;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv0;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_Liv0_position, vehicle_is_flipped) {
+ 0: switch_EE_LClass_Liv0_Fw;
+ 1: switch_EE_LClass_Liv0_r;
+}
+
+const EE_LClass_Liv0_ID = (EE_LClass_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_EE_LClass_Liv0, EE_LClass_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EE_LCLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_LClass_IntroDate;		
+		length:                         EE_LClass_Length;
+		
+		speed:							EE_LClass_Speed km/h;
+		cost_factor:					EE_LClass_CostFactor;
+		running_cost_factor:			EE_LClass_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_LClass_Power;
+		weight:							EE_LClass_Weight;
+		
+//        variant_group: 					Item_EE_LClass_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_LClass_Liv0_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EE_LClass_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_LCLASS);
+		reverse_build_probability:		return 50;
+}
+}
+
+
+//EE_LClass_BG_Liv0
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv0_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv0;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_BG_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv0_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv0;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_BG_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv0_position, vehicle_is_flipped) {
+ 0: switch_EE_LClass_BG_Liv0_Fw;
+ 1: switch_EE_LClass_BG_Liv0_r;
+}
+
+const EE_LClass_BG_Liv0_ID = (EE_LClass_Liv0_ID + 50);
+
+item(FEAT_TRAINS, Item_EE_LClass_BG_Liv0, EE_LClass_BG_Liv0_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY_OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EE_LCLASS_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_LClass_IntroDate;		
+		length:                         EE_LClass_Length;
+		
+		speed:							EE_LClass_Speed km/h;
+		cost_factor:					EE_LClass_CostFactor;
+		running_cost_factor:			EE_LClass_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_LClass_Power;
+		weight:							EE_LClass_Weight;
+		
+//        variant_group: 					Item_EE_LClass_BG_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_LClass_BG_Liv0_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EE_LClass_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_LCLASS_BG);
+		reverse_build_probability:		return 50;
+}
+}
+
+//EE_LClass_Liv23
+spriteset(spriteset_EE_LClass_Liv23_Purchase,   "gfx/EE_LClass_Liv23.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_EE_LClass_Liv23,   "gfx/EE_LClass_Liv23.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv23_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv23_Purchase;
+    1: switch_Couplers_7_Repeat_Purchase;
+	2: spriteset_EE_LClass_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv23_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv23;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv23_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv23;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_Liv23_position, vehicle_is_flipped) {
+ 0: switch_EE_LClass_Liv23_Fw;
+ 1: switch_EE_LClass_Liv23_r;
+}
+
+const EE_LClass_Liv23_ID = (EE_LClass_ID + Liv23_ID);
+
+item(FEAT_TRAINS, Item_EE_LClass_Liv23, EE_LClass_Liv23_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EE_LCLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_LClass_IntroDate;		
+		length:                         EE_LClass_Length;
+		
+		speed:							EE_LClass_Speed km/h;
+		cost_factor:					EE_LClass_CostFactor;
+		running_cost_factor:			EE_LClass_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_LClass_Power;
+		weight:							EE_LClass_Weight;
+		
+        variant_group: 					Item_EE_LClass_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_LClass_Liv23_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EE_LClass_Liv23_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_LCLASS);
+		reverse_build_probability:		return 50;
+}
+}
+
+
+//EE_LClass_BG_Liv23
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv23_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv23;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_BG_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv23_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv23;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_BG_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv23_position, vehicle_is_flipped) {
+ 0: switch_EE_LClass_BG_Liv23_Fw;
+ 1: switch_EE_LClass_BG_Liv23_r;
+}
+
+const EE_LClass_BG_Liv23_ID = (EE_LClass_Liv23_ID + 50);
+
+item(FEAT_TRAINS, Item_EE_LClass_BG_Liv23, EE_LClass_BG_Liv23_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY_OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EE_LCLASS_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_LClass_IntroDate;		
+		length:                         EE_LClass_Length;
+		
+		speed:							EE_LClass_Speed km/h;
+		cost_factor:					EE_LClass_CostFactor;
+		running_cost_factor:			EE_LClass_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_LClass_Power;
+		weight:							EE_LClass_Weight;
+		
+        variant_group: 					Item_EE_LClass_BG_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_LClass_BG_Liv23_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EE_LClass_Liv23_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_LCLASS_BG);
+		reverse_build_probability:		return 50;
+}
+}
+
+//EE_LClass_Liv24
+spriteset(spriteset_EE_LClass_Liv24_Purchase,   "gfx/EE_LClass_Liv24.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_EE_LClass_Liv24,   "gfx/EE_LClass_Liv24.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv24_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv24_Purchase;
+    1: switch_Couplers_7_Repeat_Purchase;
+	2: spriteset_EE_LClass_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv24_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv24;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_Liv24_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv24;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_Liv24_position, vehicle_is_flipped) {
+ 0: switch_EE_LClass_Liv24_Fw;
+ 1: switch_EE_LClass_Liv24_r;
+}
+
+const EE_LClass_Liv24_ID = (EE_LClass_ID + Liv24_ID);
+
+item(FEAT_TRAINS, Item_EE_LClass_Liv24, EE_LClass_Liv24_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EE_LCLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_LClass_IntroDate;		
+		length:                         EE_LClass_Length;
+		
+		speed:							EE_LClass_Speed km/h;
+		cost_factor:					EE_LClass_CostFactor;
+		running_cost_factor:			EE_LClass_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_LClass_Power;
+		weight:							EE_LClass_Weight;
+		
+        variant_group: 					Item_EE_LClass_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_LClass_Liv24_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EE_LClass_Liv24_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_LCLASS);
+		reverse_build_probability:		return 50;
+}
+}
+
+
+//EE_LClass_BG_Liv24
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv24_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv24;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_BG_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv24_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EE_LClass_Liv24;
+	1: switch_Couplers_7_Repeat;
+    2: switch_EE_LClass_BG_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EE_LClass_BG_Liv24_position, vehicle_is_flipped) {
+ 0: switch_EE_LClass_BG_Liv24_Fw;
+ 1: switch_EE_LClass_BG_Liv24_r;
+}
+
+const EE_LClass_BG_Liv24_ID = (EE_LClass_Liv24_ID + 50);
+
+item(FEAT_TRAINS, Item_EE_LClass_BG_Liv24, EE_LClass_BG_Liv24_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     BG_RAIL_ONLY_OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EE_LCLASS_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EE_LClass_IntroDate;		
+		length:                         EE_LClass_Length;
+		
+		speed:							EE_LClass_Speed km/h;
+		cost_factor:					EE_LClass_CostFactor;
+		running_cost_factor:			EE_LClass_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EE_LClass_Power;
+		weight:							EE_LClass_Weight;
+		
+        variant_group: 					Item_EE_LClass_BG_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EE_LClass_BG_Liv24_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EE_LClass_Liv24_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EE_LCLASS_BG);
+		reverse_build_probability:		return 50;
+}
+}
+
 spriteset(spriteset_MetroVick_46Class_PantoDown,   "gfx/MetroVick_46Class_Pantographs.png") {template_7_repeat(7, 39)}
 spriteset(spriteset_MetroVick_46Class_PantoBothUp,   "gfx/MetroVick_46Class_Pantographs.png") {template_7_repeat(7, 69)}
 spriteset(spriteset_MetroVick_46Class_PantoUp,   "gfx/MetroVick_46Class_Pantographs.png") {template_7(7, 99)}
@@ -12540,7 +13061,7 @@ switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_position, vehicle_is_fli
  1: switch_MetroVick_46Class_Liv0_r;
 }
 
-item(FEAT_TRAINS, Item_MetroVick_46Class_Liv0, 34600) {
+item(FEAT_TRAINS, Item_MetroVick_46Class_Liv0, 34700) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -12583,7 +13104,7 @@ item(FEAT_TRAINS, Item_MetroVick_46Class_Liv0, 34600) {
 }
 
 //ID
-const Comeng_CL627_ID = 34650;
+const Comeng_CL627_ID = 34750;
 //introduction_date
 const Comeng_CL627_IntroDate = date(1979, 1, 1);
 //speed
@@ -12708,7 +13229,7 @@ item(FEAT_TRAINS, Item_Comeng_CL627_Liv0, Comeng_CL627_Liv0_ID) {
 }
 
 //ID
-const Clyde_JE28C_ID = 34700;
+const Clyde_JE28C_ID = 34800;
 //introduction_date
 const Clyde_JE28C_IntroDate = date(1980, 1, 1);
 //speed
@@ -12924,7 +13445,7 @@ switch(FEAT_TRAINS, SELF, switch_Comeng_CL627A_Liv0_position, vehicle_is_flipped
  1: switch_Comeng_CL627A_Liv0_r;
 }
 
-item(FEAT_TRAINS, Item_Comeng_CL627A_Liv0, 34750) {
+item(FEAT_TRAINS, Item_Comeng_CL627A_Liv0, 34850) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -13003,7 +13524,7 @@ switch(FEAT_TRAINS, SELF, switch_Comeng_CL627A_Liv0_TriBo_position, vehicle_is_f
  1: switch_Comeng_CL627A_Liv0_TriBo_r;
 }
 
-item(FEAT_TRAINS, Item_Comeng_CL627A_Liv0_TriBo, 34800) {
+item(FEAT_TRAINS, Item_Comeng_CL627A_Liv0_TriBo, 34900) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;
@@ -13069,7 +13590,7 @@ switch (FEAT_TRAINS, SELF, switch_Clyde_JAE393B_Liv0_Stack, [
 }
 
 
-item(FEAT_TRAINS, Item_Clyde_JAE393B_Liv0, 34900) {
+item(FEAT_TRAINS, Item_Clyde_JAE393B_Liv0, 35000) {
     property {
         sprite_id:                        SPRITE_ID_NEW_TRAIN;
         refit_cost:                        0;

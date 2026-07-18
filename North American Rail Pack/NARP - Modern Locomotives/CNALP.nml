@@ -13080,6 +13080,86 @@ item(FEAT_TRAINS, Item_EMD_AEM7_Liv0, EMD_AEM7_Liv0_ID) {
 }
 }
 
+//EMD_AEM7_Liv1
+spriteset(spriteset_EMD_AEM7_Liv1_Purchase,   "gfx/EMD_AEM7_Liv1.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_EMD_AEM7_Liv1,   "gfx/EMD_AEM7_Liv1.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv1_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv1_Purchase;
+    1: spriteset_EMD_AEM7_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv1_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv1;
+	1: switch_EMD_AEM7_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv1_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv1;
+	1: switch_EMD_AEM7_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv1_position, vehicle_is_flipped) {
+ 0: switch_EMD_AEM7_Liv1_Fw;
+ 1: switch_EMD_AEM7_Liv1_r;
+}
+
+const EMD_AEM7_Liv1_ID = (EMD_AEM7_ID + Liv1_ID);
+
+item(FEAT_TRAINS, Item_EMD_AEM7_Liv1, EMD_AEM7_Liv1_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EMD_AEM7);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EMD_AEM7_IntroDate;		
+		length:                         EMD_AEM7_Length;
+		
+		speed:							EMD_AEM7_Speed mph;
+		cost_factor:					EMD_AEM7_CostFactor;
+		running_cost_factor:			EMD_AEM7_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EMD_AEM7_Power;
+		weight:							EMD_AEM7_Weight;
+		
+        variant_group: 					Item_EMD_AEM7_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EMD_AEM7_Liv1_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EMD_AEM7_Liv1_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EMD_AEM7);
+		reverse_build_probability:		return 50;
+}
+}
+
 //EMD_AEM7_Liv15
 spriteset(spriteset_EMD_AEM7_Liv15_Purchase,   "gfx/EMD_AEM7_Liv15.png") {template_purchase_7(7, 21)}
 spriteset(spriteset_EMD_AEM7_Liv15,   "gfx/EMD_AEM7_Liv15.png") {template_7_repeat(7, 39)}
@@ -13315,6 +13395,326 @@ item(FEAT_TRAINS, Item_EMD_AEM7_Liv17, EMD_AEM7_Liv17_ID) {
         default: 						switch_EMD_AEM7_Liv17_position;
 //		sound_effect:					 switch_Modern_Electric_Horn;
         purchase: 						switch_EMD_AEM7_Liv17_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EMD_AEM7);
+		reverse_build_probability:		return 50;
+}
+}
+
+//EMD_AEM7_Liv32
+spriteset(spriteset_EMD_AEM7_Liv32_Purchase,   "gfx/EMD_AEM7_Liv32.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_EMD_AEM7_Liv32,   "gfx/EMD_AEM7_Liv32.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv32_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv32_Purchase;
+    1: spriteset_EMD_AEM7_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv32_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv32;
+	1: switch_EMD_AEM7_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv32_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv32;
+	1: switch_EMD_AEM7_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv32_position, vehicle_is_flipped) {
+ 0: switch_EMD_AEM7_Liv32_Fw;
+ 1: switch_EMD_AEM7_Liv32_r;
+}
+
+const EMD_AEM7_Liv32_ID = (EMD_AEM7_ID + Liv32_ID);
+
+item(FEAT_TRAINS, Item_EMD_AEM7_Liv32, EMD_AEM7_Liv32_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EMD_AEM7);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EMD_AEM7_IntroDate;		
+		length:                         EMD_AEM7_Length;
+		
+		speed:							EMD_AEM7_Speed mph;
+		cost_factor:					EMD_AEM7_CostFactor;
+		running_cost_factor:			EMD_AEM7_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EMD_AEM7_Power;
+		weight:							EMD_AEM7_Weight;
+		
+        variant_group: 					Item_EMD_AEM7_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EMD_AEM7_Liv32_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EMD_AEM7_Liv32_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EMD_AEM7);
+		reverse_build_probability:		return 50;
+}
+}
+
+//EMD_AEM7_Liv33
+spriteset(spriteset_EMD_AEM7_Liv33_Purchase,   "gfx/EMD_AEM7_Liv33.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_EMD_AEM7_Liv33,   "gfx/EMD_AEM7_Liv33.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv33_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv33_Purchase;
+    1: spriteset_EMD_AEM7_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv33_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv33;
+	1: switch_EMD_AEM7_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv33_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv33;
+	1: switch_EMD_AEM7_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv33_position, vehicle_is_flipped) {
+ 0: switch_EMD_AEM7_Liv33_Fw;
+ 1: switch_EMD_AEM7_Liv33_r;
+}
+
+const EMD_AEM7_Liv33_ID = (EMD_AEM7_ID + Liv33_ID);
+
+item(FEAT_TRAINS, Item_EMD_AEM7_Liv33, EMD_AEM7_Liv33_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EMD_AEM7);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EMD_AEM7_IntroDate;		
+		length:                         EMD_AEM7_Length;
+		
+		speed:							EMD_AEM7_Speed mph;
+		cost_factor:					EMD_AEM7_CostFactor;
+		running_cost_factor:			EMD_AEM7_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EMD_AEM7_Power;
+		weight:							EMD_AEM7_Weight;
+		
+        variant_group: 					Item_EMD_AEM7_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EMD_AEM7_Liv33_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EMD_AEM7_Liv33_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EMD_AEM7);
+		reverse_build_probability:		return 50;
+}
+}
+
+//EMD_AEM7_Liv34
+spriteset(spriteset_EMD_AEM7_Liv34_Purchase,   "gfx/EMD_AEM7_Liv34.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_EMD_AEM7_Liv34,   "gfx/EMD_AEM7_Liv34.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv34_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv34_Purchase;
+    1: spriteset_EMD_AEM7_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv34_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv34;
+	1: switch_EMD_AEM7_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv34_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv34;
+	1: switch_EMD_AEM7_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv34_position, vehicle_is_flipped) {
+ 0: switch_EMD_AEM7_Liv34_Fw;
+ 1: switch_EMD_AEM7_Liv34_r;
+}
+
+const EMD_AEM7_Liv34_ID = (EMD_AEM7_ID + Liv34_ID);
+
+item(FEAT_TRAINS, Item_EMD_AEM7_Liv34, EMD_AEM7_Liv34_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EMD_AEM7);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EMD_AEM7_IntroDate;		
+		length:                         EMD_AEM7_Length;
+		
+		speed:							EMD_AEM7_Speed mph;
+		cost_factor:					EMD_AEM7_CostFactor;
+		running_cost_factor:			EMD_AEM7_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EMD_AEM7_Power;
+		weight:							EMD_AEM7_Weight;
+		
+        variant_group: 					Item_EMD_AEM7_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EMD_AEM7_Liv34_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EMD_AEM7_Liv34_Purchase_Stack;
+        additional_text: 				string(STR_INFO_EMD_AEM7);
+		reverse_build_probability:		return 50;
+}
+}
+
+//EMD_AEM7_Liv38
+spriteset(spriteset_EMD_AEM7_Liv38_Purchase,   "gfx/EMD_AEM7_Liv38.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_EMD_AEM7_Liv38,   "gfx/EMD_AEM7_Liv38.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv38_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv38_Purchase;
+    1: spriteset_EMD_AEM7_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv38_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv38;
+	1: switch_EMD_AEM7_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv38_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_EMD_AEM7_Liv38;
+	1: switch_EMD_AEM7_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_EMD_AEM7_Liv38_position, vehicle_is_flipped) {
+ 0: switch_EMD_AEM7_Liv38_Fw;
+ 1: switch_EMD_AEM7_Liv38_r;
+}
+
+const EMD_AEM7_Liv38_ID = (EMD_AEM7_ID + Liv38_ID);
+
+item(FEAT_TRAINS, Item_EMD_AEM7_Liv38, EMD_AEM7_Liv38_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_AC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_EMD_AEM7);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              EMD_AEM7_IntroDate;		
+		length:                         EMD_AEM7_Length;
+		
+		speed:							EMD_AEM7_Speed mph;
+		cost_factor:					EMD_AEM7_CostFactor;
+		running_cost_factor:			EMD_AEM7_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							EMD_AEM7_Power;
+		weight:							EMD_AEM7_Weight;
+		
+        variant_group: 					Item_EMD_AEM7_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_EMD_AEM7_Liv38_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_EMD_AEM7_Liv38_Purchase_Stack;
         additional_text: 				string(STR_INFO_EMD_AEM7);
 		reverse_build_probability:		return 50;
 }
