@@ -3954,6 +3954,8 @@ const Clyde_AJ16C_RunningCostFactor = 116;
 const Clyde_AJ16C_Power = 1800;
 //weight
 const Clyde_AJ16C_Weight = 108;
+//length
+const Clyde_AJ16C_Length = 8;
 
 //Clyde_AJ16C_Liv0
 spriteset(spriteset_Clyde_AJ16C_Liv0_Purchase,   "gfx/Clyde_AJ16C_Liv0.png") {template_purchase_8(7, 21)}
@@ -4027,7 +4029,7 @@ item(FEAT_TRAINS, Item_Clyde_AJ16C_Liv0, Clyde_AJ16C_Liv0_ID) {
 		tractive_effort_coefficient:	0.3;
 		
         introduction_date:              Clyde_AJ16C_IntroDate;		
-		length:                         8;
+		length:                         Clyde_AJ16C_Length;
 		
 		speed:							Clyde_AJ16C_Speed km/h;
 		cost_factor:					Clyde_AJ16C_CostFactor;
@@ -4120,7 +4122,7 @@ item(FEAT_TRAINS, Item_Clyde_AJ16C_Liv16, Clyde_AJ16C_Liv16_ID) {
 		tractive_effort_coefficient:	0.3;
 		
         introduction_date:              Clyde_AJ16C_IntroDate;		
-		length:                         8;
+		length:                         Clyde_AJ16C_Length;
 		
 		speed:							Clyde_AJ16C_Speed km/h;
 		cost_factor:					Clyde_AJ16C_CostFactor;
@@ -4227,7 +4229,7 @@ item(FEAT_TRAINS, Item_Clyde_AJ16C_Liv17, Clyde_AJ16C_Liv17_ID) {
 		tractive_effort_coefficient:	0.3;
 		
         introduction_date:              Clyde_AJ16C_IntroDate;		
-		length:                         8;
+		length:                         Clyde_AJ16C_Length;
 		
 		speed:							Clyde_AJ16C_Speed km/h;
 		cost_factor:					Clyde_AJ16C_CostFactor;
@@ -12994,8 +12996,26 @@ item(FEAT_TRAINS, Item_EE_LClass_BG_Liv24, EE_LClass_BG_Liv24_ID) {
 }
 }
 
+//ID
+const MetroVick_46Class_ID = 34700;
+//introduction_date
+const MetroVick_46Class_IntroDate = date(1956, 1, 1);
+//speed
+const MetroVick_46Class_Speed = 115;
+//cost_factor
+const MetroVick_46Class_CostFactor = 48;
+//running_cost_factor
+const MetroVick_46Class_RunningCostFactor = 129;
+//power
+const MetroVick_46Class_Power = 3400;
+//weight
+const MetroVick_46Class_Weight = 111;
+//length
+const MetroVick_46Class_Length = 7;
+
+spriteset(spriteset_MetroVick_46Class_Pantograph_Purchase,   "gfx/MetroVick_46Class_Pantographs.png") {template_purchase_7(7, 21)}
+
 spriteset(spriteset_MetroVick_46Class_PantoDown,   "gfx/MetroVick_46Class_Pantographs.png") {template_7_repeat(7, 39)}
-spriteset(spriteset_MetroVick_46Class_PantoBothUp,   "gfx/MetroVick_46Class_Pantographs.png") {template_7_repeat(7, 69)}
 spriteset(spriteset_MetroVick_46Class_PantoUp,   "gfx/MetroVick_46Class_Pantographs.png") {template_7(7, 99)}
 spriteset(spriteset_MetroVick_46Class_PantoUp_r,   "gfx/MetroVick_46Class_Pantographs.png") {template_7_r(7, 99)}
 
@@ -13009,10 +13029,14 @@ switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Pantograph_PantoUp_r, train_i
  1: spriteset_MetroVick_46Class_PantoUp;
 }
 
- random_switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Pantograph_Random, bitmask(TRIGGER_VEHICLE_SERVICE)){ //verify this works before using it in more stuff
-    1 : spriteset_MetroVick_46Class_PantoBothUp;
-    1 : switch_MetroVick_46Class_Pantograph_PantoUp;
-	1 : switch_MetroVick_46Class_Pantograph_PantoUp_r;
+switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_MetroVick_46Class_PantoDown;
+ 1: switch_MetroVick_46Class_Pantograph_PantoUp;
+}
+
+switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_r_railtype, tile_powers_railtype("OHLE_DC")) {
+ 0: spriteset_MetroVick_46Class_PantoDown;
+ 1: switch_MetroVick_46Class_Pantograph_PantoUp_r;
 }
 
 //MetroVick_46Class_Liv0
@@ -13021,16 +13045,12 @@ spriteset(spriteset_MetroVick_46Class_Liv0,   "gfx/MetroVick_46Class_Liv0.png") 
 
 //Purchase Sprite Stacker
 switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_Purchase_Stack, [
-    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
     getbits(extra_callback_info1, 8, 8)
     ]) {
     0: spriteset_MetroVick_46Class_Liv0_Purchase;
-    1: switch_Couplers_7_Repeat_Purchase;    //Return
-}
-
-switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
- 0: spriteset_MetroVick_46Class_PantoDown;
- 1: switch_MetroVick_46Class_Pantograph_Random;
+    1: switch_Couplers_7_Repeat_Purchase;
+	2: spriteset_MetroVick_46Class_Pantograph_Purchase;
 }
 
 switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_Fw, [
@@ -13039,12 +13059,7 @@ switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_Fw, [
     ]) {
     0: spriteset_MetroVick_46Class_Liv0;
 	1: switch_Couplers_7_Repeat;
-    2: switch_MetroVick_46Class_Liv0_Fw_railtype;
-}
-
-switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_r_railtype, tile_powers_railtype("OHLE_DC")) {
- 0: spriteset_MetroVick_46Class_PantoDown;
- 1: switch_MetroVick_46Class_Pantograph_Random;
+    2: switch_MetroVick_46Class_Fw_railtype;
 }
 
 switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_r, [
@@ -13053,7 +13068,7 @@ switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_r, [
     ]) {
     0: spriteset_MetroVick_46Class_Liv0;
 	1: switch_Couplers_7_Repeat;
-    2: switch_MetroVick_46Class_Liv0_r_railtype;
+    2: switch_MetroVick_46Class_r_railtype;
 }
 
 switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_position, vehicle_is_flipped) {
@@ -13061,45 +13076,387 @@ switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv0_position, vehicle_is_fli
  1: switch_MetroVick_46Class_Liv0_r;
 }
 
-item(FEAT_TRAINS, Item_MetroVick_46Class_Liv0, 34700) {
+const MetroVick_46Class_Liv0_ID = (MetroVick_46Class_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_MetroVick_46Class_Liv0, MetroVick_46Class_Liv0_ID) {
     property {
-        sprite_id:                        SPRITE_ID_NEW_TRAIN;
-        refit_cost:                        0;
-        climates_available:                (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
-        bitmask_vehicle_info:            0;
-        misc_flags:                        bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
 
-        track_type:                        OHLE_DC;
-        running_cost_base:                RUNNING_COST_DIESEL;
-        engine_class:                     ENGINE_CLASS_ELECTRIC;
-//        ai_special_flag:                AI_FLAG_CARGO;
-        dual_headed:                    0; // <- Double Headed, so cab on each end
-
-        visual_effect_and_powered: VISUAL_EFFECT_ELECTRIC;
-
-        name:                            string(STR_NAME_METROVICK_46CLASS);
-        introduction_date:                date(1956,1,1);
-        vehicle_life:                     50;
-        model_life:                        30;
-        length:                            7;
-
-        weight:                        111 ton;
-        speed:                            115 km/h;
-        power:                            3400 hp;
-        tractive_effort_coefficient:     0.3;
-        cost_factor:                     48;
-        running_cost_factor:             129;
-		cargo_capacity:                  0;
+        name:                           string(STR_NAME_METROVICK_46CLASS);
 		
-//        variant_group: Item_MetroVick_46Class_Liv0;
-//        extra_flags:  bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              MetroVick_46Class_IntroDate;		
+		length:                         MetroVick_46Class_Length;
+		
+		speed:							MetroVick_46Class_Speed km/h;
+		cost_factor:					MetroVick_46Class_CostFactor;
+		running_cost_factor:			MetroVick_46Class_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							MetroVick_46Class_Power;
+		weight:							MetroVick_46Class_Weight;
+		
+//        variant_group: 					Item_MetroVick_46Class_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
     }
     graphics {
-        default: switch_MetroVick_46Class_Liv0_position;
-//		sound_effect: switch_Modern_Electric_Horn;
-        purchase: switch_MetroVick_46Class_Liv0_Purchase_Stack;
-        additional_text: string(STR_INFO_METROVICK_46CLASS);
-		reverse_build_probability: return 50;
+        default: 						switch_MetroVick_46Class_Liv0_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_MetroVick_46Class_Liv0_Purchase_Stack;
+        additional_text: 				string(STR_INFO_METROVICK_46CLASS);
+		reverse_build_probability:		return 50;
+}
+}
+
+//MetroVick_46Class_Liv17
+spriteset(spriteset_MetroVick_46Class_Liv17_Purchase,   "gfx/MetroVick_46Class_Liv17.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_MetroVick_46Class_Liv17,   "gfx/MetroVick_46Class_Liv17.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv17_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv17_Purchase;
+    1: switch_Couplers_7_Repeat_Purchase;
+	2: spriteset_MetroVick_46Class_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv17_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv17;
+	1: switch_Couplers_7_Repeat;
+    2: switch_MetroVick_46Class_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv17_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv17;
+	1: switch_Couplers_7_Repeat;
+    2: switch_MetroVick_46Class_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv17_position, vehicle_is_flipped) {
+ 0: switch_MetroVick_46Class_Liv17_Fw;
+ 1: switch_MetroVick_46Class_Liv17_r;
+}
+
+const MetroVick_46Class_Liv17_ID = (MetroVick_46Class_ID + Liv17_ID);
+
+item(FEAT_TRAINS, Item_MetroVick_46Class_Liv17, MetroVick_46Class_Liv17_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_METROVICK_46CLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              MetroVick_46Class_IntroDate;		
+		length:                         MetroVick_46Class_Length;
+		
+		speed:							MetroVick_46Class_Speed km/h;
+		cost_factor:					MetroVick_46Class_CostFactor;
+		running_cost_factor:			MetroVick_46Class_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							MetroVick_46Class_Power;
+		weight:							MetroVick_46Class_Weight;
+		
+        variant_group: 					Item_MetroVick_46Class_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_MetroVick_46Class_Liv17_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_MetroVick_46Class_Liv17_Purchase_Stack;
+        additional_text: 				string(STR_INFO_METROVICK_46CLASS);
+		reverse_build_probability:		return 50;
+}
+}
+
+//MetroVick_46Class_Liv18
+spriteset(spriteset_MetroVick_46Class_Liv18_Purchase,   "gfx/MetroVick_46Class_Liv18.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_MetroVick_46Class_Liv18,   "gfx/MetroVick_46Class_Liv18.png") {template_7_repeat(7, 39)}
+spriteset(spriteset_MetroVick_46Class_Liv18A,   "gfx/MetroVick_46Class_Liv18A.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv18_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv18_Purchase;
+    1: switch_Couplers_7_Repeat_Purchase;
+	2: spriteset_MetroVick_46Class_Pantograph_Purchase;
+}
+
+random_switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv18_Random){
+    1 : spriteset_MetroVick_46Class_Liv18;
+	1 : spriteset_MetroVick_46Class_Liv18A;
+}
+
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv18_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_MetroVick_46Class_Liv18_Random;
+	1: switch_Couplers_7_Repeat;
+    2: switch_MetroVick_46Class_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv18_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_MetroVick_46Class_Liv18_Random;
+	1: switch_Couplers_7_Repeat;
+    2: switch_MetroVick_46Class_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv18_position, vehicle_is_flipped) {
+ 0: switch_MetroVick_46Class_Liv18_Fw;
+ 1: switch_MetroVick_46Class_Liv18_r;
+}
+
+const MetroVick_46Class_Liv18_ID = (MetroVick_46Class_ID + Liv18_ID);
+
+item(FEAT_TRAINS, Item_MetroVick_46Class_Liv18, MetroVick_46Class_Liv18_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_METROVICK_46CLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              MetroVick_46Class_IntroDate;		
+		length:                         MetroVick_46Class_Length;
+		
+		speed:							MetroVick_46Class_Speed km/h;
+		cost_factor:					MetroVick_46Class_CostFactor;
+		running_cost_factor:			MetroVick_46Class_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							MetroVick_46Class_Power;
+		weight:							MetroVick_46Class_Weight;
+		
+        variant_group: 					Item_MetroVick_46Class_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_MetroVick_46Class_Liv18_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_MetroVick_46Class_Liv18_Purchase_Stack;
+        additional_text: 				string(STR_INFO_METROVICK_46CLASS);
+		reverse_build_probability:		return 50;
+}
+}
+
+//MetroVick_46Class_Liv19
+spriteset(spriteset_MetroVick_46Class_Liv19_Purchase,   "gfx/MetroVick_46Class_Liv19.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_MetroVick_46Class_Liv19,   "gfx/MetroVick_46Class_Liv19.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv19_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv19_Purchase;
+    1: switch_Couplers_7_Repeat_Purchase;
+	2: spriteset_MetroVick_46Class_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv19_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv19;
+	1: switch_Couplers_7_Repeat;
+    2: switch_MetroVick_46Class_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv19_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv19;
+	1: switch_Couplers_7_Repeat;
+    2: switch_MetroVick_46Class_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv19_position, vehicle_is_flipped) {
+ 0: switch_MetroVick_46Class_Liv19_Fw;
+ 1: switch_MetroVick_46Class_Liv19_r;
+}
+
+const MetroVick_46Class_Liv19_ID = (MetroVick_46Class_ID + Liv19_ID);
+
+item(FEAT_TRAINS, Item_MetroVick_46Class_Liv19, MetroVick_46Class_Liv19_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_METROVICK_46CLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              MetroVick_46Class_IntroDate;		
+		length:                         MetroVick_46Class_Length;
+		
+		speed:							MetroVick_46Class_Speed km/h;
+		cost_factor:					MetroVick_46Class_CostFactor;
+		running_cost_factor:			MetroVick_46Class_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							MetroVick_46Class_Power;
+		weight:							MetroVick_46Class_Weight;
+		
+        variant_group: 					Item_MetroVick_46Class_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_MetroVick_46Class_Liv19_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_MetroVick_46Class_Liv19_Purchase_Stack;
+        additional_text: 				string(STR_INFO_METROVICK_46CLASS);
+		reverse_build_probability:		return 50;
+}
+}
+
+//MetroVick_46Class_Liv20
+spriteset(spriteset_MetroVick_46Class_Liv20_Purchase,   "gfx/MetroVick_46Class_Liv20.png") {template_purchase_7(7, 21)}
+spriteset(spriteset_MetroVick_46Class_Liv20,   "gfx/MetroVick_46Class_Liv20.png") {template_7_repeat(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv20_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv20_Purchase;
+    1: switch_Couplers_7_Repeat_Purchase;
+	2: spriteset_MetroVick_46Class_Pantograph_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv20_Fw, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv20;
+	1: switch_Couplers_7_Repeat;
+    2: switch_MetroVick_46Class_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv20_r, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_MetroVick_46Class_Liv20;
+	1: switch_Couplers_7_Repeat;
+    2: switch_MetroVick_46Class_r_railtype;
+}
+
+switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_Liv20_position, vehicle_is_flipped) {
+ 0: switch_MetroVick_46Class_Liv20_Fw;
+ 1: switch_MetroVick_46Class_Liv20_r;
+}
+
+const MetroVick_46Class_Liv20_ID = (MetroVick_46Class_ID + Liv20_ID);
+
+item(FEAT_TRAINS, Item_MetroVick_46Class_Liv20, MetroVick_46Class_Liv20_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     OHLE_DC;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_METROVICK_46CLASS);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              MetroVick_46Class_IntroDate;		
+		length:                         MetroVick_46Class_Length;
+		
+		speed:							MetroVick_46Class_Speed km/h;
+		cost_factor:					MetroVick_46Class_CostFactor;
+		running_cost_factor:			MetroVick_46Class_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							MetroVick_46Class_Power;
+		weight:							MetroVick_46Class_Weight;
+		
+        variant_group: 					Item_MetroVick_46Class_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_MetroVick_46Class_Liv20_position;
+//		sound_effect:					 switch_Modern_Electric_Horn;
+        purchase: 						switch_MetroVick_46Class_Liv20_Purchase_Stack;
+        additional_text: 				string(STR_INFO_METROVICK_46CLASS);
+		reverse_build_probability:		return 50;
 }
 }
 
@@ -14495,7 +14852,7 @@ switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_3R_Liv0_Purchase_Stack, [
 
 switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_3R_Liv0_Fw_railtype, tile_powers_railtype("OHLE_DC")) {
  0: spriteset_MetroVick_46Class_PantoDown;
- 1: switch_MetroVick_46Class_Pantograph_Random;
+ 1: spriteset_MetroVick_46Class_PantoUp;
 }
 
 switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_3R_Liv0_Fw, [
@@ -14510,7 +14867,7 @@ switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_3R_Liv0_Fw, [
 
 switch(FEAT_TRAINS, SELF, switch_MetroVick_46Class_3R_Liv0_r_railtype, tile_powers_railtype("OHLE_DC")) {
  0: spriteset_MetroVick_46Class_PantoDown;
- 1: switch_MetroVick_46Class_Pantograph_Random;
+ 1: spriteset_MetroVick_46Class_PantoUp_r;
 }
 
 switch (FEAT_TRAINS, SELF, switch_MetroVick_46Class_3R_Liv0_r, [
