@@ -11909,6 +11909,140 @@ item(FEAT_TRAINS, Item_Clyde_JT26C2SS_81_Liv21, Clyde_JT26C2SS_81_Liv21_ID) {
 }
 }
 
+//Clyde_JT26C2SS_81_Liv41
+spriteset(spriteset_Clyde_JT26C2SS_81_Liv41_Purchase,   "gfx/Clyde_JT26C2SS_81_Liv41.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Clyde_JT26C2SS_81_Liv41,   "gfx/Clyde_JT26C2SS_81_Liv41.png") {template_8(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Clyde_JT26C2SS_81_Liv41_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_JT26C2SS_81_Liv41_Purchase;
+    1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_JT26C2SS_81_Liv41_Normal_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_JT26C2SS_81_Liv41;
+    1: switch_Couplers_8_Repeat;
+}
+
+const Clyde_JT26C2SS_81_Liv41_ID = (Clyde_JT26C2SS_81_ID + Liv41_ID);
+
+item(FEAT_TRAINS, Item_Clyde_JT26C2SS_81_Liv41, Clyde_JT26C2SS_81_Liv41_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_CLYDE_JT26C2SS_81);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_JT26C2SS_81_IntroDate;		
+		length:                         Clyde_JT26C2SS_81_Length;
+		
+		speed:							Clyde_JT26C2SS_81_Speed km/h;
+		cost_factor:					Clyde_JT26C2SS_81_CostFactor;
+		running_cost_factor:			Clyde_JT26C2SS_81_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_JT26C2SS_81_Power;
+		weight:							Clyde_JT26C2SS_81_Weight;
+		
+        variant_group: 					Item_Clyde_JT26C2SS_81_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+		default: 						switch_Clyde_JT26C2SS_81_Liv41_Normal_Stack;
+//		sound_effect: 					switch_Clyde_16_645;
+        purchase: 						switch_Clyde_JT26C2SS_81_Liv41_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_JT26C2SS_81);
+		reverse_build_probability: 		return 50;
+}
+}
+
+//Clyde_JT26C2SS_81_Liv46
+spriteset(spriteset_Clyde_JT26C2SS_81_Liv46_Purchase,   "gfx/Clyde_JT26C2SS_81_Liv46.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Clyde_JT26C2SS_81_Liv46,   "gfx/Clyde_JT26C2SS_81_Liv46.png") {template_8(7, 39)}
+
+//Purchase Sprite Stacker
+switch (FEAT_TRAINS, SELF, switch_Clyde_JT26C2SS_81_Liv46_Purchase_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_JT26C2SS_81_Liv46_Purchase;
+    1: switch_Couplers_8_Repeat_Purchase;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Clyde_JT26C2SS_81_Liv46_Normal_Stack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Clyde_JT26C2SS_81_Liv46;
+    1: switch_Couplers_8_Repeat;
+}
+
+const Clyde_JT26C2SS_81_Liv46_ID = (Clyde_JT26C2SS_81_ID + Liv46_ID);
+
+item(FEAT_TRAINS, Item_Clyde_JT26C2SS_81_Liv46, Clyde_JT26C2SS_81_Liv46_ID) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_DIESEL;
+        engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		visual_effect_and_powered(VISUAL_EFFECT_DIESEL, 3, DISABLE_WAGON_POWER);
+
+        name:                           string(STR_NAME_CLYDE_JT26C2SS_81);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Clyde_JT26C2SS_81_IntroDate;		
+		length:                         Clyde_JT26C2SS_81_Length;
+		
+		speed:							Clyde_JT26C2SS_81_Speed km/h;
+		cost_factor:					Clyde_JT26C2SS_81_CostFactor;
+		running_cost_factor:			Clyde_JT26C2SS_81_RunningCostFactor;
+		cargo_capacity: 				0;
+		power:							Clyde_JT26C2SS_81_Power;
+		weight:							Clyde_JT26C2SS_81_Weight;
+		
+        variant_group: 					Item_Clyde_JT26C2SS_81_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+		default: 						switch_Clyde_JT26C2SS_81_Liv46_Normal_Stack;
+//		sound_effect: 					switch_Clyde_16_645;
+        purchase: 						switch_Clyde_JT26C2SS_81_Liv46_Purchase_Stack;
+        additional_text: 				string(STR_INFO_CLYDE_JT26C2SS_81);
+		reverse_build_probability: 		return 50;
+}
+}
+
 //ID
 const Clyde_JT26C2SS_G_ID = 26200;
 //introduction_date
