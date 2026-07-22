@@ -322,8 +322,11 @@ STR_INFO_TULLOCHDDINTERURBAN:{BLACK}Role: {GOLD}Intercity Service{}{BLACK}Format
 STR_NAME_COMENG_VSET:Comeng V-Set
 STR_INFO_COMENG_VSET:{BLACK}Role: {GOLD}Intercity {}{BLACK}Formation: {GOLD}Multiple-Unit{}{BLACK}Gauge: {GOLD}Standard Gauge{}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW V-Sets
 
-STR_NAME_COMENGDKVSET:Comeng DK V-Set
-STR_INFO_COMENGDKVSET:{BLACK}Role: {GOLD}Intercity Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{BLACK}Based on: {GOLD}Proposed Tangara V-Set Hybrid
+STR_NAME_COMENG_DKVSET:Comeng DK V-Set
+STR_INFO_COMENG_DKVSET:{BLACK}Role: {GOLD}Intercity Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Proposed Tangara V-Set Hybrid
+
+STR_NAME_UGL_OSCAR:UGL OSCAR
+STR_INFO_UGL_OSCAR:{BLACK}Role: {GOLD}Intercity {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW H-Set "OSCARs"
 
 
 STR_NAME_EXP_EMU_XPTE:Comeng XPT-E
