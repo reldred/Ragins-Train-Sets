@@ -277,10 +277,13 @@ STR_NAME_COMENG_2000DDPROPOSAL_AC:Comeng Double-Deck Suburban Electric Multiple 
 STR_INFO_COMENG_2000DDPROPOSAL_AC:{BLACK}Role: {GOLD}Suburban Service {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {RED}AC Overhead Line  {}{BLACK}Based on: {GOLD}Proposed double-deck design for the SA 2000 class contract.
 
 STR_NAME_GONINAN_TANGARA:Goninan Tangara
-STR_INFO_GONINAN_TANGARA:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Sydney Tangara Tains
+STR_INFO_GONINAN_TANGARA:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Sydney Tangara Tains
 
-STR_NAME_SDD_EMU_COMENGTANGARA:Comeng Tangara
-STR_INFO_SDD_EMU_COMENGTANGARA:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Power: {LTBLUE}Overhead Line {}{GOLD}The worst part about this train is deciding who's Tangara you like the most
+STR_NAME_COMENG_TANGARA:Comeng Tangara
+STR_INFO_COMENG_TANGARA:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Proposed Comeng Tangara design.
+STR_NAME_COMENG_TANGARA_BG:Comeng Tangara
+STR_INFO_COMENG_TANGARA_BG:{BLACK}Role: {GOLD}Suburban {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Proposed Comeng Tangara design.
+
 
 STR_NAME_GONINAN_4D:Goninan 4D
 STR_INFO_GONINAN_4D:{BLACK}Role: {GOLD}Suburban{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Melbourne 4 D, Double-Deck Demonstrator & Development Train
