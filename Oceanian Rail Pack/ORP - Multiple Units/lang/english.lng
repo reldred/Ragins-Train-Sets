@@ -323,10 +323,13 @@ STR_NAME_COMENG_VSET:Comeng V-Set
 STR_INFO_COMENG_VSET:{BLACK}Role: {GOLD}Intercity {}{BLACK}Formation: {GOLD}Multiple-Unit{}{BLACK}Gauge: {GOLD}Standard Gauge{}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW V-Sets
 
 STR_NAME_COMENG_DKVSET:Comeng DK V-Set
-STR_INFO_COMENG_DKVSET:{BLACK}Role: {GOLD}Intercity Service{}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Proposed Tangara V-Set Hybrid
+STR_INFO_COMENG_DKVSET:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}Proposed Tangara V-Set Hybrid
 
 STR_NAME_UGL_OSCAR:UGL OSCAR
-STR_INFO_UGL_OSCAR:{BLACK}Role: {GOLD}Intercity {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW H-Set "OSCARs"
+STR_INFO_UGL_OSCAR:{BLACK}Role: {GOLD}Intercity {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW H-Set "Outer-Suburban Cars"
+
+STR_NAME_HYUNDAI_MARIYUNG:Hyundai-Rotem Mariyung
+STR_INFO_HYUNDAI_MARIYUNG:{BLACK}Role: {GOLD}Intercity {}{BLACK}Formation: {GOLD}Multiple-Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW Mariyung Trains {}{GOLD}Mariyung translates to Emu.
 
 
 STR_NAME_EXP_EMU_XPTE:Comeng XPT-E
