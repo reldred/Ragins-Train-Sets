@@ -398,6 +398,11 @@ STR_INFO_CLYDE_JAE_342C:{BLACK}Role: {GOLD}Freight {}{BLACK}Power: {LTBLUE}Overh
 
 
 
+STR_NAME_NEWPORT_ECLASS_BOXCAB:Newport "Butterbox" (Fix the pantograph!)
+STR_INFO_NEWPORT_ECLASS_BOXCAB:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}VR E Class Boxcabs {}{GOLD}Fix the pantograph you fuck
+STR_NAME_NEWPORT_ECLASS_BOXCAB_BG:Newport "Butterbox" (Fix the pantograph!)
+STR_INFO_NEWPORT_ECLASS_BOXCAB_BG:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}VR E Class Boxcabs {}{GOLD}Fix the pantograph you fuck
+
 STR_NAME_EE_EDCLASS:English-Electric ED Class
 STR_INFO_EE_EDCLASS:{BLACK}Role: {GOLD}Mixed Traffic {}{BLACK}Gauge:{GOLD} Narrow Gauge{}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NZR ED Class
 
