@@ -7733,6 +7733,1025 @@ item (FEAT_TRAINS, Item_Budd_Amfleet_DT_Liv0, Budd_Amfleet_DT_Liv0_ID) {
 }
 }
 
+//Budd_Amfleet_Liv1
+spriteset(spriteset_Budd_Amfleet_Liv1_Purchase,   "gfx/Budd_Amfleet_Liv1.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_Amfleet_Liv1,   "gfx/Budd_Amfleet_Liv1.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Budd_Amfleet_Liv1_Diner,   "gfx/Budd_Amfleet_Liv1.png") {template_8_repeat(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv1_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_Budd_Amfleet_Liv1_Diner;
+  spriteset_Budd_Amfleet_Liv1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv1_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Budd_Amfleet_Liv1_dinerposition;
+    1: spriteset_Budd_Amfleet_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv1_rearcheck1, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_Liv1_SpriteStack1;
+    return switch_Budd_Amfleet_Liv1_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv1_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Budd_Amfleet_Liv1_dinerposition;
+    1: spriteset_Budd_Amfleet_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv1_rearcheck2, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_Liv1_SpriteStack2;
+    return switch_Budd_Amfleet_Liv1_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv1_position, vehicle_is_flipped) {
+ 0: switch_Budd_Amfleet_Liv1_rearcheck1;
+ 1: switch_Budd_Amfleet_Liv1_rearcheck2;
+}
+
+const Budd_Amfleet_Liv1_ID = (Budd_Amfleet_ID + Liv1_ID);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_Liv1, Budd_Amfleet_Liv1_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv1_position;
+    purchase:                           spriteset_Budd_Amfleet_Liv1_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_Budd_Amfleet_Liv1
+spriteset(spriteset_Mail_Budd_Amfleet_Liv1_Purchase,   "gfx/Budd_Amfleet_Liv1.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_Liv1,   "gfx/Budd_Amfleet_Liv1.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv1_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Budd_Amfleet_Liv1;
+    1: spriteset_Budd_Amfleet_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv1_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_Budd_Amfleet_Liv1_SpriteStack1;
+    return spriteset_Mail_Budd_Amfleet_Liv1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv1_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Budd_Amfleet_Liv1;
+    1: spriteset_Budd_Amfleet_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv1_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_Budd_Amfleet_Liv1_SpriteStack2;
+    return spriteset_Mail_Budd_Amfleet_Liv1;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv1_position, vehicle_is_flipped) {
+ 0: switch_Mail_Budd_Amfleet_Liv1_rearcheck1;
+ 1: switch_Mail_Budd_Amfleet_Liv1_rearcheck2;
+}
+
+const Mail_Budd_Amfleet_Liv1_ID = (Budd_Amfleet_Liv1_ID + 10);
+
+item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_Liv1, Mail_Budd_Amfleet_Liv1_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_BUDD_AMFLEET);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Mail_Budd_Amfleet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_Budd_Amfleet_Liv1_position;
+    purchase:                           spriteset_Mail_Budd_Amfleet_Liv1;
+    additional_text: 					string(STR_INFO_MAIL_BUDD_AMFLEET);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Budd_Amfleet_DT_Liv1
+spriteset(spriteset_Budd_Amfleet_DT_Liv1_Purchase,   "gfx/Budd_Amfleet_Liv1.png") {template_purchase_8(367, 21)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv1_Fw,   "gfx/Budd_Amfleet_Liv1.png") {template_8(367, 39)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv1_Rw,   "gfx/Budd_Amfleet_Liv1.png") {template_8_r(367, 39)}
+
+random_switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv1_Random){
+ 1 : spriteset_Budd_Amfleet_DT_Liv1_Fw;
+ 1 : spriteset_Budd_Amfleet_DT_Liv1_Rw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv1_position, vehicle_is_flipped) {
+ 0: spriteset_Budd_Amfleet_DT_Liv1_Rw;
+ 1: spriteset_Budd_Amfleet_DT_Liv1_Fw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv1_rearcheck, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_DT_Liv1_position;
+    return switch_Budd_Amfleet_DT_Liv1_Random;
+}
+
+const Budd_Amfleet_DT_Liv1_ID = (Mail_Budd_Amfleet_Liv1_ID + 10);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_DT_Liv1, Budd_Amfleet_DT_Liv1_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+		engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_DISABLE;
+		
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET_DT);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.1;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_DT_Liv0;
+//		extra_flags:					bitmask(VEHICLE_FLAG_TRAIN_HAS_CAB);
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY, VEHICLE_FLAG_TRAIN_HAS_CAB);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv1_rearcheck;
+    purchase:                           spriteset_Budd_Amfleet_DT_Liv1_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET_DT);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Budd_Amfleet_Liv2
+spriteset(spriteset_Budd_Amfleet_Liv2_Purchase,   "gfx/Budd_Amfleet_Liv2.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_Amfleet_Liv2,   "gfx/Budd_Amfleet_Liv2.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Budd_Amfleet_Liv2_Diner,   "gfx/Budd_Amfleet_Liv2.png") {template_8_repeat(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv2_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_Budd_Amfleet_Liv2_Diner;
+  spriteset_Budd_Amfleet_Liv2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv2_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Budd_Amfleet_Liv2_dinerposition;
+    1: spriteset_Budd_Amfleet_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv2_rearcheck1, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_Liv2_SpriteStack1;
+    return switch_Budd_Amfleet_Liv2_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv2_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Budd_Amfleet_Liv2_dinerposition;
+    1: spriteset_Budd_Amfleet_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv2_rearcheck2, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_Liv2_SpriteStack2;
+    return switch_Budd_Amfleet_Liv2_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv2_position, vehicle_is_flipped) {
+ 0: switch_Budd_Amfleet_Liv2_rearcheck1;
+ 1: switch_Budd_Amfleet_Liv2_rearcheck2;
+}
+
+const Budd_Amfleet_Liv2_ID = (Budd_Amfleet_ID + Liv2_ID);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_Liv2, Budd_Amfleet_Liv2_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv2_position;
+    purchase:                           spriteset_Budd_Amfleet_Liv2_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_Budd_Amfleet_Liv2
+spriteset(spriteset_Mail_Budd_Amfleet_Liv2_Purchase,   "gfx/Budd_Amfleet_Liv2.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_Liv2,   "gfx/Budd_Amfleet_Liv2.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv2_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Budd_Amfleet_Liv2;
+    1: spriteset_Budd_Amfleet_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv2_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_Budd_Amfleet_Liv2_SpriteStack1;
+    return spriteset_Mail_Budd_Amfleet_Liv2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv2_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Budd_Amfleet_Liv2;
+    1: spriteset_Budd_Amfleet_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv2_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_Budd_Amfleet_Liv2_SpriteStack2;
+    return spriteset_Mail_Budd_Amfleet_Liv2;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv2_position, vehicle_is_flipped) {
+ 0: switch_Mail_Budd_Amfleet_Liv2_rearcheck1;
+ 1: switch_Mail_Budd_Amfleet_Liv2_rearcheck2;
+}
+
+const Mail_Budd_Amfleet_Liv2_ID = (Budd_Amfleet_Liv2_ID + 10);
+
+item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_Liv2, Mail_Budd_Amfleet_Liv2_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_BUDD_AMFLEET);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Mail_Budd_Amfleet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_Budd_Amfleet_Liv2_position;
+    purchase:                           spriteset_Mail_Budd_Amfleet_Liv2;
+    additional_text: 					string(STR_INFO_MAIL_BUDD_AMFLEET);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Budd_Amfleet_DT_Liv2
+spriteset(spriteset_Budd_Amfleet_DT_Liv2_Purchase,   "gfx/Budd_Amfleet_Liv2.png") {template_purchase_8(367, 21)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv2_Fw,   "gfx/Budd_Amfleet_Liv2.png") {template_8(367, 39)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv2_Rw,   "gfx/Budd_Amfleet_Liv2.png") {template_8_r(367, 39)}
+
+random_switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv2_Random){
+ 1 : spriteset_Budd_Amfleet_DT_Liv2_Fw;
+ 1 : spriteset_Budd_Amfleet_DT_Liv2_Rw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv2_position, vehicle_is_flipped) {
+ 0: spriteset_Budd_Amfleet_DT_Liv2_Rw;
+ 1: spriteset_Budd_Amfleet_DT_Liv2_Fw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv2_rearcheck, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_DT_Liv2_position;
+    return switch_Budd_Amfleet_DT_Liv2_Random;
+}
+
+const Budd_Amfleet_DT_Liv2_ID = (Mail_Budd_Amfleet_Liv2_ID + 10);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_DT_Liv2, Budd_Amfleet_DT_Liv2_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+		engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_DISABLE;
+		
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET_DT);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.1;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_DT_Liv0;
+//		extra_flags:					bitmask(VEHICLE_FLAG_TRAIN_HAS_CAB);
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY, VEHICLE_FLAG_TRAIN_HAS_CAB);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv2_rearcheck;
+    purchase:                           spriteset_Budd_Amfleet_DT_Liv2_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET_DT);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Budd_Amfleet_DT_Liv3
+spriteset(spriteset_Budd_Amfleet_DT_Liv3_Purchase,   "gfx/Budd_Amfleet_Liv3.png") {template_purchase_8(367, 21)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv3_Fw,   "gfx/Budd_Amfleet_Liv3.png") {template_8(367, 39)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv3_Rw,   "gfx/Budd_Amfleet_Liv3.png") {template_8_r(367, 39)}
+
+random_switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv3_Random){
+ 1 : spriteset_Budd_Amfleet_DT_Liv3_Fw;
+ 1 : spriteset_Budd_Amfleet_DT_Liv3_Rw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv3_position, vehicle_is_flipped) {
+ 0: spriteset_Budd_Amfleet_DT_Liv3_Rw;
+ 1: spriteset_Budd_Amfleet_DT_Liv3_Fw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv3_rearcheck, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_DT_Liv3_position;
+    return switch_Budd_Amfleet_DT_Liv3_Random;
+}
+
+const Budd_Amfleet_DT_Liv3_ID = (Budd_Amfleet_Liv2_ID + 21);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_DT_Liv3, Budd_Amfleet_DT_Liv3_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+		engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_DISABLE;
+		
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET_DT);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.1;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_DT_Liv0;
+//		extra_flags:					bitmask(VEHICLE_FLAG_TRAIN_HAS_CAB);
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY, VEHICLE_FLAG_TRAIN_HAS_CAB);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv3_rearcheck;
+    purchase:                           spriteset_Budd_Amfleet_DT_Liv3_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET_DT);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Budd_Amfleet_Liv4
+spriteset(spriteset_Budd_Amfleet_Liv4_Purchase,   "gfx/Budd_Amfleet_Liv4.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_Amfleet_Liv4,   "gfx/Budd_Amfleet_Liv4.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Budd_Amfleet_Liv4_Diner,   "gfx/Budd_Amfleet_Liv4.png") {template_8_repeat(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv4_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_Budd_Amfleet_Liv4_Diner;
+  spriteset_Budd_Amfleet_Liv4;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv4_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Budd_Amfleet_Liv4_dinerposition;
+    1: spriteset_Budd_Amfleet_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv4_rearcheck1, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_Liv4_SpriteStack1;
+    return switch_Budd_Amfleet_Liv4_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv4_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Budd_Amfleet_Liv4_dinerposition;
+    1: spriteset_Budd_Amfleet_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv4_rearcheck2, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_Liv4_SpriteStack2;
+    return switch_Budd_Amfleet_Liv4_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv4_position, vehicle_is_flipped) {
+ 0: switch_Budd_Amfleet_Liv4_rearcheck1;
+ 1: switch_Budd_Amfleet_Liv4_rearcheck2;
+}
+
+const Budd_Amfleet_Liv4_ID = (Budd_Amfleet_ID + Liv4_ID);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_Liv4, Budd_Amfleet_Liv4_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv4_position;
+    purchase:                           spriteset_Budd_Amfleet_Liv4_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_Budd_Amfleet_Liv4
+spriteset(spriteset_Mail_Budd_Amfleet_Liv4_Purchase,   "gfx/Budd_Amfleet_Liv4.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_Liv4,   "gfx/Budd_Amfleet_Liv4.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv4_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Budd_Amfleet_Liv4;
+    1: spriteset_Budd_Amfleet_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv4_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_Budd_Amfleet_Liv4_SpriteStack1;
+    return spriteset_Mail_Budd_Amfleet_Liv4;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv4_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Budd_Amfleet_Liv4;
+    1: spriteset_Budd_Amfleet_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv4_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_Budd_Amfleet_Liv4_SpriteStack2;
+    return spriteset_Mail_Budd_Amfleet_Liv4;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv4_position, vehicle_is_flipped) {
+ 0: switch_Mail_Budd_Amfleet_Liv4_rearcheck1;
+ 1: switch_Mail_Budd_Amfleet_Liv4_rearcheck2;
+}
+
+const Mail_Budd_Amfleet_Liv4_ID = (Budd_Amfleet_Liv4_ID + 10);
+
+item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_Liv4, Mail_Budd_Amfleet_Liv4_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_BUDD_AMFLEET);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Mail_Budd_Amfleet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_Budd_Amfleet_Liv4_position;
+    purchase:                           spriteset_Mail_Budd_Amfleet_Liv4;
+    additional_text: 					string(STR_INFO_MAIL_BUDD_AMFLEET);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Budd_Amfleet_DT_Liv4
+spriteset(spriteset_Budd_Amfleet_DT_Liv4_Purchase,   "gfx/Budd_Amfleet_Liv4.png") {template_purchase_8(367, 21)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv4_Fw,   "gfx/Budd_Amfleet_Liv4.png") {template_8(367, 39)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv4_Rw,   "gfx/Budd_Amfleet_Liv4.png") {template_8_r(367, 39)}
+
+random_switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv4_Random){
+ 1 : spriteset_Budd_Amfleet_DT_Liv4_Fw;
+ 1 : spriteset_Budd_Amfleet_DT_Liv4_Rw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv4_position, vehicle_is_flipped) {
+ 0: spriteset_Budd_Amfleet_DT_Liv4_Rw;
+ 1: spriteset_Budd_Amfleet_DT_Liv4_Fw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv4_rearcheck, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_DT_Liv4_position;
+    return switch_Budd_Amfleet_DT_Liv4_Random;
+}
+
+const Budd_Amfleet_DT_Liv4_ID = (Mail_Budd_Amfleet_Liv4_ID + 10);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_DT_Liv4, Budd_Amfleet_DT_Liv4_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+		engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_DISABLE;
+		
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET_DT);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.1;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_DT_Liv0;
+//		extra_flags:					bitmask(VEHICLE_FLAG_TRAIN_HAS_CAB);
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY, VEHICLE_FLAG_TRAIN_HAS_CAB);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv4_rearcheck;
+    purchase:                           spriteset_Budd_Amfleet_DT_Liv4_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET_DT);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Budd_Amfleet_Liv5
+spriteset(spriteset_Budd_Amfleet_Liv5_Purchase,   "gfx/Budd_Amfleet_Liv5.png") {template_purchase_8(7, 21)}
+spriteset(spriteset_Budd_Amfleet_Liv5,   "gfx/Budd_Amfleet_Liv5.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_Budd_Amfleet_Liv5_Diner,   "gfx/Budd_Amfleet_Liv5.png") {template_8_repeat(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv5_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_Budd_Amfleet_Liv5_Diner;
+  spriteset_Budd_Amfleet_Liv5;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv5_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Budd_Amfleet_Liv5_dinerposition;
+    1: spriteset_Budd_Amfleet_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv5_rearcheck1, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_Liv5_SpriteStack1;
+    return switch_Budd_Amfleet_Liv5_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv5_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: switch_Budd_Amfleet_Liv5_dinerposition;
+    1: spriteset_Budd_Amfleet_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv5_rearcheck2, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_Liv5_SpriteStack2;
+    return switch_Budd_Amfleet_Liv5_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv5_position, vehicle_is_flipped) {
+ 0: switch_Budd_Amfleet_Liv5_rearcheck1;
+ 1: switch_Budd_Amfleet_Liv5_rearcheck2;
+}
+
+const Budd_Amfleet_Liv5_ID = (Budd_Amfleet_ID + Liv5_ID);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_Liv5, Budd_Amfleet_Liv5_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv5_position;
+    purchase:                           spriteset_Budd_Amfleet_Liv5_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_Budd_Amfleet_Liv5
+spriteset(spriteset_Mail_Budd_Amfleet_Liv5_Purchase,   "gfx/Budd_Amfleet_Liv5.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_Budd_Amfleet_Liv5,   "gfx/Budd_Amfleet_Liv5.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv5_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Budd_Amfleet_Liv5;
+    1: spriteset_Budd_Amfleet_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv5_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_Budd_Amfleet_Liv5_SpriteStack1;
+    return spriteset_Mail_Budd_Amfleet_Liv5;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv5_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Budd_Amfleet_Liv5;
+    1: spriteset_Budd_Amfleet_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv5_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_Budd_Amfleet_Liv5_SpriteStack2;
+    return spriteset_Mail_Budd_Amfleet_Liv5;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Budd_Amfleet_Liv5_position, vehicle_is_flipped) {
+ 0: switch_Mail_Budd_Amfleet_Liv5_rearcheck1;
+ 1: switch_Mail_Budd_Amfleet_Liv5_rearcheck2;
+}
+
+const Mail_Budd_Amfleet_Liv5_ID = (Budd_Amfleet_Liv5_ID + 10);
+
+item (FEAT_TRAINS, Item_Mail_Budd_Amfleet_Liv5, Mail_Budd_Amfleet_Liv5_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             ALL_CLIMATES;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_BUDD_AMFLEET);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Mail_Budd_Amfleet_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_Budd_Amfleet_Liv5_position;
+    purchase:                           spriteset_Mail_Budd_Amfleet_Liv5;
+    additional_text: 					string(STR_INFO_MAIL_BUDD_AMFLEET);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Budd_Amfleet_DT_Liv5
+spriteset(spriteset_Budd_Amfleet_DT_Liv5_Purchase,   "gfx/Budd_Amfleet_Liv5.png") {template_purchase_8(367, 21)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv5_Fw,   "gfx/Budd_Amfleet_Liv5.png") {template_8(367, 39)}
+spriteset(spriteset_Budd_Amfleet_DT_Liv5_Rw,   "gfx/Budd_Amfleet_Liv5.png") {template_8_r(367, 39)}
+
+random_switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv5_Random){
+ 1 : spriteset_Budd_Amfleet_DT_Liv5_Fw;
+ 1 : spriteset_Budd_Amfleet_DT_Liv5_Rw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_DT_Liv5_position, vehicle_is_flipped) {
+ 0: spriteset_Budd_Amfleet_DT_Liv5_Rw;
+ 1: spriteset_Budd_Amfleet_DT_Liv5_Fw;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Budd_Amfleet_Liv5_rearcheck, position_in_consist_from_end){
+    0 : switch_Budd_Amfleet_DT_Liv5_position;
+    return switch_Budd_Amfleet_DT_Liv5_Random;
+}
+
+const Budd_Amfleet_DT_Liv5_ID = (Mail_Budd_Amfleet_Liv5_ID + 10);
+
+item (FEAT_TRAINS, Item_Budd_Amfleet_DT_Liv5, Budd_Amfleet_DT_Liv5_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+		engine_class:                   ENGINE_CLASS_DIESEL;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		visual_effect_and_powered: 		VISUAL_EFFECT_DISABLE;
+		
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_BUDD_AMFLEET_DT);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.1;
+		
+        introduction_date:              Budd_Amfleet_IntroDate;		
+		length:                         Budd_Amfleet_Length;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Budd_Amfleet_Speed mph;
+		cost_factor:					Budd_Amfleet_CostFactor;
+		running_cost_factor:			Budd_Amfleet_RunningCostFactor;
+		cargo_capacity: 				(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Budd_Amfleet_Weight ton;
+
+        variant_group: 					Item_Budd_Amfleet_DT_Liv0;
+//		extra_flags:					bitmask(VEHICLE_FLAG_TRAIN_HAS_CAB);
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY, VEHICLE_FLAG_TRAIN_HAS_CAB);
+	}
+    graphics {
+    default:                            switch_Budd_Amfleet_Liv5_rearcheck;
+    purchase:                           spriteset_Budd_Amfleet_DT_Liv5_Purchase;
+    additional_text: 					string(STR_INFO_BUDD_AMFLEET_DT);
+	cargo_capacity: 					(Budd_Amfleet_CargoCapacity / param_capacity_mod);
+}
+}
+
 spriteset(spriteset_Bombardier_Horizon_EOTD,   "gfx/Bombardier_Horizon_EOTD.png") {template_8(7, 39)}
 spriteset(spriteset_Bombardier_Horizon_EOTD_r,   "gfx/Bombardier_Horizon_EOTD.png") {template_8_r(7, 39)}
 spriteset(spriteset_Bombardier_Horizon_EOTD_CabFw,   "gfx/Bombardier_Horizon_EOTD.png") {template_8(367, 39)}
