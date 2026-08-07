@@ -19634,6 +19634,250 @@ item(FEAT_TRAINS, Item_ComengInterurban_Liv2, ComengInterurban_ID_Liv2) {
 }
 
 //ID
+const Walkers_ICE_ID = 13140;
+//introduction_date
+const Walkers_ICE_IntroDate = date(1988, 1, 1);
+//speed
+const Walkers_ICE_Speed = 120;
+//cost_factor
+const Walkers_ICE_CostFactor = 29;
+//running_cost_factor
+const Walkers_ICE_RunningCostFactor = 75;
+//Cargo Capacity
+const Walkers_ICE_CargoCapacity = 92;
+//power
+const Walkers_ICE_Power = 725;
+//weight
+const Walkers_ICE_Weight = 48;
+//length
+const Walkers_ICE_Length = 8;
+
+//Pantographs
+spriteset(spriteset_Walkers_ICE_Panto_Purchase,   "gfx/Walkers_ICE_Pantographs.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Walkers_ICE_PantoDown,   "gfx/Walkers_ICE_Pantographs.png") {template_8(7, 39)}
+spriteset(spriteset_Walkers_ICE_PantoDown_r,   "gfx/Walkers_ICE_Pantographs.png") {template_8_r(7, 39)}
+spriteset(spriteset_Walkers_ICE_PantoUp,   "gfx/Walkers_ICE_Pantographs.png") {template_8(7, 69)}
+spriteset(spriteset_Walkers_ICE_PantoUp_r,   "gfx/Walkers_ICE_Pantographs.png") {template_8_r(7, 69)}
+
+//Pantograph Controls
+switch(FEAT_TRAINS, SELF, switch_Walkers_ICE_Fw_railtype, tile_powers_railtype("NG_RAIL_OHLE_AC")) {
+ 0: spriteset_Walkers_ICE_PantoDown;
+ 1: spriteset_Walkers_ICE_PantoUp;
+}
+
+//Walkers_ICE_Liv0
+spriteset(spriteset_Walkers_ICE_Liv0_purchase,   "gfx/Walkers_ICE_Liv0.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Walkers_ICE_Liv0_lead,   "gfx/Walkers_ICE_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Walkers_ICE_Liv0_lead_r,   "gfx/Walkers_ICE_Liv0.png") {template_8_r(7, 39)}
+spriteset(spriteset_Walkers_ICE_Liv0_Trailer,   "gfx/Walkers_ICE_Liv0.png") {template_8(7, 69)}
+spriteset(spriteset_Walkers_ICE_Liv0_Trailer_r,   "gfx/Walkers_ICE_Liv0.png") {template_8_r(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv0_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_ICE_Liv0_purchase;
+	1: spriteset_Walkers_ICE_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv0_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_ICE_Liv0_lead;
+	1: switch_Walkers_ICE_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv0_LeadStack_Down, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_ICE_Liv0_lead;
+	1: spriteset_Walkers_ICE_PantoDown;
+}
+
+/* Midcars */
+random_switch(FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv0_Trailer_Random){
+    1 : spriteset_Walkers_ICE_Liv0_Trailer;
+	1 : spriteset_Walkers_ICE_Liv0_Trailer_r;
+}
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv0_panto_flipcheck, vehicle_is_flipped){
+    0 : switch_Walkers_ICE_Liv0_LeadStack;
+    return switch_Walkers_ICE_Liv0_LeadStack_Down;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv0_endcars, position_in_vehid_chain){
+    0: switch_Walkers_ICE_Liv0_LeadStack;
+    return switch_Walkers_ICE_Liv0_panto_flipcheck;
+}
+
+const Walkers_ICE_ID_Liv0 = (Walkers_ICE_ID + Liv0_ID);
+
+item(FEAT_TRAINS, Item_Walkers_ICE_Liv0, Walkers_ICE_ID_Liv0) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_WALKERS_ICE);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Walkers_ICE_IntroDate;		
+		length:                         Walkers_ICE_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Walkers_ICE_Speed km/h;
+		cost_factor:					(Walkers_ICE_CostFactor * 2);
+		running_cost_factor:			(Walkers_ICE_RunningCostFactor * 2);
+		cargo_capacity: 				(Walkers_ICE_CargoCapacity / param_capacity_mod);
+		power:							(Walkers_ICE_Power * 2);
+		weight:							Walkers_ICE_Weight ton;
+
+//        variant_group: 					Item_Walkers_ICE_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Walkers_ICE_Liv0_endcars;
+        purchase: 						switch_Walkers_ICE_Liv0_PurchaseStack;
+        additional_text: 				string(STR_INFO_WALKERS_ICE);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Walkers_ICE_Liv0_Trailer_Random;
+        length:							Walkers_ICE_Length;
+        cargo_capacity:                 [Walkers_ICE_CargoCapacity / param_capacity_mod];
+        power:                          Walkers_ICE_Power;
+		weight:                        	Walkers_ICE_Weight;
+		running_cost_factor:            Walkers_ICE_RunningCostFactor;
+}
+}
+
+//Walkers_ICE_Liv1
+spriteset(spriteset_Walkers_ICE_Liv1_purchase,   "gfx/Walkers_ICE_Liv1.png") {template_purchase_88mu(7, 21)}
+spriteset(spriteset_Walkers_ICE_Liv1_lead,   "gfx/Walkers_ICE_Liv1.png") {template_8(7, 39)}
+spriteset(spriteset_Walkers_ICE_Liv1_lead_r,   "gfx/Walkers_ICE_Liv1.png") {template_8_r(7, 39)}
+spriteset(spriteset_Walkers_ICE_Liv1_Trailer,   "gfx/Walkers_ICE_Liv1.png") {template_8(7, 69)}
+spriteset(spriteset_Walkers_ICE_Liv1_Trailer_r,   "gfx/Walkers_ICE_Liv1.png") {template_8_r(7, 69)}
+
+//Purchase Stack
+switch (FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv1_PurchaseStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_ICE_Liv1_purchase;
+	1: spriteset_Walkers_ICE_Panto_Purchase;
+}
+
+//C Lead
+switch (FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv1_LeadStack, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_ICE_Liv1_lead;
+	1: switch_Walkers_ICE_Fw_railtype;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv1_LeadStack_Down, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 1 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Walkers_ICE_Liv1_lead;
+	1: spriteset_Walkers_ICE_PantoDown;
+}
+
+/* Midcars */
+random_switch(FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv1_Trailer_Random){
+    1 : spriteset_Walkers_ICE_Liv1_Trailer;
+	1 : spriteset_Walkers_ICE_Liv1_Trailer_r;
+}
+
+//End Car Controls
+switch(FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv1_panto_flipcheck, vehicle_is_flipped){
+    0 : switch_Walkers_ICE_Liv1_LeadStack;
+    return switch_Walkers_ICE_Liv1_LeadStack_Down;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Walkers_ICE_Liv1_endcars, position_in_vehid_chain){
+    0: switch_Walkers_ICE_Liv1_LeadStack;
+    return switch_Walkers_ICE_Liv1_panto_flipcheck;
+}
+
+const Walkers_ICE_ID_Liv1 = (Walkers_ICE_ID + Liv1_ID);
+
+item(FEAT_TRAINS, Item_Walkers_ICE_Liv1, Walkers_ICE_ID_Liv1) {
+    property {
+        sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_TILT,TRAIN_FLAG_MU,TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK); // <- Train Flag MU needed here
+		track_type:                     NG_RAIL_OHLE_AC;
+		running_cost_base:              RUNNING_COST_ELECTRIC;
+        engine_class:                   ENGINE_CLASS_ELECTRIC;
+        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];
+		visual_effect_and_powered: 		VISUAL_EFFECT_ELECTRIC;
+
+        name:                           string(STR_NAME_WALKERS_ICE);
+		
+		refit_cost:                     0;
+        dual_headed:                    1;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		vehicle_life:                   50;
+		tractive_effort_coefficient:	0.3;
+		
+        introduction_date:              Walkers_ICE_IntroDate;		
+		length:                         Walkers_ICE_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Walkers_ICE_Speed km/h;
+		cost_factor:					(Walkers_ICE_CostFactor * 2);
+		running_cost_factor:			(Walkers_ICE_RunningCostFactor * 2);
+		cargo_capacity: 				(Walkers_ICE_CargoCapacity / param_capacity_mod);
+		power:							(Walkers_ICE_Power * 2);
+		weight:							Walkers_ICE_Weight ton;
+
+        variant_group: 					Item_Walkers_ICE_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+    }
+    graphics {
+        default: 						switch_Walkers_ICE_Liv1_endcars;
+        purchase: 						switch_Walkers_ICE_Liv1_PurchaseStack;
+        additional_text: 				string(STR_INFO_WALKERS_ICE);
+    }
+    livery_override (Item_MU_Trailer){
+        default:						switch_Walkers_ICE_Liv1_Trailer_Random;
+        length:							Walkers_ICE_Length;
+        cargo_capacity:                 [Walkers_ICE_CargoCapacity / param_capacity_mod];
+        power:                          Walkers_ICE_Power;
+		weight:                        	Walkers_ICE_Weight;
+		running_cost_factor:            Walkers_ICE_RunningCostFactor;
+}
+}
+
+//ID
 const Comeng_HPTRegional_OHLE_ID = 13160;
 //introduction_date
 const Comeng_HPTRegional_OHLE_IntroDate = date(1988, 1, 1);

@@ -311,6 +311,9 @@ STR_INFO_TULLOCHINTERURBAN:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formati
 STR_NAME_COMENGINTERURBAN:Comeng Interurban
 STR_INFO_COMENGINTERURBAN:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge{}{BLACK}Power: {BLUE}DC Overhead Line {}{BLACK}Based on: {GOLD}NSW U-Set EMUs {}{GOLD}The Fish & the Chips
 
+STR_NAME_WALKERS_ICE:Walkers-ASEA ICE
+STR_INFO_WALKERS_ICE:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Narrow Gauge {}{BLACK}Power: {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}QR Intercity Express EMUs.
+
 STR_NAME_COMENG_HPTREGIONAL_OHLE:Comeng HPT Regional EMU
 STR_INFO_COMENG_HPTREGIONAL_OHLE:{BLACK}Role: {GOLD}Intercity Service {}{BLACK}Formation: {GOLD}Multiple Unit {}{BLACK}Gauge: {GOLD}Standard Gauge {}{BLACK}Power: {BLUE}DC Overhead Line {RED}AC Overhead Line {}{BLACK}Based on: {GOLD}Fictional OHLE version of the HPT regional DMU.
 
