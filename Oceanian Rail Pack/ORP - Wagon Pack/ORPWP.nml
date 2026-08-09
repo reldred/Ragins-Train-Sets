@@ -1988,7 +1988,7 @@ const DD_Intercity_LoadingSpeed = 3;
 
 //Trains Below!
 //ID
-const Early_4Wheel_ID = 4900;
+const Early_4Wheel_ID = 4000;
 //introduction_date
 const Early_4Wheel_IntroDate = date(1854, 1, 1);
 //speed
@@ -2110,7 +2110,7 @@ item (FEAT_TRAINS, Item_Early_4Wheel_NG_Liv0, Early_4Wheel_Liv0_ID_NG) {
 }
 }
 
-const Early_4Wheel_Liv0_ID = (Early_4Wheel_Liv0_ID_NG + 10);
+const Early_4Wheel_Liv0_ID = (Early_4Wheel_Liv0_ID_NG + 15);
 
 item (FEAT_TRAINS, Item_Early_4Wheel_Liv0, Early_4Wheel_Liv0_ID) {
     property {
@@ -2155,7 +2155,7 @@ item (FEAT_TRAINS, Item_Early_4Wheel_Liv0, Early_4Wheel_Liv0_ID) {
 }
 }
 
-const Early_4Wheel_Liv0_ID_BG = (Early_4Wheel_Liv0_ID + 10);
+const Early_4Wheel_Liv0_ID_BG = (Early_4Wheel_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_Early_4Wheel_BG_Liv0, Early_4Wheel_Liv0_ID_BG) {
     property {
@@ -2256,7 +2256,7 @@ switch(FEAT_TRAINS, SELF, switch_Mail_Early_4Wheel_Liv0_position, vehicle_is_fli
  1: switch_Mail_Early_4Wheel_Liv0_rearcheck2;
 }
 
-const Mail_Early_4Wheel_NG_Liv0_ID = (Early_4Wheel_Liv0_ID_NG + 30);
+const Mail_Early_4Wheel_NG_Liv0_ID = (Early_4Wheel_Liv0_ID_NG + 50);
 
 item (FEAT_TRAINS, Item_Mail_Early_4Wheel_NG_Liv0, Mail_Early_4Wheel_NG_Liv0_ID) {
     property {
@@ -2301,7 +2301,7 @@ item (FEAT_TRAINS, Item_Mail_Early_4Wheel_NG_Liv0, Mail_Early_4Wheel_NG_Liv0_ID)
 }
 }
 
-const Mail_Early_4Wheel_Liv0_ID = (Early_4Wheel_Liv0_ID + 30);
+const Mail_Early_4Wheel_Liv0_ID = (Early_4Wheel_Liv0_ID + 50);
 
 item (FEAT_TRAINS, Item_Mail_Early_4Wheel_Liv0, Mail_Early_4Wheel_Liv0_ID) {
     property {
@@ -2346,7 +2346,7 @@ item (FEAT_TRAINS, Item_Mail_Early_4Wheel_Liv0, Mail_Early_4Wheel_Liv0_ID) {
 }
 }
 
-const Mail_Early_4Wheel_BG_Liv0_ID = (Early_4Wheel_Liv0_ID_BG + 30);
+const Mail_Early_4Wheel_BG_Liv0_ID = (Early_4Wheel_Liv0_ID_BG + 50);
 
 item (FEAT_TRAINS, Item_Mail_Early_4Wheel_BG_Liv0, Mail_Early_4Wheel_BG_Liv0_ID) {
     property {
@@ -2514,7 +2514,7 @@ item (FEAT_TRAINS, Item_Suburban_4Wheel_NG_Liv0, Suburban_4Wheel_Liv0_ID_NG) {
 }
 }
 
-const Suburban_4Wheel_Liv0_ID = (Suburban_4Wheel_Liv0_ID_NG + 10);
+const Suburban_4Wheel_Liv0_ID = (Suburban_4Wheel_Liv0_ID_NG + 15);
 
 item (FEAT_TRAINS, Item_Suburban_4Wheel_Liv0, Suburban_4Wheel_Liv0_ID) {
     property {
@@ -2559,7 +2559,7 @@ item (FEAT_TRAINS, Item_Suburban_4Wheel_Liv0, Suburban_4Wheel_Liv0_ID) {
 }
 }
 
-const Suburban_4Wheel_Liv0_ID_BG = (Suburban_4Wheel_Liv0_ID + 10);
+const Suburban_4Wheel_Liv0_ID_BG = (Suburban_4Wheel_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_Suburban_4Wheel_BG_Liv0, Suburban_4Wheel_Liv0_ID_BG) {
     property {
@@ -2605,7 +2605,7 @@ item (FEAT_TRAINS, Item_Suburban_4Wheel_BG_Liv0, Suburban_4Wheel_Liv0_ID_BG) {
 }
 
 //ID
-const NSW_KATramCar_ID = 5100;
+const NSW_KATramCar_ID = 5200;
 //introduction_date
 const NSW_KATramCar_IntroDate = date(1877, 1, 1);
 //speed
@@ -2729,7 +2729,7 @@ item (FEAT_TRAINS, Item_NSW_KATramCar_Liv0, NSW_KATramCar_Liv0_ID) {
 }
 }
 
-const NSW_KATramCar_Liv0_ID_BG = (NSW_KATramCar_Liv0_ID + 10);
+const NSW_KATramCar_Liv0_ID_BG = (NSW_KATramCar_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_NSW_KATramCar_BG_Liv0, NSW_KATramCar_Liv0_ID_BG) {
     property {
@@ -2775,7 +2775,7 @@ item (FEAT_TRAINS, Item_NSW_KATramCar_BG_Liv0, NSW_KATramCar_Liv0_ID_BG) {
 }
 
 //ID
-const EndPlatform4Wheel_ID = 5150;
+const EndPlatform4Wheel_ID = 5250;
 //introduction_date
 const EndPlatform4Wheel_IntroDate = date(1877, 1, 1);
 //speed
@@ -2897,7 +2897,7 @@ item (FEAT_TRAINS, Item_EndPlatform4Wheel_NG_Liv0, EndPlatform4Wheel_Liv0_ID_NG)
 }
 }
 
-const EndPlatform4Wheel_Liv0_ID = (EndPlatform4Wheel_Liv0_ID_NG + 10);
+const EndPlatform4Wheel_Liv0_ID = (EndPlatform4Wheel_Liv0_ID_NG + 15);
 
 item (FEAT_TRAINS, Item_EndPlatform4Wheel_Liv0, EndPlatform4Wheel_Liv0_ID) {
     property {
@@ -2942,7 +2942,7 @@ item (FEAT_TRAINS, Item_EndPlatform4Wheel_Liv0, EndPlatform4Wheel_Liv0_ID) {
 }
 }
 
-const EndPlatform4Wheel_Liv0_ID_BG = (EndPlatform4Wheel_Liv0_ID + 10);
+const EndPlatform4Wheel_Liv0_ID_BG = (EndPlatform4Wheel_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_EndPlatform4Wheel_BG_Liv0, EndPlatform4Wheel_Liv0_ID_BG) {
     property {
@@ -2988,7 +2988,7 @@ item (FEAT_TRAINS, Item_EndPlatform4Wheel_BG_Liv0, EndPlatform4Wheel_Liv0_ID_BG)
 }
 
 //ID
-const ClerestoryCompartmentCoach_ID = 5200;
+const ClerestoryCompartmentCoach_ID = 5300;
 //introduction_date
 const ClerestoryCompartmentCoach_IntroDate = date(1879, 1, 1);
 //speed
@@ -3112,7 +3112,7 @@ item (FEAT_TRAINS, Item_ClerestoryCompartmentCoach_NG_Liv0, ClerestoryCompartmen
 }
 }
 
-const ClerestoryCompartmentCoach_Liv0_ID = (ClerestoryCompartmentCoach_Liv0_ID_NG + 10);
+const ClerestoryCompartmentCoach_Liv0_ID = (ClerestoryCompartmentCoach_Liv0_ID_NG + 15);
 
 item (FEAT_TRAINS, Item_ClerestoryCompartmentCoach_Liv0, ClerestoryCompartmentCoach_Liv0_ID) {
     property {
@@ -3157,7 +3157,7 @@ item (FEAT_TRAINS, Item_ClerestoryCompartmentCoach_Liv0, ClerestoryCompartmentCo
 }
 }
 
-const ClerestoryCompartmentCoach_Liv0_ID_BG = (ClerestoryCompartmentCoach_Liv0_ID + 10);
+const ClerestoryCompartmentCoach_Liv0_ID_BG = (ClerestoryCompartmentCoach_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_ClerestoryCompartmentCoach_BG_Liv0, ClerestoryCompartmentCoach_Liv0_ID_BG) {
     property {
@@ -3203,7 +3203,7 @@ item (FEAT_TRAINS, Item_ClerestoryCompartmentCoach_BG_Liv0, ClerestoryCompartmen
 }
 
 //ID
-const AY_SuburbanCoach_ID = 5700;
+const AY_SuburbanCoach_ID = 5750;
 //introduction_date
 const AY_SuburbanCoach_IntroDate = date(1924, 1, 1);
 //speed
@@ -3332,7 +3332,7 @@ spriteset(spriteset_VLine_HType_EOTD,   "gfx/VLine_HType_EOTD.png") {template_8(
 spriteset(spriteset_VLine_HType_EOTD_r,   "gfx/VLine_HType_EOTD.png") {template_8_r(7, 39)}
 
 //ID
-const VLine_HType_ID = 6050;
+const VLine_HType_ID = 6150;
 //introduction_date
 const VLine_HType_IntroDate = date(1984, 1, 1);
 //speed
@@ -3495,7 +3495,7 @@ item (FEAT_TRAINS, Item_VLine_HType_Liv0, VLine_HType_Liv0_ID) {
 }
 }
 
-const VLine_HType_BG_Liv0_ID = (VLine_HType_Liv0_ID + 10);
+const VLine_HType_BG_Liv0_ID = (VLine_HType_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_VLine_HType_BG_Liv0, VLine_HType_BG_Liv0_ID) {
     property {
@@ -3829,7 +3829,7 @@ item (FEAT_TRAINS, Item_VLine_HType_Liv1, VLine_HType_Liv1_ID) {
 }
 }
 
-const VLine_HType_BG_Liv1_ID = (VLine_HType_Liv1_ID + 50);
+const VLine_HType_BG_Liv1_ID = (VLine_HType_Liv1_ID + 15);
 
 item (FEAT_TRAINS, Item_VLine_HType_BG_Liv1, VLine_HType_BG_Liv1_ID) {
     property {
@@ -4016,7 +4016,7 @@ item (FEAT_TRAINS, Item_VLine_HType_DT_BG_Liv1, VLine_HType_DT_BG_Liv1_ID) {
 
 //Comeng_SADD
 //ID
-const Comeng_SADD_ID = 6700;
+const Comeng_SADD_ID = 7100;
 //introduction_date
 const Comeng_SADD_IntroDate = date(1984, 1, 1);
 //speed
@@ -4133,7 +4133,7 @@ item (FEAT_TRAINS, Item_Comeng_SADD_Liv0, Comeng_SADD_Liv0_ID) {
 }
 }
 
-const Comeng_SADD_BG_Liv0_ID = (Comeng_SADD_Liv0_ID + 10);
+const Comeng_SADD_BG_Liv0_ID = (Comeng_SADD_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_Comeng_SADD_BG_Liv0, Comeng_SADD_BG_Liv0_ID) {
     property {
@@ -4320,7 +4320,7 @@ item (FEAT_TRAINS, Item_Comeng_SADD_DT_BG_Liv0, Comeng_SADD_DT_BG_Liv0_ID) {
 
 //Goninan_Tangara_Coach
 //ID
-const Goninan_Tangara_Coach_ID = 6800;
+const Goninan_Tangara_Coach_ID = 7150;
 //introduction_date
 const Goninan_Tangara_Coach_IntroDate = date(1989, 1, 1);
 //speed
@@ -4908,7 +4908,7 @@ item (FEAT_TRAINS, Item_Goninan_Tangara_Coach_DT_Liv2, Goninan_Tangara_Coach_DT_
 
 //Goninan_4D_Coach
 //ID
-const Goninan_4D_Coach_ID = 6900;
+const Goninan_4D_Coach_ID = 7200;
 //introduction_date
 const Goninan_4D_Coach_IntroDate = date(1992, 1, 1);
 //speed
@@ -5237,7 +5237,7 @@ item (FEAT_TRAINS, Item_AmericanCoach_NG_Liv0, AmericanCoach_Liv0_ID_NG) {
 }
 }
 
-const AmericanCoach_Liv0_ID = (AmericanCoach_Liv0_ID_NG + 10);
+const AmericanCoach_Liv0_ID = (AmericanCoach_Liv0_ID_NG + 15);
 
 item (FEAT_TRAINS, Item_AmericanCoach_Liv0, AmericanCoach_Liv0_ID) {
     property {
@@ -5282,7 +5282,7 @@ item (FEAT_TRAINS, Item_AmericanCoach_Liv0, AmericanCoach_Liv0_ID) {
 }
 }
 
-const AmericanCoach_Liv0_ID_BG = (AmericanCoach_Liv0_ID + 10);
+const AmericanCoach_Liv0_ID_BG = (AmericanCoach_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_AmericanCoach_BG_Liv0, AmericanCoach_Liv0_ID_BG) {
     property {
@@ -5519,7 +5519,7 @@ item (FEAT_TRAINS, Item_Mail_AmericanCoach_BG_Liv0, Mail_AmericanCoach_BG_Liv0_I
 }
 
 //ID
-const NSW_Ashbury_ID = 8500;
+const NSW_Ashbury_ID = 8400;
 //introduction_date
 const NSW_Ashbury_IntroDate = date(1879, 1, 1);
 //speed
@@ -5643,7 +5643,7 @@ item (FEAT_TRAINS, Item_NSW_Ashbury_NG_Liv0, NSW_Ashbury_Liv0_ID_NG) {
 }
 }
 
-const NSW_Ashbury_Liv0_ID = (NSW_Ashbury_Liv0_ID_NG + 10);
+const NSW_Ashbury_Liv0_ID = (NSW_Ashbury_Liv0_ID_NG + 15);
 
 item (FEAT_TRAINS, Item_NSW_Ashbury_Liv0, NSW_Ashbury_Liv0_ID) {
     property {
@@ -5688,7 +5688,7 @@ item (FEAT_TRAINS, Item_NSW_Ashbury_Liv0, NSW_Ashbury_Liv0_ID) {
 }
 }
 
-const NSW_Ashbury_Liv0_ID_BG = (NSW_Ashbury_Liv0_ID + 10);
+const NSW_Ashbury_Liv0_ID_BG = (NSW_Ashbury_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_NSW_Ashbury_BG_Liv0, NSW_Ashbury_Liv0_ID_BG) {
     property {
@@ -5924,8 +5924,1057 @@ item (FEAT_TRAINS, Item_Mail_NSW_Ashbury_BG_Liv0, Mail_NSW_Ashbury_BG_Liv0_ID) {
 }
 }
 
+//VR_EType_Coach
 //ID
-const NZR_50ft_ID = 9000;
+const VR_EType_ID = 8800;
+//introduction_date
+const VR_EType_IntroDate = date(1906, 1, 1);
+//speed
+const VR_EType_Speed = 115;
+//cost_factor
+const VR_EType_CostFactor = 41;
+//running_cost_factor
+const VR_EType_RunningCostFactor = 29;
+//Cargo Capacity
+const VR_EType_CargoCapacity = 66;
+//weight
+const VR_EType_Weight = 43;
+//length
+const VR_EType_Length = 8;
+
+spriteset(spriteset_VR_EType_EOTD,   "gfx/VR_EType_EOTD.png") {template_8(7, 39)}
+spriteset(spriteset_VR_EType_EOTD_r,   "gfx/VR_EType_EOTD.png") {template_8_r(7, 39)}
+
+//VR_EType_Liv0
+spriteset(spriteset_VR_EType_Liv0_Purchase,   "gfx/VR_EType_Liv0.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_VR_EType_Liv0,   "gfx/VR_EType_Liv0.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_VR_EType_Liv0_Diner,   "gfx/VR_EType_Liv0.png") {template_8(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv0_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_VR_EType_Liv0_Diner;
+  spriteset_VR_EType_Liv0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_VR_EType_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_VR_EType_Liv0;
+    1: spriteset_VR_EType_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_VR_EType_Liv0_SpriteStack1;
+    return switch_VR_EType_Liv0_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_VR_EType_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_VR_EType_Liv0;
+    1: spriteset_VR_EType_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_VR_EType_Liv0_SpriteStack2;
+    return switch_VR_EType_Liv0_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv0_position, vehicle_is_flipped) {
+ 0: switch_VR_EType_Liv0_rearcheck1;
+ 1: switch_VR_EType_Liv0_rearcheck2;
+}
+
+const VR_EType_Liv0_ID = (VR_EType_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_VR_EType_Liv0, VR_EType_Liv0_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_VR_ETYPE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         VR_EType_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+//        variant_group: 					Item_VR_EType_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_VR_EType_Liv0_position;
+    purchase:                           spriteset_VR_EType_Liv0_Purchase;
+    additional_text: 					string(STR_INFO_VR_ETYPE);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+const VR_EType_BG_Liv0_ID = (VR_EType_ID + 15);
+
+item (FEAT_TRAINS, Item_VR_EType_BG_Liv0, VR_EType_BG_Liv0_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_VR_ETYPE_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         VR_EType_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+//        variant_group: 					Item_VR_EType_BG_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_VR_EType_Liv0_position;
+    purchase:                           spriteset_VR_EType_Liv0_Purchase;
+    additional_text: 					string(STR_INFO_VR_ETYPE_BG);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_VR_EType_Liv0
+spriteset(spriteset_Mail_VR_EType_Liv0_Purchase,   "gfx/VR_EType_Liv0.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_VR_EType_Liv0,   "gfx/VR_EType_Liv0.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_VR_EType_Liv0;
+    1: spriteset_VR_EType_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_VR_EType_Liv0_SpriteStack1;
+    return spriteset_Mail_VR_EType_Liv0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_VR_EType_Liv0;
+    1: spriteset_VR_EType_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_VR_EType_Liv0_SpriteStack2;
+    return spriteset_Mail_VR_EType_Liv0;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Mail_VR_EType_Liv0_rearcheck1;
+ 1: switch_Mail_VR_EType_Liv0_rearcheck2;
+}
+
+const Mail_VR_EType_Liv0_ID = (VR_EType_Liv0_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_VR_EType_Liv0, Mail_VR_EType_Liv0_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_VR_ETYPE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+//        variant_group: 					Item_Mail_VR_EType_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_VR_EType_Liv0_position;
+    purchase:                           spriteset_Mail_VR_EType_Liv0_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_VR_ETYPE);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+const Mail_VR_EType_Liv0_BG_ID = (VR_EType_BG_Liv0_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_VR_EType_BG_Liv0, Mail_VR_EType_Liv0_BG_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_VR_ETYPE_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+//        variant_group: 					Item_Mail_VR_EType_BG_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_VR_EType_Liv0_position;
+    purchase:                           spriteset_Mail_VR_EType_Liv0_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_VR_ETYPE_BG);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+//VR_EType_Liv1
+spriteset(spriteset_VR_EType_Liv1_Purchase,   "gfx/VR_EType_Liv1.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_VR_EType_Liv1,   "gfx/VR_EType_Liv1.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_VR_EType_Liv1_Diner,   "gfx/VR_EType_Liv1.png") {template_8(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv1_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_VR_EType_Liv1_Diner;
+  spriteset_VR_EType_Liv1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_VR_EType_Liv1_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_VR_EType_Liv1;
+    1: spriteset_VR_EType_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv1_rearcheck1, position_in_consist_from_end){
+    0 : switch_VR_EType_Liv1_SpriteStack1;
+    return switch_VR_EType_Liv1_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_VR_EType_Liv1_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_VR_EType_Liv1;
+    1: spriteset_VR_EType_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv1_rearcheck2, position_in_consist_from_end){
+    0 : switch_VR_EType_Liv1_SpriteStack2;
+    return switch_VR_EType_Liv1_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv1_position, vehicle_is_flipped) {
+ 0: switch_VR_EType_Liv1_rearcheck1;
+ 1: switch_VR_EType_Liv1_rearcheck2;
+}
+
+const VR_EType_Liv1_ID = (VR_EType_ID + Liv1_ID);
+
+item (FEAT_TRAINS, Item_VR_EType_Liv1, VR_EType_Liv1_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_VR_ETYPE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         VR_EType_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_VR_EType_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_VR_EType_Liv1_position;
+    purchase:                           spriteset_VR_EType_Liv1_Purchase;
+    additional_text: 					string(STR_INFO_VR_ETYPE);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+const VR_EType_BG_Liv1_ID = (VR_EType_ID + 15);
+
+item (FEAT_TRAINS, Item_VR_EType_BG_Liv1, VR_EType_BG_Liv1_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_VR_ETYPE_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         VR_EType_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_VR_EType_BG_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_VR_EType_Liv1_position;
+    purchase:                           spriteset_VR_EType_Liv1_Purchase;
+    additional_text: 					string(STR_INFO_VR_ETYPE_BG);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_VR_EType_Liv1
+spriteset(spriteset_Mail_VR_EType_Liv1_Purchase,   "gfx/VR_EType_Liv1.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_VR_EType_Liv1,   "gfx/VR_EType_Liv1.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv1_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_VR_EType_Liv1;
+    1: spriteset_VR_EType_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv1_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_VR_EType_Liv1_SpriteStack1;
+    return spriteset_Mail_VR_EType_Liv1;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv1_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_VR_EType_Liv1;
+    1: spriteset_VR_EType_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv1_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_VR_EType_Liv1_SpriteStack2;
+    return spriteset_Mail_VR_EType_Liv1;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv1_position, vehicle_is_flipped) {
+ 0: switch_Mail_VR_EType_Liv1_rearcheck1;
+ 1: switch_Mail_VR_EType_Liv1_rearcheck2;
+}
+
+const Mail_VR_EType_Liv1_ID = (VR_EType_Liv1_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_VR_EType_Liv1, Mail_VR_EType_Liv1_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_VR_ETYPE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_Mail_VR_EType_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_VR_EType_Liv1_position;
+    purchase:                           spriteset_Mail_VR_EType_Liv1_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_VR_ETYPE);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+const Mail_VR_EType_Liv1_BG_ID = (VR_EType_BG_Liv1_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_VR_EType_BG_Liv1, Mail_VR_EType_Liv1_BG_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_VR_ETYPE_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_Mail_VR_EType_BG_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_VR_EType_Liv1_position;
+    purchase:                           spriteset_Mail_VR_EType_Liv1_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_VR_ETYPE_BG);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+//VR_EType_Liv2
+spriteset(spriteset_VR_EType_Liv2_Purchase,   "gfx/VR_EType_Liv2.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_VR_EType_Liv2,   "gfx/VR_EType_Liv2.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_VR_EType_Liv2_Diner,   "gfx/VR_EType_Liv2.png") {template_8(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv2_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_VR_EType_Liv2_Diner;
+  spriteset_VR_EType_Liv2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_VR_EType_Liv2_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_VR_EType_Liv2;
+    1: spriteset_VR_EType_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv2_rearcheck1, position_in_consist_from_end){
+    0 : switch_VR_EType_Liv2_SpriteStack1;
+    return switch_VR_EType_Liv2_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_VR_EType_Liv2_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_VR_EType_Liv2;
+    1: spriteset_VR_EType_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv2_rearcheck2, position_in_consist_from_end){
+    0 : switch_VR_EType_Liv2_SpriteStack2;
+    return switch_VR_EType_Liv2_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv2_position, vehicle_is_flipped) {
+ 0: switch_VR_EType_Liv2_rearcheck1;
+ 1: switch_VR_EType_Liv2_rearcheck2;
+}
+
+const VR_EType_Liv2_ID = (VR_EType_ID + Liv2_ID);
+
+item (FEAT_TRAINS, Item_VR_EType_Liv2, VR_EType_Liv2_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_VR_ETYPE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         VR_EType_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_VR_EType_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_VR_EType_Liv2_position;
+    purchase:                           spriteset_VR_EType_Liv2_Purchase;
+    additional_text: 					string(STR_INFO_VR_ETYPE);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+const VR_EType_BG_Liv2_ID = (VR_EType_ID + 15);
+
+item (FEAT_TRAINS, Item_VR_EType_BG_Liv2, VR_EType_BG_Liv2_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_VR_ETYPE_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         VR_EType_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_VR_EType_BG_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_VR_EType_Liv2_position;
+    purchase:                           spriteset_VR_EType_Liv2_Purchase;
+    additional_text: 					string(STR_INFO_VR_ETYPE_BG);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_VR_EType_Liv2
+spriteset(spriteset_Mail_VR_EType_Liv2_Purchase,   "gfx/VR_EType_Liv2.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_VR_EType_Liv2,   "gfx/VR_EType_Liv2.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv2_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_VR_EType_Liv2;
+    1: spriteset_VR_EType_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv2_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_VR_EType_Liv2_SpriteStack1;
+    return spriteset_Mail_VR_EType_Liv2;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv2_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_VR_EType_Liv2;
+    1: spriteset_VR_EType_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv2_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_VR_EType_Liv2_SpriteStack2;
+    return spriteset_Mail_VR_EType_Liv2;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv2_position, vehicle_is_flipped) {
+ 0: switch_Mail_VR_EType_Liv2_rearcheck1;
+ 1: switch_Mail_VR_EType_Liv2_rearcheck2;
+}
+
+const Mail_VR_EType_Liv2_ID = (VR_EType_Liv2_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_VR_EType_Liv2, Mail_VR_EType_Liv2_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_VR_ETYPE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_Mail_VR_EType_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_VR_EType_Liv2_position;
+    purchase:                           spriteset_Mail_VR_EType_Liv2_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_VR_ETYPE);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+const Mail_VR_EType_Liv2_BG_ID = (VR_EType_BG_Liv2_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_VR_EType_BG_Liv2, Mail_VR_EType_Liv2_BG_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_VR_ETYPE_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_Mail_VR_EType_BG_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_VR_EType_Liv2_position;
+    purchase:                           spriteset_Mail_VR_EType_Liv2_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_VR_ETYPE_BG);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+//VR_EType_Liv3
+spriteset(spriteset_VR_EType_Liv3_Purchase,   "gfx/VR_EType_Liv3.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_VR_EType_Liv3,   "gfx/VR_EType_Liv3.png") {template_8_repeat(7, 39)}
+spriteset(spriteset_VR_EType_Liv3_Diner,   "gfx/VR_EType_Liv3.png") {template_8(7, 69)}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv3_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_VR_EType_Liv3_Diner;
+  spriteset_VR_EType_Liv3;
+}
+
+switch (FEAT_TRAINS, SELF, switch_VR_EType_Liv3_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_VR_EType_Liv3;
+    1: spriteset_VR_EType_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv3_rearcheck1, position_in_consist_from_end){
+    0 : switch_VR_EType_Liv3_SpriteStack1;
+    return switch_VR_EType_Liv3_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_VR_EType_Liv3_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_VR_EType_Liv3;
+    1: spriteset_VR_EType_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv3_rearcheck2, position_in_consist_from_end){
+    0 : switch_VR_EType_Liv3_SpriteStack2;
+    return switch_VR_EType_Liv3_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_VR_EType_Liv3_position, vehicle_is_flipped) {
+ 0: switch_VR_EType_Liv3_rearcheck1;
+ 1: switch_VR_EType_Liv3_rearcheck2;
+}
+
+const VR_EType_Liv3_ID = (VR_EType_ID + Liv3_ID);
+
+item (FEAT_TRAINS, Item_VR_EType_Liv3, VR_EType_Liv3_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_VR_ETYPE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         VR_EType_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_VR_EType_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_VR_EType_Liv3_position;
+    purchase:                           spriteset_VR_EType_Liv3_Purchase;
+    additional_text: 					string(STR_INFO_VR_ETYPE);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+const VR_EType_BG_Liv3_ID = (VR_EType_ID + 15);
+
+item (FEAT_TRAINS, Item_VR_EType_BG_Liv3, VR_EType_BG_Liv3_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_VR_ETYPE_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         VR_EType_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_VR_EType_BG_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_VR_EType_Liv3_position;
+    purchase:                           spriteset_VR_EType_Liv3_Purchase;
+    additional_text: 					string(STR_INFO_VR_ETYPE_BG);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_VR_EType_Liv3
+spriteset(spriteset_Mail_VR_EType_Liv3_Purchase,   "gfx/VR_EType_Liv3.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_VR_EType_Liv3,   "gfx/VR_EType_Liv3.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv3_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_VR_EType_Liv3;
+    1: spriteset_VR_EType_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv3_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_VR_EType_Liv3_SpriteStack1;
+    return spriteset_Mail_VR_EType_Liv3;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv3_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_VR_EType_Liv3;
+    1: spriteset_VR_EType_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv3_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_VR_EType_Liv3_SpriteStack2;
+    return spriteset_Mail_VR_EType_Liv3;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_VR_EType_Liv3_position, vehicle_is_flipped) {
+ 0: switch_Mail_VR_EType_Liv3_rearcheck1;
+ 1: switch_Mail_VR_EType_Liv3_rearcheck2;
+}
+
+const Mail_VR_EType_Liv3_ID = (VR_EType_Liv3_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_VR_EType_Liv3, Mail_VR_EType_Liv3_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_VR_ETYPE);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_Mail_VR_EType_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_VR_EType_Liv3_position;
+    purchase:                           spriteset_Mail_VR_EType_Liv3_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_VR_ETYPE);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+const Mail_VR_EType_Liv3_BG_ID = (VR_EType_BG_Liv3_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_VR_EType_BG_Liv3, Mail_VR_EType_Liv3_BG_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_RealDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_VR_ETYPE_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              VR_EType_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							VR_EType_Speed km/h;
+		cost_factor:					VR_EType_CostFactor;
+		running_cost_factor:			VR_EType_RunningCostFactor;
+		cargo_capacity: 				(VR_EType_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							VR_EType_Weight ton;
+
+        variant_group: 					Item_Mail_VR_EType_BG_Liv0;
+        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_VR_EType_Liv3_position;
+    purchase:                           spriteset_Mail_VR_EType_Liv3_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_VR_ETYPE_BG);
+	cargo_capacity: 					(VR_EType_CargoCapacity / param_capacity_mod);
+}
+}
+
+//ID
+const NZR_50ft_ID = 8900;
 //introduction_date
 const NZR_50ft_IntroDate = date(1908, 1, 1);
 //speed
@@ -6149,7 +7198,7 @@ item (FEAT_TRAINS, Item_Mail_NZR_50ft_NG_Liv0, Mail_NZR_50ft_NG_Liv0_ID) {
 }
 
 //ID
-const NZR_56ft_ID = 9600;
+const NZR_56ft_ID = 9450;
 //introduction_date
 const NZR_56ft_IntroDate = date(1937, 1, 1);
 //speed
@@ -6333,7 +7382,7 @@ spriteset(spriteset_Tulloch_InterurbanCoach_EOTD,   "gfx/Tulloch_InterurbanCoach
 spriteset(spriteset_Tulloch_InterurbanCoach_EOTD_r,   "gfx/Tulloch_InterurbanCoach_EOTD.png") {template_8_r(7, 39)}
 
 //ID
-const Tulloch_InterurbanCoach_ID = 9900;
+const Tulloch_InterurbanCoach_ID = 9750;
 //introduction_date
 const Tulloch_InterurbanCoach_IntroDate = date(1948, 1, 1);
 //speed
@@ -7197,7 +8246,7 @@ spriteset(spriteset_SilverStar_EOTD,   "gfx/SilverStar_EOTD.png") {template_8(7,
 spriteset(spriteset_SilverStar_EOTD_r,   "gfx/SilverStar_EOTD.png") {template_8_r(7, 39)}
 
 //ID
-const SilverStar_ID = 10850;
+const SilverStar_ID = 10700;
 //introduction_date
 const SilverStar_IntroDate = date(1971, 1, 1);
 //speed
@@ -7430,12 +8479,292 @@ item (FEAT_TRAINS, Item_Mail_SilverStar_Liv0, Mail_SilverStar_Liv0_ID) {
 }
 }
 
+//Comeng_IntrastateCoach_Coach
+//ID
+const Comeng_IntrastateCoach_ID = 10800;
+//introduction_date
+const Comeng_IntrastateCoach_IntroDate = date(1979, 1, 1);
+//speed
+const Comeng_IntrastateCoach_Speed = 160;
+//cost_factor
+const Comeng_IntrastateCoach_CostFactor = 67;
+//running_cost_factor
+const Comeng_IntrastateCoach_RunningCostFactor = 28;
+//Cargo Capacity
+const Comeng_IntrastateCoach_CargoCapacity = 89;
+//weight
+const Comeng_IntrastateCoach_Weight = 35;
+//length
+const Comeng_IntrastateCoach_Length = 8;
+
+spriteset(spriteset_Comeng_IntrastateCoach_EOTD,   "gfx/Comeng_IntrastateCoach_EOTD.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_IntrastateCoach_EOTD_r,   "gfx/Comeng_IntrastateCoach_EOTD.png") {template_8_r(7, 39)}
+
+//Comeng_IntrastateCoach_Liv0
+spriteset(spriteset_Comeng_IntrastateCoach_Liv0_Purchase,   "gfx/Comeng_IntrastateCoach_Liv0.png") {template_purchase_8(7, 21)}
+
+spriteset(spriteset_Comeng_IntrastateCoach_Liv0,   "gfx/Comeng_IntrastateCoach_Liv0.png") {template_8(7, 39)}
+spriteset(spriteset_Comeng_IntrastateCoach_Liv0_Diner,   "gfx/Comeng_IntrastateCoach_Liv0.png") {template_8_repeat(7, 69)}
+spriteset(spriteset_Comeng_IntrastateCoach_Liv0_Terminal,   "gfx/Comeng_IntrastateCoach_Liv0.png") {template_8(7, 99)}
+spriteset(spriteset_Comeng_IntrastateCoach_Liv0_Terminal_r,   "gfx/Comeng_IntrastateCoach_Liv0.png") {template_8_r(7, 99)}
+
+switch(FEAT_TRAINS, SELF, switch_Comeng_IntrastateCoach_Liv0_dinerposition, position_in_consist - position_in_consist_from_end) {
+ 0..1: spriteset_Comeng_IntrastateCoach_Liv0_Diner;
+  spriteset_Comeng_IntrastateCoach_Liv0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Comeng_IntrastateCoach_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Comeng_IntrastateCoach_Liv0_Terminal;
+    1: spriteset_Comeng_IntrastateCoach_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Comeng_IntrastateCoach_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Comeng_IntrastateCoach_Liv0_SpriteStack1;
+    return switch_Comeng_IntrastateCoach_Liv0_dinerposition;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Comeng_IntrastateCoach_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Comeng_IntrastateCoach_Liv0_Terminal_r;
+    1: spriteset_Comeng_IntrastateCoach_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Comeng_IntrastateCoach_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Comeng_IntrastateCoach_Liv0_SpriteStack2;
+    return switch_Comeng_IntrastateCoach_Liv0_dinerposition;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Comeng_IntrastateCoach_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Comeng_IntrastateCoach_Liv0_rearcheck1;
+ 1: switch_Comeng_IntrastateCoach_Liv0_rearcheck2;
+}
+
+const Comeng_IntrastateCoach_Liv0_ID = (Comeng_IntrastateCoach_ID + Liv0_ID);
+
+item (FEAT_TRAINS, Item_Comeng_IntrastateCoach_Liv0, Comeng_IntrastateCoach_Liv0_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_COMENG_INTRASTATECOACH);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Comeng_IntrastateCoach_IntroDate;		
+		length:                         Comeng_IntrastateCoach_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Comeng_IntrastateCoach_Speed km/h;
+		cost_factor:					Comeng_IntrastateCoach_CostFactor;
+		running_cost_factor:			Comeng_IntrastateCoach_RunningCostFactor;
+		cargo_capacity: 				(Comeng_IntrastateCoach_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Comeng_IntrastateCoach_Weight ton;
+
+//        variant_group: 					Item_Comeng_IntrastateCoach_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Comeng_IntrastateCoach_Liv0_position;
+    purchase:                           spriteset_Comeng_IntrastateCoach_Liv0_Purchase;
+    additional_text: 					string(STR_INFO_COMENG_INTRASTATECOACH);
+	cargo_capacity: 					(Comeng_IntrastateCoach_CargoCapacity / param_capacity_mod);
+}
+}
+
+const Comeng_IntrastateCoach_BG_Liv0_ID = (Comeng_IntrastateCoach_ID + 15);
+
+item (FEAT_TRAINS, Item_Comeng_IntrastateCoach_BG_Liv0, Comeng_IntrastateCoach_BG_Liv0_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       CC_PASSENGERS;
+		default_cargo_type:				PASS;
+		cargo_allow_refit:              [PASS, TOUR];    
+
+        name:                           string(STR_NAME_COMENG_INTRASTATECOACH_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Comeng_IntrastateCoach_IntroDate;		
+		length:                         Comeng_IntrastateCoach_Length;
+		
+		loading_speed:					SD_Suburban_LoadingSpeed;
+		speed:							Comeng_IntrastateCoach_Speed km/h;
+		cost_factor:					Comeng_IntrastateCoach_CostFactor;
+		running_cost_factor:			Comeng_IntrastateCoach_RunningCostFactor;
+		cargo_capacity: 				(Comeng_IntrastateCoach_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Comeng_IntrastateCoach_Weight ton;
+
+//        variant_group: 					Item_Comeng_IntrastateCoach_BG_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Comeng_IntrastateCoach_Liv0_position;
+    purchase:                           spriteset_Comeng_IntrastateCoach_Liv0_Purchase;
+    additional_text: 					string(STR_INFO_COMENG_INTRASTATECOACH_BG);
+	cargo_capacity: 					(Comeng_IntrastateCoach_CargoCapacity / param_capacity_mod);
+}
+}
+
+//Mail_Comeng_IntrastateCoach_Liv0
+spriteset(spriteset_Mail_Comeng_IntrastateCoach_Liv0_Purchase,   "gfx/Comeng_IntrastateCoach_Liv0.png") {template_purchase_8(187, 21)}
+spriteset(spriteset_Mail_Comeng_IntrastateCoach_Liv0,   "gfx/Comeng_IntrastateCoach_Liv0.png") {template_8_repeat(187, 39)}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Comeng_IntrastateCoach_Liv0_SpriteStack1, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Comeng_IntrastateCoach_Liv0;
+    1: spriteset_Comeng_IntrastateCoach_EOTD;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Comeng_IntrastateCoach_Liv0_rearcheck1, position_in_consist_from_end){
+    0 : switch_Mail_Comeng_IntrastateCoach_Liv0_SpriteStack1;
+    return spriteset_Mail_Comeng_IntrastateCoach_Liv0;
+}
+
+switch (FEAT_TRAINS, SELF, switch_Mail_Comeng_IntrastateCoach_Liv0_SpriteStack2, [
+    STORE_TEMP((getbits(extra_callback_info1, 8, 8) < 2 ? CB_FLAG_MORE_SPRITES : 0) | PALETTE_USE_DEFAULT, 0x100),
+    getbits(extra_callback_info1, 8, 8)
+    ]) {
+    0: spriteset_Mail_Comeng_IntrastateCoach_Liv0;
+    1: spriteset_Comeng_IntrastateCoach_EOTD_r;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Comeng_IntrastateCoach_Liv0_rearcheck2, position_in_consist_from_end){
+    0 : switch_Mail_Comeng_IntrastateCoach_Liv0_SpriteStack2;
+    return spriteset_Mail_Comeng_IntrastateCoach_Liv0;
+}
+
+switch(FEAT_TRAINS, SELF, switch_Mail_Comeng_IntrastateCoach_Liv0_position, vehicle_is_flipped) {
+ 0: switch_Mail_Comeng_IntrastateCoach_Liv0_rearcheck1;
+ 1: switch_Mail_Comeng_IntrastateCoach_Liv0_rearcheck2;
+}
+
+const Mail_Comeng_IntrastateCoach_Liv0_ID = (Comeng_IntrastateCoach_Liv0_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_Comeng_IntrastateCoach_Liv0, Mail_Comeng_IntrastateCoach_Liv0_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     RAIL;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_COMENG_INTRASTATECOACH);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Comeng_IntrastateCoach_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Comeng_IntrastateCoach_Speed km/h;
+		cost_factor:					Comeng_IntrastateCoach_CostFactor;
+		running_cost_factor:			Comeng_IntrastateCoach_RunningCostFactor;
+		cargo_capacity: 				(Comeng_IntrastateCoach_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Comeng_IntrastateCoach_Weight ton;
+
+//        variant_group: 					Item_Mail_Comeng_IntrastateCoach_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_Comeng_IntrastateCoach_Liv0_position;
+    purchase:                           spriteset_Mail_Comeng_IntrastateCoach_Liv0_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_COMENG_INTRASTATECOACH);
+	cargo_capacity: 					(Comeng_IntrastateCoach_CargoCapacity / param_capacity_mod);
+}
+}
+
+const Mail_Comeng_IntrastateCoach_Liv0_BG_ID = (Comeng_IntrastateCoach_BG_Liv0_ID + 50);
+
+item (FEAT_TRAINS, Item_Mail_Comeng_IntrastateCoach_BG_Liv0, Mail_Comeng_IntrastateCoach_Liv0_BG_ID) {
+    property {
+		sprite_id:                      SPRITE_ID_NEW_TRAIN;
+		misc_flags:                     bitmask(TRAIN_FLAG_2CC, TRAIN_FLAG_SPRITE_STACK, TRAIN_FLAG_AUTOREFIT);
+		track_type:                     BG_RAIL_ONLY;
+		running_cost_base:              RUNNING_COST_STEAM;
+//        ai_special_flag:                AI_FLAG_PASSENGER;
+		bitmask_vehicle_info:           0;
+	
+		climates_available:             (param_ProposalDisable == 0) ? ALL_CLIMATES : NO_CLIMATE;
+		refittable_cargo_classes:       bitmask (CC_MAIL, CC_EXPRESS);
+		default_cargo_type:				MAIL;
+//		cargo_allow_refit:              [];    
+
+        name:                           string(STR_NAME_MAIL_COMENG_INTRASTATECOACH_BG);
+		
+		refit_cost:                     0;
+        dual_headed:                    0;
+        air_drag_coefficient:           0.08;
+        model_life:                     30;
+		
+        introduction_date:              Comeng_IntrastateCoach_IntroDate;		
+		length:                         8;
+		
+		loading_speed:					SD_Intercity_LoadingSpeed;
+		speed:							Comeng_IntrastateCoach_Speed km/h;
+		cost_factor:					Comeng_IntrastateCoach_CostFactor;
+		running_cost_factor:			Comeng_IntrastateCoach_RunningCostFactor;
+		cargo_capacity: 				(Comeng_IntrastateCoach_CargoCapacity / param_capacity_mod);
+		power:							0 hp;
+		weight:							Comeng_IntrastateCoach_Weight ton;
+
+//        variant_group: 					Item_Mail_Comeng_IntrastateCoach_BG_Liv0;
+//        extra_flags:  					bitmask (VEHICLE_FLAG_DISABLE_NEW_VEHICLE_MESSAGE, VEHICLE_FLAG_DISABLE_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_EXCLUSIVE_PREVIEW, VEHICLE_FLAG_SYNC_VARIANT_RELIABILITY);
+	}
+    graphics {
+    default:                            switch_Mail_Comeng_IntrastateCoach_Liv0_position;
+    purchase:                           spriteset_Mail_Comeng_IntrastateCoach_Liv0_Purchase;
+    additional_text: 					string(STR_INFO_MAIL_COMENG_INTRASTATECOACH_BG);
+	cargo_capacity: 					(Comeng_IntrastateCoach_CargoCapacity / param_capacity_mod);
+}
+}
+
 //VLine_RType
 spriteset(spriteset_VLine_RType_EOTD,   "gfx/VLine_RType_EOTD.png") {template_8(7, 39)}
 spriteset(spriteset_VLine_RType_EOTD_r,   "gfx/VLine_RType_EOTD.png") {template_8_r(7, 39)}
 
 //ID
-const VLine_RType_ID = 11250;
+const VLine_RType_ID = 11000;
 //introduction_date
 const VLine_RType_IntroDate = date(1983, 1, 1);
 //speed
@@ -7530,7 +8859,7 @@ item (FEAT_TRAINS, Item_VLine_RType_Liv0, VLine_RType_Liv0_ID) {
 }
 }
 
-const VLine_RType_Liv0_BG_ID = (VLine_RType_Liv0_ID + 10);
+const VLine_RType_Liv0_BG_ID = (VLine_RType_Liv0_ID + 15);
 
 item (FEAT_TRAINS, Item_VLine_RType_BG_Liv0, VLine_RType_Liv0_BG_ID) {
     property {
@@ -7781,7 +9110,7 @@ item (FEAT_TRAINS, Item_VLine_RType_Liv1, VLine_RType_Liv1_ID) {
 }
 }
 
-const VLine_RType_Liv1_BG_ID = (VLine_RType_Liv1_ID + 25);
+const VLine_RType_Liv1_BG_ID = (VLine_RType_Liv1_ID + 15);
 
 item (FEAT_TRAINS, Item_VLine_RType_BG_Liv1, VLine_RType_Liv1_BG_ID) {
     property {
@@ -7861,7 +9190,7 @@ switch(FEAT_TRAINS, SELF, switch_Mail_VLine_RType_Liv1_position, vehicle_is_flip
  1: switch_Mail_VLine_RType_Liv1_rearcheck2;
 }
 
-const Mail_VLine_RType_Liv1_ID = (VLine_RType_Liv1_BG_ID + 25);
+const Mail_VLine_RType_Liv1_ID = (VLine_RType_Liv1_BG_ID + 50);
 
 item (FEAT_TRAINS, Item_Mail_VLine_RType_Liv1, Mail_VLine_RType_Liv1_ID) {
     property {
@@ -7906,7 +9235,7 @@ item (FEAT_TRAINS, Item_Mail_VLine_RType_Liv1, Mail_VLine_RType_Liv1_ID) {
 }
 }
 
-const Mail_VLine_RType_Liv1_BG_ID = (Mail_VLine_RType_Liv1_ID + 25);
+const Mail_VLine_RType_Liv1_BG_ID = (Mail_VLine_RType_Liv1_ID + 50);
 
 item (FEAT_TRAINS, Item_Mail_VLine_RType_BG_Liv1, Mail_VLine_RType_Liv1_BG_ID) {
     property {
@@ -7953,7 +9282,7 @@ item (FEAT_TRAINS, Item_Mail_VLine_RType_BG_Liv1, Mail_VLine_RType_Liv1_BG_ID) {
 
 //BREL_Mk3_Coach
 //ID
-const BREL_Mk3_ID = 11350;
+const BREL_Mk3_ID = 11100;
 //introduction_date
 const BREL_Mk3_IntroDate = date(1984, 1, 1);
 //speed
@@ -8058,7 +9387,7 @@ item (FEAT_TRAINS, Item_BREL_Mk3_Liv0, BREL_Mk3_Liv0_ID) {
 }
 }
 
-const BREL_Mk3_BG_Liv0_ID = (BREL_Mk3_ID + 10);
+const BREL_Mk3_BG_Liv0_ID = (BREL_Mk3_ID + 15);
 
 item (FEAT_TRAINS, Item_BREL_Mk3_BG_Liv0, BREL_Mk3_BG_Liv0_ID) {
     property {
@@ -8457,7 +9786,7 @@ item (FEAT_TRAINS, Item_BREL_Mk3_Liv1, BREL_Mk3_Liv1_ID) {
 }
 }
 
-const BREL_Mk3_BG_Liv1_ID = (BREL_Mk3_ID + 10);
+const BREL_Mk3_BG_Liv1_ID = (BREL_Mk3_ID + 15);
 
 item (FEAT_TRAINS, Item_BREL_Mk3_BG_Liv1, BREL_Mk3_BG_Liv1_ID) {
     property {

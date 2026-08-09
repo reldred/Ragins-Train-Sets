@@ -136,18 +136,6 @@ STR_INFO_MAIL_AMERICANCOACH:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Sta
 STR_NAME_MAIL_AMERICANCOACH_BG:American Mail Coach
 STR_INFO_MAIL_AMERICANCOACH_BG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Broad Gauge  {}{BLACK}Based on:{GOLD}Early coaches used in the Australian/New Zealand Colonies
 
-STR_NAME_NZR_50FT_NG:50ft End Platform Coach
-STR_INFO_NZR_50FT_NG:{BLACK}Role:{GOLD}General/Intercity Service {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}NZR 50ft Coaches
-
-STR_NAME_MAIL_NZR_50FT_NG:50ft End Platform Mail Coach
-STR_INFO_MAIL_NZR_50FT_NG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}NZR 50ft Coaches
-
-STR_NAME_NZR_56FT_NG:56ft Bogie Coach
-STR_INFO_NZR_56FT_NG:{BLACK}Role:{GOLD}General/Intercity Service {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}NZR 56ft Coaches
-
-STR_NAME_MAIL_NZR_56FT_NG:56ft Bogie Mail Coach
-STR_INFO_MAIL_NZR_56FT_NG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}NZR 56ft Coaches
-
 STR_NAME_NSW_ASHBURY_NG:Clerestory Interurban Coach
 STR_INFO_NSW_ASHBURY_NG:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}Early six-axle long distance coaches used in Victoria and NSW
 STR_NAME_NSW_ASHBURY:Clerestory Interurban Coach
@@ -162,6 +150,28 @@ STR_INFO_MAIL_NSW_ASHBURY:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Stand
 STR_NAME_MAIL_NSW_ASHBURY_BG:Clerestory Interurban Mail Coach
 STR_INFO_MAIL_NSW_ASHBURY_BG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Broad Gauge  {}{BLACK}Based on:{GOLD}Early six-axle long distance coaches used in Victoria and NSW
 
+STR_NAME_VR_ETYPE:Tait Interstate Coach
+STR_INFO_VR_ETYPE:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Standard Gauge  {}{BLACK}Based on:{GOLD}VR E-Type Coaches.
+STR_NAME_VR_ETYPE_BG:Tait Interstate Coach
+STR_INFO_VR_ETYPE_BG:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Broad Gauge  {}{BLACK}Based on:{GOLD}VR E-Type Coaches.
+
+STR_NAME_MAIL_VR_ETYPE:Tait Interstate Mail Coach
+STR_INFO_MAIL_VR_ETYPE:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Based on:{GOLD}VR E-Type Coaches.
+STR_NAME_MAIL_VR_ETYPE_BG:Tait Interstate Mail Coach
+STR_INFO_MAIL_VR_ETYPE_BG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Based on:{GOLD}VR E-Type Coaches.
+
+STR_NAME_NZR_50FT_NG:50ft End Platform Coach
+STR_INFO_NZR_50FT_NG:{BLACK}Role:{GOLD}General/Intercity Service {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}NZR 50ft Coaches
+
+STR_NAME_MAIL_NZR_50FT_NG:50ft End Platform Mail Coach
+STR_INFO_MAIL_NZR_50FT_NG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}NZR 50ft Coaches
+
+STR_NAME_NZR_56FT_NG:56ft Bogie Coach
+STR_INFO_NZR_56FT_NG:{BLACK}Role:{GOLD}General/Intercity Service {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}NZR 56ft Coaches
+
+STR_NAME_MAIL_NZR_56FT_NG:56ft Bogie Mail Coach
+STR_INFO_MAIL_NZR_56FT_NG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Narrow Gauge  {}{BLACK}Based on:{GOLD}NZR 56ft Coaches
+
 STR_NAME_TULLOCH_INTERURBANCOACH:Tulloch Interurban Coach
 STR_INFO_TULLOCH_INTERURBANCOACH:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Based on: {GOLD}NSW RUB Stock
 STR_NAME_MAIL_TULLOCH_INTERURBANCOACH:Tulloch Interurban Mail Coach
@@ -172,15 +182,25 @@ STR_INFO_SILVERSTAR:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Na
 STR_NAME_MAIL_SILVERSTAR:Hitachi-Nippon Sharyo Silver Star Mail Coach
 STR_INFO_MAIL_SILVERSTAR:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Narrow Gauge {}{BLACK}Based on: {GOLD}NZR Silver Star Coaches
 
+STR_NAME_COMENG_INTRASTATECOACH:Comeng Intrastate Coach
+STR_INFO_COMENG_INTRASTATECOACH:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Standard Gauge  {}{BLACK}Based on:{GOLD}Proposed Comeng long distance coaches for NSW, cancelled in favour of the XPT.
+STR_NAME_COMENG_INTRASTATECOACH_BG:Comeng Intrastate Coach
+STR_INFO_COMENG_INTRASTATECOACH_BG:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Broad Gauge  {}{BLACK}Based on:{GOLD}Proposed Comeng long distance coaches for NSW, cancelled in favour of the XPT.
+
+STR_NAME_MAIL_COMENG_INTRASTATECOACH:Comeng Intrastate Mail Coach
+STR_INFO_MAIL_COMENG_INTRASTATECOACH:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Based on:{GOLD}Proposed Comeng long distance coaches for NSW, cancelled in favour of the XPT.
+STR_NAME_MAIL_COMENG_INTRASTATECOACH_BG:Comeng Intrastate Mail Coach
+STR_INFO_MAIL_COMENG_INTRASTATECOACH_BG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Based on:{GOLD}Proposed Comeng long distance coaches for NSW, cancelled in favour of the XPT.
+
 STR_NAME_VLINE_RTYPE:Comeng High Speed Coach
-STR_INFO_VLINE_RTYPE:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Standard Gauge  {}{BLACK}Based on:{GOLD}Proposed V/Line R-Type Coaches
+STR_INFO_VLINE_RTYPE:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Standard Gauge  {}{BLACK}Based on:{GOLD}Proposed V/Line R-Type Coaches.
 STR_NAME_VLINE_RTYPE_BG:Comeng High Speed Coach
-STR_INFO_VLINE_RTYPE_BG:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Broad Gauge  {}{BLACK}Based on:{GOLD}Proposed V/Line R-Type Coaches
+STR_INFO_VLINE_RTYPE_BG:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Broad Gauge  {}{BLACK}Based on:{GOLD}Proposed V/Line R-Type Coaches.
 
 STR_NAME_MAIL_VLINE_RTYPE:Comeng High Speed Mail Coach
-STR_INFO_MAIL_VLINE_RTYPE:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Based on:{GOLD}Proposed V/Line R-Type Coaches
+STR_INFO_MAIL_VLINE_RTYPE:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Standard Gauge {}{BLACK}Based on:{GOLD}Proposed V/Line R-Type Coaches.
 STR_NAME_MAIL_VLINE_RTYPE_BG:Comeng High Speed Mail Coach
-STR_INFO_MAIL_VLINE_RTYPE_BG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Based on:{GOLD}Proposed V/Line R-Type Coaches
+STR_INFO_MAIL_VLINE_RTYPE_BG:{BLACK}Role:{GOLD}Mail Van {}{BLACK}Gauge:{GOLD} Broad Gauge {}{BLACK}Based on:{GOLD}Proposed V/Line R-Type Coaches.
 
 STR_NAME_BREL_MK3:BREL Mk3 Coach
 STR_INFO_BREL_MK3:{BLACK}Role:{GOLD}Intercity Service {}{BLACK}Gauge:{GOLD} Standard Gauge  {}{BLACK}Based on:{GOLD}BREL Mk3 coaches proposed for use by V/Line
